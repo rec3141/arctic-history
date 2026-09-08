@@ -567,9 +567,14 @@ def _keep_home_topic(c, table: str, name: str, kw: dict) -> dict:
     not stolen from inuit-oral-history by a ross-victory re-run. To really
     reassign, `forget` the row and re-enter it."""
     if kw.get("topic"):
-        old = c.execute(f"SELECT topic FROM {table} WHERE name=?", (name.strip(),)).fetchone()
+        old = c.execute(f"SELECT * FROM {table} WHERE name=?", (name.strip(),)).fetchone()
         if old and old["topic"] and old["topic"] != slugify(kw["topic"]):
-            kw = {k: v for k, v in kw.items() if k != "topic"}
+            # enrich only: a foreign run fills fields the home topic left
+            # empty and touches nothing else. Robert Bartlett, master of the
+            # Roosevelt, was once rewritten as a schooner captain at Frobisher
+            # Bay by a south-Baffin run that did not check first.
+            kw = {k: v for k, v in kw.items()
+                  if k != "topic" and (k not in old.keys() or old[k] in (None, ""))}
     return kw
 
 
@@ -1006,10 +1011,12 @@ def _off_map(lat, lon) -> str | None:
     well south of the Arctic — the voyages sailed from London and New York,
     Munk from Copenhagen, Kane died in Havana — but nothing lies south of 20
     or east of 40, and a longitude in the mirror band east of 40 is almost
-    always a dropped minus sign."""
+    always a dropped minus sign. The one exception is the far side of the
+    dateline, 160-180 east: the Karluk's people and Bartlett's walk reached
+    the Siberian coast, and those positions are honestly east."""
     if lat is not None and not 20 <= lat <= 90:
         return f"latitude {lat} is south of anywhere this history reaches"
-    if lon is not None and not -180 <= lon <= 40:
+    if lon is not None and not (-180 <= lon <= 40 or 160 <= lon <= 180):
         return f"longitude {lon} is east of 40: almost always a dropped minus sign"
     return None
 
