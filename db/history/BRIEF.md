@@ -336,6 +336,41 @@ Kinds: `download`, `api_key`, `question`, `access`, `other`; `download` and
 `access` also need `--url`. Answers come back through
 `history-db.py requests --topic <your-slug>`, and `resume` lists them too.
 
+## Helpers and the web
+
+Three waves of researchers showed where the budget went. Helper agents four
+levels deep did two thirds of all web fetching; every WebFetch ran the whole
+page through a model and kept nothing; and nearly every helper ran on Opus
+because nobody said otherwise. Two rules follow.
+
+**An agent launches only agents smaller than itself.** You run on Opus, so
+any helper you launch is `model: sonnet`, and a Sonnet helper may launch only
+`model: haiku`. Haiku launches nothing. Put the rule in the helper's prompt so
+it knows its place: "You are a Sonnet helper. Launch only Haiku agents, and
+only to read files." Prefer doing the work yourself to launching a helper at
+all; a helper is for a bounded extraction you can name in one sentence.
+
+**Each depth has a cap.** You (Opus) may have at most 2 helpers running at
+once and launch at most 6 in a run. A Sonnet helper may have at most 2 Haiku
+readers running at once and launch at most 6. Wait for one to finish before
+starting the next; do not fan out a list of tasks in one go. Put the cap in
+the helper's prompt with the model rule.
+
+**Cache locally, then read the cache with Haiku.** Do not use WebFetch to read
+a page. It downloads the page again on every call, runs the whole page through
+a model each time, and keeps nothing. Instead:
+
+1. Download once. Sources and images go through `tools/history-fetch.py` as in
+   section 7. Pages that are not part of the record (catalogue entries, finding
+   aids, search results) go into your scratchpad subdirectory:
+   `curl -sL URL -o <scratch>/<your-slug>/<name>.html`.
+2. Ask questions of the file, not of the web. A short file you read yourself.
+   For a long one, launch a `model: haiku` agent whose prompt names the file
+   and the question: "Read <path> and list every dated position with its page
+   number." One download then answers every later question for free.
+3. WebSearch is fine for finding things; it runs inside your own turn. Once it
+   has found a URL, download and cache the page as above rather than WebFetch it.
+
 ## Sources to prefer
 Wikimedia Commons; Project Gutenberg; Internet Archive; HathiTrust; Library and
 Archives Canada; Canadiana.ca; the Dictionary of Canadian Biography
