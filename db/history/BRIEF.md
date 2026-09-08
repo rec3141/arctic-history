@@ -270,8 +270,10 @@ page with its own address and process (Parks Canada's wreck imagery, for
 instance, goes to erebus-terror-images@pc.gc.ca via its filming-and-photos
 page, not to the site's general contact). Name that address and process (from
 their own pages, never guessed) and include a ready-to-send draft of the
-message, so the person's whole job is to read it, sign it and send it. The
-tool refuses a `--why` too thin to act on.
+message, introduced with the exact line `Draft, ready to send:` and ending
+with the signature block in `db/history/SIGNATURE.txt`, verbatim — so the
+person's whole job is to read it and send it. The tool refuses a `--why` too
+thin to act on.
 Not this:
 
     --kind download --what "Life with the Esquimaux vol. II" --why "only have vol. I"

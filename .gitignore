@@ -12,3 +12,4 @@ __pycache__/
 .venv/
 *.egg-info/
 db/history/_backups/
+db/history/SIGNATURE.txt
