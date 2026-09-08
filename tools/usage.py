@@ -5,8 +5,8 @@
     usage.py --json           the raw response
     usage.py --max 70         exit 1 if the five-hour window is above 70 percent
 
-The ceiling defaults to 50: the standing rule is that a wave uses no more than
-half of the five-hour window, so a plain run exits 1 when it is time to stop
+The ceiling defaults to 80: the standing rule is that a wave uses no more than
+80 percent of the five-hour window, so a plain run exits 1 when it is time to stop
 launching researchers and wait for the reset.
 
 Reads the OAuth token Claude Code keeps in ~/.claude/.credentials.json and
@@ -28,7 +28,7 @@ from pathlib import Path
 
 CREDS = Path.home() / ".claude" / ".credentials.json"
 URL = "https://api.anthropic.com/api/oauth/usage"
-CEILING = 50.0      # percent of the five-hour window a wave may use
+CEILING = 80.0      # percent of the five-hour window a wave may use (raised from 50 on 2026-09-08)
 
 
 def fetch() -> dict:
