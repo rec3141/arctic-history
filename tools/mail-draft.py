@@ -66,13 +66,18 @@ def draft_from_request(ident: int) -> tuple[str, str, str]:
     text = r["why"]
     if "Draft, ready to send:" in text:
         text = text.split("Draft, ready to send:", 1)[1].strip()
+    m = re.search(r"^To:\s*(.+)$", text, re.M)
+    forward_to = m.group(1).strip() if m else ""
+    if m:
+        text = (text[:m.start()] + text[m.end():]).strip()
     m = re.search(r"^Subject:\s*(.+)$", text, re.M)
     subject = m.group(1).strip() if m else f"Draft from history request #{ident}"
     if m:
         text = (text[:m.start()] + text[m.end():]).strip()
     preface = (f"Draft from history request #{ident} ({r['kind']}, {r['topic']}): {r['what']}\n"
-               f"Edit as you see fit and forward it on; the queue is at "
-               f"https://cryomics.org/amundsen/requests/\n"
+               + (f"FORWARD TO: {forward_to}\n" if forward_to else
+                  "Forward to: (no To: line in the draft; the request's own text names the recipient)\n")
+               + f"Edit as you see fit; the queue is at https://cryomics.org/amundsen/requests/\n"
                + "-" * 60 + "\n\n")
     return subject, preface + text, f"request #{ident}"
 

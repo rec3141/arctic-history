@@ -270,9 +270,10 @@ page with its own address and process (Parks Canada's wreck imagery, for
 instance, goes to erebus-terror-images@pc.gc.ca via its filming-and-photos
 page, not to the site's general contact). Name that address and process (from
 their own pages, never guessed) and include a ready-to-send draft of the
-message, introduced with the exact line `Draft, ready to send:` and ending
-with the signature block in `db/history/SIGNATURE.txt`, verbatim — so the
-person's whole job is to read it and send it. In a usage or permission
+message, introduced with the exact line `Draft, ready to send:`, opening
+with `To:` and `Subject:` lines carrying the found address and a subject,
+and ending with the signature block in `db/history/SIGNATURE.txt`, verbatim
+— so the person's whole job is to read it and send it. In a usage or permission
 letter asking for fewer than ten items, name them in a list — title, date,
 identifier, and for a digital object its DOI or a direct link (verified on
 the holder's own pages, never guessed; say where you saw it if no stable
