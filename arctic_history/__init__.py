@@ -1056,6 +1056,20 @@ def generated_pages(c) -> list[dict]:
 
 
 # ---------------------------------------------------------------- checks
+IMAGE_MAGIC = (b"\x89PNG\r\n\x1a\n", b"\xff\xd8\xff", b"GIF87a", b"GIF89a")
+
+
+def _small_real_image(f: Path) -> bool:
+    """A file under 4 kB is usually an error page, but a line cut from a
+    scanned book (Boas's figure 542 is 3.8 kB) is a real image: accept it when
+    the bytes begin with a PNG, JPEG or GIF signature."""
+    try:
+        head = f.read_bytes()[:8]
+    except OSError:
+        return False
+    return any(head.startswith(m) for m in IMAGE_MAGIC)
+
+
 def _off_map(lat, lon) -> str | None:
     """A coordinate nothing in this history can honestly carry. Pins may sit
     well south of the Arctic — the voyages sailed from London and New York,
@@ -1109,7 +1123,7 @@ def validate(c) -> dict:
             f = HISTORY_DIR / r["local_file"]
             if not f.is_file():
                 bad("artifact", r["id"], f"local_file missing: {r['local_file']}")
-            elif f.stat().st_size < 4096:
+            elif f.stat().st_size < 4096 and not _small_real_image(f):
                 bad("artifact", r["id"], f"local_file suspiciously small ({f.stat().st_size} bytes)")
         if r["geometry"]:
             try:
