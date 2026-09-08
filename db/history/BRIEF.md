@@ -109,6 +109,15 @@ already there: check `history-db.py list --what sources` before inventing a
 second key for the same work, and reuse theirs.
 
 ### 3. Artifacts — the things the map shows
+
+**Acquire more than you think you need.** Every text you cite is fetched and
+registered; every plate, map, chart, sketch and photograph in a source you
+have open becomes an image artifact with its position, not a mention; every
+dated position in a journal is a waypoint. A page with three artifacts behind
+it is thin; ten to twenty is normal for a page built from a primary text. When
+a Commons category or an archive's collection holds fifty relevant images,
+take them all, a few at a time, and register each one. Storage is not your
+concern; a missing original cannot be recovered later.
     tools/history-db.py artifact --id <your-slug>-004 --topic <your-slug> \
       --type quote --title "The Victory Point record" --date 1848-04-25 \
       --lat 69.97 --lon -98.55 --creator "Fitzjames and Crozier" \
@@ -184,6 +193,15 @@ source's publication, a second visit to a place, a wreck's discovery:
 timeline that reads oddly is usually a date entered at the wrong precision.
 
 ### 5. People and places
+
+**This is not Wikipedia: there is no notoriety requirement.** Enter every
+person a source names — the seamstress, the dog driver, the ship's cook, the
+constable, the child born on the floe, the juror — with what the source says
+about them, however little. A name with a role and a date is a row. The
+people the published narratives leave out are exactly the ones this layer
+exists to hold, and a scientist aboard is as likely to ask about the Inughuit
+hunter who found the route as about the officer who took the credit. Check
+`list` first so one person does not become two rows.
     tools/history-db.py person --name "Tookoolito" --also "Hannah; Taqulittuq" \
       --indigenous --role "interpreter and guide" --born 1838 --died 1876 \
       --affiliation "Hall's expeditions; the Polaris" --topic <your-slug> \
