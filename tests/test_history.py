@@ -403,5 +403,14 @@ class HistoryTests(unittest.TestCase):
         self.assertFalse(H._small_real_image(d / "b.png"))
 
 
+    def test_setting_topic_status_keeps_title_and_summary(self):
+        H.add_topic(self.c, "qei-test", "A test topic", summary="What it covers.")
+        H.add_topic(self.c, "qei-test", status="drafted")
+        r = self.c.execute("SELECT title, summary, status FROM topics WHERE slug='qei-test'").fetchone()
+        self.assertEqual((r["title"], r["summary"], r["status"]), ("A test topic", "What it covers.", "drafted"))
+        with self.assertRaises(ValueError):
+            H.add_topic(self.c, "brand-new", status="open")
+
+
 if __name__ == "__main__":
     unittest.main()

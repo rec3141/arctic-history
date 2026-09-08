@@ -71,10 +71,10 @@ def main(argv=None) -> int:
 
     t = sub.add_parser("topic", help="declare a topic")
     t.add_argument("--slug", required=True)
-    t.add_argument("--title", required=True)
-    t.add_argument("--summary", default="")
-    t.add_argument("--researcher", default="")
-    t.add_argument("--status", default="open", choices=["open", "drafted", "done"])
+    t.add_argument("--title", help="required for a new topic; optional when updating")
+    t.add_argument("--summary")
+    t.add_argument("--researcher")
+    t.add_argument("--status", choices=["open", "drafted", "done"])
 
     s = sub.add_parser("source", help="add or update a bibliography entry")
     s.add_argument("--bibkey", required=True)
