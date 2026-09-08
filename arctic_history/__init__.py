@@ -469,10 +469,24 @@ def platform_session_release(ledger: Path, platform: str, previous: float | None
 
 
 # ---------------------------------------------------------------- writers
-def add_topic(c, slug: str, title: str, **kw) -> str:
-    return _upsert(c, "topics", "slug", {"slug": slugify(slug), "title": title,
-                                         "summary": kw.get("summary", ""), "researcher": kw.get("researcher", ""),
-                                         "status": kw.get("status", "open")})
+def add_topic(c, slug: str, title: str | None = None, **kw) -> str:
+    """Declare a topic, or update the fields given. A later call that only
+    sets --status must not blank the title or the summary: two runs lost
+    their summaries that way before this guard."""
+    row = {"slug": slugify(slug)}
+    if title:
+        row["title"] = title
+    for f in ("summary", "researcher", "status"):
+        if kw.get(f) not in (None, ""):
+            row[f] = kw[f]
+    exists = c.execute("SELECT 1 FROM topics WHERE slug=?", (row["slug"],)).fetchone()
+    if not exists:
+        if "title" not in row:
+            raise ValueError(f"new topic {row['slug']!r} needs a title")
+        row.setdefault("summary", "")
+        row.setdefault("researcher", "")
+        row.setdefault("status", "open")
+    return _upsert(c, "topics", "slug", row)
 
 
 def add_source(c, bibkey: str, title: str, **kw) -> str:
