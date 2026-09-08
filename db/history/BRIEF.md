@@ -264,10 +264,14 @@ person can do (no digital copy exists anywhere, the form wants a human's
 login, the call is one of judgement); exactly where to go (the URL, the exact
 title, edition and volume, the catalogue entry, the request form); and what
 you will do with the answer. When the action is writing to someone — a
-permissions desk, an archive, a rights holder — find the specific email
-address (from their own pages, never guessed) and include a ready-to-send
-draft of the message, so the person's whole job is to read it, sign it and
-send it. The tool refuses a `--why` too thin to act on.
+permissions desk, an archive, a rights holder — first look for the dedicated
+page: institutions usually have a specific media, permissions or image-request
+page with its own address and process (Parks Canada's wreck imagery, for
+instance, goes to erebus-terror-images@pc.gc.ca via its filming-and-photos
+page, not to the site's general contact). Name that address and process (from
+their own pages, never guessed) and include a ready-to-send draft of the
+message, so the person's whole job is to read it, sign it and send it. The
+tool refuses a `--why` too thin to act on.
 Not this:
 
     --kind download --what "Life with the Esquimaux vol. II" --why "only have vol. I"
