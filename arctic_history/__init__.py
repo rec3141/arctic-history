@@ -341,6 +341,14 @@ def _iso(v: str) -> str:
     return out
 
 
+def date_order(col: str) -> str:
+    """An ORDER BY expression that puts ISO dates in calendar order even when
+    some are BC: '-2500' before '-1900' before '0001'. Text order alone gets
+    BC backwards, which the thule-dorset run noticed in its timeline."""
+    return (f"CASE WHEN substr({col},1,1)='-' THEN -CAST(substr({col},2,4) AS INTEGER) "
+            f"ELSE CAST(substr({col},1,4) AS INTEGER) END, {col}")
+
+
 PRECISIONS = ("day", "month", "season", "year", "decade", "century")
 QUALIFIERS = ("", "circa", "before", "after", "by", "early", "mid", "late")
 DATE_ROLES = ("point", "start", "end")
@@ -560,13 +568,19 @@ def forget(c, kind: str, ident) -> dict:
         c.commit()
         return {"deleted": f"date {ident} ({r['date']} {r['role']} {r['label']})", "dates": 1}
     tables = {"artifact": ("artifacts", "id"), "event": ("events", "id"),
-              "person": ("people", "name"), "place": ("places", "name")}
+              "person": ("people", "name"), "place": ("places", "name"),
+              "source": ("sources", "bibkey")}
     if kind not in tables:
         raise ValueError(f"kind must be date or one of {', '.join(tables)}")
     table, key = tables[kind]
     r = c.execute(f"SELECT * FROM {table} WHERE {key}=?", (ident,)).fetchone()
     if not r:
         raise ValueError(f"no {kind} {ident!r}")
+    if kind == "source":
+        users = [t for t in ("artifacts", "events", "people", "places")
+                 if c.execute(f"SELECT 1 FROM {t} WHERE bibkey=? LIMIT 1", (ident,)).fetchone()]
+        if users:
+            raise ValueError(f"source {ident!r} is still cited by rows in {', '.join(users)}; re-point them first")
     n = c.execute("DELETE FROM dates WHERE entity_kind=? AND entity_id=?", (kind, str(ident))).rowcount
     c.execute(f"DELETE FROM {table} WHERE {key}=?", (ident,))
     c.commit()
@@ -1191,7 +1205,7 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
 
         # 2. the map layer: artifacts with a position or a geometry
         arts = []
-        for r in c.execute("SELECT * FROM artifacts ORDER BY date_start, id"):
+        for r in c.execute(f"SELECT * FROM artifacts ORDER BY {date_order('date_start')}, id"):
             a = {k: r[k] for k in ("id", "topic", "type", "title", "date_text", "date_start", "creator",
                                    "description", "lat", "lon", "credit", "bibkey", "licence",
                                    "source_url", "local_file", "pages")}
@@ -1218,7 +1232,7 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
         events = [{**{k: r[k] for k in ("id", "topic", "date_text", "date_start", "date_end",
                                         "title", "detail", "lat", "lon", "place", "bibkey")},
                    "people": json.loads(r["people"] or "[]"), "tags": json.loads(r["tags"] or "[]")}
-                  for r in c.execute("SELECT * FROM events ORDER BY date_start, id")]
+                  for r in c.execute(f"SELECT * FROM events ORDER BY {date_order('date_start')}, id")]
         topics = [dict(r) for r in c.execute("SELECT slug, title, summary, status FROM topics ORDER BY title")]
         for t in topics:
             t["artifacts"] = c.execute("SELECT COUNT(*) AS n FROM artifacts WHERE topic=?", (t["slug"],)).fetchone()["n"]
@@ -1227,7 +1241,7 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
         # the timeline: every atomic date, with the spans of the time-limited
         # activities resolved into one row carrying both endpoints
         rows = [dict(r) for r in c.execute(
-            "SELECT * FROM dates ORDER BY date, role DESC, id")]
+            f"SELECT * FROM dates ORDER BY {date_order('date')}, role DESC, id")]
         spans: dict[str, dict] = {}
         timeline = []
         for r in rows:

@@ -378,5 +378,21 @@ class HistoryTests(unittest.TestCase):
             self.assertEqual(H.platform_session_gate(ledger, "scholarsportal", 4601.0), 0.0)    # after the hour: go
 
 
+    def test_bc_dates_sort_in_calendar_order(self):
+        for d, label in (("1850", "ad"), ("-1900", "late"), ("-2500", "early")):
+            H.add_date(self.c, "event", label, d, role="point", label=label, topic="thule-dorset")
+        order = [r["label"] for r in self.c.execute(
+            f"SELECT label FROM dates WHERE topic='thule-dorset' ORDER BY {H.date_order('date')}")]
+        self.assertEqual(order, ["early", "late", "ad"])
+
+    def test_forget_source_refuses_while_cited(self):
+        H.add_source(self.c, "stray2003", "A stray entry", year="2003")
+        self.artifact(id="cites-stray", bibkey="stray2003")
+        with self.assertRaises(ValueError):
+            H.forget(self.c, "source", "stray2003")
+        H.add_source(self.c, "orphan2003", "An orphan entry", year="2003")
+        self.assertEqual(H.forget(self.c, "source", "orphan2003")["deleted"], "source orphan2003")
+
+
 if __name__ == "__main__":
     unittest.main()
