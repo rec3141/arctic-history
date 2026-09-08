@@ -28,7 +28,7 @@ grounded masses of ancient ice that sheltered her.
 In the spring [[person:Albert Hastings Markham]] and [[person:Alfred Arthur
 Chase Parr]] dragged two boats and two sledges north over that ice and, on 12
 May 1876, stood at 83 deg 20 min 26 sec N: the farthest north then reached
-([[artifact:nares-greely-023]]). It cost them everything. Scurvy was already in
+([[artifact:nares-greely-026|the farthest north then reached by anyone]]). It cost them everything. Scurvy was already in
 the party; by early June eleven of fifteen men could not walk, Parr had to make
 a solo march of some thirty miles to the ship for help, and George Porter died
 on the floe. Two more men died in [[person:Lewis Anthony Beaumont]]'s party on
@@ -108,4 +108,5 @@ Inughuit connection continued at Fort Conger after Greely left it: Robert Peary
 dismantled the house in 1900 and built three small huts in the Inughuit manner,
 in which whole Greenlandic families lived and worked while he made his attempts
 on the Pole. See [[page:fort-conger-after-greely]] and
-[[topic:sverdrup-bernier-peary]].
+[[topic:sverdrup-bernier-peary]]. The two Greenlanders and Hans Hendrik have a
+page of their own: [[page:the-greenlanders-on-both-expeditions]].

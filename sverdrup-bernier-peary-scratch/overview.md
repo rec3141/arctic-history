@@ -92,16 +92,19 @@ rather than a page here: [[page:the-pole-controversy-in-one-page]].
 ## What it added up to
 
 Sverdrup's survey gave Norway a claim in international law: he had discovered
-and mapped the islands, and no other state had occupied them. Norway never
-pressed it hard, but it sat there. Bernier's cairns and tablets gave Canada the
+and mapped the islands, claimed them for the Norwegian king in the last lines
+of his own book, and no other state had occupied them. Norway never pressed it
+hard, but it sat there. Bernier's cairns and tablets gave Canada the
 counter-argument, and the Royal Canadian Mounted Police posts that followed —
 Craig Harbour and [[place:Bache Peninsula]] in the 1920s — gave it the
 occupation that international law by then increasingly required.
 
 On 11 November 1930 Norway formally recognised Canadian sovereignty over the
 Sverdrup Islands, and Canada paid Sverdrup 67,000 dollars for his original
-charts, diaries and papers. He was seventy-six and ill. He died fifteen days
-later. See [[page:the-sverdrup-islands-and-the-1930-settlement]].
+maps, diaries and documents. He was seventy-six and ill. He died fifteen days
+later. Forty years after that, drilling found ten trillion cubic feet of gas
+under the basin named for him. See
+[[page:the-sverdrup-islands-and-the-1930-settlement]].
 
 None of this asked the people who lived there. The Inuit of
 [[place:Mittimatalik]] and the Inughuit of [[place:Etah]] were the labour, the

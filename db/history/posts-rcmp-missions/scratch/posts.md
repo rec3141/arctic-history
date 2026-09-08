@@ -17,12 +17,17 @@ century arrival. Usher puts it plainly:
 
 When the whale fishery failed — the Cumberland Sound hunts ended in 1919 —
 the men and the buildings were already in place. Robert Kinnes of Dundee, who
-had run whalers, ran the stations at Kekerten and at Albert Harbour near
-Mittimatalik. Crawford Noble of Aberdeen owned [[place:Uumanarjuaq]] and
-Kekerten. The Sabellum Trading Company put small posts along the east coast at
+had run whalers, ran the stations at [[place:Kekerten]] and at
+[[place:Albert Harbour]] near Mittimatalik, the latter under
+[[person:James Mutch]], who had been in Cumberland Sound since the 1860s and
+was Franz Boas's and later Knud Rasmussen's interpreter and go-between.
+[[person:Crawford Noble]] of Aberdeen owned [[place:Uumanarjuaq]] and Kekerten.
+The Sabellum Trading Company put small posts along the east coast at
 [[place:Kivitoo]], Cape Mercy, Cape Haven and Cape Henry Kater, most of them
 run by a single man, often an Inuk employed by the company, with the ship
-calling once a year. [[person:Henry Toke Munn]]'s Arctic Gold Exploration
+calling once a year. The last of them ended in 1926 when the trader
+[[person:Hector Pitchforth]] died alone at his post at
+[[place:Cape Henry Kater]]. [[person:Henry Toke Munn]]'s Arctic Gold Exploration
 Syndicate traded at Button Point on Bylot Island, at Albert Harbour and at
 Oshualuk in Cumberland Sound. [[person:Joseph-Elzear Bernier]], who had
 claimed the archipelago for Canada from the deck of the CGS *Arctic*, bought
@@ -116,6 +121,6 @@ belongs to [[topic:relocations-qtc]].
 Usher's question marks are his own and are kept in this database. Many of the
 small east-coast posts have no surviving records at all and their dates come
 from a departmental map, an RCMP patrol report or a trader's memoir. Where two
-sources disagree — the Kivitoo post is dated 1911?, 1912 and 1916 by three
+sources disagree — the [[place:Kivitoo]] post is dated 1911?, 1912 and 1916 by three
 different authorities — both figures are recorded and the disagreement is
 noted rather than resolved.

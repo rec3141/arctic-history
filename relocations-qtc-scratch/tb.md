@@ -20,8 +20,9 @@ humane."
 The first ships were so crowded with patients, crew, cargo, officials and
 traders that the patrol was "almost as much a source of disease as a method of
 prevention". After the Nascopie was lost in 1947 the government fitted out the
-C. D. Howe: fifty-eight crew, room for thirty Inuit passengers, a surgery, a
-dispensary, an x-ray room, a dental office and six beds. Its route is
+C. D. Howe ([[artifact:relocations-qtc-042]]): fifty-eight crew, room for thirty
+Inuit passengers, a surgery, a dispensary, an x-ray room, a dental office and
+six beds, and a helicopter on the after deck. Her route is
 [[artifact:relocations-qtc-028]].
 
 Shiptime had been the year's gathering. Now it became the thing to hide from. By

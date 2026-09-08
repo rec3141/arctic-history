@@ -43,8 +43,8 @@ most people who learned in these years, one thing.
 ## Uumanarjuaq
 
 By the early 1890s Peck wanted a station among Inuit who had never met a
-missionary. Through a Glasgow clergyman he was introduced to Crawford Noble,
-an Aberdeen shipowner who had — about a week earlier — bought the whaling
+missionary. Through a Glasgow clergyman he was introduced to
+[[person:Crawford Noble]], an Aberdeen shipowner who had — about a week earlier — bought the whaling
 station on [[place:Uumanarjuaq]] (Blacklead Island) in Cumberland Sound.
 Noble offered a free passage in his ship *Alert* and leave to build on the
 island. The Church Missionary Society agreed on condition that a colleague go
@@ -67,7 +67,7 @@ He was blunter later: "In very truth this island is a gloomy-looking spot,
 almost absolutely nothing to be seen but rocks, and the bones of whales which
 strew the place everywhere."
 
-The *Alert* went across to Kekerten, Noble's other station, without landing
+The *Alert* went across to [[place:Kekerten]], Noble's other station, without landing
 the mission's fifteen tons of coal; she came back on 20 September holed by ice
 in a gale, and on the 21st everyone — Inuit, missionaries and crew — unloaded
 her to keep her afloat. The coal came ashore. Peck's diary: "What a mercy that
@@ -87,7 +87,7 @@ or three wooden buildings on a low snow-covered shore, a boat, and nothing
 else. Most of the people he wrote about lived in
 [[artifact:posts-rcmp-missions-028|snow houses]] nearby. Conversion was slow for six
 years and then came in a rush. Through the winter of 1900-01 Peck split the
-congregation: Bilby took the ordinary service in the church while Peck taught
+congregation: [[person:Julian W. Bilby]] took the ordinary service in the church while Peck taught
 the candidates in the mission house. On the day after he first raised the
 subject, twenty-six people — two men and twenty-four women — asked to be
 enrolled for baptism. The pattern of that list is worth noticing: the first
@@ -109,8 +109,9 @@ that did not come back.
 Peck left Cumberland Sound for good in 1905. The mission at Uumanarjuaq
 continued under others and was eventually moved across to
 [[place:Panniqtuuq]], where the Hudson's Bay Company had opened a post in
-1921 and the RCMP a detachment in 1923; St Luke's hospital followed in 1930,
-and the three institutions together made the settlement. The island itself is
+1921 and the RCMP a detachment in 1923. The Anglican mission there dates from
+1926, and St Luke's hospital - the first hospital in the eastern Arctic -
+from 1931. The three institutions together made the settlement. The island itself is
 now the Blacklead Island Whaling Station National Historic Site.
 
 Peck's other monument is a grammar and a dictionary, and every syllabic text

@@ -90,6 +90,14 @@ removed and why in the worklog.
       --primary --topic <your-slug> --note "carries the Victory Point record in facsimile"
 
 `--bibkey` is `<author><year><firstword>`, lowercase ASCII, no punctuation.
+Do not stop at English: the record of this region is also Danish, Norwegian,
+French, German and Inuktitut, and the original often says more than its
+translation. Give every non-English source `--language` (ISO 639-1: da, no,
+fr, de, iu, kl...); when you work from a translation, give `--translator` and
+`--orig-language` and cite the original edition too where it can be found. A
+quote artifact taken from a non-English text carries `--language` as well.
+(The wiki will later be translated for the francophone crew, so knowing what
+is already French matters.)
 `--primary` marks a journal, log, narrative, chart or testimony; leave it off for
 scholarship. Every source needs a `--licence` and a `--url`. For an archival
 item give `--archive` (the holding institution) and `--callno` (the accession or

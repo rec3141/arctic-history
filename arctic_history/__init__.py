@@ -74,6 +74,9 @@ CREATE TABLE IF NOT EXISTS sources (
   urldate     TEXT DEFAULT '',
   doi         TEXT DEFAULT '',
   archive     TEXT DEFAULT '',            -- holding institution
+  language    TEXT DEFAULT '',            -- of the text as held (ISO 639-1: en, fr, da, no, de, iu...)
+  orig_language TEXT DEFAULT '',          -- when the work is a translation
+  translator  TEXT DEFAULT '',
   callno      TEXT DEFAULT '',            -- accession or catalogue number
   licence     TEXT DEFAULT '',
   note        TEXT DEFAULT '',
@@ -278,6 +281,11 @@ def connect(path: Path | None = None, create: bool = True) -> sqlite3.Connection
         c.executescript(SCHEMA)
         if "status" not in {r[1] for r in c.execute("PRAGMA table_info(pages)")}:
             c.execute("ALTER TABLE pages ADD COLUMN status TEXT NOT NULL DEFAULT 'draft'")
+        for table, col, default in (("sources", "language", "''"), ("sources", "orig_language", "''"),
+                                    ("sources", "translator", "''"), ("artifacts", "language", "''"),
+                                    ("pages", "language", "'en'")):
+            if col not in {r[1] for r in c.execute(f"PRAGMA table_info({table})")}:
+                c.execute(f"ALTER TABLE {table} ADD COLUMN {col} TEXT DEFAULT {default}")
         c.commit()
     return c
 
@@ -427,7 +435,8 @@ def add_source(c, bibkey: str, title: str, **kw) -> str:
     key = re.sub(r"[^a-z0-9]", "", str(bibkey).lower()) or slugify(title).replace("-", "")
     row = {"bibkey": key, "title": title, "entry_type": kw.get("entry_type", "misc")}
     for f in ("author", "year", "container", "publisher", "address", "volume", "pages", "url",
-              "urldate", "doi", "archive", "callno", "licence", "note", "local_file", "topic"):
+              "urldate", "doi", "archive", "callno", "licence", "note", "local_file", "topic",
+              "language", "orig_language", "translator"):
         if kw.get(f) is not None:
             row[f] = str(kw[f])
     row["primary_src"] = 1 if kw.get("primary") else 0
@@ -450,7 +459,7 @@ def add_artifact(c, id: str, topic: str, type: str, title: str, **kw) -> str:
            "lat": None if kw.get("lat") in (None, "") else float(kw["lat"]),
            "lon": None if kw.get("lon") in (None, "") else float(kw["lon"])}
     for f in ("creator", "description", "source_url", "download_url", "local_file",
-              "licence", "credit", "bibkey", "pages"):
+              "licence", "credit", "bibkey", "pages", "language"):
         if kw.get(f) is not None:
             row[f] = str(kw[f])
     for f in ("geometry", "waypoints"):
@@ -1089,10 +1098,17 @@ def validate(c) -> dict:
                        "FROM dates WHERE span<>'' GROUP BY span HAVING n<2 OR a=b"):
         bad("dates", r["span"], f"span has {r['n']} endpoint(s), roles {r['a']}..{r['b']}; "
                                 "a time-limited activity needs one start and one end")
+    def chrono(d):
+        # ISO strings sort chronologically except BCE years, whose string
+        # order inverts: -2400 comes before -1900
+        neg = d.startswith("-")
+        y = d.lstrip("-").split("-")[0]
+        return (-int(y) if neg else int(y), d.lstrip("-"))
     for r in c.execute("SELECT d1.span AS span, d1.date AS a, d2.date AS b FROM dates d1 "
                        "JOIN dates d2 ON d1.span=d2.span AND d1.role='start' AND d2.role='end' "
-                       "WHERE d1.span<>'' AND d2.date < d1.date"):
-        bad("dates", r["span"], f"ends {r['b']} before it starts {r['a']}")
+                       "WHERE d1.span<>''"):
+        if chrono(r["b"]) < chrono(r["a"]):
+            bad("dates", r["span"], f"ends {r['b']} before it starts {r['a']}")
     stats = {t: c.execute(f"SELECT COUNT(*) AS n FROM {t}").fetchone()["n"]
              for t in ("topics", "sources", "artifacts", "pages", "people", "places", "events", "dates")}
     return {"problems": problems, "stats": stats}

@@ -147,3 +147,12 @@ The apology was given at Inukjuak on 18 August 2010
 ([[artifact:relocations-qtc-013]]). It named the separation of families, the
 inadequate shelter and supplies, the failure to say how far and how different
 the new homes would be, and the broken promise of return.
+
+A month later, in September 2010, a monument was unveiled at Ausuittuq: a
+boulder carrying a bronze plaque, carved by [[person:Looty Pijamini]] with
+Matthew Pijamini assisting, commissioned by Nunavut Tunngavik Inc.
+([[artifact:relocations-qtc-041]]). A companion stands at Qausuittuq. The
+plaque's wording is the relocatees' own account of what they did, and it is not
+the government's: they came "to pursue the Government's promise of a more
+prosperous life", they "endured and overcame great hardship", and they
+"dedicated their lives to Canada's sovereignty in these lands and waters."

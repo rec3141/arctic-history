@@ -12,6 +12,15 @@ published its findings in 2013: a final report, thirteen community histories,
 and a set of thematic studies. This topic follows the QTC's account, in the
 QTC's own terms.
 
+One boundary has to be marked at the outset. The QTC's mandate expressly
+*excluded* the High Arctic relocations and the residential schools: the
+relocations had already been examined by the Royal Commission on Aboriginal
+Peoples, and the schools were before the Truth and Reconciliation Commission of
+Canada. The QTC's community histories for Ausuittuq and Qausuittuq tell the
+relocation story anyway, because it is their founding story, but the weight on
+the 1953-55 material here rests on
+[[source:rcap1994high|RCAP's 1994 report]] and the testimony given to it.
+
 ## The words the Commission uses
 
 The QTC found that Inuit did not experience these years as a policy but as a
@@ -50,10 +59,11 @@ ordinances and the crowding of settlement life. The QTC did not find a written
 order to kill the dogs, and did not need one to find that Inuit lost them
 because of what governments did. See [[page:relocations-the-killing-of-the-qimmiit]].
 
-**Tuberculosis.** Through the 1950s the annual Eastern Arctic Patrol ship
-x-rayed whole communities at the ship's rail and took the positives south on
-the spot, sometimes without a word to the family on shore. At the peak, one
-Inuk in seven was in a southern sanatorium. Some were away for years; some
+**Tuberculosis.** Through the 1950s the annual Eastern Arctic Patrol ship —
+the C. D. Howe, [[artifact:relocations-qtc-042]] — x-rayed whole communities at
+the ship's rail and took the positives south on the spot, sometimes without a
+word to the family on shore. At the peak, one Inuk in seven was in a southern
+sanatorium. Some were away for years; some
 never came back, and their families were not told where they were buried. See
 [[page:relocations-the-ships-that-took-people-south]].
 
@@ -79,7 +89,16 @@ one: the families separated, the shelter and supplies not provided, the
 distance never explained, the promise of return not kept
 ([[artifact:relocations-qtc-013]]). The QTC's own community histories, written
 from testimony given before that day, still record people waiting for it
-([[artifact:relocations-qtc-012]]).
+([[artifact:relocations-qtc-012]]). Two further apologies followed in 2019, for
+the handling of the tuberculosis epidemic and for the QTC's findings
+themselves.
+
+In September 2010, a month after the apology, a boulder with a bronze plaque
+was unveiled at Ausuittuq, carved
+by [[person:Looty Pijamini]] and commissioned by Nunavut Tunngavik Inc.
+([[artifact:relocations-qtc-041]]). Its wording is worth reading beside the
+Commission's: it credits the relocatees with having "dedicated their lives to
+Canada's sovereignty in these lands and waters."
 
 The Commission asked for more than an apology. *Achieving Saimaqatigiingniq*
 sets out twenty-five recommendations, and the standard it sets is not that the
