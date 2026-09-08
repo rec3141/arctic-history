@@ -480,12 +480,19 @@ def add_topic(c, slug: str, title: str | None = None, **kw) -> str:
         if kw.get(f) not in (None, ""):
             row[f] = kw[f]
     exists = c.execute("SELECT 1 FROM topics WHERE slug=?", (row["slug"],)).fetchone()
-    if not exists:
-        if "title" not in row:
-            raise ValueError(f"new topic {row['slug']!r} needs a title")
-        row.setdefault("summary", "")
-        row.setdefault("researcher", "")
-        row.setdefault("status", "open")
+    if exists:
+        # a plain UPDATE: an upsert's INSERT half would trip the NOT NULL title
+        fields = {k: v for k, v in row.items() if k != "slug"}
+        if fields:
+            sets = ",".join(f"{k}=?" for k in fields) + ",updated=?"
+            c.execute(f"UPDATE topics SET {sets} WHERE slug=?", (*fields.values(), now(), row["slug"]))
+            c.commit()
+        return row["slug"]
+    if "title" not in row:
+        raise ValueError(f"new topic {row['slug']!r} needs a title")
+    row.setdefault("summary", "")
+    row.setdefault("researcher", "")
+    row.setdefault("status", "open")
     return _upsert(c, "topics", "slug", row)
 
 
