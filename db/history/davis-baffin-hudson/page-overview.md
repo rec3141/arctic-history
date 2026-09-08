@@ -83,10 +83,21 @@ in 1620 with two companions; the rest died of scurvy where they lay. See
 
 In 1631 [[person:Luke Foxe]] and [[person:Thomas James]] sailed in the same
 season on the same errand and met, absurdly, in the middle of Hudson Bay. Foxe
-went north into what is now Foxe Basin and came home with every man alive;
-James sank his ship deliberately at Charlton Island to save her through a
-terrible winter and came home a year later. After them the search through
-Hudson Bay was over for a century.
+went north into what is now [[place:Foxe Basin]] and came home with every man
+alive; James sank his ship deliberately at [[place:Charlton Island]] to save her
+through a terrible winter and came home a year later. After them the search
+through Hudson Bay was over for a century:
+[[page:foxe-and-james-1631]].
+
+The ten tracks on the map are Davis's three ([[artifact:davis-baffin-hudson-001]],
+[[artifact:davis-baffin-hudson-002]], [[artifact:davis-baffin-hudson-003]]),
+Hudson's ([[artifact:davis-baffin-hudson-004]]), Button's
+([[artifact:davis-baffin-hudson-005]]), Bylot and Baffin's two
+([[artifact:davis-baffin-hudson-006]], [[artifact:davis-baffin-hudson-007]]),
+Munk's ([[artifact:davis-baffin-hudson-008]]), Foxe's
+([[artifact:davis-baffin-hudson-009]]) and James's
+([[artifact:davis-baffin-hudson-010]]). Where a leg is inferred rather than
+observed, the track's description says so.
 
 ## Why it still matters here
 
@@ -98,8 +109,8 @@ series. And these were not empty waters. Every one of these voyages met people
 who already lived here, and the meetings are recorded in the visitors' words
 only: with music and dancing, with trade, with kidnapping, and with killing on
 both sides. Those encounters belong to the communities of Qikiqtaaluk (Baffin
-Island) and Kalaallit Nunaat as much as to English maritime history. See
-[[topic:frobisher]] for the generation before Davis, [[topic:ross-parry]] for
-the ships that finally vindicated Baffin in 1818 and 1819, and
-[[topic:hudson-strait-south-baffin]] and [[topic:inuit-oral-history]] for what
-happened in these places afterwards.
+Island) and Kalaallit Nunaat as much as to English maritime history, and they
+have their own page: [[page:the-people-they-met]]. See [[topic:frobisher]] for
+the generation before Davis, [[topic:ross-parry]] for the ships that finally
+vindicated Baffin in 1818 and 1819, and [[topic:hudson-strait-south-baffin]] and
+[[topic:inuit-oral-history]] for what happened in these places afterwards.

@@ -387,14 +387,20 @@ def add_date(c, entity_kind: str, entity_id: str, date: str, **kw) -> int:
 
 
 def span_dates(c, entity_kind: str, entity_id: str, start: str, end: str, **kw) -> list[int]:
-    """A range, as its two atomic endpoints sharing one span name."""
+    """A range, as its two atomic endpoints sharing one span name. Each end
+    keeps its own precision — a day-precise departure does not lend day
+    precision to a month-precise return — unless one is stated for both."""
     span = kw.pop("span", None) or f"{entity_id}:{_iso(start)}"
     label = kw.pop("label", "")
     start_label = kw.pop("start_label", label)
     end_label = kw.pop("end_label", label)
-    out = [add_date(c, entity_kind, entity_id, start, role="start", span=span, label=start_label, **kw)]
+    prec = kw.pop("precision", None)
+    end_prec = kw.pop("end_precision", None) or prec
+    out = [add_date(c, entity_kind, entity_id, start, role="start", span=span, label=start_label,
+                    precision=prec, **kw)]
     if end:
-        out.append(add_date(c, entity_kind, entity_id, end, role="end", span=span, label=end_label, **kw))
+        out.append(add_date(c, entity_kind, entity_id, end, role="end", span=span, label=end_label,
+                            precision=end_prec, **kw))
     return out
 
 
@@ -488,11 +494,12 @@ def _record_dates(c, kind: str, ident: str, start: str, end: str, raw: str = "",
         c.commit()
     if not start:
         return
-    prec = date_precision(raw or start)
     if end and end != start:
-        span_dates(c, kind, ident, start, end, precision=prec, **kw)
+        # each endpoint reads its precision off its own shape
+        span_dates(c, kind, ident, start, end, precision=date_precision(start),
+                   end_precision=date_precision(end), **kw)
     else:
-        add_date(c, kind, ident, start, precision=prec, role="point", **kw)
+        add_date(c, kind, ident, start, precision=date_precision(raw or start), role="point", **kw)
 
 
 def forget(c, kind: str, ident) -> dict:

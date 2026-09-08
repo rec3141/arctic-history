@@ -144,6 +144,10 @@ def main(argv=None) -> int:
     e.add_argument("--people", default="")
     e.add_argument("--bibkey", default="")
     e.add_argument("--tags", default="")
+    e.add_argument("--precision", default=None, choices=list(H.PRECISIONS),
+                   help="how much of the date the source gives (guessed from its shape by default)")
+    e.add_argument("--qualifier", default="", choices=list(H.QUALIFIERS),
+                   help="the source's own hedge: circa, before, after, by, early, mid, late")
 
     d = sub.add_parser("date", help="record one atomic date on any record")
     d.add_argument("--kind", required=True, choices=["artifact", "event", "person", "place", "source", "page", "topic"])
@@ -298,9 +302,20 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
         kw = {k: v for k, v in vars(a).items() if k not in {"cmd", "db", "name"} and v is not None}
         print(H.add_place(c, a.name, **kw))
     elif a.cmd == "event":
-        print(H.add_event(c, a.topic, a.date, a.title, date_end=a.date_end, detail=a.detail,
-                          lat=a.lat, lon=a.lon, place=a.place, people=a.people,
-                          bibkey=a.bibkey, tags=a.tags))
+        ident = H.add_event(c, a.topic, a.date, a.title, date_end=a.date_end, detail=a.detail,
+                            lat=a.lat, lon=a.lon, place=a.place, people=a.people,
+                            bibkey=a.bibkey, tags=a.tags)
+        if a.precision or a.qualifier:
+            # replaces the guessed row: same entity, date, role and label upsert
+            if a.date_end and a.date_end != a.date:
+                H.span_dates(c, "event", str(ident), a.date, a.date_end, precision=a.precision,
+                             qualifier=a.qualifier, label=a.title, topic=a.topic, place=a.place,
+                             lat=a.lat, lon=a.lon, bibkey=a.bibkey)
+            else:
+                H.add_date(c, "event", str(ident), a.date, precision=a.precision,
+                           qualifier=a.qualifier, role="point", label=a.title, topic=a.topic,
+                           place=a.place, lat=a.lat, lon=a.lon, bibkey=a.bibkey)
+        print(ident)
     elif a.cmd == "date":
         print(H.add_date(c, a.kind, a.id, a.date, role=a.role, precision=a.precision,
                          qualifier=a.qualifier, span=a.span, label=a.label, lat=a.lat, lon=a.lon,

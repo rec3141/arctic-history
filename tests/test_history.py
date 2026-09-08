@@ -109,6 +109,12 @@ class HistoryTests(unittest.TestCase):
         rows = self.c.execute("SELECT qualifier FROM dates").fetchall()
         self.assertEqual([r["qualifier"] for r in rows], ["circa"])
 
+    def test_each_span_end_keeps_its_own_precision(self):
+        H.add_event(self.c, "franklin-1845", "1612-08-15", "Button winters at Port Nelson",
+                    date_end="1613-07")
+        rows = {r["role"]: r["precision"] for r in self.c.execute("SELECT role, precision FROM dates")}
+        self.assertEqual(rows, {"start": "day", "end": "month"})
+
     def test_redating_an_artifact_replaces_its_timeline_row(self):
         self.artifact(date="1822-02")
         self.artifact(date="1822-03")
