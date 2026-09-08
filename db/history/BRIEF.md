@@ -239,7 +239,10 @@ people living in Nunavut and Greenland now, or to the science this ship does.
 The layer is an archive, not a thumbnail gallery. Fetch **full texts** (the
 complete OCR text and, where it exists, the scanned PDF of every primary work
 you cite) and **full-size images** (the original upload from Commons or the
-archive, not a thumbnail). Every file must be fetched through the fetch tool:
+archive, not a thumbnail). Always keep the original, whatever its size:
+storage and bandwidth downstream are not your concern, and smaller copies can
+always be derived later, while a discarded original cannot. Every file must
+be fetched through the fetch tool:
 
     tools/history-fetch.py URL --topic <your-slug> --name <your-slug>-<short>.<ext>
 
