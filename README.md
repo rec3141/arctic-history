@@ -1,15 +1,17 @@
-# Arctic history research: the grid side
+# Arctic history: the CCGS Amundsen's History tab
 
-This repository is the research half of the CCGS Amundsen dashboard's History
-tab. The research runs here on grid, on the university network, where
-publishers see a campus address. Grid owns the database; the ship is read-only
-toward grid, pulls the database and files with `tools/history-sync.sh pull`,
-and renders them into a map, a timeline and a wiki that a local model reads.
-The ship side works on the dashboard front end; both sides commit to this
-repository (rec3141/arctic-history). The database and the fetched files are
-not committed — they move by rsync.
+This repository holds both halves of the Amundsen dashboard's History tab: the
+research backend described below, and the front end that renders the database
+into a map, a timeline and a wiki that a local model reads. The front end is
+developed on the ship and lands in its own directory alongside these.
 
-## What is here
+The research runs on grid, on the university network, where publishers see a
+campus address. Grid owns the database; the ship is read-only toward grid and
+pulls the database and files with `tools/history-sync.sh pull` for the
+dashboard build. Code moves through this repository; the database and the
+fetched files are not committed — they move by rsync.
+
+## The research backend
 
     arctic_history/            the schema and the writers; standalone, no dependencies
     tools/history-db.py        the only way anything is written: topics, sources, artifacts,
