@@ -55,7 +55,7 @@ $closed = array_filter($requests, fn($r) => $r['status'] !== 'open');
 </style>
 <h1>Arctic history research: requests</h1>
 <p class="note">Queue as of <?= h($generated ?: 'never pushed') ?>.
-Decisions saved here are collected by grid every few minutes; researchers read
+Decisions saved here are collected by grid within a minute; researchers read
 them with <code>history-db.py requests</code>.</p>
 <?php if ($msg): ?><p class="warn"><?= h($msg) ?></p><?php endif; ?>
 
