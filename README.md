@@ -102,7 +102,11 @@ The topics and the status of each:
 ## The person's part
 
 Researchers file requests for what they cannot do alone: API keys, titles the
-library does not license, judgement calls. The review page lives at
+library does not license, judgement calls. Before an access request they run
+`tools/library-search.py` (UM catalogue: shelf copies and licensed platforms)
+and, where the platform is Scholars Portal, pull the needed pages with
+`tools/history-fetch.py --scholarsportal` under a crew-wide one-session-per-hour
+gate. Hard copies to fetch by hand queue in `db/history/PICKUP-QUEUE.md`. The review page lives at
 https://cryomics.org/amundsen/requests/ (basic auth; the password hash is in
 `~/.amundsen-htpasswd` on dreamhost). Grid pushes the queue there and collects
 the decisions every minute with `tools/requests-sync.py pull` (cron), and

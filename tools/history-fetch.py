@@ -4,6 +4,8 @@
     history-fetch.py URL --topic frobisher --name frobisher-best-1578.pdf
     history-fetch.py URL --topic whaling --name scoresby-1820-v1.txt --ezproxy
     history-fetch.py --probe URL              # size and type without downloading
+    history-fetch.py --scholarsportal /ebooks/ebooks0/gibson_crkn/2009-12-01/1/400057 \
+        --pages 94-146 --topic posts-rcmp-missions --name posts-rcmp-missions-grant2002-pp72-124.pdf
 
 What it does for you:
 
@@ -19,6 +21,14 @@ What it does for you:
   error page. A bad file is deleted and reported, never left to be registered.
 * Wikimedia rate-limits this shared campus address: send Commons queries one
   at a time, and check the cached lookups in ``_staging/`` first.
+* ``--scholarsportal URI --pages FROM-TO`` pulls a page range of a licensed
+  e-book from Scholars Portal Books (the "Canadian Electronic Library" the
+  catalogue lists; ``tools/library-search.py`` prints the URI). The platform
+  allows 53 pages per session and the person allows one session per platform
+  per hour for the whole crew; the tool enforces both through
+  ``_ledger/platform-sessions.json`` and tells you when the next slot opens.
+  Pages are the reader's numbering: printed page + the front matter count
+  (``--pages`` of 1-20 shows you the contents and the offset).
 
 The file lands in ``db/history/<topic>/files/<name>`` and the path to give
 ``history-db.py --local-file`` is printed.
@@ -27,6 +37,11 @@ The file lands in ``db/history/<topic>/files/<name>`` and the path to give
 from __future__ import annotations
 
 import argparse
+import base64
+import os
+import tempfile
+import time
+from urllib.parse import quote
 import json
 import re
 import subprocess
@@ -107,6 +122,91 @@ def check_file(path: Path, suffix: str) -> str | None:
     return None
 
 
+SP = "https://books-scholarsportal-info.uml.idm.oclc.org"
+SP_LIMIT = 53
+
+
+def scholarsportal(uri: str, pages: str, dest: Path) -> int:
+    ranges = []
+    for part in pages.split(","):
+        m = re.fullmatch(r"\s*(\d+)-(\d+)\s*", part)
+        if not m or int(m.group(2)) < int(m.group(1)):
+            print("--pages must be FROM-TO ranges in the reader's numbering, e.g. 94-146 or 209-228,287-297", file=sys.stderr)
+            return 2
+        ranges.append((int(m.group(1)), int(m.group(2))))
+    total = sum(hi - lo + 1 for lo, hi in ranges)
+    if total > SP_LIMIT:
+        print(f"Scholars Portal serves at most {SP_LIMIT} pages per session; {pages} is {total}", file=sys.stderr)
+        return 2
+    left = curl(["-o", "-", f"{SP}/api/pagesLeft?uri={uri}"], jar=True, timeout=60).stdout
+    try:
+        left_n = json.loads(left).get("pagesLeft")
+    except ValueError:
+        left_n = None
+    if left_n is not None and int(left_n) < total:
+        print(f"Scholars Portal has {left_n} pages left in today's allowance for this campus address "
+              f"({total} asked). The allowance is daily, not hourly: try tomorrow, or take the pages another way.", file=sys.stderr)
+        return 3
+    ledger = H.HISTORY_DIR / "_ledger" / "platform-sessions.json"
+    try:
+        previous = json.loads(ledger.read_text()).get("scholarsportal")
+    except (OSError, ValueError):
+        previous = None
+    wait = H.platform_session_gate(ledger, "scholarsportal", time.time())
+    if wait:
+        print(f"Scholars Portal was used {int((H.PLATFORM_GAP - wait) / 60)} min ago by this crew; "
+              f"the next session opens in {int(wait / 60) + 1} min. Do something else meanwhile.", file=sys.stderr)
+        return 3
+    meta = curl(["-o", "-", f"{SP}/api/meta?id={uri}"], jar=True, timeout=60).stdout
+    try:
+        bm = json.loads(meta)[0]["book-meta"]
+        title = bm["book-title-group"]["book-title"]
+        year = bm["pub-date"][0]["year"]
+    except (ValueError, KeyError, IndexError, TypeError):
+        print(f"Scholars Portal did not describe {uri}: {meta[:200]!r}", file=sys.stderr)
+        return 1
+    sess = curl(["-o", "-", f"{SP}/api/session/{os.urandom(6).hex()}"], jar=True, timeout=60).stdout
+    try:
+        pem = base64.b64decode(json.loads(sess)["pk"])
+    except (ValueError, KeyError):
+        print(f"no session key from Scholars Portal: {sess[:200]!r}", file=sys.stderr)
+        return 1
+    with tempfile.NamedTemporaryFile("wb", suffix=".pem", delete=False) as kf:
+        kf.write(pem)
+    m2 = quote(json.dumps({"title": title, "pubYear": year}), safe="")
+    parts = []
+    try:
+        for lo, hi in ranges:
+            enc = subprocess.run(["openssl", "pkeyutl", "-encrypt", "-pubin", "-inkey", kf.name],
+                                 input=f"{uri}&{lo}&{hi}".encode(), capture_output=True, check=True).stdout
+            token = quote(base64.b64encode(enc).decode(), safe="")
+            part = dest.with_suffix(f".{lo}-{hi}.part")
+            r = curl(["-o", str(part), "-w", "%{http_code}\t%{content_type}", f"{SP}/api/extract/{token}?meta={m2}"], jar=True, timeout=300)
+            code, ctype = (r.stdout.strip().split("\t") + ["", ""])[:2]
+            problem = None if "pdf" in ctype else f"HTTP {code}: {part.read_text(errors='ignore')[:200]!r}" if part.exists() else f"HTTP {code}"
+            problem = problem or check_file(part, ".pdf")
+            if problem:
+                print(f"Scholars Portal refused pages {lo}-{hi}: {problem}", file=sys.stderr)
+                for p in parts + [part]:
+                    p.unlink(missing_ok=True)
+                if not parts:
+                    H.platform_session_release(ledger, "scholarsportal", previous)
+                return 1
+            parts.append(part)
+        if len(parts) == 1:
+            parts[0].replace(dest)
+        else:                      # one PDF, in order; each part keeps its cover sheet
+            subprocess.run(["pdfunite", *map(str, parts), str(dest)], check=True)
+            for p in parts:
+                p.unlink(missing_ok=True)
+    finally:
+        Path(kf.name).unlink(missing_ok=True)
+    rel = str(dest.relative_to(H.HISTORY_DIR))
+    print(f"{rel}  {dest.stat().st_size / 1e6:.1f} MB  reader pages {pages} of {title!r} ({year}); each range opens with a cover sheet")
+    print(f"--local-file {rel}")
+    return 0
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(prog="history-fetch.py", description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -116,8 +216,21 @@ def main(argv=None) -> int:
     ap.add_argument("--ezproxy", action="store_true", help="go through the university library's EZproxy (publishers)")
     ap.add_argument("--force", action="store_true", help="overwrite an existing file")
     ap.add_argument("--probe", action="store_true", help="report size and type only")
+    ap.add_argument("--scholarsportal", metavar="URI", help="Scholars Portal book URI (/ebooks/...), with --pages")
+    ap.add_argument("--pages", metavar="FROM-TO", help="reader page range for --scholarsportal, at most 53 pages")
     a = ap.parse_args(argv)
 
+    if a.scholarsportal:
+        if not (a.pages and a.topic and a.name):
+            ap.error("--scholarsportal needs --pages, --topic and --name")
+        if not a.name.endswith(".pdf"):
+            ap.error("--name must end in .pdf")
+        dest = H.HISTORY_DIR / H.slugify(a.topic) / "files" / a.name
+        if dest.exists() and not a.force:
+            print(f"already here: {dest.relative_to(H.HISTORY_DIR)}; --force to refetch")
+            return 0
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        return scholarsportal(a.scholarsportal, a.pages, dest)
     if not a.url:
         ap.error("a URL is needed")
 

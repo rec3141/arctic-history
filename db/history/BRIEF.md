@@ -280,6 +280,17 @@ spaces.
   against the page image. One document at a time — the GPU is shared.
 - If a fetch fails outright, record the artifact with `--download-url` and no
   `--local-file`, note it in the worklog, and move on.
+- **Before you file a `request --kind access`, search the library.** Run
+  `tools/library-search.py "<title words author>"` (or `--isbn`). It prints
+  the shelf copies and the e-book platforms the University of Manitoba
+  licenses, each marked reachable from grid, browser-only, or no. Scholars
+  Portal is reachable: `tools/history-fetch.py --scholarsportal <uri>
+  --pages FROM-TO` pulls up to 53 reader pages, and the tool enforces the
+  crew-wide rule of one session per platform per hour — if it says wait,
+  wait and do other work; do not look for another way in. Pull the chapters
+  the page actually needs, not the book. A browser-only or unlicensed
+  platform, or a shelf copy with no e-copy, is what the request is for: say
+  in the request what the search showed.
 
 ### 8. Asking a person for help
 Some things you cannot do alone: an API key, a site the library does not
