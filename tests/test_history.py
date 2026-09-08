@@ -413,7 +413,7 @@ class HistoryTests(unittest.TestCase):
 
 
     def test_request_text_turns_literal_backslash_n_into_newlines(self):
-        rid = H.add_request(self.c, "franklin-1845", "access", "A title\\nwith a break",
+        rid = H.add_request(self.c, "franklin-1845", "access", "A title\\nwith a break", url="https://example.org/x",
                             why="Line one of a reason that is long enough to pass the guard.\\nLine two, also long enough to count.")
         r = self.c.execute("SELECT what, why FROM requests WHERE id=?", (rid,)).fetchone()
         self.assertEqual(r["what"], "A title\nwith a break")
