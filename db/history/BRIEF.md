@@ -350,11 +350,12 @@ it knows its place: "You are a Sonnet helper. Launch only Haiku agents, and
 only to read files." Prefer doing the work yourself to launching a helper at
 all; a helper is for a bounded extraction you can name in one sentence.
 
-**Each depth has a cap.** You (Opus) may have at most 2 helpers running at
-once and launch at most 6 in a run. A Sonnet helper may have at most 2 Haiku
-readers running at once and launch at most 6. Wait for one to finish before
-starting the next; do not fan out a list of tasks in one go. Put the cap in
-the helper's prompt with the model rule.
+**Sonnet helpers are capped; Haiku readers are not.** You (Opus) may have at
+most 2 Sonnet helpers running at once and launch at most 6 in a run; wait for
+one to finish before starting the next. Haiku readers are cheap: any agent,
+you included, may launch as many `model: haiku` readers as the files call for,
+in parallel, with no cap. Put the rule in the helper's prompt with the model
+rule.
 
 **Cache locally, then read the cache with Haiku.** Do not use WebFetch to read
 a page. It downloads the page again on every call, runs the whole page through
