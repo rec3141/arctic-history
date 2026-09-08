@@ -208,7 +208,7 @@ def main(argv=None) -> int:
     fg = sub.add_parser("forget", help="delete one mistaken row and the dates attached to it — "
                                        "a duplicate person, a stray date. For errors, not "
                                        "revisions; note what you removed in the worklog.")
-    fg.add_argument("--kind", required=True, choices=["artifact", "event", "person", "place", "date"])
+    fg.add_argument("--kind", required=True, choices=["artifact", "event", "person", "place", "source", "date"])
     fg.add_argument("--id", required=True,
                     help="the artifact id, the event or date row number, or the person or place name")
 
@@ -345,7 +345,7 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
         if a.until:
             q += " AND date<=?"
             args.append(a.until)
-        for r in c.execute(q + " ORDER BY date, role DESC", tuple(args)):
+        for r in c.execute(q + f" ORDER BY {H.date_order('date')}, role DESC", tuple(args)):
             mark = {"point": " ", "start": "[", "end": "]"}[r["role"]]
             qual = f"{r['qualifier']} " if r["qualifier"] else ""
             print(f"{mark} {qual}{r['date']:<12s} {r['precision']:<7s} {r['entity_kind']:<8s} "
