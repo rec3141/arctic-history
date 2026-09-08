@@ -39,7 +39,7 @@ Each topic directory has a `RESUME.md` naming the items relevant to it.
 ## Government and commission reports
 | file | work |
 | --- | --- |
-| `qtc-*.txt` / `qtc-*.pdf` | Qikiqtani Truth Commission: Pond Inlet, Pangnirtung, Kimmirut, Clyde River, Grise Fiord, Resolute Bay, Arctic Bay, Kinngait, and the *Nuutauniq* (moves) thematic report |
+| `qtc-*.txt` / `qtc-*.pdf` | Qikiqtani Truth Commission: Pond Inlet, Pangnirtung, Kimmirut, Clyde River, Grise Fiord, Resolute Bay, Arctic Bay, Kinngait, and the *Nuutauniq* (moves) thematic report. BUT `qtc-arctic_bay.pdf` and `qtc-kinngait.pdf` are 19 KB HTML error pages, not PDFs — refetch from qtcommission.ca |
 | `rcap-1994.txt`, `rcap-1994.pdf` | Royal Commission on Aboriginal Peoples, *The High Arctic Relocation* (1994) |
 | `rcmp-19{21..25}*.txt` | RCMP annual reports 1921-1925 (Crown copyright expired) |
 | `nascopie-hbca.pdf`, `nascopie-hbca.txt` | HBC Archives on the supply ship Nascopie |
