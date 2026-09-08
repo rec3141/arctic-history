@@ -547,7 +547,8 @@ def add_request(c, topic: str, kind: str, what: str, **kw) -> int:
             "all (what you tried and what only they can do), exactly where to get it "
             "(URL, title, edition, volume, account to create, the request form), and "
             "what you will do with the answer — not 'get me an API key' but which key, "
-            "from which page, and what it unlocks")
+            "from which page, and what it unlocks. If they must write to someone, find "
+            "the address on the holder's own pages and draft the email for them")
     if kind in ("download", "access") and not kw.get("url", "").strip():
         raise ValueError(f"a {kind} request needs --url: the exact page the person should start from")
     size = kw.get("size_mb")
