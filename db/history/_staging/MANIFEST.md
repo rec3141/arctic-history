@@ -17,7 +17,7 @@ Each topic directory has a `RESUME.md` naming the items relevant to it.
 | `txt/northgeorgiagaze00unse.txt` | *The North Georgia Gazette and Winter Chronicle* (1821) |
 | `txt/voyageofdiscover00ross.txt` | John Ross, *A Voyage of Discovery* (1819) |
 | `txt/journalofvoyageo00fishrich.txt` | Fisher, *Journal of a Voyage of Discovery* (1821) |
-| `cihm_08551.txt`, `burford-boothia.txt` | John Ross, *Narrative of a Second Voyage* (1835) and Boothia material |
+| `burford-boothia.txt` | Boothia material (Burford panorama). NOTE: `cihm_08551.txt` is NOT Ross 1835 as first listed — identify from its header before citing; the real Ross 1835 is in inuit-oral-history/files/ from `narrativeofsecon00ross` |
 | `khp/arcticexploratio01kane.txt`, `khp/arcticexploratio02kane.txt` | Kane, *Arctic Explorations* (1856), both volumes |
 | `khp/openpolarseanarr00haye.txt` | Hayes, *The Open Polar Sea* (1867) |
 | `khp/lifewithesquima00hallgoog.txt` | Hall, *Life with the Esquimaux* (1864) |
