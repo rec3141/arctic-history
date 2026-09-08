@@ -1206,6 +1206,19 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
         atomic(out / "timeline.json", json.dumps({"timeline": timeline}, ensure_ascii=False))
         atomic(out / "artifacts.json", json.dumps({"artifacts": arts}, ensure_ascii=False))
         atomic(out / "events.json", json.dumps({"events": events}, ensure_ascii=False))
+        # the named places with their positions, machine-readable — an "in this
+        # place" vignette wants coordinates, not just the generated wiki pages
+        places = [{**{k: r[k] for k in ("name", "historic", "inuktitut", "lat", "lon",
+                                        "kind", "note", "bibkey", "topic")},
+                   "page": page_slug("place", r["name"])}
+                  for r in c.execute("SELECT * FROM places ORDER BY name")]
+        atomic(out / "places.json", json.dumps({"places": places}, ensure_ascii=False))
+        people_rows = [{**{k: r[k] for k in ("name", "also", "role", "born", "died",
+                                             "affiliation", "note", "topic")},
+                        "indigenous": bool(r["indigenous"]),
+                        "page": page_slug("person", r["name"])}
+                       for r in c.execute("SELECT * FROM people ORDER BY name")]
+        atomic(out / "people.json", json.dumps({"people": people_rows}, ensure_ascii=False))
         atomic(out / "index.json", json.dumps({"pages": index, "topics": topics,
                                                "wanted": info["wanted"]}, ensure_ascii=False))
         atomic(out / "references.bib", to_bibtex(c.execute("SELECT * FROM sources ORDER BY bibkey")))
@@ -1213,6 +1226,7 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
             "SELECT MAX(updated) AS updated FROM artifacts")] + [""]) or now()
         return {"file": "data/history/index.json", "stamp": stamp, "artifacts": len(arts),
                 "pages": len(pages), "events": len(events), "topics": len(topics),
+                "places": len(places), "people": len(people_rows),
                 "dates": len(rows), "timeline": len(timeline),
                 "sources": c.execute("SELECT COUNT(*) AS n FROM sources").fetchone()["n"],
                 "wanted": len(info["wanted"])}
