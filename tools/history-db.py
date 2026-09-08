@@ -82,7 +82,8 @@ def main(argv=None) -> int:
     s.add_argument("--entry-type", default="misc",
                    help="book, article, incollection, misc, online, report, thesis")
     for f in ("author", "year", "container", "publisher", "address", "volume", "pages",
-              "url", "urldate", "doi", "archive", "callno", "licence", "note", "local-file", "topic"):
+              "url", "urldate", "doi", "archive", "callno", "licence", "note", "local-file", "topic",
+              "language", "orig-language", "translator"):
         s.add_argument(f"--{f}", default=None)
     s.add_argument("--primary", action="store_true", help="a primary source: a journal, log, narrative or testimony")
 
@@ -116,6 +117,7 @@ def main(argv=None) -> int:
         a.add_argument("--local-file", default="", help="a downloaded copy, relative to db/history/")
         a.add_argument("--licence", default="")
         a.add_argument("--pages", default="", help="where in the cited work")
+        a.add_argument("--language", default="", help="of a text or quote, when not English (ISO 639-1)")
         a.add_argument("--people", default="", help="semicolon separated")
         a.add_argument("--tags", default="", help="comma separated")
 
@@ -279,7 +281,7 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
                   description=_read(a.description, a.description_file),
                   lat=a.lat, lon=a.lon, source_url=a.source_url, download_url=a.download_url,
                   local_file=a.local_file, licence=a.licence, credit=a.credit, bibkey=a.bibkey,
-                  pages=a.pages, people=a.people, tags=a.tags)
+                  pages=a.pages, people=a.people, tags=a.tags, language=a.language)
         geom = _read(a.geometry, a.geometry_file)
         way = _read(a.waypoints, a.waypoints_file)
         if way:
