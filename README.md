@@ -137,4 +137,12 @@ rebuild the environment:
     ~/.local/bin/uv venv .ocr-venv --python 3.11
     ~/.local/bin/uv pip install --python .ocr-venv/bin/python \
         "torch==2.5.1" --index-url https://download.pytorch.org/whl/cu121
-    ~/.local/bin/uv pip install --python .ocr-venv/bin/python marker-pdf
+    ~/.local/bin/uv pip install --python .ocr-venv/bin/python "marker-pdf==1.6.2"
+    ~/.local/bin/uv pip install --python .ocr-venv/bin/python \
+        "torch==2.5.1+cu121" "torchvision==0.20.1+cu121" \
+        --index-url https://download.pytorch.org/whl/cu121   # again: marker's deps bump both
+
+The pins matter: the GV100 is Volta, so torch must be a cu121 build (newer
+wheels want a newer driver), and marker 1.6.x is the last torch-native
+generation — marker 2 / surya 2 OCR through a vllm Docker server that does
+not run on this card.
