@@ -14,3 +14,6 @@ __pycache__/
 db/history/_backups/
 db/history/SIGNATURE.txt
 .ocr-venv/
+# the ship's front-end work-in-progress lives in underway/ inside its clone;
+# grid never sees it and neither should git on either side
+underway/

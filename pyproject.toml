@@ -10,3 +10,7 @@ test = ["pytest"]
 
 [tool.setuptools]
 packages = ["arctic_history"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = ["underway", ".venv", ".ocr-venv"]
