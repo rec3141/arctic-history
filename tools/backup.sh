@@ -23,4 +23,9 @@ if rsync -a "$OUT/history-$STAMP.sqlite" dreamhost:backups/amundsen/ 2>/dev/null
 else
   echo "offsite copy failed; snapshot kept locally at $OUT/history-$STAMP.sqlite" >&2
 fi
+# the session and researcher transcripts are the project's process record;
+# mirror them off-machine too (incremental, additive — nothing deleted remotely)
+rsync -az "$HOME/.claude/projects/-data-dev-arctic-history/" \
+  dreamhost:backups/amundsen-transcripts/ 2>/dev/null \
+  || echo "transcript mirror failed; local copies remain" >&2
 echo "$OUT/history-$STAMP.sqlite"
