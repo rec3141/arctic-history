@@ -368,5 +368,15 @@ class HistoryTests(unittest.TestCase):
         self.assertEqual(r["topic"], "sverdrup-bernier-peary")
 
 
+    def test_platform_gate_allows_one_session_per_hour_for_the_crew(self):
+        import tempfile, os
+        with tempfile.TemporaryDirectory() as d:
+            ledger = Path(d) / "platform-sessions.json"
+            self.assertEqual(H.platform_session_gate(ledger, "scholarsportal", 1000.0), 0.0)   # first use: go
+            self.assertAlmostEqual(H.platform_session_gate(ledger, "scholarsportal", 1600.0), 3000.0)  # 10 min later: wait 50
+            self.assertEqual(H.platform_session_gate(ledger, "canadacommons", 1600.0), 0.0)     # another platform: go
+            self.assertEqual(H.platform_session_gate(ledger, "scholarsportal", 4601.0), 0.0)    # after the hour: go
+
+
 if __name__ == "__main__":
     unittest.main()

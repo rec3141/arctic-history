@@ -424,6 +424,42 @@ def _upsert(c: sqlite3.Connection, table: str, key: str, row: dict) -> str:
     return str(row[key])
 
 
+# ------------------------------------------------- licensed-platform pacing
+PLATFORM_GAP = 3600      # seconds between download sessions on one platform
+
+
+def platform_session_gate(ledger: Path, platform: str, now_ts: float, gap: int = PLATFORM_GAP) -> float:
+    """How long (seconds) until `platform` may be used again; 0 means go, and
+    the ledger is stamped. Every researcher shares one ledger, so the rule the
+    person set — one download session per platform per hour — holds across
+    the whole crew, not per run."""
+    ledger.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        data = json.loads(ledger.read_text())
+    except (OSError, ValueError):
+        data = {}
+    if platform in data:
+        wait = float(data[platform]) + gap - now_ts
+        if wait > 0:
+            return wait
+    data[platform] = now_ts
+    ledger.write_text(json.dumps(data, indent=1))
+    return 0.0
+
+
+def platform_session_release(ledger: Path, platform: str, previous: float | None) -> None:
+    """Undo a stamp when the platform refused and nothing was downloaded."""
+    try:
+        data = json.loads(ledger.read_text())
+    except (OSError, ValueError):
+        return
+    if previous is None:
+        data.pop(platform, None)
+    else:
+        data[platform] = previous
+    ledger.write_text(json.dumps(data, indent=1))
+
+
 # ---------------------------------------------------------------- writers
 def add_topic(c, slug: str, title: str, **kw) -> str:
     return _upsert(c, "topics", "slug", {"slug": slugify(slug), "title": title,
