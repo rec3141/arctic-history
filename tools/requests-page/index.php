@@ -31,7 +31,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $msg = 'not saved: unknown request or bad status';
 }
 
-function h($s) { return htmlspecialchars((string) $s, ENT_QUOTES, 'UTF-8'); }
+// researchers sometimes write a literal backslash-n into a shell argument;
+// show it as the line break they meant
+function h($s) { return htmlspecialchars(str_replace(['\\r\\n', '\\n'], "\n", (string) $s), ENT_QUOTES, 'UTF-8'); }
 $open = array_filter($requests, fn($r) => $r['status'] === 'open' && !isset($GLOBALS['answers'][(string) $r['id']]));
 $pending = array_filter($requests, fn($r) => $r['status'] === 'open' && isset($GLOBALS['answers'][(string) $r['id']]));
 $closed = array_filter($requests, fn($r) => $r['status'] !== 'open');
