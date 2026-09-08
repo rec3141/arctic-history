@@ -32,7 +32,7 @@ Each topic directory has a `RESUME.md` naming the items relevant to it.
 | `schwatkassearchs00gild.txt` | Gilder, *Schwatka's Search* (1881) |
 | `danisharcticexp00unkngoog.txt`, `danisharcticexp01munkgoog.txt`, `danisharcticexp03munkgoog.txt` | Gosch (ed.), *Danish Arctic Expeditions* — includes Munk |
 | `baffin1616.txt`, `baffin1616a.txt`, `baffinletter.txt` | Baffin's 1616 journal and his letter to Wolstenholme |
-| `sagadb_graen.txt` | *Grœnlendinga saga* |
+| `sagadb_graen.txt` | NOT the saga — a 404 capture. *Grœnlendinga saga* is inside the staged Gathorne-Hardy 1921 translation |
 | `pg9148.txt` | Gutenberg text (identify from its header) |
 | `peck-lewis.txt` | Peck / Blacklead Island mission material |
 
@@ -52,5 +52,8 @@ Parry plates. `commons-meta.json`, `commons-search.txt`, `commons.txt`,
 Commons search and licence lookups — check them before querying the Commons API
 again, which rate-limited the first run.
 
-`wiki/` holds Wikipedia page text on Norse Greenland, Helluland, the sagas and
+`wiki/` holds Wikipedia page text — but about ten of the files are Wikimedia
+error pages, not articles (Norðrsetur, Nanook_site, Skrælingi,
+Peter_Schledermann, Grœnlendinga_saga among them): check the first lines
+before trusting one. The good ones cover Norse Greenland, Helluland, the sagas and
 the Ellesmere sites. Orientation only: cite the underlying sources.
