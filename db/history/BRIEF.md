@@ -274,7 +274,9 @@ message, introduced with the exact line `Draft, ready to send:` and ending
 with the signature block in `db/history/SIGNATURE.txt`, verbatim — so the
 person's whole job is to read it and send it. In a usage or permission
 letter asking for fewer than ten items, name them in a list — title, date,
-identifier — never "a small number of images": a list the recipient can
+identifier, and for a digital object its DOI or a direct link (verified on
+the holder's own pages, never guessed; say where you saw it if no stable
+link exists) — never "a small number of images": a list the recipient can
 approve line by line gets a faster and fuller answer. The tool refuses a
 `--why` too thin to act on.
 Not this:
