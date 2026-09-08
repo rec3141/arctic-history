@@ -353,5 +353,20 @@ class HistoryTests(unittest.TestCase):
         self.assertIsNone(H.publish(self.root / "web", self.root / "missing.sqlite"))
 
 
+    def test_dateline_longitudes_are_honest(self):
+        self.assertIsNone(H._off_map(69.72, 176.72))      # Siberian coast, the Karluk's survivors
+        self.assertIsNotNone(H._off_map(74.7, 91.8))      # a dropped minus sign
+        self.assertIsNotNone(H._off_map(74.7, -200))
+
+    def test_foreign_topic_only_fills_blanks_on_a_person(self):
+        H.add_person(self.c, "Robert Bartlett", role="master of the Roosevelt", topic="sverdrup-bernier-peary")
+        H.add_person(self.c, "Robert Bartlett", role="schooner captain at Frobisher Bay", born="1875",
+                     topic="hudson-strait-south-baffin")
+        r = self.c.execute("SELECT role, born, topic FROM people WHERE name='Robert Bartlett'").fetchone()
+        self.assertEqual(r["role"], "master of the Roosevelt")
+        self.assertEqual(r["born"], "1875")                # a blank the home topic had left
+        self.assertEqual(r["topic"], "sverdrup-bernier-peary")
+
+
 if __name__ == "__main__":
     unittest.main()
