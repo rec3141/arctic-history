@@ -111,11 +111,15 @@ def check_file(path: Path, suffix: str) -> str | None:
     if not path.exists():
         return "nothing was written"
     size = path.stat().st_size
-    if size < 4096:
-        head = path.read_bytes()[:200]
-        return f"only {size} bytes; starts {head!r}"
     kind = subprocess.run(["file", "-b", str(path)], capture_output=True, text=True).stdout.strip()
     want = TYPES.get(suffix.lower())
+    # a genuine small image (a line cut from a scanned book) is fine; anything
+    # else under 4 kB is an error page or an empty reply
+    small_image_ok = want and suffix.lower() in (".png", ".jpg", ".jpeg", ".gif") \
+        and any(w.lower() in kind.lower() for w in want) and size > 0
+    if size < 4096 and not small_image_ok:
+        head = path.read_bytes()[:200]
+        return f"only {size} bytes; starts {head!r}"
     if want and not any(w.lower() in kind.lower() for w in want):
         if "HTML" in kind and suffix.lower() != ".html":
             return f"an HTML page came back instead of {suffix}: probably a login or error page ({kind[:60]})"
