@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Search the University of Manitoba Libraries catalogue from grid, no login.
 
+RESEARCHER-ONLY: the Opus researcher runs this, never a Sonnet helper or a
+Haiku reader (the brief, "Helpers and the web"). If you are a helper, stop
+and report the need to your researcher instead.
+
     library-search.py "Arctic Justice Grant Pond Inlet"
     library-search.py --isbn 9780773523371
     library-search.py "Coats remarks Hudson's Bay 1852" --limit 8

@@ -290,7 +290,10 @@ spaces.
   wait and do other work; do not look for another way in. Pull the chapters
   the page actually needs, not the book. A browser-only or unlicensed
   platform, or a shelf copy with no e-copy, is what the request is for: say
-  in the request what the search showed.
+  in the request what the search showed. **The library is yours alone**: only
+  you, the Opus researcher, run `library-search.py` or `--scholarsportal`.
+  Helpers and readers never touch either; a Sonnet helper that needs a
+  library answer reports the need back to you.
 
 ### 8. Asking a person for help
 Some things you cannot do alone: an API key, a site the library does not
@@ -358,8 +361,10 @@ because nobody said otherwise. Two rules follow.
 any helper you launch is `model: sonnet`, and a Sonnet helper may launch only
 `model: haiku`. Haiku launches nothing. Put the rule in the helper's prompt so
 it knows its place: "You are a Sonnet helper. Launch only Haiku agents, and
-only to read files." Prefer doing the work yourself to launching a helper at
-all; a helper is for a bounded extraction you can name in one sentence.
+only to read files. Do not run tools/library-search.py or
+history-fetch.py --scholarsportal; the library is the researcher's." Prefer
+doing the work yourself to launching a helper at all; a helper is for a
+bounded extraction you can name in one sentence.
 
 **Sonnet helpers are capped; Haiku readers are not.** You (Opus) may have at
 most 2 Sonnet helpers running at once and launch at most 6 in a run; wait for
