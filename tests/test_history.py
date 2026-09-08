@@ -394,5 +394,14 @@ class HistoryTests(unittest.TestCase):
         self.assertEqual(H.forget(self.c, "source", "orphan2003")["deleted"], "source orphan2003")
 
 
+    def test_small_real_image_is_not_suspicious(self):
+        import tempfile
+        d = Path(tempfile.mkdtemp())
+        (d / "a.png").write_bytes(b"\x89PNG\r\n\x1a\n" + b"\x00" * 100)
+        (d / "b.png").write_bytes(b"<html>login</html>")
+        self.assertTrue(H._small_real_image(d / "a.png"))
+        self.assertFalse(H._small_real_image(d / "b.png"))
+
+
 if __name__ == "__main__":
     unittest.main()
