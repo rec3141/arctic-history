@@ -1,0 +1,12 @@
+[project]
+name = "arctic-history"
+version = "0.1.0"
+description = "A database, a wiki and a map layer for the history of the Canadian Arctic Archipelago and Baffin Bay, built by a research crew for the CCGS Amundsen dashboard"
+requires-python = ">=3.8"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.setuptools]
+packages = ["arctic_history"]

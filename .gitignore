@@ -1,0 +1,11 @@
+# the record is the database and the fetched files; both are synced with
+# tools/history-sync.sh, not committed. What is committed: the code, the
+# brief, each topic's RESUME.md and notes/, and the staging manifest.
+db/history/*.sqlite*
+db/history/*/files/
+db/history/_staging/*
+!db/history/_staging/MANIFEST.md
+db/history/_ledger/
+__pycache__/
+*.pyc
+.pytest_cache/
