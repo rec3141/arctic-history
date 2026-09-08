@@ -73,6 +73,11 @@ drafts by default and every save keeps the version it replaced, so a rough
 page now beats a perfect page never. A run that ends with sixty rows and no
 pages has stopped short.
 
+Every writer replaces on a re-run, and re-dating a record replaces its
+timeline entry too. A row entered outright in error — a duplicate person, a
+stray date — is removed with `forget --kind <kind> --id <id>`; say what you
+removed and why in the worklog.
+
 ### 1. The topic row already exists
 `resume` shows it. Change its summary with `topic` if you can improve it.
 
@@ -256,6 +261,12 @@ spaces.
   `_staging/titles.txt` before querying at all.
 - For a long text, also cut the relevant chapters into `<name>-excerpt.txt`
   and say which; the LLM reads excerpts more usefully than 700-page OCR dumps.
+- **A raw scan with no usable OCR is not a dead end**: `tools/ocr.sh
+  <file.pdf|image> [outdir]` runs a modern OCR (marker + surya) on this
+  machine's GPU and prints the path of the markdown it wrote. Use it for
+  scanned books, plates with captions, and manuscript facsimiles the
+  archive's own OCR mangled; quote-check antique typography (the long s)
+  against the page image. One document at a time — the GPU is shared.
 - If a fetch fails outright, record the artifact with `--download-url` and no
   `--local-file`, note it in the worklog, and move on.
 

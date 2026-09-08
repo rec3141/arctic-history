@@ -1,0 +1,122 @@
+[
+ {
+  "date": "1631-05-03",
+  "lat": 51.45,
+  "lon": -2.6,
+  "note": "inferred: departs Bristol in the Henrietta Maria (about 70-80 tons), with a crew of 22"
+ },
+ {
+  "date": "1631-06-04",
+  "lat": 60.0,
+  "lon": -48.0,
+  "note": "inferred: sights Greenland; ship receives first damage from ice"
+ },
+ {
+  "date": "1631-06-17",
+  "lat": 61.3,
+  "lon": -64.9,
+  "note": "inferred: sights Resolution Island, entering Hudson's Strait"
+ },
+ {
+  "date": "1631-07-16",
+  "lat": 62.0,
+  "lon": -79.5,
+  "note": "inferred: reaches Mansell Island, having found it impossible to search north-west of Nottingham Island because of ice"
+ },
+ {
+  "date": "1631-08-11",
+  "lat": 57.9,
+  "lon": -91.9,
+  "note": "inferred: reaches the western shore of the bay, well south of the latitude he had aimed for"
+ },
+ {
+  "date": "1631-08-17",
+  "lat": 57.05,
+  "lon": -92.5,
+  "note": "inferred: passes Port Nelson, where Foxe is at that moment refitting his pinnace ashore"
+ },
+ {
+  "date": "1631-08-29",
+  "lat": 56.0,
+  "lon": -84.0,
+  "note": "inferred: meets Captain Foxe's Charles; urges Foxe to winter with him in the bay, but Foxe declines"
+ },
+ {
+  "date": "1631-09-02",
+  "lat": 55.15,
+  "lon": -82.15,
+  "note": "reaches and names Cape Henrietta Maria, after the Queen"
+ },
+ {
+  "date": "1631-10-05",
+  "lat": 52.0,
+  "lon": -79.25,
+  "note": "inferred: reaches Charlton Island and resolves to winter; strips the ship and lands provisions, building three houses ashore"
+ },
+ {
+  "date": "1631-10-17",
+  "lat": 52.0,
+  "lon": -79.25,
+  "note": "John Barton, gunner's mate, drowned"
+ },
+ {
+  "date": "1631-10-29",
+  "lat": 52.0,
+  "lon": -79.25,
+  "note": "deliberately sinks the Henrietta Maria at Charlton Island to preserve her hull over the winter"
+ },
+ {
+  "date": "1631-11-22",
+  "lat": 52.0,
+  "lon": -79.25,
+  "note": "Richard Edwards, the gunner, dies of injuries from the capstan accident of 20 August"
+ },
+ {
+  "date": "1632-04",
+  "lat": 52.0,
+  "lon": -79.25,
+  "note": "inferred: raises the sunken ship once the ice allows"
+ },
+ {
+  "date": "1632-05-06",
+  "lat": 52.0,
+  "lon": -79.25,
+  "note": "John Warden, chief mate, dies"
+ },
+ {
+  "date": "1632-05-18",
+  "lat": 52.0,
+  "lon": -79.25,
+  "note": "William Cole, carpenter, dies"
+ },
+ {
+  "date": "1632-06-25",
+  "lat": 52.0,
+  "lon": -79.25,
+  "note": "a fire set to clear the forest nearly burns James and the camp"
+ },
+ {
+  "date": "1632-07-02",
+  "lat": 52.0,
+  "lon": -79.25,
+  "note": "sets sail from Charlton Island for home"
+ },
+ {
+  "date": "1632-08-22",
+  "lat": 63.9,
+  "lon": -85.6,
+  "note": "inferred: reaches Cary's Swan's Nest, then sails north up the strait Foxe had explored the year before, reaching about lat. 65 deg 30' N (Cary's Swan's Nest placed at 63.9N 85.6W, near Cape Fullerton; the identification is Christy's and is not certain)"
+ },
+ {
+  "date": "1632-09-03",
+  "lat": 61.3,
+  "lon": -64.9,
+  "note": "inferred: passes Resolution Island, homeward"
+ },
+ {
+  "date": "1632-10-22",
+  "lat": 51.45,
+  "lon": -2.6,
+  "note": "arrives at Bristol"
+ }
+]

@@ -457,18 +457,35 @@ def add_artifact(c, id: str, topic: str, type: str, title: str, **kw) -> str:
         raise ValueError(f"longitude out of range: {row['lon']}")
     if row["lat"] is None and not row.get("geometry"):
         raise ValueError("an artifact needs a lat/lon, or a geometry if it is a track")
+    prev = c.execute("SELECT date_start, date_end, title FROM artifacts WHERE id=?", (row["id"],)).fetchone()
     out = _upsert(c, "artifacts", "id", row)
     _record_dates(c, "artifact", out, row["date_start"], row["date_end"], date_text,
+                  old=dict(prev) if prev else None,
                   topic=row["topic"], label=title, lat=row["lat"], lon=row["lon"],
                   bibkey=row.get("bibkey", ""))
     return out
 
 
-def _record_dates(c, kind: str, ident: str, start: str, end: str, raw: str = "", **kw) -> None:
+def _record_dates(c, kind: str, ident: str, start: str, end: str, raw: str = "",
+                  old: dict | None = None, **kw) -> None:
     """Put a record's own dates into the ``dates`` table, one row each, so the
     timeline reads from one place. A record with an end date is a time-limited
     activity and gets a start/end pair sharing a span; anything else is a
-    single point."""
+    single point.
+
+    ``old`` is the record as it stood before this write: the rows its previous
+    date and title created are deleted first, so re-dating a record replaces
+    its timeline entry instead of leaving the stale one beside it. Dates
+    attached separately with ``add_date`` are not touched."""
+    if old and old.get("date_start"):
+        if old.get("date_end") and old["date_end"] != old["date_start"]:
+            c.execute("DELETE FROM dates WHERE entity_kind=? AND entity_id=? AND span=?",
+                      (kind, str(ident), f"{ident}:{old['date_start']}"))
+        else:
+            c.execute("DELETE FROM dates WHERE entity_kind=? AND entity_id=? AND role='point' "
+                      "AND span='' AND date=? AND label=?",
+                      (kind, str(ident), old["date_start"], old.get("title", "")))
+        c.commit()
     if not start:
         return
     prec = date_precision(raw or start)
@@ -476,6 +493,32 @@ def _record_dates(c, kind: str, ident: str, start: str, end: str, raw: str = "",
         span_dates(c, kind, ident, start, end, precision=prec, **kw)
     else:
         add_date(c, kind, ident, start, precision=prec, role="point", **kw)
+
+
+def forget(c, kind: str, ident) -> dict:
+    """Delete one mistaken row, and the date rows attached to it: a duplicate
+    person, an artifact entered under the wrong id, a stray date. For errors,
+    not revisions — a change of content is a re-run of the writer, which
+    replaces. Say what you removed and why in the worklog."""
+    if kind == "date":
+        r = c.execute("SELECT * FROM dates WHERE id=?", (int(ident),)).fetchone()
+        if not r:
+            raise ValueError(f"no date row {ident}")
+        c.execute("DELETE FROM dates WHERE id=?", (int(ident),))
+        c.commit()
+        return {"deleted": f"date {ident} ({r['date']} {r['role']} {r['label']})", "dates": 1}
+    tables = {"artifact": ("artifacts", "id"), "event": ("events", "id"),
+              "person": ("people", "name"), "place": ("places", "name")}
+    if kind not in tables:
+        raise ValueError(f"kind must be date or one of {', '.join(tables)}")
+    table, key = tables[kind]
+    r = c.execute(f"SELECT * FROM {table} WHERE {key}=?", (ident,)).fetchone()
+    if not r:
+        raise ValueError(f"no {kind} {ident!r}")
+    n = c.execute("DELETE FROM dates WHERE entity_kind=? AND entity_id=?", (kind, str(ident))).rowcount
+    c.execute(f"DELETE FROM {table} WHERE {key}=?", (ident,))
+    c.commit()
+    return {"deleted": f"{kind} {ident}", "dates": n}
 
 
 PAGE_STATUS = ("draft", "good")
@@ -532,7 +575,7 @@ def add_event(c, topic: str, date: str, title: str, **kw) -> int:
         raise ValueError(f"unparseable event date: {date!r}")
     # an event is identified by its topic, date and title, so a re-run updates
     # rather than piling up duplicates
-    old = c.execute("SELECT id FROM events WHERE topic=? AND date_start=? AND title=?",
+    old = c.execute("SELECT id, date_start, date_end FROM events WHERE topic=? AND date_start=? AND title=?",
                     (row["topic"], row["date_start"], title)).fetchone()
     if old:
         sets = ",".join(f"{k}=?" for k in row)
@@ -545,6 +588,7 @@ def add_event(c, topic: str, date: str, title: str, **kw) -> int:
         c.commit()
         ident = int(c.execute("SELECT last_insert_rowid() AS i").fetchone()["i"])
     _record_dates(c, "event", str(ident), row["date_start"], row["date_end"], row["date_text"],
+                  old={**dict(old), "title": title} if old else None,
                   topic=row["topic"], label=title, lat=row["lat"], lon=row["lon"],
                   place=row["place"], bibkey=row["bibkey"])
     return ident

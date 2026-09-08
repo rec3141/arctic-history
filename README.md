@@ -92,7 +92,7 @@ Researchers file requests for what they cannot do alone: API keys, titles the
 library does not license, judgement calls. The review page lives at
 https://cryomics.org/amundsen/requests/ (basic auth; the password hash is in
 `~/.amundsen-htpasswd` on dreamhost). Grid pushes the queue there and collects
-the decisions every ten minutes with `tools/requests-sync.py pull` (cron), and
+the decisions every minute with `tools/requests-sync.py pull` (cron), and
 `tools/backup.sh` snapshots the database hourly to `db/history/_backups/` and
 to dreamhost:backups/amundsen/ (also cron). The CLI works too:
 
@@ -102,9 +102,13 @@ to dreamhost:backups/amundsen/ (also cron). The CLI works too:
 ## Sending it back
 
 From the ship, `tools/history-sync.sh pull` takes a consistent snapshot of
-this database and rsyncs it with the files. The dashboard build then publishes
-the wiki, the map layer, the timeline and the bibliography under
-`data/history/`. Nothing here needs to know about the dashboard.
+this database, installs it, and rsyncs the files — compressed, resumable,
+and gated at 100 MB per object (Starlink-sized; `HISTORY_SYNC_MAX` overrides).
+Anything larger is held on grid and listed at the end of the pull, to be
+fetched by name: `history-sync.sh pull <topic>/files/<name>`. Run it from
+cron daily aboard. The dashboard build then publishes the wiki, the map
+layer, the timeline and the bibliography under `data/history/`. Nothing here
+needs to know about the dashboard.
 
 ## Access
 
@@ -123,3 +127,14 @@ The tests run with the standard library alone:
 or, in a virtualenv with the test extra (`pip install -e '.[test]'`):
 
     python3 -m pytest tests/test_history.py
+
+## OCR on grid
+
+Raw scans get real OCR on this machine's GPU: `tools/ocr.sh <file.pdf|image>
+[outdir]` (marker + surya in `.ocr-venv/`, a uv-managed Python 3.11). To
+rebuild the environment:
+
+    ~/.local/bin/uv venv .ocr-venv --python 3.11
+    ~/.local/bin/uv pip install --python .ocr-venv/bin/python \
+        "torch==2.5.1" --index-url https://download.pytorch.org/whl/cu121
+    ~/.local/bin/uv pip install --python .ocr-venv/bin/python marker-pdf
