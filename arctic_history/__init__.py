@@ -534,18 +534,20 @@ def add_request(c, topic: str, kind: str, what: str, **kw) -> int:
     """File a request for a person and carry on: requests are asynchronous by
     design. The person acts on it alone, from the review page, possibly days
     later — so a request must carry everything they need: what to do, where
-    (the exact URL, title, edition, volume), why the topic needs it, and what
-    will be done with the answer. A person who has to ask a follow-up question
-    is answering a bad request."""
+    (the exact URL, title, edition, volume), why the topic needs it, why it
+    needs a person at all (what was tried, and what only a person can do),
+    and what will be done with the answer. A person who has to ask a
+    follow-up question is answering a bad request."""
     if kind not in REQUEST_KINDS:
         raise ValueError(f"kind must be one of {', '.join(REQUEST_KINDS)}")
     if len(kw.get("why", "").strip()) < 40:
         raise ValueError(
             "a request needs a real `why`: the person acting on it works alone, later, "
-            "from the review page. Say why the topic needs it, exactly where to get it "
-            "(URL, title, edition, volume, account to create), and what you will do with "
-            "the answer — not 'get me an API key' but which key, from which page, and "
-            "what it unlocks")
+            "from the review page. Say why the topic needs it, why it needs a person at "
+            "all (what you tried and what only they can do), exactly where to get it "
+            "(URL, title, edition, volume, account to create, the request form), and "
+            "what you will do with the answer — not 'get me an API key' but which key, "
+            "from which page, and what it unlocks")
     if kind in ("download", "access") and not kw.get("url", "").strip():
         raise ValueError(f"a {kind} request needs --url: the exact page the person should start from")
     size = kw.get("size_mb")

@@ -258,22 +258,28 @@ reaches whichever run comes after it, through `resume`.
 
 Because the person acts alone and cannot ask you anything back, the request
 must carry everything they need. `--what` is the one-line summary; `--why` is
-the full instruction: why the topic needs it, exactly where to get it (the
-URL, the exact title, edition and volume, which account to create, which key
-from which settings page), and what you will do with the answer. The tool
-refuses a `--why` that is too thin to act on. Not this:
+the full instruction, and it answers four questions: why the topic needs it;
+**why it needs a person at all** — what you tried yourself and what only a
+person can do (no digital copy exists anywhere, the form wants a human's
+login, the call is one of judgement); exactly where to go (the URL, the exact
+title, edition and volume, the catalogue entry, the request form); and what
+you will do with the answer. The tool refuses a `--why` too thin to act on.
+Not this:
 
-    --kind api_key --what "Flickr API key" --why "need images"
+    --kind download --what "Life with the Esquimaux vol. II" --why "only have vol. I"
 
 but this:
 
-    tools/history-db.py request --topic whaling --kind api_key \
-      --what "Flickr API key for the Internet Archive Book Images account" \
-      --why "The scanned whaling logs' plates are served through Flickr's API; \
-    a free non-commercial key from https://www.flickr.com/services/apps/create/apply \
-    (any account) lets me pull the originals. Paste the key as the answer and I \
-    will fetch the ~30 plates listed in whaling/notes/plates.md into whaling/files/." \
-      --url https://www.flickr.com/services/apps/create/apply
+    tools/history-db.py request --topic kane-hall-polaris --kind download \
+      --what "Life with the Esquimaux (Hall, 1864), volume II - no digital copy found" \
+      --why "Volume I is staged, but I searched Internet Archive, HathiTrust and \
+    Google Books and no scan of volume II exists, so a person must ask the library. \
+    UM Libraries holds the 1864 Sampson Low set (catalogue: <link>); please request \
+    a scan through the document delivery form at <link> and attach or drop the PDF \
+    at the --dest path. It carries Tookoolito's and Ebierbing's first years with \
+    Hall, which the people and quote rows for both currently cite second-hand." \
+      --url https://search.lib.umanitoba.ca/... \
+      --dest kane-hall-polaris/files/kane-hall-polaris-hall-esquimaux-v2.pdf
 
 Kinds: `download`, `api_key`, `question`, `access`, `other`; `download` and
 `access` also need `--url`. Answers come back through

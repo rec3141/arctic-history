@@ -209,8 +209,9 @@ def main(argv=None) -> int:
     rq.add_argument("--what", required=True, help="one line: what is wanted")
     rq.add_argument("--why", required=True,
                     help="full instructions for a person acting alone, later: why the topic "
-                         "needs it, exactly where to get it (URL, title, edition, volume, "
-                         "which account or key), and what you will do with the answer")
+                         "needs it, why it needs a person (what you tried, what only they "
+                         "can do), exactly where to get it (URL, title, edition, volume, "
+                         "which account, which form), and what you will do with the answer")
     rq.add_argument("--url", default="")
     rq.add_argument("--size-mb", type=float, default=None)
     rq.add_argument("--dest", default="", help="where a download should land, relative to db/history/")
