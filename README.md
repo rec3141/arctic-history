@@ -77,6 +77,13 @@ the five-hour window is past 50%; check it before each batch of launches and
 again as researchers finish, and stop launching until the window resets. The
 weekly figure is the one to watch across days.
 
+Launch researchers with `model: opus`. The brief's "Helpers and the web"
+section then holds: each agent launches only agents smaller than itself (Opus
+to Sonnet to Haiku, Haiku launches nothing), each agent runs at most 2 helpers
+at once and 6 per run, and pages are downloaded once and
+read from the local copy, by Haiku if long, never re-read through WebFetch.
+Sub-helpers four levels deep did two thirds of all web fetching in waves 1-3.
+
 The topics and the status of each:
 
 | slug | status |
