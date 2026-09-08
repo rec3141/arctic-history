@@ -552,8 +552,25 @@ def add_page(c, slug: str, title: str, body: str, **kw) -> str:
     return _upsert(c, "pages", "slug", row)
 
 
+def _keep_home_topic(c, table: str, name: str, kw: dict) -> dict:
+    """People and places belong to the topic that first entered them. A later
+    run from another topic enriches the row without moving it — Tulluahiu is
+    not stolen from inuit-oral-history by a ross-victory re-run. To really
+    reassign, `forget` the row and re-enter it."""
+    if kw.get("topic"):
+        old = c.execute(f"SELECT topic FROM {table} WHERE name=?", (name.strip(),)).fetchone()
+        if old and old["topic"] and old["topic"] != slugify(kw["topic"]):
+            kw = {k: v for k, v in kw.items() if k != "topic"}
+    return kw
+
+
 def add_person(c, name: str, **kw) -> str:
-    row = {"name": name.strip(), "indigenous": 1 if kw.get("indigenous") else 0}
+    kw = _keep_home_topic(c, "people", name, kw)
+    # the flag is set by any run and unset by none: an enriching re-run
+    # without --indigenous must not quietly clear it
+    old = c.execute("SELECT indigenous FROM people WHERE name=?", (name.strip(),)).fetchone()
+    row = {"name": name.strip(),
+           "indigenous": 1 if kw.get("indigenous") or (old and old["indigenous"]) else 0}
     for f in ("also", "role", "born", "died", "affiliation", "note", "bibkey", "topic"):
         if kw.get(f) is not None:
             row[f] = str(kw[f])
@@ -561,6 +578,7 @@ def add_person(c, name: str, **kw) -> str:
 
 
 def add_place(c, name: str, **kw) -> str:
+    kw = _keep_home_topic(c, "places", name, kw)
     row = {"name": name.strip(),
            "lat": None if kw.get("lat") in (None, "") else float(kw["lat"]),
            "lon": None if kw.get("lon") in (None, "") else float(kw["lon"])}

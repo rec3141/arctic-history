@@ -126,6 +126,14 @@ class HistoryTests(unittest.TestCase):
         dates = sorted(r["date"] for r in self.c.execute("SELECT date FROM dates WHERE entity_kind='artifact'"))
         self.assertEqual(dates, ["1822-04", "1859-05-06"])
 
+    def test_a_shared_person_keeps_their_home_topic(self):
+        H.add_person(self.c, "Tulluahiu", indigenous=True, topic="inuit-oral-history")
+        H.add_person(self.c, "Tulluahiu", topic="ross-victory", note="the wooden leg")
+        r = self.c.execute("SELECT topic, note, indigenous FROM people").fetchone()
+        self.assertEqual(r["topic"], "inuit-oral-history")   # enriched, not moved
+        self.assertEqual(r["note"], "the wooden leg")
+        self.assertEqual(r["indigenous"], 1)                 # and never quietly un-flagged
+
     def test_forget_removes_a_row_and_its_attached_dates(self):
         H.add_person(self.c, "Duplicate Person")
         H.add_date(self.c, "person", "Duplicate Person", "1876", label="died")
