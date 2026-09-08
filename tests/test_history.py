@@ -228,6 +228,17 @@ class HistoryTests(unittest.TestCase):
         self.assertTrue(any(p["what"] == "flip" and "waypoint 1" in p["detail"] for p in problems))
         self.assertTrue(any(p["what"] == "flip" and "geometry point" in p["detail"] for p in problems))
 
+    def test_a_request_too_thin_for_a_person_to_act_on_is_refused(self):
+        with self.assertRaises(ValueError):
+            H.add_request(self.c, "franklin-1845", "api_key", "Flickr key", why="need images")
+        with self.assertRaises(ValueError):    # download without the page to start from
+            H.add_request(self.c, "franklin-1845", "download", "the 1859 chart",
+                          why="McClintock's chart of the search, wanted as the base layer for the track map.")
+        ident = H.add_request(self.c, "franklin-1845", "download", "the 1859 chart",
+                              why="McClintock's chart of the search, wanted as the base layer for the track map.",
+                              url="https://example.invalid/chart.jpg")
+        self.assertEqual(H.list_requests(self.c)[0]["id"], ident)
+
     def test_validate_notices_a_missing_local_file(self):
         self.artifact(local_file="franklin-1845/files/not-there.jpg")
         self.assertTrue(any("local_file missing" in p["detail"] for p in H.validate(self.c)["problems"]))

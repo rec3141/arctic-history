@@ -207,7 +207,10 @@ def main(argv=None) -> int:
     rq.add_argument("--topic", required=True)
     rq.add_argument("--kind", required=True, choices=list(H.REQUEST_KINDS))
     rq.add_argument("--what", required=True, help="one line: what is wanted")
-    rq.add_argument("--why", default="", help="what it is for")
+    rq.add_argument("--why", required=True,
+                    help="full instructions for a person acting alone, later: why the topic "
+                         "needs it, exactly where to get it (URL, title, edition, volume, "
+                         "which account or key), and what you will do with the answer")
     rq.add_argument("--url", default="")
     rq.add_argument("--size-mb", type=float, default=None)
     rq.add_argument("--dest", default="", help="where a download should land, relative to db/history/")
@@ -323,8 +326,9 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
     elif a.cmd == "request":
         ident = H.add_request(c, a.topic, a.kind, a.what, why=a.why, url=a.url, size_mb=a.size_mb,
                               dest=a.dest, who=a.who)
-        print(f"{ident}  (open; a person answers it on the dashboard's /history/requests page. "
-              f"Carry on with other work and check `requests --topic {a.topic}` later.)")
+        print(f"{ident}  (open; a person answers it on the review page, possibly days from now. "
+              f"Do not wait or poll: carry on with other work now. This run may never see the "
+              f"answer — `resume` shows it to whichever run comes after it arrives.)")
     elif a.cmd == "requests":
         for r in H.list_requests(c, a.status or None, a.topic or None):
             size = f" {r['size_mb']:.0f} MB" if r["size_mb"] else ""

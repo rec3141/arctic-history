@@ -249,15 +249,35 @@ spaces.
 ### 8. Asking a person for help
 Some things you cannot do alone: an API key, a site the library does not
 license, a judgement call about a sensitive passage, a question about the
-ship. File a request and carry on:
+ship. File a request, then **carry on immediately with other work**. Requests
+are asynchronous by design: the person reads them on a web page on their own
+time, possibly days from now, and your run will likely be over before the
+answer exists. Never wait for one, never poll for one, and never make your
+next step depend on one — pick work that needs nothing from anyone. The answer
+reaches whichever run comes after it, through `resume`.
 
-    tools/history-db.py request --topic <your-slug> --kind access \
-      --what "Polar Record 58, the library returns a login page" --why "..." --url https://...
+Because the person acts alone and cannot ask you anything back, the request
+must carry everything they need. `--what` is the one-line summary; `--why` is
+the full instruction: why the topic needs it, exactly where to get it (the
+URL, the exact title, edition and volume, which account to create, which key
+from which settings page), and what you will do with the answer. The tool
+refuses a `--why` that is too thin to act on. Not this:
 
-Kinds: `download`, `api_key`, `question`, `access`, `other`. A person reviews
-them with `history-db.py requests --status open`; read the answers back with
-`history-db.py requests --topic <your-slug>`, and `resume` lists them too. Do
-not wait on a request; there is always other work.
+    --kind api_key --what "Flickr API key" --why "need images"
+
+but this:
+
+    tools/history-db.py request --topic whaling --kind api_key \
+      --what "Flickr API key for the Internet Archive Book Images account" \
+      --why "The scanned whaling logs' plates are served through Flickr's API; \
+    a free non-commercial key from https://www.flickr.com/services/apps/create/apply \
+    (any account) lets me pull the originals. Paste the key as the answer and I \
+    will fetch the ~30 plates listed in whaling/notes/plates.md into whaling/files/." \
+      --url https://www.flickr.com/services/apps/create/apply
+
+Kinds: `download`, `api_key`, `question`, `access`, `other`; `download` and
+`access` also need `--url`. Answers come back through
+`history-db.py requests --topic <your-slug>`, and `resume` lists them too.
 
 ## Sources to prefer
 Wikimedia Commons; Project Gutenberg; Internet Archive; HathiTrust; Library and
