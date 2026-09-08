@@ -296,6 +296,12 @@ spaces.
   library answer reports the need back to you.
 
 ### 8. Asking a person for help
+
+**No request is needed for a Library and Archives Canada image that is already
+on Wikimedia Commons.** The person has approved their use as a class and
+asserts fair use for them: register the Commons original with the LAC
+reference number, the Commons file name and the credit line LAC gives, and
+move on. File a request only for LAC material that is not on Commons.
 Some things you cannot do alone: an API key, a site the library does not
 license, a judgement call about a sensitive passage, a question about the
 ship. File a request, then **carry on immediately with other work**. Requests

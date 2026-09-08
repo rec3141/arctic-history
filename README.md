@@ -71,9 +71,9 @@ with text-heavy ones (Commons rate-limits the shared campus address), and run
 hub topics that everyone links to — inuit-oral-history above all — early, so
 other topics' wikilinks resolve instead of piling up in `wanted`.
 
-The wave may use no more than half of the five-hour usage window.
+The wave may use no more than 80% of the five-hour usage window.
 `python3 tools/usage.py` prints the same figures as `/usage` and exits 1 once
-the five-hour window is past 50%; check it before each batch of launches and
+the five-hour window is past 80%; check it before each batch of launches and
 again as researchers finish, and stop launching until the window resets. The
 weekly figure is the one to watch across days.
 
