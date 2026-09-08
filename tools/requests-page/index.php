@@ -50,6 +50,7 @@ $closed = array_filter($requests, fn($r) => $r['status'] !== 'open');
   textarea { width: 100%; box-sizing: border-box; min-height: 3.5rem; font: inherit; margin: .4rem 0; }
   .note { color: #666; font-size: .9rem; }
   .warn { color: #a00; }
+  .text { white-space: pre-line; }
   form { margin: .5rem 0 0; }
 </style>
 <h1>Arctic history research: requests</h1>
@@ -65,7 +66,7 @@ them with <code>history-db.py requests</code>.</p>
     <div class="meta">#<?= h($r['id']) ?> · <?= h($r['kind']) ?> · <?= h($r['topic']) ?>
       · <?= h($r['created']) ?><?= $r['who'] ? ' · ' . h($r['who']) : '' ?></div>
     <div class="what"><?= h($r['what']) ?><?= $r['size_mb'] ? ' (' . h(round($r['size_mb'])) . ' MB)' : '' ?></div>
-    <?php if ($r['why']): ?><div><?= h($r['why']) ?></div><?php endif; ?>
+    <?php if ($r['why']): ?><div class="text"><?= h($r['why']) ?></div><?php endif; ?>
     <?php if ($r['url'] && preg_match('#^https?://#', $r['url'])): ?>
       <div><a href="<?= h($r['url']) ?>" rel="noreferrer"><?= h($r['url']) ?></a></div>
     <?php elseif ($r['url']): ?><div><?= h($r['url']) ?></div><?php endif; ?>
@@ -86,7 +87,7 @@ them with <code>history-db.py requests</code>.</p>
   <div class="req pending">
     <div class="meta">#<?= h($r['id']) ?> · <?= h($r['kind']) ?> · <?= h($r['topic']) ?></div>
     <div class="what"><?= h($r['what']) ?></div>
-    <div><?= h($a['status']) ?><?= $a['answer'] !== '' ? ': ' . h($a['answer']) : '' ?></div>
+    <div class="text"><?= h($a['status']) ?><?= $a['answer'] !== '' ? ': ' . h($a['answer']) : '' ?></div>
   </div>
 <?php endforeach; endif; ?>
 
@@ -96,6 +97,6 @@ them with <code>history-db.py requests</code>.</p>
     <div class="meta">#<?= h($r['id']) ?> · <?= h($r['kind']) ?> · <?= h($r['topic']) ?>
       · <?= h($r['resolved']) ?></div>
     <div class="what"><?= h($r['what']) ?></div>
-    <div><?= h($r['status']) ?><?= $r['answer'] !== '' ? ': ' . h($r['answer']) : '' ?></div>
+    <div class="text"><?= h($r['status']) ?><?= $r['answer'] !== '' ? ': ' . h($r['answer']) : '' ?></div>
   </div>
 <?php endforeach; ?>
