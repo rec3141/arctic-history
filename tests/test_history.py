@@ -109,6 +109,26 @@ class HistoryTests(unittest.TestCase):
         rows = self.c.execute("SELECT qualifier FROM dates").fetchall()
         self.assertEqual([r["qualifier"] for r in rows], ["circa"])
 
+    def test_redating_an_artifact_replaces_its_timeline_row(self):
+        self.artifact(date="1822-02")
+        self.artifact(date="1822-03")
+        rows = self.c.execute("SELECT date FROM dates WHERE entity_kind='artifact'").fetchall()
+        self.assertEqual([r["date"] for r in rows], ["1822-03"])
+        # a date attached separately with `date` survives the re-dating
+        H.add_date(self.c, "artifact", "franklin-1845-001", "1859-05-06", label="found by Hobson")
+        self.artifact(date="1822-04")
+        dates = sorted(r["date"] for r in self.c.execute("SELECT date FROM dates WHERE entity_kind='artifact'"))
+        self.assertEqual(dates, ["1822-04", "1859-05-06"])
+
+    def test_forget_removes_a_row_and_its_attached_dates(self):
+        H.add_person(self.c, "Duplicate Person")
+        H.add_date(self.c, "person", "Duplicate Person", "1876", label="died")
+        r = H.forget(self.c, "person", "Duplicate Person")
+        self.assertEqual(r["dates"], 1)
+        self.assertIsNone(self.c.execute("SELECT 1 FROM people WHERE name='Duplicate Person'").fetchone())
+        with self.assertRaises(ValueError):
+            H.forget(self.c, "person", "Duplicate Person")
+
     def test_a_span_ending_before_it_starts_is_reported(self):
         H.span_dates(self.c, "event", "backwards", "1850", "1840", label="impossible")
         problems = H.validate(self.c)["problems"]

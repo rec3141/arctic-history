@@ -13,3 +13,4 @@ __pycache__/
 *.egg-info/
 db/history/_backups/
 db/history/SIGNATURE.txt
+.ocr-venv/

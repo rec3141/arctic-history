@@ -199,6 +199,13 @@ def main(argv=None) -> int:
     vs = sub.add_parser("versions", help="a page's saved versions, oldest first")
     vs.add_argument("--slug", required=True)
 
+    fg = sub.add_parser("forget", help="delete one mistaken row and the dates attached to it — "
+                                       "a duplicate person, a stray date. For errors, not "
+                                       "revisions; note what you removed in the worklog.")
+    fg.add_argument("--kind", required=True, choices=["artifact", "event", "person", "place", "date"])
+    fg.add_argument("--id", required=True,
+                    help="the artifact id, the event or date row number, or the person or place name")
+
     lg = sub.add_parser("log", help="write a worklog line: what is now in the database, and what comes next")
     lg.add_argument("--topic", required=True)
     lg.add_argument("--done", required=True, help="what this step put into the database")
@@ -333,6 +340,9 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
             return 2
         print(H.add_page(c, a.slug, a.title, body, topic=a.topic, summary=a.summary,
                          ordering=a.ordering, status=a.status))
+    elif a.cmd == "forget":
+        r = H.forget(c, a.kind, a.id)
+        print(f"{r['deleted']}; {r['dates']} date row(s) went with it")
     elif a.cmd == "versions":
         cur = c.execute("SELECT status, length(body) AS n, updated FROM pages WHERE slug=?", (a.slug,)).fetchone()
         if not cur:

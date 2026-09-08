@@ -1,0 +1,21 @@
+[
+  {"date": "1619-05-09", "lat": 55.68, "lon": 12.57, "note": "leaves Copenhagen into the Sound with Enhiorningen (48 men) and Lamprenen (16 men), 64 in all"},
+  {"date": "1619-05-25", "lat": 59.30, "lon": 5.30, "note": "Karmsund, Norway: sloop's leak found and stopped; a cooper dies, three replacements taken on at Skudenes"},
+  {"date": "1619-06-02", "lat": 60.30, "lon": -1.30, "note": "inferred: passes Heth Land (Shetland)"},
+  {"date": "1619-06-04", "lat": 61.40, "lon": -6.80, "note": "inferred: rounds Syderoe (Suduroy), southernmost of the Faroe Islands"},
+  {"date": "1619-06-30", "lat": 60.50, "lon": -43.90, "note": "Cape Farewell, Greenland, in 60d30m by Munk's observation"},
+  {"date": "1619-07-11", "lat": 61.33, "lon": -64.90, "note": "Munckenes (Resolution Island), north side of the entrance to Fretum Christian (Hudson Strait), in 61d20m"},
+  {"date": "1619-07-18", "lat": 62.00, "lon": -72.50, "note": "inferred: harbour named Rin Sund among islets in Hudson Strait; meets and exchanges gifts with Inuit"},
+  {"date": "1619-08-20", "lat": 62.33, "lon": -74.00, "note": "inferred: mid-Hudson Strait, in 62d20m, working west toward Novum Mare"},
+  {"date": "1619-09-04", "lat": 62.55, "lon": -77.75, "note": "rounds Digges Eyland (Digges Island) before the three-day run south-west to Nova Dania"},
+  {"date": "1619-09-05", "lat": 60.50, "lon": -86.00, "note": "inferred: crossing Novum Mare (Hudson Bay) toward the Churchill River"},
+  {"date": "1619-09-07", "lat": 58.77, "lon": -94.20, "note": "enters the harbour at the mouth of the Churchill River, Jens Munckes Vindterhaffn, Nova Dania"},
+  {"date": "1619-12-12", "lat": 58.77, "lon": -94.20, "note": "surgeon David Velske (Lamprenen) dies; scurvy and dysentery already spreading among the crew"},
+  {"date": "1620-01-10", "lat": 58.77, "lon": -94.20, "note": "priest Rasmus Jensen and surgeon Casper Caspersen take to their beds; violent sickness now general"},
+  {"date": "1620-03-21", "lat": 58.77, "lon": -94.20, "note": "surgeon Casper Caspersen dies; by now roughly half the crew are dead"},
+  {"date": "1620-06-04", "lat": 58.77, "lon": -94.20, "note": "Munk, believing himself dying, writes his farewell entry; manuscript margin reads '61 dead'"},
+  {"date": "1620-07-16", "lat": 58.77, "lon": -94.20, "note": "departs the winter harbour in Lamprenen with the two surviving men, having named it Jens Munckes Bay"},
+  {"date": "1620-07-22", "lat": 60.00, "lon": -86.00, "note": "inferred: beset and drifting in ice on the homeward crossing of Hudson Bay, rudder broken"},
+  {"date": "1620-09-14", "lat": 59.00, "lon": -3.00, "note": "passes the Orkney Islands"},
+  {"date": "1620-09-25", "lat": 60.39, "lon": 5.32, "note": "arrives at Bergen, Norway"}
+]

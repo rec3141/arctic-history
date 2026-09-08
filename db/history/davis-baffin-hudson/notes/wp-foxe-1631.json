@@ -1,0 +1,98 @@
+[
+ {
+  "date": "1631-05-05",
+  "lat": 51.48,
+  "lon": -0.02,
+  "note": "inferred: departs Deptford in the Charles (King's pinnace, 70-80 tons, 20 men and 2 boys), two days before James sails from Bristol"
+ },
+ {
+  "date": "1631-06-22",
+  "lat": 61.5,
+  "lon": -64.9,
+  "note": "inferred: enters Hudson's Strait, sailing close along the north shore"
+ },
+ {
+  "date": "1631-07-10",
+  "lat": 63.5,
+  "lon": -77.0,
+  "note": "inferred: reaches Salisbury Island, beset by ice"
+ },
+ {
+  "date": "1631-07-17",
+  "lat": 62.0,
+  "lon": -79.5,
+  "note": "inferred: passes Mansell's Island"
+ },
+ {
+  "date": "1631-07-21",
+  "lat": 63.9,
+  "lon": -85.6,
+  "note": "inferred: passes Cary's Swan's Nest, turns north-west (Cary's Swan's Nest placed at 63.9N 85.6W, near Cape Fullerton; the identification is Christy's and is not certain)"
+ },
+ {
+  "date": "1631-07-27",
+  "lat": 63.98,
+  "lon": -84.15,
+  "note": "reaches an island off Cape Fullerton which he names Sir Thomas Roe's Welcome, then turns south down the west shore of the bay"
+ },
+ {
+  "date": "1631-08-05",
+  "lat": 58.77,
+  "lon": -94.17,
+  "note": "inferred: in Churchill Bay, which he calls Hubart's Hope"
+ },
+ {
+  "date": "1631-08-09",
+  "lat": 57.05,
+  "lon": -92.5,
+  "note": "inferred: enters Port Nelson to overhaul the ship; finds relics of Button's 1612-13 wintering, including an inscribed board"
+ },
+ {
+  "date": "1631-08-27",
+  "lat": 56.5,
+  "lon": -85.0,
+  "note": "inferred: declares in his journal that all hope of a passage on this shore is at an end"
+ },
+ {
+  "date": "1631-08-29",
+  "lat": 56.0,
+  "lon": -84.0,
+  "note": "inferred: meets Captain James's Henrietta Maria; visits exchanged, Foxe declines to winter with him"
+ },
+ {
+  "date": "1631-09-02",
+  "lat": 55.15,
+  "lon": -82.15,
+  "note": "reaches and names Cape Henrietta Maria (Wolstenholme's Ultimum Vale), joining his discoveries to Hudson's"
+ },
+ {
+  "date": "1631-09-15",
+  "lat": 64.13,
+  "lon": -77.55,
+  "note": "inferred: lands on Mill Island"
+ },
+ {
+  "date": "1631-09-22",
+  "lat": 66.78,
+  "lon": -76.92,
+  "note": "reaches his most northerly point, lat. 66 deg 47' N, long. 76 deg 55' W, named Foxe's Farthest; turns south on account of sickness among his crew"
+ },
+ {
+  "date": "1631-10-01",
+  "lat": 63.0,
+  "lon": -71.0,
+  "note": "inferred: homeward through Hudson Strait; 'we are all in weak case'"
+ },
+ {
+  "date": "1631-10-15",
+  "lat": 60.4,
+  "lon": -64.9,
+  "note": "inferred: passes Cape Chidleigh, clear of the ice, into the open ocean"
+ },
+ {
+  "date": "1631-10-31",
+  "lat": 51.2,
+  "lon": 1.4,
+  "note": "arrives in the Downs with all his men alive and recovered, having lost not one man nor boy"
+ }
+]
