@@ -21,7 +21,8 @@ What it does for you:
   error page. A bad file is deleted and reported, never left to be registered.
 * Wikimedia rate-limits this shared campus address: send Commons queries one
   at a time, and check the cached lookups in ``_staging/`` first.
-* ``--scholarsportal URI --pages FROM-TO`` pulls a page range of a licensed
+* ``--scholarsportal URI --pages FROM-TO`` (researcher-only: never run by a
+  Sonnet helper or Haiku reader) pulls a page range of a licensed
   e-book from Scholars Portal Books (the "Canadian Electronic Library" the
   catalogue lists; ``tools/library-search.py`` prints the URI). The platform
   allows 53 pages per session and the person allows one session per platform
