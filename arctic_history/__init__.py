@@ -725,6 +725,12 @@ def add_request(c, topic: str, kind: str, what: str, **kw) -> int:
     follow-up question is answering a bad request."""
     if kind not in REQUEST_KINDS:
         raise ValueError(f"kind must be one of {', '.join(REQUEST_KINDS)}")
+    # a literal backslash-n typed inside a shell argument is the line break
+    # the researcher meant; the review page showed a lot of them
+    def _nl(v):
+        return v.replace("\\r\\n", "\n").replace("\\n", "\n") if isinstance(v, str) else v
+    what = _nl(what)
+    kw = {k: _nl(v) for k, v in kw.items()}
     if len(kw.get("why", "").strip()) < 40:
         raise ValueError(
             "a request needs a real `why`: the person acting on it works alone, later, "
