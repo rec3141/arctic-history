@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Amundsen history requests"
+AuthUserFile /home/reric/.amundsen-htpasswd
+Require valid-user

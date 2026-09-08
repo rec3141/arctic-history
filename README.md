@@ -89,8 +89,12 @@ The topics and the status of each:
 ## The person's part
 
 Researchers file requests for what they cannot do alone: API keys, titles the
-library does not license, judgement calls. There is no dashboard on grid, so
-someone must look at the queue between waves:
+library does not license, judgement calls. The review page lives at
+https://cryomics.org/amundsen/requests/ (basic auth; the password hash is in
+`~/.amundsen-htpasswd` on dreamhost). Grid pushes the queue there and collects
+the decisions every ten minutes with `tools/requests-sync.py pull` (cron), and
+`tools/backup.sh` snapshots the database hourly to `db/history/_backups/` and
+to dreamhost:backups/amundsen/ (also cron). The CLI works too:
 
     python3 tools/history-db.py requests --status open
     python3 tools/history-db.py answer --id 7 --status approved --answer "fetched to franklin-1845/files/..."
