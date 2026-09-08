@@ -121,10 +121,24 @@ CREATE TABLE IF NOT EXISTS pages (
   summary     TEXT DEFAULT '',
   body        TEXT DEFAULT '',            -- Markdown with [[wikilinks]]
   ordering    INTEGER NOT NULL DEFAULT 100,
+  status      TEXT NOT NULL DEFAULT 'draft',   -- draft, good
   updated     TEXT DEFAULT ''
 );
 CREATE INDEX IF NOT EXISTS pages_topic ON pages (topic);
 CREATE INDEX IF NOT EXISTS pages_kind ON pages (kind);
+
+-- every save of a page keeps the version it replaced, so a rough draft
+-- costs nothing and no wording is ever lost
+CREATE TABLE IF NOT EXISTS page_history (
+  id          INTEGER PRIMARY KEY AUTOINCREMENT,
+  slug        TEXT NOT NULL,
+  title       TEXT DEFAULT '',
+  summary     TEXT DEFAULT '',
+  body        TEXT DEFAULT '',
+  status      TEXT DEFAULT '',
+  saved       TEXT NOT NULL                -- when this version was replaced
+);
+CREATE INDEX IF NOT EXISTS page_history_slug ON page_history (slug, id);
 
 CREATE TABLE IF NOT EXISTS people (
   name        TEXT PRIMARY KEY,
@@ -262,6 +276,8 @@ def connect(path: Path | None = None, create: bool = True) -> sqlite3.Connection
     c.execute("PRAGMA foreign_keys=OFF")     # sources may arrive after the artifact citing them
     if create:
         c.executescript(SCHEMA)
+        if "status" not in {r[1] for r in c.execute("PRAGMA table_info(pages)")}:
+            c.execute("ALTER TABLE pages ADD COLUMN status TEXT NOT NULL DEFAULT 'draft'")
         c.commit()
     return c
 
@@ -462,12 +478,27 @@ def _record_dates(c, kind: str, ident: str, start: str, end: str, raw: str = "",
         add_date(c, kind, ident, start, precision=prec, role="point", **kw)
 
 
+PAGE_STATUS = ("draft", "good")
+
+
 def add_page(c, slug: str, title: str, body: str, **kw) -> str:
+    """Write or replace a page. Pages are drafts unless said otherwise, and
+    every replacement keeps the version it overwrote in page_history — so a
+    rough page now beats a perfect page never."""
     kind = kw.get("kind", "page")
-    row = {"slug": page_slug(kind, slug) if kind != "page" else slugify(slug),
-           "kind": kind if kind in KINDS else "page", "title": title, "body": body,
+    s = page_slug(kind, slug) if kind != "page" else slugify(slug)
+    old = c.execute("SELECT * FROM pages WHERE slug=?", (s,)).fetchone()
+    status = kw.get("status") or (old["status"] if old else "draft")
+    if status not in PAGE_STATUS:
+        raise ValueError(f"status must be one of {', '.join(PAGE_STATUS)}")
+    summary = kw.get("summary", "")
+    if old and (old["body"] != body or old["title"] != title or old["summary"] != summary):
+        c.execute("INSERT INTO page_history (slug, title, summary, body, status, saved) "
+                  "VALUES (?,?,?,?,?,?)",
+                  (s, old["title"], old["summary"], old["body"], old["status"], now()))
+    row = {"slug": s, "kind": kind if kind in KINDS else "page", "title": title, "body": body,
            "topic": slugify(kw["topic"]) if kw.get("topic") else "",
-           "summary": kw.get("summary", ""), "ordering": int(kw.get("ordering", 100))}
+           "summary": summary, "ordering": int(kw.get("ordering", 100)), "status": status}
     return _upsert(c, "pages", "slug", row)
 
 
@@ -614,7 +645,7 @@ def resume_state(c, topic: str) -> dict:
             "artifacts": [dict(r) for r in c.execute(
                 "SELECT id, type, date_text, title FROM artifacts WHERE topic=? ORDER BY id", (t,))],
             "pages": [dict(r) for r in c.execute(
-                "SELECT slug, title, ordering, length(body) AS words FROM pages WHERE topic=? ORDER BY ordering", (t,))],
+                "SELECT slug, title, ordering, status, length(body) AS words FROM pages WHERE topic=? ORDER BY ordering", (t,))],
             "sources": [dict(r) for r in c.execute(
                 "SELECT bibkey, year, title FROM sources WHERE topic=? ORDER BY bibkey", (t,))]}
 
@@ -1017,15 +1048,16 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
         # 1. the wiki: hand-written narrative pages and the generated ones
         pages, index = [], []
         written = [dict(r, ref="") for r in (dict(x) for x in c.execute(
-            "SELECT slug, kind, title, topic, summary, body, ordering FROM pages ORDER BY ordering, title"))]
+            "SELECT slug, kind, title, topic, summary, body, ordering, status FROM pages ORDER BY ordering, title"))]
         for pg in written + generated_pages(c):
             back = [r["src"] for r in c.execute(
                 "SELECT DISTINCT src FROM links WHERE target=? ORDER BY src", (pg["slug"],))]
             doc = {"slug": pg["slug"], "kind": pg["kind"], "title": pg["title"], "topic": pg.get("topic", ""),
                    "summary": pg.get("summary", ""), "ref": pg.get("ref", ""),
+                   "status": pg.get("status", ""),
                    "html": render_markdown(pg["body"], targets), "backlinks": back}
             pages.append(doc)
-            index.append({k: doc[k] for k in ("slug", "kind", "title", "topic", "summary")})
+            index.append({k: doc[k] for k in ("slug", "kind", "title", "topic", "summary", "status")})
         for doc in pages:
             atomic(out / "pages" / f"{doc['slug'].replace('/', '__')}.json", json.dumps(doc, ensure_ascii=False))
 

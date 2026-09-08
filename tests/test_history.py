@@ -138,6 +138,21 @@ class HistoryTests(unittest.TestCase):
         self.assertIn("(place/beechey-island)", html)
         self.assertIn("(source/mcclintock1859voyage)", html)
 
+    def test_pages_are_drafts_by_default_and_keep_their_versions(self):
+        H.add_page(self.c, "the-march", "The march", "First wording.", topic="franklin-1845")
+        self.assertEqual(self.c.execute("SELECT status FROM pages").fetchone()["status"], "draft")
+        H.add_page(self.c, "the-march", "The march", "Second wording.", topic="franklin-1845")
+        hist = self.c.execute("SELECT body FROM page_history ORDER BY id").fetchall()
+        self.assertEqual([h["body"] for h in hist], ["First wording."])
+        H.add_page(self.c, "the-march", "The march", "Second wording.", status="good")
+        self.assertEqual(self.c.execute("SELECT status FROM pages").fetchone()["status"], "good")
+        H.add_page(self.c, "the-march", "The march", "Third wording.")
+        # a rewrite keeps the status it had unless told otherwise
+        self.assertEqual(self.c.execute("SELECT status FROM pages").fetchone()["status"], "good")
+        self.assertEqual(self.c.execute("SELECT COUNT(*) AS n FROM page_history").fetchone()["n"], 2)
+        with self.assertRaises(ValueError):
+            H.add_page(self.c, "x", "X", "body", status="perfect")
+
     def test_an_unwritten_link_is_kept_and_listed_as_wanted(self):
         H.add_page(self.c, "the-march", "The march", "See [[person:John Rae]].", topic="franklin-1845")
         info = H.reindex_links(self.c)

@@ -64,6 +64,15 @@ run had twenty researchers overwriting one another's temporary files.
 
 ## What you produce
 
+**This list is what to produce, not the order to work in.** The first crews
+worked it top to bottom, and every one of them ran out of time with rows in
+the database and not a single wiki page — and the wiki is the point. Draft
+your topic's overview page as soon as your first artifacts and spans are in,
+and each episode's page as soon as that episode's rows exist. Pages are
+drafts by default and every save keeps the version it replaced, so a rough
+page now beats a perfect page never. A run that ends with sixty rows and no
+pages has stopped short.
+
 ### 1. The topic row already exists
 `resume` shows it. Change its summary with `topic` if you can improve it.
 
@@ -189,7 +198,11 @@ The wiki is the point. Write **five to nine pages** for your topic, each 400 to
       --summary "one sentence" --ordering 30 --file page.md
 
 Give your topic an overview page at `--ordering 10`, then a page per episode,
-theme or question. Bodies are Markdown holding wikilinks:
+theme or question. Do not wait until the page is polished: a new page is
+status `draft` (shown as such in the tab), `page` replaces and keeps every
+old version (`versions --slug <slug>` lists them), and a later run or a
+person can promote it with `--status good` when it has been checked. Write
+rough and early, revise freely. Bodies are Markdown holding wikilinks:
 
     [[artifact:franklin-1845-004]]        the artifact's own page
     [[artifact:franklin-1845-004|the record itself]]     with your own wording

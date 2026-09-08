@@ -191,6 +191,13 @@ def main(argv=None) -> int:
     pg.add_argument("--body", default="")
     pg.add_argument("--file", default=None, help="the Markdown body, or - for stdin")
     pg.add_argument("--ordering", type=int, default=100, help="lower sorts earlier in the topic")
+    pg.add_argument("--status", default=None, choices=list(H.PAGE_STATUS),
+                    help="draft (the default for a new page) or good; a rewrite keeps the "
+                         "status it had unless told otherwise, and every save keeps the "
+                         "replaced version in the page's history")
+
+    vs = sub.add_parser("versions", help="a page's saved versions, oldest first")
+    vs.add_argument("--slug", required=True)
 
     lg = sub.add_parser("log", help="write a worklog line: what is now in the database, and what comes next")
     lg.add_argument("--topic", required=True)
@@ -324,7 +331,17 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
         if not body.strip():
             print("a page needs a body (--body or --file)", file=sys.stderr)
             return 2
-        print(H.add_page(c, a.slug, a.title, body, topic=a.topic, summary=a.summary, ordering=a.ordering))
+        print(H.add_page(c, a.slug, a.title, body, topic=a.topic, summary=a.summary,
+                         ordering=a.ordering, status=a.status))
+    elif a.cmd == "versions":
+        cur = c.execute("SELECT status, length(body) AS n, updated FROM pages WHERE slug=?", (a.slug,)).fetchone()
+        if not cur:
+            print(f"no page {a.slug!r}", file=sys.stderr)
+            return 1
+        for r in c.execute("SELECT id, saved, status, length(body) AS n FROM page_history "
+                           "WHERE slug=? ORDER BY id", (a.slug,)):
+            print(f"  {r['saved'][:19]}  {r['status']:6s} {r['n']:7d} chars   (replaced)")
+        print(f"  {(cur['updated'] or '')[:19]:19s}  {cur['status']:6s} {cur['n']:7d} chars   (current)")
     elif a.cmd == "request":
         ident = H.add_request(c, a.topic, a.kind, a.what, why=a.why, url=a.url, size_mb=a.size_mb,
                               dest=a.dest, who=a.who)
@@ -355,6 +372,10 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
             print(t["summary"])
         print("\n## In the database")
         print("  " + "  ".join(f"{k} {v}" for k, v in st["counts"].items()))
+        if st["counts"]["artifacts"] >= 10 and st["counts"]["pages"] == 0:
+            print("\n!! PAGES OWED: this topic has rows but not one page, and the wiki is the point.")
+            print("!! Draft the overview page FIRST, before entering more rows. Rough is fine:")
+            print("!! pages are status 'draft' by default and every save keeps the old version.")
         if st["sources"]:
             print("\n## Sources (" + str(len(st["sources"])) + ")")
             for r in st["sources"]:
@@ -366,7 +387,7 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
         if st["pages"]:
             print("\n## Pages (" + str(len(st["pages"])) + ")")
             for r in st["pages"]:
-                print(f"  {r['ordering']:4d} {r['slug']:44s} {r['words']:6d} chars  {r['title'][:50]}")
+                print(f"  {r['ordering']:4d} {r['status']:6s} {r['slug']:44s} {r['words']:6d} chars  {r['title'][:44]}")
         print(f"\n## Files on disk ({len(st['files'])}; {len(st['unregistered_files'])} not yet registered as artifacts)")
         for f in st["unregistered_files"]:
             print(f"  UNREGISTERED  {f}")
@@ -417,10 +438,10 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
         if not r:
             print(f"no page {a.slug!r}", file=sys.stderr)
             return 1
-        print(f"# {r['title']}\n[{r['kind']} · {r['topic']}]\n\n{r['body']}")
+        print(f"# {r['title']}\n[{r['kind']} · {r['topic']} · {r['status']}]\n\n{r['body']}")
     elif a.cmd == "list":
         cols = {"topics": "slug, title, status", "sources": "bibkey, year, title",
-                "artifacts": "id, type, date_text, title", "pages": "slug, kind, title",
+                "artifacts": "id, type, date_text, title", "pages": "slug, kind, status, title",
                 "people": "name, role", "places": "name, lat, lon", "events": "date_start, topic, title"}[a.what]
         q = f"SELECT {cols} FROM {a.what}"
         args: tuple = ()
