@@ -1,26 +1,28 @@
-# Arctic history research: the grid copy
+# Arctic history research: the grid side
 
-This directory is the research half of the CCGS Amundsen dashboard's History
-tab. The research runs here, on the university network, where publishers see a
-campus address and the ship's satellite link is not in the way. The dashboard
-on the ship pulls the database and the files back with `tools/history-sync.sh`
+This repository is the research half of the CCGS Amundsen dashboard's History
+tab. The research runs here on grid, on the university network, where
+publishers see a campus address. Grid owns the database; the ship is read-only
+toward grid, pulls the database and files with `tools/history-sync.sh pull`,
 and renders them into a map, a timeline and a wiki that a local model reads.
+The ship side works on the dashboard front end; both sides commit to this
+repository (rec3141/arctic-history). The database and the fetched files are
+not committed — they move by rsync.
 
 ## What is here
 
-    dashboard/history.py       the schema and the writers; standalone, no other module needed
+    arctic_history/            the schema and the writers; standalone, no dependencies
     tools/history-db.py        the only way anything is written: topics, sources, artifacts,
                                tracks, people, places, events, spans, dates, wiki pages,
                                worklog, requests
-    tools/history-fetch.py     the only way anything is downloaded: routes, EZproxy,
-                               the 50 MB rule, the 10 GB/day ledger, file checks
-    tools/history-sync.sh      ship <-> grid
-    tests/test_history.py      python3 -m pytest tests/test_history.py
+    tools/history-fetch.py     the only way anything is downloaded: EZproxy, file checks
+    tools/history-sync.sh      grid -> ship, pull only
+    tests/test_history.py      python3 -m unittest tests.test_history
     db/history/BRIEF.md        the brief every researcher works from: READ THIS FIRST
     db/history/history.sqlite  the database
     db/history/<topic>/        files/ (downloads), notes/ (extractions), RESUME.md (first-run leftovers)
     db/history/_staging/       primary texts fetched by the first runs; MANIFEST.md lists them
-    db/history/_ledger/        bytes per day, and the EZproxy cookie jar
+    db/history/_ledger/        the EZproxy cookie jar
 
 Python 3.8 is enough (`/usr/bin/python3`). `curl`, `file` and `rsync` are the
 only other tools.
@@ -62,15 +64,16 @@ prompt shape that works:
 
 Opus handles a topic well; Sonnet is fine for the fetch-and-register parts.
 Twenty at once hit Wikimedia's rate limit and the API session limit; five to
-eight at a time is comfortable. The topics and the status of each:
+eight at a time is comfortable. When picking a wave, mix image-heavy topics
+with text-heavy ones (Commons rate-limits the shared campus address), and run
+hub topics that everyone links to — inuit-oral-history above all — early, so
+other topics' wikilinks resolve instead of piling up in `wanted`.
 
-| slug | status on hand-over |
+The topics and the status of each:
+
+| slug | status |
 | --- | --- |
-| davis-baffin-hudson | Davis 1585-87 fully extracted into notes/, sources and rows going in |
-| ross-parry | 16 files on disk, rows going in |
-| kane-hall-polaris | 9 primary texts staged, rows going in |
-| amundsen-gjoa | 24 files on disk, rows going in |
-| franklin-1845 | 8 files on disk, rows going in |
+| davis-baffin-hudson, ross-parry, kane-hall-polaris, amundsen-gjoa, franklin-1845 | researched on the ship; rows in, no wiki pages yet; each topic's last worklog line says what its next run should do |
 | inuit-oral-history | 13 files (Boas, Inuit-drawn charts), nothing in the database |
 | frobisher | 14 files (Best, White portraits, maps), nothing in the database |
 | nares-greely | 20 files, nothing in the database |
@@ -81,15 +84,11 @@ eight at a time is comfortable. The topics and the status of each:
 | posts-rcmp-missions | RCMP reports 1921-25, Nascopie, staged; nothing in the database |
 | franklin-search, mcclure-investigator, karluk-cae, whaling, thule-dorset, wrecks-disasters, greenland-inughuit, science-stations, st-roch-modern, hudson-strait-south-baffin | topic rows only |
 
-The five in the first block were live on the ship when the copy was taken;
-their last worklog line says where each stopped.
-
 ## The person's part
 
-Researchers file requests for what they cannot do alone: downloads over 50 MB,
-API keys, titles the library does not license, judgement calls. On the ship the
-dashboard serves a review page at `/history/requests`; here, the CLI does the
-same:
+Researchers file requests for what they cannot do alone: API keys, titles the
+library does not license, judgement calls. There is no dashboard on grid, so
+someone must look at the queue between waves:
 
     python3 tools/history-db.py requests --status open
     python3 tools/history-db.py answer --id 7 --status approved --answer "fetched to franklin-1845/files/..."
@@ -101,11 +100,20 @@ this database and rsyncs it with the files. The dashboard build then publishes
 the wiki, the map layer, the timeline and the bibliography under
 `data/history/`. Nothing here needs to know about the dashboard.
 
-## Bandwidth and access
+## Access
 
-10 GB a day is the working allowance, enforced by the ledger. The EZproxy
-signs in from this machine's address with no password, so `history-fetch.py`
-reaches JSTOR, Cambridge Core, Wiley, Taylor and Francis and the rest directly.
-Wikimedia rate-limits the campus address: the tool sends those direct and one
-at a time, and researchers are told to check the cached Commons lookups in
-`_staging/` before querying.
+The EZproxy signs in from this machine's address with no password, so
+`history-fetch.py` reaches JSTOR, Cambridge Core, Wiley, Taylor and Francis
+and the rest directly. Wikimedia rate-limits the campus address: send Commons
+queries one at a time, and check the cached lookups in `_staging/` before
+querying.
+
+## Development
+
+The tests run with the standard library alone:
+
+    python3 -m unittest tests.test_history
+
+or, in a virtualenv with the test extra (`pip install -e '.[test]'`):
+
+    python3 -m pytest tests/test_history.py

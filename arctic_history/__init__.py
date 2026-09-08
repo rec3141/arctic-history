@@ -874,6 +874,29 @@ def generated_pages(c) -> list[dict]:
 
 
 # ---------------------------------------------------------------- checks
+def _off_map(lat, lon) -> str | None:
+    """A coordinate nothing in this history can honestly carry. Pins may sit
+    well south of the Arctic — the voyages sailed from London and New York,
+    Munk from Copenhagen, Kane died in Havana — but nothing lies south of 20
+    or east of 40, and a longitude in the mirror band east of 40 is almost
+    always a dropped minus sign."""
+    if lat is not None and not 20 <= lat <= 90:
+        return f"latitude {lat} is south of anywhere this history reaches"
+    if lon is not None and not -180 <= lon <= 40:
+        return f"longitude {lon} is east of 40: almost always a dropped minus sign"
+    return None
+
+
+def _points(coords):
+    """Every [lon, lat] pair in a GeoJSON coordinates value, any nesting."""
+    if isinstance(coords, list):
+        if len(coords) >= 2 and all(isinstance(x, (int, float)) for x in coords[:2]):
+            yield coords
+        else:
+            for v in coords:
+                yield from _points(v)
+
+
 def validate(c) -> dict:
     """Everything wrong that a reader would notice: an artifact with no
     credit or no source, a bibkey that resolves to nothing, a coordinate on
@@ -895,11 +918,9 @@ def validate(c) -> dict:
             bad("artifact", r["id"], "no licence stated")
         if r["lat"] is None and not r["geometry"]:
             bad("artifact", r["id"], "neither a position nor a geometry")
-        # a track or a text may legitimately sit in Europe: the voyages sailed
-        # from London and the books were printed there. A pin on the Arctic map
-        # may not.
-        if r["lon"] is not None and r["lon"] > 0 and r["type"] not in ("text", "track", "object"):
-            bad("artifact", r["id"], f"longitude {r['lon']} is east; the region is west of Greenwich")
+        msg = _off_map(r["lat"], r["lon"])
+        if msg:
+            bad("artifact", r["id"], msg)
         if r["local_file"]:
             f = HISTORY_DIR / r["local_file"]
             if not f.is_file():
@@ -911,6 +932,12 @@ def validate(c) -> dict:
                 g = json.loads(r["geometry"])
                 if not isinstance(g, dict) or "coordinates" not in g:
                     bad("artifact", r["id"], "geometry is not a GeoJSON geometry")
+                else:
+                    for pt in _points(g["coordinates"]):
+                        msg = _off_map(pt[1], pt[0])
+                        if msg:
+                            bad("artifact", r["id"], f"geometry point {pt[:2]}: {msg}")
+                            break
             except json.JSONDecodeError:
                 bad("artifact", r["id"], "geometry is not valid JSON")
         if r["waypoints"]:
@@ -918,6 +945,12 @@ def validate(c) -> dict:
                 w = json.loads(r["waypoints"])
                 if not isinstance(w, list):
                     raise ValueError
+                for i, p in enumerate(w):
+                    if isinstance(p, dict):
+                        msg = _off_map(p.get("lat"), p.get("lon"))
+                        if msg:
+                            bad("artifact", r["id"], f"waypoint {i} ({p.get('date', 'undated')}): {msg}")
+                            break
             except (json.JSONDecodeError, ValueError):
                 bad("artifact", r["id"], "waypoints is not a JSON array")
     for r in c.execute("SELECT bibkey, title, licence, url FROM sources"):
@@ -926,8 +959,13 @@ def validate(c) -> dict:
         if not r["url"]:
             bad("source", r["bibkey"], "no URL")
     for r in c.execute("SELECT name, lat, lon FROM places WHERE lat IS NOT NULL"):
-        if not 50 <= r["lat"] <= 90:
-            bad("place", r["name"], f"latitude {r['lat']} is outside the Arctic")
+        msg = _off_map(r["lat"], r["lon"])
+        if msg:
+            bad("place", r["name"], msg)
+    for r in c.execute("SELECT id, title, lat, lon FROM events WHERE lat IS NOT NULL"):
+        msg = _off_map(r["lat"], r["lon"])
+        if msg:
+            bad("event", str(r["id"]), f"{r['title']}: {msg}")
     # a span with only one end cannot be drawn as a bar
     for r in c.execute("SELECT span, COUNT(*) AS n, MIN(role) AS a, MAX(role) AS b "
                        "FROM dates WHERE span<>'' GROUP BY span HAVING n<2 OR a=b"):

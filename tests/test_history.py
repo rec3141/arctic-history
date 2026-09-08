@@ -204,13 +204,29 @@ class HistoryTests(unittest.TestCase):
         self.assertTrue(any("is in no source entry" in p["detail"] for p in problems))
         self.assertTrue(any("no licence" in p["detail"] for p in problems))
 
-    def test_validate_catches_an_eastern_pin_but_allows_an_eastern_track(self):
-        self.artifact(id="east-pin", lon=12.5)
-        self.assertTrue(any("is east" in p["detail"] for p in H.validate(self.c)["problems"]))
-        self.artifact(id="east-track", type="track", lon=0.28,
-                      geometry={"type": "LineString", "coordinates": [[0.28, 51.4], [-66, 74]]})
-        self.assertFalse(any(p["what"] == "east-track" and "is east" in p["detail"]
-                             for p in H.validate(self.c)["problems"]))
+    def test_validate_flags_a_dropped_minus_sign_but_allows_europe(self):
+        # the Beard daguerreotypes were taken at Greenhithe, genuinely 0.28 east
+        self.artifact(id="greenhithe", lat=51.45, lon=0.28)
+        self.assertFalse(any(p["what"] == "greenhithe" for p in H.validate(self.c)["problems"]))
+        self.artifact(id="mirror", lon=98.55)
+        self.assertTrue(any(p["what"] == "mirror" and "minus sign" in p["detail"]
+                            for p in H.validate(self.c)["problems"]))
+
+    def test_validate_allows_a_biographical_place_south_of_the_arctic(self):
+        # Tookoolito lived and died in Groton, Connecticut
+        H.add_place(self.c, "Groton", lat=41.3498, lon=-72.0784, kind="community")
+        self.assertFalse(any(p["what"] == "Groton" for p in H.validate(self.c)["problems"]))
+        H.add_place(self.c, "Flipped", lat=70.0, lon=98.4)
+        self.assertTrue(any(p["what"] == "Flipped" for p in H.validate(self.c)["problems"]))
+
+    def test_validate_checks_every_waypoint_and_geometry_point(self):
+        self.artifact(id="flip", type="track", lat=None, lon=None,
+                      waypoints=[{"date": "1845-05-19", "lat": 51.45, "lon": 0.28},
+                                 {"date": "1846-09-12", "lat": 70.08, "lon": 98.4}],
+                      geometry={"type": "LineString", "coordinates": [[0.28, 51.45], [98.4, 70.08]]})
+        problems = H.validate(self.c)["problems"]
+        self.assertTrue(any(p["what"] == "flip" and "waypoint 1" in p["detail"] for p in problems))
+        self.assertTrue(any(p["what"] == "flip" and "geometry point" in p["detail"] for p in problems))
 
     def test_validate_notices_a_missing_local_file(self):
         self.artifact(local_file="franklin-1845/files/not-there.jpg")

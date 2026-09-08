@@ -54,9 +54,9 @@ working memory; your context is not. Concretely:
 A run that ends with sixty rows in the database and an honest worklog is a
 success. A run that ends with a beautiful plan in its head is a failure.
 
-Run every command from the repository root, `/home/cryomics/Desktop/underway/AMUNDSEN`.
+Run every command from the repository root, `/data/dev/arctic-history`.
 `tools/history-db.py --help`, and `--help` on any subcommand, is the authority
-on the fields. Use `/opt/miniforge3/bin/python3`.
+on the fields. Use `/usr/bin/python3`.
 
 Do not edit any file under `dashboard/`, `tools/` or `tests/`. Do not run git.
 Keep working files in a scratchpad subdirectory named for your slug: the first
@@ -225,26 +225,20 @@ archive, not a thumbnail). Every file must be fetched through the fetch tool:
 
     tools/history-fetch.py URL --topic <your-slug> --name <your-slug>-<short>.<ext>
 
-It picks the route (the grid tunnel is several times faster than the ship's own
-link and gives the university's campus address), checks that what came back is
-a real file and not an error page, keeps the daily ledger, and prints the
-`--local-file` value to give `history-db.py`. Names are lowercase, no spaces.
+It checks that what came back is a real file and not an error page, and prints
+the `--local-file` value to give `history-db.py`. Names are lowercase, no
+spaces.
 
-- **Allowance**: 10 GB a day across the whole crew. Anything up to **50 MB**
-  you fetch freely. Above 50 MB the tool does not fetch: it files a request for
-  a person to approve, and you carry on, recording the artifact with
-  `--download-url` for now. `history-fetch.py --budget` shows the day's usage.
-- **Institutional access**: the ship is on the University of Manitoba VPN, and
-  the tool reaches the library's EZproxy from the campus address without a
-  password. For JSTOR, Cambridge Core (Polar Record), Taylor and Francis, Wiley,
-  Springer, Elsevier and Project MUSE the proxy is applied automatically; add
-  `--ezproxy` for any other publisher. If a proxied fetch comes back as a login
-  page, the library has no subscription: file `history-db.py request --kind access`.
-- **Firewalled sites**: if a site refuses the ship's address, the tunnel route
-  usually works; if both fail, file a request.
-- Wikimedia is fetched direct, because Commons rate-limits the shared campus
-  address; send Commons API queries one at a time with a descriptive User-Agent,
-  and use `https://commons.wikimedia.org/wiki/Special:FilePath/<File name>` for
+- **Institutional access**: this machine is on the University of Manitoba's
+  network, and the tool reaches the library's EZproxy from the campus address
+  without a password. For JSTOR, Cambridge Core (Polar Record), Taylor and
+  Francis, Wiley, Springer, Elsevier and Project MUSE the proxy is applied
+  automatically; add `--ezproxy` for any other publisher. If a proxied fetch
+  comes back as a login page, the library has no subscription: file
+  `history-db.py request --kind access`.
+- Commons rate-limits the shared campus address; send Commons API queries one
+  at a time with a descriptive User-Agent, and use
+  `https://commons.wikimedia.org/wiki/Special:FilePath/<File name>` for
   the original file. Check `_staging/commons-meta.json` and
   `_staging/titles.txt` before querying at all.
 - For a long text, also cut the relevant chapters into `<name>-excerpt.txt`
@@ -253,15 +247,15 @@ a real file and not an error page, keeps the daily ledger, and prints the
   `--local-file`, note it in the worklog, and move on.
 
 ### 8. Asking a person for help
-Some things you cannot do alone: a download over 50 MB, an API key, a site the
-library does not license, a judgement call about a sensitive passage, a
-question about the ship. File a request and carry on:
+Some things you cannot do alone: an API key, a site the library does not
+license, a judgement call about a sensitive passage, a question about the
+ship. File a request and carry on:
 
-    tools/history-db.py request --topic <your-slug> --kind download \
-      --what "LAC microfilm reel C-4573, 900 MB" --why "..." --url https://... --size-mb 900
+    tools/history-db.py request --topic <your-slug> --kind access \
+      --what "Polar Record 58, the library returns a login page" --why "..." --url https://...
 
 Kinds: `download`, `api_key`, `question`, `access`, `other`. A person reviews
-them on the dashboard's `/history/requests` page; read the answers back with
+them with `history-db.py requests --status open`; read the answers back with
 `history-db.py requests --topic <your-slug>`, and `resume` lists them too. Do
 not wait on a request; there is always other work.
 
