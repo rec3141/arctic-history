@@ -432,6 +432,14 @@ QUALIFIERS = ("", "circa", "before", "after", "by", "early", "mid", "late")
 DATE_ROLES = ("point", "start", "end")
 
 
+def date_display(d: str) -> str:
+    """A date as a reader should see it: negative ISO years read as BC."""
+    if d.startswith("-"):
+        y = d.lstrip("-").split("-")[0]
+        return f"{int(y)} BC"
+    return d
+
+
 def date_precision(raw: str) -> str:
     """How much of a date the source actually gives, read off its shape."""
     s = _iso(raw)
@@ -1710,6 +1718,11 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
                     continue
             else:
                 timeline.append(item)
+        for item in timeline:
+            if item["date"].startswith("-"):
+                item["display"] = date_display(item["date"])
+                if item.get("date_end", "").startswith("-"):
+                    item["display_end"] = date_display(item["date_end"])
         atomic(out / "timeline.json", json.dumps({"timeline": timeline}, ensure_ascii=False))
         atomic(out / "artifacts.json", json.dumps({"artifacts": arts}, ensure_ascii=False))
 
