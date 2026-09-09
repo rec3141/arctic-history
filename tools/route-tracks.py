@@ -16,6 +16,9 @@ markers and the table, and every waypoint stays exactly on the routed line.
     tools/route-tracks.py --all --no-figures    skip the pictures
     tools/route-tracks.py --all --theirs DIR    compare against another run's per-track GeoJSON
                                                 for the tracks it has not written to the db yet
+    tools/route-tracks.py --all --gc-step-km 20 how finely an as-given track's great-circle legs
+                                                are drawn (the default; --as-given-straight is the
+                                                old bare-waypoint line)
     tools/route-tracks.py --all --write         ALSO write geometry and routing into the database
 
 Run it from the repository root with the routing venv:
@@ -46,17 +49,27 @@ Everything lands in db/history/_ledger/routing/ (gitignored):
 default and exists so that, once the crew is happy with the lines, the same
 tool can put them in: it calls ``H.add_artifact`` with every field of the row
 as it stands plus ``routing=`` and ``geometry=``, so no other column moves and
-``waypoints`` is passed through unchanged.
+``waypoints`` is passed through unchanged.  Every track gets both a flag and a
+geometry, whichever way it is drawn.
 
 ## The flag
 
 Each track carries a ``routing`` flag, which the crew owns:
 
     water       the line is routed through water (voyages)
-    as-given    the line is drawn as the waypoints are given, and this tool
-                never touches it (sledge, overland, drift, retreat, ice
-                journeys, walks, marches, patrols, flights)
+    as-given    the line follows the waypoints as they are given, and the
+                router never moves it aside for land (sledge, overland, drift,
+                retreat, ice journeys, walks, marches, patrols, flights)
     ''          nobody has decided yet
+
+**--as-given-great-circle is the default and there is no flag to ask for it.**
+An as-given track is not left as a bare list of waypoints: its legs are drawn
+as great-circle arcs, densified to a point every 20 km (--gc-step-km) along
+the geodesic and safe across the antimeridian.  Two waypoints 400 km apart at
+80 N are 60 km from the geodesic at the middle of a Mercator straight line, so
+Peary's sledge route, a B-29 over the Pole and Bartlett's walk to Siberia all
+drew as bows through the wrong ice until this.  ``--as-given-straight`` puts
+the old bare-waypoint line back.
 
 An unset flag is decided by the title-and-tags rule below and the decision is
 reported in summary.md as the value a --write run would set.  A flag already
@@ -249,6 +262,7 @@ NEAR_PENALTY = 0.25         # refine at full resolution within ~70 km of a coast
 CROSS_TOL_KM = 2.0          # a route this far over land is a crossing worth saying
 BIG_CROSS_KM = 25.0         # and this far means the fine mask does not hold the way round
 HUG_KM = 5.0                # closer than this to a shore is hugging it
+GC_STEP_KM = 20.0           # a point every this far along an as-given great-circle leg
 DOWN = 4                                # the first level's downsampling
 SIMPLIFY_KM = 1.0
 CHAIKIN_PASSES = 3
@@ -1004,8 +1018,18 @@ def route_track(job):
     rec["straight_km"] = line_km(pts)
     rec["outside"] = int(bool(s_missed))
     if flag != "water":
-        rec.update(points=len(pts), routed_land=s_frac, routed_km=rec["straight_km"],
-                   seconds=round(time.time() - t0, 2), line=list(pts))
+        # a track drawn as-given still gets a line, and that line is the
+        # waypoints joined by great-circle arcs, densified: a sledge journey or
+        # a flight over the Pole followed the geodesic, not a Mercator straight
+        # line, and on the map the two are far apart at these latitudes
+        step = job.get("gc_step", GC_STEP_KM)
+        line = [pts[0]]
+        for p, q in zip(pts, pts[1:]):
+            line += great_circle(p, q, step)[1:] if step > 0 else [q]
+        r_frac, r_missed = land_fraction(grids, line)
+        rec["outside"] = int(bool(s_missed or r_missed))
+        rec.update(points=len(line), routed_land=r_frac, routed_km=line_km(line),
+                   seconds=round(time.time() - t0, 2), line=line)
         return rec
     line = [pts[0]]
     for p, q in zip(pts, pts[1:]):
@@ -1392,9 +1416,14 @@ def render_summary(recs, comps, fine, coarse, straits, meta, path):
          f"{np.mean([r['seconds'] for r in routed]):.1f} s per routed track on average, "
          f"{max(r['seconds'] for r in recs):.1f} s at worst.", "",
          f"Command: `{meta['cmd']}`", "",
-         "**The database was not written to.** This run only reads waypoints from it; the lines are "
-         "in `routes.geojson` beside this file. `--write` would put them in `geometry` and set "
-         "`routing`, and it is off by default.", "",
+         ("**Written to the database.** This run was given `--write`, so every track's `routing` flag "
+          "and `geometry` below are now in `db/history/history.sqlite`, put there through "
+          "`H.add_artifact` with the row's own fields, `waypoints` untouched. The same lines are in "
+          "`routes.geojson` beside this file."
+          if meta.get("wrote") else
+          "**The database was not written to.** This run only reads waypoints from it; the lines are "
+          "in `routes.geojson` beside this file. `--write` would put them in `geometry` and set "
+          "`routing`, and it is off by default."), "",
          "## The masks", "",
          f"- **fine** — {fine.label}, {fine.ncols} x {fine.nrows} cells, land {fine.land.mean():.1%}. "
          f"A Web Mercator cell shrinks as the cosine of the latitude, so a cell is "
@@ -1425,7 +1454,7 @@ def render_summary(recs, comps, fine, coarse, straits, meta, path):
     if routed:
         L += ["## What came out", "",
               "| | straight | routed |", "|---|---|---|",
-              f"| of the line on land, mean over the {len(routed)} routed tracks | "
+              f"| of the line on land, mean over the {len(routed)} tracks routed through water | "
               f"{np.mean([r['straight_land'] for r in routed]):.0%} | "
               f"{np.mean([r['routed_land'] for r in routed]):.0%} |",
               f"| points per track, mean | {np.mean([r['waypoints'] for r in routed]):.0f} | "
@@ -1435,9 +1464,12 @@ def render_summary(recs, comps, fine, coarse, straits, meta, path):
 
     L += ["## Every track", "",
           "Land along the line is sampled every 2 km on the ground, on the finest mask that holds the "
-          "sample. A track drawn as-given is not routed and its line is its waypoints, so its two "
-          "land columns are the same number.", "",
-          "| track | flag | waypoints | points | on land, straight | on land, routed | notes | s |",
+          "sample. **on land, straight** is the waypoints joined by straight lines, which is what the "
+          "map drew before. **on land, drawn** is the line this run gives it: the routed water path "
+          f"for a water track, and the waypoints joined by great-circle arcs every {GC_STEP_KM:g} km "
+          "for an as-given one, which is not routed round anything and so still runs over land wherever "
+          "the journey did.", "",
+          "| track | flag | waypoints | points | on land, straight | on land, drawn | notes | s |",
           "|---|---|---|---|---|---|---|---|"]
     for r in sorted(recs, key=lambda r: (-(r["routed_land"] if r["routing"] == "water" else -1),
                                          -r["straight_land"], r["id"])):
@@ -1603,6 +1635,12 @@ def main():
                     help="a directory of <track-id>.geojson LineStrings to compare against for any "
                          "track the live database has not had rewritten yet, for when the other run "
                          "writes the database only at the end")
+    ap.add_argument("--gc-step-km", type=float, default=GC_STEP_KM,
+                    help="how far apart the points are along an as-given track's great-circle legs "
+                         f"(default {GC_STEP_KM:g} km)")
+    ap.add_argument("--as-given-straight", action="store_true",
+                    help="draw an as-given track as its bare waypoints instead of great-circle arcs "
+                         "(the old behaviour; --as-given-great-circle is the default)")
     ap.add_argument("--gshhg", default=str(MASKS / "gshhg-shp-2.3.7.zip"))
     a = ap.parse_args()
     if not (a.all or a.track or a.straits):
@@ -1647,7 +1685,8 @@ def main():
             why[tid] = f"the flag in the database is already {flag}"
         else:
             flag, why[tid] = decide(row)
-        jobs.append(dict(id=tid, title=row["title"], flag=flag, pts=waypoints_of(row)))
+        jobs.append(dict(id=tid, title=row["title"], flag=flag, pts=waypoints_of(row),
+                         gc_step=0.0 if a.as_given_straight else a.gc_step_km))
 
     n = min(max(1, a.jobs), len(jobs))
     print(f"routing {len(jobs)} tracks on {n} workers", file=sys.stderr)
@@ -1691,9 +1730,10 @@ def main():
                 and all(abs(x[0] - y[0]) < 1e-4 and abs(x[1] - y[1]) < 1e-4
                         for x, y in zip(their, straight)))
         source = "the live database"
-        if (len(their) < 2 or same) and a.theirs:
-            # their run may write the database only at the end; take the line it
-            # has already dropped on disk instead, and say so
+        if a.theirs:
+            # the other run may not write the database at all; its line on disk
+            # is the better source, and stays the right one after this tool has
+            # written its own lines into the database
             f = Path(a.theirs) / f"{r['id']}.geojson"
             if f.exists():
                 try:
@@ -1742,6 +1782,7 @@ def main():
     meta = dict(run=time.strftime("%Y-%m-%d"), seconds=seconds, jobs=n,
                 cmd=" ".join(["python tools/route-tracks.py"] + sys.argv[1:]),
                 cmp_time=cmp_time, cmp_tracks=len(live), from_dir=from_dir, theirs=a.theirs,
+                wrote=a.write,
                 db_rewritten=sum(1 for c in comps if c["source"] == "the live database"))
     render_summary(recs, comps, fine, coarse, straits, meta, OUT / "summary.md")
 
@@ -1770,14 +1811,26 @@ def main():
         print("--write: putting geometry and routing into the database", file=sys.stderr)
         import arctic_history as H
         c = H.connect(dbpath, create=False)
-        n_w = 0
+        n_w = n_water = n_given = 0
+        refused = []
         for r in recs:
             row = live[r["id"]]
-            geom = as_geojson(r["line"]) if r["routing"] == "water" and len(r["line"]) > 1 else None
-            if geom is not None or (row["routing"] or "") != r["routing"]:
+            # both flags get a line: the routed one for water, the waypoints
+            # joined by great-circle arcs for as-given
+            geom = as_geojson(r["line"]) if len(r["line"]) > 1 else None
+            try:
                 write_row(c, row, r["routing"], geom)
-                n_w += 1
+            except Exception as e:                          # a row the writer will not take
+                refused.append(f"{r['id']}: {e}")
+                continue
+            n_w += 1
+            n_water += r["routing"] == "water"
+            n_given += r["routing"] != "water"
         c.commit()
+        for line in refused:
+            print("REFUSED " + line, file=sys.stderr)
+        print(f"--write: {n_water} water, {n_given} as-given, {len(refused)} refused",
+              file=sys.stderr)
         print(f"--write: {n_w} rows written", file=sys.stderr)
     else:
         print("the database was not written to (--write is off)", file=sys.stderr)
