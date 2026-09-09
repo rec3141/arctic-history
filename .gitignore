@@ -18,3 +18,5 @@ db/history/SIGNATURE.txt
 # grid never sees it and neither should git on either side
 underway/
 .route-venv/
+# YOLO11x weights for tools/animal-crops.py: 115 MB, fetched not committed
+tools/models/*.pt
