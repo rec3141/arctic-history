@@ -130,7 +130,10 @@ Ids are `<your-slug>-NNN`, zero padded, unique. Types: `image`, `text`, `track`,
 `place`, `event`, `map`, `quote`, `object`. Aim for 15 to 40 artifacts, mixed in
 type. Every artifact needs a `--credit` and a `--bibkey`; the tool refuses one
 without them, because the tab shows the credit beside the item and exports the
-bibliography. Coordinates are decimal degrees, west longitude negative.
+bibliography. Coordinates are decimal degrees, west longitude negative. A subject genuinely
+east of 40 (Novaya Zemlya, the far side of the dateline) carries
+`--tags east-verified` so `check` accepts what would otherwise look like a
+dropped minus sign.
 
 A `quote` is a short verbatim passage (under 80 words) from an out-of-copyright
 primary text, pinned where it was written or spoken, with `--pages`.

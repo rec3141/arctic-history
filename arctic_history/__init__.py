@@ -1512,7 +1512,9 @@ def validate(c) -> dict:
             bad("artifact", r["id"], "no licence stated")
         if r["lat"] is None and not r["geometry"]:
             bad("artifact", r["id"], "neither a position nor a geometry")
-        msg = _off_map(r["lat"], r["lon"])
+        # a documented, genuinely eastern position (Novaya Zemlya, the far
+        # side of the dateline) is vouched for with the east-verified tag
+        msg = None if "east-verified" in (r["tags"] or "") else _off_map(r["lat"], r["lon"])
         if msg:
             bad("artifact", r["id"], msg)
         if r["local_file"]:
