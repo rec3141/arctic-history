@@ -1119,6 +1119,18 @@ def _mention_index(c) -> tuple[dict, "re.Pattern | None"]:
                 if alt.strip():
                     mention.setdefault(alt.strip(), (kind, slug))
     mention = {k: v for k, v in mention.items() if len(k) >= 3}
+    # a single word that also occurs inside a longer known name ("Arctic" in
+    # C.G.S. Arctic and Arctic Bay, "Baffin" in William Baffin and Baffin Bay,
+    # "Erebus" the dog vs HMS Erebus) is too ambiguous to link as a bare
+    # mention: hundreds of pages would back-link a dog. Explicit
+    # [[kind:name]] links still resolve through every alias.
+    inside = set()
+    for k in mention:
+        parts = [w.strip("()") for w in k.split()]
+        if len(parts) > 1:
+            inside.update(parts)
+    for k in [k for k in mention if " " not in k and k in inside]:
+        del mention[k]
     if not mention:
         return mention, None
     rx = re.compile(r"\b(" + "|".join(re.escape(n) for n in
