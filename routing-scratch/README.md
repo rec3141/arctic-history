@@ -2,26 +2,32 @@
 
 A track artifact's `geometry` is its waypoints joined by straight lines, and
 those lines cut across Baffin Island, Somerset, Greenland and the rest. This
-folder is a prototype that routes each pair of consecutive waypoints along
-the least-cost water path over a land mask, with the numbers and pictures
-from running it on every track in the database on 2026-09-08.
+folder is the routing tool, and the numbers and pictures from running it on
+grid on 2026-09-09 against every track in the live database: 147 tracks, 91
+routed, 56 skipped as sledge, overland, drift or retreat journeys.
 
-    route_tracks.py     the prototype (GDAL command-line tools + numpy, scipy, scikit-image, Pillow)
-    routes.json         its output for the 59 routed tracks: waypoints, the straight line, the routed line, land fractions
+    route_tracks.py     the tool (GDAL command-line tools + numpy, scipy, scikit-image, Pillow)
+    routes.json         its output for the 91 routed tracks: waypoints, the straight line, the routed line, land fractions
+    geojson/            one GeoJSON LineString per routed track, for history-db.py --geometry-file
     summary.md          land along the line for each track, straight and routed
-    overview.png        every routed track (yellow) over its straight line (red) on the 2 km mask
+    overview.png        every routed track (yellow) over its straight line (red) on the 1 km mask
     archipelago.png     the same, the Northwest Passage region
-    three-voyages.png   Franklin 1845, the Gjoa and Parry's Fury and Hecla alone, so the routing can be read
+    three-voyages.png   Franklin 1845, the Gjoa and Parry's Fury and Hecla alone (an earlier 2 km run), so the routing can be read
 
-Run as
+Run on grid as
 
-    python3 routing-scratch/route_tracks.py --db db/history/history.sqlite \
-        --land ne_10m_land.shp --land ne_10m_minor_islands.shp [--gebco gebco.tif] --out routing-out
+    export MAMBA_ROOT_PREFIX=~/micromamba; eval "$(~/bin/micromamba shell hook -s bash)"; micromamba activate routing
+    python routing-scratch/route_tracks.py --db db/history/history.sqlite \
+        --land /data/gis/shoreline/osm_box.gpkg --bbox=-180,35,15,86 --res 1000 \
+        --coarse-land /data/gis/shoreline/gshhg_global_i.gpkg --coarse-bbox=-180,-60,180,86 --coarse-res 4000 \
+        --out /data/gis/routing/runN --geojson-dir /data/gis/routing/runN/geojson
 
-with the Natural Earth 10 m land and minor-islands shapefiles (naciscdn.org,
-8 MB); GEBCO is optional. The mask is Web Mercator at 2 km over the North
-Atlantic and Arctic (-150..15 E, 35..86 N), 9184 by 7904 cells. Every track
-takes a few seconds; all 59 take about six minutes.
+Two masks: a fine one at 1 km from the OpenStreetMap land polygons over the
+North Atlantic and Arctic (-180..15 E, 35..86 N, 21707 by 15808 cells), and
+a coarse one at 4 km from GSHHG intermediate over the globe to 60 S, for the
+ocean legs outside it (the voyages by the Pacific). A segment goes on the
+fine mask when both ends are in it, else the coarse one, else a great circle.
+The run took 102 minutes; the long Atlantic legs dominate.
 
 ## How it routes
 
@@ -46,32 +52,23 @@ takes a few seconds; all 59 take about six minutes.
 
 | | straight lines | routed |
 |---|---|---|
-| of the line on land, mean over 59 tracks | 30 % | 3 % |
-| points per track, mean | 20 | 46 |
+| of the line on land, mean over 91 tracks | 36 % | 3 % |
+| points per track, mean | 20 | 48 |
 
-What is left on land, in order of size (see summary.md):
-
-- Voyages that went by the Pacific — Collinson's Enterprise, McClure's
-  Investigator, the Karluk, the Polar Sea — have waypoints west of 150 W and
-  south of 35 N, outside the mask, and those segments are left straight
-  across the continent. The mask must cover the whole route, or those legs
-  need a great-circle fallback and the mask a Pacific extension.
-- Journeys on foot or by sledge that the word rule does not catch (the
-  Netsilik journey to Akkoolee, Iligliuk's coast). Each track needs an
-  explicit flag set by the research crew, not a guess from its title.
-- Waypoints themselves in land cells and the short stub to them.
+What is left on land, in order of size (see summary.md), is almost all
+journeys on foot, by sledge or by air that the word rule does not catch: the
+Oxford Ellesmere sledge journeys of 1934-35, the RCMP patrols, the SHORAN
+survey flights, the Netsilik journey to Akkoolee. Routed through water they
+come out as staircases across the land, which is worse than the straight
+line. Each track needs an explicit flag set by the research crew, not a
+guess from its title; that is the one thing the tool cannot decide.
 
 ## What the full version needs
 
 1. A per-track flag: routed through water, or drawn as given.
-2. A finer mask, 500 m or 1 km, from a better shoreline. Bellot Strait and
-   Fury and Hecla Strait are about 2 km wide and close at 2 km. The Natural
-   Earth polygons keep them open when rasterized at 100 m, but Natural Earth
-   "10 m" is 1:10 million scale, generalized to about a kilometre; GSHHG full
-   resolution (about 150 MB) or the OSM land polygons (about 1 GB, clip on
-   grid) would serve both the routing and the map's coastline, which is
-   drawn from the same Natural Earth file today.
-3. A mask that covers every route, including the Pacific approaches.
+2. (Done.) The masks above: 1 km from the OSM polygons, with Bellot Strait
+   and Fury and Hecla Strait open, and a 4 km global mask for the Pacific
+   approaches.
 4. The routed line written to `geometry`, `waypoints` untouched as the truth.
    The front end already draws `geometry` as the line and `waypoints` as the
    markers and table, so it needs no change.
