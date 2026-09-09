@@ -194,6 +194,16 @@ timeline that reads oddly is usually a date entered at the wrong precision.
 
 ### 5. People and places
 
+**Animals and vessels are first-class, like people.** A named dog, pony,
+ship's cat or bear cub is an `animal` row (`history-db.py animal --name Mike
+--kind dog --role "..." --affiliation "..." --bibkey ...`), a ship, boat or
+aircraft is a `vessel` row (`history-db.py vessel --name "HMS Investigator"
+--kind barque --built "1848, Greenock" --lost "..." --affiliation ...`), and
+pages link them as [[animal:Mike]] and [[vessel:HMS Investigator]]. Use the
+name as it is usually written, check `list --what animals` or `vessels`
+first, and put the ship's other names in `--also`. Every vessel a track
+belongs to should exist as a row.
+
 **This is not Wikipedia: there is no notoriety requirement.** Enter every
 person a source names — the seamstress, the dog driver, the ship's cook, the
 constable, the child born on the floe, the juror — with what the source says
