@@ -1,0 +1,37 @@
+# Cape Sparbo: the old village under the den
+[page · cook-1908-axel-heiberg · draft]
+
+[[place:Cape Sparbo]] is on the north coast of [[place:Devon Island]], on the south side of [[place:Jones Sound]], at 75°49'N 84°00'W. The name is Norwegian, from [[person:Otto Sverdrup]]'s second *Fram* expedition, which charted this coast between 1899 and 1902 and named a good deal of it after home. It is not a large headland and nothing has ever been built there. It matters for two reasons that have nothing to do with each other, and the interesting thing is that they turn out to be the same reason.
+
+## What Cook found
+
+Coming east in a punctured canvas boat in the first days of September 1908, out of ammunition and with the ice making, Cook, [[person:Ahwelah]] and [[person:Etukishook]] landed here and found they had landed on a village.
+
+[[artifact:cook-1908-axel-heiberg-016|"We found to our surprise that it was the site of an old Eskimo village. There was a line of old igloos partly below water..."]]
+
+The detail in that sentence is worth more than it looks. A line of house ruins standing partly below the present waterline means the land has gone down relative to the sea, or that the houses were built when the sea stood lower; either way it is an observation about relative sea level on the Jones Sound coast, made in 1908 by a man who was only looking for somewhere to sleep. Raised and drowned beaches are the ordinary currency of Devon Island field geology now.
+
+They chose one ruin — a pit with a raised sleeping platform about six feet by eight, walls two feet high, wings at the sides where the lamps had stood — and rebuilt it: another foot of wall, sod cut and dried, and a roof frame of whale ribs picked up off the beach. Whale rib rafters mean bowhead, and bowhead rafters mean Thule. Digging out the floor Cook [[artifact:cook-1908-axel-heiberg-017|turned up a human skull]], and wrote that the omen was bad but the company welcome. He does not say what he did with it.
+
+[[artifact:cook-1908-axel-heiberg-048|The plate captioned "den in which were spent 100 double nights"]] is a photograph of the result.
+
+## What the archaeologists found
+
+Nobody looked at the site professionally for fifty-two years. In the late summer of 1960 the Arctic Institute of North America landed a party from the Department of Transport icebreaker *d'Iberville* to build a base at [[place:Cape Skogn]], six kilometres down the coast, for a three-year programme of glaciology and oceanography on Devon Island; while the huts were going up, [[artifact:cook-1908-axel-heiberg-051|a small party under Gordon Lowther of McGill made an archaeological reconnaissance of the Cape Sparbo area]]. The sites found were excavated the following year for the National Museum of Canada and published as [[source:lowther1962account]].
+
+The published summaries of that work describe houses, tent rings and meat caches, over three hundred and fifty artifacts, and pre-Dorset, Dorset and Thule material — roughly three and a half thousand years of intermittent occupation, with the Thule component read from its animal bone as an autumn and winter settlement. That is exactly the season Cook was there, and for the same reason: this is a walrus and musk-ox coast with water that stays open late.
+
+The excavation report itself has not been read for this page. There is no digital copy of National Museum of Canada Bulletin 180 anywhere reachable, and a scan has been requested; until it arrives, the sentence that ought to be written — whether the house Cook rebuilt is one of Lowther's numbered dwellings — cannot honestly be written. It is the single most interesting open question in this topic.
+
+## Why it matters to people now
+
+The people who built those houses are the ancestors of Inuit living in Nunavut today. Cape Sparbo lies in the hunting country of [[place:Ausuittuq]] (Grise Fiord), the community on the south coast of [[place:Ellesmere Island]] across Jones Sound, whose families were moved there from northern Quebec in 1953 and 1955 — a history the Qikiqtani Truth Commission has set out and which belongs beside this one. Cook's winter is a footnote in the occupation of that coast, not the beginning of it.
+
+There is also a plain heritage point. Three men lived in a Thule house for five months, dug out its floor, cut sod for its walls, burned musk-ox fat in it, and left. That is a dated and described disturbance of an archaeological deposit, which is a nuisance to an excavator and a gift to one: anything above Cook's floor is post-1909 and anything he describes can be checked against what is still in the ground.
+
+## For the ship
+
+If the *Amundsen* works the Jones Sound side of Devon Island, this coast is worth a look for the ordinary reasons — the polynya water off [[place:Cape Vera]] and Hell Gate that Cook found open in August, the fulmar colonies, the musk-ox range behind the beach. Cook's own descriptions of what was where in 1908 are a century-old baseline of a kind that is hard to get: he names where the walrus lay, when the sun set behind the southern cliffs (3 November), when it came back (11 February), and what the ice did in Jones Sound through a whole winter.
+
+The wintering itself is told in [[page:cook-the-winter-at-cape-sparbo]]; the people in [[page:cook-the-inughuit-of-annoatok]]; the journey as a whole in [[page:cook-1908-overview]].
+

@@ -83,7 +83,7 @@ of it at length.
 
 ## The strait that was a bay
 
-Frobisher's "strait" is a bay a hundred and eighty kilometres long, closed at
+Frobisher's "strait" is a bay about 230 kilometres long, closed at
 its head. It was drawn on European maps as an open passage, and then — through
 a chain of copying errors beginning with the Zeno map's phantom island of
 Frisland — slid across the Atlantic onto the south coast of Greenland, where it

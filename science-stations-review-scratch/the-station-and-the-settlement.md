@@ -30,8 +30,9 @@ scientist.
 
 ## The eight kilometres
 
-In September 1953 the *C. D. Howe* and the *d'Iberville* put ashore at Resolute
-Bay families from [[place:Inukjuak]] in Nunavik and from
+The families came north on the *C. D. Howe*, were transferred at sea to the
+*d'Iberville*, and were put ashore at Resolute Bay on 7 September 1953: three
+families from [[place:Inukjuak]] in Nunavik and one from
 [[place:Mittimatalik]] (Pond Inlet), with their qimmiit and their belongings.
 Constable Ross Gibson came with them to open an RCMP detachment and a store. No
 site had been surveyed for the people. The Commission records that the only
@@ -70,11 +71,13 @@ behaviour before they could be hired.
 
 Work, when it came, came through the base. Men were taken on each spring to load
 and unload the airlift. By 1960 four held permanent jobs — one teacher and three
-at the RCAF Survival School — chosen, the RCMP said, because they were the best
-hunters and had therefore been "declared deserving of employment". By 1963 there
-were nine full-time positions: two janitors, three assistant mechanics, three at
-the Survival School, a caretaker. Wages brought a steady income and access to the
-base canteen; in 1962 the RCAF had to restrict alcohol sales there. In April 1964
+at the RCAF Survival School — picked, the Commission records, because they were
+"the top hunters in Resolute" and were declared "deserving [of] employment and
+the benefits that accompany wage employment". By 1963 there
+were nine permanent full-time positions: two janitors, three assistant mechanics,
+three at the Survival School, and a caretaker for the government buildings. Wages
+brought a steady income and access to the base canteen; as early as 1961 the RCAF
+had restricted alcohol sales there. In April 1964
 the base and airstrip passed from the RCAF to the Department of Transport, and
 the number of permanent jobs fell to five. In 1966 there was one full-time hunter
 left in the community, though the wage earners still hunted.
@@ -87,16 +90,22 @@ attention arrived only in 1961, as a Saturday-morning round of the Inuit houses
 by an RCMP constable and an RCAF medic. A nursing station came in 1968, a Hudson's
 Bay Company store not until December 1971, an Anglican church in 1965. The
 qimmiit that had come north on the ship fell from more than a hundred in 1958 to
-eighty in 1964, some to rabies and more to the enforcement of the ordinance that
-required dogs to be tied — the pattern set out in
+eighty in 1964, seven of them to rabies and the rest, the Commission says, to the
+enforcement of the ordinance that required dogs to be tied at all times — the
+pattern set out in
 [[page:relocations-the-killing-of-the-qimmiit]].
 
 ## Moved again
 
 In 1974 the settlement held about two hundred people in thirty-two households.
 Its water came from tapping icebergs, gathering snow, or hauling from Char Lake
-in summer. Ottawa hired the Swedish architect Ralph Erskine to design a new
-townsite, and in the summer of 1975 the community was moved about three
+in summer. Drifting snow, the need to get the houses out from under the airport
+approach line, and a wish to bring all the residential areas together led to a
+new townsite; the architect Ralph Erskine — English, working from Sweden — was
+hired to design it, and envisaged a community of seven hundred, Inuit and
+Qallunaat together, ringed by a wall of three-storey apartment blocks. In the end
+one of his buildings was put up. In the summer of 1975 the community was moved
+about three
 kilometres, from the western shore of the bay to the eastern. Television arrived
 the same year. [[person:Saroomie Manik]] told the Commission in 2008 what the
 move had cost:

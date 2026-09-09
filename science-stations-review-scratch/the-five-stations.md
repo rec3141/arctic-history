@@ -36,8 +36,10 @@ minutes.
 
 Eureka has been occupied every day since. It is the longest continuous High
 Arctic record Canada has, and everything that has been built there since —
-including [[artifact:science-stations-013|PEARL]] — sits on top of it. See
-[[page:the-eureka-record]].
+including [[artifact:science-stations-013|PEARL]] — sits on top of it. An RCAF
+survey aircraft photographed
+[[artifact:science-stations-041|the sound it stands on]] about three years later,
+looking east from Axel Heiberg Island. See [[page:the-eureka-record]].
 
 ## Resolute, 30 August 1947: the station that was somewhere else
 
@@ -46,10 +48,13 @@ Parry wintered in 1819-20 ([[topic:ross-parry]]). It never got there.
 [[artifact:science-stations-001|Task Force 68]] tried four times in August 1947:
 stopped by ice near Byam Martin Island; a propeller blade broken off in Melville
 Sound, halving the *Edisto*'s icebreaking power; fog; and finally a ten-mile band
-of pack ice on 28 August. On 29 August Hubbard accepted Resolute Bay on
-[[place:Cornwallis Island]] instead — "except that the country appeared
-uncomfortably barren", as the Canadian observer put it — and unloading began the
-next morning.
+of pack ice on 28 August. Resolute Bay had already been looked at as a fallback:
+on 16 August helicopters put Hubbard and the station's Canadian
+officer-in-charge, [[person:James Donald Cleghorn]], ashore there to pick out
+sites for a station and an airstrip, and they judged conditions favourable
+"except that the country appeared uncomfortably barren". On 29 August Hubbard settled for
+Resolute Bay on [[place:Cornwallis Island]], and unloading began the next
+morning.
 
 The accident of that choice shaped the next eighty years. Resolute became the
 main station, then an RCAF base in 1949, then the airfield that supplies Alert,
@@ -62,21 +67,31 @@ the story is [[page:the-station-and-the-settlement]].
 ## Isachsen and Mould Bay, April 1948
 
 From Resolute in the spring of 1948 reconnaissance flights picked two more sites.
-[[artifact:science-stations-005|Isachsen]], at 78°47'N on
-[[place:Isachsen|Ellef Ringnes Island]], was set up from 2 April by
-[[person:Alan Innes-Taylor]], a Yukoner with real polar experience who wrote the
-place up for the first volume of the journal *Arctic* and privately despaired of
-the men he had been given. [[artifact:science-stations-006|Mould Bay]] on
+The advance party reached [[artifact:science-stations-005|Isachsen]], at 78°47'N
+on [[place:Isachsen|Ellef Ringnes Island]], on 2 April; [[person:Richard Jones]] was the
+officer in charge and [[person:Alan Innes-Taylor]] the executive officer, a man
+with real polar experience who wrote the place up for the new journal *Arctic*
+and privately despaired of the men he had been given — "a group of school boys
+who lack even a faint glimmering of imagination", he complained, wanting the
+Americans allowed to "send up a good man or two".
+[[artifact:science-stations-006|Mould Bay]] on
 [[place:Prince Patrick Island]] followed on 11 April; thirty-two flights carried
 170 tons of stores in by the 25th, and seven men — three Canadians, three
 Americans and a mechanic — put up a Jamesway hut to keep it out of the weather.
+Both stations were photographed from the air within a year or two of going in:
+[[artifact:science-stations-039|Isachsen looking west, the station in the bay at
+the left of the frame]], and
+[[artifact:science-stations-040|Mould Bay looking east]].
 
 Both were dreadful postings and both lasted decades. Isachsen's upper-air
-observations stopped in June 1978 and the station closed on 19 September that
+observations stopped in mid-June 1978 and the station closed on 19 September that
 year; nothing was flown out that could not pay for its seat, so the trucks are
-still in the garage. Mould Bay got a new operations building in 1985, then sank
-into the permafrost, and the Atmospheric Environment Service closed it in 1997
-because shutting one Mould Bay saved the cost of twenty stations in the south.
+still in the garage and the books are still on the shelves. Mould Bay got a new
+two-storey operations building in 1985, was sinking into the permafrost by 1990,
+and the Atmospheric Environment Service closed it in 1997 to save about $1.5
+million a year. [[person:Mike Balshaw]], the Service's regional director at the
+time, put the arithmetic plainly: "when it came to closures you could close Mould
+Bay and save twenty stations down south."
 
 ## Alert, 1950
 

@@ -16,7 +16,8 @@ a dash for a latitude teaches nothing, and that what the Arctic needs is a ring
 of fixed stations, agreed in advance, all reading the same instruments to the
 same schedule for a full year. The International Polar Conferences of Hamburg,
 Berne and St. Petersburg turned the argument into a plan, and in 1882-83 the
-first International Polar Year put fourteen stations round the pole.
+first International Polar Year occupied fourteen stations — eleven nations took
+part, and three of the stations were in the southern hemisphere.
 
 Two of them were in North America. The German station was at
 [[place:Kingua Fiord]] at the head of Cumberland Sound. The northernmost of all
@@ -97,18 +98,24 @@ Commission's own terms.
   the outfit that flies almost every scientific field party in the High Arctic.
 - [[artifact:science-stations-012|The drifting ice islands]]: slabs of the
   [[place:Ward Hunt Ice Shelf]] found on radar from 1946 and lived on from 1952,
-  drifting a mile a day round the Beaufort Gyre. See [[page:the-ice-islands]].
+  drifting a mile a day round the Beaufort Gyre —
+  [[artifact:science-stations-044|their paths were plotted at three-monthly
+  intervals]] as soon as there were three of them to plot. See
+  [[page:the-ice-islands]].
 - [[artifact:science-stations-013|PEARL]], the laboratory on the ridge above
   Eureka, which exists because Eureka does. See [[page:the-eureka-record]].
-- CFS Alert, a signals station from 1 September 1958 and the northernmost
-  permanently inhabited place on Earth, with the longest clean-air record in the
-  Canadian Arctic running beside the antennas.
+- [[place:CFS Alert]], where the weather station took on a second life as a
+  signals-intelligence unit on 1 September 1958 — the Alert Wireless Station,
+  under the Canadian Army — and which is the northernmost permanently inhabited
+  place on Earth, with the longest background atmospheric record in the Canadian
+  Arctic running beside the antennas.
 
 ## The line to this ship
 
-Ninety per cent of what the fifth International Polar Year of 2007-08 measured in
-the Canadian Arctic was measured from ships and camps that this chain of stations
-made possible. By then Canada had a research icebreaker again. In 2001 there was
+[[artifact:science-stations-021|The fourth International Polar Year of 2007-09]]
+was the largest contribution Canada had ever made to a polar year, and much of it
+went to sea, out of the airfields and stations this chain had left behind. By then
+Canada had a research icebreaker again. In 2001 there was
 no Coast Guard ship available for Arctic science at all; fifty-four researchers
 from twelve universities, led by [[person:Louis Fortier]], put a proposal to the
 Canada Foundation for Innovation, and the laid-up icebreaker *Sir John Franklin*
@@ -118,7 +125,8 @@ ArcticNet, and she has run up more than 2,200 days of research at sea.
 [[page:from-the-stations-to-the-ship]] follows that line.
 
 So: Weyprecht's fixed station, Greely's 526 observations a day, the balloon that
-went up at Eureka this morning for the twenty-nine-thousandth time, and the
+went up at [[artifact:science-stations-041|Eureka]] this morning as one has gone
+up twice a day since September 1947, and the
 instrument you are watching on this ship. It is one argument, continued. The
 Arctic is not a place you visit and describe; it is a place you stay in and
 measure. The scientists reading this tab are the current chapter of that, and

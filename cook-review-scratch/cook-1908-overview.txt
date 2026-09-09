@@ -1,0 +1,47 @@
+# Cook's fourteen months, 1908-1909
+[page · cook-1908-axel-heiberg · draft]
+
+In February 1908 three men walked away from a hut on the Greenland shore of Smith Sound. Fourteen months later they walked back, on foot, with a sledge they had rebuilt out of the wreck of the old one. Everyone had given them up. Their families had mourned them.
+
+What [[person:Frederick Cook]] claimed to have done in between — reaching the North Pole on 21 April 1908 — has been argued about for more than a century, and it is argued about elsewhere: see [[page:the-pole-controversy-in-one-page]] in [[topic:sverdrup-bernier-peary]]. This page is about the rest of the journey, the part nobody disputes, which happens to run straight through the islands the *Amundsen* works among.
+
+## The route
+
+Cook wintered in 1907-08 at [[place:Anoritooq|Annoatok]], a few miles north of [[place:Etah]] in Avanersuaq, in a box-house built from the packing cases of the yacht [[person:John R. Bradley]] had brought him north in ([[artifact:cook-1908-axel-heiberg-031|the house is in one of his plates]]). His companion was the German sailor [[person:Rudolph Franke]]. Everything else — the sledges, the fur clothing, the dogs, the dried meat, the knowledge — came from the Inughuit, who are the subject of [[page:inughuit-and-the-explorers]].
+
+An advance party of eight sledges under [[person:Es-se-you]], [[person:Kud-la]] and [[person:Me-tek]] left on 5 February 1908 to lay meat at the head of [[place:Flagler Bay]]. Cook followed on 19 February with eleven sledges, 103 dogs, Franke and nine Inughuit men. They crossed [[place:Smith Sound]], passed [[place:Cape Sabine]] and [[place:Cape Rutherford]], and on 25 February turned west into an unnamed valley at the head of Flagler Bay.
+
+That valley is now [[place:Sverdrup Pass]], and crossing it — from Atlantic water to Pacific water in a few days, through a place thick with musk ox — is the first solid thing this journey did. The route is the track [[artifact:cook-1908-axel-heiberg-001|Annoatok to Cape Stallworthy]]. It came down to [[place:Bay Fiord]], out into [[place:Eureka Sound]] on 2 March in a temperature of eighty-three below, north through [[place:Nansen Sound]], and on 18 March 1908 reached [[place:Cape Stallworthy]] — Sverdrup's Svartevoeg, the black wall — at the north end of [[place:Axel Heiberg Island]].
+
+There the supporting party turned back. [[person:Koolootingwah]] and [[person:In-u-gi-to]] went sixteen miles further over the shore pack before Cook sent them home too. The two who stayed were [[person:Ahwelah]] and [[person:Etukishook]], both about twenty years old. [[artifact:cook-1908-axel-heiberg-039|The camp under the black wall]] and [[artifact:cook-1908-axel-heiberg-040|the sledges turning back]] are the last photographs of the journey that anybody else witnessed. Everyone who did the work is named in [[page:cook-the-inughuit-of-annoatok]].
+
+The line on the map stops at Cape Stallworthy. What happened north of it is a claim, and a claim is not a route.
+
+## Back
+
+They came back onto known ground in mid-June 1908, far west of where they had gone out, in [[place:Hassel Sound]] between the Ringnes islands — see [[artifact:cook-1908-axel-heiberg-002|the return track]]. Starving, they were woken one morning by a snow bunting singing on the tent pole: [[artifact:cook-1908-axel-heiberg-013|the first sound of life heard for many months]].
+
+From there it went wrong slowly. They made for Lancaster Sound and a Scottish whaler, crossed to [[place:Grinnell Peninsula]] on [[place:Devon Island]], hauled over the highlands on 4 July, and at [[place:Eidsbotn]] on 7 July let the last dogs go, because a twelve-foot canvas boat cannot carry dogs. They were driven through [[place:Hell Gate]] and [[place:Cardigan Strait]] on a berg, landed at [[place:Cape Vera]], and worked east along the Devon coast until the ice caught them past [[place:Belcher Point]] on 7 August, the night the sun first set.
+
+By early September they had given up Baffin Bay and turned west to [[place:Cape Sparbo]], with four cartridges left. The whole of that leg is [[page:cook-back-to-land-hell-gate-jones-sound]], and the winter that followed is [[page:cook-the-winter-at-cape-sparbo]].
+
+On 18 February 1909 they started for Greenland with no dogs, three men in the traces — [[artifact:cook-1908-axel-heiberg-003|the last track]]. They reached [[place:Anoritooq|Annoatok]] in April, so thin that Cook broke his teeth on boiled walrus hide on the way, and were met by [[person:Harry Whitney]].
+
+## Why it is here
+
+Three reasons a scientist aboard might care.
+
+The first is that this is a good early description of ground the ship's people work on: the ice regime of Hell Gate and Cardigan Strait, the musk-ox range of Sverdrup Pass and Bay Fiord, the fulmar cliffs of Cape Vera, the polynya water that never froze.
+
+The second is [[place:Cape Sparbo]] itself, where Cook wintered in somebody else's house. He described a line of house ruins partly below the waterline and dug a human skull out of the floor of the one he rebuilt. That is an archaeological site: it was surveyed by Gordon Lowther in 1960 and excavated for the National Museum of Canada in 1961, and pre-Dorset, Dorset and Thule material came out of it. See [[page:cook-cape-sparbo-the-old-village]].
+
+The third is the two young men. [[person:Ahwelah]] and [[person:Etukishook]] were the only witnesses to whatever did or did not happen on the polar sea, they were cross-examined about it by people whose interests were not theirs, and they are on the map: [[place:Eetookashoo Bay]] at the north end of Axel Heiberg, and the [[place:Stewart Islands]], which Cook named for them and which somebody later renamed for a minister who never saw them.
+
+## The photographs
+
+Cook took a camera and used it, and the plates in [[source:cook1911attainment]] are the only pictures of any of this. Twenty of them are registered here as artifacts with positions, from [[artifact:cook-1908-axel-heiberg-031|the box-house at Annoatok]] and [[artifact:cook-1908-axel-heiberg-036|the musk-ox flats of Eureka Sound]] to [[artifact:cook-1908-axel-heiberg-047|the canvas boat off Cape Sparbo]] and [[artifact:cook-1908-axel-heiberg-048|the den itself]]. [[artifact:cook-1908-axel-heiberg-041|Cook's own map]] is here too, with the warning that its land is checkable and its sea ice is not.
+
+## The rest of this topic
+
+The crossing out is [[page:cook-over-ellesmere-to-axel-heiberg]]. The way back is [[page:cook-back-to-land-hell-gate-jones-sound]]. The winter is [[page:cook-the-winter-at-cape-sparbo]] and the ground it happened on is [[page:cook-cape-sparbo-the-old-village]]. The people are [[page:cook-the-inughuit-of-annoatok]]. What the whole thing settles and does not settle is [[page:cook-what-the-journey-proved]].
+

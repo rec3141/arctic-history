@@ -390,7 +390,7 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
         for r in c.execute(q + f" ORDER BY {H.date_order('date')}, role DESC", tuple(args)):
             mark = {"point": " ", "start": "[", "end": "]"}[r["role"]]
             qual = f"{r['qualifier']} " if r["qualifier"] else ""
-            print(f"{mark} {qual}{r['date']:<12s} {r['precision']:<7s} {r['entity_kind']:<8s} "
+            print(f"{mark} {qual}{H.date_display(r['date']):<12s} {r['precision']:<7s} {r['entity_kind']:<8s} "
                   f"{r['entity_id']:<20s} {r['label']}")
     elif a.cmd == "page":
         body = _read(a.body, a.file)

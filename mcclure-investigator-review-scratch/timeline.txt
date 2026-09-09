@@ -1,0 +1,278 @@
+[ 1850-01-20   day     event    916                  The voyage of HMS Investigator
+[ 1850-01-20   day     event    1066                 The voyage of HMS Enterprise
+[ 1850-01-20   day     artifact mcclure-investigator-023 HMS Investigator, Plymouth to the Bay of Mercy, 1850-1853
+[ 1850-01-20   day     artifact mcclure-investigator-041 HMS Enterprise under Collinson, 1850-1855
+  1850-01-20   day     event    801                  Enterprise and Investigator sail from Plymouth for Bering Strait
+  1850-07-31   day     event    822                  Investigator parts company with HMS Herald off Cape Lisburne
+  1850-08-05   day     event    802                  Investigator rounds Point Barrow into the Arctic Ocean
+  1850-08-08   day     artifact mcclure-investigator-024 In a few minutes we were rubbing noses
+  1850-08-08   day     event    1098                 The Kogarmiut come aboard off Point Drew and describe the trade to the Russian posts
+  1850-08-11   day     event    1099                 Attua, at the mouth of the Colville, takes McClure's letter for the Russian traders
+  1850-08-11   day     artifact mcclure-investigator-049 Der Haeuptling hiess Attua
+  1850-08-24   day     event    1123                 A tense meeting with Kairoluak's people near Point Warren
+  1850-08-25   day     event    1100                 The party walks to the point where strangers were said to have starved, and finds ordinary Inuit house ruins
+  1850-08-30   day     event    1101                 Kunatsiak and Kenalik, alone on the beach, show trade goods from an earlier European visit
+  1850-08-31   day     artifact mcclure-investigator-050 Das Haus der Sonne
+  1850-08-31   day     artifact mcclure-investigator-053 Takka unna! Nimm diese!
+  1850-08-31   day     event    1102                 The camp at Nuvuak (Cape Bathurst): a line drawn in the snow, and Kenalualik's account of the sun's house
+  1850-09      month   artifact mcclure-investigator-002 Bold headland on Baring Island
+  1850-09-01   day     event    1103                 A man at Cape Bathurst describes Richardson's boat party in exact detail, two years after it passed
+  1850-09-06   day     artifact mcclure-investigator-001 First discovery of land by H.M.S. Investigator, 6 September 1850
+  1850-09-06   day     event    824                  New land sighted to the north: Baring Island
+  1850-09-07   day     event    825                  McClure lands and names Baring Island and Nelson Head
+  1850-09-17   day     event    826                  The Investigator reaches her furthest north in Prince of Wales Strait, 73 deg 10 min N
+  1850-09-27   day     event    827                  The ship is nearly crushed against the cliffs of Princess Royal Island
+[ 1850-09-30   day     event    917                  First wintering, beset in Prince of Wales Strait
+  1850-09-30   day     event    828                  Beset for the first winter in Prince of Wales Strait
+  1850-10-08   day     artifact mcclure-investigator-003 H.M.S. Investigator in the pack, 8 October 1850
+  1850-10-21   day     event    829                  McClure's sledge party leaves the ship to look for Barrow Strait
+  1850-10-26   day     event    830                  From Mount Observation the passage is seen: Melville Island across the sound
+  1850-10-26   day     artifact mcclure-investigator-015 The North-west Passage was discovered!
+  1851         year    artifact mcclure-investigator-046 The perilous situation of H.M.S. Investigator while wintering in the pack, 1850-51
+  1851-02-15   day     event    1054                 Lieutenant John Barnard of the Enterprise is killed at Nulato
+  1851-04-18   day     event    831                  Three sledge parties leave the beset ship: Haswell, Cresswell, Wynniatt
+  1851-05-20   day     event    832                  Cresswell returns having traced 170 miles of coast and shown Banks Land to be an island
+  1851-06-03   day     artifact mcclure-investigator-051 Sivoravogut! Erksidlarpogut!
+  1851-06-03   day     artifact mcclure-investigator-052 Ihre Harpunen, Messer, Beile, Pfeilspitzen sind alle von Kupfer
+  1851-06-03   day     event    1104                 The Copper Inuit camp on Prince Albert Land draws McClure a chart of the coast
+  1851-07-14   day     event    834                  The ice breaks up and the Investigator is free after nearly ten months
+] 1851-07-14   day     event    917                  First wintering, beset in Prince of Wales Strait
+  1851-07-23   day     event    1055                 Inupiat near Point Barrow give Collinson the place names and draw him a chart of the coast
+  1851-08-16   day     event    835                  Turned back twenty-five miles from Barrow Strait, McClure decides to go round Banks Land instead
+  1851-08-20   day     artifact mcclure-investigator-004 Critical position of H.M.S. Investigator on the north coast of Baring Island, 20 August 1851
+  1851-08-20   day     event    804                  The critical position on the north-west coast of Banks Land
+  1851-08-29   day     event    1056                 Collinson finds McClure's notice on the Princess Royal Islands, a year late
+  1851-09-01   day     event    836                  Ballast Beach named on the north coast of Banks Land
+  1851-09-10   day     artifact mcclure-investigator-016 Thus we launch into this formidable frozen sea
+[ 1851-09-15   day     event    1067                 Enterprise wintering at Walker Bay
+  1851-09-15   day     event    1057                 Enterprise goes into winter quarters at Walker Bay
+  1851-09-23   day     artifact mcclure-investigator-045 H.M.S. Investigator running through a narrow channel in a snow storm, 23 September 1851
+[ 1851-09-24   day     event    918                  Second wintering in the Bay of Mercy
+  1851-09-24   day     event    837                  The Investigator takes shelter in the bay McClure names the Bay of Mercy
+  late 1851-10      month   event    1058                 Ip-pee-ra and his family come aboard the Enterprise at Walker Bay
+  1851-10      month   artifact mcclure-investigator-042 His name was Ip-pee-ra
+  1851-10-01   day     event    997                  The crew put on two-thirds allowance in the Bay of Mercy
+  1851-10-01   day     artifact mcclure-investigator-025 One pound of animal food daily is not sufficient
+  1852-02-09   day     event    998                  Sergeant Woon drags Charles Anderson back to the ship alive
+[ 1852-04-11   day     event    1120                 McClure's sledge journey from Mercy Bay to Winter Harbour
+[ 1852-04-11   day     artifact mcclure-investigator-054 McClure's sledge journey to Parry's Rock, April 1852
+  1852-04-11   day     event    1116                 McClure leaves Mercy Bay by sledge for Melville Island with six men
+  1852-04-12   day     event    1117                 McClure dates his record of proceedings, the paper that saved his crew
+  1852-04-28   day     event    861                  McClure reaches Parry's Rock at Winter Harbour and leaves his record
+] 1852-04-28   day     event    1120                 McClure's sledge journey from Mercy Bay to Winter Harbour
+] 1852-04-28   day     artifact mcclure-investigator-054 McClure's sledge journey to Parry's Rock, April 1852
+  1852-05      month   event    1118                 Lieutenant Parks of the Enterprise reaches Melville Island and crosses McClure's sledge trail without knowing it
+[ 1852-05-15   day     event    920                  Scurvy aboard the Investigator
+  1852-07-01   day     event    862                  The surgeon reports incipient scurvy in sixteen men
+] 1852-08-05   day     event    1067                 Enterprise wintering at Walker Bay
+[ 1852-08-24   day     event    919                  Third wintering in the Bay of Mercy
+  1852-08-24   day     event    863                  The lead of water closes and a third winter in Mercy Bay becomes certain
+] 1852-08-24   day     event    918                  Second wintering in the Bay of Mercy
+  1852-09-06   day     event    999                  Rations cut again: eight ounces of meat, ten of flour, lime juice halved
+  1852-09-07   day     artifact mcclure-investigator-057 Cutting through six miles of solid floe was too absurd
+  1852-09-07   day     event    1121                 Kellett looks at six miles of fast ice and gives up Winter Harbour
+  1852-09-08   day     event    1000                 McClure proposes to send half the crew away on foot in the spring; Armstrong objects in writing
+  1852-09-08   day     artifact mcclure-investigator-026 Utterly unfit for the performance of the service
+  1852-09-08   day     artifact mcclure-investigator-058 The whole sea was covered with a thick sludge
+[ 1852-09-10   day     event    921                  Resolute and Intrepid in winter quarters at Dealy Island
+  1852-09-10   day     event    864                  Resolute and Intrepid haul into winter quarters at Dealy Island
+[ 1852-10      month   event    1092                 Enterprise wintering at Cambridge Bay
+  1852-10-03   day     event    1059                 Enterprise settles for the winter at Cambridge Bay (Iqaluktuuttiaq)
+  1852-10-04   day     event    1001                 The ship's company come aft in a body to ask for more food, and are refused
+  1852-10-12   day     event    865                  Mecham finds McClure's record on the sandstone boulder at Winter Harbour
+  1852-10-12   day     artifact mcclure-investigator-017 Mecham finds M'Clure's record at Parry's Rock
+  1852-10-12   day     artifact mcclure-investigator-054 the record it carried was found by Mecham
+  1853         year    artifact mcclure-investigator-070 Day-by-day tables from the 1853 sledge journals, and a gazetteer of the names they use
+  1853         year    artifact mcclure-investigator-060 New coastline charted by Kellett's division in 1853
+  1853-01-06   day     event    1002                 The coldest day of the expedition: mean minus 61.6 F over 24 hours
+[ 1853-03-10   day     event    923                  Pim's sledge journey from Dealy Island to Mercy Bay and back
+[ 1853-03-10   day     artifact mcclure-investigator-006 Pim's sledge journey from HMS Resolute to the Investigator, March-April 1853
+  1853-03-10   day     event    866                  Pim and Domville leave the Resolute for Banks Land
+  1853-03-25   day     artifact mcclure-investigator-061 The floe, if floe it can be called
+  1853-04      month   artifact mcclure-investigator-063 The load amounted to 184 lbs. a man
+[ 1853-04-04   day     event    924                  McClintock's sledge journey to Prince Patrick Island
+[ 1853-04-04   day     event    925                  Mecham's sledge journey round Eglinton and Prince Patrick Islands
+[ 1853-04-04   day     artifact mcclure-investigator-066 The 1853 sledge journals from Dealy Island, as printed for Parliament
+[ 1853-04-04   day     artifact mcclure-investigator-009 McClintock's sledge journey to Prince Patrick Island, April-July 1853
+[ 1853-04-04   day     artifact mcclure-investigator-010 Mecham's sledge journey round Eglinton and Prince Patrick Islands, April-July 1853
+  1853-04-04   day     event    1124                 The sledge divisions leave Dealy Island under a flag on the summit
+  1853-04-05   day     event    867                  John Boyle, able seaman, dies in the Bay of Mercy: the first death
+  1853-04-05   day     artifact mcclure-investigator-027 Death for the first time made its appearance amongst us
+  1853-04-06   day     event    868                  Bedford Pim walks into the Bay of Mercy
+  1853-04-06   day     artifact mcclure-investigator-018 In the name of God, who are you?
+  1853-04-06   day     artifact mcclure-investigator-019 The carpenters dropped their tools
+  1853-04-06   day     event    1131                 Pim comes within a hundred yards of the Investigator before anyone sees him
+  1853-04-06   day     artifact mcclure-investigator-062 Arrived within 100 yards without being observed
+  1853-04-06   day     artifact mcclure-investigator-065 A miserable pittance for hearty men in these bleak regions
+[ 1853-04-08   day     artifact mcclure-investigator-007 McClure crosses to HMS Resolute and back, April-May 1853
+  1853-04-11   day     event    869                  John Ames, able seaman, dies in the Bay of Mercy
+  1853-04-11   day     event    1125                 Kellett comes back from a week with the sledges, having never seen work like it
+  1853-04-11   day     artifact mcclure-investigator-059 Kellett on what Arctic travelling actually is
+  1853-04-13   day     event    870                  John Kerr, gunner's mate, dies in the Bay of Mercy
+  1853-04-15   day     artifact mcclure-investigator-005 Sledge party leaving H.M.S. Investigator in Mercy Bay, 15 April 1853
+  1853-04-15   day     event    871                  Cresswell leads the invalids away from the ship across the ice
+  1853-04-19   day     event    872                  McClure reaches the Resolute and argues for keeping his ship
+] 1853-04-19   day     event    923                  Pim's sledge journey from Dealy Island to Mercy Bay and back
+] 1853-04-19   day     artifact mcclure-investigator-006 Pim's sledge journey from HMS Resolute to the Investigator, March-April 1853
+[ 1853-04-27   day     event    926                  Hamilton's sledge journey to the rendezvous with Belcher's division
+[ 1853-04-27   day     artifact mcclure-investigator-011 Hamilton's sledge journey to the rendezvous with Belcher's division, 1853
+  1853-05-06   day     event    1133                 McClintock names Purchase Bay for the Intrepid's senior engineer
+  1853-05-08   day     event    1060                 Collinson's sledge party finds John Rae's record of 1851 on the Victoria Island shore
+  1853-05-10   day     event    1061                 Turned back in Victoria Strait, a short way from where Franklin's men died
+  1853-05-16   day     event    1134                 Hamilton names Point Roche after his depot-laying assistant
+  1853-05-18   day     event    1130                 Hamilton and Richards meet by accident in the fog, north-east of Melville Island
+] 1853-05-21   day     artifact mcclure-investigator-007 McClure crosses to HMS Resolute and back, April-May 1853
+  1853-05-22   day     event    1026                 Kellett's letter is read to the crew and four men volunteer to stay with the ship
+  1853-05-23   day     event    873                  The medical survey finds only four men fit for another winter
+  1853-05-23   day     artifact mcclure-investigator-020 Report of Survey of the crew of the Investigator
+  1853-05-27   day     artifact mcclure-investigator-064 The pack here is much heavier than any yet seen
+  1853-05-27   day     event    1135                 Mecham reaches the heavy old pack on the Beaufort side of Prince Patrick Island
+  1853-05-29   day     event    1127                 Mecham reaches his furthest on Prince Patrick Island
+  1853-06      month   artifact mcclure-investigator-028 The labour of dragging a sledge over rough ice
+[ 1853-06-01   day     artifact mcclure-investigator-030 McClure's despatches to the Admiralty from the Bay of Mercy and Dealy Island, 1853-54
+  1853-06-01   day     artifact mcclure-investigator-031 The sick, forgetful of their maladies, leaped from their hammocks
+[ 1853-06-03   day     artifact mcclure-investigator-008 The Investigator's crew walk from Mercy Bay to the Resolute, June 1853
+  1853-06-03   day     event    874                  HMS Investigator is abandoned in the Bay of Mercy
+  1853-06-03   day     artifact mcclure-investigator-048 McClure's Cache and the graves on the shore of Mercy Bay
+] 1853-06-03   day     event    919                  Third wintering in the Bay of Mercy
+] 1853-06-03   day     event    920                  Scurvy aboard the Investigator
+] 1853-06-03   day     artifact mcclure-investigator-023 HMS Investigator, Plymouth to the Bay of Mercy, 1850-1853
+  1853-06-13   day     event    1132                 McClintock sights new land off the west side of Prince Patrick Island
+  1853-06-17   day     event    875                  The Investigator's people reach Kellett's ships at Dealy Island
+  1853-06-17   day     event    1128                 McClintock reaches Point McClintock, the north-east extreme of Prince Patrick Island
+] 1853-06-17   day     artifact mcclure-investigator-008 The Investigator's crew walk from Mercy Bay to the Resolute, June 1853
+] 1853-06-20   day     event    926                  Hamilton's sledge journey to the rendezvous with Belcher's division
+] 1853-06-20   day     artifact mcclure-investigator-011 Hamilton's sledge journey to the rendezvous with Belcher's division, 1853
+  1853-06-25   day     artifact mcclure-investigator-032 She was left with her colours flying
+  1853-06-25   day     artifact mcclure-investigator-033 Nineteen months on two-thirds rations
+  circa 1853-07-06   day     event    1062                 A worked piece of fir with a Queen's-mark hasp picked up at the Finlayson Islands
+  1853-07-06   day     artifact mcclure-investigator-043 Almost the only article we have met with
+] 1853-07-06   day     event    925                  Mecham's sledge journey round Eglinton and Prince Patrick Islands
+] 1853-07-06   day     artifact mcclure-investigator-010 Mecham's sledge journey round Eglinton and Prince Patrick Islands, April-July 1853
+  1853-07-18   day     event    1129                 McClintock comes in after 106 days, the longest man-hauled journey then made
+] 1853-07-18   day     event    924                  McClintock's sledge journey to Prince Patrick Island
+] 1853-07-18   day     artifact mcclure-investigator-066 The 1853 sledge journals from Dealy Island, as printed for Parliament
+] 1853-07-18   day     artifact mcclure-investigator-009 McClintock's sledge journey to Prince Patrick Island, April-July 1853
+] 1853-08      month   event    1092                 Enterprise wintering at Cambridge Bay
+  1853-08-17   day     event    876                  A gale blows the Resolute and Intrepid out of Dealy Island after eleven months
+] 1853-08-17   day     event    921                  Resolute and Intrepid in winter quarters at Dealy Island
+[ 1853-09      month   artifact mcclure-investigator-067 The Resolute's meteorological journals for the drift winter of 1853-54
+[ 1853-09-10   day     event    922                  Resolute and Intrepid beset and drifting in Barrow Strait
+[ 1853-09-10   day     artifact mcclure-investigator-012 The Resolute and Intrepid beset and drifting off Cape Cockburn, 1853-54
+  1853-09-10   day     event    877                  The Resolute is beset for the last time off Point Griffiths
+  1853-09-10   day     artifact mcclure-investigator-067 Resolute beset near Point Griffiths
+[ 1853-09-26   day     event    1069                 Enterprise wintering at Camden Bay
+  1853-10-07   day     event    878                  Cresswell reaches the Admiralty with the news that the passage is found
+  1853-11-14   day     event    879                  Mate H. H. Sainsbury of the Investigator dies aboard the Resolute in the drifting pack
+  1854         year    source   cresswell1854series  published by Day and Son, London
+  1854-02-07   day     event    880                  Belcher orders Kellett to bring his crews to Beechey Island; Kellett refuses to move without unmistakable orders
+  1854-02-07   day     artifact mcclure-investigator-021 Kellett asks for final, decided, and most unmistakeable orders
+] 1854-04      month   artifact mcclure-investigator-067 The Resolute's meteorological journals for the drift winter of 1853-54
+  1854-04-10   day     event    881                  The Investigator's men start east from the Resolute for Beechey Island
+] 1854-04-27   day     artifact mcclure-investigator-030 McClure's despatches to the Admiralty from the Bay of Mercy and Dealy Island, 1853-54
+  1854-04-28   day     event    882                  McClintock brings Belcher's decided orders to abandon the ships
+[ 1854-05-15   day     event    927                  The march from the abandoned ships to Beechey Island
+[ 1854-05-15   day     event    928                  The Resolute's unmanned drift from Barrow Strait to Davis Strait
+[ 1854-05-15   day     artifact mcclure-investigator-013 The Resolute's people march to Beechey Island, 15-28 May 1854
+[ 1854-05-15   day     artifact mcclure-investigator-014 The Resolute's drift, 1854-1855, and her voyage to New London
+  1854-05-15   day     event    883                  Resolute and Intrepid are abandoned in the pack in Barrow Strait
+  1854-05-15   day     artifact mcclure-investigator-022 Three cheers for the Resolute and Intrepid, and no response
+] 1854-05-15   day     event    922                  Resolute and Intrepid beset and drifting in Barrow Strait
+] 1854-05-15   day     artifact mcclure-investigator-012 The Resolute and Intrepid beset and drifting off Cape Cockburn, 1853-54
+  1854-05-22   day     event    884                  Thomas Morgan, late of the Investigator, dies aboard the North Star
+  1854-05-28   day     event    885                  Kellett's last sledges reach the North Star at Beechey Island
+] 1854-05-28   day     event    927                  The march from the abandoned ships to Beechey Island
+] 1854-05-28   day     artifact mcclure-investigator-013 The Resolute's people march to Beechey Island, 15-28 May 1854
+  1854-07-02   day     event    1063                 A boy at Camden Bay wears buttons engraved with the movements of the search squadrons
+] 1854-07-20   day     event    1069                 Enterprise wintering at Camden Bay
+  1854-08-26   day     event    886                  Phoenix and Talbot arrive off Cape Riley and the squadron sails for home
+  1854-08-28   day     event    1064                 Enterprise meets HMS Plover off Point Barrow: first mail in three years and a month
+  1854-10-06   day     event    1003                 The Investigator's people land at Ramsgate after four years and ten months
+  1854-10-06   day     artifact mcclure-investigator-029 We landed off Ramsgate on the 6th of October, 1854
+] 1854-10-06   day     event    916                  The voyage of HMS Investigator
+  1854-10-18   day     event    887                  Court martial aboard HMS Waterloo at Sheerness for the loss of the ships
+  1855         year    artifact mcclure-investigator-037 Miertsching's Reise-Tagebuch, 1855 (German full text)
+  1855         year    artifact mcclure-investigator-038 Miertsching's Reise-Tagebuch, 1855 (page scan)
+  1855         year    source   miertsching1855reise published at Gnadau
+  1855         year    artifact mcclure-investigator-118 Title page of Miertsching's Reise-Tagebuch, Gnadau 1855
+  1855         year    artifact mcclure-investigator-119 Chart of Greenland, Davis Strait, Cumberland, Frobisher Strait, Hudson Strait and Labrador
+  1855-01      month   artifact mcclure-investigator-039 Further Papers relative to the Recent Arctic Expeditions, January 1855 (full text)
+  1855-01      month   artifact mcclure-investigator-040 Further Papers relative to the Recent Arctic Expeditions, January 1855 (page scan)
+  1855-01      month   artifact mcclure-investigator-030 printed in the Parliamentary blue book
+  1855-05-05   day     event    1065                 Collinson gets a sight of Old England
+  1855-05-05   day     artifact mcclure-investigator-044 It was not until the 5th of May that we got a sight of Old England
+] 1855-05-05   day     event    1066                 The voyage of HMS Enterprise
+] 1855-05-05   day     artifact mcclure-investigator-041 HMS Enterprise under Collinson, 1850-1855
+  1855-07      month   event    980                  Parliament votes 10,000 pounds for the discovery of the North-West Passage
+  1855-09-10   day     event    888                  The Resolute is found adrift in Davis Strait by the whaler George Henry
+] 1855-09-10   day     event    928                  The Resolute's unmanned drift from Barrow Strait to Davis Strait
+  1855-12-24   day     event    889                  Buddington brings the Resolute into New London on Christmas Eve
+] 1855-12-24   day     artifact mcclure-investigator-014 The Resolute's drift, 1854-1855, and her voyage to New London
+  1856         year    artifact mcclure-investigator-034 Osborn's edition of McClure's journals, 1856 (full text)
+  1856         year    source   osborn1856discovery  published by Longman
+  1856-06-24   day     event    890                  Congress votes 40,000 dollars to buy the Resolute and give her back to Britain
+  1856-12-12   day     event    891                  The Resolute is sailed back into Portsmouth and presented to Queen Victoria
+  1857         year    artifact mcclure-investigator-035 Armstrong's Personal Narrative, 1857 (full text)
+  1857         year    artifact mcclure-investigator-055 Robert McClure
+  1857         year    artifact mcclure-investigator-068 M'Dougall's Eventful Voyage of the Resolute, 1857 (full text)
+  1857         year    artifact mcclure-investigator-069 M'Dougall's Eventful Voyage of the Resolute, 1857 (page scan)
+  1857         year    artifact mcclure-investigator-071 Plate 1: Situation of H.M.S. Resolute, Baffin's Bay, 26 June 1852
+  1857         year    artifact mcclure-investigator-072 Plate 2: Resolute and Intrepid passing a large iceberg, Baffin's Bay, July 1852
+  1857         year    artifact mcclure-investigator-073 Plate 3: Loss of the American whaler M'Lellan, 8 July 1852
+  1857         year    artifact mcclure-investigator-074 Plate 4: Resolute and Intrepid in winter quarters, Melville Island, 1852-53
+  1857         year    artifact mcclure-investigator-075 Plate 5: Departure of the travelling parties from Resolute and Intrepid, 4 April 1853
+  1857         year    artifact mcclure-investigator-076 Plate 6: Resolute under sail for the last time, 10 September 1853
+  1857         year    artifact mcclure-investigator-077 Plate 7: Abandonment of the Resolute and Intrepid, 15 May 1854
+  1857         year    artifact mcclure-investigator-078 The Arctic squadron
+  1857         year    artifact mcclure-investigator-079 H.M.S. Resolute lying-to in the North Atlantic
+  1857         year    artifact mcclure-investigator-080 Ice instruments
+  1857         year    artifact mcclure-investigator-081 Natives, Whale-fish Islands
+  1857         year    artifact mcclure-investigator-082 Esquimaux canoe (kayak)
+  1857         year    artifact mcclure-investigator-083 The Pioneer's accident and the Resolute's predicament
+  1857         year    artifact mcclure-investigator-084 Amusements on the ice
+  1857         year    artifact mcclure-investigator-085 Diagram of the Resolute's nip
+  1857         year    artifact mcclure-investigator-086 Apparatus for sawing ice
+  1857         year    artifact mcclure-investigator-087 Diagram of an ice-dock
+  1857         year    artifact mcclure-investigator-088 Mirage, Baffin's Bay
+  1857         year    artifact mcclure-investigator-089 Esquimaux, Cape York
+  1857         year    artifact mcclure-investigator-090 Balloon
+  1857         year    artifact mcclure-investigator-091 Pursuit of science under difficulties
+  1857         year    artifact mcclure-investigator-092 Winter costumes
+  1857         year    artifact mcclure-investigator-093 Pursuit of a bear
+  1857         year    artifact mcclure-investigator-094 Remarkable snow cliff, Bridport Inlet, Melville Island
+  1857         year    artifact mcclure-investigator-095 H.M. sledge Erin
+  1857         year    artifact mcclure-investigator-096 Cooking under difficulties
+  1857         year    artifact mcclure-investigator-097 Graves on Dealy Island
+  1857         year    artifact mcclure-investigator-098 Interior of a tent
+  1857         year    artifact mcclure-investigator-099 Packing the sledge preparatory to marching
+  1857         year    artifact mcclure-investigator-100 Arctic travelling in the month of June
+  1857         year    artifact mcclure-investigator-101 H.M. sledges, flags and mottoes
+  1857         year    artifact mcclure-investigator-102 Description of the travelling parties, spring 1853
+  1857         year    artifact mcclure-investigator-103 Table of positions for the track of H.M.S. Resolute, 1852
+  1857         year    artifact mcclure-investigator-104 Table of positions for the track of H.M.S. North Star, Beechey Island to England, 1854
+  1857         year    artifact mcclure-investigator-105 Tables of temperature
+  1857         year    artifact mcclure-investigator-106 M'Clintock's experiments with travelling kettles and lamps, and the scheme of fuel for a party of eleven
+  1857         year    artifact mcclure-investigator-107 Equipment for a travelling party of eight (one officer and seven men)
+  1857         year    artifact mcclure-investigator-108 List of clothing taken by a party proceeding on a long journey
+  1857         year    artifact mcclure-investigator-109 Tent for eight men, and dimensions of a tent for eleven men
+  1857         year    artifact mcclure-investigator-110 Dealy Island, summer 1853: tides, thickness of ice, and the close of the navigable season
+  1857         year    artifact mcclure-investigator-111 Land discovered and searched from 1848 to 1854
+  1857         year    artifact mcclure-investigator-112 Abstracted list of game procured during various voyages in the Arctic regions
+  1857         year    artifact mcclure-investigator-113 Meteorological abstracts
+  1857         year    artifact mcclure-investigator-114 Compendium of the travelling operations of spring 1853
+  1857         year    artifact mcclure-investigator-115 Abstract of travelling operations, autumn 1852 and spring 1853
+  1857         year    artifact mcclure-investigator-116 Game list and meat account
+  1857         year    artifact mcclure-investigator-117 Animals
+  1879         year    event    892                  The Resolute is broken up
+  1879         year    artifact mcclure-investigator-056 HMS Resolute broken up
+  1880         year    event    893                  A desk made of the Resolute's timbers is given to President Hayes
+  1880         year    artifact mcclure-investigator-056 The Resolute desk
+  1889         year    artifact mcclure-investigator-036 Collinson's Journal of HMS Enterprise, 1889 (full text)
+  1889         year    source   collinson1889journal published posthumously by T. B. Collinson
+  2010-07      month   event    894                  Parks Canada finds the wreck of HMS Investigator in Mercy Bay
+  2010-07      month   artifact mcclure-investigator-047 The wreck of HMS Investigator, Mercy Bay
+  2010-07      month   artifact mcclure-investigator-048 the three graves relocated by Parks Canada's land team
+  2011         year    event    895                  Underwater archaeologists dive and survey the Investigator
+  2011         year    artifact mcclure-investigator-047 dived and surveyed by Parks Canada archaeologists
+  2026-05      month   event    896                  Parks Canada returns to the wreck through the sea ice for a condition assessment
+  2026-05      month   artifact mcclure-investigator-047 ROV condition assessment through the sea ice

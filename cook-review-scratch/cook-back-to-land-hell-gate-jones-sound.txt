@@ -1,0 +1,47 @@
+# Back to land: Hassel Sound, Hell Gate and Jones Sound, 1908
+[page · cook-1908-axel-heiberg · draft]
+
+The outward journey is a straight line drawn by men with dogs and food. The return is the opposite: three men, on foot and then in a boat, going wherever the ice let them, for eleven months. It is also the part of the record that can be checked, because it runs along coasts other people have charted, and it is [[artifact:cook-1908-axel-heiberg-002|the second of this topic's three tracks]].
+
+## Onto the wrong land
+
+Cook's account has the party carried west and south through May 1908 on the moving ice, missing [[place:Axel Heiberg Island]] altogether and coming down among the small islands west of it. [[artifact:cook-1908-axel-heiberg-043|Two plates from the drift]] are captioned "miles and miles of desolation" and "homeward bound".
+
+They were back on known ground on 14 June, in [[place:Hassel Sound]] between the Ringnes islands, about four hundred kilometres west of where they had gone out. What told them was a bird. [[artifact:cook-1908-axel-heiberg-013|A snow bunting sang on the tent]] — the first living voice they had heard in months — and [[artifact:cook-1908-axel-heiberg-044|Cook photographed the camp that morning]] and captioned it "back to land and to life, awakened by a winged harbinger".
+
+## The decision that cost them a year
+
+On about 19 June, west of Cornwall Island, Cook made the choice that decided everything after it. Annoatok lay east, up [[place:Eureka Sound]] and back over [[place:Sverdrup Pass]] — the way they had come, but with worn dogs and no food. [[place:Lancaster Sound]] lay south, and in Lancaster Sound in August there would be Scottish whalers. He turned south.
+
+It was not an unreasonable call, and it very nearly worked. It also took them straight into the part of the archipelago where the ice does what it likes.
+
+They crossed Penny Strait to [[place:Grinnell Peninsula]] at the end of June, climbed over the highlands of [[place:Devon Island]] in rain on 4 July, and were storm-bound two days. On 7 July, at [[place:Eidsbotn]] on the [[place:Norwegian Bay]] side, with no game and a twelve-foot folding canvas boat that could not carry animals, they [[artifact:cook-1908-axel-heiberg-014|set the last dogs free]]. From that day the three men were their own transport.
+
+## Through Hell Gate
+
+The boat went down the Grinnell Peninsula shore and into the narrows between Devon Island and Ellesmere. [[place:Hell Gate]] and [[place:Cardigan Strait]] are the two channels connecting Norwegian Bay to [[place:Jones Sound]], and they are among the fastest tidal water in the Arctic: the current runs hard enough to keep them open in winter and to make the North Water on the far side. Cook did not paddle through them. He was carried:
+
+[[artifact:cook-1908-axel-heiberg-015|"we were driven through Hell Gate on a berg"]]
+
+— a fortnight's progress in a day, on a piece of ice going where the tide sent it. They landed at [[place:Cape Vera]] on the Devon shore about 23 July and killed a hare.
+
+Anyone aboard who has watched the Hell Gate–Cardigan Strait polynya on a satellite image will recognise the mechanism. Cook is describing, in 1908, the flow that keeps that water open, from inside it.
+
+## Beset, and turned back
+
+They worked east along the north coast of Devon Island in the boat. At midnight on 7 August they passed [[place:Belcher Point]], and Cook noted that the sun set for the first time that season as they did — the practical fact behind the date being that the season was already over. Ten miles on they were beset in a nameless glacier bay and new ice formed around the boat.
+
+The floe they were on drifted back west. By the end of August they were level with Belcher Point again, going the wrong way, with the season gone. Baffin Bay and the whalers were finished. Cook turned west, looking for somewhere to spend a winter, and on about 5 September came to [[place:Cape Sparbo]] with a half sledge, a punctured boat, a torn silk tent and four cartridges.
+
+[[artifact:cook-1908-axel-heiberg-047|The plate of the canvas boat and of a walrus killed after a fifteen-hour fight]] belongs to this month. So does [[artifact:cook-1908-axel-heiberg-046|the photograph of Etukishook at a blow-hole]] with a harpoon, which is what hunting had become.
+
+What happened next is [[page:cook-the-winter-at-cape-sparbo]], and the ground they wintered on is [[page:cook-cape-sparbo-the-old-village]].
+
+## What this leg is worth
+
+Two things, for a ship working these waters.
+
+The first is a season of plain observation of ice and open water in Norwegian Bay, Hell Gate, Cardigan Strait and Jones Sound in the summer of 1908, by someone who had no reason to invent it and every reason to remember it exactly: dates of besetment, dates of new ice, the direction of the drift off Belcher Point, when the sun set. That is one more year in a very short instrumental record.
+
+The second is that this is the segment which makes the rest of the book checkable. The coasts named here are real coasts, the distances work, and the sequence of ice conditions is internally consistent — which is a point in Cook's favour that is quite independent of the Pole, and it is discussed in [[page:cook-what-the-journey-proved]]. The men who did the paddling and the hunting are in [[page:cook-the-inughuit-of-annoatok]].
+

@@ -1,0 +1,41 @@
+# The Inughuit of Annoatok and the men who went
+[page · cook-1908-axel-heiberg · draft]
+
+Fourteen men and one woman's name is the usual harvest from an expedition book of 1911. Cook's is better than that, and it is worth setting the names down, because the people who did most of this journey are the people the argument about it has always ignored.
+
+The whole apparatus came from [[place:Anoritooq|Annoatok]] and [[place:Etah]]: the sledges, the dogs, the fur clothing, the dried meat, and the knowledge of how to cross Smith Sound in February. The community that supplied it is the subject of [[page:inughuit-and-the-explorers]] in [[topic:greenland-inughuit]]; this page is about the individuals Cook names.
+
+## The nine who went out
+
+Cook left Annoatok on 19 February 1908 with eleven sledges, a hundred and three dogs, [[person:Rudolph Franke]] and nine Inughuit men. An advance party of eight sledges had gone on 5 February under [[person:Es-se-you]], [[person:Kud-la]] and [[person:Me-tek]], to lay meat at the head of [[place:Flagler Bay]] and to hunt musk ox along the way so that the teams could be fed off the land.
+
+[[person:Koolootingwah]] Cook calls the leading man. He carried the note to [[place:Cape Sabine]], and he and [[person:In-u-gi-to]] stayed with the party past [[place:Cape Stallworthy]], out about sixteen miles over the moving ice, before turning back on 18 March with empty sledges and hungry dogs. Cook's written instructions to Franke named Koolootingwah as the man to be left in charge of the stores at Annoatok if Franke had to go south after 5 June 1908. [[artifact:cook-1908-axel-heiberg-040|The plate of that morning]] shows the supporting party turning for home.
+
+The two who stayed were [[person:Ahwelah]] and [[person:Etukishook]], both about twenty. They were with Cook for the whole fourteen months and they are the only witnesses to the part of it that is disputed — which is argued in [[topic:sverdrup-bernier-peary]], not here. What is not disputed is that from June 1908 they kept three people alive with a bow, a lance made out of a sledge runner, and their own hunting, and that they walked home over the sea ice of Smith Sound in April 1909 hauling a sledge in place of dogs. [[artifact:cook-1908-axel-heiberg-046|Cook photographed Etukishook waiting at a seal's blow-hole]] with a harpoon, in the old way, because there was nothing left to shoot with.
+
+Two are on the map. The [[place:Stewart Islands]] off [[place:Cape Tennyson]] are the two islands Cook [[artifact:cook-1908-axel-heiberg-022|named for the two young men]] on 26 February 1909, and [[place:Eetookashoo Bay]] at the north end of [[place:Axel Heiberg Island]] carries Etukishook's name still.
+
+Others of the party appear once each: [[person:Ac-po-di-soa]], who made sledges and stopped without saying why; [[person:Ootah]], who ran out to head off a bear in the winter dark and was caught by the seat of his trousers and badly torn in the leg. (This is Cook's spelling, Oo-tah. Whether he is the same man as the Ootah who went north with Peary in April 1909 is not settled here; Peary's ship was at Annoatok in August 1908 and the two records could easily be of one person.)
+
+## The people who stayed
+
+Cook wintered among the Annoatok families in 1907-08 and wrote about them at length. [[artifact:cook-1908-axel-heiberg-033|The plate he captioned "the helpers"]] is a couple in their furs.
+
+[[person:Cla-you]], he says, was easily the best seamstress in the camp; when she lost interest in a set of hare-skin stockings [[person:E-ve-lue]] finished them. [[person:Ah-tah]] was taken to wife by [[person:Ik-wa]] because she was a good seamstress capable of much toil, and [[person:Ma-nee]], the wife he already had, was led to the door of the igloo and told to go. She told Cook the story with her two small boys beside her. Sewing skill decided a great deal in a country where a hole in a stocking at minus fifty is a lost foot.
+
+[[person:To-ti-o]] had the largest dog team, and Cook rode his sledge on a bear hunt in the November dark. [[person:My-ah]] took charge of the walrus hunting from [[person:John R. Bradley]]'s schooner in 1907 and ordered the line of attack across the wind. [[person:Tung-we]] was in the boat coming north in 1907 and was the one who saw the nine tents under Cape Inglefield and shouted that there was Annoatok.
+
+[[person:Ky-un-a]] went through the ice that winter and was hauled out unconscious and ice-sheeted, still gripping the line. His people cut the frozen clothes off him and wrapped him in furs, but he was dying, and on the fourth day he was carried forty miles in a litter so that he could die in his own house. [[person:Al-leek-ah]] and [[person:Ahwynet]] are two of the women Cook found mourning under the cliffs: Ahwynet's husband and all her children had gone into the sea in an avalanche.
+
+## The ones who were waiting
+
+The best passage in the book for this is not about geography at all. In the den at [[place:Cape Sparbo]] the three men fed five ravens through the winter, and the two young men sent them home with messages. Etukishook's was for [[person:An-na-do-a]] — go and take the tears from her eyes, tell her I am alive and will come to take her soon — and for his father [[person:Panikpah]], to say that he was in Ah-ming-ma-noona, the musk ox land. Ahwelah's was for [[person:Ser-wah]]: tell her not to marry that lazy gull [[person:Ta-tamh]], tell her that Ah-we-lah's skin is still flushed with thoughts of her, and that he will come back for her in the first moon after sunrise. The woman [[artifact:cook-1908-axel-heiberg-036|in the plate captioned "Ah-we-lah's prospective wife"]] is presumably Ser-wah.
+
+Panikpah answers, in a way, on the road home. At Cape Sabine in March 1909 the three starving men found a seal his father had cached a year earlier, and beside it a drawing, spotted with lamp soot, of a father searching for a son he did not expect to find.
+
+## Why the names matter
+
+Two of these people were interrogated, in a language they did not control, by men with a large financial and reputational stake in the answer, and their testimony was then reported in summary by their questioners. That is the evidentiary core of the whole Cook-Peary business, and it is a poor foundation. Whatever one concludes about the Pole, the record of 1908-09 in the Queen Elizabeth Islands is in large part an Inughuit record: their route-finding over [[place:Sverdrup Pass]], their hunting in [[place:Eureka Sound]], their boat-work through [[place:Hell Gate]], their winter craft at Cape Sparbo. The three men who came out of that den in February 1909 were kept alive by skills two of them had been taught at home.
+
+More on the outward crossing in [[page:cook-over-ellesmere-to-axel-heiberg]], the wintering in [[page:cook-the-winter-at-cape-sparbo]], and the ground itself in [[page:cook-cape-sparbo-the-old-village]].
+

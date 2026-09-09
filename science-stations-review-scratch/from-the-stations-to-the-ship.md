@@ -47,12 +47,12 @@ PCSP flies, feeds, fuels and communicates for field parties across the High Arct
 out of Resolute. If you have ever been put on an island by Twin Otter north of 74°,
 it was probably PCSP that put you there.
 
-The founding date is a small unresolved disagreement. PCSP's own chronology says
-**26 May 1958**, and that is what this topic records; the date usually quoted
-elsewhere is a cabinet directive of 5 April 1958, which comes from a 1981 paper by
-[[person:George Hobson]] in the *Journal of Canadian Petroleum Technology* that
-this project has not been able to obtain — 403 direct, 404 through the library
-proxy, 403 at OnePetro, and no University of Manitoba holding.
+The founding date is a small unresolved disagreement. PCSP's own chronology gives
+**26 May 1958**, and that is the date used here; the date often quoted elsewhere
+is a cabinet directive of 5 April 1958, which traces back to a 1981 paper by
+[[person:George Hobson]] in the *Journal of Canadian Petroleum Technology*. The
+two have not been reconciled, so both are recorded and the earlier one is left
+unconfirmed.
 
 ## The ice islands were the first drifting laboratories
 
@@ -77,7 +77,7 @@ sailed that autumn on a year-long inaugural expedition with
 [[person:Martin Fortier]] as chief scientist — the Canadian Arctic Shelf Exchange
 Study. [[source:brunette2021ccgs]] is the short institutional account.
 
-ArcticNet, formed at the end of 2003, has been her main user ever since. The
+ArcticNet has been her main user from the start. The
 Amundsen has since accumulated more than 2,200 research days at sea and about
 250,000 nautical miles — eleven and a half times round the Earth — carrying 116
 teams in 20 major programmes from 26 Canadian universities and 98 international
@@ -94,9 +94,9 @@ the Amundsen did not visit the Beaufort Sea; she overwintered in it, held in the
 flaw lead from the autumn of 2007 to the summer of 2008, measuring the same system
 continuously through the dark. That is Weyprecht's argument of 1875 — a fixed
 station reading the same instruments to the same schedule for a full year — carried
-out from a hull instead of a hut. Ninety per cent of what the Polar Year measured in
-the Canadian Arctic went through camps, stations and ships that this chain made
-possible.
+out from a hull instead of a hut. It was the largest contribution Canada had ever
+made to a polar year, and it was staged out of the airfields, fuel and forecasts
+this chain of stations had left behind.
 
 ## What the two halves give each other
 

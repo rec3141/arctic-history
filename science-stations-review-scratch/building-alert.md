@@ -67,10 +67,11 @@ cross on Ross Marvin's memorial cairn had fallen, and they stood it up again.
 On 24 June, walking east along the sea ice, Clifton and Johnson found a boulder
 near Ravine Bay with [[artifact:science-stations-024|HMS ALERT 1876]] chiselled
 into it — an inscription in no expedition record and in nothing written since.
-Markham's sledge party had camped near that spot in September and October 1875 - see [[page:nares-1875-the-alert-at-floeberg-beach]].
-More cairns turned up on Mount Pullen and above the Dumbbell Lakes, origins
-unknown. Johnson's judgement on the boulder is the honest one: in its long
-unobserved anonymity it serves as a fitting marker for what those men did.
+Markham's sledge party had camped near that spot in September and October 1875 —
+see [[page:nares-1875-the-alert-at-floeberg-beach]]. More cairns turned up on
+Mount Pullen and above the Dumbbell Lakes, origins unknown. Whoever cut the
+letters, Johnson wrote, the boulder "serves in its long, unobserved anonymity as
+a fitting marker for the accomplishments of those early explorers."
 
 ## The crash
 
@@ -81,10 +82,12 @@ Thule and loaded aboard an RCAF Lancaster there for ice reconnaissance. Shortly
 after noon on 31 July 1950 the Lancaster came in over the station to drop them;
 the parachute fouled the elevator and the aircraft dived into the ground about
 450 m west of the camp. There were no survivors.
-[[artifact:science-stations-008|Nine died]], among them Hubbard, who had chosen
-the site, and the Canadian ice observer Dr D.W. Kirk. The crash and the 1991
-Boxtop Hercules crash are told together in
-[[page:alerts-two-air-disasters]]; they are not retold here.
+[[artifact:science-stations-008|Nine died]]: Charles Hubbard of the US Weather
+Bureau, who had chosen every site in the network; the Canadian ice observer
+Dr D.W. Kirk; and the seven RCAF crew, W/C D.T. French DFC, F/L L.M. MacLean,
+F/L J.F.L. Swinton, F/O T.D. Martin, F/O J.F.L. Dube, F/O J.E. McCutcheon and
+LAC R.L. Sprance. The crash and the 1991 Boxtop Hercules crash are told together
+in [[page:alerts-two-air-disasters]]; the investigation is not retold here.
 
 What followed belongs to this page. The station kept its three-a-day weather
 observations without a break. The spark plugs were recovered from the charred
@@ -106,14 +109,17 @@ could never again be isolated. The first aircraft landed on it on 8 September.
 Rawinsonde ascents began on 11 September 1950 and the station was operational.
 On 18 October the first replacements flew in and five of the twelve went home.
 
-Alert's later life was not meteorological. An RCAF communications team arrived in
-1956; [[place:CFS Alert]] was established as a signals station on 1 September 1958
-and the population of specialists passed two hundred. But the weather record never
-stopped, and neither did what grew out of it: the greenhouse-gas and clean-air
-observatory on the ridge behind the station now holds the longest background
-atmospheric record in the Canadian Arctic. Johnson's own last word is that little
-of the place's original character survives — "the graves and airstrip are,
-however, a reminder of its origins."
+Alert's later life was not meteorological. Its position — closer to Moscow than to
+Ottawa, and closer to the Soviet mainland than to Iqaluit — gave it an obvious
+Cold War value. An RCAF communications team was assigned in 1956; on 1 September
+1958 the place began a second life as a signals-intelligence unit, the Alert
+Wireless Station, under the Canadian Army, and [[place:CFS Alert]] passed to the
+Royal Canadian Air Force on 1 April 2009. But the weather record never stopped,
+and neither did what grew out of it: the greenhouse-gas and clean-air observatory
+on the ridge behind the station now holds the longest background atmospheric
+record in the Canadian Arctic. Johnson's own last word is that little of the
+place's original character survives — "The graves and airstrip are, however, a
+reminder of its origins."
 
 See also [[page:the-five-stations]] for the other four, and
 [[page:the-eureka-record]] for what a station like this produces if nobody stops.

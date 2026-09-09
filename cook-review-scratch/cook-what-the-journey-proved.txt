@@ -1,0 +1,33 @@
+# What the journey proved, and what it did not
+[page · cook-1908-axel-heiberg · draft]
+
+The Cook-Peary quarrel is told in [[page:the-pole-controversy-in-one-page]]. This page is a narrower question: setting the Pole aside entirely, what does the 1908-09 journey actually establish?
+
+## What is solid
+
+**A route across Ellesmere Island.** [[place:Sverdrup Pass]] connects [[place:Flagler Bay]] on the Smith Sound side to [[place:Bay Fiord]] on the Eureka Sound side, and Cook's party went through it in late February and early March 1908, hunting musk ox on the way. The description matches the ground. The pass is now a standing research site.
+
+**A traverse of the western channels.** Cook, [[person:Ahwelah]] and [[person:Etukishook]] came south through [[place:Hassel Sound]], past Cornwall Island and [[place:Grinnell Peninsula]], crossed [[place:Devon Island]], and were carried through [[place:Hell Gate]] and [[place:Cardigan Strait]] into [[place:Jones Sound]] in a canvas boat. His account of the tide and ice in those channels — trains of ice going out "with railroad speed", the wind arriving "with the sound of exploding guns" — is a usable early description of a system the ship's oceanographers still work on.
+
+**A winter at [[place:Cape Sparbo]].** Three men without ammunition survived from September to February on musk ox taken with stones and rawhide loops, in a rebuilt Thule house. There is no dispute about this at all; it is simply one of the more extreme survivals in the region's record, and it is dated.
+
+**Two named islands and a named bay.** [[place:Eetookashoo Bay]] and the [[place:Stewart Islands]] both come out of this journey. The bay kept Etukishook's name. The islands did not: Cook named them for both young men and a later Canadian survey renamed them for a minister of the interior and his wife, neither of whom went north. Kenn Harper has argued in print that the Inuit names should be restored, and that argument is still open.
+
+## What is not solid
+
+**Everything north of [[place:Cape Stallworthy]] between 18 March and mid-June 1908.** The track artifacts in this topic stop at Cape Stallworthy and resume in Hassel Sound. That is not a gap in the sources; it is the layer refusing to draw a line it cannot support. Cook's claimed positions, his "Bradley Land" at the eighty-fourth parallel, and his observations at the Pole are his claim, printed in his own book, and are argued about elsewhere.
+
+**The proofs.** Cook left a box with [[person:Harry Whitney]] at Annoatok containing a sextant, a surveying compass, an artificial horizon, an aneroid, thermometers and a diary of field readings. Whitney was not allowed to carry it aboard Peary's *Roosevelt* and cached it in Greenland. It has never been recovered. Whatever it contained, it is the reason the question cannot be closed on the evidence.
+
+**What Ahwelah and Etukishook said.** The two young men were questioned about the journey by Peary's people at Annoatok in 1909 and by others afterwards, through interpreters, in a situation where the questioners wanted a particular answer and had the power to reward it. Accounts of what they said differ, sometimes flatly. Their own words survive only in other men's translations, and this is a case where the standard caution about interpreted testimony is not a formality.
+
+## The part that keeps getting left out
+
+Read the roll of this expedition and it is mostly Inughuit. The advance depot at Flagler Bay was laid by [[person:Es-se-you]], [[person:Kud-la]] and [[person:Me-tek]]. The sledges were built by men like [[person:Ac-po-di-soa]]; the clothing that made the journey possible was sewn by women like [[person:Cla-you]] and [[person:E-ve-lue]], one of whom stopped work to give birth alone in a snow-house. The blizzard technique that saved the party in the canyon was [[person:Koolootingwah]]'s. [[person:In-u-gi-to]] offered to go one more day on the sea ice with no food for his dogs, and then turned round and drove five hundred miles home on empty sledges. Two twenty-year-olds went the whole fourteen months.
+
+Cook's own word for them, throughout, is "savages" — usually with "faithful" in front of it. The word is left as he printed it in the quotations here, because softening it would hide what the book is. But the arithmetic of the journey is not in doubt: nearly everything that worked was Inughuit knowledge, and nearly all of the credit went to one American doctor and, in the counter-argument, to one American naval engineer. See [[page:inughuit-and-the-explorers]] and [[topic:greenland-inughuit]].
+
+## Why a ship's scientist might care
+
+Because the journey is a transect. It crosses Smith Sound, the interior of Ellesmere, Eureka and Nansen sounds, the Ringnes channels, Norwegian Bay, Devon Island, Hell Gate and Jones Sound in fourteen months, and Cook wrote down the ice, the temperatures, the game and the coastline as he went. It is a baseline observation of a system that has changed measurably since — musk-ox distribution in Sverdrup Pass, the fulmar cliffs at [[place:Cape Vera]], the polynya water at Hell Gate that never froze even in the winter he watched it, the state of the shore pack off [[place:Cape Stallworthy]] in March. None of that depends on whether he reached the Pole.
+

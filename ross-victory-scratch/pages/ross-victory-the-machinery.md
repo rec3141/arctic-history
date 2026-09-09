@@ -1,0 +1,86 @@
+# The engine that never worked
+
+The *Victory* was the first steam vessel taken into the Arctic, and the argument for her was
+a good one. [[person:John Ross]] put it to the Admiralty in 1827 and again in 1828: when the
+ice opens, it is because a northerly wind has been blowing, and a northerly wind is the wind
+a sailing ship cannot use. So a sailing ship is stopped exactly when everything else is in
+her favour, while a steam boat "can make a valuable progress". Steamers draw little water,
+can be moved without wind or against it, and can dodge among floes and find shelter where a
+sailing ship cannot. Every one of those claims turned out to be true of steam in the Arctic —
+just not of this engine.
+
+## What was in her
+
+Ross bought the *Victory* at Liverpool, where she had run as a packet to the Isle of Man,
+replaced the old paddles with a patent set by Robertson that could be hoisted out of the water
+in a minute, and brought her to London on 2 November 1828. Fearnall raised her five and a half
+feet, taking her from an original 85 tons to a capacity of 150 including the engine and
+provisions for a thousand days. She drew seven feet six.
+
+The engine was Braithwaite and Ericsson's patent: high pressure, no flue, the fires blown by
+bellows, the boilers heated by pipes running through them. John Ericsson was then thirty-five
+and would later give the world the screw propeller and the *Monitor*. This was one of his
+earliest engines, and it had already failed its river trials in April 1829.
+[[person:Robert Huish]], writing against Ross in 1835, is on firm ground here:
+[[artifact:ross-victory-037|it "should have been the last to have been affixed to a vessel"]]
+bound on such a service.
+
+## What it did
+
+Nothing much, expensively. From the first days there was trouble with the feeding pump, the
+boilers, the bellows. The engine could not raise steam and keep it: Ross worked out that
+fifteen minutes of firing bought about fifteen minutes of running at thirteen or fourteen
+revolutions, and invented a way of using that — warp the ship ahead on a whale line while the
+steam accumulated, then run the engine, then warp again. That is how the *Victory* crept the
+last five miles to [[place:Fury Beach]] on 12 August 1829, at times within a pistol shot of
+the beach with a few inches of water under her.
+
+The failures came one after another. On 8 June, nine miles short of Port Logan, the teeth
+that turned the fly wheel of the small bellows gave way with a crash, and the boilers were
+reported burst; the iron cement in the joints had failed, and the engineer had not been told
+of it or given the materials to make it good. Off Ireland the entry is blunter: the engine
+"being perfectly useless, we were compelled to trust to our sails, under which we had the
+mortification to find, not only a steadily adverse breeze, but that we were beaten by every
+vessel that we saw". The small auxiliary engine could not work the bellows, so men worked
+them: on the Greenland banks in July, about twelve hours of it at a stretch, and the watch so
+fatigued that Ross had to give them four hours off.
+
+Ross's summary, written in October 1829 when he had decided to be rid of it, is the sentence
+to quote: [[artifact:ross-victory-021|"the engine was not merely useless: it was a serious
+encumbrance"]]. It and its fuel took up two-thirds of the ship's tonnage in weight and in
+measurement, and it required four men who were landsmen, not seamen — a fifth of a company
+that was about to need every hand it had for sawing ice. One of those landsmen,
+[[person:James Dixon]], shipped as a stoker for an engine that was on the beach within five
+months, and died on the coast in 1832.
+
+Ross had said what he thought of it much earlier, in one aside on leaving Gravesend:
+[[artifact:ross-victory-020|"the constructors of our execrable machinery, Messrs. Braithwaite
+and Erickson left us"]].
+
+## Getting rid of it
+
+Through October and November 1829 at [[place:Felix Harbour]], the guns and the engine came
+out of her in pieces and went on the ice and then on shore. The boilers, the iron work and the
+brass went with them ([[artifact:ross-victory-052]]). Ross recorded the gain without much
+grief: the ship had space at last, and [[artifact:ross-victory-022|"It was probable that the
+Esquimaux would profit for a long time to come, by the caches of Messrs. Braithwaite and
+Erickson"]]. Ross did not follow the thought, but it is worth following: several hundredweight
+of worked iron and copper, landed on a coast where metal was rare and precious, in the hands
+of people who were already the best toolmakers in the region. It is one of the more useful
+things the expedition left behind. Anything of it still on that beach is an archaeological
+site.
+
+## The verdict
+
+The *Victory*'s engine did not fail because steam was wrong for the Arctic. It failed because
+an untried high-pressure engine of a novel design was fitted to a small ship going where
+nothing could be repaired, at the choice of a commander with no money to spare and something
+to prove. Thirty years later the Franklin searchers were using screw steamers to good effect,
+and by the 1900s an auxiliary engine was standard — the *Gjoa* had a 13-horsepower paraffin
+motor and Amundsen thought it the most valuable thing aboard ([[topic:amundsen-gjoa]]).
+Ross was right about the principle by about a generation, and wrong about the machine by
+about the same margin.
+
+There is a smaller irony. The ship that saved the expedition's people in the end was not a
+steamer at all, but the sailing whaler [[artifact:ross-victory-032|*Isabella* of Hull]], and
+the last stretch of the way to her was rowed and sailed in three open boats.

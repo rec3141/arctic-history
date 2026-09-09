@@ -1,0 +1,1242 @@
+======================================================================
+id: haig-thomas-1937-001
+topic: haig-thomas-1937
+type: track
+title: Haig-Thomas and Nukapinguaq, Etah to Amund Ringnes Island and back, 1938
+date_text: 1938-03-18/1938-05-15
+date_start: 1938-03-18
+date_end: 1938-05-15
+description: The western sledge journey: two men, sixteen dogs and one Greenland sledge with adjustable broad Nansen runners, nearly 1500 miles from Etah across Smith Sound and Ellesmere Island by the Flagler-Bay Fiord crossing, down Eureka Sound and along the south coast of Axel Heiberg Island to Cornwall and Amund Ringnes Islands and the island now called Haig-Thomas Island, and home by Trold Fiord, the ice cap and Fram Havn. Only the first and last dates are certain: Haig-Thomas left all dates out of his paper because the dates in his camp diary proved five days wrong. The intermediate waypoints follow the order of his narrative, and the ones marked inferred are placed by description alone.
+lat: 78.314
+lon: -72.61
+geometry: {"type": "LineString", "coordinates": [[-72.61, 78.314], [-73.6, 78.6], [-74.38947, 78.75107], [-75.2, 78.9], [-76.0, 79.133], [-77.0, 79.167], [-78.00397, 79.1479], [-79.00416, 79.12556], [-80.0, 79.1], [-81.17934, 79.04346], [-82.34625, 78.98243], [-83.5, 78.917], [-85.2, 78.9], [-86.11379, 78.72636], [-87.0, 78.55], [-88.2, 78.333], [-88.883, 78.15], [-90.3, 78.15], [-92.033, 78.2], [-92.70636, 78.05654], [-93.36388, 77.91152], [-94.00596, 77.76499], [-94.633, 77.617], [-95.6, 77.85], [-97.2, 77.9], [-96.26175, 78.0516], [-95.3, 78.2], [-94.5, 78.233], [-93.2648, 78.21915], [-92.033, 78.2], [-90.98019, 78.1872], [-89.92997, 78.17052], [-88.883, 78.15], [-87.98884, 78.17924], [-87.09052, 78.20566], [-86.18844, 78.22925], [-85.283, 78.25], [-84.86872, 78.43395], [-84.44125, 78.61729], [-84.0, 78.8], [-82.89036, 78.85623], [-81.77003, 78.90834], [-80.63966, 78.95629], [-79.5, 79.0], [-78.52879, 78.96007], [-77.56476, 78.91707], [-76.60834, 78.87103], [-75.65996, 78.822], [-74.72, 78.77], [-74.10684, 78.62535], [-73.50893, 78.47946], [-72.92585, 78.33237], [-72.35713, 78.18415], [-71.80236, 78.03481], [-71.26112, 77.88442], [-70.733, 77.733]]}
+waypoints: [{"date":"1938-03-18","lat":78.314,"lon":-72.610,"note":"leave Etah, having been welcomed by MacGregor's American expedition wintering there"},
+ {"lat":78.60,"lon":-73.60,"note":"mid Smith Sound; Wright and Hamilton part southwards three days out; the pack edge an arc from Rensselaer Bay to Pim Island"},
+ {"lat":78.90,"lon":-75.20,"note":"old polar pack in deep snow off Bache Peninsula; very small daily mileage, mean temperature about -30 F"},
+ {"lat":79.133,"lon":-76.0,"note":"the abandoned police hut on Bache Peninsula; clothes dried at a walrus blubber fire, Wordie's walrus meat found"},
+ {"lat":79.167,"lon":-77.0,"note":"Flagler Bay: start of the land crossing"},
+ {"lat":79.10,"lon":-80.00,"note":"the Flagler-Bay Fiord crossing, some 40 miles of rocks; a tame herd of musk-oxen; -52 F, the coldest of the journey; a detour round a glacier fed from the southern ice cap"},
+ {"lat":78.917,"lon":-83.50,"note":"Bay Fiord, beautifully smooth; reindeer tracks all from the west; no musk-oxen near the sea ice"},
+ {"lat":78.90,"lon":-85.20,"note":"junction of Bay Fiord and Eureka Sound: eight bears seen in one day and two killed; food depot left"},
+ {"lat":78.55,"lon":-87.00,"note":"down Eureka Sound, windswept and running so easily that the dog lines were not taut"},
+ {"lat":78.333,"lon":-88.20,"note":"between Ulvingen Island and Axel Heiberg Island: five Arctic wolves at the tent in the night; Nukapinguaq shoots the bitch"},
+ {"lat":78.15,"lon":-88.883,"note":"Hyperite Point: third bear killed, depot left, and Sergeant Joy's message found in a cairn"},
+ {"lat":78.15,"lon":-90.30,"note":"an unmapped bay on the south coast of Axel Heiberg, about 15 miles across and 10 deep, missed by both Sverdrup and MacMillan; position inferred"},
+ {"lat":78.20,"lon":-92.033,"note":"Cape Southwest: sea ice frozen a hundred yards up the cliff; depot left; a low grey-blue line seen to the west"},
+ {"lat":77.617,"lon":-94.633,"note":"Cornwall Island: message left in a cairn beside Constable Hamilton's, left during the 1932 search for the Krueger expedition"},
+ {"lat":77.85,"lon":-95.60,"note":"south-east corner of Amund Ringnes Island; MacMillan's reported island proves to be a long low sandspit not on Sverdrup's map; position inferred"},
+ {"lat":77.90,"lon":-97.20,"note":"near the south-west corner of Amund Ringnes Island, where they turned north-east across it; position inferred"},
+ {"lat":78.20,"lon":-95.30,"note":"the tide crack on the east coast of Amund Ringnes Island, the island visible ahead out of the ice; position inferred"},
+ {"lat":78.233,"lon":-94.50,"note":"Haig-Thomas Island: the highest point climbed, a cairn with a sleigh stick built beside a snow-filled gully near the centre"},
+ {"lat":78.20,"lon":-92.033,"note":"Cape Southwest again: the depot robbed by bears and wolves; a meal of scraped bear-skin soup"},
+ {"lat":78.15,"lon":-88.883,"note":"Hyperite Point: over twenty-four hours' sledging without stopping, the depot also robbed, and a bear shot at the igloo door"},
+ {"lat":78.25,"lon":-85.283,"note":"Trold Fiord, crossed to on foot from Eureka Sound and recognised from 1935"},
+ {"lat":78.80,"lon":-84.00,"note":"four days searching the plateau south of Bay Fiord for the fossil bones Nukapinguaq and Joy had found; position inferred"},
+ {"lat":79.00,"lon":-79.50,"note":"return over the ice cap south of the Bay Fiord-Flagler crossing, over 4000 feet; position inferred"},
+ {"lat":78.77,"lon":-74.72,"note":"Fram Havn, by way of the Bache Peninsula police post"},
+ {"date":"1938-05-15","lat":77.733,"lon":-70.733,"note":"Robertson Bay, north-west Greenland: journey ends, nearly 1500 miles"}]
+
+licence: route reconstruction, public domain; underlying text in copyright
+credit: route after Haig-Thomas, Geographical Journal 95 (1940) 265-274, and its sketch-map
+bibkey: haigthomas1940expedition
+people: []
+tags: []
+updated: 2026-09-09T05:07:22+00:00
+routing: as-given
+======================================================================
+id: haig-thomas-1937-002
+topic: haig-thomas-1937
+type: track
+title: Wright and Hamilton, the survey of south-east Ellesmere Island, 1938
+date_text: 1938-02-26/1938-05-26
+date_start: 1938-02-26
+date_end: 1938-05-26
+description: The other half of the expedition. Wright and Hamilton sledged about 500 miles laying depots before the survey began, then mapped the east coast of Ellesmere Island from Cape Dunsterville to Wade Point between 10 April and 13 May 1938 - the first detailed map of a coast Edward Inglefield had discovered in 1852 - and finished by sledging west over the inland ice north of Baird Inlet. Their dates are firm: Hamilton kept a deck watch against wireless time signals.
+lat: 76.55
+lon: -68.83
+geometry: {"type": "LineString", "coordinates": [[-68.83, 76.55], [-69.12394, 76.74809], [-69.42663, 76.94583], [-69.73846, 77.14321], [-70.05984, 77.34021], [-70.3912, 77.53681], [-70.733, 77.733], [-71.33886, 77.92804], [-71.96425, 78.12173], [-72.61, 78.314], [-73.6, 78.6], [-74.117, 78.717], [-74.72, 78.77], [-74.72, 78.77], [-75.02616, 78.56544], [-75.3217, 78.36058], [-75.60715, 78.15543], [-75.883, 77.95], [-76.767, 77.867], [-77.667, 77.917], [-77.683, 77.6], [-78.3, 77.433], [-78.833, 77.308], [-78.23684, 77.44981], [-77.62733, 77.59028], [-77.00416, 77.72936], [-76.367, 77.867], [-76.167, 78.2], [-75.56709, 78.36714], [-74.95, 78.533], [-75.0, 78.578], [-76.2558, 78.52666], [-77.5, 78.47], [-75.833, 78.467], [-75.28381, 78.61902], [-74.72, 78.77], [-73.99816, 78.61969], [-73.29501, 78.46767], [-72.61, 78.314]]}
+waypoints: [{"date":"1938-02-26","lat":76.55,"lon":-68.83,"note":"Wright and Hamilton leave Thule with light loads and both teams combined"},
+ {"lat":77.733,"lon":-70.733,"note":"held up at Robertson Bay by weather and the difficulty of getting an Inughuit guide"},
+ {"date":"1938-03-18","lat":78.314,"lon":-72.610,"note":"leave Etah with Haig-Thomas and Nukapinguaq"},
+ {"lat":78.60,"lon":-73.60,"note":"part company in mid Smith Sound about three days out; Haig-Thomas turns west for Bache Peninsula"},
+ {"lat":78.717,"lon":-74.117,"note":"Cape Sabine"},
+ {"lat":78.77,"lon":-74.72,"note":"Fram Havn, tried as an advance base and found disappointing: a broken-walled shelter and no coal"},
+ {"date":"1938-04-03","lat":78.77,"lon":-74.72,"note":"second crossing of Smith Sound completed and the loaded journey begins: two sledges, six dogs each, about 500 lb a sledge"},
+ {"date":"1938-04-10","lat":77.95,"lon":-75.883,"note":"Cape Dunsterville: the survey begins; Bryant's 1894 cairn record found"},
+ {"lat":77.867,"lon":-76.767,"note":"Cape Faraday"},
+ {"lat":77.917,"lon":-77.667,"note":"Talbot Inlet, deep snow; stations occupied over the ice cap at its head"},
+ {"lat":77.60,"lon":-77.683,"note":"Cape Mouat"},
+ {"lat":77.433,"lon":-78.30,"note":"Eskimo Bluff, the one break in an almost continuous ice cliff"},
+ {"lat":77.308,"lon":-78.833,"note":"Boger Point, the southern limit: a station 729 m above the point, and an Inughuit bear-hunting party met"},
+ {"date":"1938-05-01","lat":77.867,"lon":-76.367,"note":"Orne Island again: old igloos with roof frames of whale scapulae shown to them by Inughuit hunters"},
+ {"lat":78.20,"lon":-76.167,"note":"Cadogan Inlet, travelled over the Lyman glacier as the sea ice changed"},
+ {"date":"1938-05-13","lat":78.533,"lon":-74.95,"note":"Wade Point: coast survey finished with ten days' food in hand"},
+ {"lat":78.578,"lon":-75.0,"note":"up the Alfred Newton Glacier on to the inland ice"},
+ {"lat":78.47,"lon":-77.50,"note":"three days west over the ice cap about four miles from the north side of Baird Inlet, camps up to about 1400 m; position inferred"},
+ {"lat":78.467,"lon":-75.833,"note":"Baird Inlet: a small triangulation with four stations also fixed astronomically"},
+ {"date":"1938-05-26","lat":78.77,"lon":-74.72,"note":"back at Fram Havn, the Smith Sound route now plainly marked by four parties' tracks"},
+ {"lat":78.314,"lon":-72.610,"note":"Etah, end of May 1938"}]
+
+licence: route reconstruction, public domain; underlying text in copyright
+credit: route after Wright, Geographical Journal 95 (1940) 278-288
+bibkey: wright1940southeast
+people: []
+tags: []
+updated: 2026-09-09T05:07:22+00:00
+routing: as-given
+======================================================================
+id: haig-thomas-1937-003
+topic: haig-thomas-1937
+type: track
+title: The autumn boat journeys from Thule into Smith Sound, 1937
+date_text: 1937-08/1937-09-03
+date_start: 1937-08
+date_end: 1937-09-03
+description: Two attempts by Haig-Thomas and Wright to lay a spring depot on the Ellesmere side, in an 18-foot boat with an outboard engine. The ice beat them both times and the depot was landed on the Greenland coast near Cape Hatherton instead - which is why the plans for the spring had to be rewritten.
+lat: 76.55
+lon: -68.83
+geometry: {"type": "LineString", "coordinates": [[-68.83, 76.55], [-68.99073, 76.55212], [-69.17536, 76.57688], [-69.34308, 76.61378], [-69.51221, 76.6366], [-69.74816, 76.65241], [-70.22736, 76.66294], [-70.42049, 76.66294], [-70.62753, 76.67584], [-70.84846, 76.70163], [-71.08328, 76.74033], [-71.332, 76.79192], [-71.59462, 76.85642], [-71.87113, 76.93381], [-72.16154, 77.0241], [-72.46585, 77.12729], [-72.6884, 77.2214], [-72.82919, 77.30643], [-72.88823, 77.38239], [-72.86551, 77.44926], [-72.71732, 77.51089], [-72.44366, 77.56725], [-71.91337, 77.62983], [-70.733, 77.733], [-71.97022, 77.8122], [-72.55833, 77.856], [-72.90976, 77.89081], [-73.16195, 77.92543], [-73.31493, 77.95985], [-73.4145, 77.997], [-73.46067, 78.0369], [-73.45343, 78.07953], [-73.26942, 78.19949], [-73.14323, 78.25252], [-73.01424, 78.28401], [-72.94869, 78.29168], [-72.64042, 78.30495], [-72.61, 78.314], [-72.64042, 78.30495], [-72.87795, 78.30193], [-72.98093, 78.31356], [-73.08647, 78.34069], [-73.31218, 78.44535], [-73.5, 78.55], [-72.83, 78.42], [-73.39856, 78.31611], [-73.62431, 78.24249], [-73.69676, 78.16449], [-73.6791, 78.07059], [-73.57131, 77.96077], [-73.39447, 77.83119], [-73.14856, 77.68186], [-72.83359, 77.51277], [-72.44956, 77.32392], [-72.08926, 77.15867], [-71.75267, 77.01703], [-71.4398, 76.899], [-71.15066, 76.80458], [-70.88523, 76.73376], [-70.64353, 76.68655], [-70.42555, 76.66294], [-69.8933, 76.65767], [-69.62268, 76.64538], [-69.41943, 76.62607], [-69.08158, 76.56102], [-68.93347, 76.55024], [-68.83, 76.55]]}
+waypoints: [{"date":"1937-08","lat":76.55,"lon":-68.83,"note":"the expedition lands at Thule from the Danish ship; flowers further advanced than in west Greenland"},
+ {"lat":77.733,"lon":-70.733,"note":"north to Robertson Bay in the Danish ship"},
+ {"lat":78.314,"lon":-72.610,"note":"Etah by 18-foot boat and outboard engine; the Oxford Ellesmere Land Expedition's 1935 hut visited, with cinematograph film still lying below high-tide mark"},
+ {"lat":78.55,"lon":-73.50,"note":"a second attempt into Smith Sound: walrus, seals, glaucous gulls and millions of little auks; beset in the ice and nearly crushed; position inferred"},
+ {"lat":78.42,"lon":-72.83,"note":"the depot of pemmican, oil and fresh walrus meat landed on the Greenland coast near Cape Hatherton instead of on Ellesmere Island"},
+ {"date":"1937-09-03","lat":76.55,"lon":-68.83,"note":"back at Thule, having twice nearly been wrecked and once had an iceberg float in on top of the boat at anchor"}]
+
+licence: route reconstruction, public domain; underlying text in copyright
+credit: route after Haig-Thomas, Geographical Journal 95 (1940) 265-266
+bibkey: haigthomas1940expedition
+people: []
+tags: []
+updated: 2026-09-09T05:07:22+00:00
+routing: water
+======================================================================
+id: haig-thomas-1937-004
+topic: haig-thomas-1937
+type: quote
+title: Haig-Thomas on why his paper carries no dates
+date_text: 1940
+date_start: 1940
+creator: David Haig-Thomas
+description: "I have been careful to leave out all dates, for the day I started and the day I returned are the two only accurate dates that I know for certain. The dates in my diary, which I had kept at each camp, were five days out." He blamed broken sleep in the cold, a watch stopped by a fall on the ice, and hazy skies. It is why every waypoint on the western track but the first and last is undated.
+lat: 78.233
+lon: -94.5
+licence: in copyright; quoted under fair dealing for research and criticism
+credit: The Geographical Journal 95 (1940), Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: p. 271
+people: ["David Haig-Thomas"]
+tags: ["dates,method"]
+updated: 2026-09-08T23:10:25+00:00
+======================================================================
+id: haig-thomas-1937-005
+topic: haig-thomas-1937
+type: quote
+title: The island in the shape of a large banana
+date_text: 1938-04
+date_start: 1938-04
+creator: David Haig-Thomas
+description: "The island seemed to be in the shape of a large banana, though we were unable to see the northern and southern limits. We tied the dogs to an ice-anchor and climbed the highest point, which was in the northern half." The first description of Haig-Thomas Island.
+lat: 78.233
+lon: -94.5
+licence: in copyright; quoted under fair dealing for research and criticism
+credit: The Geographical Journal 95 (1940), Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: p. 270
+people: ["David Haig-Thomas", "Nukapinguaq"]
+tags: ["discovery"]
+updated: 2026-09-08T23:10:25+00:00
+======================================================================
+id: haig-thomas-1937-006
+topic: haig-thomas-1937
+type: quote
+title: The cairn with a sleigh stick on top
+date_text: 1938-04
+date_start: 1938-04
+creator: David Haig-Thomas
+description: "Any one wishing to sledge across would instinctively choose this route: a few feet to the left we made a cairn with a sleigh stick on top, north of the gully and about in the centre of the island." Directions left for whoever came next; so far as is known nobody has reported finding it.
+lat: 78.233
+lon: -94.5
+licence: in copyright; quoted under fair dealing for research and criticism
+credit: The Geographical Journal 95 (1940), Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: p. 270
+people: ["David Haig-Thomas", "Nukapinguaq"]
+tags: ["cairn"]
+updated: 2026-09-08T23:10:25+00:00
+======================================================================
+id: haig-thomas-1937-007
+topic: haig-thomas-1937
+type: quote
+title: The great Nukapinguaq was beaten
+date_text: 1938-05
+date_start: 1938-05
+creator: David Haig-Thomas
+description: "We parted, and while I searched the land in a circle within a few miles of our tent, Nukapinguaq crossed again to Trold Fjord, in the hope that he would be able to follow old landmarks on the way back. The great Nukapinguaq, who usually forgets nothing, was beaten." The search for the fossil bones failed.
+lat: 78.8
+lon: -84.0
+licence: in copyright; quoted under fair dealing for research and criticism
+credit: The Geographical Journal 95 (1940), Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: p. 271
+people: ["Nukapinguaq", "David Haig-Thomas"]
+tags: ["nukapinguaq"]
+updated: 2026-09-08T23:10:25+00:00
+======================================================================
+id: haig-thomas-1937-008
+topic: haig-thomas-1937
+type: quote
+title: Nukapinguaq on why musk-oxen keep off the sea ice
+date_text: 1938-04
+date_start: 1938-04
+creator: Nukapinguaq, reported by David Haig-Thomas
+description: "For the edge of the sea-ice is an Arctic highway for wolves and bears, and no doubt the musk-oxen feel safer inland. ... But Nukapinguaq thinks that again it is for safety, for they can then be attacked by wolves from one side only." Haig-Thomas had expected musk-oxen along Bay Fiord because he had seen many there in May 1935; Nukapinguaq explained the season.
+lat: 78.917
+lon: -83.5
+licence: in copyright; quoted under fair dealing for research and criticism
+credit: The Geographical Journal 95 (1940), Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: p. 267
+people: ["Nukapinguaq"]
+tags: ["inuit-knowledge,wildlife"]
+updated: 2026-09-08T23:10:25+00:00
+======================================================================
+id: haig-thomas-1937-009
+topic: haig-thomas-1937
+type: quote
+title: Wolves and dogs nose to nose
+date_text: 1938-04
+date_start: 1938-04
+creator: David Haig-Thomas
+description: "They remained nose to nose like strange dogs that meet in the street. The hairs on the wolves' backs stood erect, their lips were drawn back to show their teeth." Five Arctic wolves came to the tent off Ulvingen Island in the night.
+lat: 78.333
+lon: -88.2
+licence: in copyright; quoted under fair dealing for research and criticism
+credit: The Geographical Journal 95 (1940), Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: p. 268
+people: []
+tags: ["wildlife"]
+updated: 2026-09-08T23:10:25+00:00
+======================================================================
+id: haig-thomas-1937-010
+topic: haig-thomas-1937
+type: quote
+title: Wright on travelling with Inughuit: you do not take them, they take you
+date_text: 1939-03-06
+date_start: 1939-03-06
+creator: John W. Wright
+description: "I say 'had with us' because up in Smith Sound you have to be exceptional white men to take Eskimo with you: you do not take them; they take you." Wright's argument at the RGS was that Inughuit sledging and modern instrumental survey pull against one another - a claim worth reading against the fact that his own Smith Sound crossings were made on Nukapinguaq's knowledge.
+lat: 78.6
+lon: -73.6
+licence: in copyright; quoted under fair dealing for research and criticism
+credit: The Geographical Journal 95 (1940), Royal Geographical Society
+bibkey: haigthomas1940discussion
+pages: p. 275
+people: ["John W. Wright"]
+tags: ["inuit,debate"]
+updated: 2026-09-08T23:10:25+00:00
+======================================================================
+id: haig-thomas-1937-011
+topic: haig-thomas-1937
+type: quote
+title: Big dog teams did not come from Peary
+date_text: 1940
+date_start: 1940
+creator: David Haig-Thomas
+description: "These big teams and long sledges were not introduced to the Eskimo by Peary, as is popularly believed, for the last migration of Eskimo which came to Greenland from the Canadian Arctic Islands brought with them sledges 20 feet long and teams of eighteen to twenty dogs." A correction Haig-Thomas evidently had from the Inughuit themselves, pointing at the 1860s migration from Baffin Island.
+lat: 76.55
+lon: -68.83
+licence: in copyright; quoted under fair dealing for research and criticism
+credit: The Geographical Journal 95 (1940), Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: p. 272
+people: []
+tags: ["inuit,sledging"]
+updated: 2026-09-08T23:10:25+00:00
+======================================================================
+id: haig-thomas-1937-012
+topic: haig-thomas-1937
+type: quote
+title: Whalebone roof frames on Orne Island
+date_text: 1938-05-01
+date_start: 1938-05-01
+creator: John W. Wright
+description: "Here we met the Eskimo again, and one of them showed us old igloos which had been inhabited about twenty years ago by some Eskimo who now lived in the Thule district. The igloos were very much older than this, and the roof frames were cunningly constructed from the bones (chiefly scapulae) of a large whale." The hunters' dating and the surveyor's differ, and the surveyor recorded both.
+lat: 77.867
+lon: -76.367
+licence: in copyright; quoted under fair dealing for research and criticism
+credit: The Geographical Journal 95 (1940), Royal Geographical Society
+bibkey: wright1940southeast
+pages: p. 287
+people: []
+tags: ["archaeology,inuit"]
+updated: 2026-09-08T23:10:25+00:00
+======================================================================
+id: haig-thomas-1937-013
+topic: haig-thomas-1937
+type: quote
+title: Sea ice frozen a hundred yards up the cliff at Cape Southwest
+date_text: 1938-04
+date_start: 1938-04
+creator: David Haig-Thomas
+description: "At Cape Southwest there was sea-ice frozen on to the cliff face far above us. No doubt in the autumn an enormous floe of old polar ice had been blown by tremendous gales against the cape, had piled itself up to an immense height, and frozen on to the cliff." He judged from its rounded, thawed surface that the floe was older than the previous autumn.
+lat: 78.2
+lon: -92.033
+licence: in copyright; quoted under fair dealing for research and criticism
+credit: The Geographical Journal 95 (1940), Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: p. 269
+people: []
+tags: ["ice,observation"]
+updated: 2026-09-08T23:10:25+00:00
+======================================================================
+id: haig-thomas-1937-014
+topic: haig-thomas-1937
+type: quote
+title: Bear-skin soup
+date_text: 1938-04
+date_start: 1938-04
+creator: David Haig-Thomas
+description: "We crossed to Cape Southwest to find that our depot of food had been stolen by bears and wolves. However we had a meal of scraped bear-skin soup and fed the rest of the skin to the dogs; then continued non-stop to Hyperit Point, which took over twenty-four hours' sledging." That depot too had been robbed.
+lat: 78.2
+lon: -92.033
+licence: in copyright; quoted under fair dealing for research and criticism
+credit: The Geographical Journal 95 (1940), Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: p. 270
+people: []
+tags: ["hunger"]
+updated: 2026-09-08T23:10:25+00:00
+======================================================================
+id: haig-thomas-1937-015
+topic: haig-thomas-1937
+type: quote
+title: Wordie on the new island
+date_text: 1939-03-06
+date_start: 1939-03-06
+creator: James Mann Wordie
+description: "This was in the autumn of 1937, and we naturally envied him, as we felt sure that he would bring back good results - Wright's map, for instance, and his own sledge journey away to the west, when the new island was found." Wordie had left north-west Greenland just as the expedition arrived, and had wirelessed word of the walrus meat he left in the Bache Peninsula police hut.
+lat: 51.5013
+lon: -0.1749
+licence: in copyright; quoted under fair dealing for research and criticism
+credit: The Geographical Journal 95 (1940), Royal Geographical Society
+bibkey: haigthomas1940discussion
+pages: p. 277
+people: []
+tags: ["rgs"]
+updated: 2026-09-08T23:10:26+00:00
+======================================================================
+id: haig-thomas-1937-016
+topic: haig-thomas-1937
+type: image
+title: Fishing for gurnard
+date_text: 1937/1938
+date_start: 1937
+date_end: 1938
+creator: David Haig-Thomas
+description: Two Inughuit crouched on the snow at the edge of open water, fishing with hand lines, hills behind. Captioned in the Journal 'Eskimo fishing for gurnard'. One of the winter photographs Haig-Thomas made at Thule.
+lat: 76.55
+lon: -68.83
+source_url: https://www.jstor.org/stable/1788462
+local_file: haig-thomas-1937/files/haig-thomas-1937-plate-fishing-gurnard.png
+licence: in copyright; reproduced from the JSTOR scan for research use
+credit: Photograph by David Haig-Thomas, plate in The Geographical Journal 95 (1940); Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: plate facing p. 268
+people: []
+tags: ["inughuit,hunting"]
+updated: 2026-09-08T23:10:52+00:00
+======================================================================
+id: haig-thomas-1937-017
+topic: haig-thomas-1937
+type: image
+title: Spearing Arctic char
+date_text: 1937/1938
+date_start: 1937
+date_end: 1938
+creator: David Haig-Thomas
+description: An Inughuit fisher in skin trousers leaning over the water with a barbed leister, other spears beside him. Captioned 'Spearing Arctic char'.
+lat: 76.55
+lon: -68.83
+source_url: https://www.jstor.org/stable/1788462
+local_file: haig-thomas-1937/files/haig-thomas-1937-plate-spearing-char.png
+licence: in copyright; reproduced from the JSTOR scan for research use
+credit: Photograph by David Haig-Thomas, plate in The Geographical Journal 95 (1940); Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: plate facing p. 268
+people: []
+tags: ["inughuit,hunting"]
+updated: 2026-09-08T23:10:52+00:00
+======================================================================
+id: haig-thomas-1937-018
+topic: haig-thomas-1937
+type: image
+title: Boring with an ivory bow
+date_text: 1937/1938
+date_start: 1937
+date_end: 1938
+creator: David Haig-Thomas
+description: A man working a bow drill, the bow of ivory, boring a held object. One of the few close records of Inughuit tool use at Thule in the late 1930s in the Journal's pages.
+lat: 76.55
+lon: -68.83
+source_url: https://www.jstor.org/stable/1788462
+local_file: haig-thomas-1937/files/haig-thomas-1937-plate-ivory-bow-drill.png
+licence: in copyright; reproduced from the JSTOR scan for research use
+credit: Photograph by David Haig-Thomas, plate in The Geographical Journal 95 (1940); Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: plate facing p. 268
+people: []
+tags: ["inughuit,technology"]
+updated: 2026-09-08T23:10:52+00:00
+======================================================================
+id: haig-thomas-1937-019
+topic: haig-thomas-1937
+type: image
+title: Inside an Inughuit winter house
+date_text: 1937/1938
+date_start: 1937
+date_end: 1938
+creator: David Haig-Thomas
+description: The interior of a winter house with about five people, adults and children; the walls lined with newspaper for insulation, tools and skins hung from the roof poles, a cooking pot below. Captioned in the Journal 'Inside an Eskimo winter home'. The Journal names none of the people in it.
+lat: 76.55
+lon: -68.83
+source_url: https://www.jstor.org/stable/1788462
+local_file: haig-thomas-1937/files/haig-thomas-1937-plate-inside-winter-home.png
+licence: in copyright; reproduced from the JSTOR scan for research use
+credit: Photograph by David Haig-Thomas, plate in The Geographical Journal 95 (1940); Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: plate facing p. 268
+people: []
+tags: ["inughuit,dwelling"]
+updated: 2026-09-08T23:10:52+00:00
+======================================================================
+id: haig-thomas-1937-020
+topic: haig-thomas-1937
+type: image
+title: Nukapinguaq, Haig-Thomas and Wright in Smith Sound
+date_text: 1938-03
+date_start: 1938-03
+creator: David Haig-Thomas
+description: The three men standing on the sea ice of Smith Sound with the far shore behind, made during the days before the parties separated in March 1938. The one photograph in the paper in which Nukapinguaq is named.
+lat: 78.6
+lon: -73.6
+source_url: https://www.jstor.org/stable/1788462
+local_file: haig-thomas-1937/files/haig-thomas-1937-plate-nukapinguaq-haigthomas-wright.png
+licence: in copyright; reproduced from the JSTOR scan for research use
+credit: Photograph by David Haig-Thomas, plate in The Geographical Journal 95 (1940); Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: plate facing p. 270
+people: ["Nukapinguaq", "David Haig-Thomas", "John W. Wright"]
+tags: ["portrait"]
+updated: 2026-09-08T23:10:52+00:00
+======================================================================
+id: haig-thomas-1937-021
+topic: haig-thomas-1937
+type: image
+title: A trial of strength
+date_text: 1937/1938
+date_start: 1937
+date_end: 1938
+creator: David Haig-Thomas
+description: Two men on the ground in a hand-strength contest, both laughing. Captioned 'A trial of strength'; a photograph of the winter's amusements at Thule.
+lat: 76.55
+lon: -68.83
+source_url: https://www.jstor.org/stable/1788462
+local_file: haig-thomas-1937/files/haig-thomas-1937-plate-trial-of-strength.png
+licence: in copyright; reproduced from the JSTOR scan for research use
+credit: Photograph by David Haig-Thomas, plate in The Geographical Journal 95 (1940); Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: plate facing p. 270
+people: []
+tags: ["inughuit,games"]
+updated: 2026-09-08T23:10:52+00:00
+======================================================================
+id: haig-thomas-1937-022
+topic: haig-thomas-1937
+type: image
+title: Ground overturned by a herd of musk-oxen
+date_text: 1938-04
+date_start: 1938-04
+creator: David Haig-Thomas
+description: A slope of broken, churned snow and exposed ground where a herd had been feeding. Captioned 'A herd of musk-oxen, the snow overturned'. Haig-Thomas met a very tame herd on the Flagler-Bay Fiord crossing which moved only when the whips were cracked on their noses.
+lat: 79.1
+lon: -80.0
+source_url: https://www.jstor.org/stable/1788462
+local_file: haig-thomas-1937/files/haig-thomas-1937-plate-muskox-herd-snow-overturned.png
+licence: in copyright; reproduced from the JSTOR scan for research use
+credit: Photograph by David Haig-Thomas, plate in The Geographical Journal 95 (1940); Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: plate facing p. 270
+people: []
+tags: ["wildlife,muskox"]
+updated: 2026-09-08T23:10:52+00:00
+======================================================================
+id: haig-thomas-1937-023
+topic: haig-thomas-1937
+type: image
+title: Musk-oxen in western Ellesmere Island
+date_text: 1938-04
+date_start: 1938-04
+creator: David Haig-Thomas
+description: A musk-ox on gravel tundra with mountains behind. Andrew Croft used these pictures at the RGS meeting to explain how musk-oxen dig moss and lichen from under the snow, and how a late-autumn thaw and freeze can starve a herd.
+lat: 79.1
+lon: -80.0
+source_url: https://www.jstor.org/stable/1788462
+local_file: haig-thomas-1937/files/haig-thomas-1937-plate-muskoxen-western-ellesmere.png
+licence: in copyright; reproduced from the JSTOR scan for research use
+credit: Photograph by David Haig-Thomas, plate in The Geographical Journal 95 (1940); Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: plate facing p. 270
+people: []
+tags: ["wildlife,muskox"]
+updated: 2026-09-08T23:10:52+00:00
+======================================================================
+id: haig-thomas-1937-024
+topic: haig-thomas-1937
+type: image
+title: Arctic hare in Ellesmere Island
+date_text: 1938-04
+date_start: 1938-04
+creator: David Haig-Thomas
+description: A white Arctic hare on rock, water and a mountainous shore behind. Haig-Thomas noted that in 1938, but not on his 1935 visit, Arctic hares and lemmings were very numerous and the sides of the fiords were dotted with their tracks - one of the few animal-abundance comparisons the expedition could make across three years.
+lat: 79.1
+lon: -80.0
+source_url: https://www.jstor.org/stable/1788462
+local_file: haig-thomas-1937/files/haig-thomas-1937-plate-arctic-hare.png
+licence: in copyright; reproduced from the JSTOR scan for research use
+credit: Photograph by David Haig-Thomas, plate in The Geographical Journal 95 (1940); Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: plate facing p. 270
+people: []
+tags: ["wildlife"]
+updated: 2026-09-08T23:10:52+00:00
+======================================================================
+id: haig-thomas-1937-025
+topic: haig-thomas-1937
+type: map
+title: The South East Coast of Ellesmere Island: title and legend sheet
+date_text: 1940
+date_start: 1940
+creator: J. W. Wright and R. A. Hamilton
+description: Title block: 'The South East Coast of ELLESMERE ISLAND from surveys by J.W. Wright and R.A. Hamilton 1938'. Scale 1:500,000, contours at 100 m. The legend distinguishes astronomical station, survey station, astronomical and survey station, and major intersection, with heights in metres. Cape Mouat, Easter Island, Cape Dunsterville, Orne Island, Lyman Glacier and Goding Bay are on this sheet. Note that the map gives Hamilton's initials as R. A. where the printed discussion has R. C.
+lat: 77.9
+lon: -76.5
+source_url: https://www.jstor.org/stable/1788464
+local_file: haig-thomas-1937/files/haig-thomas-1937-map-wright-sheet-se-title.png
+licence: in copyright; reproduced from the JSTOR scan for research use
+credit: Published by the Royal Geographical Society, The Geographical Journal 95 (1940)
+bibkey: wright1940southeast
+pages: map following p. 288
+people: []
+tags: ["map,survey"]
+updated: 2026-09-08T23:11:15+00:00
+======================================================================
+id: haig-thomas-1937-026
+topic: haig-thomas-1937
+type: map
+title: Wright and Hamilton's map: the northern sheet
+date_text: 1940
+date_start: 1940
+creator: J. W. Wright and R. A. Hamilton
+description: Sheet carrying Alexandra Fiord, Cape Rutherford, Pim Island, Cape Sabine, Rosse Bay, the Johan Peninsula, Baird Inlet, Wade Point, Cape Herschel, the Alfred Newton, MacMillan and Wyville Thompson glaciers, Mount Bolton, Cape Isabella, Cadogan Inlet, the Lyman Glacier, Goding Bay and Cape Dunsterville. Headed 'The Geographical Journal, April 1940'.
+lat: 78.5
+lon: -75.5
+source_url: https://www.jstor.org/stable/1788464
+local_file: haig-thomas-1937/files/haig-thomas-1937-map-wright-sheet-ne.png
+licence: in copyright; reproduced from the JSTOR scan for research use
+credit: Published by the Royal Geographical Society, The Geographical Journal 95 (1940)
+bibkey: wright1940southeast
+pages: map following p. 288
+people: []
+tags: ["map,survey"]
+updated: 2026-09-08T23:11:15+00:00
+======================================================================
+id: haig-thomas-1937-027
+topic: haig-thomas-1937
+type: map
+title: Wright and Hamilton's map: the inland sheet
+date_text: 1940
+date_start: 1940
+creator: J. W. Wright and R. A. Hamilton
+description: The interior sheet: Alexandra Fiord, the Johan Peninsula, the Prince of Wales Mountains, the Ekblaw, Talbot, Wykeham, Cadogan and Sparks glaciers, Baird Island. Annotated 'broken mountainous country' and 'ice-capped blocks separated by small glaciers' - the ground Wright and Hamilton crossed in the last ten days of May 1938.
+lat: 78.4
+lon: -77.5
+source_url: https://www.jstor.org/stable/1788464
+local_file: haig-thomas-1937/files/haig-thomas-1937-map-wright-sheet-nw.png
+licence: in copyright; reproduced from the JSTOR scan for research use
+credit: Published by the Royal Geographical Society, The Geographical Journal 95 (1940)
+bibkey: wright1940southeast
+pages: map following p. 288
+people: []
+tags: ["map,survey"]
+updated: 2026-09-08T23:11:15+00:00
+======================================================================
+id: haig-thomas-1937-028
+topic: haig-thomas-1937
+type: map
+title: Wright and Hamilton's map: the southern sheet
+date_text: 1940
+date_start: 1940
+creator: J. W. Wright and R. A. Hamilton
+description: The southern sheet, carrying the Talbot and Wykeham glaciers, Wright's 'Easter Island', Makinson Inlet, Boger Point and Eskimo Bluff - the far end of the survey, where the coast is an almost continuous ice cliff.
+lat: 77.5
+lon: -78.0
+source_url: https://www.jstor.org/stable/1788464
+local_file: haig-thomas-1937/files/haig-thomas-1937-map-wright-sheet-sw.png
+licence: in copyright; reproduced from the JSTOR scan for research use
+credit: Published by the Royal Geographical Society, The Geographical Journal 95 (1940)
+bibkey: wright1940southeast
+pages: map following p. 288
+people: []
+tags: ["map,survey"]
+updated: 2026-09-08T23:11:15+00:00
+======================================================================
+id: haig-thomas-1937-029
+topic: haig-thomas-1937
+type: map
+title: Sketch-map of the route followed by Haig-Thomas and Nukapinguaq
+date_text: 1940
+date_start: 1940
+creator: Royal Geographical Society
+description: The small line map printed inside Haig-Thomas's paper showing the western sledge route from Etah across Smith Sound and Ellesmere Island to Amund Ringnes Island. It is the only published plot of the journey, and it carries no dates, for the reason the author gives on p. 271. The track artifact [[artifact:haig-thomas-1937-001]] is built from it and from the narrative.
+lat: 78.4
+lon: -85.0
+source_url: https://www.jstor.org/stable/1788462
+local_file: haig-thomas-1937/files/haig-thomas-1937-gj1940-ellesmere.pdf
+licence: in copyright; consulted in the JSTOR scan
+credit: The Geographical Journal 95 (1940) 266, Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: p. 266
+people: []
+tags: ["map,route"]
+updated: 2026-09-09T02:27:18+00:00
+view_file: haig-thomas-1937/files/haig-thomas-1937-gj1940-ellesmere-view.png
+======================================================================
+id: haig-thomas-1937-030
+topic: haig-thomas-1937
+type: image
+title: The police post at Bache Peninsula, 1935
+date_text: 1935
+date_start: 1935
+creator: unknown
+description: The RCMP post on Bache Peninsula, photographed in 1935, three years before Haig-Thomas and Nukapinguaq reached its abandoned hut, dried their clothes at a walrus blubber fire and ate the meat Wordie had left there. The post had been closed in 1933. A small reproduction; no larger copy is on Commons.
+lat: 79.133
+lon: -76.0
+source_url: https://commons.wikimedia.org/wiki/File:Bache_Peninsula_1935.jpg
+local_file: haig-thomas-1937/files/haig-thomas-1937-bache-peninsula-1935.jpg
+licence: CC BY-SA 4.0
+credit: Wikimedia Commons, File:Bache Peninsula 1935.jpg (CC BY-SA 4.0), from a 1936 printed illustration
+bibkey: haigthomas1940expedition
+people: []
+tags: ["rcmp,ellesmere"]
+updated: 2026-09-08T23:11:57+00:00
+======================================================================
+id: haig-thomas-1937-031
+topic: haig-thomas-1937
+type: object
+title: The Haig-Thomas collection at the British Museum
+date_text: 1938/1939
+date_start: 1938
+date_end: 1939
+creator: Inughuit makers; collected by David Haig-Thomas
+description: A collection found by an Inughuit man cleaning out an old igloo about fifteen miles north of Thule and given by Haig-Thomas to the British Museum, where Adrian Digby of the Department of Ethnography catalogued it; most of the specimens are of undoubted Thule culture. Haig-Thomas's Arctic collections went to the Museum in two instalments. The paper does not name the man who found them. Position approximate: 'some 15 miles north of Thule'.
+lat: 76.77
+lon: -68.83
+licence: unknown; object record
+credit: British Museum, Department of Ethnography; list compiled by Adrian Digby, deposited in the Library of the Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: p. 272
+people: []
+tags: ["archaeology,thule-culture,museum"]
+updated: 2026-09-08T23:11:57+00:00
+======================================================================
+id: haig-thomas-1937-032
+topic: haig-thomas-1937
+type: object
+title: Wright's photo-theodolite
+date_text: 1937
+date_start: 1937
+creator: E. S. Marsh, Unicam Instrument Company, Cambridge, to a design suggested by A. R. Hinks and Frank Debenham
+description: An Exakta model B camera on a removable table clamped above a Wild Universal theodolite, made before the expedition sailed. Marks printed on the top, bottom and sides of each negative let the angles be measured afterwards from the photographs, to about five minutes of arc. Wright told the RGS it turned what would have been an accurate skeleton map of the coast into a contour map of much of the hinterland, and recommended the attachment to future explorers as easy to make, easy to use and cheap.
+lat: 77.95
+lon: -75.883
+licence: unknown; object record
+credit: described in Wright, The Geographical Journal 95 (1940) 278-288
+bibkey: wright1940southeast
+pages: pp. 274, 286
+people: []
+tags: ["survey,instrument"]
+updated: 2026-09-08T23:11:57+00:00
+======================================================================
+id: haig-thomas-1937-033
+topic: haig-thomas-1937
+type: object
+title: The Greenland sledge and the sixteen dogs
+date_text: 1938
+date_start: 1938
+creator: Thule district makers
+description: A Thule-type Greenland sledge of Victorian ash an inch thick, fitted with adjustable broad Nansen runners, and a team of sixteen dogs which covered nearly 1500 miles without one being killed; a puppy born on the journey came home. Feed was equal parts Bovril dog pemmican and walrus meat, and the Inughuit thought the pemmican much inferior - too rich for the dogs to digest. They judged the expedition's tents, sledges and eiderdown bags better than Peary's. The team averaged 80 lb a dog at the start and 70 lb at the end.
+lat: 78.314
+lon: -72.61
+licence: unknown; object record
+credit: described in Haig-Thomas, The Geographical Journal 95 (1940) 272
+bibkey: haigthomas1940expedition
+pages: p. 272
+people: []
+tags: ["sledging,dogs"]
+updated: 2026-09-08T23:11:57+00:00
+======================================================================
+id: haig-thomas-1937-034
+topic: haig-thomas-1937
+type: text
+title: Appendix: the expedition's scientific observations
+date_text: 1940
+date_start: 1940
+creator: David Haig-Thomas and R. A. Hamilton
+description: Eight short sections: archaeology, aurora, tides, weather, zoology, birds, geology, botany. The aurora record is the striking one - on 92 per cent of hourly observations nothing was visible to the naked eye, and when aurora did appear it was always to the south, Thule lying less than two degrees from the pole of the magnetic axis. The tidal series went to the Danish Admiralty's Hydrographic Department, the weather series to the Danish Meteorological Institute, the skulls and skins to the Natural History Museum.
+lat: 76.55
+lon: -68.83
+source_url: https://www.jstor.org/stable/1788462
+local_file: haig-thomas-1937/files/haig-thomas-1937-gj1940-ellesmere.pdf
+licence: in copyright; consulted through University of Manitoba EZproxy
+credit: The Geographical Journal 95 (1940) 272-274, Royal Geographical Society
+bibkey: haigthomas1940expedition
+pages: pp. 272-274
+people: []
+tags: ["science"]
+updated: 2026-09-08T23:11:57+00:00
+======================================================================
+id: haig-thomas-1937-035
+topic: haig-thomas-1937
+type: event
+title: A message in a cairn on Cornwall Island, beside one from the Krueger search
+date_text: 1938-04
+date_start: 1938-04
+creator: David Haig-Thomas and Nukapinguaq
+description: Crossing to Cornwall Island they left a message in a cairn beside one left by Constable Hamilton of the RCMP while searching for the lost Krueger expedition in 1932. Hans Krueger, Ake Bjare and the Inughuit hunter Akqioq disappeared in 1930 between Axel Heiberg and Meighen Island; the police searches for them are the reason there were cairns to find at all in this country.
+lat: 77.617
+lon: -94.633
+licence: in copyright; described from the text
+credit: Haig-Thomas, The Geographical Journal 95 (1940) 269
+bibkey: haigthomas1940expedition
+pages: p. 269
+people: ["David Haig-Thomas", "Nukapinguaq"]
+tags: ["cairn,kruger"]
+updated: 2026-09-08T23:11:57+00:00
+======================================================================
+id: haig-thomas-1937-036
+topic: haig-thomas-1937
+type: event
+title: The uncharted bay on the south coast of Axel Heiberg Island
+date_text: 1938-04
+date_start: 1938-04
+creator: David Haig-Thomas
+description: The coast that appeared to run straight to Cape Southwest turned out to hold a bay about 15 miles across and 10 miles deep. 'How this bay had remained undiscovered by MacMillan and Sverdrup it is difficult to understand.' Haig-Thomas thought from the shape of the hills that a large fiord probably ran into its head, and suggested the next sledging party look.
+lat: 78.15
+lon: -90.3
+licence: in copyright; described from the text
+credit: Haig-Thomas, The Geographical Journal 95 (1940) 268-269
+bibkey: haigthomas1940expedition
+pages: pp. 268-269
+people: []
+tags: ["survey,correction"]
+updated: 2026-09-08T23:11:57+00:00
+======================================================================
+id: haig-thomas-1937-037
+topic: haig-thomas-1937
+type: text
+title: Polar Record's report of the completed expedition
+date_text: 1939
+date_start: 1939
+creator: Scott Polar Research Institute
+description: Three pages that carry things neither Geographical Journal paper mentions: the motor boat that failed, the 18-foot boat 'of a type designed to replace the Eskimo umiaks' that replaced it, the three dog teams bought at Jakobshavn and Upernivik that compared badly with Thule dogs (the worst team was exchanged for one belonging to a Thule Inughuk), the Alaskan sledge lent by the Americans when the Nansen sledge proved almost useless on the ice foot, Nukapinguaq's earlier service with MacMillan, Lauge Koch and Shackleton, the map of Wolstenholme Fjord, and the Svaerdfisken's arrival on 10 August 1938.
+lat: 76.55
+lon: -68.83
+source_url: https://doi.org/10.1017/S0032247400038328
+local_file: haig-thomas-1937/files/haig-thomas-1937-polarrecord-s0032247400038328.pdf
+licence: in copyright; consulted through University of Manitoba EZproxy
+credit: Polar Record 3 (17) (1939) 48-50, Scott Polar Research Institute / Cambridge University Press
+bibkey: polarrecord1939completed
+pages: pp. 48-50
+people: []
+tags: ["report"]
+updated: 2026-09-08T23:18:13+00:00
+======================================================================
+id: haig-thomas-1937-038
+topic: haig-thomas-1937
+type: object
+title: Two greater snow geese brought alive to England
+date_text: 1938
+date_start: 1938
+creator: David Haig-Thomas
+description: Haig-Thomas kept a series of observations on a pair of Greater Snow Geese, Chen hyperboreus nivalis, nesting at Thule - very little was then known about the breeding of the species - and brought the pair and one young bird home alive. The two geese reared five goslings in captivity in England in the summer of 1939. Full details were to be published in the Ibis and deposited at the Scott Polar Research Institute.
+lat: 76.55
+lon: -68.83
+licence: unknown; object record
+credit: Polar Record 3 (17) (1939) 49; Haig-Thomas, The Geographical Journal 95 (1940) 273
+bibkey: polarrecord1939completed
+people: []
+tags: ["birds,ornithology"]
+updated: 2026-09-08T23:18:13+00:00
+======================================================================
+id: haig-thomas-1937-039
+topic: haig-thomas-1937
+type: text
+title: The Geographical Journal's review of Tracks in the Snow
+date_text: 1939
+date_start: 1939
+creator: R. E. P.
+description: The contemporary verdict, and the nearest thing to a description of the book itself until a copy can be got. Haig-Thomas 'lived as the Eskimo live, learned their methods of hunting and sledging, and made a success of the job'; the reviewer thought his attitude to the Inughuit, his dogs and the animals more to his credit than the 1500 miles or the island, and singled out his 'shrewd and piquant glimpses of the impact of the Arctic explorer, administrator, and missionary upon Arctic life and thought' as the book's chief value. He also wished for more about Wright and Hamilton, who had shown that detailed scientific exploration cannot rely entirely on hunting for its food.
+lat: 51.5013
+lon: -0.1749
+source_url: https://www.jstor.org/stable/1788418
+local_file: haig-thomas-1937/files/haig-thomas-1937-jstor-1788418.pdf
+licence: in copyright; consulted through University of Manitoba EZproxy
+credit: The Geographical Journal 95 (1939) 232, Royal Geographical Society
+bibkey: priestley1939tracks
+pages: p. 232
+people: []
+tags: ["review"]
+updated: 2026-09-08T23:18:52+00:00
+======================================================================
+id: haig-thomas-1937-040
+topic: haig-thomas-1937
+type: image
+title: Icebergs drifted by in the crystal clear water
+date_text: 1937
+date_start: 1937
+creator: David Haig-Thomas
+description: The frontispiece of Tracks in the Snow: icebergs in still water off the Greenland coast. Printed sideways on the leaf, as most of the book's plates are.
+lat: 76.55
+lon: -68.9
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-plate-frontispiece-icebergs.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: frontispiece (scan leaf 8)
+people: []
+tags: ["plate,ellesmere,inughuit"]
+updated: 2026-09-09T08:12:32+00:00
+======================================================================
+id: haig-thomas-1937-041
+topic: haig-thomas-1937
+type: image
+title: The rocky cliffs of Cape York and 'the real Eskimos of the north'
+date_text: 1937-08
+date_start: 1937-08
+creator: David Haig-Thomas
+description: The cliffs of Cape York from the sea, the landfall of every ship coming north into the Thule district. Haig-Thomas's caption - 'We saw the Rocky Cliffs of Cape York and the real Eskimos of the north' - is the moment the 1937 party first met the Inughuit.
+lat: 75.9
+lon: -66.5
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-plate-cape-york-cliffs-and-eskimos.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: plate facing p. 48 (scan leaf 55)
+people: []
+tags: ["plate,ellesmere,inughuit"]
+updated: 2026-09-09T08:12:33+00:00
+======================================================================
+id: haig-thomas-1937-042
+topic: haig-thomas-1937
+type: image
+title: Enilungwa, Nookapingwa's wife
+date_text: 1937
+date_start: 1937
+creator: David Haig-Thomas
+description: A portrait of Enilungwa, the wife of Nukapinguaq, whom Haig-Thomas captions 'whom I always call "The Duchess"'. It is the only published photograph of her the topic holds, and it comes with a name - which the Geographical Journal plates of the same expedition do not.
+lat: 76.55
+lon: -68.9
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-plate-enilungwa-the-duchess.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: plate facing p. 52 (scan leaf 61)
+people: ["Enilungwa", "Nukapinguaq"]
+tags: ["plate,ellesmere,inughuit"]
+updated: 2026-09-09T08:12:33+00:00
+======================================================================
+id: haig-thomas-1937-043
+topic: haig-thomas-1937
+type: image
+title: Kooetigeto shooting a seal at the foot of a glacier snout
+date_text: 1937-09
+date_start: 1937-09
+creator: David Haig-Thomas
+description: Kooetigeto at the moment of shooting a seal below a glacier front. A named Inughuit hunter at work, from the autumn boat journeys of 1937.
+lat: 76.55
+lon: -68.9
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-plate-kooetigeto-shooting-a-seal.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: plate facing p. 60 (scan leaf 71)
+people: ["Kooetigeto"]
+tags: ["plate,ellesmere,inughuit"]
+updated: 2026-09-09T08:12:33+00:00
+======================================================================
+id: haig-thomas-1937-044
+topic: haig-thomas-1937
+type: image
+title: The 18-foot open boat aground in front of a big glacier
+date_text: 1937-09
+date_start: 1937-09
+creator: David Haig-Thomas
+description: The party's eighteen-foot open boat left dry by the tide under a glacier front during the second motor-boat journey of the autumn of 1937.
+lat: 76.55
+lon: -68.9
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-plate-open-boat-aground.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: plate facing p. 96 (scan leaf 109)
+people: []
+tags: ["plate,ellesmere,inughuit"]
+updated: 2026-09-09T08:12:33+00:00
+======================================================================
+id: haig-thomas-1937-045
+topic: haig-thomas-1937
+type: image
+title: Spearing fish at the hole with a three-pronged spear
+date_text: 1938
+date_start: 1938
+creator: David Haig-Thomas
+description: A hunter kneeling at a hole in the ice with the kakivak, the three-pronged fish spear: Haig-Thomas's caption reads 'When he had attracted the fish to the hole he plunged down with his three-pronged spear and lifted it out on to the ice.'
+lat: 76.55
+lon: -68.9
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-plate-spearing-fish-through-the-ice.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: plate facing p. 112 (scan leaf 127)
+people: []
+tags: ["plate,ellesmere,inughuit"]
+updated: 2026-09-09T08:12:33+00:00
+======================================================================
+id: haig-thomas-1937-046
+topic: haig-thomas-1937
+type: image
+title: An Inughuk coming into his winter house, and a snow igloo lit by flashlight
+date_text: 1938-01
+date_start: 1938-01
+creator: David Haig-Thomas
+description: Two photographs on one leaf: above, a person coming in through the entrance of a winter house, the interior lit; below, a snow igloo photographed by flashlight during the winter night, one of the few flash photographs made in the district in the 1930s.
+lat: 76.55
+lon: -68.9
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-plate-winter-home-and-flashlit-igloo.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: plate facing p. 160 (scan leaf 177)
+people: []
+tags: ["plate,ellesmere,inughuit"]
+updated: 2026-09-09T08:12:33+00:00
+======================================================================
+id: haig-thomas-1937-047
+topic: haig-thomas-1937
+type: image
+title: Haig-Thomas photographed by Nukapinguaq at Bache Peninsula
+date_text: 1938-03
+date_start: 1938-03
+creator: David Haig-Thomas
+description: The author at the abandoned RCMP post on Bache Peninsula, the photograph taken by Nukapinguaq - a rare credited photograph by an Inughuk in a book of this period.
+lat: 79.0
+lon: -76.4
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-plate-author-at-bache-peninsula.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: plate facing p. 176 (scan leaf 195)
+people: ["Nukapinguaq", "David Haig-Thomas"]
+tags: ["plate,ellesmere,inughuit"]
+updated: 2026-09-09T08:12:33+00:00
+======================================================================
+id: haig-thomas-1937-048
+topic: haig-thomas-1937
+type: image
+title: The long hair of the musk-ox brushing the snow from the stones
+date_text: 1938-04
+date_start: 1938-04
+creator: David Haig-Thomas
+description: A musk-ox (Ovibos moschatus) on Ellesmere Island, its qiviut and guard hair hanging to the ground. Haig-Thomas's caption: 'The long hair of the Musk-Ox hung down so low that it brushed the snow from the stones.'
+lat: 79.0
+lon: -85.0
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-plate-muskox-long-hair.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: plate facing p. 180 (scan leaf 201)
+people: []
+tags: ["plate,ellesmere"]
+updated: 2026-09-09T08:12:56+00:00
+======================================================================
+id: haig-thomas-1937-049
+topic: haig-thomas-1937
+type: image
+title: The Arctic hare that took no notice
+date_text: 1938-04
+date_start: 1938-04
+creator: David Haig-Thomas
+description: Two photographs of one Arctic hare (Lepus arcticus) on Ellesmere Island: above, sitting and ignoring the photographer; below, standing up, captioned 'When I tried to stroke him he immediately got up with a sort of "No you don't"'.
+lat: 79.0
+lon: -85.0
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-plate-arctic-hare.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: plate facing p. 188 (scan leaf 211)
+people: []
+tags: ["plate,ellesmere"]
+updated: 2026-09-09T08:12:56+00:00
+======================================================================
+id: haig-thomas-1937-050
+topic: haig-thomas-1937
+type: image
+title: Boring with an ivory bow drill
+date_text: 1938
+date_start: 1938
+creator: David Haig-Thomas
+description: An Inughuk using an ivory bow drill beside a loaded sledge. The plate carries no caption in the book's list of illustrations; the same subject appears in the Geographical Journal plates of the expedition.
+lat: 76.55
+lon: -68.9
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-plate-bow-drill.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: plate (scan leaf 233)
+people: []
+tags: ["plate,ellesmere"]
+updated: 2026-09-09T08:12:56+00:00
+======================================================================
+id: haig-thomas-1937-051
+topic: haig-thomas-1937
+type: image
+title: A hungry husky gnawing frozen bear meat
+date_text: 1938-05
+date_start: 1938-05
+creator: David Haig-Thomas
+description: A sledge dog gnawing a lump of frozen bear meat with the party's igloo behind it, from the hungry weeks of the return journey in May 1938.
+lat: 78.0
+lon: -90.0
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-plate-husky-gnawing-bear-meat.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: plate facing p. 224 (scan leaf 251)
+people: []
+tags: ["plate,ellesmere"]
+updated: 2026-09-09T08:12:56+00:00
+======================================================================
+id: haig-thomas-1937-052
+topic: haig-thomas-1937
+type: image
+title: A bear hunter returning along the Greenland ice-foot
+date_text: 1938-06
+date_start: 1938-06
+creator: David Haig-Thomas
+description: One of the Inughuit bear hunters driving home along the ice-foot under the Greenland cliffs.
+lat: 76.55
+lon: -68.9
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-plate-bear-hunter-greenland-icefoot.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: plate facing p. 240 (scan leaf 269)
+people: []
+tags: ["plate,ellesmere"]
+updated: 2026-09-09T08:12:56+00:00
+======================================================================
+id: haig-thomas-1937-053
+topic: haig-thomas-1937
+type: image
+title: June flowers: Draba hirta, Silene acaulis and Pedicularis lanata
+date_text: 1938-06
+date_start: 1938-06
+creator: David Haig-Thomas
+description: Two botanical photographs on one leaf, each plant named to species: above, Draba hirta L. and Silene acaulis L. in cushion; below, Pedicularis lanata (Willd.) Cham. Haig-Thomas's caption is 'By the middle of June the flowers were in full bloom.' It is the expedition's only published botanical plate and a dated record of flowering in the Thule district in June 1938.
+lat: 76.55
+lon: -68.9
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-plate-june-flowers-draba-silene-pedicularis.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: plate facing p. 256 (scan leaf 287)
+people: []
+tags: ["plate,ellesmere"]
+updated: 2026-09-09T08:12:57+00:00
+======================================================================
+id: haig-thomas-1937-054
+topic: haig-thomas-1937
+type: image
+title: A greater snow goose at its nest
+date_text: 1938-06
+date_start: 1938-06
+creator: David Haig-Thomas
+description: A greater snow goose (Chen hyperborea atlantica, now Anser caerulescens atlanticus) sitting on its nest, glaciers running off the Greenland ice-cap behind it. The snow goose was Haig-Thomas's own scientific object on the expedition; he brought two birds alive back to England.
+lat: 76.55
+lon: -68.9
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-plate-greater-snow-goose-at-nest.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: plate facing p. 260 (scan leaf 293)
+people: []
+tags: ["plate,ellesmere"]
+updated: 2026-09-09T08:12:57+00:00
+======================================================================
+id: haig-thomas-1937-055
+topic: haig-thomas-1937
+type: image
+title: The ship that came to take us home
+date_text: 1938-08
+date_start: 1938-08
+creator: David Haig-Thomas
+description: The relief ship lying off Thule at the end of the expedition, August 1938, seen past the rigging of a boat.
+lat: 76.55
+lon: -68.9
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-plate-the-ship-that-came-to-take-us-home.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: plate facing p. 268 (scan leaf 303)
+people: []
+tags: ["plate,ellesmere"]
+updated: 2026-09-09T08:12:57+00:00
+======================================================================
+id: haig-thomas-1937-056
+topic: haig-thomas-1937
+type: text
+title: Contents of Tracks in the Snow
+date_text: 1939
+date_start: 1939
+creator: David Haig-Thomas
+description: The book's table of contents as printed, kept as a page image: eighteen chapters from 'I Make My Plans' through the seal hunt, the walrus hunt, 'In the Igloo of Ootah', cold, bears, the new island, hunger and exhaustion, the return journey and Thule, closing with the account of the spring survey in Ellesmere Land at p. 280. It is the fastest index to what the narrative actually covers, and it names the chapter on Ootah's igloo that no other source for this topic mentions.
+lat: 76.55
+lon: -68.9
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-contents.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: pp. vii (scan leaf 13)
+people: []
+tags: ["plate,ellesmere"]
+updated: 2026-09-09T08:12:57+00:00
+======================================================================
+id: haig-thomas-1937-057
+topic: haig-thomas-1937
+type: map
+title: Baffin Bay and the route north to Thule
+date_text: 1939
+date_start: 1939
+creator: drawn for Tracks in the Snow
+description: The book's first map: Greenland and Baffin Bay from Cape Farewell to Ellesmere Island, with Jakobshavn, Disko, Umanak, Upernavik, Melville Bay, Thule, Robertson Bay, Bache Peninsula and Craig Harbour marked - the itinerary of the voyage out, drawn at a scale of four hundred miles.
+lat: 74.0
+lon: -60.0
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-map-baffin-bay-route.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: p. 25 (scan leaf 31)
+people: []
+tags: ["map,ellesmere"]
+updated: 2026-09-09T08:13:15+00:00
+======================================================================
+id: haig-thomas-1937-058
+topic: haig-thomas-1937
+type: map
+title: Smith Sound and the Ellesmere shore
+date_text: 1939
+date_start: 1939
+creator: drawn for Tracks in the Snow
+description: The map of Smith Sound printed in the chapter on the Eskimos: Kane Basin, Humboldt Glacier, Princess Marie Bay, Flagler Bay, Bache Peninsula, Buchanan Bay, Fram Haven, Pim Island, Cairn Point, Littleton Island, Foulke Fjord, Cape Alexander and Cape Hatherton, Makinson Inlet, Scoresby Bay and Prince of Wales Mountains. It is the working geography of every crossing the Inughuit made between the two shores.
+lat: 78.5
+lon: -73.0
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-map-smith-sound.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: p. 53 (scan leaf 63)
+people: []
+tags: ["map,ellesmere"]
+updated: 2026-09-09T08:13:15+00:00
+======================================================================
+id: haig-thomas-1937-059
+topic: haig-thomas-1937
+type: map
+title: Haig-Thomas's sledge journey, 1938
+date_text: 1938
+date_start: 1938
+creator: drawn for Tracks in the Snow
+description: The route map of the 1938 western journey: from the Greenland shore across Kane Basin and Ellesmere by Bay Fjord to Axel Heiberg Island, Cornwall, Amund Ringnes and Ellef Ringnes, with Jones Sound and Devon Island to the south. Drawn at a hundred miles to the inch. It is the published route for track haig-thomas-1937-001, whose intermediate waypoints the Geographical Journal paper left undated.
+lat: 78.5
+lon: -88.0
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-map-sledge-journey.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: p. 157 (scan leaf 173)
+people: []
+tags: ["map,ellesmere"]
+updated: 2026-09-09T08:13:15+00:00
+======================================================================
+id: haig-thomas-1937-060
+topic: haig-thomas-1937
+type: map
+title: The south-east coast of Ellesmere Island, from surveys by J. W. Wright and R. A. Hamilton, 1938
+date_text: 1938
+date_start: 1938
+creator: J. W. Wright and R. A. Hamilton
+description: The book's folding survey map at 1:1,250,000, from Baird Inlet through Cadogan Fjord and Talbot Inlet to Makinson Inlet, with the surveyors' route dotted. Its own note reads that the map 'is only a preliminary sketch and neither the details of the coast nor the survey can be regarded as final, though large changes are not expected'. It carries R. A. Hamilton's initials in print, which bears on the open question of whether the person row should be keyed R. A. or R. C. Hamilton.
+lat: 78.2
+lon: -76.0
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-tracks-map-se-ellesmere-wright-hamilton.jpg
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: following p. 288 (scan leaf 324)
+people: []
+tags: ["map,ellesmere"]
+updated: 2026-09-09T08:13:15+00:00
+======================================================================
+id: haig-thomas-1937-061
+topic: haig-thomas-1937
+type: text
+title: Tracks in the Snow (1939): the full 332-page scan and its OCR
+date_text: 1939
+date_start: 1939
+creator: David Haig-Thomas
+description: The expedition narrative in full: 332 page scans from HathiTrust with HathiTrust's own OCR beside them at haig-thomas-1937-haigthomas1939-tracks-in-the-snow.txt, which carries a page marker before every page. It is the only source that can date the middle 1400 miles of the western sledge journey, which the Geographical Journal paper left undated, and the only one that names the Inughuit in the Journal's uncaptioned photographs. Eighteen of its plates and all four of its maps are registered separately as artifacts -040 to -060.
+lat: 76.55
+lon: -68.9
+source_url: https://babel.hathitrust.org/cgi/pt?id=mdp.39015050675126
+local_file: haig-thomas-1937/files/haig-thomas-1937-haigthomas1939-tracks-in-the-snow.pdf
+licence: public domain (HathiTrust full view; author died 1941)
+credit: HathiTrust page scan (University of Michigan copy) of Haig-Thomas, Tracks in the Snow (Oxford University Press, 1939)
+bibkey: haigthomas1939tracks
+pages: whole volume, 332 leaves
+people: []
+tags: ["narrative,fulltext"]
+updated: 2026-09-09T09:28:44+00:00
+view_file: haig-thomas-1937/files/haig-thomas-1937-tracks-plate-frontispiece-icebergs.jpg

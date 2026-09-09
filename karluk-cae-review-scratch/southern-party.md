@@ -1,0 +1,79 @@
+# The Southern Party, 1913-1916
+
+The Canadian Arctic Expedition was two expeditions under one name, and the
+smaller half of the money did most of the science.
+
+[[person:Rudolph Martin Anderson]]'s Southern Party worked the mainland coast
+from the Mackenzie delta east to Coronation Gulf and Victoria Island, out of a
+base at [[place:Bernard Harbour]] on Dolphin and Union Strait, with the schooner
+[[vessel:Alaska]] and the [[vessel:Mary Sachs]] between them carrying the stores.
+Its members were [[person:Kenneth Chipman]] and [[person:John R. Cox]],
+topographers; [[person:John Johnston O'Neill]], geologist;
+[[person:Frits Johansen]], marine biologist; and [[person:Diamond Jenness]],
+anthropologist. Anderson himself was a zoologist who had travelled with
+[[person:Vilhjalmur Stefansson]] in 1908-12 and had been promised a free hand.
+
+He did not get one, or thought he did not. At [[place:Collinson Point]] in the
+winter of 1913-14 Anderson and Stefansson quarrelled in front of the staff over
+men, stores and the whole idea of the ice journey north. Anderson's view was that
+the expedition's job was mapping and collecting on the coast and that a dash onto
+the pack risked everything for a headline; Stefansson's was that Anderson was
+withholding equipment from the expedition's commander. Both men were partly
+right, and neither forgave the other. After 1914 the two parties operated
+independently and communicated as little as possible.
+
+Free of him, the Southern Party did what it had come to do. Chipman and Cox
+surveyed the Mackenzie delta and the coast east to Coronation Gulf, filling in
+the last unmapped stretch of the continental shoreline. O'Neill mapped the
+geology of the Arctic coast west of Kent Peninsula. Anderson and Johansen
+collected: the mammal, bird, fish, insect, crustacean, mollusc, worm and plant
+volumes of the expedition's Report were published between 1919 and 1946, and they
+remain the baseline collection for that coast. Anyone working the western Arctic
+today who wants to know what was there before the twentieth century starts here.
+
+## Jenness and the Copper Inuit
+
+The volume that has outlasted all of them is
+[[artifact:karluk-cae-041|volume XII]], [[source:jenness1922life]].
+[[person:Diamond Jenness]] was a New Zealander who had done his graduate work at
+Oxford, and twenty-seven when he sailed on the [[vessel:Karluk]]. He left her
+with Stefansson's hunting party on 20 September 1913 - the accident that saved
+his life - and spent the next two years among the Copper Inuit of Coronation Gulf
+and Victoria Island.
+
+He did not visit them. He was formally adopted into the household of
+[[person:Ikpakhuak]] and his wife [[person:Higilak]], with their adopted son
+[[person:Haugak]] and Higilak's daughter [[person:Kanneyuk]], and lived with the
+family through the whole seasonal round: the winter sealing villages on the sea
+ice with their linked snow houses and their dance-house cupolas, the spring move
+inland, the summer caribou hunt, the char weirs, the copper worked cold from
+native metal that gave the people their English name. He learned the dialect, and
+the book is thick with the words and the names of the people who told him things
+- Higilak on where her own family had come from, and on the marriage two
+generations back, to a woman named Allikammik from the west, after which the
+travelling between the Copper Inuit and the western Inuit stopped; Higilak
+holding a divination in the snow house with Jenness's own coat for the kila and
+Jenness himself asked to thump it. [[artifact:karluk-cae-040|The passage where he
+lists the household]] mentions his own adoption in a subordinate clause, which is
+about right for the book's manner. His dog [[animal:Jumbo]] turns up in the same
+pages, tied with a strip of white deerskin round his neck to bring back the soul
+of a sick boy; the animals of these expeditions are gathered in
+[[topic:animals]], their ships in [[topic:vessels]].
+
+Jenness went on to spend the rest of his career at the National Museum of Canada,
+to write The People of the Twilight from this material, and in 1925 to identify
+from a few boxes of small, finely worked tools that an entirely different and
+older people had lived in the eastern Arctic before the Thule - the culture he
+named Dorset. That story is [[topic:thule-dorset]], and it connects this
+expedition to [[person:Therkel Mathiassen]]'s excavations for the
+[[page:karluk-cae-fifth-thule|Fifth Thule Expedition]] going on at the same time
+a continent away.
+
+For the Copper Inuit themselves, Jenness's two years fall at the hinge. When he
+arrived, families in Coronation Gulf had had almost no dealings with outsiders;
+within a decade trading posts, rifles, trap lines and the fur trade had
+reorganised the seasonal round he described, and within two generations came
+settlement, schools and the tuberculosis evacuations. His book is used now partly
+as ethnography and partly as a record of names, camps and genealogies that
+Kitikmeot families read for their own reasons - which is a better fate than most
+expedition volumes get.

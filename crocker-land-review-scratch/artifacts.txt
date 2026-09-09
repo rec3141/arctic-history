@@ -1,0 +1,384 @@
+=== crocker-land-1913-001 | text | MacMillan, Four Years in the White North (1918): full text | date=1918 | lat=78.317 lon=-72.633
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages= people=["Donald Baxter MacMillan"] tags=["crockerland,narrative,fulltext"]
+  desc=The expedition leader's narrative of the four years at Etah, 1913-1917. Sixteen chapters and seven appendices; the appendices carry Fitzhugh Green's report on the western sledge journeys, W. Elmer Ekblaw's on the crossings of Ellesmere Land, Maurice Tanquary's and Harrison Hunt's reports, and lists of the expedition's sledge journeys and personnel. Illustrated from the author's own photographs.
+  file=crocker-land-1913/files/crocker-land-1913-macmillan1918-fouryears.txt
+=== crocker-land-1913-002 | track | The search for Crocker Land: Etah to 82 30 N and back, February to May 1914 | date=1914-02-12 | lat=78.317 lon=-72.633
+  creator=Donald B. MacMillan and Fitzhugh Green bibkey=macmillan1918four pages=pp. 46-101 people=["Donald Baxter MacMillan", "Fitzhugh Green", "Piugaattoq", "Ittukusuk"] tags=["crockerland,sledge,mirage,axelheiberg"]
+  desc=The whole outward and homeward route of the Crocker Land journey, from MacMillan's own narrative. Nineteen men, fifteen sledges and 165 dogs left Etah in February 1914; influenza and mumps drove them back; the second start on 10 March crossed Smith Sound, climbed the Beitstad Glacier, ran down Bay Fiord and Eureka Sound and reached Cape Thomas Hubbard on 11 April. Four men went out onto the polar pack on 14 April and turned back on 25 April, 150 miles northwest of the cape. The two fixes of 22 and 24 April are Green's observations as printed; the positions on the pack between them are interpolated along the stated course, and the camps on the Axel Heiberg coast (Hvitberget, Blaamanden, the Took-too igloo) are placed from the day's runs and are approximate. Run 2 moved Cape Thomas Hubbard from 89 deg 15 min W to 94 deg 12 min W, its true position: at the old longitude the farthest point would have lain 200 miles from the cape instead of the 150 MacMillan gives, and the waypoints on the pack were re-interpolated to match. This supersedes the summary route at greenland-inughuit-042, which placed the Beitstad Glacier west of Bay Fiord instead of east of it.
+  file=
+=== crocker-land-1913-003 | track | Ekblaw across Ellesmere and Grant Land, March to June 1915 | date=1915-03-24 | lat=78.317 lon=-72.633
+  creator=W. Elmer Ekblaw bibkey=macmillan1918four pages=pp. 333-370 people=["W. Elmer Ekblaw", "Esayoo", "E-took-a-shoo", "Oobloyah", "Arklio"] tags=["ellesmere,eurekasound,fortconger,survey,muskox"]
+  desc=The longest journey of the expedition and the one that mattered most to the map. Ekblaw's own report gives the plan as about 1,200 miles: from Etah to Cape Sabine, across Ellesmere from Beitstad Fiord to Bay Fiord, down Bay Fiord and Eureka Sound to Greely Fiord, up Greely Fiord and its tributaries, across Grant Land by Lake Hazen to Lady Franklin Bay, and home along the Greenland coast. Esayoo talked him out of the Beitstad Fiord crossing in favour of Flagler Fiord and the pass Ekblaw then named for Sverdrup. The work joined Lockwood and Brainard's survey from Lady Franklin Bay to Fosheim's and Raanes's from Jones Sound, and named Borup Fiord, Tanquary Fiord, Louise Homer Land, the Osborn Mountains, Cape James and Mount Bayley. Ekblaw gives dates and place names but few coordinates; the positions here are taken from the modern chart for the places he names, and dates between his fixed points are approximate.
+  file=
+=== crocker-land-1913-004 | track | MacMillan to King Christian Island and North Cornwall, March to May 1916 | date=1916-03-22 | lat=78.317 lon=-72.633
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=pp. 223-260 people=["Donald Baxter MacMillan", "Ak-kom-mo-ding-wa", "Noo-ka-ping-wa", "Arklio", "E-took-a-shoo", "Panikpah"] tags=["queenelizabethislands,sledge,survey,kingchristian,cornwall"]
+  desc=The expedition's second long western journey, and the one that reached farthest into the Queen Elizabeth Islands. Sherard Osborn had reported land thirty miles northwest of Bathurst Island in April 1853 and called it Finlay Land; Isachsen and Hassel of the Sverdrup expedition had seen King Christian Island from Ellef Ringnes in April 1901; geographers had made the two one land of some 3,000 square miles. MacMillan's orders were to encircle, map and explore it. He crossed Smith Sound, Ellesmere by Flagler Pass, Eureka Sound and the Sverdrup Islands to King Christian Island, then turned back east by Cornwall Island, where no outsider had landed since Belcher in 1852, naming McLeod Head and charting new islands off its south shore. Twelve hundred miles in eight weeks. The dates and the day's runs are MacMillan's; positions between the named places are approximate, and Bjornesundet, Ulvefjorden and Cape Southwest are placed from Sverdrup's names on the modern chart.
+  file=
+=== crocker-land-1913-005 | quote | 'We have it!' | date=1914-04-21 | lat=81.83 lon=-102.0
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=p. 80 people=["Fitzhugh Green", "Donald Baxter MacMillan"] tags=["crockerland,mirage"]
+  desc=Green was no sooner out of the igloo than he came running back, calling in through the door, "We have it!" Following Green, we ran to the top of the highest mound. There could be no doubt about it. Great heavens! what a land! Hills, valleys, snow-capped peaks extending through at least one hundred and twenty degrees of the horizon.
+  file=
+=== crocker-land-1913-006 | quote | 'We were convinced that we were in pursuit of a will-o'-the-wisp' | date=1914-04-24 | lat=82.5 lon=-108.367
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=p. 81 people=[] tags=["crockerland,mirage"]
+  desc=Observations on these two days put us ahead of our dead-reckoning in latitude 82 deg 30 min, longitude 108 deg 22 min, 150 miles due northwest from Cape Thomas Hubbard. We had not only reached the brown spot on the map, but we were thirty miles inland! You can imagine how earnestly we scanned every foot of that horizon - not a thing in sight, not even our almost constant traveling companion, the mirage.
+  file=
+=== crocker-land-1913-007 | quote | 'Peary, June 28, 1906' | date=1914-04-29 | lat=81.37 lon=-94.2
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=p. 87 people=[] tags=["peary,capethomashubbard,record"]
+  desc=The last was mounted, revealing, outlined against the blue sky, a large well-built cairn enveloped in a blanket of snow. There was a short stick projecting from the top, and at the base was a cocoa-tin containing a piece of the American flag and the very brief record, "Peary, June 28, 1906." We replaced this with a small silk flag and a record, also a duplicate of the Peary record.
+  file=
+=== crocker-land-1913-008 | quote | 'A mirage or loom of the sea ice' | date=1914-04-29 | lat=81.37 lon=-94.2
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=p. 88 people=[] tags=["crockerland,mirage"]
+  desc=Yes, there it was! It could even be seen without a glass, extending from southwest true to north-northeast. Our powerful glasses, however, brought out more clearly the dark background in contrast with the white, the whole resembling hills, valleys, and snow-capped peaks to such a degree that, had we not been out on the frozen sea for 150 miles, we would have staked our lives upon its reality. Our judgment then, as now, is that this was a mirage or loom of the sea ice.
+  file=
+=== crocker-land-1913-009 | quote | Peary's own words on the discovery of Crocker Land, 1906 | date=1906-06 | lat=81.37 lon=-94.2
+  creator=Robert E. Peary, quoted by MacMillan bibkey=macmillan1918four pages=p. 81, quoting Nearest the Pole people=["Robert Edwin Peary"] tags=["peary,crockerland"]
+  desc=North stretched the well-known ragged surface of the polar pack, and northwest it was with a thrill that my glasses revealed the faint white summits of a distant land which my Eskimos claimed to have seen as we came along from the last camp.
+  file=
+=== crocker-land-1913-010 | quote | Ekblaw names Sverdrup Pass on Easter Sunday | date=1915-04-05 | lat=79.13 lon=-79.75
+  creator=W. Elmer Ekblaw bibkey=macmillan1918four pages=p. 342 people=["W. Elmer Ekblaw", "Esayoo"] tags=["ellesmere,sverdruppass,naming"]
+  desc=Never in all my Arctic experience have I been so thrilled, so excited, so exhilarated as I was during our drive up the valley to the pass, that glorious Easter Sunday... I could have hugged Esayoo for guiding me by this pass. I named the gateway Sverdrup Pass, in honor of the stalwart old Norwegian explorer who had first seen it.
+  file=
+=== crocker-land-1913-011 | quote | Coffee in Greely's kitchen at Fort Conger, 1915 | date=1915-05-30 | lat=81.7333 lon=-64.75
+  creator=W. Elmer Ekblaw bibkey=macmillan1918four pages=p. 362 people=["W. Elmer Ekblaw", "Esayoo"] tags=["fortconger,greely"]
+  desc=We camped there one night, boiling our meat and tea on the old Army Range No. 1 which still stands in good condition, though rusty, in the kitchen, the only part left of the headquarters' house. We made excellent coffee from some we found in a sealed tin in the old kitchen; strange to say, it retained its aroma fresh and strong; we enjoyed it very much, and when we left, Esayoo took several pounds with him.
+  file=
+=== crocker-land-1913-012 | quote | 'The head of the fjord had not changed one jot, one tittle' | date=1915-05-16 | lat=80.9 lon=-77.5
+  creator=W. Elmer Ekblaw bibkey=macmillan1918four pages=p. 354 people=[] tags=["greelyfiord,lockwood,survey"]
+  desc=The head of the fjord had not changed one jot, one tittle, so far as we could tell by comparing Lockwood's excellent sketches which I carried with me, with the view that stretched before us; every dark cliff, every patch of snow, every gully in the slopes, appeared unchanged.
+  file=
+=== crocker-land-1913-013 | quote | 'To old Esayoo I am glad to give the lion's share of the credit' | date=1915-06-09 | lat=78.317 lon=-72.633
+  creator=W. Elmer Ekblaw bibkey=macmillan1918four pages=p. 370 people=["Esayoo", "E-took-a-shoo"] tags=["inughuit,credit"]
+  desc=To old Esayoo I am glad to give the lion's share of the credit. Throughout the trip he had been cheerful, helpful, interested; his good sense and judgment had kept us out of trouble... He is a thorough gentleman, a boon companion of the trail. To E-took-a-shoo I wish to give due credit, too. His unfailing good humor, his rare hunting ability, and his excellent driving, all had contributed immeasurably to our success.
+  file=
+=== crocker-land-1913-014 | quote | 'Smith Sound had broken up!' | date=1916-05-14 | lat=78.72 lon=-74.4
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=p. 258 people=[] tags=["smithsound,ice,greely"]
+  desc=On the 14th we pitched our tent on the ice in front of Greely's Starvation Camp of 1884... How many times I have wished that one Etah Eskimo could have crossed Smith Sound to that camp of dying men! He might have saved the lives of the whole party. Heading east, we heard the sound of waves beating against the edge of the ice. Stretching north as far as the eye could see was open water. Smith Sound had broken up!
+  file=
+=== crocker-land-1913-015 | quote | 'Is that you, Bob?' | date=1917-08-01 | lat=78.317 lon=-72.633
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=p. 313 people=["Robert Bartlett", "Donald Baxter MacMillan"] tags=["neptune,rescue"]
+  desc=A ringing command from her bridge sounded very familiar. "Is that you, Bob?" I yelled. "Of course! Who in hell do you think it is?" was the characteristic reply... "How's the war?" was my first question. "The war is still on. America has joined the Allies."
+  file=
+=== crocker-land-1913-016 | image | King of the North | date= | lat=79.0 lon=-83.5
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=frontispiece people=[] tags=["muskox,photograph,plate"]
+  desc=The frontispiece of Four Years in the White North: a bull musk-ox at bay on the rock of the interior, photographed by MacMillan. Musk-oxen fed the sledge parties on every journey west of Smith Sound; the expedition killed them by the herd on Ellesmere and Axel Heiberg.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n7.jpg
+=== crocker-land-1913-017 | image | S.S. "Diana" Loading at Brooklyn Navy-yard | date=1913-07 | lat=40.7002 lon=-73.9709
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 12 people=[] tags=["ship,diana,outfit,plate"]
+  desc=The Diana taking in the expedition's stores at the Brooklyn Navy Yard before sailing on 2 July 1913. She struck at Barge Point, Labrador, on 16 July and was condemned at Battle Harbour; the expedition went on north in the Erik.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n39.jpg
+=== crocker-land-1913-018 | image | The "Erik" Landing Supplies at Provision Point, Etah | date=1913-08 | lat=78.32 lon=-72.62
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 16 people=[] tags=["etah,erik,landing,plate"]
+  desc=The sealing steamer Erik putting the expedition's stores ashore at Provision Point in Etah harbour. MacMillan had meant to winter on the Ellesmere shore; the ice in Smith Sound would not let him cross, and the stores were landed here instead on 26 August 1913.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n45.jpg
+=== crocker-land-1913-019 | image | Iceberg in Melville Bay | date=1913-08 | lat=75.6 lon=-60.5
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 18 people=[] tags=["iceberg,melville-bay,plate"]
+  desc=An iceberg in Melville Bay on the passage north. The printed caption reads: "Born in the ice far North they drift to death in southern seas."
+  file=crocker-land-1913/files/crocker-land-1913-plate-n48.jpg
+=== crocker-land-1913-020 | image | Wherever Mother Goes, Baby Goes / A Good Wife is a Good Chewer | date= | lat=78.317 lon=-72.633
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 20 people=[] tags=["inughuit,clothing,women,plate"]
+  desc=Two photographs on one plate: an Inughuit mother with her child in the hood of her amaut, and a woman chewing a boot sole. MacMillan's caption for the second is "A Good Wife is a Good Chewer. Boot Soles are a Good Test of Teeth."
+  file=crocker-land-1913/files/crocker-land-1913-plate-n52.jpg
+=== crocker-land-1913-021 | image | Brother John's Glacier and Alida Lake | date= | lat=78.47 lon=-72.87
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 24 people=[] tags=["glacier,geology,etah,plate"]
+  desc=Brother John's Glacier above Etah with Alida Lake at its foot, named by Isaac Israel Hayes in 1861. Ekblaw and Tanquary worked on the glacier and the lake through the summers of 1914 and 1915.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n58.jpg
+=== crocker-land-1913-022 | map | Circumpolar Relief Map Showing the Sledge Track and Field of Work of the Crocker Land Expedition | date= | lat=80.0 lon=-85.0
+  creator= bibkey=macmillan1918four pages=facing p. 28 people=[] tags=["map,route,plate"]
+  desc=A circumpolar relief map, reproduced by courtesy of Popular Science Monthly, showing the expedition's sledge routes from Etah across Ellesmere and Axel Heiberg to the polar sea and the western islands, and the ground where Crocker Land was supposed to lie.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n65.jpg
+=== crocker-land-1913-023 | map | Field of Work of the Crocker Land Expedition | date= | lat=79.5 lon=-80.0
+  creator= bibkey=macmillan1918four pages=facing p. 30 people=[] tags=["map,route,plate"]
+  desc=The expedition's own route map: "Black line indicates sledge routes of various trips." It carries Etah, Cape Alexander, Parker Snow Bay, Saunders Island, Inglefield Gulf, Bowdoin Fiord, Clarence Head, Jones Sound, Bache Peninsula, Bay Fiord, Eureka Sound, Greely Fiord, Lake Hazen and Fort Conger, and shows the western journeys to King Christian Island.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n68.jpg
+=== crocker-land-1913-024 | image | Christmas Dinner, 1914, at Borup Lodge | date=1914-12-25 | lat=78.317 lon=-72.633
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 32 people=["Harrison J. Hunt", "Fitzhugh Green", "W. Elmer Ekblaw", "Maurice Cole Tanquary", "Jerome Lee Allen", "Jonathan C. Small"] tags=["borup-lodge,christmas,members,plate"]
+  desc=Left to right: Hunt, Green, Ekblaw, Tanquary, Allen, Mene (Minik Wallace) and Small at the Christmas table in Borup Lodge. MacMillan, who took the photograph, is not in it.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n73.jpg
+=== crocker-land-1913-025 | image | Shoo-e-ging-wa and Her Pet | date= | lat=78.317 lon=-72.633
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 36 people=[] tags=["inughuit,portrait,plate"]
+  desc=Shoo-e-ging-wa of the Etah district with a pup in her arms.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n78.jpg
+=== crocker-land-1913-026 | image | The Bright, Snappy Face of an Eskimo Child | date= | lat=78.317 lon=-72.633
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 40 people=[] tags=["inughuit,children,portrait,plate"]
+  desc=An Inughuit child in fox-skin clothing at Etah, holding a pup.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n84.jpg
+=== crocker-land-1913-027 | image | Snow is an Excellent Non-conductor | date= | lat=78.317 lon=-72.633
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 44 people=[] tags=["borup-lodge,etah,plate"]
+  desc=Borup Lodge banked to the eaves in drifted snow at Etah. MacMillan's point is a practical one: the drift was the house's insulation, and the men cut their entrance tunnel through it.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n90.jpg
+=== crocker-land-1913-028 | image | No Plates or Forks in the North / Narwhal | date= | lat=78.317 lon=-72.633
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 48 people=[] tags=["inughuit,food,narwhal,plate"]
+  desc=Two photographs: a man eating from a held joint, "the meat is measured in the mouth and cut at the lips"; and a narwhal on the ice, "the raw skin is prized as a delicacy... from the thread meat of the back the Eskimo women obtain sinew for sewing."
+  file=crocker-land-1913/files/crocker-land-1913-plate-n97.jpg
+=== crocker-land-1913-029 | image | Up the Face of the Beitstadt Glacier | date=1914-03-20 | lat=79.0 lon=-77.3
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 52 people=[] tags=["sledging,beitstad,ellesmere,plate"]
+  desc=Sledges being hauled up the Beitstad Glacier on the way west across Ellesmere, 20 March 1914. MacMillan's caption: "We perspired freely at -50 degrees Fahrenheit." The party crossed the summit at 4,750 feet; Ekblaw froze his feet here and was sent back to Etah with Kai-o-ta.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n102.jpg
+=== crocker-land-1913-030 | image | When is He Coming with the Grub? | date=1914-03 | lat=78.95 lon=-83.6
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 54 people=[] tags=["dogs,sledging,plate"]
+  desc=A dog team on the sea ice of Bay Fiord on the westward march of March 1914.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n106.jpg
+=== crocker-land-1913-031 | image | Herd of Musk-oxen | date= | lat=79.0 lon=-83.5
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 62 people=[] tags=["muskox,hunting,plate"]
+  desc=A herd of musk-oxen on the Ellesmere uplands. Musk-ox meat was what made the long journeys possible: Ekblaw's party of 1915 killed twenty-one at the mouth of Greely Fiord alone and counted more than two hundred from Mount Hovey.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n116.jpg
+=== crocker-land-1913-032 | image | Four of Our Faithful Natives Who Deserve the Credit for Our Ten Thousand Miles of Sledge-work | date= | lat=78.317 lon=-72.633
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 64 people=["E-took-a-shoo", "Noo-ka-ping-wa", "Ak-pood-a-shah-o", "Arklio"] tags=["inughuit,portrait,sledging,plate"]
+  desc=Four portraits on one plate, named in the printed caption: E-took-a-shoo, Noo-ka-ping-wa, Ak-pood-a-shah-o and Arklio. MacMillan's own caption gives them the credit for the expedition's sledging.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n121.jpg
+=== crocker-land-1913-033 | image | Constructing a Snow House / Our Camp at Cape Isabella, May 1917 | date=1917-05 | lat=78.35 lon=-74.25
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 68 people=[] tags=["igloo,camp,cape-isabella,plate"]
+  desc=Two photographs: an igloo going up, "in about one hour our home for the night, consisting of some fifty blocks, will be ready for occupancy"; and the camp at Cape Isabella in May 1917, with the fur coats stowed on top of the igloo out of reach of stray dogs.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n126.jpg
+=== crocker-land-1913-034 | image | Held Up by Pressure Only | date=1914-04 | lat=81.6 lon=-96.8
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 76 people=[] tags=["polar-pack,ice,plate"]
+  desc=Rafted pressure ice on the polar pack northwest of Cape Thomas Hubbard, April 1914. It was ice like this that made the Inughuit warn MacMillan the floe was moving under him.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n136.jpg
+=== crocker-land-1913-035 | image | Stretch of Rough Ice on Polar Sea / Last Camp on Polar Sea | date=1914-04 | lat=82.5 lon=-108.367
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 78 people=[] tags=["polar-pack,camp,farthest,plate"]
+  desc=Two photographs from the farthest north of the 1914 journey: rough ice on the polar sea, "such work smashes sledges and wears out men and dogs"; and the last camp, at about 82 deg 30 min N, 108 deg 22 min W.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n141.jpg
+=== crocker-land-1913-036 | image | Fourth Camp on Polar Sea | date=1914-04-20 | lat=81.77 lon=-100.4
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 84 people=[] tags=["polar-pack,camp,plate"]
+  desc=The fourth camp out from Cape Thomas Hubbard on the moving pack, about seventy-eight miles from land.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n148.jpg
+=== crocker-land-1913-037 | image | Peary's Record, Cairn and Flag at Cape Thomas Hubbard | date=1914-04-29 | lat=81.37 lon=-94.2
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 86 people=[] tags=["peary,cairn,record,cape-thomas-hubbard,plate"]
+  desc=Three photographs on one plate: the record found with the flag on the summit of Cape Thomas Hubbard, reading "Peary, June 28, 1906"; Peary's cairn on the summit; and the portion of the American flag Peary left there, found by MacMillan in May 1914. Peary had reported Crocker Land from this spot.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n152.jpg
+=== crocker-land-1913-038 | image | Eskimo Drawings of Different Animals | date= | lat=78.317 lon=-72.633
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 92 people=[] tags=["inughuit,drawings,art,plate"]
+  desc=Drawings made for the expedition by Inughuit at Etah: caribou, musk-oxen, raven, polar bear, blue fox, Arctic hare, ptarmigan, and a sequence MacMillan labelled "An Arctic Tragedy in Seven Acts."
+  file=crocker-land-1913/files/crocker-land-1913-plate-n161.jpg
+=== crocker-land-1913-039 | image | Burgomaster or Glaucous Gull (Larus hyperboreus) | date= | lat=78.32 lon=-72.7
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 104 people=[] tags=["birds,natural-history,plate"]
+  desc=A glaucous gull on the cliffs near Etah. Ekblaw's bird work through the four years is the expedition's most durable science.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n174.jpg
+=== crocker-land-1913-040 | image | Netting Dovekies at the Rate of One a Minute | date= | lat=78.32 lon=-72.65
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 108 people=[] tags=["dovekie,hunting,food,plate"]
+  desc=Netting little auks with a long-handled net on the talus slopes above Etah. The dovekie colonies fed the settlement and the expedition through the summer.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n181.jpg
+=== crocker-land-1913-041 | image | The Niagara of North Greenland | date= | lat=78.32 lon=-72.7
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 112 people=[] tags=["etah,waterfall,plate"]
+  desc=The waterfall above Etah: "the sound of falling water is heard up and down the coast during the warm months of June, July, and August."
+  file=crocker-land-1913/files/crocker-land-1913-plate-n186.jpg
+=== crocker-land-1913-042 | image | A Lonely Grave in the Far North / Port Foulke | date= | lat=78.28 lon=-72.85
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 120 people=[] tags=["grave,sonntag,hayes,port-foulke,plate"]
+  desc=Two photographs: the grave of August Sonntag, astronomer of the Kane expedition of 1853-55 and of the Hayes expedition of 1860-61, who died on the ice in December 1860; and Port Foulke, the winter quarters of the Hayes expedition, a few miles from Etah.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n196.jpg
+=== crocker-land-1913-043 | image | Eight Exposures at Twenty-minute Intervals of Midnight Sun in Smith Sound | date= | lat=78.333 lon=-73.5
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 144 people=[] tags=["midnight-sun,photography,smith-sound,plate"]
+  desc=Eight exposures on one plate, the first at 11 p.m. on 25 July and the last at 1.20 a.m. on 26 July, taken at 78 deg 20 min N in Smith Sound. MacMillan's note: "By this method the land and water were photographed eight times on the same plate. Note slight curve or dip which increases as one proceeds southward." The year is not given on the plate.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n222.jpg
+=== crocker-land-1913-044 | image | A Fine Day, Good Going, and a Good Team | date= | lat=78.8 lon=-70.9
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 148 people=[] tags=["sledging,dogs,plate"]
+  desc=A team running on good ice on the North Greenland shore.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n228.jpg
+=== crocker-land-1913-045 | image | The Kane Record and the Arrow at Fern Rock | date=1915-05 | lat=78.62 lon=-70.75
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 152 people=[] tags=["kane,record,rensselaer-harbour,plate"]
+  desc=Two photographs from the visit to Rensselaer Harbour: the Kane record found on the North Greenland shore, with the K as Kane carved it in 1853; and the arrow carved on the summit of Fern Rock by the Kane expedition to mark a glass jar hidden in a crevice. MacMillan went to Rensselaer Harbour in May 1915 to look for Kane's caches sixty years after the Advance was abandoned.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n241.jpg
+=== crocker-land-1913-046 | image | Not a Dog Dared to Go Near | date=1915-05 | lat=78.7 lon=-70.5
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 160 people=[] tags=["polar-bear,hunting,plate"]
+  desc=A polar bear at bay on the North Greenland shore, holding off the whole team.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n244.jpg
+=== crocker-land-1913-047 | image | With the Feel of the Warm Sun on His Body He Gurgles with Delight / The End of the Day | date= | lat=78.317 lon=-72.633
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 166 people=[] tags=["inughuit,children,plate"]
+  desc=Two photographs of Inughuit children at Etah in summer.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n252.jpg
+=== crocker-land-1913-048 | image | Flight of Dovekies | date= | lat=78.32 lon=-72.65
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 168 people=[] tags=["dovekie,birds,plate"]
+  desc=A cloud of little auks over the slopes at Etah.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n256.jpg
+=== crocker-land-1913-049 | image | Head of a Two-thousand-pound Walrus | date= | lat=78.3 lon=-73.0
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 198 people=[] tags=["walrus,hunting,plate"]
+  desc=A walrus head on the ice. Walrus meat was the winter dog food of the settlement and of the expedition.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n288.jpg
+=== crocker-land-1913-050 | image | Eskimo Kayak / The Ah-wa-ta | date= | lat=78.317 lon=-72.633
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 230 people=[] tags=["kayak,hunting,technology,plate"]
+  desc=Two photographs: a kayak, "wonderfully adapted for the purpose of harpooning walrus, narwhal, and seal"; and the ah-wa-ta, the inflated skin of a little ringed seal, attached to the harpoon line to support the float and show where the animal is.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n322.jpg
+=== crocker-land-1913-051 | image | Al-ning-wa, the Wife of Arklio | date= | lat=77.45 lon=-71.5
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 242 people=["Al-ning-wa", "Arklio"] tags=["inughuit,portrait,women,plate"]
+  desc=A portrait of Al-ning-wa of Murchison Sound, wife of Arklio, one of the four hunters MacMillan credited with the expedition's sledging.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n336.jpg
+=== crocker-land-1913-052 | image | Nest of Eider Duck / Four Thousand Fresh Eggs | date= | lat=78.36 lon=-72.9
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 252 people=[] tags=["eider,eggs,food,natural-history,plate"]
+  desc=Two photographs: an eider's nest, and the eggs taken from the Eider Duck Islands and the other holms near Littleton Island. Four thousand eggs went into the expedition's stores in a season.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n349.jpg
+=== crocker-land-1913-053 | image | The Rare Eggs of the Knot (Tringa canutus) / The Knot Upon Nest | date= | lat=78.32 lon=-72.7
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 264 people=["W. Elmer Ekblaw"] tags=["birds,ekblaw,natural-history,plate"]
+  desc=Two photographs by W. Elmer Ekblaw of the knot's nest and eggs. The plate carries the line "Photo by Ekblaw." Ekblaw was among the first to describe the knot's high-Arctic breeding; the printed caption notes that on the nest the bird "is almost impossible of detection."
+  file=crocker-land-1913/files/crocker-land-1913-plate-n362.jpg
+=== crocker-land-1913-054 | image | An Ice-cold Bath Has No Terrors Whatever for Nannook / He Very Kindly Ascended the Berg to be Photographed | date= | lat=78.3 lon=-72.6
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 270 people=[] tags=["polar-bear,plate"]
+  desc=Two photographs of a polar bear in the water and on an iceberg.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n371.jpg
+=== crocker-land-1913-055 | image | Our Fourth and Last Christmas | date=1916-12-25 | lat=78.317 lon=-72.633
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 278 people=["George Comer", "Edmund Otis Hovey", "Jonathan C. Small", "Donald Baxter MacMillan"] tags=["borup-lodge,christmas,members,plate"]
+  desc=Christmas at Borup Lodge, 1916, with only two of the original personnel remaining. Left to right: Comer, Hovey, Small, MacMillan.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n380.jpg
+=== crocker-land-1913-056 | image | The Cloud Effects of the Midnight Sun Over Cape Sabine | date= | lat=78.75 lon=-74.4
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 282 people=[] tags=["cape-sabine,midnight-sun,plate"]
+  desc=Midnight sun and cloud over Cape Sabine, across Smith Sound from Etah.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n386.jpg
+=== crocker-land-1913-057 | image | Sunset Over Cape Sabine / Glacier a Few Miles North of Cape York | date= | lat=78.75 lon=-74.4
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 286 people=[] tags=["cape-sabine,cape-york,glacier,plate"]
+  desc=Two photographs: sunset over Cape Sabine, and a glacier front a few miles north of Cape York on the Greenland side of Melville Bay.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n393.jpg
+=== crocker-land-1913-058 | image | The Greely Starvation Hut and Peary's Old Hut at Cape Sabine | date=1917-05 | lat=78.72 lon=-74.4
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 294 people=[] tags=["greely,peary,cape-sabine,ruins,plate"]
+  desc=Two photographs at Payer Harbour: the remains of the hut at Camp Sabine where eighteen of Greely's twenty-five men died in the winter of 1883-84, and Peary's hut of 1900-02 a little further along the shore. MacMillan's parties camped at Payer Harbour on every crossing of Smith Sound.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n402.jpg
+=== crocker-land-1913-059 | image | Sledging on the Ice-foot in the Late Spring | date=1917-05 | lat=78.0 lon=-77.0
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 300 people=[] tags=["ice-foot,sledging,ellesmere,plate"]
+  desc=Two photographs from the last journey, along the Ellesmere coast from Cape Sabine to Clarence Head in May 1917: sledging on the ice-foot, and one of the "many dangerous corners on a narrow ice-foot which demand most careful work to prevent a drop into the sea."
+  file=crocker-land-1913/files/crocker-land-1913-plate-n411.jpg
+=== crocker-land-1913-060 | image | The Relief-ship Neptune in Baffin Bay and at Anchor in Etah Harbour | date=1917-08 | lat=78.32 lon=-72.63
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 304 people=[] tags=["neptune,relief-ship,etah,plate"]
+  desc=Two photographs of the SS Neptune, the fourth ship sent for the expedition and the first to reach it: in the ice of Baffin Bay, and at anchor in Etah harbour in August 1917.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n417.jpg
+=== crocker-land-1913-061 | image | It Was Hard to Bid Them Good-by / A Real Dog | date=1917-08-02 | lat=78.317 lon=-72.633
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 308 people=[] tags=["etah,departure,dogs,plate"]
+  desc=Two photographs made as the expedition left Etah on 2 August 1917 after four years: the Inughuit on the shore, and one of the dogs.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n422.jpg
+=== crocker-land-1913-062 | image | E-took-a-shoo Listening at the Breathing-hole of a Seal / Tracks of the Polar Bear | date= | lat=78.4 lon=-73.5
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 312 people=["E-took-a-shoo"] tags=["inughuit,sealing,hunting,plate"]
+  desc=Two photographs: E-took-a-shoo waiting motionless at a seal's breathing hole with the harpoon ready, and bear tracks in the snow.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n428.jpg
+=== crocker-land-1913-063 | image | The Old Whaler's Lookout at Disco / The End of the Famous "Fox" | date=1917-08 | lat=69.247 lon=-53.533
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 318 people=[] tags=["disko,whaling,fox,mcclintock,plate"]
+  desc=Two photographs made on the voyage home: the whalers' lookout above Qeqertarsuaq (Godhavn) on Disko, and the hulk of the Fox, McClintock's ship of the 1857-59 Franklin search, ending her days as a Greenland coal hulk.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n436.jpg
+=== crocker-land-1913-064 | image | Arctic Poppy (Papaver radicatum) and Arnica (Arnica alpina) | date= | lat=78.32 lon=-72.65
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=facing p. 400 people=["W. Elmer Ekblaw"] tags=["botany,flora,ekblaw,plate"]
+  desc=Arctic poppy and arnica, from the botanical appendix. Ekblaw collected the flora of the Etah district and of the Ellesmere routes through four seasons.
+  file=crocker-land-1913/files/crocker-land-1913-plate-n520.jpg
+=== crocker-land-1913-065 | quote | 'American geographers, at least, know' | date=1907 | lat=82.5 lon=-104.0
+  creator=Edwin Swift Balch bibkey=balch1907crocker pages=p. 739 people=[] tags=["crocker-land,mirage,geography"]
+  desc=But American geographers, at least, know - even if others apparently do not as yet - that there is land in the region west of Axel Heiberg Land and Grant Land; namely, Crocker Land, discovered by the greatest of Arctic explorers and the greatest of sledgers, Robert E. Peary, who marks it on his map in Nearest the Pole as lying in about north latitude 82 deg. 30 min.-83 deg. 20 min., and west longitude 103 deg.-105 deg. The position is where the artifact is pinned; it is where MacMillan stood in April 1914 and saw nothing.
+  file=
+=== crocker-land-1913-066 | quote | 'My heart leaped the intervening miles of ice' | date=1906-06-28 | lat=81.35 lon=-89.25
+  creator=Robert E. Peary bibkey=balch1907crocker pages=p. 740, quoting Nearest the Pole p. 207 people=[] tags=["peary,crocker-land,cape-thomas-hubbard"]
+  desc=The clear day greatly favored my work in taking a round of angles, and with the glasses I could make out, apparently a little more distinctly, the snow-clad summits of the distant land in the northwest, above the ice horizon. My heart leaped the intervening miles of ice as I looked longingly at this land, and in fancy I trod its shores and climbed its summits, even though I knew that that pleasure could only be for another in another season.
+  file=
+=== crocker-land-1913-067 | quote | Nansen: 'there is, in fact, no known land in the north' | date=1906 | lat=83.0 lon=-100.0
+  creator=Fridtjof Nansen bibkey=balch1907crocker pages=p. 739, quoting The Geographical Journal, November 1906, p. 470 people=[] tags=["nansen,geography,dispute"]
+  desc=The northward extension of Greenland and its islands has been settled by Peary, new northern lands of the American Arctic Archipelago have been explored by Sverdrup... There is, in fact, no known land in the north whose northern coasts are not now explored. Balch quoted this to attack it. Nansen was right and Balch was wrong, and it took the Crocker Land Expedition four years to prove it.
+  file=
+=== crocker-land-1913-068 | text | Balch, 'Crocker Land' (1907): the case that the land was there | date=1907 | lat=82.5 lon=-104.0
+  creator=Edwin Swift Balch bibkey=balch1907crocker pages= people=[] tags=["crocker-land,geography,dispute"]
+  desc=Two pages written the year after Peary's sighting, quoting Peary's own journal for 24 and 28 June 1906 against Nansen's claim that no unexplored northern coasts remained. It fixes Crocker Land on the map at about 82 deg 30 min to 83 deg 20 min N, 103 to 105 deg W - the ground MacMillan crossed in April 1914 and found to be open pack. The full OCR text is beside the PDF as crocker-land-1913-balch1907-crockerland.txt.
+  file=crocker-land-1913/files/crocker-land-1913-balch1907-crockerland.pdf
+=== crocker-land-1913-069 | text | The American Geographical Society announces the Crocker Land Expedition (1913) | date=1913 | lat=40.78 lon=-73.97
+  creator= bibkey=ags1913crocker pages= people=[] tags=["prospectus,ags,funding"]
+  desc=The Society's own notice of the expedition it helped to finance, printed as the ship was fitting out.
+  file=crocker-land-1913/files/crocker-land-1913-ags1913-crockerlandexpedition.pdf
+=== crocker-land-1913-070 | text | Science announces the Crocker Land Expedition (15 March 1912) | date=1912-03-15 | lat=40.78 lon=-73.97
+  creator= bibkey=science1912crocker pages= people=[] tags=["prospectus,amnh,ags"]
+  desc=The prospectus a year before sailing: the American Museum of Natural History and the American Geographical Society announce an expedition to find and map Crocker Land.
+  file=crocker-land-1913/files/crocker-land-1913-science1912-plan.pdf
+=== crocker-land-1913-071 | text | Science on the expedition's departure (25 July 1913) | date=1913-07-25 | lat=40.78 lon=-73.97
+  creator= bibkey=science1913crocker pages= people=[] tags=["departure,amnh"]
+  desc=Printed nine days after the Diana went on the rocks at Barge Point, and before the news had reached New York.
+  file=crocker-land-1913/files/crocker-land-1913-science1913-departure.pdf
+=== crocker-land-1913-072 | text | Science on the Crocker Land Expedition (15 June 1917) | date=1917-06-15 | lat=40.78 lon=-73.97
+  creator= bibkey=science1917crocker pages= people=[] tags=["relief,amnh"]
+  desc=Written while the fourth relief ship was fitting out and the party had been four years at Etah with three ships failed behind them.
+  file=crocker-land-1913/files/crocker-land-1913-science1917-return.pdf
+=== crocker-land-1913-073 | text | Fitzhugh Green's manuscript journal of the Crocker Land Expedition | date=1913 | lat=78.317 lon=-72.633
+  creator=Fitzhugh Green bibkey=green1913journal pages= people=[] tags=["journal,manuscript,green"]
+  desc=The physicist's own journal, digitised by the American Museum. Green was MacMillan's companion on the polar-sea march of April 1914 and the man who shot Piugaattoq on 5 May 1914; his account of that day is held under greenland-inughuit and is not retold here.
+  file=crocker-land-1913/files/crocker-land-1913-green1913-journal.txt
+=== crocker-land-1913-074 | text | Jerome Lee Allen's journal 'Q', 1913-1914 | date=1913 | lat=78.317 lon=-72.633
+  creator=Jerome Lee Allen bibkey=allen1913journal pages= people=[] tags=["journal,manuscript,wireless"]
+  desc=The wireless operator's journal of the first year at Borup Lodge. Allen's radio never raised a station: the aerial went up in 1913 and the expedition heard nothing from the world for four years.
+  file=crocker-land-1913/files/crocker-land-1913-allen1913-journal.txt
+=== crocker-land-1913-075 | text | Edmund Otis Hovey's journal, 1915-1916 | date=1915 | lat=76.07 lon=-70.0
+  creator=Edmund Otis Hovey bibkey=hovey1915journal pages= people=[] tags=["journal,manuscript,cluett,relief"]
+  desc=Hovey led the first relief attempt in the schooner George B. Cluett in 1915 and was frozen in with her at Parker Snow Bay; the journal covers that winter and the year at Etah that followed. It is pinned at Parker Snow Bay, where the ship lay.
+  file=crocker-land-1913/files/crocker-land-1913-hovey1915-journal.txt
+=== crocker-land-1913-076 | text | Harrison J. Hunt's field notebook, 1913-1915 | date=1913 | lat=78.317 lon=-72.633
+  creator=Harrison J. Hunt bibkey=hunt1913fieldnotebook pages= people=[] tags=["journal,manuscript,medicine"]
+  desc=The surgeon's notebook. Hunt treated the influenza and mumps that drove the whole party back to Etah in March 1914 and made the winter sledge journey to Upernavik and back in 1914-15 to get word out.
+  file=crocker-land-1913/files/crocker-land-1913-hunt1913-fieldnotebook1.txt
+=== crocker-land-1913-077 | text | MacMillan's lists of the expedition's photographs | date=1913 | lat=78.317 lon=-72.633
+  creator=Donald B. MacMillan bibkey=macmillan1913photolists pages= people=[] tags=["photography,finding-aid"]
+  desc=MacMillan's own numbered lists of the expedition's negatives: the finding aid to the photographic record from which the plates of Four Years in the White North were chosen. Many negatives listed here were never printed in the book and are still at the American Museum.
+  file=crocker-land-1913/files/crocker-land-1913-macmillan1913-photolists.pdf
+=== crocker-land-1913-078 | track | The voyage north: Brooklyn to Etah in the Diana and the Erik, July-August 1913 | date=1913-07-05 | lat=40.7 lon=-73.971
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=pp. 1-36 people=["Donald Baxter MacMillan", "W. Elmer Ekblaw", "Maurice Cole Tanquary", "Harrison J. Hunt", "Fitzhugh Green", "Jerome Lee Allen", "Jonathan C. Small"] tags=["voyage,diana,erik,1913"]
+  desc=The outward voyage, from MacMillan's own dates. The Diana was to land the expedition at the head of Flagler Bay on the Ellesmere side; she struck at Barge Point in Labrador a little after midnight on 16 July, was condemned at Battle Harbour, and the sealer Erik was taken in her place from Job Brothers at St John's. The Erik reached Etah on 18 August, could not force Smith Sound in eight days of trying, and landed the stores at Provision Point instead - which is why the expedition spent four years in Greenland rather than on Ellesmere Island. Positions for the Labrador and Baffin Bay legs are placed from the named landfalls and are good to a few tens of miles.
+  file=
+=== crocker-land-1913-079 | track | The first relief: the George B. Cluett, 1915-1916 | date=1915-09-15 | lat=76.55 lon=-68.8
+  creator=Edmund Otis Hovey and Charles Pickles bibkey=macmillan1918four pages=pp. 192-268 people=["Edmund Otis Hovey", "Charles Pickles", "George Comer", "Peter Freuchen", "Harrison J. Hunt"] tags=["relief,cluett,beset,hovey"]
+  desc=The first ship sent for the expedition, and the first to fail. A three-masted auxiliary schooner with a wooden hull, a disabled engine and no ice pilot aboard who knew Melville Bay, she got no nearer Etah than North Star Bay, a hundred miles short, and was frozen in at Parker Snow Bay for the winter of 1915-16. Hovey came the last hundred miles by the Danish station's power-boat and offered MacMillan a passage home; MacMillan stayed. The Cluett got out in July 1916 and sailed south on 29 July with Hovey and Hunt, leaving MacMillan, Small, Ekblaw and Allen behind. MacMillan gives few positions for her: the track is the ports and bays he names, with the outward passage from Newfoundland not detailed in any source read here.
+  file=
+=== crocker-land-1913-080 | track | The second relief: the Danmark, 1916-1917 | date=1916-09-23 | lat=55.676 lon=12.568
+  creator=Captain Hanson bibkey=macmillan1918four pages=pp. 273-274, 371 people=["W. Elmer Ekblaw", "Harrison J. Hunt", "Hanson"] tags=["relief,danmark,beset"]
+  desc=The second ship, chartered from Copenhagen, reached North Star Bay on 23 September 1916, a month too late for the ice, and lay frozen in beside the Danish station for a year. Word of her arrival did not reach Borup Lodge until 7 December, a month late. She was well found - provisioned for thirty men to 1 November 1917 - but her coal was short, and MacMillan's party would not leave their own house for her. Ekblaw and Hunt gave her up in mid-December and sledged south across Melville Bay instead. Only the two ends of her track are known; she never moved from North Star Bay between them.
+  file=
+=== crocker-land-1913-081 | track | The ship that came: the SS Neptune, Etah to Sydney, August 1917 | date=1917-08-01 | lat=78.317 lon=-72.633
+  creator=Robert Bartlett bibkey=macmillan1918four pages=pp. 306-319 people=["Robert Bartlett", "Donald Baxter MacMillan", "George Comer", "Edmund Otis Hovey", "Jonathan C. Small", "G. S. Knowlton"] tags=["relief,neptune,bartlett,homeward"]
+  desc=The third ship sent for the expedition, and the one that got through. Bartlett brought the old sealer Neptune into Foulke Fiord on 1 August 1917 and took the party off the next day; then spent twelve days working south through the worst ice of the season, with two plates torn off her bows and the pumps going day and night, before she broke into open water on 13 August. She called at Godhavn for Ekblaw, who had sledged out of Melville Bay the winter before, and reached Sydney on 24 August, where the expedition met the war for the first time. Dates are MacMillan's; the positions between Etah and Cape York are placed from the islands and capes he names and are approximate.
+  file=
+=== crocker-land-1913-082 | image | 'King of the North': the frontispiece polar bear | date=1915 | lat=78.3 lon=-72.6
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=frontispiece (scan leaf 3) people=[] tags=["crockerland,macmillan,plate"]
+  desc=The frontispiece: a polar bear standing on the ice, captioned 'King of the North - Drawn up in a dignified manner, with his white body outlined against the black hills, he looks to be - the King of the North.'
+  file=crocker-land-1913/files/crocker-land-1913-macmillan1918-l0003-king-of-the-north-bear.jpg
+=== crocker-land-1913-083 | image | The Erik landing supplies at Provision Point, Etah | date=1913-08 | lat=78.32 lon=-72.6
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=plate (scan leaf 41) people=[] tags=["crockerland,macmillan,plate"]
+  desc=The steamer Erik lying off Provision Point at Etah with boats and stores on the beach, the expedition's supplies coming ashore. Etah was the Crocker Land Expedition's base from 1913 to 1917.
+  file=crocker-land-1913/files/crocker-land-1913-macmillan1918-l0041-erik-landing-supplies-etah.jpg
+=== crocker-land-1913-084 | image | 'Wherever mother goes, baby goes, snuggled in the hood against the warm back' | date=1915 | lat=78.32 lon=-72.6
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=plate (scan leaf 48) people=[] tags=["crockerland,macmillan,plate"]
+  desc=Two photographs on one leaf. Above, a young woman with a baby riding in the hood of her amaut against her back, the caption printed beneath. Below, a family group at the mouth of a tent - a boy, two women and an older woman. Both are Inughuit of the Etah district.
+  file=crocker-land-1913/files/crocker-land-1913-macmillan1918-l0048-mother-and-baby-in-the-hood.jpg
+=== crocker-land-1913-085 | map | The Greenland coast from Cape York to Kane Basin, with the settlements named | date=1917 | lat=77.5 lon=-68.0
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=map (scan leaf 66) people=[] tags=["crockerland,macmillan,plate"]
+  desc=A detailed map of the Avanersuaq coast with every settlement of the tribe named on it - Etah, Nerke, Peteravik, Kanak, Ittibloo, Cape Alexander, Cape Parry, Saunders Island, Wolstenholme, North Star Bay, Granville Bay, Parker Snow Bay, Cape York - together with Kane Basin, Humboldt Glacier, Rensselaer Bay, Buchanan Bay and Cape Sabine on the Ellesmere side, and the expedition's 1915 tracks marked. It is the best gazetteer this archive holds of where the Inughuit actually lived in 1915, and the meteorite site is marked on it.
+  file=crocker-land-1913/files/crocker-land-1913-macmillan1918-l0066-map-greenland-coast-etah.jpg
+=== crocker-land-1913-086 | image | A girl with a puppy | date=1915 | lat=78.32 lon=-72.6
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=plate (scan leaf 76) people=[] tags=["crockerland,macmillan,plate"]
+  desc=An Inughuit girl in fur clothing holding a young sledge dog across her lap, photographed indoors against a plain ground.
+  file=crocker-land-1913/files/crocker-land-1913-macmillan1918-l0076-girl-with-puppy.jpg
+=== crocker-land-1913-087 | image | An Inughuit child | date=1915 | lat=78.32 lon=-72.6
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=plate (scan leaf 82) people=[] tags=["crockerland,macmillan,plate"]
+  desc=A full-length portrait of a child in a fox-fur coat, smiling at the camera.
+  file=crocker-land-1913/files/crocker-land-1913-macmillan1918-l0082-eskimo-child.jpg
+=== crocker-land-1913-088 | image | 'When is he coming with the grub?' | date=1915 | lat=78.5 lon=-75.0
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=plate (scan leaf 104) people=[] tags=["crockerland,macmillan,plate"]
+  desc=A dog team in harness on the ice, heads up and waiting, captioned with the driver's joke about their feeding.
+  file=crocker-land-1913/files/crocker-land-1913-macmillan1918-l0104-when-is-he-coming-with-the-grub.jpg
+=== crocker-land-1913-089 | image | A herd of musk-oxen | date=1915 | lat=79.5 lon=-80.0
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=plate (scan leaf 114) people=[] tags=["crockerland,macmillan,plate"]
+  desc=A herd of musk-oxen strung out along a snow slope, captioned 'Among the big white hills we find the very best of meat.' Musk-ox was what kept the expedition and its dogs alive on the Ellesmere side.
+  file=crocker-land-1913/files/crocker-land-1913-macmillan1918-l0114-herd-of-musk-oxen.jpg
+=== crocker-land-1913-090 | image | 'Four of our faithful natives': E-took-a-shoo, Noo-ka-ping-wa, Ak-pood-a-shah-o and Arklio | date=1917 | lat=78.32 lon=-72.6
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=plate (scan leaf 119) people=["Etukishook", "Nukapinguaq", "Ak-pood-a-shah-o", "Arklio"] tags=["crockerland,macmillan,plate"]
+  desc=Four portrait photographs on one leaf, each named beneath it: E-took-a-shoo, Noo-ka-ping-wa, Ak-pood-a-shah-o and Arklio, with the line under all four - 'Four of our faithful natives who deserve the credit for our ten thousand miles of sledge-work'. It is the most important image in this topic: the four Inughuit who did the travelling, named and photographed by the man who employed them. E-took-a-shoo is Etukishook, one of the two young men who went north with Frederick Cook in 1908; Noo-ka-ping-wa is Nukappiannguaq, later the RCMP's most trusted man on Ellesmere and a member of the Oxford expedition.
+  file=crocker-land-1913/files/crocker-land-1913-macmillan1918-l0119-four-faithful-natives-named.jpg
+=== crocker-land-1913-091 | image | Constructing a snow house | date=1915 | lat=79.0 lon=-78.0
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=plate (scan leaf 124) people=[] tags=["crockerland,macmillan,plate"]
+  desc=Two photographs. Above, a snow house half built with the blocks going up in a spiral and a figure at work, captioned 'In about one hour our home for the night, consisting of some fifty blocks, will be ready for occupancy.' Below, a camp on a snow slope with sledges, dogs and a finished igloo.
+  file=crocker-land-1913/files/crocker-land-1913-macmillan1918-l0124-constructing-a-snow-house.jpg
+=== crocker-land-1913-092 | image | A stretch of rough ice on the polar sea, and a camp under the American flag | date=1914-04 | lat=82.0 lon=-100.0
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=plate (scan leaf 139) people=[] tags=["crockerland,macmillan,plate"]
+  desc=Two photographs. Above, men and sledges in a chaos of rafted ice, captioned 'Stretch of rough ice on Polar Sea. Such work smashes sledges and wears out men and dogs.' Below, a camp on the sea ice with the American flag flying over the sledges and a snow house behind. This is the ice the Crocker Land party crossed in April 1914 to find that Crocker Land was mist.
+  file=crocker-land-1913/files/crocker-land-1913-macmillan1918-l0139-rough-ice-on-polar-sea.jpg
+=== crocker-land-1913-093 | object | Peary's record and flag found on the summit of Cape Thomas Hubbard | date=1914-04 | lat=81.35 lon=-94.4
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=plate (scan leaf 150) people=["Robert Peary"] tags=["crockerland,macmillan,plate"]
+  desc=Three photographs on one leaf. Above left, a facsimile of Peary's own written record, the word PEARY and a date in June 19-- legible on the folded sheet. Above right, Peary's cairn on the summit of Cape Thomas Hubbard, at the north end of Axel Heiberg Island. Below, the flag found with the record - a plain silk banner with a large star sewn on it, one of the pieces Peary cut from Josephine Peary's flag and left at his farthest points. Corporal Stallworthy found the same cairn again in April 1932 during the Krueger search and left his own note in it.
+  file=crocker-land-1913/files/crocker-land-1913-macmillan1918-l0150-peary-record-and-cairn-cape-thomas-hubbard.jpg
+=== crocker-land-1913-094 | image | Inughuit drawings: 'An Arctic tragedy in seven acts', caribou, musk-oxen, raven, polar bear and blue fox | date=1916 | lat=78.32 lon=-72.6
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=plate (scan leaf 159) people=[] tags=["crockerland,macmillan,plate"]
+  desc=A page of drawings made by Inughuit and reproduced by MacMillan, each labelled in the print: caribou and musk-oxen grazing; a seven-panel strip captioned 'An Arctic tragedy in seven acts', in which a hunter stalks and takes a seal at the floe edge; a study of three caribou; and a scene labelled raven, polar bear and blue fox with a musk-ox group below. They are Inuit-authored images in a published expedition narrative, which is rare, and they record what the artists thought worth drawing rather than what the photographer thought worth photographing.
+  file=crocker-land-1913/files/crocker-land-1913-macmillan1918-l0159-inuit-drawings-arctic-tragedy.jpg
+=== crocker-land-1913-095 | image | The camp on the slope | date=1916 | lat=78.32 lon=-72.6
+  creator=Donald B. MacMillan bibkey=macmillan1918four pages=plate (scan leaf 179) people=[] tags=["crockerland,macmillan,plate"]
+  desc=A rock slope running down to a fiord with a mast or aerial standing on it and the camp's gear scattered among the boulders.
+  file=crocker-land-1913/files/crocker-land-1913-macmillan1918-l0179-camp-on-the-slope.jpg
+=== crocker-land-1913-098 | map | Etah and Vicinity | date=1917 | lat=78.32 lon=-72.63
+  creator= bibkey=macmillan1918four pages=p. 25 people=[] tags=["crocker-land,macmillan"]
+  desc=A detailed map of Etah and the surrounding coast from Littleton Island to Sutherland Island, showing Provision Point, Borup Lodge, Foulke Fiord, Port Foulke, Crystal Palace Cliffs and Glacier, and the Greenland ice cap, printed in the text at the chapter on Etah.
+  file=crocker-land-1913/files/crocker-land-1913-macmillan1918-l0056-map-etah-and-vicinity.jpg

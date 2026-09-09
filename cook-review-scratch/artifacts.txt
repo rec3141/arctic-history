@@ -1,0 +1,325 @@
+================================================================================
+cook-1908-axel-heiberg-001 | track | 1908-02-19 | Annoatok to Cape Stallworthy, February-March 1908
+ pos: 78.733 -72.5 | pages:  | people: ["Frederick Cook", "Rudolph Franke", "Ahwelah", "Etukishook", "Koolootingwah", "In-u-gi-to"] | tags: ["cook,ellesmere,sverdrup-pass,axel-heiberg,sledge-journey"]
+ file: 
+ desc: The outward sledge journey of Cook's 1907-09 expedition, from Annoatok in north-west Greenland across Smith Sound to Ellesmere Island, over the pass now called Sverdrup Pass from the Atlantic side at Flagler Bay to the Pacific side at Bay Fiord, then north down Eureka Sound and Nansen Sound to the north cape of Axel Heiberg Island. Eleven sledges, 103 dogs, Rudolph Franke and nine Inughuit men left Annoatok on 19 February 1908; parties turned back in stages, and the last two, Koolootingwah and In-u-gi-to, were sent home from the sea ice beyond Cape Stallworthy. Dates are Cook's own; the crossing of the pass on 27 February and 1 March, and the 14 March position in Nansen Sound, are interpolated between dated camps. The line stops at Cape Stallworthy: what Cook did north of here is a claim, not a route, and is argued elsewhere.
+================================================================================
+cook-1908-axel-heiberg-002 | track | 1908-06-14 | Back to land: Hassel Sound to Cape Sparbo, June-September 1908
+ pos: 78.3 -98.7667 | pages:  | people: ["Frederick Cook", "Ahwelah", "Etukishook"] | tags: ["cook,devon-island,jones-sound,hell-gate,canvas-boat,starvation"]
+ file: 
+ desc: The line begins where Cook, Ahwelah and Etukishook came back onto known ground in mid-June 1908, in Hassel Sound between the Ringnes islands, far west of where they had set out. It follows them south down Norwegian Bay past Cornwall Island, across Penny Strait to Grinnell Peninsula, over the highlands of Devon Island in July, down to Eidsbotn where the last dogs were released, and then in a twelve-foot canvas boat through Hell Gate and Cardigan Strait into Jones Sound. They were carried east past Belcher Point on 7 August, beset in a glacier bay, drifted back, gave up the run for Baffin Bay and the whalers, and turned west to Cape Sparbo, reaching it early in September with four cartridges left. Dates in late June and July, and the arrival at Cape Sparbo, are interpolated from Cook's own sequence; the rest are his.
+================================================================================
+cook-1908-axel-heiberg-003 | track | 1909-02-18 | Cape Sparbo to Annoatok, February-April 1909
+ pos: 75.8167 -84.0 | pages:  | people: ["Frederick Cook", "Ahwelah", "Etukishook", "Panikpah", "Harry Whitney"] | tags: ["cook,man-hauling,ellesmere,smith-sound,famine"]
+ file: 
+ desc: The spring march home. With no dogs left, the three men hauled a sledge rebuilt from the wreck of the old one, north across Jones Sound to the Ellesmere coast, then up that coast past Cape Tennyson, Talbot Inlet and Cape Faraday to Cape Sabine, and over Smith Sound to Annoatok, arriving in April 1909. They averaged about seven miles a day at the start and were starving for most of it, eating scraps of skin and boiled walrus line. Only the first two dates are Cook's; the rest are placed by his own sequence of capes and are approximate. The end point is Anoritooq (Annoatok) at 78.57N 72.70W; the shared database also carries this site as Anoatok at 78.733N 72.50W, from Kane's narrative, and the two rows are the same place.
+================================================================================
+cook-1908-axel-heiberg-010 | quote | 1908-03-18 | The parting at Svartevoeg
+ pos: 81.383 -93.5 | pages: p. 206 | people: ["Ahwelah", "Etukishook", "Koolootingwah"] | tags: ["inughuit,parting"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-cook1911-attainment.txt
+ desc: Cook on the Inughuit who turned back at the north cape of Axel Heiberg Island: "Even after they were out of sight in the drifting snowstorm their voices came cheerily back to me. The faithful savages had followed me until told that I could use them no longer; and it was not only for their simple pay of knives and guns, but because of a real desire to be helpful. Their parting enforced a pang of loneliness." Cook's word savages is his own and is left as printed.
+================================================================================
+cook-1908-axel-heiberg-011 | quote | 1908-03-17 | Svartevoeg, the black wall
+ pos: 81.383 -93.5 | pages: p. 215 | people: ["Frederick Cook"] | tags: ["axel-heiberg,landscape"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-cook1911-attainment.txt
+ desc: "Svartevoeg is a great cliff, the northernmost point of Heiberg Land, which leaps precipitously into the Polar sea. Its negroid face of black scarred rocks frowns like the carven stone countenance of some hideously mutilated and enraged Titan savage." Sverdrup's name for the cape; it is now Cape Stallworthy.
+================================================================================
+cook-1908-axel-heiberg-012 | quote | 1908-03-17 | No cache of Peary's at Svartevoeg
+ pos: 81.383 -93.5 | pages: p. 216n | people: ["Frederick Cook", "Robert Edwin Peary"] | tags: ["peary,dispute"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-cook1911-attainment.txt
+ desc: Cook's footnote on the north cape of Axel Heiberg: "A great deal of careful search and study was prosecuted about Svartevoeg, for here Peary claims to have left a cache... But no such cache was found, and I doubt very much if Peary ever reached this point, except through a field-glass at very long range." One of the many places where the two men's accounts cannot both be true.
+================================================================================
+cook-1908-axel-heiberg-013 | quote | 1908-06-14 | The snow bunting
+ pos: 78.3 -98.7667 | pages: p. 330 | people: ["Frederick Cook", "Ahwelah", "Etukishook"] | tags: ["survival,birds"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-cook1911-attainment.txt
+ desc: Waking starving in Hassel Sound: "Another sound came - a series of soft, silvery notes - the song of a creature that might have come from heaven... It was a bird - a snow bunting trilling its ethereal song - the first sound of life heard for many months. We were back to life!"
+================================================================================
+cook-1908-axel-heiberg-014 | quote | 1908-07-07 | The dogs left at Eidsbotn
+ pos: 76.1653 -91.0 | pages: p. 343 | people: ["Frederick Cook"] | tags: ["dogs"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-cook1911-attainment.txt
+ desc: With open water ahead and only a canvas boat, the last dogs were freed: "With sad eyes, we left the shore. The dogs howled like crying children; we still heard them when five miles off shore."
+================================================================================
+cook-1908-axel-heiberg-015 | quote | 1908-07-21 | Through Hell Gate on a berg
+ pos: 76.7 -89.7333 | pages: p. 350 | people: ["Frederick Cook"] | tags: ["hell-gate,ice"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-cook1911-attainment.txt
+ desc: "Thus the hours of physical torture and mental anguish passed, while the berg moved towards the gloomy black cliff of Hell Gate... The wind came with the sound of exploding guns from Hell Gate." The twin channels, Cardigan Strait and Hell Gate, where Cook wrote that the waters of the Pacific and Atlantic meet.
+================================================================================
+cook-1908-axel-heiberg-016 | quote | 1908-09-15 | The old village at Cape Sparbo
+ pos: 75.8167 -84.0 | pages: p. 380 | people: ["Frederick Cook"] | tags: ["archaeology,thule,inuit"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-cook1911-attainment.txt
+ desc: Cook's description of the site he wintered on: "When we landed we found to our surprise that it was the site of an old Eskimo village. There was a line of old igloos partly below water, indicating a very ancient time of settlement, for since the departure of the builders of these igloos the coast must have settled at least fifteen feet." His observation of drowned house rings is, in modern terms, a note on relative sea-level change; the isostatic history has it the other way round.
+================================================================================
+cook-1908-axel-heiberg-017 | quote | 1908-09-16 | The skull in the house pit
+ pos: 75.8167 -84.0 | pages: p. 381 | people: ["Frederick Cook"] | tags: ["archaeology,inuit"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-cook1911-attainment.txt
+ desc: Clearing out the ruin they meant to live in: "lifting some debris, I saw staring at me from the black earth a hollow-eyed human skull... Yet the fact that at this forsaken spot human hands had once built shelter, or for this thing had constructed a grave, gave me a certain companionable thrill."
+================================================================================
+cook-1908-axel-heiberg-018 | quote | 1908-12-15 | Life in the underground den
+ pos: 75.8167 -84.0 | pages: p. 407 | people: ["Frederick Cook", "Ahwelah", "Etukishook"] | tags: ["wintering,survival"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-cook1911-attainment.txt
+ desc: "My life in this underground place was, I suppose, like that of a man in the stone age... On either side of this standing space was half a tin plate in which musk-ox fat was burned. We used moss as a wick. These lights were kept burning day and night... Except when we got close to the light, it was impossible to see one another's faces."
+================================================================================
+cook-1908-axel-heiberg-019 | quote | 1909-01-05 | Alone in a vast, white dead world
+ pos: 75.8167 -84.0 | pages: p. 415 | people: ["Frederick Cook"] | tags: ["wintering,darkness"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-cook1911-attainment.txt
+ desc: Midwinter at Cape Sparbo: "Then again would fall a spell of that strange silence - all was dead, the sun glowed no more, the creatures of the wilds were hushed. We were all alone - alone in a vast, white dead world."
+================================================================================
+cook-1908-axel-heiberg-020 | quote | 1909-03-15 | Broken teeth on walrus hide
+ pos: 77.8667 -76.7667 | pages: p. 430 | people: ["Frederick Cook"] | tags: ["famine"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-cook1911-attainment.txt
+ desc: On the march north up the Ellesmere coast: "In desperation we ate bits of skin and chewed tough walrus lines. A half candle and three cups of hot water served for several meals. Some tough walrus hide was boiled and eaten with relish. While trying to masticate this I broke some of my teeth."
+================================================================================
+cook-1908-axel-heiberg-021 | quote | 1909-04-15 | Reaching Annoatok
+ pos: 78.733 -72.5 | pages: p. 442 | people: ["Frederick Cook", "Harry Whitney"] | tags: ["return,whitney"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-cook1911-attainment.txt
+ desc: "So weak that we had to climb on hands and knees, we reached the top of an iceberg, and from there saw Annoatok. Natives, who had thought us long dead, rushed out to greet us. There I met Mr. Harry Whitney. As I held his hand, the cheer of a long-forgotten world came over me."
+================================================================================
+cook-1908-axel-heiberg-022 | quote | 1909-02-26 | The islands named for the two young men
+ pos: 76.2167 -79.85 | pages: p. 427 | people: ["Ahwelah", "Etukishook"] | tags: ["naming,inughuit"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-cook1911-attainment.txt
+ desc: Off Cape Tennyson: "I decided to call the larger island E-tuk-i-shook, and the smaller Ah-we-lah. These rocks will stand as monuments to the memory of my faithful savage comrades when all else is forgotten." The names never reached the map: the pair are officially the Stewart Islands, named for a minister of the interior who never saw them.
+================================================================================
+cook-1908-axel-heiberg-023 | quote | 1908-02-26 | Dig a hole
+ pos: 79.1333 -78.5 | pages: p. 168 | people: ["Koolootingwah"] | tags: ["inughuit,survival"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-cook1911-attainment.txt
+ desc: Caught by a blizzard in the canyon crossing Ellesmere: "'Dig a hole,' said Koo-loo-ting-wah... But I had faith in the intelligence of my savage companions, and ordered all hands to work." One of several places where Cook records that the technique that saved the party was Inughuit, not his.
+================================================================================
+cook-1908-axel-heiberg-030 | image | 1911 | Frederick A. Cook, frontispiece portrait
+ pos: 78.57 -72.7 | pages: frontispiece | people: ["Frederick Cook"] | tags: ["cook,portrait,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n11.jpg
+ desc: The frontispiece portrait of Cook in My Attainment of the Pole. A studio photograph, not a field one; it is placed on the map at Annoatok (Anoritooq), the base he left in February 1908 and returned to in April 1909, so that it sits with the rest of the book's plates.
+================================================================================
+cook-1908-axel-heiberg-031 | image | 1908-02 | On the chase for bear; the box-house at Annoatok and its winter environment
+ pos: 78.57 -72.7 | pages: facing p. 78 | people: ["Frederick Cook", "Rudolph Franke"] | tags: ["annoatok,base,dogs,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n110.jpg
+ desc: Two halftones on one plate: a dog team on the chase for bear, and the packing-case house at Annoatok (Anoritooq) that John R. Bradley's schooner landed in 1907, half buried in drift, with a man and a sledge beside it. This was the base Cook left on 19 February 1908 and came back to, on foot, in April 1909.
+================================================================================
+cook-1908-axel-heiberg-032 | image | 1907 | Man's prey of the Arctic sea - walrus asleep
+ pos: 78.3 -74.0 | pages: facing p. 88 | people: [] | tags: ["walrus,hunting,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n122.jpg
+ desc: Walrus asleep on the ice of Smith Sound. Walrus meat and blubber were what the Annoatok camp lived on and what the expedition's pemmican and dog food were made from; a year later, at Cape Sparbo, walrus hide would be the party's chief food and the cause of their broken teeth.
+================================================================================
+cook-1908-axel-heiberg-033 | image | 1908-02 | The helpers - northernmost man and his wife
+ pos: 78.57 -72.7 | pages: facing p. 90 | people: ["Ahwelah", "Etukishook"] | tags: ["inughuit,annoatok,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n126.jpg
+ desc: An Inughuit couple at Annoatok in furs, captioned by Cook as the northernmost man and his wife. The whole expedition rested on the Inughuit of the Etah and Annoatok district: they made the sledges, sewed the fur clothing, drove the teams and killed the meat, and nine of them went out with Cook in February 1908.
+================================================================================
+cook-1908-axel-heiberg-034 | image | 1908-02 | Rudolph Francke in Arctic costume
+ pos: 78.57 -72.7 | pages: facing p. 114 | people: ["Rudolph Franke"] | tags: ["annoatok,base,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n152.jpg
+ desc: Rudolph Franke, the German sailor who was Cook's only white companion, photographed at Annoatok in Inughuit fur dress. Franke was left to hold the box-house and the expedition's stores while Cook was away; he grew ill with scurvy and went south in the summer of 1908, leaving the base and its furs in the hands of Harry Whitney and Peary's people.
+================================================================================
+cook-1908-axel-heiberg-035 | image | 1908-03 | Midnight; a panorama of black lacquer and silver
+ pos: 79.1667 -77.0 | pages: facing p. 130 | people: [] | tags: ["ellesmere,light,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n170.jpg
+ desc: Two halftones of the light on the crossing of Ellesmere Island: the low midnight sun, and the ice and rock Cook called a panorama of black lacquer and silver. The party crossed from Flagler Bay by the valley Sverdrup had found, over the divide and down to Bay Fiord, in the last days of February 1908.
+================================================================================
+cook-1908-axel-heiberg-036 | image | 1908-03 | A mecca of musk ox along Eureka Sound; a native helper; Ah-we-lah's prospective wife
+ pos: 79.7 -85.5 | pages: facing p. 162 | people: ["Ahwelah"] | tags: ["eureka-sound,muskox,inughuit,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n194.jpg
+ desc: Three halftones on one plate: musk oxen on the flats along Eureka Sound, where the party killed the meat that carried them north; an Inughuit helper in furs; and the young woman Cook calls Ah-we-lah's prospective wife. Eureka Sound was the hinge of the whole journey - it fed them going out, and the musk ox of Cape Sparbo kept them alive a year later.
+================================================================================
+cook-1908-axel-heiberg-037 | image | 1908-03 | The capture of a bear; rounding up a herd of musk oxen
+ pos: 79.7 -85.5 | pages: facing p. 184 | people: [] | tags: ["muskox,bear,hunting,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n228.jpg
+ desc: A bear taken by the dogs, and a herd of musk oxen brought to bay in a ring by the dogs so that the hunters could shoot into it. This is how the party fed itself and its teams from the land between Bay Fiord and Nansen Sound, and how Cook, Ahwelah and Etukishook would feed themselves through the winter of 1908-09 at Cape Sparbo.
+================================================================================
+cook-1908-axel-heiberg-038 | image | 1908-03-17 | Along the edge of the polar sea - last land's end
+ pos: 81.383 -93.5 | pages: facing p. 190 | people: [] | tags: ["axel-heiberg,cape-stallworthy,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n236.jpg
+ desc: The north-west corner of Axel Heiberg Island, where the land stops and the moving ice of the Arctic Ocean begins. Cook reached this point, which he called Svartevoeg and which is now Cape Stallworthy, on 17 March 1908; Sverdrup had named the headland to the north-east Cape Thomas Hubbard in 1900.
+================================================================================
+cook-1908-axel-heiberg-039 | image | 1908-03-17 | Svartevoeg - camping five hundred miles from the Pole
+ pos: 81.383 -93.5 | pages: facing p. 194 | people: ["Frederick Cook", "Ahwelah", "Etukishook"] | tags: ["axel-heiberg,cape-stallworthy,camp,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n242.jpg
+ desc: The camp at Svartevoeg (Cape Stallworthy) on the north-west shoulder of Axel Heiberg Island, sledges and men strung out under the black cliff. From here Cook sent his supporting party home on 18 March 1908 and went out on the sea ice with Ahwelah and Etukishook alone.
+================================================================================
+cook-1908-axel-heiberg-040 | image | 1908-03-18 | Departure of supporting party; a breathing spell; Poleward!
+ pos: 81.383 -93.5 | pages: facing p. 206 | people: ["Frederick Cook", "Ahwelah", "Etukishook"] | tags: ["cape-stallworthy,departure,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n258.jpg
+ desc: Three halftones of 18 March 1908 at Svartevoeg: the supporting party of Inughuit turning back for Annoatok, a halt on the ice, and the two loaded sledges going north. Everything after this photograph is Cook's word alone; the claim itself is argued in another topic.
+================================================================================
+cook-1908-axel-heiberg-041 | map | 1911 | Route to the Pole and return: a triangle of 30,000 square miles
+ pos: 82.5 -92.0 | pages: map plate, facing p. 284 | people: ["Frederick Cook"] | tags: ["map,claim,route"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n350.jpg
+ desc: Cook's own map of the journey, on a polar projection, with Ellesmere Island, Axel Heiberg Island, Nansen Sound and the Kane Basin drawn and his outward and homeward lines laid over the sea ice north of them, taking in what he called a triangle of thirty thousand square miles cut out of the mysterious unknown. The land part of this map can be checked against the coast; the sea-ice part is the claim, and it is argued in the topic that owns it.
+================================================================================
+cook-1908-axel-heiberg-042 | image | 1908-03-19 | Dashing forward en route to the Pole
+ pos: 81.6 -94.0 | pages: facing p. 202 | people: ["Ahwelah", "Etukishook"] | tags: ["claim,sea-ice,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n250.jpg
+ desc: Sledges on the moving ice north of Axel Heiberg Island, in the first days after the supporting party turned back. The plate belongs to the section of the book that carries the polar claim and cannot be checked against any coast; it is entered here as a photograph in the book, positioned just off Cape Stallworthy where the sea-ice journey began.
+================================================================================
+cook-1908-axel-heiberg-043 | image | 1908-05 | Miles and miles of desolation; homeward bound
+ pos: 79.5 -101.0 | pages: facing p. 324 | people: ["Frederick Cook", "Ahwelah", "Etukishook"] | tags: ["claim,drift,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n400.jpg
+ desc: Two halftones from the drift south in the spring of 1908, before the party regained land. Cook's account has the three men carried west and south by the ice through May, missing the north end of Axel Heiberg Island and coming ashore instead among the small islands west of it. The position given here is a rough one on that drift.
+================================================================================
+cook-1908-axel-heiberg-044 | image | 1908-06-14 | Back to land and to life - awakened by a winged harbinger
+ pos: 78.3 -98.767 | pages: facing p. 332 | people: ["Frederick Cook", "Ahwelah", "Etukishook"] | tags: ["hassel-sound,return,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n410.jpg
+ desc: The plate that goes with the snow bunting. On 14 June 1908, camped on the ice in Hassel Sound between Ellef Ringnes and Amund Ringnes Islands, the three men were woken by a bird singing on the tent - the first living thing since the sea ice - and knew that land and game were near.
+================================================================================
+cook-1908-axel-heiberg-045 | image | 1908-06 | Saved from starvation - the result of one of our last cartridges
+ pos: 78.5 -91.5 | pages: facing p. 336 | people: ["Frederick Cook", "Ahwelah", "Etukishook"] | tags: ["hunting,famine,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n416.jpg
+ desc: Game killed with what Cook says were among the last cartridges the party had, on the return down the west side of Axel Heiberg Island in June 1908. From here on the three were hunting with a bow, a lance and a knife made from a sledge runner. The position is approximate.
+================================================================================
+cook-1908-axel-heiberg-046 | image | 1908-08 | E-tuk-i-shook waiting for a seal at a blow-hole
+ pos: 76.0 -83.0 | pages: facing p. 356 | people: ["Etukishook"] | tags: ["inughuit,sealing,jones-sound,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n438.jpg
+ desc: Etukishook standing over a seal's breathing hole with a harpoon, in the old way, on the ice of Jones Sound. By this stage of the return the party had no cartridges left worth the name and lived by hunting as the Inughuit had always hunted; the photograph is one of the few in the book of a named Inughuit man at work.
+================================================================================
+cook-1908-axel-heiberg-047 | image | 1908-09 | Toward Cape Sparbo in canvas boat; food and fuel, prize of a fifteen-hour battle
+ pos: 75.8167 -84.0 | pages: facing p. 370 | people: ["Frederick Cook", "Ahwelah", "Etukishook"] | tags: ["cape-sparbo,boat,walrus,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n454.jpg
+ desc: The folding canvas boat, made from the sledge and the tent, in which the three men worked east along the north shore of Devon Island in the autumn of 1908; and a walrus killed after what Cook says was a fifteen-hour fight, the meat and blubber that made the winter possible at Cape Sparbo.
+================================================================================
+cook-1908-axel-heiberg-048 | image | 1909-02 | Punctured canvas boat; famine days; den in which were spent 100 double nights
+ pos: 75.8167 -84.0 | pages: facing p. 380 | people: ["Frederick Cook", "Ahwelah", "Etukishook"] | tags: ["cape-sparbo,den,wintering,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n466.jpg
+ desc: The most important plate of the wintering: the punctured canvas boat the party paddled a thousand miles, the famine days when only stray birds kept them alive, and the den itself - a roofed pit in an old Inuit house ruin at Cape Sparbo where Cook, Ahwelah and Etukishook lay through a hundred days without sun, from 3 November 1908 to 11 February 1909.
+================================================================================
+cook-1908-axel-heiberg-049 | image | 1908-10 | Bull fights with the musk ox about Cape Sparbo
+ pos: 75.8167 -84.0 | pages: facing p. 384 | people: ["Frederick Cook", "Ahwelah", "Etukishook"] | tags: ["cape-sparbo,muskox,hunting,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n472.jpg
+ desc: Musk oxen brought to bay near Cape Sparbo. With no cartridges the three killed them with a lance made from a sledge runner and a bow strung with braided sinew, driving the herd into a ring and taking a bull at close quarters. The meat, the hides for bedding and the tallow for lamps carried the winter.
+================================================================================
+cook-1908-axel-heiberg-050 | image | 1908 | The mother of seals and her deserted child
+ pos: 78.57 -72.7 | pages: facing p. 520 | people: [] | tags: ["inughuit,oral-history,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n612.jpg
+ desc: A plate from the chapters in which Cook sets down the Inughuit stories he was told at Annoatok, here the one he calls the mother of seals and her deserted child. Cook's ethnographic chapters are among the earliest published accounts of the Smith Sound people's own telling of their world, and they should be read beside, not instead of, what the community says now.
+================================================================================
+cook-1908-axel-heiberg-051 | text | 1961 | The Devon Island Expedition reports the first survey of Cape Sparbo
+ pos: 75.8167 -84.0 | pages: Arctic 14(4): 252 | people: [] | tags: ["cape-sparbo,archaeology,devon-island"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-arctic1961-devon-expedition.pdf
+ desc: Two pages of Institute News in the journal Arctic reporting the Arctic Institute's three-year integrated programme on Devon Island. Among the glaciology and oceanography it notes that while the base near Cape Skogn was being built in the late summer of 1960, an archaeological reconnaissance of the Cape Sparbo area was made by a small party under Gordon Lowther of McGill University - the first professional survey of the ground on which Cook, Ahwelah and Etukishook had wintered fifty-two years earlier.
+================================================================================
+cook-1908-axel-heiberg-052 | text | 1911 | My Attainment of the Pole: the scanned book
+ pos: 78.57 -72.7 | pages: 703 leaves, complete | people: [] | tags: ["source,book,primary"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-cook1911-attainment.pdf
+ desc: The complete scanned book as a searchable PDF, 703 leaves, alongside the plain OCR text already registered. It is the primary source for everything in this topic. The plate artifacts here were located in it leaf by leaf and pulled as full-size page images from the same scan. Positioned at Annoatok, where the journey it records began and ended.
+================================================================================
+cook-1908-axel-heiberg-053 | image | 1908-04 | 'The igloo built, we prepare for our daily camp'
+ pos: 86.0 -95.0 | pages: plate facing p. 238 (scan n292) | people: ["Ahwelah", "Etukishook"] | tags: ["cook,polar-sea,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n292.jpg
+ desc: A snow house on the pack with the low sun behind it, from Cook's northward journey over the polar sea in the spring of 1908. The igloo, built fresh each march, is what Cook's party used instead of a tent for most of the outward journey.
+================================================================================
+cook-1908-axel-heiberg-054 | image | 1908-03-30 | 'Bradley Land discovered'
+ pos: 85.0 -102.0 | pages: plate facing p. 244 (scan n300) | people: ["Ahwelah", "Etukishook"] | tags: ["cook,polar-sea,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n300.jpg
+ desc: Three photographs on one plate: distant low land or ice on the horizon, a flat sea of ice, and the party with the dogs and sledges. The upper images are Cook's evidence for Bradley Land, the coast he reported at about 85 degrees north on 30 March 1908. No such land exists; it is generally explained as an ice island or a mirage, and the plate is a central exhibit in the dispute over his claim.
+================================================================================
+cook-1908-axel-heiberg-055 | image | 1908-04 | 'Camping to eat and take observations'
+ pos: 87.0 -95.0 | pages: plate facing p. 256 (scan n314) | people: [] | tags: ["cook,polar-sea,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n314.jpg
+ desc: Two photographs: men working at a sledge on the ice, and a figure lying prone beside a dark shape on the snow. Cook's caption ties them to the routine of stopping to eat and take a sight.
+================================================================================
+cook-1908-axel-heiberg-056 | image | 1908-04 | 'Swift progress over smooth ice'
+ pos: 87.5 -95.0 | pages: plate facing p. 264 (scan n324) | people: [] | tags: ["cook,polar-sea,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n324.jpg
+ desc: Three photographs on one plate of the sledges running over flat ice, the teams strung out. Cook's account of speed over the smooth floes is one of the points on which his claim was later tested.
+================================================================================
+cook-1908-axel-heiberg-057 | image | 1908-04 | 'Too weary to build igloos, we used the silk tent'
+ pos: 88.0 -95.0 | pages: plate facing p. 278 (scan n340) | people: ["Ahwelah", "Etukishook"] | tags: ["cook,polar-sea,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n340.jpg
+ desc: Two photographs: two figures beside a low tent under a dark hummock, and a distant camp on a flat floe. The silk tent replaced the nightly igloo when the party was too tired to build.
+================================================================================
+cook-1908-axel-heiberg-058 | image | 1908-04 | 'Mending near the Pole'
+ pos: 89.0 -95.0 | pages: plate facing p. 282 (scan n346) | people: [] | tags: ["cook,polar-sea,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n346.jpg
+ desc: A figure working on the sledge and its lashings on the ice, the load broken open around him.
+================================================================================
+cook-1908-axel-heiberg-059 | image | 1908-04-21 | At the Pole: 'we were the only pulsating creatures in a dead world of ice'
+ pos: 90.0 0.0 | pages: plate facing p. 286 (scan n352) | people: ["Ahwelah", "Etukishook"] | tags: ["cook,polar-sea,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n352.jpg
+ desc: Three photographs on one plate: two men with a flag beside a low snow shelter, an expanse of broken ice, and a dome-shaped snow house against the sky. Cook's caption places them at the Pole, which he claimed to have reached on 21 April 1908.
+================================================================================
+cook-1908-axel-heiberg-060 | image | 1908-04-21 | 'Observation determining the Pole - photograph from original note'
+ pos: 90.0 0.0 | pages: plate facing p. 292 (scan n360) | people: [] | tags: ["cook,polar-sea,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n360.jpg
+ desc: A facsimile of a page of Cook's own field notebook, reproduced photographically: columns of figures, an altitude and a signature. It is one of the few pieces of primary documentation Cook published for the observations on which his claim rests, and its handwriting is not machine-readable, which is why the page image matters.
+================================================================================
+cook-1908-axel-heiberg-061 | image | 1908-04-21 | First camp at the Pole, 21 April 1908
+ pos: 90.0 0.0 | pages: plate facing p. 298 (scan n368) | people: ["Ahwelah", "Etukishook"] | tags: ["cook,polar-sea,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n368.jpg
+ desc: Two small dark figures and a low mound on an unbroken white plain, captioned by Cook as the first camp at the Pole.
+================================================================================
+cook-1908-axel-heiberg-062 | image | 1908-05 | 'With eager eyes we searched the dusky plains of crystal'
+ pos: 88.0 -100.0 | pages: plate facing p. 310 (scan n383) | people: [] | tags: ["cook,polar-sea,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n383.jpg
+ desc: A very pale plate of the ice horizon, printed faintly in the original: Cook's caption runs 'With eager eyes we searched the dusky plains of crystal, but there was no land, no life, to relieve the purple run of death.'
+================================================================================
+cook-1908-axel-heiberg-063 | image | 1908-04-21 | Facsimile of the record left in a brass tube at the North Pole
+ pos: 90.0 0.0 | pages: plate facing p. 312 (scan n386) | people: [] | tags: ["cook,polar-sea,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n386.jpg
+ desc: A photographic facsimile of Cook's handwritten record, which he says he left in a brass tube at the Pole, signed and dated. Like the observation note, it is handwriting reproduced as an image and cannot be read from the OCR.
+================================================================================
+cook-1908-axel-heiberg-064 | image | 1909-05 | Governor Kraul in his study, Upernavik
+ pos: 72.79 -56.15 | pages: plate facing p. 458 (scan n548) | people: [] | tags: ["cook,polar-sea,plate"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n548.jpg
+ desc: Two photographs: the Danish governor seated in his panelled study among pictures and a mounted skin, and a dark coastal view. Cook reached Upernavik on the way south in the spring of 1909 after the winter at Cape Sparbo.
+================================================================================
+cook-1908-axel-heiberg-065 | map | 1911 | 'The land-divided ice-pack reported by Peary proves Cook's attainment of the Pole'
+ pos: 90.0 0.0 | pages: appendix (scan n679) | people: [] | tags: ["cook,appendix,table"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n679.jpg
+ desc: A polar projection with the two claimed routes and the reported leads drawn on it, printed in the appendix as part of Cook's rebuttal of Peary. It is a piece of argument in map form and should be read as such, not as a survey.
+================================================================================
+cook-1908-axel-heiberg-066 | text | 1911 | Copy of the field notes: the appendix observation log, page 1
+ pos: 88.0 -95.0 | pages: appendix, 'Observations, Etc. (Exact copy from original Field Papers)' (scan n662) | people: [] | tags: ["cook,appendix,table"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n662.jpg
+ desc: The opening page of the nine-page verbatim reproduction of Cook's field papers printed as an appendix: his explanation of what the original notes were and how they were copied, followed by the first day's entries. The nine pages give date, weather, temperature, barometer and travel conditions day by day for the polar journey, and they are the raw material of the whole Cook-Peary controversy. Pages 2 to 9 are on disk beside this one as scans n663 to n670.
+================================================================================
+cook-1908-axel-heiberg-067 | text | 1911 | Copy of the field notes, page 2
+ pos: 88.0 -95.0 | pages: appendix (scan n663) | people: [] | tags: ["cook,appendix,table"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n663.jpg
+ desc: The second page of Cook's field-paper appendix: dated entries with weather, temperature, barometer and ice conditions.
+================================================================================
+cook-1908-axel-heiberg-068 | text | 1911 | Copy of the field notes, page 3
+ pos: 88.0 -95.0 | pages: appendix (scan n664) | people: [] | tags: ["cook,appendix,table"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n664.jpg
+ desc: The third page of Cook's field-paper appendix.
+================================================================================
+cook-1908-axel-heiberg-069 | text | 1911 | Copy of the field notes, page 4
+ pos: 88.5 -95.0 | pages: appendix (scan n665) | people: [] | tags: ["cook,appendix,table"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n665.jpg
+ desc: The fourth page of Cook's field-paper appendix.
+================================================================================
+cook-1908-axel-heiberg-070 | text | 1911 | Copy of the field notes, page 5
+ pos: 89.0 -95.0 | pages: appendix (scan n666) | people: [] | tags: ["cook,appendix,table"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n666.jpg
+ desc: The fifth page of Cook's field-paper appendix, covering the days closest to the claimed attainment.
+================================================================================
+cook-1908-axel-heiberg-071 | text | 1911 | Copy of the field notes, page 6
+ pos: 89.5 -95.0 | pages: appendix (scan n667) | people: [] | tags: ["cook,appendix,table"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n667.jpg
+ desc: The sixth page of Cook's field-paper appendix.
+================================================================================
+cook-1908-axel-heiberg-072 | text | 1911 | Copy of the field notes, page 7
+ pos: 89.0 -100.0 | pages: appendix (scan n668) | people: [] | tags: ["cook,appendix,table"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n668.jpg
+ desc: The seventh page of Cook's field-paper appendix, into the return journey.
+================================================================================
+cook-1908-axel-heiberg-073 | text | 1911 | Copy of the field notes, page 8
+ pos: 87.0 -100.0 | pages: appendix (scan n669) | people: [] | tags: ["cook,appendix,table"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n669.jpg
+ desc: The eighth page of Cook's field-paper appendix.
+================================================================================
+cook-1908-axel-heiberg-074 | text | 1911 | Copy of the field notes, page 9
+ pos: 85.0 -100.0 | pages: appendix (scan n670) | people: [] | tags: ["cook,appendix,table"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n670.jpg
+ desc: The last page of Cook's field-paper appendix.
+================================================================================
+cook-1908-axel-heiberg-075 | text | 1911 | List of illustrations, page 1
+ pos: 79.0 -90.0 | pages: pp. xix-xx (scan n28) | people: [] | tags: ["cook,appendix,table"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n28.jpg
+ desc: The book's own list of plates with their facing pages - the index to the ninety-odd photographs Cook published, including several that share a facing page and are therefore hard to tell apart from the plates alone. Kept as a page image because it is the key to identifying every plate in the volume.
+================================================================================
+cook-1908-axel-heiberg-076 | text | 1911 | List of illustrations, page 2
+ pos: 79.0 -90.0 | pages: pp. xxi (scan n29) | people: [] | tags: ["cook,appendix,table"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n29.jpg
+ desc: The second page of the list of plates.
+================================================================================
+cook-1908-axel-heiberg-077 | image | 1911 | A bird on the page: the vignette at printed page 454
+ pos: 76.5 -89.0 | pages: scan n513 | people: [] | tags: ["cook,appendix,table"]
+ file: cook-1908-axel-heiberg/files/cook-1908-axel-heiberg-plate-n513.jpg
+ desc: A small wood-engraved vignette of a bird set into the text at about printed page 454, in the chapter on the return from Cape Sparbo. It carries no printed caption.

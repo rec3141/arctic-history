@@ -14,8 +14,8 @@ Charts printed twenty years apart do not agree about what the settlements of Baf
 | **[[place:Ikpiarjuk]]** | "a pocket", nestled between hills | — | Arctic Bay is still the official name |
 | **[[place:Kangiqtugaapik]]** | "a nice little inlet near a high point of land" | — | Clyde River is still the official name |
 | **[[place:Panniqtuuq]]** | "the place of the bull caribou" | — | Pangnirtung is still the official name |
-| **[[place:Uqsuqtuuq]]** | "lots of fat" | — | Gjoa Haven is still the official name |
-| **[[place:Iglulik]]** | "the place where there are houses" | Igloolik (spelling) | Igloolik is the official spelling |
+| **[[place:Uqsuqtuuq]]** | lots of fat, a place where blubber was plentiful | — | Gjoa Haven is still the official name |
+| **[[place:Iglulik]]** | "the place where there are igloos or houses" | Igloolik (spelling) | Igloolik is the official spelling |
 | **[[place:Taloyoak]]** | a stone caribou blind | Spence Bay | 1 July 1992 |
 | **[[place:Kugaaruk]]** | "a river that is not too big and not too small" | Pelly Bay | 3 December 1999, announced on the 7th |
 

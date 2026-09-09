@@ -31,13 +31,15 @@ The place it describes:
 - **Lowest: −55.3 °C, reached twice** — on 15 February 1979 and again on
   18 February 1987.
 
-Annual means computed from the daily archive for this project put the coldest
-decade of the record in the 1970s (−20.5 °C) and the warmest in the 2000s
-(−18.0 °C). The warmest single year is 2010 at −15.9 °C; the coldest is 1972 at
-−21.8 °C, nearly six degrees apart. Those decadal figures are derived here from a
-single station with no correction for instrument or site changes, and the station
-identifier changed in 2016, so treat them as an indication rather than a trend
-estimate. The full working is in `science-stations/notes/eureka-climate.md`.
+Annual means worked out from the daily archive itself — sixty-six complete years
+between 1948 and 2015 — put the coldest decade of the record in the 1970s
+(−20.5 °C) and the warmest in the 2000s (−18.0 °C). The warmest single year is
+2010 at −15.9 °C; the coldest is 1972 at −21.8 °C, nearly six degrees apart. Those
+decadal figures come from one station's raw daily means, with no correction for
+instrument or site changes, and the station identifier changed in 2016, so treat
+them as an indication rather than a trend estimate;
+[[artifact:science-stations-035|the record itself]] carries the figures and how
+they were reached.
 
 ## The people who kept it
 
