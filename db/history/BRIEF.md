@@ -450,6 +450,15 @@ cite the underlying sources and check dates against them.
 - These are histories of living communities. Report violence, relocation and
   epidemics factually with sources, in the terms the communities and the
   Qikiqtani Truth Commission use.
+- Epistemic humility about "discovery". Most of what these expeditions
+  "discovered" was inhabited or long known: write what actually happened —
+  sighted, reached, charted, mapped, observed, identified, noticed, recorded,
+  rediscovered (where knowledge was lost and regained), located (a wreck, a
+  cairn), first European sighting of. Keep the word only where it is a proper
+  name (HMS Discovery, a book's title, Discovery Harbour), inside a verbatim
+  quotation, or reported as the actors' own framing ("what Parry claimed as a
+  discovery"). This applies to pages, artifact and event titles, and
+  descriptions alike.
 - No purple prose. Let the primary sources speak.
 
 ## Before you finish
