@@ -1,0 +1,143 @@
+# Three winters: Prince of Wales Strait and the Bay of Mercy
+[page · mcclure-investigator · draft]
+
+HMS Investigator spent one winter beset in [[place:Prince of Wales Strait]] and
+two more in the bay on the north coast of [[place:Banks Island]] that
+[[person:Robert McClure]] named the Bay of Mercy. She is still there. What
+happened aboard in those three winters is documented twice over, by the captain
+in [[source:osborn1856discovery|Osborn's edition of his journals]] and by the
+surgeon in [[source:armstrong1857personal|his own book]], and the two accounts
+do not agree.
+
+## The first winter, 1850-51
+
+The ship was beset on 30 September 1850 at 73° 50' N, 117° 55' W, beside the
+[[place:Princess Royal Islands]], and stayed there for nearly ten months. It was
+a good winter by the standards of what followed. Deer and musk-ox were shot,
+the sledge journey of October 1850 had already settled the geography (see
+[[page:the-sledge-link]]), and in the spring three parties went out — Haswell
+south-east to Wollaston Land, [[person:Samuel Gurney Cresswell]] north-west
+along the coast of Banks Island, Wynniatt north-east — and came back having
+proved Banks Land an island and traced hundreds of miles of coast.
+
+Between 30 May and 2 June 1851 McClure and [[person:Johann August Miertsching]]
+visited a camp of five tents near the ship. This was the expedition's only
+sustained contact with the Copper Inuit of the strait, and Miertsching's German
+diary — translated by L. H. Neatby in 1967 as *Frozen Ships* — is the fuller
+record of it. He had been a Moravian missionary in Labrador, and his Inuttitut
+was near enough to be understood everywhere from Point Barrow to Victoria
+Island. Almost every useful thing the expedition learned from anyone in the
+country, it learned through him.
+
+The ship got free on 14 July 1851.
+
+## The Bay of Mercy, 1851-53
+
+Two attempts to force the strait north into Barrow Strait failed. On 16 August
+1851 McClure turned back twenty-five miles short and went the other way instead:
+south round Nelson Head and then three hundred miles north in three days up the
+exposed west coast of the island through open water. On 20 August he was very
+nearly crushed against the northern cliffs
+([[artifact:mcclure-investigator-004|Cresswell drew it]]). On 23 September the
+ship went aground in the night, and on the 24th she was afloat in the bay he
+named in thanksgiving: [[artifact:mcclure-investigator-016|"Thus we launch into
+this formidable frozen sea. Spes mea in Deo."]]
+
+She never came out of it.
+
+## What short rations do
+
+The arithmetic is the heart of this story, and [[person:Alexander Armstrong]]
+set it out plainly.
+
+- **1 October 1851**: two-thirds allowance, because beef had been lost entering
+  the ice and a depot left behind.
+- **1 February 1852**: at the monthly inspection, for the first time, loss of
+  flesh and strength in some men after four months of it.
+- **1 July 1852**: Armstrong formally represents to McClure that a more liberal
+  scale of diet is needed. Sixteen men show incipient scurvy.
+- **6 September 1852**: rations cut *again* — vegetables to two and a half
+  ounces a day, meat to eight ounces gross and about six net, flour to ten
+  ounces, lime juice halved, and "no extra food was allowed for the sick under
+  any circumstances." Men began eating the salt beef and pork raw, "with a
+  degree of avidity and relish which must be experienced to be fully
+  understood." Armstrong told McClure this would make the scurvy worse; it went
+  on regardless.
+- **4 October 1852**: the ship's company come aft in a body to ask for more
+  food, and are refused.
+
+Armstrong's own theory of the disease, which is wrong in mechanism and right in
+practice, is worth reading:
+[[artifact:mcclure-investigator-025|"one pound of animal food daily is not
+sufficient for men employed on Polar service"]]. He blamed salt meat and
+insufficient calories rather than the missing vitamin, but he was correct that
+the fresh meat the hunters brought in was the only thing holding the disease
+off, and correct that officers, eating better and living in better-ventilated
+quarters, were the last to show symptoms.
+
+## The disagreement
+
+In September 1852 McClure told his officers his plan for the spring: divide the
+ship's company, send half of them away on foot — one party for Cape Spencer and
+Baffin Bay, one up Prince of Wales Strait for the Mackenzie — and keep the rest
+aboard to bring the ship out in the summer of 1853.
+
+Armstrong put his objection in writing:
+[[artifact:mcclure-investigator-026|the men were "utterly unfit for the
+performance of the service"]]. Read one way, McClure was a hard captain
+gambling his men's lives on the chance of being the first ship through. Read
+another, he was a commander with no supply line, no communications and one
+season's food, choosing between two bad options. Both readings are in the
+sources. What is not in dispute is that the officers ate better than the men,
+and that the men asked for food and did not get it.
+
+## January to June 1853
+
+The third winter was the worst. On 6 January 1853 the mean temperature over
+twenty-four hours was −61.6 °F. Through February and March, Armstrong wrote,
+"a few hours illness would produce the most alarming degree of prostration I
+have ever witnessed... and scurvy of an aggravated character seldom failed to
+supervene."
+
+Then, in eight days in April, three men died:
+
+- **John Boyle**, able seaman, on the night of 5 April, of dysentery on a
+  scorbutic habit ([[artifact:mcclure-investigator-027]]);
+- **John Ames**, able seaman, on 11 April, of dropsy following a heart
+  complaint;
+- **John Kerr**, gunner's mate, on 12 or 13 April, of general dropsy after long
+  scurvy and debility.
+
+(Armstrong dates Kerr's death the 12th; the crew list printed in Osborn's
+edition says the 13th.)
+
+[[person:Bedford Pim]] walked into the bay on 6 April, between the first death
+and the second, while four men were ashore digging Boyle's grave. Two more of
+the Investigator's people died afterwards: Mate H. H. Sainsbury aboard the
+Resolute in the drifting pack on 14 November 1853, and able seaman Thomas
+Morgan aboard the North Star at [[place:Beechey Island]] on 22 May 1854, buried
+there beside Franklin's three men.
+
+[[person:Alexander Armstrong]] and [[person:William Thomas Domville]] of the
+Resolute surveyed the whole crew and reported on 23 May 1853 that they were
+[[artifact:mcclure-investigator-020|"utterly unfit to undergo the rigour of
+another winter in this climate"]]. The ship was abandoned on 3 June. A cairn
+with a record of the abandonment was left, stores were landed on the beach, and
+a memorial tablet was raised over the three graves.
+
+## What is there now
+
+The graves and McClure's Cache are on the shore, inside
+[[place:Aulavik National Park]]; the wreck stands upright on the bottom of
+[[place:Mercy Bay]] in about eleven metres of water, just outside the park
+boundary. Parks Canada found her by sonar in July 2010 — about fifteen minutes
+into the survey — dived her in 2011, and returned in May 2026 with a remotely
+operated vehicle lowered through two metres of sea ice, at the request of the
+park's Cooperative Management Board.
+
+For a century and a half the stores McClure landed were a resource, not a
+relic. Inuvialuit families travelled to Mercy Bay for the iron, copper, wood and
+canvas, and material from the Investigator has been documented at sites across
+the western Arctic. The ship that came looking for Franklin ended up, in the
+end, supplying the people whose country she was mapping.
+

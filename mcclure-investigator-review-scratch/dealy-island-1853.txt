@@ -1,0 +1,168 @@
+# The Dealy Island surveys of 1853
+[page · mcclure-investigator · draft]
+
+[[place:Dealy Island]] is a low island in Bridport Inlet on the south coast of
+[[place:Melville Island]]. HMS Resolute and the steam tender Intrepid were
+hauled into a canal cut through the fast ice beside it, in [[place:Bridport Inlet]],
+on 10 September 1852 and
+stayed eleven months. M'Dougall observed the position as 74° 56' 25" N,
+108° 48' 33" W.
+
+Nothing about the place recommends it except that it was as far west as
+[[person:Henry Kellett]] could get. He had come within six miles of
+[[place:Winter Harbour]] on 7 September and found six miles of solid floe
+between his bows and Parry's anchorage; as he put it, cutting through it was
+too absurd to attempt. So he turned back east and wintered here instead. It is
+one of the plainer illustrations of what the ice in this part of the
+archipelago does to plans.
+
+The men built a great stone depot on the beach — provisions and gear left in
+case Franklin's people ever came this way. They never did. Travellers were
+still drawing on that depot seventy years later.
+
+## Why the 1853 season mattered
+
+Two things came together at Dealy Island. First,
+[[person:George Frederick Mecham]] had found McClure's record at Parry's Rock
+on 12 October 1852, so Kellett knew there was a ship to reach across
+[[place:Viscount Melville Sound]] (see [[page:the-sledge-link]]). Second, he
+had in [[person:Francis Leopold McClintock]] the officer who had done more than
+anyone alive to work out how to travel long distances over sea ice on foot —
+the man-hauled sledge with depots laid the previous autumn, supported by
+auxiliary sledges that turn back in stages.
+
+The result was the most productive single season of Arctic sledging in the
+nineteenth century.
+
+## 4 April 1853
+
+A flag went up on the summit of Dealy Island at five in the morning. The
+sledges left in two divisions at seven and a quarter past seven, Mecham's
+western division making sail first. Kellett himself went out with them as far
+as a week's travel and came back on 11 April having, in twenty-five years of
+service, never seen work like it.
+
+| Officer and sledge | Out | Back | Days | Furthest | Miles travelled | New coast |
+|---|---|---|---|---|---|---|
+| Cdr McClintock, *Star of the North* | 4 Apr | 18 Jul | 105-106 | [[place:Point McClintock]], Prince Patrick Island, 77° 23' N 118° 20' W | 1,030 geog. / 1,328 statute | 768 geog. miles |
+| Lieut. Mecham, *Discovery* | 4 Apr | 6 Jul | 94 | Prince Patrick Island, 77° 06' N 120° 30' W | 1,163 statute | 680 |
+| Lieut. Hamilton, *Hope* | 27 Apr | 20 Jun | 54 | rendezvous near 76° 33' N 105° W | 604 statute | 170 |
+
+The two authorities for that table do not quite agree. M'Dougall's appendix,
+compiled afterwards, gives McClintock 106 days and 1,328 statute miles and names
+his furthest point *Point M'Clintock*. McClintock's own abstract in the
+[[source:greatbritain1855further|Parliamentary blue book]] says 105 days absent,
+1,030 geographical miles in 99 marches, and 22 cairns built — and never uses that
+name at all. His journal for 13 June 1853 says only: "Saw two ivory gulls.
+Started at a quarter past eight, at half-past ten the fog cleared off and we saw
+the land, which is evidently an island." Where the officer's own journal and the
+compiler disagree, the journal is the better authority.
+
+The country they charted they named after each other. Mecham put
+[[place:Mould Bay]] on Prince Patrick Island and the Hill of Barra on
+[[place:Eglinton Island]] on the map at the request of the mate
+[[person:George Strong Nares]] — the same Nares who would command the Alert
+twenty-two years later — and Cape Russell after his first captain. McClintock
+named Purchase Bay for the Intrepid's senior engineer, Green's Bay for the
+ice-quartermaster who had surveyed it, and a point for his boatswain's mate.
+[[person:Richard Vesey Hamilton]] named Point Roche for the man who had laid his
+depots. Mould Bay became a Joint Arctic Weather Station a century later and is
+still about the only place on Prince Patrick Island anyone has lived: see
+[[topic:science-stations]].
+
+They also left, in their journals, some of the best ice description in the
+record. Mecham on the far side of Prince Patrick on 27 May 1853:
+[[artifact:mcclure-investigator-064|"The pack here is much heavier than any yet
+seen, being almost entirely composed of very old broken up floes"]] — the edge of
+the Beaufort gyre, seen from a sledge. And the arithmetic of the work:
+[[artifact:mcclure-investigator-063|184 lb a man]] at the start of a hundred-day
+journey.
+
+[[person:Francis Leopold McClintock]]'s hundred and five days
+([[artifact:mcclure-investigator-009|track]]) was the longest man-hauled
+journey made to that date, and it charted the north-eastern side of
+[[place:Prince Patrick Island]]. Mecham ([[artifact:mcclure-investigator-010]])
+went round [[place:Eglinton Island]] and up the outer, Beaufort Sea coast of
+Prince Patrick to [[place:Land's End]] — the westernmost British survey in the archipelago for
+the rest of the century.
+
+[[person:Richard Vesey Hamilton]] ([[artifact:mcclure-investigator-011]]) went
+the other way, north-east up [[place:Byam Martin Channel]] towards
+[[place:Bathurst Island]], carrying the Resolute's half of a promise Kellett and
+[[person:Edward Belcher]] had made to each other on the floe at
+[[place:Beechey Island]] in August 1852: to communicate at 77° N, 105° W.
+Commander Richards of the Assistance had left Belcher's despatch near the
+rendezvous on 30 April. Then the two parties met by accident, and Hamilton's own
+journal tells it better than any summary:
+
+> "Soon after supper we were all astonished by hearing foot-steps approaching
+> the tent; this proved to be Commander Richards and three men from his sledge.
+> They had passed our sledge tracks about 3' off and followed them up."
+
+His printed journal dates that 18 May 1853; M'Dougall's summary says the 17th.
+Either way it is as close to co-ordination as
+[[page:belchers-five-ships|Belcher's squadron]] ever managed — two parties
+finding each other in fog by tripping over a sledge track.
+
+Meanwhile [[person:Bedford Pim]] had gone west on 10 March and
+[[person:Robert McClure]]'s sixty-one people arrived on 17 June.
+
+## The numbers, and what they were worth
+
+M'Dougall's appendix totals the season for Kellett's division: 1,618
+geographical miles (1,870 statute) of new coastline, out of roughly 13,337
+geographical miles of sledge travel by the two ships between autumn 1852 and
+June 1854.
+
+Set against the whole search from 1848 to 1854, Kellett's ships did more
+sledging than anybody: 9,432 geographical miles on foot, against Austin's
+6,087 and McClure's 2,350.
+
+They did not find a trace of Franklin. What they found was the western Queen
+Elizabeth Islands — Prince Patrick, Eglinton, the north and west coasts of
+Melville — the last large land in the Canadian Arctic to be added to the map,
+and the ground the Amundsen's own transects now cross. That coastline was drawn
+by cold, hungry men walking, and the surprising thing when it is checked
+against modern charts is how nearly right they got it.
+
+## Afterwards
+
+Both of the great sledgers came back. Mecham made an even longer journey in
+1854 and died at thirty-two, at Honolulu, in 1858. McClintock went on to
+command the *Fox* and to find the Victory Point record on King William Island
+in 1859 — see [[topic:franklin-search]]. [[person:Richard Vesey Hamilton]]
+became Admiral of the Fleet and First Sea Lord. [[person:George Frederick
+Mecham]] has an island, a bay and a cape named after him and no monument at
+all.
+
+
+## The two tracks rebuilt, and the names on the chart
+
+The routes of [[artifact:mcclure-investigator-009|M'Clintock]] and
+[[artifact:mcclure-investigator-010|Mecham]] on the map are now built day by day from
+their own printed journals rather than from four or five endpoints. Neither officer
+carried a chronometer he could trust for longitude, so the journals give almost no
+positions — M'Clintock's whole 105 days yield two observed fixes that survive the
+printing, on 19 and 26 April — but they name landmarks constantly, and most of those
+names are still on the Canadian chart. The tracks are therefore pinned to the modern
+official coordinates of the features the officers name, from the Canadian
+Geographical Names Database, with the interpolated stretches marked as such in each
+waypoint. The full day-by-day tables, and the gazetteer of 111 names they use, are
+[[artifact:mcclure-investigator-070|kept with the topic]].
+
+Reading them in order shows how the season worked. M'Clintock hauled north across
+Melville Island by Crooked and Separation Ravines, crossed [[place:Hecla and Griper Bay]]
+under sail for [[place:Cape Fisher]], worked west past Long Point, Grassy Cape and
+[[place:Depot Island]], rounded [[place:Cape De Bray]] — which he named for the
+Frenchman [[person:Emile de Bray]] — and crossed to [[place:Wilkie Point]] on
+[[place:Prince Patrick Island]] on 14 May. He searched [[place:Intrepid Inlet]], came
+back for his depot, and then went north-west along the outer islands until on 18 June
+he walked over into [[place:Satellite Bay]], built a cairn and turned for home. Mecham
+went the other way round, west along the south coast past [[place:Winter Harbour]],
+[[place:Cape Providence]] and [[place:Cape Russell]], and on 29 April sighted new land
+to the westward: [[place:Eglinton Island]], which he landed on three days later. He
+carried on round Prince Patrick's Land to the main pack edge, where the printed
+observation reads Lat. 77° 00′ N., and wrote of it that "the pack here is much heavier
+than any yet seen, being almost entirely composed of very old broken up floes"
+([[artifact:mcclure-investigator-064]]).
+

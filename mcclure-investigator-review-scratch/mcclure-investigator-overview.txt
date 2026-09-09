@@ -1,0 +1,125 @@
+# McClure, Collinson and the western search, 1850-1855
+[page · mcclure-investigator · draft]
+
+The North-West Passage was not sailed through in the nineteenth century. It was
+found by a man standing on a hill, and it was finished on foot, by a starving
+ship's company walking across the ice of Viscount Melville Sound from a ship
+that had come in from the Pacific to two ships that had come in from the
+Atlantic. That walk is the centre of this topic, and it happened within a
+hundred miles of where the Amundsen now is.
+
+## The two ships from the west
+
+In January 1850 the Admiralty sent [[person:Richard Collinson]] in HMS
+Enterprise and [[person:Robert McClure]] in HMS Investigator round Cape Horn to
+look for [[topic:franklin-1845|Franklin]] from the Pacific side. They were
+meant to work together. They never met again after Bering Strait, and
+Collinson's own five seasons — two winters inside the archipelago, and two near
+misses with the Franklin evidence — are told in
+[[page:collinson-enterprise]]. McClure
+parted company off Cape Lisburne on 31 July 1850 and pushed east alone along
+the American coast — past Point Barrow, past the Mackenzie, past
+[[place:Cape Bathurst]] — with the Moravian interpreter
+[[person:Johann August Miertsching]] talking for him to the Inuvialuit whose
+country it was — [[page:inuvialuit-and-copper-inuit|the people the Investigator
+met]] are a page of their own, because Miertsching's German diary is the only
+real record of them.
+
+On 6 September 1850 he raised new land to the north: [[place:Banks Island]],
+which he named Baring Island. He turned up
+[[place:Prince of Wales Strait]] between it and Victoria Island, and on
+17 September got to within about thirty miles of Barrow Strait before the ice
+stopped him. He was beset for the winter on 30 September.
+
+## The hill, 26 October 1850
+
+He would not wait for spring. On 21 October he took a sledge north up the
+strait, and on the 26th, from a six-hundred-foot hill he called
+[[place:Mount Observation]], he saw the water of [[place:Viscount Melville Sound]] and beyond
+it the coast of [[place:Melville Island]] — the land Parry had reached from the
+Atlantic in 1819 (see [[topic:ross-parry]]). There was no unknown ground left
+between the two oceans. Osborn's edition of the journals puts it plainly:
+[[artifact:mcclure-investigator-015|"The North-west Passage was discovered!"]]
+
+What remained was to get out, and that took four more years and cost five
+lives.
+
+## Three winters, and the paper under the rock
+
+Two attempts to force Prince of Wales Strait failed. In August 1851 McClure
+turned south, ran round Nelson Head and north up the exposed west coast of
+Banks Island — three hundred miles in three days through water no ship can
+count on — and was nearly crushed against the northern cliffs on 20 August
+(Cresswell drew it: [[artifact:mcclure-investigator-004]]). On 24 September
+1851 the ship took shelter in a bay he named [[place:Mercy Bay]]. She never
+came out.
+
+In April 1852 McClure sledged across the sound to [[place:Winter Harbour]] on
+Melville Island, hoping for a ship or a depot at Parry's old winter quarters.
+There was neither. He left his journal and his chart under Parry's Rock — the
+sandstone boulder Parry's men had carved in 1820 — and walked back.
+
+On 12 October 1852 [[person:George Frederick Mecham]], laying autumn depots
+from [[place:Dealy Island]], stopped at that rock and
+[[artifact:mcclure-investigator-017|could hardly credit his senses]]. That
+paper is the reason anybody survived. See [[page:the-sledge-link]].
+
+## Kellett's western division
+
+[[person:Henry Kellett]] had brought HMS Resolute and the steam tender
+Intrepid to Dealy Island in September 1852 as the western half of
+[[person:Edward Belcher]]'s five-ship squadron — see
+[[page:belchers-five-ships]] for the squadron as a whole. Mecham's find turned
+Kellett's spring into a rescue. [[person:Bedford Pim]] left on 10 March 1853,
+the earliest long spring journey then on record, and walked into the Bay of
+Mercy on 6 April, nine days before McClure meant to abandon his ship. The men
+digging the grave and the carpenters making the first coffin dropped what they
+were doing ([[artifact:mcclure-investigator-019]]).
+
+The same spring sent [[person:Francis Leopold McClintock]], Mecham and
+[[person:Richard Vesey Hamilton]] out from the same beach, and they came back
+having put [[place:Prince Patrick Island]] and the western coasts of Melville
+Island on the chart: 1,618 geographical miles of new coastline in one season.
+See [[page:dealy-island-1853]].
+
+## The end of the ships
+
+[[person:Alexander Armstrong]] and [[person:William Thomas Domville]] surveyed
+the Investigator's crew on 23 May 1853 and found almost every man scorbutic
+([[artifact:mcclure-investigator-020]]). She was abandoned on 3 June and her
+people walked to the Resolute, arriving on 17 June — the first crossing of the
+passage, completed on foot. See [[page:three-winters-mercy-bay]].
+
+It did them limited good. The Resolute was blown out of Dealy Island in August
+1853, caught in the pack in September, and drifted 180 miles before stopping
+for the winter off [[place:Cape Cockburn]]. In 1854 Belcher ordered Kellett to
+leave her. Kellett thought she would come out on her own and made Belcher put
+the order beyond doubt ([[artifact:mcclure-investigator-021]]); then he left
+her, and everyone marched to [[place:Beechey Island]] and came home in the
+North Star, the Phoenix and the Talbot. The Resolute drifted twelve hundred
+miles by herself and was found sound in Davis Strait in 1855 by an American
+whaler. See [[page:abandonment-and-the-resolute]].
+
+## Why it matters here
+
+The Investigator lies on the bottom of Mercy Bay, upright in about eleven
+metres of water; Parks Canada found her by sonar in July 2010, dived her in
+2011, and went back through two metres of sea ice in May 2026 at the request of
+the [[place:Aulavik National Park]] Cooperative Management Board. Ashore are
+McClure's Cache and the graves of three of his men. For a century and a half
+after 1853 Inuvialuit families travelled to Mercy Bay for the iron, copper and
+wood the Navy left there, and Investigator material has been found at sites
+right across the western Arctic; that salvage is part of the ship's history,
+not a footnote to it.
+
+And the ice in this story is the ice this ship works in. McClure was stopped
+twice at the same place by multi-year floes coming south out of the Beaufort
+into Viscount Melville Sound. Kellett could not reach Winter Harbour in 1852
+because six miles of solid floe lay between him and it. The 1851 run up the
+west coast of Banks Island was a fluke of a season. Anyone reading modern
+Beaufort ice charts is reading the same system these men were reading, badly,
+with a telescope. The dated ice observations these voyages left — where they
+were stopped, what freeze-up looked like at Dealy Island hour by hour in
+September 1852, how far the Resolute drifted with nobody aboard — are collected
+in [[page:the-ice-that-stopped-them]].
+

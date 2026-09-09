@@ -1,0 +1,1080 @@
+########## relocations-overview
+# What the government did in Qikiqtani, 1950-1975
+[page · relocations-qtc · draft]
+
+Between 1950 and 1975 the Canadian government changed almost everything about
+how Inuit lived in the Qikiqtani region: where they camped, who fed them, who
+taught their children, who owned their dogs, and who decided whether a sick
+person went south on a ship. Most of the people who lived through it are still
+alive, and their communities are the ones the *Amundsen* calls at.
+
+In 2007 the Qikiqtani Inuit Association set up the **Qikiqtani Truth
+Commission** to find out what had happened. Over three years the QTC took
+statements from about 350 people in thirteen communities, set that testimony
+beside the departmental files and the RCMP's own reports, and published its
+findings in 2013: Commissioner Igloliorte's final report and twenty-two
+companion volumes — thirteen community histories and nine thematic reports and
+special studies. This topic follows the QTC's account, in the QTC's own terms.
+
+One boundary has to be marked at the outset. In the Commissioner's own words,
+"the QTC's mandate specifically excluded the High Arctic relocations and
+residential schools issues": the relocations had already been examined by the
+Royal Commission on Aboriginal Peoples, and the schools were before the Truth
+and Reconciliation Commission of Canada. The QTC's community histories for Ausuittuq and Qausuittuq tell the
+relocation story anyway, because it is their founding story, but the weight on
+the 1953-55 material here rests on
+[[source:rcap1994high|RCAP's 1994 report]] and the testimony given to it.
+
+## The words the Commission uses
+
+The QTC found that Inuit did not experience these years as a policy but as a
+series of things done to them by people they could not refuse. Four words carry
+most of the argument:
+
+- **ilira** — the deep, deferential fear of a person with power over you: a fear
+  that produces agreement without consent. The QTC uses it to explain why a
+  file can record a "volunteer" where a family remembers having no choice.
+- **qimmiit** — the dogs. Not pets and not equipment: the means of hunting,
+  travel, rescue and independence. When the dogs went, the ability to leave the
+  settlement went with them.
+- **ilagiit nunagivaktangit** — the places where extended families lived and
+  camped, the ordinary settlement pattern before centralization.
+- **saimaqatigiingniq** — "when past opponents get back together, meet in the
+  middle, and are at peace." It is the Commission's name for what it was
+  trying to reach, and the title of its final report is *Achieving
+  Saimaqatigiingniq*.
+
+## What happened
+
+**The High Arctic relocations.** In the summer of 1953 ten families — 54
+people, seven from [[place:Inukjuak]] in Nunavik and three from
+[[place:Mittimatalik]] — were carried north aboard the C. D. Howe and the
+d'Iberville and put ashore in two places more than 2,000 km from home:
+[[place:Qausuittuq]] on Cornwallis Island and Craig Harbour on Ellesmere
+Island, from which the camp moved to the [[place:Lindstrom Peninsula]] and
+eventually to [[place:Ausuittuq]]. Six more families followed in 1955. They had
+been promised game, and told they could come home. Neither promise was kept.
+See [[page:relocations-the-1953-and-1955-high-arctic-relocations]].
+
+**The qimmiit.** Between the late 1950s and the early 1970s the dog teams of
+Qikiqtaaluk were destroyed — shot by police and other officials, killed by
+distemper spread through the new settlements, and made unusable by the
+ordinances and the crowding of settlement life. The QTC did not find a written
+order to kill the dogs, and did not need one to find that Inuit lost them
+because of what governments did. See [[page:relocations-the-killing-of-the-qimmiit]].
+
+**Tuberculosis.** Through the 1950s the annual Eastern Arctic Patrol ship —
+the C. D. Howe, [[artifact:relocations-qtc-042]] — x-rayed whole communities at
+the ship's rail and took the positives south on the spot, sometimes without a
+word to the family on shore. By 1955 almost a thousand Inuit had been taken
+south, and in 1956, the QTC reckons, one Inuk in seven was in a hospital in
+southern Canada. Some were away for years; some
+never came back, and their families were not told where they were buried. See
+[[page:relocations-the-ships-that-took-people-south]].
+
+**Into the settlements.** Families that had lived in ilagiit nunagivaktangit
+were drawn into the settlements by the school, the nursing station, the family
+allowance and the housing programme, and by the loss of the dogs that made
+camp life possible. See [[page:relocations-moving-into-the-settlements]].
+
+## The reckoning
+
+The relocatees pressed their case from the late 1970s. The House of Commons
+Standing Committee on Aboriginal Affairs twice found their complaints
+substantiated; [[person:John Amagoalik]], then president of the Inuit Tapirisat
+of Canada, put it to the committee in March 1990. In 1993 the Royal Commission
+on Aboriginal Peoples heard the relocatees themselves, and in 1994
+published [[source:rcap1994high|*The High Arctic Relocation*]], which found the
+move had not been made with free and informed consent. In 1996 Canada signed a
+memorandum of agreement with the Makivik Corporation and paid \$10 million into
+a trust for the survivors — and refused to apologise.
+
+The apology came on 18 August 2010, at Inukjuak, and named the failures one by
+one: the families separated, the shelter and supplies not provided, the
+distance never explained, the promise of return not kept
+([[artifact:relocations-qtc-013]]). The QTC's own community histories, written
+from testimony given before that day, still record people waiting for it
+([[artifact:relocations-qtc-012]]). Two further apologies followed in 2019, for
+the handling of the tuberculosis epidemic and for the QTC's findings
+themselves.
+
+On 10 September 2010, three weeks after the apology, a boulder with a bronze
+plaque was unveiled at Ausuittuq beside a granite carving of a woman and child
+by [[person:Looty Pijamini]], one of two monuments Nunavut Tunngavik Inc. had
+commissioned in April 2008 ([[artifact:relocations-qtc-041]]); the companion
+figure of a man, carved by [[person:Simeonie Amagoalik]], had been unveiled at
+Qausuittuq two days earlier ([[artifact:relocations-qtc-051]]). The plaque's
+wording is worth reading beside the Commission's: it credits the relocatees
+with having "dedicated their lives to Canada's sovereignty in these lands and
+waters."
+
+The Commission asked for more than an apology. *Achieving Saimaqatigiingniq*
+sets out twenty-five recommendations, and the standard it sets is not that the
+record be corrected but that the relationship be repaired. See
+[[page:relocations-saimaqatigiingniq]].
+
+## Why it belongs on this ship
+
+Every community the *Amundsen* works out of in Qikiqtaaluk exists in its
+present form because of these years. Ausuittuq and Qausuittuq exist *only*
+because of them: they were made by an act of government in 1953, and the
+families put ashore at Qausuittuq are named one by one in
+[[artifact:relocations-qtc-016]]. When the ship takes on a community liaison
+at [[place:Mittimatalik]] or lands gear at [[place:Qausuittuq]], it is working
+with families who were split by a decision taken in Ottawa within living
+memory.
+
+The related topics are [[topic:posts-rcmp-missions]], on the police posts and
+missions that were the government's first presence here, and
+[[topic:st-roch-modern]], for [[person:Henry Larsen]], who commanded the
+St. Roch through the Northwest Passage and then, as Officer Commanding "G"
+Division, made the promise of return that Ottawa did not honour
+([[artifact:relocations-qtc-011]]).
+
+########## relocations-the-1953-and-1955-high-arctic-relocations
+# The High Arctic relocations, 1953 and 1955
+[page · relocations-qtc · draft]
+
+In the summer of 1953 the Canadian government moved ten Inuit families — 54
+people — from [[place:Inukjuak]] on Hudson Bay and [[place:Mittimatalik]] on
+northern Qikiqtaaluk to two places on the High Arctic islands where no Inuit had
+lived permanently for centuries. Six more families followed in 1955. The
+settlements they were made to build are now [[place:Qausuittuq]] and
+[[place:Ausuittuq]], the two northernmost civilian communities in Canada.
+
+## Why the government did it
+
+Ottawa gave several reasons at different times, and the two commissions that
+examined the record disagreed with it about which mattered.
+
+The stated reason was hunger. Fur prices had collapsed. At Inukjuak, where the
+trading companies had spent decades competing with easy credit and high fox
+prices, families had come to depend on store food bought against relief and the
+family allowance; officials reported a shortage of game. But the QTC's Grise
+Fiord history is careful here: "the problems they faced were more complicated
+than that", and the government did not, in fact, choose the most self-reliant
+families. "Evidence shows . . . that families who were the most dependent on
+government assistance were more likely to be relocated."
+
+The unstated reason was sovereignty. There was precedent: in 1934 the
+Department of the Interior authorised the Hudson's Bay Company to open a post
+at [[place:Dundas Harbour]] on Devon Island and to move families to it — from
+[[place:Kinngait]], and, the QTC adds, from [[place:Panniqtuuq]] and
+[[place:Mittimatalik]] as well, fifty-two people in all — and the government's
+own press release said why
+([[artifact:relocations-qtc-010]]) — "the angle of occupation of the country,
+now that aerial routes, mineral developments, and other reasons make possible
+the claims of other countries to part of Canada's Arctic". The Dundas Harbour
+families were unhappy, were moved on again to [[place:Ikpiarjuk]] and Fort
+Ross, and asked for years to be taken home. They never were.
+
+[[person:Alexander Stevenson]], the officer in charge of the 1950 Eastern
+Arctic Patrol and later Federal Administrator of the Arctic, recommended in his
+patrol report that Inuit be moved from northern Qikiqtaaluk to Devon Island and
+settled up the Ellesmere coast, and repeated the suggestion in 1951. In
+February 1952 [[person:Henry Larsen]] — the man who had taken the St. Roch
+through the Northwest Passage, see [[topic:st-roch-modern]] — recommended to
+the Commissioner of the RCMP that the Craig Harbour detachment be moved north
+to the Bache Peninsula and that three or four families be recruited from
+Mittimatalik to go with it.
+
+## Consent, and the promise
+
+Files call the relocatees "volunteers". The selection was made by individual
+officers. The QTC's finding is blunt: "Inuit were never fully informed of
+options or potential consequences", and testimony gathered by RCAP, the QIA and
+the QTC "show that Inuit were afraid of the RCMP officers and felt pressured to
+move." [[person:George Eckalook]] told the QIA that his parents "did not agree
+to the move but later on they agreed but in their hearts, they were reluctant to
+leave". [[person:Simeonie Amagoalik]] said: "It seemed like I had no other
+choice but to say yes." This is the QTC's *ilira*: agreement without consent.
+
+Because officials themselves doubted the plan, two undertakings were given.
+Stevenson said that after two years anyone dissatisfied "could return to Port
+Harrison". Larsen, remembering Dundas Harbour, wrote on 14 April 1953 that
+"families will be brought home at the end of one year if they so desire"
+([[artifact:relocations-qtc-011]]). Neither promise was kept.
+
+## The voyage, and the splitting of the families
+
+The relocatees boarded the C. D. Howe at Inukjuak in late July 1953. The ship
+called at Mittimatalik in late August and took on three families whose High
+Arctic experience was supposed to teach the Itivimiut how to live in the new
+country; they expected to be paid for it and never were. At Craig Harbour the
+C. D. Howe met the d'Iberville, and the families learned for the first time that
+they were to be divided. [[person:John Amagoalik]], five or six years old:
+
+> I remember we were all on the deck of the ship, the C. D. Howe, and all the
+> women started to cry. And when women start to cry, the dogs join in. It was
+> eerie.
+
+([[artifact:relocations-qtc-001]].) One party went ashore at Craig Harbour on
+29 August, with Constable [[person:G. K. Sargent]]. The d'Iberville tried to
+reach [[place:Cape Herschel]] on eastern Ellesmere Island, where a third
+settlement was planned, could not get through the ice, and returned in early
+September to land those families at Craig Harbour too. RCAP notes drily that
+this was lucky: game did not appear at Cape Herschel that year and the people
+could not have survived. The remainder went ashore at Qausuittuq on 7 September
+1953. The two commissions count the Craig Harbour party differently — RCAP
+makes it three families in August and three more in September, six in all,
+while the QTC's Grise Fiord history says six landed in August and two more the
+following month — and this page follows RCAP, which worked from the
+departmental file. Who went where, family by family, is in
+[[artifact:relocations-qtc-016]].
+
+## What they found
+
+Nothing had been landed for them. Families had been told to bring only tents and
+personal possessions. [[person:Samuel Arnakallak]] described the first night
+([[artifact:relocations-qtc-002]]): a stone stove, no lamp, and one man's
+flashlight passed from shelter to shelter so that people could eat.
+
+The promised game was hedged about with law. [[person:Samwillie Elijasialak]]'s
+parents were told they might take one caribou a year for the whole family, and
+that killing a muskox meant a \$5,000 fine or arrest
+([[artifact:relocations-qtc-003]]). At Qausuittuq the walrus had already
+migrated when they landed in September, the caribou were protected, and the fish
+in the lakes were full of parasites: "We didn't know any of this"
+([[artifact:relocations-qtc-014]]). Fresh water at Ausuittuq had to be got from
+sea ice, and it took a long time to learn to tell fresh ice from salt.
+
+Two months after they landed, the sun went out, and stayed out for three
+months. The Tununirmiut from Mittimatalik had some experience of a full winter
+darkness; the Itivimiut from Inukjuak had none. [[person:Anna Nungaq]], in a
+1989 interview: "Because I had never been in a place where there is no daylight
+at all, I was so scared and thought there would never be light again"
+([[artifact:relocations-qtc-004]]).
+
+The Craig Harbour party was moved almost at once to the
+[[place:Lindstrom Peninsula]], 70 km west of the police post — Sargent reported
+in December 1953 that the site had been chosen because it reduced the chance of
+Inuit becoming dependent on the RCMP while still allowing some contact, and
+because it stood a reasonable distance from the caribou herds. The camp had no
+Hudson's Bay Company store. A small trading store opened beside the detachment
+at Craig Harbour in the summer of 1954, looked after by
+[[person:Thomasie Amagoalik]] with the RCMP doing the bookwork, and moved with
+the detachment to Grise Fiord in 1956. It was badly supplied. [[person:Rynee Flaherty]], who came
+in 1955, told RCAP how she had tried to feed her infant son on flour and water
+([[artifact:relocations-qtc-005]]).
+
+## Asking to go home
+
+In the first spring people asked to leave. They were refused
+([[artifact:relocations-qtc-008]]), and told instead to bring their relatives
+north ([[artifact:relocations-qtc-015]]). [[person:Josephie Flaherty]] asked in
+1959-60 and was told a school was coming and he had children to educate.
+[[person:Samwillie Elijasialak]] recalled being told that a family wanting to
+return would first have to find someone to take its place — "said by people
+where no appeal was available to a higher authority"
+([[artifact:relocations-qtc-009]]).
+
+The two groups did not mix easily. The Mittimatalik families had been told the
+Inukjuak people were poor and lived on relief; the Itivimiut did not think of
+themselves that way. By 1958 the Inukjuak families at the Lindstrom Peninsula
+had split off to a camp 3 km away. Constable [[person:Terry Jenkin]], posted in
+1962, thought outside observers had made too much of the division.
+
+Tuberculosis did the rest. [[person:Markoosie Patsauq]] told RCAP that he was
+already infected when he was moved, and that others caught it from him. John
+Amagoalik: "The first ten years in Resolute were the most terrible years of our
+lives. We spent years without mothers, without fathers, without brothers,
+without sisters, who were all sick in the hospital"
+([[artifact:relocations-qtc-006]]). See
+[[page:relocations-the-ships-that-took-people-south]].
+
+## Redress
+
+Relocatees began returning at their own expense in the 1970s and 1980s; in 1988
+the government paid for a number of returns. Two unanimous reports of the
+Commons Standing Committee on Aboriginal Affairs found the complaints
+substantiated, and in March 1990 John Amagoalik, then president of the Inuit
+Tapirisat of Canada, told the committee they had been dealing with the
+relocation for more than thirty years. In 1993 RCAP heard the relocatees; in
+1994 it published
+[[source:rcap1994high|*The High Arctic Relocation*]]. In 1996 Canada signed a
+memorandum of agreement with the Makivik Corporation acknowledging both the
+relocatees' contribution to "a Canadian presence" in the High Arctic and the
+"hardship, suffering and loss" of the early years, and paid \$10 million into a
+trust — while refusing to apologise.
+
+The apology was given at Inukjuak on 18 August 2010
+([[artifact:relocations-qtc-013]]). It named the separation of families, the
+inadequate shelter and supplies, the failure to say how far and how different
+the new homes would be, and the broken promise of return.
+
+Nunavut Tunngavik Inc. had commissioned two monuments in April 2008, one for
+each community, each carver required to train an apprentice. They were unveiled
+three weeks after the apology, on 8 and 10 September 2010: a figure of a man at
+Qausuittuq by [[person:Simeonie Amagoalik]], who had been landed there as a boy
+in 1953, working with Jeffrey Amagoalik ([[artifact:relocations-qtc-051]]), and
+a granite woman and child at Ausuittuq by [[person:Looty Pijamini]], working
+with Matt Pijamini, with a bronze plaque set in a boulder beside it
+([[artifact:relocations-qtc-041]]). The two figures stand for the families
+divided at Craig Harbour. The plaque's wording is the relocatees' own account
+of what they did, and it is not the government's: they came "to pursue the
+Government's promise of a more prosperous life", they "endured and overcame
+great hardship", and they "dedicated their lives to Canada's sovereignty in
+these lands and waters."
+
+########## relocations-the-killing-of-the-qimmiit
+# The qimmiit: how the dog teams of Qikiqtaaluk were destroyed
+[page · relocations-qtc · draft]
+
+Between 1950 and 1975 the number of qimmiit — Inuit sled dogs — in Qikiqtaaluk
+fell from three or four thousand to a few dozen. That single figure, from the
+Qikiqtani Truth Commission's thematic report
+[[source:qtc2013qimmiit|*Qimmiliriniq*]], is the shape of the thing. What is
+argued about is how it happened, and whether anyone meant it to.
+
+## What a team was
+
+What a fan-hitch team looked like, and what keeping one running took, is in
+Joseph Dewey Soper's 1929 photograph of Shappa clearing tangled traces at
+[[place:Kinngait]] ([[artifact:relocations-qtc-062]]).
+
+A qimmiq was not equipment and not a pet. The dogs were the only means of winter
+travel; they pulled sleds, carried packs in summer, found seal holes, kept off
+the ice cracks in fog and darkness, and held a polar bear for the hunter. They
+were the only animals Inuit gave individual names. Children raised puppies, and
+being able to handle a team was one of the marks of becoming an adult.
+[[person:Pauloosie Veevee]] told QIA researchers that a man was judged by his
+dogs' "performance, appearance, health, and endurance"
+([[artifact:relocations-qtc-017]]). Losing the team did not mean losing
+transport. It meant losing the ability to leave.
+
+## The Dog Ordinance
+
+In 1949-50 Ottawa revised the Northwest Territories *Ordinance Respecting Dogs*.
+The QTC's judgement is that the revision "effectively outlawed traditional Inuit
+ways of handling dogs, wherever this seemed to conflict with the needs or
+practices of a growing qallunaat population"
+([[artifact:relocations-qtc-022]]). Under it — and, the QTC found, often beyond
+it — police, other government agents, military personnel, Inuit special
+constables and hired dogcatchers shot dogs they judged loose, sick, dangerous or
+simply surplus.
+
+Enforcement did not need a rifle to bite. At [[place:Panniqtuuq]] the RCMP ran
+the post office and handed out the family allowance cheques, and Pauloosie
+Veevee remembered that every time, before the cheques came out, the officer
+asked whether the family's dogs were tied up
+([[artifact:relocations-qtc-019]]). [[person:Levi Evic]], camped at Panniqtuuq
+to trade in 1955 or 1956, was warned through the Hudson's Bay Company manager
+that the dogs would be shot in the morning; the family harnessed up and left in
+the middle of a winter night ([[artifact:relocations-qtc-021]]).
+
+## Two policies at once
+
+People still ask how the same force could vaccinate dogs and shoot them. The
+QTC's answer is that the government was pursuing two aims that did not fit
+together, and it quotes the government's own words for 1954
+([[artifact:relocations-qtc-018]]): leave Inuit in remote areas undisturbed,
+integrate those in contact with the "white economy", and "continue to transfer
+families from unproductive areas to regions where game is more abundant".
+
+The RCMP, at least until the 1960s, wanted Inuit to stay on the land and away
+from the bases — which required healthy dogs, hence publicly funded immunisation
+— but also thought Inuit kept more dogs than hunting could support, so officers
+"found opportunities to kill qimmiit they considered to be surplus". At the same
+time federal policy was drawing people into settlements with schools, housing,
+wage work and health care, where a loose team was a hazard among newcomers who
+did not know how to be around dogs.
+
+## Three waves
+
+*Qimmiliriniq* separates the killings into episodes rather than one slaughter:
+
+1. **[[place:Iqaluit]], after 1956.** The first systematic killing of loose
+   dogs, at the same time as Inuit were drawn in by work at the airport and the
+   radar stations, and the town of Apex was built at Niaqunngut to house them.
+2. **Cumberland Sound, 1962.** An epidemic of canine distemper or hepatitis
+   reached the ilagiit nunagivaktangit around [[place:Panniqtuuq]], and the RCMP
+   answered it by systematically killing almost the entire dog population of the
+   region. [[person:Mosesee Qiyuakjuk]] testified that the shooting had been
+   going on well before the epidemic, and for less reason
+   ([[artifact:relocations-qtc-020]]).
+3. **After the schools were built.** As almost the whole regional population was
+   drawn into thirteen settlements, the dogs went piecemeal — earlier in some
+   places, such as [[place:Kinngait]] — shot by many different hands, including
+   Inuit who were made to shoot their own teams before moving in. The sharpest
+   single episode was at Panniqtuuq in 1966-67, where more than four hundred
+   qimmiit were shot around the settlement.
+
+There is also evidence of dogs killed to frighten their owners: Levi Evic's
+family, and the day about 1961-62 when [[person:Lucian Ukkalianuk]]'s whole team
+was destroyed at [[place:Iglulik]] after the dogs got loose in the settlement,
+which [[person:Louis Uttak]] described to the QIA.
+
+## The RCMP's review, and the QTC's answer
+
+Public discussion resumed at a meeting in Iqaluit in February 1999 between
+community members and senior RCMP officers. A month later, at the Makivik
+Corporation's annual meeting, Nunavimmiut called for an inquiry, an apology and
+compensation, and the QIA — whose president had been at that meeting — repeated
+the call at once. On 10 March 2005 the House of Commons Standing Committee on
+Aboriginal Affairs and Northern Development, having heard Inuit witnesses,
+called for a public inquiry by a superior court judge "to get to the bottom of
+the matter", a recommendation the Legislature of Nunavut later endorsed. The
+government did not hold one. On 28 April 2005 Anne McLellan, Deputy Prime
+Minister and Minister of Public Safety, asked the RCMP to review its own
+actions instead. The Force's twenty-six-page final report of 2006,
+*The RCMP and the Inuit Sled Dogs (Nunavut and Northern Quebec: 1950-1970)*,
+accepted that members and other persons in authority had killed hundreds and
+perhaps thousands of dogs, and concluded that the killings had never been part
+of a conspiracy to force Inuit off the land.
+
+The QTC published a point-by-point answer,
+[[source:qtc2013rcmpreview|*Analysis of the RCMP Sled Dog Report*]]. Its
+objection is to the method as much as the finding. Because the RCMP could not
+conduct an independent inquiry into itself, most Inuit would not give evidence
+to it, and the report treated that refusal as proof of political intimidation
+rather than as a fact about trust. It analysed the killings as a law-enforcement
+question, taking the qallunaat presence and settlement life as given, and — the
+QTC's central charge — directed its analysis "toward discrediting Inuit
+memories", "denying the validity of most Inuit oral evidence yet presenting the
+views of non-Inuit with little negative comment"
+([[artifact:relocations-qtc-023]]).
+
+The QTC did not find a conspiracy either. It found something it thought worse
+and better documented: "a series of inter-connected government policies and laws
+put into effect and enforced by the RCMP, which quickly undermined traditional
+Inuit ways of living" ([[artifact:relocations-qtc-022]]). Its legal point is
+that Canada failed its obligations to Inuit when it restricted their use of dogs
+without involving them in finding workable rules.
+
+## What it left
+
+Snowmobiles came, but not in time: for many years dogs were being shot when
+there was no reliable machine to replace them, and after about 1966 the machines
+were reliable but expensive to buy, run and maintain. The QTC's conclusion
+places the qimmiit inside the larger pattern — "government domination and
+interference with Inuit decision-making" — and its Commissioner recommended
+that Canada formally acknowledge that today's rates of suicide, substance abuse
+and incarceration among Inuit are in part symptoms of intergenerational trauma
+caused by historical wrongs. See [[page:relocations-saimaqatigiingniq]].
+
+The related police history is [[topic:posts-rcmp-missions]].
+
+########## relocations-the-ships-that-took-people-south
+# Tuberculosis: the ships that took people south
+[page · relocations-qtc · draft]
+
+Every summer through the 1950s a ship came round the Qikiqtani coast, and
+everybody went aboard to be x-rayed. Anyone whose film showed tuberculosis did
+not come back ashore. The ship sailed with them on it.
+
+## How it worked
+
+In 1945, in the middle of a tuberculosis epidemic, responsibility for the
+health of First Nations and Inuit was moved to the federal Department of
+National Health and Welfare — which had, in the whole of what is now Nunavut,
+two hospitals and forty-eight beds for a little under four thousand people. The Eastern Arctic Patrol, which had been
+running since 1922 as a sovereignty and supply voyage, became the instrument.
+From 1946 the patrol x-rayed at every stop, and, in the QTC's words, "anyone
+diagnosed as being tubercular had to immediately board the ship to be sent
+south."
+
+Treatment meant a southern sanatorium. That was the policy in Ontario and Quebec
+and it was applied unchanged to people who lived two or three thousand
+kilometres away. The government's argument was that it was the cheapest
+available measure. The QTC's comment: "it was also very likely the least
+humane."
+
+The first ships were so crowded with patients, crew, cargo, officials and
+traders that the patrol was "almost as much a source of disease as a method of
+prevention". After the Nascopie was lost in 1947 the government fitted out the
+C. D. Howe ([[artifact:relocations-qtc-042]]): fifty-eight crew, room for thirty
+Inuit passengers, a surgery, a dispensary, an x-ray room, a dental office and
+six beds, and radar, echo sounding and a helicopter for moving people between
+ship and shore. Her route is
+[[artifact:relocations-qtc-028]].
+
+Shiptime had been the year's gathering. Now it became the thing to hide from. By
+1955 the RCMP were reporting that people around [[place:Kimmirut]] were staying
+away from the settlement when the ship was due, having no wish to be "evacuated
+to the Land of No Return" ([[artifact:relocations-qtc-027]]). Priests sometimes
+hid people. Families in the camps ran when they saw the ship — or heard the
+helicopter, which the C. D. Howe carried to fetch in those who had not come.
+
+## What it cost
+
+By 1955 almost a thousand Inuit had been taken south. Treatment averaged twenty
+months. In 1956, on the QTC's reckoning, one Inuk in seven was in a hospital in
+southern Canada.
+
+The taking was done without ceremony and often without goodbyes. A family would
+watch someone go up the side for tests and then watch the ship sail with them
+still aboard. [[person:Elijah Padluq]] on his mother:
+
+> [The] patients were not to get off the ship. They stayed on the ship because
+> they had TB . . . They would leave in July . . . My mother finally came back a
+> year later, in the following spring.
+
+([[artifact:relocations-qtc-025]].) [[person:Walter Rudnicki]], a retired social
+worker, told the QTC in 2008 that the policy was applied even to nursing
+mothers: "The baby was sent to the person [standing closest] to the mother and
+she was sent off," he explained, "no concern was given to who would take care of
+the child. I saw this going on" ([[artifact:relocations-qtc-026]]). He also
+described patients discharged in winter in the summer clothing they had left in
+— "It never occurred to the medical personnel that you don't wear summer
+clothes in the dead of winter in Pang."
+
+## The children
+
+Children went south with the adults. [[person:Miluqtituttuq Akesuk]] was ten
+when she was sent from [[place:Kinngait]] to Toronto in 1964:
+
+> I thought I was lost. I thought I would never come back here to my parents
+> when I first went down. I really thought I was lost.
+
+([[artifact:relocations-qtc-024]].) Many came back having lost Inuktitut and
+without the knowledge their age-mates had gained on the land. Record-keeping was
+poor enough that patients were returned to the wrong communities — and, the QTC
+records plainly, that families "waited for their children and parents to return,
+not knowing that they had died at the hospital." Children and adults from
+Qikiqtaaluk were sent as far as the Mountain Sanatorium at [[place:Hamilton]],
+Ontario, which had a schoolroom for the children who spent years there.
+
+The pattern is why the relocation and the sanatoria cannot be told apart.
+[[person:John Amagoalik]] at [[place:Qausuittuq]], on families that were already
+2,250 km from home: "We spent years without mothers, without fathers, without
+brothers, without sisters, who were all sick in the hospital"
+([[artifact:relocations-qtc-006]]). [[person:Markoosie Patsauq]] told RCAP that
+he had tuberculosis when he was relocated and should have been in hospital
+instead; others in the new settlement caught it from him.
+
+## What was known at the time
+
+The government was told. In 1951 RCMP Inspector [[person:Henry Larsen]] wrote
+that the effect of the evacuation policy on Inuit was "not good", and that "the
+period of recovery and convalescence might be much shorter if the Eskimos went
+under treatment in the environment to which they belong." Anglican Bishop Marsh
+wrote to the minister, Jean Lesage, that he had come to the conclusion the
+Department of Health and Welfare "are not concerned with the true meaning of the
+two words (as far as the Eskimos are concerned) which make up the title of the
+Department." The QTC records that many people wanted treatment centres
+established in the north, and that proposals for improvement sent to Ottawa were
+regularly rejected. The hospital at [[place:Iqaluit]] — later Qikiqtani General
+— opened only in November 1964, with twenty adult beds and eight for children.
+The Eastern Arctic Patrol's final charter was completed in 1969, and the patrol
+was cancelled that year; even before it ended, some communities went a year or
+more without seeing a doctor.
+
+## Afterwards
+
+The evacuations also did what nothing else had: they emptied the camps of the
+people who ran them, and made the settlement, with its nursing station, the
+place a family had to be. That is one of the threads in
+[[page:relocations-moving-into-the-settlements]]. And the search for the graves
+of those who never came home is unfinished work, taken up by families and by
+Inuit organizations long after the QTC reported; see
+[[page:relocations-saimaqatigiingniq]].
+
+########## relocations-moving-into-the-settlements
+# Nuutauniq: moving into the settlements, and ilira
+[page · relocations-qtc · draft]
+
+In 1950 the region's roughly 2,200 Inuit lived mostly on the land, in more than
+a hundred *ilagiit nunagivaktangit* — the places where a kin group of five to
+thirty people lived and hunted, moving between them with the seasons. By 1975
+all but a few families lived in government-created settlements; by 1981 four
+times as many people lived in just thirteen of them. The QTC's
+thematic report on the moves, [[source:qtc2013nuutauniq|*Nuutauniq*]], is about
+how that happened; the Commissioner's own summing-up is
+[[artifact:relocations-qtc-033]]: "The decision to give up the traditional way of
+life was almost never an easy one, and once made, it proved to be irreversible."
+
+## Four kinds of move
+
+*Nuutauniq* refuses to call every move by one name
+([[artifact:relocations-qtc-030]]). A **relocation** is a planned move to a place
+chosen by somebody else. A **migration** is a move Inuit made themselves, or
+that at least looked voluntary, or that was drawn by enticements. A
+**dislocation** is a coerced move by people under pressure from qallunaat. An
+**evacuation** is a temporary move by government in a real or supposed
+emergency. The moves of 1950-1975 were, in the Commission's words, "a mix of
+voluntary, pressured and forced moves . . . usually in response to government
+priorities".
+
+The distinction matters because the file and the memory rarely agree. Officials
+"often thought a pressured 'dislocation' was a voluntary 'migration'".
+
+## Ilira
+
+The QTC's explanation for that gap is *ilira*: "powerful social fear or
+inhibition caused by inequality in power." [[person:Rosemarie Kuptana]], whose
+1993 essay the Commission relies on — it prints her name as Rosemary Kuptana —
+wrote that a generation or two earlier "a challenge to the authority of the
+Qallunaat or defiance of their requests was almost unthinkable."
+
+The clearest illustration in the report is an exchange at a QTC hearing
+([[artifact:relocations-qtc-029]]). Commissioner [[person:James Igloliorte]]
+asked [[person:Gordon Rennie]], a former Hudson's Bay Company manager, whether
+anyone had ever questioned him, or questioned the dog laws. Rennie: "They
+wouldn't dare." He went on to explain: "Nobody questioned me . . . I was a
+person in authority then."
+
+*Nuutauniq* adds the practical mechanics. Inuit often disagreed by falling
+silent or withdrawing, and qallunaat read silence as assent. "To an Inuk,
+Qallunaat appeared to be demanding consent, not asking for it." Add language,
+distance from anyone who could decide anything, and administrators who "usually
+made optimistic forecasts that failed to come true", and real consent — which
+in law requires a full understanding of the action and its likely effects — was
+rarely possible.
+
+None of which means every move was forced. Many families went in because they
+were told, repeatedly, that the settlement held housing, health care, school and
+wages, and they believed it. [[person:Gene Rheaume]], active in the North as both civil
+servant and politician, put it: "It was [sometimes] a subtle pressure, but it was
+coming at you from everywhere."
+
+## What pulled and what pushed
+
+The pulls were real and were promised: a school, a nursing station, a house,
+family allowance, wage work at an airstrip or a DEW Line site. The federal
+government wanted people in settlements because services were cheaper to deliver
+there; it also, at the same time, wanted them self-sufficient on the land. The
+QTC's judgement is that these two aims were simply contradictory, and Inuit paid
+for the contradiction.
+
+The pushes ran through the same institutions:
+
+- **School.** Children had to be where the school was, so a family's choice
+  became a choice between the camp and the children. Those who stayed out saw
+  children taken to hostels.
+- **Health.** The nursing station was in the settlement, and after the
+  tuberculosis years no family took the risk of being far from one. See
+  [[page:relocations-the-ships-that-took-people-south]].
+- **The dogs.** Without a team a family could not go back out, and the teams
+  were being destroyed in exactly these years. See
+  [[page:relocations-the-killing-of-the-qimmiit]].
+- **Money.** Family allowance and relief were paid where the officials were —
+  and, as at [[place:Panniqtuuq]], sometimes handed over only after a question
+  about whether the dogs were tied up ([[artifact:relocations-qtc-019]]).
+
+## What it cost
+
+The report is precise about the loss because it is not the loss of a house.
+"Qikiqtaalummiut suffered what scholars have called 'domicide' (the killing of
+one's home) when they left the land . . . It represents the loss of independence
+and replacement of a way of life" ([[artifact:relocations-qtc-031]]).
+
+Transport and communications stayed in qallunaat hands, so families who had
+moved in had few ways to move back out; the move was one-way in practice as well
+as in law. Settlement life brought its own poverty — cash costs against a diet
+that had been free — and cut access to country food. And the separations
+compounded: "Every Inuk who appeared before the QTC experienced a long
+separation from family members because of relocations, medical evacuations, or
+schooling." A generation of young people lost contact with the land and with
+the knowledge that goes with it.
+
+The QTC does not present this as a story with no gains. Some people got less
+risk in daily life, better health care, and the choice of a wage. The
+Commission's point is that they were not given the information or the power to
+weigh the trade, and that the trade could not be undone.
+
+The extreme case of a planned move to a place chosen by somebody else is
+[[page:relocations-the-1953-and-1955-high-arctic-relocations]]. What the
+Commission asked for afterwards is in [[page:relocations-saimaqatigiingniq]].
+
+########## relocations-saimaqatigiingniq
+# Saimaqatigiingniq: the Commission, its findings and the apologies
+[page · relocations-qtc · draft]
+
+*Saimaqatigiingniq*: "when past opponents get back together, meet in the middle,
+are at peace" ([[artifact:relocations-qtc-032]]). It is the word the Qikiqtani
+Inuit Association chose for what it wanted out of the Commission, and the title
+of the Commissioner's final report. It is not the same as truth-telling, and it
+is not the same as compensation.
+
+## How the Commission worked
+
+The QIA established the Qikiqtani Truth Commission in 2007. Between January 2008
+and May 2009 Commissioner [[person:James Igloliorte]] — a retired judge from
+Labrador — and his staff, under Executive Director
+[[person:Madeleine Redfern]], visited all thirteen communities in the region and
+also held hearings for Inuit in Ottawa. With interviews the QIA had made in
+2004, they had testimony from about 350 people. They also did archival research
+and interviewed qallunaat who had worked in the region, including retired RCMP
+officers and government officials. In early 2010 they went back to every
+community to report the findings and ask whether the proposed recommendations
+were right.
+
+Hearings were less formal than a court, but every witness was asked to affirm
+they would tell the truth, and people who asked to speak privately were allowed
+to. The results were published in 2013: the Commissioner's report and
+twenty-two companion volumes — thirteen community histories and nine thematic
+reports and special studies. The QIA reissued them in a revised edition in 2024.
+
+**One point of scope has to be stated plainly.** In the Commissioner's own
+words, "the QTC's mandate specifically excluded the High Arctic relocations and
+residential schools issues": the relocations had been examined by the Royal
+Commission on Aboriginal Peoples and the schools were the subject of the
+then-ongoing Truth and Reconciliation Commission of Canada. The QTC's community
+histories for [[place:Ausuittuq]] and [[place:Qausuittuq]] nevertheless tell the
+relocation story at length, because those communities have no other story of
+their founding — but the Commission's own investigation did not cover it. Most
+of what [[page:relocations-the-1953-and-1955-high-arctic-relocations]] rests on
+is therefore RCAP's 1994 report and the testimony given to it in 1993.
+
+## What the Commission found
+
+The findings across the reports run together. Inuit were moved into settlements
+by a mixture of promise, pressure and necessity, under conditions where real
+consent was rarely possible ([[page:relocations-moving-into-the-settlements]]).
+The qimmiit were destroyed, not by a conspiracy but by "a series of
+inter-connected government policies and laws"
+([[artifact:relocations-qtc-022]], and
+[[page:relocations-the-killing-of-the-qimmiit]]). Children were removed from
+families for long periods, and families were separated by a medical system that
+could only treat people two thousand kilometres from home
+([[page:relocations-the-ships-that-took-people-south]]). By 1975 the change was
+complete and could not be reversed ([[artifact:relocations-qtc-033]]).
+
+The Commissioner's first recommendation was procedural and pointed: that the QIA
+present the full report to the Government of Canada and ask for a formal
+acknowledgement of its findings. He wrote that "Healing and reconciliation are
+only possible when the party responsible for past wrongs fully accepts its
+responsibility and commits to restoring the relationship." Inuit would be
+receptive to a sincere apology, he added — "as long as that apology signals a
+willingness to work with Inuit in a respectful partnership".
+
+Twenty-five recommendations follow, in four groups: acknowledging and healing
+past wrongs; strengthening Inuit governance so that decisions reflect Inuit
+culture and needs; strengthening Inuit culture; and creating healthy
+communities, against the alcohol and substance abuse, poor diet, unemployment,
+low graduation rates, crime and bad housing that the Commission treats as
+consequences rather than causes. The recommendation the qimmiit report ends on
+asks the Government of Canada to acknowledge formally "that the high rates of
+suicide, substance abuse, incarceration, and social dysfunction among Inuit are
+in part symptoms of intergenerational trauma caused by historical wrongs."
+
+The Commission also noted why this is not only a northern matter: in the
+Canada's North poll conducted by Ipsos Reid for Inuit Tapiriit Kanatami in 2009,
+one respondent in three scored a D or failed a simple true-or-false quiz about
+Canada's Arctic, and 53 per cent strongly or somewhat disagreed that they were
+"generally aware of the realities of life for the Inuit in the Canadian
+Arctic."
+
+## The apologies
+
+There have been three, and they are separate acts about separate wrongs.
+
+**Inukjuak, 18 August 2010.** [[person:John Duncan]], Minister of Indian Affairs
+and Northern Development, apologised for the High Arctic relocation
+([[artifact:relocations-qtc-013]]) — two and a half years after
+[[person:John Amagoalik]] told the QTC that the file could not be closed until
+it came ([[artifact:relocations-qtc-012]]):
+
+> You can't forgive someone who doesn't acknowledge what happened. So they need
+> to acknowledge, they need to apologize so we can at least have the opportunity
+> to forgive them.
+
+**Iqaluit, 8 March 2019.** Prime Minister [[person:Justin Trudeau]] apologised
+for the federal government's management of the tuberculosis epidemic of the
+1940s to the 1960s — the ships, the sanatoria and the graves that are the
+subject of [[page:relocations-the-ships-that-took-people-south]]. The statement
+is blunt about intent ([[artifact:relocations-qtc-043]]):
+
+> Today, I am here to say sorry. To offer an official apology for the federal
+> government's management of the tuberculosis epidemic from the 40s to the 60s.
+> This policy wasn't an accident — it was purposeful. It was done even though
+> the Government of Canada knew the toll on Inuit families.
+
+It is worth noticing what else the same speech says. It does not treat the
+tuberculosis evacuations as a single bad policy but as one strand of a
+colonial programme, naming in one breath the forced relocations, the residential
+schools, the disc numbers, and the qimmiit: "It happened during the same years
+when the government identified Inuit with numbers on disks, and when families
+had entire teams of qimmiit, sled dogs, killed by officials." That is close to
+the QTC's own finding of "a series of inter-connected government policies"
+([[artifact:relocations-qtc-022]]), arrived at from the other side.
+
+The apology came with a programme rather than a payment. The
+**Nanilavut Initiative** — *nanilavut*, "let us find them" —
+([[artifact:relocations-qtc-044]]) opens the federal tuberculosis patient
+records to families, funds travel to a burial place once it is found, and pays
+for grave markers, plaques, community commemorations and public education. It
+was built with Inuit Tapiriit Kanatami, the Inuvialuit Regional Corporation,
+Makivik Corporation, the Nunatsiavut Government and Nunavut Tunngavik
+Incorporated. The 2013 health report had made the need exact: patients who died
+in the south were buried there, often in unmarked graves, and their families
+were frequently never told ([[artifact:relocations-qtc-026]]).
+[[person:Natan Obed]], president of ITK, called the apology "a necessary first
+step toward closing this dark chapter in Canada's history" and noted that it was
+"accompanied by actions". The same day's announcements attached $27.5 million
+over five years to Inuit-led tuberculosis elimination — the goal is no
+tuberculosis in Inuit Nunangat by 2030 — and, from Budget 2018, more than $640
+million for housing in Inuit Nunangat, on the reasoning that tuberculosis is not
+cured by medicine alone while overcrowding lasts. The incidence rate for Inuit
+in Inuit Nunangat was then more than three hundred times that of Canada's
+non-Indigenous population.
+
+**A statement of apology regarding the findings of the QTC** — the thing
+Commissioner Igloliorte's first recommendation actually asked for — was made
+afterwards by the Government of Canada. It is the least documented of the three:
+the Commission's own site carries it as a recorded video with no transcript and
+no date, and no departmental news release for it has been traced, so its wording
+is not quoted here.
+
+## What it means for people working here now
+
+The QTC's argument is that the years 1950-1975 are not background. They are the
+proximate cause of the present shape of every community in Qikiqtaaluk: where it
+stands, who lives in it, what languages are spoken in its houses, and how much
+its people trust an official who arrives by ship with a plan.
+
+Two of the communities the CCGS *Amundsen* works around exist only because of a
+decision taken in Ottawa in 1953. The people who were carried there are named in
+[[artifact:relocations-qtc-016]] and some of them are still alive;
+[[page:relocations-qausuittuq]] follows one of the two,
+[[place:Qausuittuq]], from the beach in September 1953 to the present townsite.
+Research relationships in the region are built, or not built, on that history;
+the Commission's word for what would make them possible is the one at the top of
+this page.
+
+Related: [[topic:posts-rcmp-missions]], [[topic:st-roch-modern]],
+[[topic:inuit-oral-history]].
+
+########## relocations-qausuittuq
+# Qausuittuq (Resolute Bay): a community made in September 1953
+[page · relocations-qtc · draft]
+
+[[place:Qausuittuq]] means "the place with no dawn". The other Inuktitut name
+for it is Qarnartakuj, "the place of the ruins", after the whalebone mounds of a
+Thule site near the hamlet. Tuniit and Thule people lived on
+[[place:Cornwallis Island]] on and off from about 1500 BCE until roughly a
+thousand years ago, and then nobody did. No Inuit lived on or near the island
+when the Government of Canada put four families ashore there in September 1953.
+Everything else in this page follows from that.
+
+The people of Qausuittuq call themselves Qausuitturmiut. This page follows the
+Qikiqtani Truth Commission's community history of Resolute Bay
+([[artifact:relocations-qtc-054]]), which is the fullest account there is, with
+RCAP's 1994 report behind it where the relocation itself is concerned. The
+companion community, [[place:Ausuittuq]] (Grise Fiord), gets a paragraph at the
+end; the general story of the two relocations together is
+[[page:relocations-the-1953-and-1955-high-arctic-relocations]].
+
+## What was already there
+
+An RCAF air photograph of about 1950 shows the bay and Griffith Island as the
+government knew the place on paper ([[artifact:relocations-qtc-061]]). A joint
+Canadian and American weather station went up on the south shore of Cornwallis
+Island in 1947. It had been meant for Winter Harbour on Melville
+Island, and ice sent the ship to Resolute Bay instead: the bay usually clears in
+summer, so bulk cargo can be landed. An airstrip came with it, and in 1949 an
+RCAF base three kilometres from the strip. The field turned out to be one of the
+most useful in the North — usable all year, with a big paved apron — and it
+supplied Alert, Isachsen and Mould Bay. Atlas Aviation, the first air company
+headquartered in the Arctic islands, based itself there in 1962.
+
+So the relocatees were not landed in an empty place. They were landed eight
+kilometres from a military base that had not been told they were coming, and
+which informed Northern Affairs that it would not be housing, feeding, clothing
+or treating them. The base and the weather station were out of bounds to Inuit
+unless they worked there; the settlement was out of bounds to Qallunaat; women
+and children were in practice not to leave it. The RCMP constable was the
+channel between the two. [[person:David Kalluk]] told the Commission what that
+looked like from inside: "RCMP were the leaders back then. They seemed to be
+higher than any other bosses because they were very scary."
+
+The other thing already there was the game law. Inuit hunting had been
+restricted since the Northwest Game Act of 1917 and the Arctic Islands Game
+Preserve of 1926, and the relocatees, who had been recruited with promises of
+plentiful game, arrived to find they were inside a preserve.
+
+## September 1953
+
+Three families from [[place:Inukjuak]] and one from [[place:Mittimatalik]]
+(Pond Inlet) came ashore with their qimmiit and their possessions in early
+September 1953, with Constable [[person:Ross Gibson]] and the kit for a
+detachment and a small police store. No site had been picked. The only rule was
+that they must not settle too near RCAF property, so the village went up on the
+beach on the west side of Resolute Bay ([[artifact:relocations-qtc-055]]).
+
+The QTC names them all ([[artifact:relocations-qtc-016]]):
+[[person:Jaybeddie Amagoalik]] and Kanoinoo with Ekaksak, Merrari and Sippora,
+from Mittimatalik; [[person:Daniel Salluviniq]] and Sarah with
+[[person:Allie Salluviniq]], Louisa and Jeannie; [[person:Simeonie Amagoalik]]
+and Sarah with [[person:Paul Amagoalik]], who had been born on the ship, his
+brother Jaybeddie and his grandmother Nellie; and [[person:Alex Patsauq]] and
+[[person:Edith Patsauq]] with [[person:Markoosie Patsauq]], Johnny, Jimmy and
+Lizzie. The Mittimatalik family was included because Ottawa thought they could
+teach the others a northern country.
+
+Inukjuak is 2,250 km from Resolute — Toronto to Miami. Mittimatalik is 566 km
+away. The families had come from a place with wood, a school, a church, a
+trading post and a doctor once a year; they arrived in September, when the
+walrus had already gone, the few caribou were protected, and the fish in the
+lakes were full of parasites ([[artifact:relocations-qtc-014]]).
+Then the sun went down. [[person:Dora Pudluk]]: "I found it scary . . . the dark
+season frightened me. I came here when it was cold and dark. There wasn't really
+a real home and it was starting to get dark at that time."
+
+Nobody had told either group about the other, and their dialects were far apart
+enough that the Tununirmiut took the Itivimiut to be speaking English
+([[artifact:relocations-qtc-046]]). The Mittimatalik families had been told the
+Inukjuak people were poor and living on relief, and expected to be paid for
+teaching them; no payment came.
+
+Gibson reported shortages of more than a thousand dollars' worth of goods, tents
+in very poor condition, no boat but two one-man kayaks, no storage and no store,
+and had to beg accommodation and cartage off the RCAF. Ottawa's answer came from [[person:James Cantley]], an advisor for the
+relocation experiment ([[artifact:relocations-qtc-049]]): the families had been
+living in those tents before, so conditions could not be worse than what they
+had left.
+
+In the first spring the community asked to go home. They were told there was
+nothing to be done, and that if they were lonely, perhaps their relatives could
+be persuaded to come too ([[artifact:relocations-qtc-015]]).
+
+## 1955, and the years of building
+
+In 1955 thirty-four more people were landed: [[person:Johnnie Echalook]]'s large
+household, [[person:Levi Nungak]] and [[person:Alacee Nungaq]] with their four
+children, [[person:Joseph Idlout]]'s family from Mittimatalik and
+[[person:Horatio Kudloo]]'s. [[person:Markoosie Patsauq]], twelve years old,
+described the arrival at the monument unveiling half a century later: "we had
+arrived in a dead land . . . We were blind hunters"
+([[artifact:relocations-qtc-057]]).
+
+Materials for three houses came in 1955, late and damaged, with most of the food
+spoiled. What could be salvaged became a store, a warehouse and a school the
+following year. Everything else the community built itself out of the base and
+weather-station dumps: a hall in the first autumn that served as workshop, drying
+room, church and dark-season classroom; eleven houses along the beach by 1957,
+each with a single electric light run from the base; fourteen by 1960; eighteen
+by 1964. Gar Lunney photographed one of the 1955 households outside in March 1956 —
+Alici Nungak, whom Library and Archives Canada's caption calls
+[[person:Alacee Nungaq]], in an amauti with three of her children, the
+scrap-built houses behind her ([[artifact:relocations-qtc-045]]).
+[[person:Martha Flaherty]] told RCAP what the same years felt like:
+"I remember the men being out for months . . . We were completely cut off from
+the world for the first three or four years."
+
+Not everyone stayed on the beach. Between 1955 and 1960 three or four families
+lived at [[place:Kuvinajuq]], an ilagiit nunagivaktangat on Somerset Island,
+some 300 km south across Barrow Strait, in old caribou country
+([[artifact:relocations-qtc-056]]). It is the only camp away from the beach the
+community history names, and nothing records its closing; it simply falls out
+of the record after 1960, once there were houses, wages and a co-operative at
+Resolute.
+
+Wage work was the difference between Qausuittuq and every other community in
+Qikiqtaaluk. There was no Hudson's Bay post — the police constable was the
+trader — but there was a base. Four men had permanent jobs in 1960, nine by
+1963; most others got seasonal work loading aircraft, and later with the Polar
+Continental Shelf Project. Men were often paid in credits at the police store
+rather than in money, and many say they worked without being paid at all. That
+ended when the co-op was founded in November 1960. The base also brought
+alcohol: [[person:Martha Idlout]] remembered that before the canteen was
+restricted in 1961 "the whole town would be drunk for a whole week" when a
+shipment came in.
+
+Medicine came once a year on the C. D. Howe, which x-rayed everyone and decided
+who would be taken south ([[page:relocations-the-ships-that-took-people-south]]).
+In the first two years, [[person:John Amagoalik]] remembered, about five or six
+adults and some children were taken aboard and sent south — among them his
+mother and an older brother; his younger brother Jimmy was away two years, and
+he was himself treated for two years at the Charles Camsell Hospital in Edmonton
+([[artifact:relocations-qtc-053]]). The community was then about thirty-five
+people. In
+1957 the ship arrived with measles aboard, put the infected passengers ashore
+near the settlement, and infected it.
+
+## The qimmiit
+
+The count tells it. In 1958 there were more than a hundred qimmiit at Qausuittuq
+and four motor boats. By 1964 there were eighty qimmiit — seven of them lost to
+rabies — fifteen motor boats and eleven snowmobiles. By 1966 the anthropologist
+[[person:David Damas]] counted only one full-time hunter in the community,
+though most of the men in wage work still hunted for food when they were not
+working.
+
+Resolute was built as an Inuit settlement, and no allowance was made for the fact
+that hunting from a settlement means dogs in the settlement. The Ordinance
+Respecting Dogs required qimmiit to be tied at all times. In 1959 the RCMP
+reported that many were loose and that the Ordinance would have to be enforced,
+without saying how; as the QTC observes, there was only one way to enforce it,
+since a working team cannot be chained or muzzled. [[person:Dora Pudluk]] told
+the Commission what enforcement was ([[artifact:relocations-qtc-047]]): her
+husband's team shot because some were loose, and her own puppies, tied up, shot
+with them and hung in the garbage while the men laughed. The wider pattern is
+[[page:relocations-the-killing-of-the-qimmiit]].
+
+## 1975, and after
+
+By the early 1970s Resolute was three places: the Inuit settlement, the airport,
+and South Camp between them, where the contractors, the Bay store and the school
+were. Drifting snow, the airport approach and a wish to join the three led to a
+plan for a new town; [[person:Ralph Erskine]] designed a community for seven
+hundred behind a wall of apartment blocks, of which about one building was ever
+built. In the summer of 1975 every useful building except those in the airport area
+was hauled roughly three kilometres from the west shore of the bay to the east. The old site was left with
+the cemetery. [[person:Saroomie Manik]] told the Commission she was sorry they
+moved: the new town sits back from the water, so you cannot watch for animals
+from the houses and gear has to be dragged overland to the boats
+([[artifact:relocations-qtc-052]]).
+
+The community that the government made turned out to be a political one. It sent
+[[person:Ludy Pudluk]] to the Legislative Assembly of the Northwest Territories
+for nearly twenty years; [[person:John Amagoalik]] went from here into the work
+that produced Nunavut; [[person:Simeonie Amagoalik]] spoke for the community against the seismic
+testing and mining near Resolute, and the political engagement of Qausuitturmiut
+and of Inuit organizations delayed the opening of Cominco's Avarik (Polaris)
+mine until 1980. In 1974
+[[person:Simeonie Amarualik]], [[person:Walter Audla]] and
+[[person:Peter Paniloo]] wrote to the minister, pointing out that a government
+which had moved them here to hunt was now approving work that would drive the
+caribou away, and setting down their own account of themselves
+([[artifact:relocations-qtc-048]]): "we became a part of the community there.
+Now Resolute Bay is our home and we do not want to leave it."
+
+Canada paid for those who wanted to go back in 1988, and signed the $10 million
+Memorandum of Agreement with Makivik in 1996 while refusing to apologise. The
+apology came at Inukjuak on 18 August 2010 ([[artifact:relocations-qtc-013]]).
+Three weeks later, on 8 September, [[person:Simeonie Amagoalik]] — landed here as
+a boy in 1953 — unveiled the stone man he had carved for the community
+([[artifact:relocations-qtc-051]]). Its plaque reads: "They came to these
+desolate shores to pursue the government promise of a more prosperous life. They
+endured and overcame great hardship, and dedicated their lives to Canada's
+sovereignty in these lands and waters."
+
+## Ausuittuq, the other half
+
+The families who were not landed here were put ashore at
+[[place:Craig Harbour]] on 29 August 1953 and moved shortly after to the
+[[place:Lindstrom Peninsula]], and from there in 1961 to
+[[place:Ausuittuq]] (Grise Fiord), Canada's northernmost civilian community. The
+separation itself — the announcement on the deck of the C. D. Howe that half of
+them would get off here — is [[artifact:relocations-qtc-001]]. Their first years
+are in the same register as these: the flashlight passed from shelter to shelter
+so people could eat ([[artifact:relocations-qtc-002]]), one caribou a year and a
+$5,000 fine for a muskox ([[artifact:relocations-qtc-003]]), the dark
+([[artifact:relocations-qtc-004]]), flour and water for a baby
+([[artifact:relocations-qtc-005]]). [[person:Larry Audlaluk]], taken north as an
+infant, has been the community's voice on it for decades
+([[artifact:relocations-qtc-007]]). [[person:Looty Pijamini]]'s granite woman and
+child stands there ([[artifact:relocations-qtc-041]]), facing the man at
+Qausuittuq across a thousand kilometres.
+
+## For the ship
+
+The *Amundsen* works out of and around this place. Resolute is the transport and
+logistics centre for the High Arctic and the home of the Polar Continental Shelf
+Program base that outfits much of the field science done in these islands —
+which is to say that the scientific station and the relocated community are the
+same settlement, and have been since 1953. The base at Resolute was one reason
+the site was chosen, and PCSP work was already one of the community's employers
+by 1963. What that relationship looks like from the station's side is
+[[page:the-station-and-the-settlement]] in [[topic:science-stations]].
+
+Two practical points. First, the people named in this page are not distant: the
+1953 and 1955 relocatees include people still living, and their children run the
+hamlet, the co-op and the outfitting. Second, the old village site and the
+cemetery on the west shore of the bay are three kilometres from the present
+town and are not marked on most charts.
+
+Related: [[topic:posts-rcmp-missions]], [[topic:sverdrup-bernier-peary]],
+[[topic:inuit-oral-history]], [[page:relocations-overview]].
+

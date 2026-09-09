@@ -1,0 +1,279 @@
+
+######## place-names-overview-northern-half
+FUZZ  0.02  names: the Inuit place names of southern Ellesmere and Co | sverdrup-bernier-peary-bernier-report-1910.txt
+      FOUND: ns of the moravian brethern to the eskimos of labrador is located on a small but secure haven connected by a narrow entrance with the outer harbour a fine large building 
+MISS  0.00  means the whole tract between 76° and 84° N — which aboli | 
+MISS  0.00  The second reason is the one that mattered. The Inuit Her | 
+MISS  0.00  and published no reasons; Belcher gave his officers a fre | 
+FUZZ  0.02  Several hundred names in the middle of this archipelago c | inuit-oral-history-ross1835-narrative.txt
+      FOUND: nt had occurred in the middle of this channel the gale now seemed to moderate a little but it was only to return with double violence though more from the westward while 
+FUZZ  0.05  wrote Inglefield, and did not give her surname.  ## The r | place-names-gbc1910-ninth-report.txt
+      FOUND: rge v sessional paper no 21a a 1911 supplement to the annual report of the department of marine and fisheries marine inthstth report of the geographic board of canada for
+
+######## place-names-inuit-and-inughuit-names-of-the-north
+OK    1.00 the extreme paucity of native names, due partly to the uni | place-names-gbc1910-ninth-report.txt
+FUZZ  0.74 No Eskimos lived in Cornwallis Island from the time of its | qei-from-the-air-1947-dunbar1956-arctic-canada-from-the-air.txt
+      FOUND: ttlement its no eskimos lived in cornwallis island from the time of discovery until in though earlier occupation of 1953 there evidence 
+OK    1.00 there used to be an abundance of geese here.               | iht-grise-fiord-resolute-place-names.md
+OK    1.00 was originally (1900) given in Norwegian (by Sverdrup), an | iht-grise-fiord-resolute-place-names.md
+OK    1.00 the other one, in relation to Umimmak.                     | iht-grise-fiord-resolute-place-names.md
+OK    1.00 someone lost her dog here and cried.                       | iht-grise-fiord-resolute-place-names.md
+OK    1.00 named for a young seal caught here when people were hungry | iht-grise-fiord-resolute-place-names.md
+OK    1.00 place to return to, during fox trapping days.              | iht-grise-fiord-resolute-place-names.md
+OK    1.00 also a place where people from Qillarsuaq's travels starve | iht-grise-fiord-resolute-place-names.md
+OK    1.00 oil drums left behind by geology and exploration camps.    | iht-grise-fiord-resolute-place-names.md
+SHORT 0.00 cliffs where murres nest.                                  | 
+OK    1.00 nesting place for murres and kittiwakes. Smells like a sew | iht-grise-fiord-resolute-place-names.md
+OK    1.00 it may also be an Inuktitutization of Coburg Island.       | iht-grise-fiord-resolute-place-names.md
+FUZZ  0.88 this mountain is named for [[person:Patrick Aqiattusuk]] w | iht-grise-fiord-resolute-place-names.md
+      FOUND: xplanation this mountain is named for patrick aqiattusuk whose remains are at the base of the mountain offic
+SHORT 0.00 the waters of Tallurutit                                   | 
+
+######## place-names-parrys-names-1819-20
+OK    1.00 after my friend, Mr. Barrow, Secretary of the Admiralty    | journalofvoyagef00inparr.txt
+OK    1.00 after Mr. Walker, of the Hydrographical Office             | place-names-gbc1910-ninth-report.txt
+OK    1.00 the ablest geographer of the age                           | place-names-gbc1910-ninth-report.txt
+OK    1.00 my much-esteemed friend Captain Henry Garrett              | journalofvoyagef00inparr.txt
+OK    1.00 after my friend Mr. Richard Riley, of the Admiralty        | place-names-gbc1910-ninth-report.txt
+OK    1.00 out of respect to Sir William Beechey                      | place-names-gbc1910-ninth-report.txt
+OK    1.00 in honour of my native county                              | journalofvoyagef00inparr.txt
+OK    1.00 after that of Lieutenant Liddon                            | journalofvoyagef00inparr.txt
+OK    1.00 The bluff head-land, which we had just passed, was subsequ | journalofvoyagef00inparr.txt
+MISS  0.00 , then, remembering that the name was taken, changed it to | 
+
+######## place-names-the-franklin-searchs-names
+MISS  0.00 , and the honest reader keeps the hedge.  ## Belcher: roya | 
+FUZZ  0.06 , Cape Disraeli after the Chancellor of the Exchequer, Mou | franklin-search-belcher-v1.txt
+      FOUND: udent that the chancellor of the exchequer should seal it it was therefore named cape disraeli on our ascent two ptarmigan were fired at but the gun was bad and i missed 
+SHORT 0.00 , Mount Acland, Cape Ekins                                 | 
+MISS  0.00 .  And, because he was Belcher, the two Franklins as booke | 
+FUZZ  0.33  of the sound he had just failed to find them in.  He also | greenland-inughuit-peary1898-v1.txt
+      FOUND: the frozen surface of the sound he had captured his first wife the remaining eye glittering through the straggling veil of his long black hair saw 
+MISS  0.00  effluvium; Fossil Station, from the fossil limestone; Gra | 
+FUZZ  0.03   ## Penny: naming upward  [[person:William Penny]] was a  | franklin-search-belcher-v1.txt
+      FOUND: scarcely sighted the ship when i discovered that the hamilton and a tent had returned at first i feared disaster but it turned out to be the return of dr lyall lieutenant
+FUZZ  0.11 ; Le Vesconte Point after the second lieutenant of the *Er | franklin-search-sutherland-v2.txt
+      FOUND: y from the west point it was named after h t d le visconte second lieutenant of the erebus from cape graham gore to cape fitzjames on the same island the course and dista
+FUZZ  0.12 , and Cape Grinnell to [[person:Henry Grinnell]], the New  | franklin-search-sutherland-v2.txt
+      FOUND: wel lington channel a similar took place between griffith s and cornwallis islands the breadth of ice between captain austin s squadron and the water was not above four m
+MISS  0.00 facetiously christened by the seamen                       | 
+OK    1.00 in compliment to the family of Sir John Barrow             | place-names-gbc1910-ninth-report.txt
+OK    1.00 at the request of Nares                                    | place-names-gbc1910-ninth-report.txt
+OK    1.00 from the peculiar appearance of the ice surrounding it     | place-names-gbc1910-ninth-report.txt
+OK    1.00 such was deemed a luxury, as the name of Comfort Cove was  | mcclure-investigator-mcdougall1857.txt
+OK    1.00 the western extremity, appropriately named                 | mcclure-investigator-mcdougall1857.txt
+FUZZ  0.96 Unfortunately, the reports of the two most important exped | place-names-gbc1910-ninth-report.txt
+
+######## place-names-sverdrups-norwegian-archipelago
+OK    1.00 after the number of hares seen here                        | place-names-gbc1910-ninth-report.txt
+OK    1.00 from the number of walrus caught here                      | place-names-gbc1910-ninth-report.txt
+OK    1.00 from the countless number of wild fowl seen here           | place-names-gbc1910-ninth-report.txt
+OK    1.00 a horrible hole, with high threatening walls of rock       | place-names-gbc1910-ninth-report.txt
+FUZZ  0.20 , for a festival held there), Jammerbugten, the Bay of Woe | sverdrup-bernier-peary-sverdrup-newland-v2.txt
+      FOUND: flection 307 from st helena 313 view of st helena 320 at jammerbugten the bay of woe no catch 321 the drift ice we forced our way through south east of skreia havnefjord 
+FUZZ  0.04  Sverdrup gives no date for it, but the narrative places i | whaling-low1906-neptune.txt
+      FOUND: slands and the southern part of ellesmere where carboniferous rocks occupy wide areas on these northern islands but are not found to the southward of lancaster sound show
+MISS  0.00  means the whole tract between 76° and 84° N. See [[artifa | 
+
+######## place-names-american-names-on-smith-sound-and-ellesmere
+OK    1.00 nearly all the names of features along the eastern coast o | place-names-gbc1910-ninth-report.txt
+OK    1.00 Richard Baker, Jr., Boston, Mass.                          | place-names-gbc1910-ninth-report.txt
+FUZZ  0.91 name given by Nares, as it is the most northerly point of  | place-names-gbc1910-ninth-report.txt
+      FOUND: tes name given by fares as it is the most northerly point of forth america colvi
+OK    1.00 which I named for my wife                                  | nares-greely-threeyearsofarct01gree.txt
+OK    1.00 from the gently curving outline of its summit              | place-names-gbc1910-ninth-report.txt
+OK    1.00 on account of the high and constant winds                  | place-names-gbc1910-ninth-report.txt
+FUZZ  0.05  from its shape and Mount Difficult from the trouble he ha | qei-from-the-air-1947-dunbar1956-arctic-canada-from-the-air.txt
+      FOUND: miles larger than prince edward island the smallest and least varied of the southern queen elizabeth islands it has achieved prominence in recent years through the establ
+SHORT 0.00 ; Navy Cliff; Independence Bay,                            | 
+FUZZ  0.17 ; the Glacier of the Scarlet Heart, from the colour of the | greenland-inughuit-peary1898-v1.txt
+      FOUND: the glacier of the scarlet heart glacier of the scarlet heart we reached red cliff house after a five hours trip from the head of the bay the eskimo dog and jack pulled m
+FUZZ  0.02 . Peary was perfectly willing to use Inughuit words for th | greenland-inughuit-macmillan1918-fouryears.txt
+      FOUND: pearance from its surroundings this he declared to be an avalanche of snow which had shot down from the cliffs above with such force that the concussion had solidified it
+
+######## place-names-twentieth-century-names-in-the-queen-elizabeth-islands
+OK    1.00 in recognition of his help towards this expedition         | place-names-gbc1910-ninth-report.txt
+MISS  0.00  in June 1916; in [[source:stefansson1921friendly]] he wri | 
+FUZZ  0.82 Third Land (which I have since named [[place:Lougheed Isla | karluk-cae-stefansson1921-friendly-arctic.txt
+      FOUND: y island shore third land which i have since named lougheed island 
+FUZZ  0.82 in honor of the man who did more than any other member tow | karluk-cae-stefansson1921-friendly-arctic.txt
+      FOUND: n honor of the man who did more than any other member of the expedition towards
+OK    1.00 in memory of an unexcelled teacher                         | karluk-cae-stefansson1921-friendly-arctic.txt
+OK    1.00 discovered the strait between Cornwallis and Little Cornwa | qei-from-the-air-1947-dunbar1956-arctic-canada-from-the-air.txt
+OK    1.00 called after the late Chief Cartographer of Canada         | qei-from-the-air-1947-dunbar1956-arctic-canada-from-the-air.txt
+SHORT 0.00 Queen Elizabeth Islands                                    | 
+
+######## place-names-what-nunavut-has-renamed
+MISS  0.00  (the walrus-grunting story often attached to it is not in | 
+FUZZ  0.03  and notes that Nunavut is behind Greenland and Nunavik in | qei-from-the-air-1947-dunbar1956-arctic-canada-from-the-air.txt
+      FOUND:  arctic canada from the air of emergency even in winter they may be found under the snow and many survive to reappear still tasty in the spring vegetation becomes more sc
+MISS  0.00  would get almost nothing back. Only Quttinirpaaq is coded | 
+MISS  0.00  The Inuit names are being recorded beside the European on | 
+
+######## place-names-the-inuit-names-of-the-south
+FUZZ  0.64 , for the rock by the harbour that looks like the back of  | qtc-community-names.md
+      FOUND: ocated nearby known to locals as the heel because it looks like the back of a foot english
+MISS  0.00  — the Qikiqtani Truth Commission's community history says | 
+SHORT 0.00 . **[[place:Ikpiarjuk]]** is                               | 
+MISS  0.00 , for the way the settlement sits in a bowl of hills. **[[ | 
+FUZZ  0.62 , for the river at the head of the bay. **[[place:Panniqtu | posts-rcmp-missions-grant2002-arctic-justice-chapters.txt
+      FOUND: th the establishment of a hudson s bay company post panniqtuuq pangnirtung the place of the bull caribou traditio
+MISS  0.00 , for the nesting cliffs. **[[place:Kangiqtugaapik]]** — C | 
+MISS  0.00 .  Franz Boas wintered in Cumberland Sound in 1883-84 and  | 
+MISS  0.00 . **Nettilling**, the great lake, is                       | 
+MISS  0.00  — *nattiq*, the ringed seal, which lives in it. **Kingnai | 
+FUZZ  0.70 , the head of the sound. **Anarnitung** is                 | nares-greely-narrativeofvoyag01nare.txt
+      FOUND: the head of the sound a large glacier was obs
+FUZZ  0.01  — the sound described by somebody facing up it, which is  | inuit-oral-history-boas-central-eskimo.txt
+      FOUND: uilaq are also frequently visited by them the whalers report that there are about fifty inhabitants in sikosuilaq about two hundred in akuliaq and farther east fifty more
+FUZZ  0.14  — the Padlimiut of Padli Fiord, the Sikosuilarmiut of the | davis-baffin-hudson-markham1880-davis.txt
+      FOUND: t some of them if it had beene possible but in the end this enterprise was deemed too daungerous consi dering the strength of the place where they rode being haled and to
+OK    1.00 denote rather directions and the intervals between the loc | inuit-oral-history-boas-central-eskimo.txt
+OK    1.00 the higher land as compared to the opposite shore          | inuit-oral-history-boas-central-eskimo.txt
+MISS  0.00 , on the end.  ## Names that remember  Some names hold an  | 
+MISS  0.00  — a person, buried there, whose name the settlement has k | 
+MISS  0.00 , and the QTC's community history glosses the people, Mitt | 
+FUZZ  0.46  ([[artifact:place-names-081]]). The three readings are no | nares-greely-narrativeofvoyag01nare.txt
+      FOUND: the northward through the waigat channel the valorous having parted company a few hours previously pro ceeding to the coal mines on the west side of the waigat after clea
+FUZZ  0.03 , because Bernier's men cut their ship's name and the date | inuit-oral-history-ross1835-narrative.txt
+      FOUND: tone here we built a cairn with a pole on which was fastened the ship s name and the date engraved on copper the prospect was such as to to the arctic regions 155 show us
+FUZZ  0.77 . **Tulukkaat**, at the mouth of the Patricia River, is    | posts-rcmp-missions-grant2002-arctic-justice-chapters.txt
+      FOUND: trading post at the mouth of the patricia river did not a
+MISS  0.00 . **Igarjuaq**, at Albert Harbour, is                      | 
+MISS  0.00 , for a rock shaped like a *qulliq*, the soapstone lamp. G | 
+MISS  0.00 ; **Tununirusiq**, the Arctic Bay side, is                 | 
+FUZZ  0.02 . A traveller who knows the two knows which side of the ra | sverdrup-bernier-peary-sverdrup-newland-v1.txt
+      FOUND: asilisken fell asleep and was whipped for his unseemly behaviour 450 new land chipping some fossils out of a rock a seal far out on the ice i had no stalking sail but as 
+MISS  0.00 . The English name says a bear crossed there. The Inuktitu | 
+
+######## place-names-the-elizabethan-names
+FUZZ  0.93 the master of the ship did land upon the first iland, and  | place-names-gbc1910-ninth-report.txt
+OK    1.00 named Jackmans Sounde after the name of the maisters mate, | place-names-gbc1910-ninth-report.txt
+OK    1.00 by reason of one Luke Ward that went with him on land      | place-names-gbc1910-ninth-report.txt
+FUZZ  0.93 that right honourable and vertuous lady, Anne, Countess of | place-names-gbc1910-ninth-report.txt
+      FOUND: that right honourable and vertuous lady anne countess of war wicke 3rd wife
+OK    1.00 after Michael Lok, who wrote an account of Frobisher's fir | place-names-gbc1910-ninth-report.txt
+FUZZ  0.02  — the only Latin name in the eastern Arctic and the oldes | qei-from-the-air-1947-dunbar1956-arctic-canada-from-the-air.txt
+      FOUND: theast fig 433 it is a sort of double dome rather like a bent dumb bell it is believed to be higher than the other possibly 1 500 feet or more and may be the highest poin
+MISS  0.00  ([[artifact:place-names-068]]); **Totnes Road** is anothe | 
+FUZZ  0.41  — nobody now knows which Dyer was meant.  Two of Davis's  | greenland-inughuit-peary1907-nearest.txt
+      FOUND: arrel and flying jib october 3d we made the west coast just above cape dyer and followed it past walsingham and mercy and across the mouth of cumberland sound 
+MISS  0.00  ([[artifact:place-names-067]]). **[[place:Killiniq]]** —  | 
+FUZZ  0.02 , a Devon friend who died two years later in the Strait of | place-names-gbc1910-ninth-report.txt
+      FOUND: at the entrance of hudson strait after john chidley who died in the strait of magellan whilst on a voyage that had for its object the circumnavigation of the globe hudson
+FUZZ  0.06  ([[artifact:place-names-069]]).  Davis's last piece of na | place-names-gbc1910-ninth-report.txt
+      FOUND: fin i frank after sir martin frobisher 1535 94 who in 1576 1577 and 1578 commanded expeditions in search of the north west passage erroneously assumed by frobisher to be 
+
+######## place-names-the-merchants-names
+OK    1.00 one of the adventurers for the discovery of the North West | place-names-gbc1910-ninth-report.txt
+OK    1.00 one of the principal promoters of the early voyages of exp | place-names-gbc1910-ninth-report.txt
+OK    1.00 At this point Green and Jewitt, who abandoned Hudson, were | place-names-gbc1910-ninth-report.txt
+FUZZ  0.91 Named by Master Hudson, in due bequest to that most honour | place-names-gbc1910-ninth-report.txt
+      FOUND: named by waster hudson in due bequest to that most honourable hord charles howard earls of nottingham 1536 1624 then lord high admirall of england a small remembrance for
+OK    1.00 then Lord High Treasurer of England                        | place-names-gbc1910-ninth-report.txt
+OK    1.00 We called it Sir James Lancaster's Sound                   | place-names-gbc1910-ninth-report.txt
+OK    1.00 from the number of savages (Eskimo) seen there             | place-names-gbc1910-ninth-report.txt
+OK    1.00 thinking then of the many furtherances this voyage receive | place-names-gbc1910-ninth-report.txt
+OK    1.00 Captain W. Coats of the Hudson's Bay Company's service, wh | place-names-gbc1910-ninth-report.txt
+OK    1.00 because he found land where he expected to find the North  | place-names-gbc1910-ninth-report.txt
+
+######## place-names-whalers-and-the-company
+OK    1.00 after the whaling vessel *Eclipse*                         | place-names-gbc1910-ninth-report.txt
+OK    1.00 after Capt. W. F. Milne of the whaling steamer *Eclipse*   | place-names-gbc1910-ninth-report.txt
+FUZZ  0.94 after Capt. Adams, a Scotch whaler, who deposited stores f | place-names-gbc1910-ninth-report.txt
+OK    1.00 to whom our expedition was deeply indebted                 | place-names-gbc1910-ninth-report.txt
+OK    1.00 after the graphite found there                             | place-names-gbc1910-ninth-report.txt
+MISS  0.00 the big heart-shaped one                                   | 
+MISS  0.00 , taken straight from Inuktitut into English spelling. **M | 
+MISS  0.00  — Foxe had tried to call it Brooke Cobham after a knight, | 
+FUZZ  0.04 , and became the wintering harbour for the American whalin | place-names-gbc1910-ninth-report.txt
+      FOUND: and yama ka although there is no cer tain knowledge of the site of the first church and fort still this island is supposed to have had these buildings and for that reason
+
+######## place-names-parry-and-ross
+FUZZ  0.91 when he found that the 'Croker mountains' of Ross were non | place-names-gbc1910-ninth-report.txt
+      FOUND: y 1819 when be found that the 1 croker mountains of ross were non existent 
+MISS  0.00 after the Board of Admiralty                               | 
+OK    1.00 out of respect to Sir William Beechey                      | place-names-gbc1910-ninth-report.txt
+OK    1.00 out of respect to the late venerable and worthy President  | journalofvoyagef00inparr.txt
+FUZZ  0.78 This being the anniversary of the birthday of His Royal Hi | place-names-gbc1910-ninth-report.txt
+      FOUND: y 1819 this being the anniversary of the birthday of his royal highness the prince regent it naturally sug gested to us the propriety of honouring the large iidet which w
+SHORT 0.00 after Clyde river, Scotland                                | 
+OK    1.00 in compliment to the noble Earl                            | place-names-gbc1910-ninth-report.txt
+MISS  0.00 , **Pond's Bay** for [[person:John Pond]] the Astronomer R | 
+FUZZ  0.46 .  ## Foxe Basin, and a chart drawn by an Iglulingmiut wom | place-names-gbc1910-ninth-report.txt
+      FOUND: t ions northern canada 249 sessional paper no 21a parry s second voyage 1821 23 fury 377 tons parry william edward fish
+FUZZ  0.18  — and then at Iglulik, and produced the densest patch of  | journalofsecondv00parr.txt
+      FOUND: us we found that a considerable floe had separated cxacdy in a line betaveen the island off avhich ave lay and a second to the avestward of it subsequently named at lieut
+MISS  0.00  under whom Parry had served as a lieutenant in 1810, Ormo | 
+FUZZ  0.08 . Fifty-seven such names have been counted in the 1824 *Jo | parry1824-names.md
+      FOUND: from parry s second voyage journal 1824 journal of a second voyage for the discovery of a north west passage fury hecla 1821 23 extracted from ocr journalofsecondv00parr 
+FUZZ  0.05 . See [[topic:ross-parry]] and [[topic:inuit-oral-history] | ross1835-names.md
+      FOUND: es boothia boothia felix peninsula gulf the founder of our expedition singularly generous and spirited individual whose fame and deeds will go down to posterity among the
+MISS  0.00  ([[artifact:place-names-089]]). Booth's name is on the pe | 
+MISS  0.00 , and **[[place:Sheriff's Harbour]]**,                     | 
+MISS  0.00 . No other private backer in Arctic history is written so  | 
+MISS  0.00 ; Isabella Louisa Island after Lady Parry; **[[place:Spenc | 
+SHORT 0.00 ; **Matty Island**, named                                  | 
+MISS  0.00 ; and **Eclipse Harbour**, where on 12 September 1829      | 
+
+######## place-names-king-william-and-boothia
+FUZZ  0.04 . [[person:James Clark Ross]] reached its north-west corne | journalofvoyagef00inparr.txt
+      FOUND: was named after captain thomas hurd hydro grapher to the admiralty we picked up a small piece of wood which appeared to have been the end of a boat s yard and which cause
+FUZZ  0.03 , [[person:Felix Booth]]; **Victory Point**, after the shi | sverdrup-bernier-peary-bernier-report-1910.txt
+      FOUND: the neptune proceeded northward for smith sound taking a course along the coast of greenland the voyage was continued north to cape sabine calling at etah in latitude 78 
+MISS  0.00 . And the *Fox*'s name went onto the **Fox Islands** in Be | 
+FUZZ  0.40  them.  Not everything was a memorial. **Matty Island**, i | place-names-gbc1910-ninth-report.txt
+      FOUND: tion gulf mack franklin 1821 v banks strait banks and melville islands frank bannerman bay king william i frank named by james clark ross 183
+FUZZ  0.02 ; **Cape Louis Philippe** is the King of France, **Humbold | journalofvoyagef00inparr.txt
+      FOUND: cupied the harbour and the detached pieces di ifting down towards us rendered it necessary to be on our guard lest the ships should be forced from their anchorage on this
+FUZZ  0.07 , a place where blubber was plentiful — is what the Netsil | mcclure-investigator-mcdougall1857.txt
+      FOUND: me hardships he had to encounter in the cause of humanity his remains are interred on the east side of the island may he rest in peace the prospect from the crow s nest a
+FUZZ  0.04  ([[artifact:place-names-091]]). Gjoa Haven is still the h | place-names-gbc1910-ninth-report.txt
+      FOUND: a is frank parry melville lake boundary between tjng and que probably after viscount mel ville see melville island menchikoff bay boothia pena frank named by john ross 18
+MISS  0.00  ([[artifact:place-names-092]]) — **[[place:Mercy Bay]]**. | 
+
+######## place-names-what-the-communities-are-called-now
+MISS  0.00 , for the rock by the harbour | Lake Harbour | 1996 | | ** | 
+MISS  0.00  | Broughton Island | November 1998 | | **[[place:Naujaat] | 
+MISS  0.00 , for the nesting cliffs | Repulse Bay | 2 July 2015 | | * | 
+MISS  0.00  | Hall Beach | 27 February 2020 | | **[[place:Kinngait]]* | 
+MISS  0.00  | Cape Dorset | 27 February 2020 | | **[[place:Mittimatal | 
+MISS  0.00  (disputed) | — | Pond Inlet is still the official name |  | 
+MISS  0.00 , nestled between hills | — | Arctic Bay is still the offi | 
+MISS  0.00  | — | Clyde River is still the official name | | **[[plac | 
+MISS  0.00  | — | Pangnirtung is still the official name | | **[[plac | 
+MISS  0.00  | — | Gjoa Haven is still the official name | | **[[place | 
+MISS  0.00  | Igloolik (spelling) | Igloolik is the official spelling | 
+MISS  0.00  | Pelly Bay | 7 December 1999 |  Two things in that table | 
+MISS  0.00  It was the tenth Nunavut community to do so. When [[perso | 
+MISS  0.00  Both communities had already voted in plebiscites.  **The | 
+MISS  0.00 , which is the safest way to check whether a name you are  | 
+MISS  0.00 , is a hamlet on the Davis Strait coast, an island in Huds | 
+
+######## place-names-who-decides
+FUZZ  0.02 .  ## The Geographic Board, 1897-1910  The Geographic Boar | posts-rcmp-missions-grant2002-arctic-justice-chapters.txt
+      FOUND: th symptoms similar to tuberculosis fol lowing a royal commission set up in 1897 to look into charges against cer tain guards and officers at the prison reforms were repo
+FUZZ  0.04 , and then makes the observation that this whole topic tur | inuit-oral-history-ross1835-narrative.txt
+      FOUND: and was likely to move with the first favourable wind the islands on which we now were turned out to consist of gneiss i presume disposed in inclined beds with vertical f
+MISS  0.00 .  White's own work also shows the limits of a gazetteer c | 
+MISS  0.00 , when Boas had printed the right answer twenty-two years  | 
+MISS  0.00 . He makes Edward Sackville the seventh Earl of Dorset ins | 
+MISS  0.00 . The Board fixed the spellings on the chart, but nobody w | 
+MISS  0.00 . The Kugaaruk case ([[artifact:place-names-096]]) is a sm | 
+OK    1.00 the most striking feature in a general survey being the ex | place-names-gbc1910-ninth-report.txt
+
+######## place-names-the-greenland-shore
+FUZZ  0.98 The same individual place names can therefore be found in  | place-names-greenlandpilot-placenames.txt
+SHORT 0.00  | 1728 | | **[[place:Qeqertarsuaq]]** |                   | 
+SHORT 0.00  | 1773 | | **[[place:Ilulissat]]** |                      | 
+MISS  0.00  (*iluliaq*, singular) | Jakobshavn | 1741 | | **[[place:S | 
+SHORT 0.00  | Holsteinsborg | 1756 | | **[[place:Uummannaq]]** |      | 
+MISS  0.00 , for the mountain | Umanak | 1758 | | **[[place:Upernavik | 
+MISS  0.00  | Upernavik | 1771 |  The decisive rule is administrative | 
+SHORT 0.00 Kangertittivaq (Scoresby Sund)                             | 
+SHORT 0.00 Kangikajik (Kap Brewster)                                  | 
+MISS  0.00 where Inuit place names have long been recognized          | 
+FUZZ  0.50 . Davis also named **Gilbert Sound**, the fiord at Nuuk, a | nares-greely-narrativeofvoyag02nare.txt
+      FOUND: polaris experienced in 1871 the quantity of one season s ice met with in the bays on the south east coast of 
+OK    1.00 Most Greenlandic place names are a description of the natu | place-names-greenlandpilot-placenames.txt
+OK    1.00 Greenlandic place names can sometimes provide information  | place-names-greenlandpilot-placenames.txt

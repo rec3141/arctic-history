@@ -1,0 +1,110 @@
+Every summer through the 1950s a ship came round the Qikiqtani coast, and
+everybody went aboard to be x-rayed. Anyone whose film showed tuberculosis did
+not come back ashore. The ship sailed with them on it.
+
+## How it worked
+
+In 1945, in the middle of a tuberculosis epidemic, responsibility for the
+health of First Nations and Inuit was moved to the federal Department of
+National Health and Welfare — which had, in the whole of what is now Nunavut,
+two hospitals and forty-eight beds for a little under four thousand people.
+The Eastern Arctic Patrol, which had been running since 1922 as a sovereignty
+and supply voyage, became the instrument.
+From 1946 the patrol x-rayed at every stop, and, in the QTC's words, "anyone
+diagnosed as being tubercular had to immediately board the ship to be sent
+south."
+
+Treatment meant a southern sanatorium. That was the policy in Ontario and Quebec
+and it was applied unchanged to people who lived two or three thousand
+kilometres away. The government's argument was that it was the cheapest
+available measure. The QTC's comment: "it was also very likely the least
+humane."
+
+The first ships were so crowded with patients, crew, cargo, officials and
+traders that the patrol was "almost as much a source of disease as a method of
+prevention". After the Nascopie was lost in 1947 the government fitted out the
+C. D. Howe ([[artifact:relocations-qtc-042]]): fifty-eight crew, room for thirty
+Inuit passengers, a surgery, a dispensary, an x-ray room, a dental office and
+six beds, and radar, echo sounding and a helicopter for moving people between
+ship and shore. Her route is [[artifact:relocations-qtc-028]].
+
+Shiptime had been the year's gathering. Now it became the thing to hide from. By
+1955 the RCMP were reporting that people around [[place:Kimmirut]] were staying
+away from the settlement when the ship was due, having no wish to be "evacuated
+to the Land of No Return" ([[artifact:relocations-qtc-027]]). Priests sometimes
+hid people. Families in the camps ran when they saw the ship — or heard the
+helicopter, which the C. D. Howe carried to fetch in those who had not come.
+
+## What it cost
+
+By 1955 almost a thousand Inuit had been taken south. Treatment averaged twenty
+months. In 1956, on the QTC's reckoning, one Inuk in seven was in a hospital in
+southern Canada.
+
+The taking was done without ceremony and often without goodbyes. A family would
+watch someone go up the side for tests and then watch the ship sail with them
+still aboard. [[person:Elijah Padluq]] on his mother:
+
+> [The] patients were not to get off the ship. They stayed on the ship because
+> they had TB . . . They would leave in July . . . My mother finally came back a
+> year later, in the following spring.
+
+([[artifact:relocations-qtc-025]].) [[person:Walter Rudnicki]], a retired social
+worker, told the QTC in 2008 that the policy was applied even to nursing
+mothers: "The baby was sent to the person [standing closest] to the mother and
+she was sent off," he explained, "no concern was given to who would take care of
+the child. I saw this going on" ([[artifact:relocations-qtc-026]]). He also
+described patients discharged in winter in the summer clothing they had left in
+— "It never occurred to the medical personnel that you don't wear summer
+clothes in the dead of winter in Pang."
+
+## The children
+
+Children went south with the adults. [[person:Miluqtituttuq Akesuk]] was ten
+when she was sent from [[place:Kinngait]] to Toronto in 1964:
+
+> I thought I was lost. I thought I would never come back here to my parents
+> when I first went down. I really thought I was lost.
+
+([[artifact:relocations-qtc-024]].) Many came back having lost Inuktitut and
+without the knowledge their age-mates had gained on the land. Record-keeping was
+poor enough that patients were returned to the wrong communities — and, the QTC
+records plainly, that families "waited for their children and parents to return,
+not knowing that they had died at the hospital." Children and adults from
+Qikiqtaaluk were sent as far as the Mountain Sanatorium at [[place:Hamilton]],
+Ontario, which had a schoolroom for the children who spent years there.
+
+The pattern is why the relocation and the sanatoria cannot be told apart.
+[[person:John Amagoalik]] at [[place:Qausuittuq]], on families that were already
+2,250 km from home: "We spent years without mothers, without fathers, without
+brothers, without sisters, who were all sick in the hospital"
+([[artifact:relocations-qtc-006]]). [[person:Markoosie Patsauq]] told RCAP that
+he had tuberculosis when he was relocated and should have been in hospital
+instead; others in the new settlement caught it from him.
+
+## What was known at the time
+
+The government was told. In 1951 RCMP Inspector [[person:Henry Larsen]] wrote
+that the effect of the evacuation policy on Inuit was "not good", and that "the
+period of recovery and convalescence might be much shorter if the Eskimos went
+under treatment in the environment to which they belong." Anglican Bishop Marsh
+wrote to the minister, Jean Lesage, that he had come to the conclusion the
+Department of Health and Welfare "are not concerned with the true meaning of the
+two words (as far as the Eskimos are concerned) which make up the title of the
+Department." The QTC records that many people wanted treatment centres
+established in the north, and that proposals for improvement sent to Ottawa were
+regularly rejected. The hospital at [[place:Iqaluit]] — later Qikiqtani General
+— opened only in November 1964, with twenty adult beds and eight for children.
+The Eastern Arctic Patrol's final charter was completed in 1969, and the patrol
+was cancelled that year; even before it ended, some communities went a year or
+more without seeing a doctor.
+
+## Afterwards
+
+The evacuations also did what nothing else had: they emptied the camps of the
+people who ran them, and made the settlement, with its nursing station, the
+place a family had to be. That is one of the threads in
+[[page:relocations-moving-into-the-settlements]]. And the search for the graves
+of those who never came home is unfinished work, taken up by families and by
+Inuit organizations long after the QTC reported; see
+[[page:relocations-saimaqatigiingniq]].

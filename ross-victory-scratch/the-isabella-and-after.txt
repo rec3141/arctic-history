@@ -1,0 +1,113 @@
+# The Isabella, and after
+[page · ross-victory · draft]
+
+At four in the morning on 26 August 1833, on a beach six or seven miles west of Navy Board
+Inlet, the look-out [[person:David Wood]] thought he saw a sail. [[person:James Clark Ross]]
+put a glass on it and confirmed it. Some of the party maintained it was an iceberg.
+
+## The chase
+
+They launched at six and burned wet powder for a signal. The wind was against them: the ship
+made sail to the south-east and drew away, and a second sail to the north bore up under all
+sail and left them too. Ross calls this the most anxious moment of the whole four years — to
+be in sight of two ships, either of which would end everything, and to reach neither. Then it
+fell calm. At eleven she hove to with all sails aback and lowered a boat.
+
+The mate who came alongside opened by presuming they had lost their ship, which was true.
+Ross asked her name.
+
+> [[artifact:ross-victory-032|I was answered that it was "the Isabella of Hull, once commanded
+> by Captain Ross;" on which I stated that I was the identical man in question, and my people
+> the crew of the Victory... with the usual blunderheadedness of men on such occasions, he
+> assured me that I had been dead two years.]]
+
+The *Isabella* was the ship [[person:John Ross]] had commanded into Lancaster Sound in 1818,
+on the voyage that ruined his reputation. She was now a Hull whaler under
+[[person:Richard Humphreys]], who had taken her up Prince Regent Inlet as far as Mount Sherrar
+looking for Ross rather than for whales, been stopped two-thirds of the way across by a field
+of ice, and run along its edge the day before Ross crossed it. He had seen the three boats and
+taken them for the *William Lee*'s. The rigging was manned and they were given three cheers as
+they came within a cable's length.
+
+## What they looked like
+
+[[artifact:ross-victory-033|"never was seen a more miserable-looking set of wretches"]]. Ross's
+description of coming aboard is worth reading whole: unshaven, filthy, in the rags of wild
+beasts, starved to the bones, and made suddenly aware of it by the well-fed men around them.
+Everything had to happen at once — washing, shaving, dressing, feeding, and four years of news
+in both directions. That night, long used to a cold bed on snow or rock, most of them could
+not sleep; Ross gave up the bed he had been given and passed the night in a chair.
+
+Humphreys was two-thirds of a cargo short and stayed out. He put part of the crew aboard the
+*William Lee*, and afterwards landed Ross at Possession Bay and on the west coast of Baffin
+Bay so that he could finish his survey and check the chart he had made in 1818. They quitted
+Davis Strait on 30 September, landed at [[place:Stromness]] on 12 October, reached the Humber
+on the 18th and went up to Hull in the Rotterdam steam-boat. The news had got there first: the
+Mayor and Corporation, Trinity House and the Philosophical Society all came to the inn, and
+Ross was given the freedom of the town. He reached London on the 19th and Windsor on the 20th,
+where he laid the magnetic pole flag before William IV.
+
+## The reckoning
+
+Twenty-three men went out and twenty came back. Three died:
+[[person:James Marslin]] the armourer of consumption he had brought from England in January
+1830; [[person:Chimham Thomas]] the carpenter of scurvy at Fury Beach in February 1833; and
+the cook, Henry Ayre, soon after his return. The seaman Anthony Buck lost his sight and another
+man a foot. Ross put it to the Admiralty in the arithmetic of the day:
+[[artifact:ross-victory-039|"only one man can be said to have perished"]].
+
+For four winters beset and a fifth ashore — the longest any beset crew has survived in the
+Arctic — that is an extraordinary outcome, and the causes are not mysterious. Fresh country
+food while they had access to it, a strict and fair ration under [[person:William Thom]], hard
+work, a school, no spirits, dry and ventilated quarters, a competent surgeon in
+[[person:George Macdiarmid]], and three years of trade with the Netsilingmiut. The one winter
+without the last of these is the winter that killed a man.
+
+Ross was knighted in 1834; Parliament voted him £5,000 and the crew were paid by Admiralty
+order on 28 October 1833 — sums from £818 for the surgeon down to £36 for the dead armourer,
+each entry annotated with what became of the man. [[person:Felix Booth]], who had paid for
+everything and asked for nothing, was made a baronet.
+
+## Huish, the hostile witness
+
+Before Ross's own subscription volume could appear, [[person:Robert Huish]] rushed out
+*The Last Voyage of Capt. Sir John Ross* (1835), compiled "from authentic information and
+original documents, transmitted by an officer attached to the last expedition". Huish had
+never been north of the Thames. The officer is generally taken to be
+[[person:William Light]], the *Victory*'s steward, and the Admiralty's payment list marks
+Light alone of the whole crew as "Not recommended".
+
+The book is unreliable and it is not therefore useless. Read as an interested witness it is
+the only source in the record that is not Ross:
+
+- On the engine it is simply right, and says what Ross would not:
+  [[artifact:ross-victory-037|the machine was untried and should never have gone]].
+- On the ration it makes an accusation Ross's own narrative does not mention at all — that the
+  cabin ate well while the men were put on a contracted allowance for no reason the stores
+  required, and that the men made a formal complaint which was met with anger and then
+  conceded ([[artifact:ross-victory-036]]).
+- On the command it reprints the 1834 Commons committee evidence in which John Ross and James
+  Clark Ross disagreed in public about whether the younger man had been second in command at
+  all, the nephew saying he had "in a great measure" shared the chief command and had entire
+  direction of the navigation.
+
+None of that can be taken as fact on Huish's word. All of it marks places where a reader
+should be careful with Ross's, and the ration charge in particular is the kind of thing a
+steward would know and a captain would not write down. The full text of both books is on
+disk: [[artifact:ross-victory-010]] and [[artifact:ross-victory-012]].
+
+## Afterwards
+
+James Clark Ross went on to command the *Erebus* and *Terror* in the Antarctic from 1839 to
+1843, and led the first search for Franklin in 1848-49. [[person:Thomas Abernethy]], who was
+at the magnetic pole, went south with him. [[person:Thomas Blanky]], the *Victory*'s first
+mate, became ice master of HMS *Terror* and died with the Franklin expedition
+([[topic:franklin-1845]]) — one of the very few men to have survived a four-year besetment and
+then gone back.
+
+The coast the *Victory* charted is why Franklin's ships went where they went. Ross and his
+Netsilingmiut informants had shown that there was no way through Boothia below 71 degrees,
+which closed the Admiralty's favourite route and pointed the 1845 expedition down the west
+side of King William Land instead. Twenty-one years later, the people of that same coast were
+the ones who told [[person:John Rae]] what had become of them ([[topic:franklin-search]]).
+

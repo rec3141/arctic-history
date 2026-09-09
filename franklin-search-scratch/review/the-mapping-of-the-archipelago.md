@@ -2,7 +2,7 @@ Nobody set out to survey the Canadian Arctic Archipelago. It was surveyed becaus
 
 ## The arithmetic
 
-The search kept its own accounts. [[artifact:franklin-search-060|M'Dougall printed the totals]] in the appendix to the Resolute's narrative in 1857, in geographical miles:
+The search kept its own accounts. [[artifact:franklin-search-060|M'Dougall printed the totals]] in the appendix to the Resolute's narrative in 1857, under the heading "Land discovered and searched from 1848 to 1854". Geographical miles:
 
 | | searched on foot | new land |
 |---|---|---|
@@ -17,7 +17,7 @@ The search kept its own accounts. [[artifact:franklin-search-060|M'Dougall print
 
 That is about 25,000 statute miles walked, and 6,600 statute miles of coastline drawn for the first time — most of it by men in harness, on foot, hauling their own food. [[person:Edward Belcher|Belcher's]] division is missing from the table; no aggregate for it appears in his own book.
 
-In 1853 alone, from [[place:Dealy Island]], [[person:Francis Leopold McClintock|McClintock]] laid down 768 geographical miles of new coast, [[person:George Frederick Mecham|Mecham]] 680 and [[person:Richard Vesey Hamilton|Hamilton]] 170 — 1,618 miles in one spring, by three sledge parties, at the cost of 106, 94 and 54 days on the ice.
+M'Dougall breaks the Kellett line down on the same sheet: in 1853 alone, out of [[place:Dealy Island]], [[person:Francis Leopold McClintock|McClintock]] laid down 768 geographical miles of new coast, [[person:George Frederick Mecham|Mecham]] 680 and [[person:Richard Vesey Hamilton|Hamilton]] 170 — "Total - - 1618 = 1870 statute miles" — in a single spring, by three sledge parties.
 
 ## Who drew what
 
@@ -46,7 +46,7 @@ A chart made by men in a hurry, looking for something else, is not a survey.
 - Penny's two meridian altitudes at Point Surprise, taken eight weeks apart, differed by four miles, which he said in print was to be regretted.
 - Whole coastlines were sketched from a hill-top at twenty or thirty miles and drawn in as though walked.
 
-The land was re-mapped in the twentieth century from the air and then from orbit. What has not been corrected everywhere is what lies under the water.
+[[artifact:franklin-search-077|Arrowsmith's chart of 1860]], drawn for the Royal Geographical Society while the argument was still warm, is the best single summary of what the search had settled and what it had not; [[artifact:franklin-search-115|the folding map at the end of McClintock's narrative]] does the same job for the western archipelago. The land was re-mapped in the twentieth century from the air and then from orbit. What has not been corrected everywhere is what lies under the water.
 
 ## What Inuit knew already
 
@@ -60,4 +60,4 @@ Two practical things follow for anyone working here now.
 
 **The skeleton of the chart in these channels is sledge work.** The coasts of Bathurst, Cornwallis, Prince of Wales, Prince Patrick, Melville and the Grinnell Peninsula were first drawn by men walking them with a sextant and a pocket chronometer between 1851 and 1854, and the sequence of headlands and the names on them are still theirs.
 
-**The soundings are much thinner than the coastlines.** The Canadian Hydrographic Service has said repeatedly that only a small fraction of Canadian Arctic waters is charted to modern standards; a great deal of the archipelago outside the designated shipping corridors is still carried on scattered lead-line and single-beam soundings, some of them a century old or more, with vast unsurveyed gaps between the lines. The coastline on the screen is generally good. The depth between the coastlines often is not. That is why a ship like this one, running multibeam along her track, is still adding to the chart in the same way and for much the same reason as the sledge parties did.
+**The soundings are much thinner than the coastlines.** Outside the designated shipping corridors a great deal of the archipelago is still charted from scattered lead-line and single-beam soundings, some of them a century old or more, with wide unsurveyed gaps between the lines; the source diagrams on a modern chart of these waters show it plainly. The coastline on the screen is generally good. The depth between the coastlines often is not. That is why a ship like this one, running multibeam along her track, is still adding to the chart in the same way and for much the same reason as the sledge parties did.

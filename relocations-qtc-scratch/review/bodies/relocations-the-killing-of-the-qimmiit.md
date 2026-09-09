@@ -1,0 +1,134 @@
+Between 1950 and 1975 the number of qimmiit — Inuit sled dogs — in Qikiqtaaluk
+fell from three or four thousand to a few dozen. That single figure, from the
+Qikiqtani Truth Commission's thematic report
+[[source:qtc2013qimmiit|*Qimmiliriniq*]], is the shape of the thing. What is
+argued about is how it happened, and whether anyone meant it to.
+
+## What a team was
+
+What a fan-hitch team looked like, and what keeping one running took, is in
+Joseph Dewey Soper's 1929 photograph of Shappa clearing tangled traces at
+[[place:Kinngait]] ([[artifact:relocations-qtc-062]]).
+
+A qimmiq was not equipment and not a pet. The dogs were the only means of winter
+travel; they pulled sleds, carried packs in summer, found seal holes, kept off
+the ice cracks in fog and darkness, and held a polar bear for the hunter. They
+were the only animals Inuit gave individual names. Children raised puppies, and
+being able to handle a team was one of the marks of becoming an adult.
+[[person:Pauloosie Veevee]] told QIA researchers that a man was judged by his
+dogs' "performance, appearance, health, and endurance"
+([[artifact:relocations-qtc-017]]). Losing the team did not mean losing
+transport. It meant losing the ability to leave.
+
+## The Dog Ordinance
+
+In 1949-50 Ottawa revised the Northwest Territories *Ordinance Respecting Dogs*.
+The QTC's judgement is that the revision "effectively outlawed traditional Inuit
+ways of handling dogs, wherever this seemed to conflict with the needs or
+practices of a growing qallunaat population"
+([[artifact:relocations-qtc-022]]). Under it — and, the QTC found, often beyond
+it — police, other government agents, military personnel, Inuit special
+constables and hired dogcatchers shot dogs they judged loose, sick, dangerous or
+simply surplus.
+
+Enforcement did not need a rifle to bite. At [[place:Panniqtuuq]] the RCMP ran
+the post office and handed out the family allowance cheques, and Pauloosie
+Veevee remembered that every time, before the cheques came out, the officer
+asked whether the family's dogs were tied up
+([[artifact:relocations-qtc-019]]). [[person:Levi Evic]], camped at Panniqtuuq
+to trade in 1955 or 1956, was warned through the Hudson's Bay Company manager
+that the dogs would be shot in the morning; the family harnessed up and left in
+the middle of a winter night ([[artifact:relocations-qtc-021]]).
+
+## Two policies at once
+
+People still ask how the same force could vaccinate dogs and shoot them. The
+QTC's answer is that the government was pursuing two aims that did not fit
+together, and it quotes the government's own words for 1954
+([[artifact:relocations-qtc-018]]): leave Inuit in remote areas undisturbed,
+integrate those in contact with the "white economy", and "continue to transfer
+families from unproductive areas to regions where game is more abundant".
+
+The RCMP, at least until the 1960s, wanted Inuit to stay on the land and away
+from the bases — which required healthy dogs, hence publicly funded immunisation
+— but also thought Inuit kept more dogs than hunting could support, so officers
+"found opportunities to kill qimmiit they considered to be surplus". At the same
+time federal policy was drawing people into settlements with schools, housing,
+wage work and health care, where a loose team was a hazard among newcomers who
+did not know how to be around dogs.
+
+## Three waves
+
+*Qimmiliriniq* separates the killings into episodes rather than one slaughter:
+
+1. **[[place:Iqaluit]], after 1956.** The first systematic killing of loose
+   dogs, at the same time as Inuit were drawn in by work at the airport and the
+   radar stations, and the town of Apex was built at Niaqunngut to house them.
+2. **Cumberland Sound, 1962.** An epidemic of canine distemper or hepatitis
+   reached the ilagiit nunagivaktangit around [[place:Panniqtuuq]], and the RCMP
+   answered it by systematically killing almost the entire dog population of the
+   region. [[person:Mosesee Qiyuakjuk]] testified that the shooting had been
+   going on well before the epidemic, and for less reason
+   ([[artifact:relocations-qtc-020]]).
+3. **After the schools were built.** As almost the whole regional population was
+   drawn into thirteen settlements, the dogs went piecemeal — earlier in some
+   places, such as [[place:Kinngait]] — shot by many different hands, including
+   Inuit who were made to shoot their own teams before moving in. The sharpest
+   single episode was at Panniqtuuq in 1966-67, where more than four hundred
+   qimmiit were shot around the settlement.
+
+There is also evidence of dogs killed to frighten their owners: Levi Evic's
+family, and the day about 1961-62 when [[person:Lucian Ukkalianuk]]'s whole team
+was destroyed at [[place:Iglulik]] after the dogs got loose in the settlement,
+which [[person:Louis Uttak]] described to the QIA.
+
+## The RCMP's review, and the QTC's answer
+
+Public discussion resumed at a meeting in Iqaluit in February 1999 between
+community members and senior RCMP officers. A month later, at the Makivik
+Corporation's annual meeting, Nunavimmiut called for an inquiry, an apology and
+compensation, and the QIA — whose president had been at that meeting — repeated
+the call at once. On 10 March 2005 the House of Commons Standing Committee on
+Aboriginal Affairs and Northern Development, having heard Inuit witnesses,
+called for a public inquiry by a superior court judge "to get to the bottom of
+the matter", a recommendation the Legislature of Nunavut later endorsed. The
+government did not hold one. On 28 April 2005 Anne McLellan, Deputy Prime
+Minister and Minister of Public Safety, asked the RCMP to review its own
+actions instead. The Force's twenty-six-page final report of 2006,
+*The RCMP and the Inuit Sled Dogs (Nunavut and Northern Quebec: 1950-1970)*,
+accepted that members and other persons in authority had killed hundreds and
+perhaps thousands of dogs, and concluded that the killings had never been part
+of a conspiracy to force Inuit off the land.
+
+The QTC published a point-by-point answer,
+[[source:qtc2013rcmpreview|*Analysis of the RCMP Sled Dog Report*]]. Its
+objection is to the method as much as the finding. Because the RCMP could not
+conduct an independent inquiry into itself, most Inuit would not give evidence
+to it, and the report treated that refusal as proof of political intimidation
+rather than as a fact about trust. It analysed the killings as a law-enforcement
+question, taking the qallunaat presence and settlement life as given, and — the
+QTC's central charge — directed its analysis "toward discrediting Inuit
+memories", "denying the validity of most Inuit oral evidence yet presenting the
+views of non-Inuit with little negative comment"
+([[artifact:relocations-qtc-023]]).
+
+The QTC did not find a conspiracy either. It found something it thought worse
+and better documented: "a series of inter-connected government policies and laws
+put into effect and enforced by the RCMP, which quickly undermined traditional
+Inuit ways of living" ([[artifact:relocations-qtc-022]]). Its legal point is
+that Canada failed its obligations to Inuit when it restricted their use of dogs
+without involving them in finding workable rules.
+
+## What it left
+
+Snowmobiles came, but not in time: for many years dogs were being shot when
+there was no reliable machine to replace them, and after about 1966 the machines
+were reliable but expensive to buy, run and maintain. The QTC's conclusion
+places the qimmiit inside the larger pattern — "government domination and
+interference with Inuit decision-making" — and it ends on the Commissioner's
+recommendation that the Government of Canada formally acknowledge "that the
+high rates of suicide, substance abuse, incarceration, and social dysfunction
+among Inuit are in part symptoms of intergenerational trauma caused by
+historical wrongs." See [[page:relocations-saimaqatigiingniq]].
+
+The related police history is [[topic:posts-rcmp-missions]].

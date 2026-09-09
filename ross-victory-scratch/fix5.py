@@ -1,0 +1,20 @@
+import sys
+sys.path.insert(0,'/data/dev/arctic-history/ross-victory-scratch')
+from upd import upd
+F=(69.9783,-92.0183); S=(70.0167,-91.90); V=(70.155,-91.509); P=(70.0881,-96.7792)
+
+upd('ross-victory-050', pages="plate 27, facing p. 653",
+    description="The plate of Somerset House in summer: the hut of the Fury's spars and canvas, 32 feet by 16, in which the twenty-one survivors of John Ross's company wintered at Fury Beach from 7 October 1832 to 8 July 1833. Ross's book prints it twice, in summer and with a ground plan. In November the walls were banked with four to seven feet of snow and flooded at fifteen degrees below zero until the whole set as ice. The carpenter Chimham Thomas died here in February 1833.")
+
+upd('ross-victory-051', pages="pp. 255-272; plate 16, facing p. 272", lat=F[0], lon=F[1])
+
+upd('ross-victory-052', lat=F[0], lon=F[1], people="John Ross; John Ericsson",
+    description="The first steam engine taken into the Arctic, built by Braithwaite and Ericsson, hoisted out of the ship in pieces during October and November 1829 and landed on the shore of Felix Harbour with the boilers, ironwork and brass. High-pressure, no flue, bellows-blown, with paddle wheels that could be raised in a minute; it and its fuel had occupied two-thirds of the ship's tonnage and employed four landsmen. John Ross expected the Netsilingmiut to make good use of 'the caches of Messrs. Braithwaite and Erickson', and several hundredweight of worked iron and copper landed on a coast where metal was scarce would have been worth having. Anything of it remaining on that shore is an archaeological site; no survey of it has been reported. John Ericsson, who built it, later gave the world the screw propeller.")
+
+upd('ross-victory-053', lat=P[0], lon=P[1])
+
+upd('ross-victory-054', lat=V[0], lon=V[1], people="John Ross; James Clark Ross",
+    description="Where John Ross left the Victory with her colours nailed to the mast on 29 May 1832, in the berth he named Victory Harbour and the book renames Victoria Harbour, on the east coast of Boothia. Her masts, sails and rigging were stacked ashore with the boat Krusenstern, and instruments and gunpowder were cached for a return that never happened. Ross's own surveyed plan of the harbour marks the ship's berth in about ten fathoms and, on the west shore, the grave of the stoker James Dixon. She has never been searched for and no report of her remains is known. James Clark Ross's magnetic table puts the harbour at 70 deg 09 min 18 sec N, 91 deg 30 min 33 sec W, but the narrative gives 70 deg 18 min 11 sec N for the harbour entered on 29 August 1831; the two do not agree, so the location should be treated as approximate to about 20 km. See also [[topic:wrecks-disasters]].")
+
+upd('ross-victory-055', people="John Ross; George Macdiarmid; Thomas Abernethy; James Marslin; James Dixon; Chimham Thomas; William Light; Anthony Buck",
+    description="The Admiralty's list of the sums paid to the crew of the Victory on 28 October 1833, printed by John Ross as Appendix No. 5. Twenty names, totalling 4,580 pounds 12s 3d; Ross himself, his nephew James Clark Ross and the purser William Thom had served without pay, which makes twenty-three in the ship's company. Each entry carries a one-line note of what became of the man: George Macdiarmid, surgeon, 818 pounds 18s 3d, 'Promoted to Surgeon R.N.'; Thomas Abernethy, mate, 329 pounds 14s 8d, 'Promoted to gunner of the Southampton'; James Marslin, armourer, 36 pounds 18s 8d, and James Dixon, landman, 89 pounds 8s, both 'Died on the voyage'; Chimham Thomas, carpenter, 296 pounds 10s 8d, 'Died on the voyage'; Henry Ayre, cook, 165 pounds 2s 8d, 'Died soon after his return'; Anthony Buck, seaman, 'Lost his eye-sight'; and William Light, steward, 172 pounds 14s 8d, 'Not recommended' - the only such note in the list, and Light is the man from whom Robert Huish's hostile book is thought to come. The Treasury note adds that the wages of Marslin and Dixon were repaid unclaimed.")

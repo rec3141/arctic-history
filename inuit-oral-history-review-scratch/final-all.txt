@@ -1,0 +1,283 @@
+# Inuit knowledge in the exploration record
+[page · inuit-oral-history · good]
+
+Almost everything Europeans and Americans learned about this coast between 1576 and 1880 they learned from Inuit. The ships arrived with charts that stopped at the edge of what a ship had seen; the people already living there carried in memory, and could draw on paper, the shape of coasts a thousand kilometres beyond it. Where the exploration record is accurate, it is usually accurate because an Inuk told someone, and where it is wrong, it is often wrong because someone decided not to listen.
+
+These pages are about that: Inuit knowledge, testimony and authorship inside a written record that was not made by Inuit, and mostly did not credit them.
+
+## Three kinds of knowledge
+
+**Geography.** Inuit travelled the coasts and the sea ice constantly, and knew them in a form that could be drawn. [[artifact:inuit-oral-history-015|Boas set it down plainly]] in 1888: "As their knowledge of all the directions is very detailed and they are skillful draftsmen they can draw very good charts. If a man intends to visit a country little known to him, he has a map drawn in the snow by some one well acquainted there and these maps are so good that every point can be recognized." Five of the charts he printed carry the name of the man who drew it. Sixty years earlier [[person:Iligliuk]] had drawn [[artifact:inuit-oral-history-001|the coast north of Winter Island]] for [[person:William Edward Parry]], and [[person:Ikmallik]] and his companions had drawn [[artifact:inuit-oral-history-002|the Gulf of Boothia]] for [[person:John Ross]]. See [[page:inuit-drawn-maps]].
+
+**Testimony.** Inuit remembered encounters with ships, and passed the accounts on. [[person:Ookijoxy Ninoo]] told [[person:Charles Francis Hall]] in 1861 what her people remembered of [[topic:frobisher|Frobisher's]] three voyages of 1576-78 — the two ships, then three, then many, and the five white men her people captured, who built a boat and sailed away — nearly three hundred years after the event, and it matched Frobisher's three voyages exactly. The Inuit accounts of the [[topic:franklin-1845|Franklin]] retreat, gathered by [[person:John Rae]] in 1854, by Hall in 1869 and by Schwatka's party in 1879, were the only true information anyone had for a century and a half, and were repeatedly dismissed. See [[page:franklin-testimony-vindicated]].
+
+**Language.** Nothing crossed between the two records without interpreters, and there were very few. [[source:smith1985ooligbuck|The Dictionary of Canadian Biography reckons]] that during the first half of the nineteenth century there were probably fewer than ten Inuit capable of acting as interpreters. [[person:Tookoolito]], [[person:Ebierbing]], [[person:Ooligbuck]], [[person:William Ouligbuck]], [[person:Tattannoeuck]] and [[person:Hans Hendrik]] are most of that list. See [[page:the-interpreters]].
+
+## Whose record is it
+
+The convention of these books is that the explorer sees and the Inuk assists. The books themselves keep contradicting it. Parry laid down the coast he already knew, made Iligliuk box the compass, and then watched — "never were the tracings of a pencil watched with more eager solicitude" — while she drew the rest; and when he tried to lead her past the end of her knowledge she "immediately dropped the pencil, and said she knew no more about it" ([[artifact:inuit-oral-history-016|p. 198]]). That is not an assistant. That is a geographer with standards, being consulted.
+
+Ross's officers spent January 1830 in the Victory's cabin taking dictation from Netsilingmiut cartographers, and Ross calls Ikmallik "the promised hydrographer" without apparent irony. [[person:Franz Boas]], who came in 1883 as a trained geographer, printed the Inuit charts as figures in a scientific report with their authors named — [[person:Itu]], [[person:Sunapignang]], [[person:Angutuqdjuaq]], [[person:Aranin]] — which was more credit than most of his contemporaries gave.
+
+And some of the record is Inuit-authored outright. [[person:Hans Hendrik]] served on four expeditions over twenty-three years and wrote his own account of them in Kalaallisut; [[source:hendrik1878memoirs|it was translated and published in 1878]]. In the same decade [[source:rink1875tales|Henry Rink's collection of Greenlandic tales]] appeared with a title page reading "with numerous illustrations, drawn and engraved by Eskimo" — [[artifact:inuit-oral-history-031|a winter house]], [[artifact:inuit-oral-history-034|a kayak with its harpoon and thrower]], [[artifact:inuit-oral-history-036|a crowd round a bear brought in on a sledge]]. See [[page:inuit-authorship]].
+
+## Why it matters now
+
+The wreck of HMS Erebus was found on 2 September 2014 in [[place:Wilmot and Crampton Bay]], in the water an old Ookjoolik man had described to Schwatka's party in 1879: a big ship frozen in the ice near an island about five miles due west of Grant Point, which his people boarded, cut a hole in, and which filled and sank the following summer ([[artifact:inuit-oral-history-021|Gilder 1881, pp. 78-79]]). [[person:Louie Kamookak]] of [[place:Uqsuqtuuq]] spent more than thirty years collecting that kind of testimony from Nattilik elders and setting it against the printed narratives; his work is part of why anyone was looking there. The wreck sites are now watched each summer by Inuit Guardians from Gjoa Haven. See [[page:knowledge-alive-today]].
+
+For anyone working in these waters today, the practical point is the one Parry found in 1822. The people of the coast hold a description of it that is detailed, testable, and older than any chart aboard.
+
+
+@@@@@@@@@@
+# The Inuit-drawn maps
+[page · inuit-oral-history · good]
+
+Between 1822 and 1888, maps drawn by Inuit were copied, engraved and published in European and American books. They are among the oldest surviving Inuit documents of any kind from this region, and several of them laid down coasts no European had seen.
+
+## How they were made
+
+[[person:Franz Boas]] described the practice from the inside, having watched it for a year in [[place:Cumberland Sound]]:
+
+> Their way of drawing is first to mark some points the relative positions of which are well known. They like to stand on a hill and to look around in order to place these correctly. This done, the details are inserted. It is remarkable that their ideas of the relative position and direction of coasts far distant one from another are so very clear.
+
+He adds the failure mode, which is the mark of someone who has really watched: "Frequently the draftsman makes his own country, with which he is best acquainted, too large; if some principal points are marked first, he will avoid this mistake." That is exactly the technique [[person:William Edward Parry]] arrived at by trial and error at [[place:Winter Island]] sixty years earlier.
+
+The maps were normally made for a purpose and then let go — drawn in the snow, or on a skin, for a traveller heading into unfamiliar country. What survives on paper survives because a European asked for it.
+
+## Iligliuk at Winter Island, 1822
+
+[[person:Iligliuk]] was an Iglulingmiut woman wintering near the Fury and Hecla in 1821-22. Asked what lay north, she filled ten or twelve sheets of paper tacked end to end, naming the places as she went, until she had run off the end of the table.
+
+Parry saw that the scale was the problem. On a later attempt he first laid down the coast he already knew, wrote in the four cardinal points now that he had the Inuktitut words for them, made her "box the compass" repeatedly until she was sure of the orientation, and then asked her to do the rest small. [[artifact:inuit-oral-history-017|What happened next]] he describes as watched with "eager solicitude": without lifting the pencil she carried the continental coast round to the westward and afterwards to the S.S.W., to within three or four days' journey of Repulse Bay. The narrow passage in that country is the strait Parry afterwards named Fury and Hecla. No European had seen it.
+
+He then tried to test her. He asked her to continue the coast south of Akkoolee, where he knew from other sources what was there. [[artifact:inuit-oral-history-016|She refused]]: "she immediately dropped the pencil, and said she knew no more about it." A few days later [[person:Ewerat]] drew a chart that agreed with hers in all material points, and Parry sailed north on the strength of the two of them in July 1822.
+
+The plate that survives is [[artifact:inuit-oral-history-001|Eskimaux Chart No. 1]], the earlier and larger drawing Iligliuk made for Captain Lyon. Its cartouche names her and him; its lettering marks AMITIOKE as her birthplace and Ooglit as the place where her son was born; a note explains that every small circle is one day's sledging and a night ashore, and that the dotted line is the track on the ice. Parry was candid that this chart's relative bearings were wrong — it puts Repulse Bay, Winter Island and Amitioke nearly in line when in fact they stand at right angles — and it was the smaller second chart, made after she had boxed the compass, that carried the coast west. That second plate is not held here. [[artifact:inuit-oral-history-029|The reach of the surviving chart]] is plotted on the modern coast as a track. See also [[page:iligliuk-and-her-chart]] in [[topic:ross-parry]].
+
+## The Boothia charts, 1830
+
+[[person:John Ross]]'s Victory wintered at [[place:Felix Harbour]] and met the Netsilingmiut on 9 January 1830. Two days later [[person:Tulluahiu]], who had lost a leg to a bear and was drawn to the ship on a sledge, took a pencil and drew the route his party had travelled, marking a spot for each of the nine nights. [[person:Tiagashu]] then drew the coast running west, with its capes, bays, rivers and islands, and marked where the fish were.
+
+They then told the officers that one of their party was a much better geographer than themselves. [[person:Ikmallik]] came the next day. Ross laid before him a European sketch of the coast between Repulse Bay and Prince Regent Inlet with the names written in; [[artifact:inuit-oral-history-018|Ikmallik recognised the places at once]], took the pencil and carried the line west and north-west, drawing Wager Bay and its river correctly. Ross calls him the hydrographer and the geographer for the rest of the book. The engraved result, [[artifact:inuit-oral-history-002|Chart drawn by the natives]], told the expedition the thing it least wanted to know: that the land ran on south and joined the continent, and that there was no passage there. On the strength of it James Clark Ross was sent west across the isthmus of Boothia in the spring of 1830 to see for himself, guided by [[person:Awack]] and [[person:Ooblooria]]. The chart's small circles are camps on a route the Netsilingmiut used every year, from Felix Harbour down to Akkoolee (Naujaat); [[artifact:inuit-oral-history-030|that journey is plotted here as a track]].
+
+## Boas's four cartographers, 1883-84
+
+[[source:boas1888central|The Central Eskimo]] prints five Inuit-drawn charts, each captioned with the name of the person who drew it and the group he belonged to:
+
+- [[artifact:inuit-oral-history-005|Figure 543]] and [[artifact:inuit-oral-history-007|figure 545]], by [[person:Itu]], a Nugumio: the first covers about five hundred miles between its extreme points, from Cumberland Sound round into Frobisher Bay; the second is Cumberland Sound alone. The original of the first went to the Museum für Völkerkunde in Berlin.
+- [[artifact:inuit-oral-history-006|Figure 544]], by [[person:Sunapignang]], an Oqomio: the same long coast as Itu's first chart, drawn independently. Boas printed them on facing pages so a reader could compare.
+- [[artifact:inuit-oral-history-008|Figure 546]], by [[person:Angutuqdjuaq]], a Padlimio: the peninsula of Qivitung, now [[place:Kivitoo]], his own country and the part of the coast Boas travelled least.
+- [[artifact:inuit-oral-history-004|Plate IV]], by [[person:Aranin]], a Saumingmio: the whole Cumberland Peninsula, and the only one given a plate of its own.
+
+Boas's own published map of the region, [[artifact:inuit-oral-history-003|Plate II]], is not an independent survey. Much of the coastline on it is Inuit geography, taken from charts like these and from directions given by people who had been there, and checked where he could go himself. That is worth saying plainly, because the plate has been reprinted for a century as Boas's map.
+
+## What they are evidence of
+
+Taken together the charts show a body of geographical knowledge held collectively, transmitted by teaching and travel, testable, and correct to a degree that repeatedly surprised the people who commissioned them. They also show its edges: Iligliuk stopped at Akkoolee, Ikmallik would not say how many days it was from the end of his chart to Repulse Bay, and Boas's draftsmen enlarged their own districts. Knowing where your knowledge stops is a property of good geography, not a defect in it.
+
+
+@@@@@@@@@@
+# Boas, The Central Eskimo, and the named cartographers of Qikiqtaaluk
+[page · inuit-oral-history · good]
+
+[[person:Franz Boas]] was twenty-five, trained in physics and geography, when he went to [[place:Cumberland Sound]] in 1883 to find out how a people and a country shape each other. He stayed a year, travelled by dog sledge with Inuit companions round the sound and north along the Davis Strait coast, and published the result in 1888 as [[source:boas1888central|The Central Eskimo]], in the Sixth Annual Report of the Bureau of Ethnology. [[artifact:inuit-oral-history-013|The whole text is here]].
+
+It is the fullest nineteenth-century account of [[place:Qikiqtaaluk]] geography, and most of it is Inuit knowledge written down.
+
+## The map and the divisions
+
+[[artifact:inuit-oral-history-003|Plate II]] shows the territory of each named group in detail: the Oqomiut and Akudnirmiut of Cumberland Sound and Davis Strait, the Nugumiut of Frobisher Bay, the Tununirmiut of Eclipse Sound and Admiralty Inlet, the Aivilingmiut and Iglulingmiut of Repulse Bay and Lyon Inlet, the Netsilingmiut of the Boothia isthmus and King William Land. The names are Inuktitut and so are the boundaries; the divisions are the ones Inuit used.
+
+Boas is candid about where his coastline came from. Of the interior of the peninsula between Frobisher Bay and Cumberland Sound he writes flatly, [[artifact:inuit-oral-history-023|"From Eskimo reports I conclude that the plateau of Nugumiut... is comparatively level"]]. That sentence pattern runs through the physical geography chapter. He surveyed what he could reach and took the rest from people who had been there, and he said so.
+
+## The named cartographers
+
+Four men drew charts for him, and he printed each with its author's name and group: [[person:Itu]] a Nugumio ([[artifact:inuit-oral-history-005|fig. 543]], [[artifact:inuit-oral-history-007|fig. 545]]), [[person:Sunapignang]] an Oqomio ([[artifact:inuit-oral-history-006|fig. 544]]), [[person:Angutuqdjuaq]] a Padlimio ([[artifact:inuit-oral-history-008|fig. 546]]) and [[person:Aranin]] a Saumingmio ([[artifact:inuit-oral-history-004|Plate IV]]). Boas's comment on them is a scientific claim, not a compliment: "A comparison between the maps and these charts will prove their correctness."
+
+These are the earliest Inuit cartographers of Qikiqtaaluk whose work has come down with their names attached. Their charts are discussed in [[page:inuit-drawn-maps]].
+
+## Place names as data
+
+The paper carries several hundred Inuktitut place names with their meanings, the largest such collection made in the region in the nineteenth century. They are geography compressed: names describing shape, ice, current, where the fish are, where a kayak must be carried. The paper says the author "has adhered as closely as possible to Kleinschmidt's orthography", so his spellings are not modern; but the names are recoverable, and many are still in use in the Nunavut place-names record. Anyone reading them today should expect a name like Qivitung to appear on a modern map as [[place:Kivitoo]].
+
+His chapter on travel is where the practical knowledge is set down: steering by the constellations Tuktuqdjung (Ursa Major), Sakietaun (the Pleiades) and Udleqdjun (the belt of Orion); steering by the wind when the sky is thick, and by the direction of the snowdrifts after a gale; not travelling at all when it is calm and thick. And, [[artifact:inuit-oral-history-015|for country a man does not know]], having a map drawn for him in the snow by someone who does.
+
+## Why it reads oddly now
+
+The title is not a name any Inuk used, and the paper is organised as natural history: the people appear as a subject studied rather than as the colleagues they plainly were on the sledge. Boas names the men who drew charts but almost never names the people he travelled and lived with, so a year of daily collaboration is largely anonymous in the text. He also worked in a whaling economy already fifty years old and did not much examine what it was doing to the people he was describing.
+
+Against that: he recorded the charts under their authors' names, recorded the place names with their meanings, distinguished what he had seen from what he had been told, and wrote down a working account of Inuit navigation that has held up. Set beside most of what was published about the region in the 1880s, that is a high standard.
+
+## The sea ice paragraph
+
+One passage is worth putting in front of anyone doing science in these waters. Boas concluded that [[artifact:inuit-oral-history-024|the ice, not the land, is the organising fact]]: the winter land-ice is for most of the year the only road between communities, and the seal goes where the extensive floes form, "therefore the state of the ice regulates the distribution of the natives during the greater part of the year." That is a statement about sea-ice extent, landfast-ice stability and marine mammal distribution, made in 1888 from a year of Inuit-guided travel, and it is the same coupled system a ship measures here today.
+
+
+@@@@@@@@@@
+# The interpreters and guides
+[page · inuit-oral-history · good]
+
+During the first half of the nineteenth century, [[source:smith1985ooligbuck|by the Dictionary of Canadian Biography's reckoning]], there were probably fewer than ten Inuit capable of acting as interpreters. Almost every European account of this coast passed through one of them. They are named in the books, usually once, usually under a nickname given by a ship's crew, and then the narrative goes on as if the explorer had been talking directly to everyone.
+
+## Tattannoeuck and Ooligbuck: the overland expeditions
+
+[[person:Tattannoeuck]] — his name means "it is full"; the books call him Augustus — was born on the west coast of Hudson Bay some two hundred miles north of Fort Churchill and was trained as an interpreter at the Hudson's Bay Company post there, employed from 1812 to 1814 and again in 1815-16. He and another Inuk, Hoeootoerock (Junius), were engaged in 1820 as interpreters for [[person:John Franklin]]'s first overland expedition of 1819-22. Their task on the Coppermine was almost impossible: Samuel Hearne's Dene guides had massacred a band of Inuit at Bloody Falls fifty years earlier, and an armed party coming down that river again was the worst thing the local people could see. Tattannoeuck and Hoeootoerock were sent ahead alone to say otherwise. Twice the people fled anyway; from an old man too frail to escape, Tattannoeuck got an account of the inhabitants, the resources they used and the shape of the coast.
+
+The return to Fort Enterprise killed more than half the party. Hoeootoerock disappeared on a hunting trip and Tattannoeuck searched for him in vain. Starving, he pushed ahead of the struggling column, got lost in country he had never seen, and found Fort Enterprise anyway; his having done so, Franklin wrote, "must be considered a remarkable proof of sagacity."
+
+He interpreted again in 1825-27. On 7 July 1826, after several hundred Inuit at the Mackenzie mouth had pillaged Franklin's two boats, he went alone that night into a camp of forty men and warned them to change their conduct or lose their trade. "My tribe were in the same unhappy state in which you now are, before the white people came to Churchill," he told them, "but at present they are supplied with everything they need, and you see that I am well clothed." It did not work; the Inuit planned to kill the whole party, Tattannoeuck included, the next day, and simply did not get the chance. In 1833 he learned that [[person:George Back]] was mounting an expedition to search for [[person:John Ross]]. He went to Fort Churchill, bought a pound of gunpowder, two pounds of ball shot and half a pound of tobacco, and set out on foot for Fort Resolution with a lame leg. He arrived months later to find Back had gone on to Fort Reliance, pushed on after him, lost his way, and died of exposure on the Rivière à Jean, twenty miles short of Fort Resolution, in late February or early March 1834.
+
+[[person:Ooligbuck]] was engaged at Churchill in May 1824 for the same second expedition, as hunter and as company for Tattannoeuck. He spoke no English then and learned it, and went on to serve for nearly thirty years: he went east with [[person:John Richardson]] and Kendall in 1826 on a journey of 1,455 miles, and his presence was what persuaded the Inuit they met that the party meant no harm; he helped open Fort-Chimo on Ungava Bay; he surveyed the coast east to the Castor and Pollux River with Dease and Simpson in 1839, who called him "a valuable and unhoped for acquisition"; and he went north with his son William on [[person:John Rae]]'s 1846-47 expedition, by which time he could no longer keep the pace of sledge travel. He refused to attend church at Churchill and would not travel without at least one other Inuk in the party. He died late in 1852.
+
+## William Ouligbuck and the 1854 report
+
+Ooligbuck's son [[person:William Ouligbuck]] went north with Rae again in 1853-54. In April 1854 near Pelly Bay, now [[place:Kugaaruk]], he interpreted the conversations that changed what Britain knew about the Franklin expedition. Everything in [[artifact:inuit-oral-history-019|Rae's report to the Admiralty]] — the forty men dragging a boat south over the ice, the bodies near the Great Fish River, the relics with the officers' crests on them — reached English through him. It is worth being exact about this: the most consequential single piece of Arctic testimony of the century was spoken in Inuktitut by Inuit witnesses and rendered into English by a young Inuk employee of the Hudson's Bay Company, and the argument that followed in London was conducted entirely without reference to any of them. Rae's published despatch names none of his informants and does not name his interpreter either. See [[page:franklin-testimony-vindicated]].
+
+## Eenoolooapik and the sound that could not be found
+
+[[person:Eenoolooapik]] was born about 1820 at Qimisuk (Blacklead Island) in Tenudiakbeek — Cumberland Sound. The Aberdeen whaling master [[person:William Penny]] had heard from Inuit of a large bay full of whales and had failed three times to find it. In September 1839, at Durban Island, he met a young man who had been born there, knew its geography in detail, and wanted to see Scotland; he took him home aboard the Neptune, and they reached Aberdeen on the evening of 8 November. Eenoolooapik nearly died of pneumonia after kayaking on the River Dee for the crowds; when he recovered he went to the theatre, to dinner parties and to two balls for the Queen's wedding, and over the winter he and Penny drew a map of the sound. Penny sent it to the Admiralty, which paid £20 towards his keep and was not otherwise interested.
+
+He left Scotland on the Bon Accord on 1 April 1840; she whaled through the early summer, and then, with his help, Penny took her into Tenudiakbeek. Penny, believing no European had been in it, named it Hogarth's Sound after one of his backers; it was afterwards recognised as the Cumberland Gulf [[person:John Davis]] had entered in 1585. Eenoolooapik went back to his family, married Amitak, traded baleen with Penny each year, and died of consumption in the summer of 1847 — five years before the first planned wintering of a whaling crew in the sound, and long before the consequences of what he had shown Penny became clear. His sister was [[person:Tookoolito]].
+
+## Tookoolito and Ebierbing
+
+[[person:Tookoolito]] and her husband [[person:Ebierbing]] worked with [[person:Charles Francis Hall]] from 1860 until his death in 1871, and afterwards on the Polaris and through the six-month ice-floe drift; Ebierbing then guided Schwatka's search on King William Island in 1878-80. Tookoolito had been taken to England in 1853 and presented to Queen Victoria, and read and wrote English. Nearly everything Hall recorded from Inuit informants — [[person:Ookijoxy Ninoo]] on the Frobisher voyages, [[person:In-nook-poo-zhee-jook]] on Franklin — is her translation. She is the reason those testimonies exist in English at all, and she is credited in the books as a servant.
+
+[[artifact:inuit-oral-history-011|A tintype survives of the two of them together]], and portraits of each: [[artifact:inuit-oral-history-009|Tookoolito engraved in 1862]], [[artifact:inuit-oral-history-010|Ebierbing photographed about 1873]] with a sealing harpoon. Their story is told at length in [[topic:kane-hall-polaris]], at [[page:hall-among-the-inuit]] and [[page:the-inuit-of-these-expeditions]].
+
+## Hans Hendrik
+
+[[person:Hans Hendrik]] of Fiskernaesset in south Greenland shipped with [[person:Elisha Kent Kane]] at eighteen and served on four expeditions over twenty-three years — Kane, Hayes, Hall's Polaris, Nares — which is more Arctic service than most of the officers who employed him. He is the one member of this group who wrote his own book. See [[page:inuit-authorship]].
+
+
+@@@@@@@@@@
+# The Franklin testimony, and how long it took to be believed
+[page · inuit-oral-history · good]
+
+The Franklin expedition vanished in 1845. Between 1848 and 1880 dozens of search expeditions went looking for it, at enormous cost, and found very little. Inuit told searchers what had happened, in detail, from 1854 onwards. Almost every element of what they said turned out to be true, and almost none of it was acted on for a century and a half.
+
+## 1854: Rae at Pelly Bay
+
+In April 1854 [[person:John Rae]] was surveying the west shore of Boothia when he met Inuit near Pelly Bay, now [[place:Kugaaruk]]. Through his interpreter [[person:William Ouligbuck]] he learned, over several conversations and from several people, that [[artifact:inuit-oral-history-019|in the spring of 1850 about forty white men had been seen dragging a boat south over the ice]] off the north shore of King William Island, and that later that season some thirty bodies had been found on the mainland and five on an island near a large river. He bought relics from them: silver forks and spoons carrying the crests and initials of Crozier, Goodsir, Macdonald, Peddie and others, and a round silver plate engraved "Sir John Franklin, K.C.B."
+
+Rae was scrupulous about what kind of evidence this was. [[artifact:inuit-oral-history-020|He told the Admiralty in the same report]]: "None of the Esquimaux with whom I conversed had seen the whites, nor had they ever been at the place where the bodies were found, but had their information from those who had been there, and who had seen the party when travelling." He also reported, because the people had told him, that "from the mutilated state of many of the corpses and the contents of the kettles" the last survivors had been driven to cannibalism.
+
+## The reaction
+
+Rae reached England on 22 October 1854 and his report was published at once. The relics were unarguable. The cannibalism was not accepted, and the way it was rejected mattered: not by arguing about the physical evidence but by arguing that the witnesses were not the sort of people whose word counts. [[person:Charles Dickens]], writing in Household Words at Lady Franklin's request, [[artifact:inuit-oral-history-025|put it in one sentence]]: "We believe every savage to be in his heart covetous, treacherous and cruel." He had never been to the Arctic and had never met an Inuk.
+
+It worked. Rae, who had established the fate of the expedition at a fraction of the cost of any naval search, was frozen out; he received the Admiralty reward but not the knighthood or the standing given to men who found less. The Inuit account went into the literature as native rumour. The version of the Franklin story that Britain and Canada told for the next hundred years had no Inuit witnesses in it.
+
+## 1869 and 1879: Hall and Schwatka
+
+[[person:Charles Francis Hall]] spent five years at Naujaat with [[person:Tookoolito]] and [[person:Ebierbing]] collecting testimony, and in the spring of 1869 crossed to King William Island with [[person:In-nook-poo-zhee-jook]]. Hall says plainly that this was the same man who had given Rae the first information in 1854, and writing from Repulse Bay to Henry Grinnell on 20 June 1869 he called him "a walking history of the fate of Sir John Franklin's Expedition." In-nook-poo-zhee-jook drew him a sketch map of the island and showed him a silver spoon with an eel's-head crest. See [[page:hall-at-repulse-bay]].
+
+Ten years later Schwatka's party, with Ebierbing among the interpreters, took down accounts from the Ookjoolik and Netsilingmiut and — this is the important editorial decision — [[source:gilder1881schwatkas|W. H. Gilder printed the interviews as he had recorded them]], "so that each reader may draw his own conclusions." Two of them matter especially.
+
+[[person:Tooktoocheer]]'s son [[person:Ogzeuckjeuwock]] had been about twelve when he went with his parents to the boat place on the south coast of King William Island. [[artifact:inuit-oral-history-022|He described]] a fastened tin case about two feet long, full of written and printed books, which they broke open; a needle that stuck to iron; more than four skulls outside the boat; and arm and leg bones "that appeared to have been sawed off." That last detail was ridiculed for a century.
+
+[[person:Ikinnelikpatolok]], an old Ookjoolik man, [[artifact:inuit-oral-history-021|described a ship]] frozen in the ice "near an island about five miles due west of Grant Point, on Adelaide Peninsula," with a dead man in a bunk. His people went aboard, could not work the doors, cut a hole in the side at ice level, took knives and forks and pans and left the books, and "when the ice broke up during the following summer the ship filled and sunk." (Ikinnelikpatolok is the name Gilder prints. The name Puhtoorak is often attached to this testimony; it is not Gilder's, and it does not appear in his book.)
+
+## 2014
+
+On 2 September 2014 a Parks Canada team found HMS Erebus in [[place:Wilmot and Crampton Bay]], off the Adelaide Peninsula, in shallow water beside a small island. The wreck is where Ikinnelikpatolok said it was, one hundred and thirty-five years after he said it, and about a hundred and sixty-five years after his people watched her sink.
+
+The search area had been narrowed by, among other things, the lifetime of oral-history work done by [[person:Louie Kamookak]] of [[place:Uqsuqtuuq]], who had collected Nattilik accounts of ships and of white men and matched them against the printed narratives and against Inuit place names. See [[page:knowledge-alive-today]] and, in [[topic:franklin-1845]], [[page:franklin-1845-inuit-testimony]] and [[page:franklin-1845-the-wrecks]].
+
+## What the record actually shows
+
+It is worth stating the score plainly, because the habit of treating oral testimony as a soft source dies hard.
+
+- The ships were beset or abandoned and the men walked south: the Inuit said so in 1854, confirmed by the [[artifact:franklin-1845-012|Victory Point record]] found in 1859.
+- Bodies near the Great Fish River: said in 1854, confirmed by McClintock and Hobson in 1859 and by every subsequent survey.
+- Cannibalism among the last survivors: said in 1854, denounced as slander, and confirmed forensically in the 1990s. A previously unrecorded site of the expedition was excavated on King William Island in 1992; it yielded nearly 400 human bones from at least eleven men, and cut marks on about a quarter of them ([[source:keenleyside1997final|Keenleyside, Bertulli and Fricke, *Arctic* 50, 1997]]), which the authors say support the nineteenth-century Inuit accounts.
+- Books in a tin case at the boat place: said in 1879, and still the best reason to think written material may yet be recoverable.
+- A ship sunk off the Adelaide Peninsula with a hole cut in her side: said in 1879, found in 2014.
+
+Where the Inuit accounts were imprecise, they were imprecise in the ways any long-transmitted testimony is: dates unfixed, two events sometimes run together. Kamookak himself worked out that some elders' accounts of men hauling boats had merged [[person:John Ross]]'s people from the Victory with Franklin's. That is a reason to work with the testimony carefully. It was never a reason to throw it away, and throwing it away cost the searchers a century and a half.
+
+
+@@@@@@@@@@
+# Inuit authorship: Hans Hendrik's Memoirs and the rest
+[page · inuit-oral-history · good]
+
+Nearly all of this record was written by people who did not live here, about people who did. There are a small number of exceptions, and they are worth reading closely, because they show what the same events look like from the other side of the interpreter.
+
+## Hans Hendrik's Memoirs
+
+[[person:Hans Hendrik]] — Suersaq — was a Kalaallit hunter from Kekertarsuatsiak (Fiskernaes) in south Greenland. [[person:Elisha Kent Kane]] shipped him in 1853, when he was eighteen, because nobody else would go: the ship's master, Hans writes, "tried to get one assistant more, but did not succeed." He served on four expeditions over twenty-three years: Kane 1853-55, Hayes 1860-61, Hall's Polaris 1871-73, and Nares 1875-76. That is more Arctic service than most of the naval officers who employed him, and on at least two of those expeditions the survival of the party depended on his hunting.
+
+He then wrote it down himself, in Kalaallisut. Henry Rink, director of the Royal Greenland Board of Trade, translated it, and it was published in London in 1878 as [[source:hendrik1878memoirs|Memoirs of Hans Hendrik, the Arctic Traveller, Serving under Kane, Hayes, Hall and Nares, 1853-1876, Written by Himself]]. [[artifact:inuit-oral-history-027|The full text is here]].
+
+[[artifact:inuit-oral-history-026|The first sentence declares the whole project]]: "To relate how the northern part of the big country came to be explored, I write this — I, Hans Hendrik, who first lived at Kekertarsuatsiak [Fiskernaes], belonging to the Germans [Moravians], but have now removed north, to Kangersuatsiak, belonging to Upernivik."
+
+## What is different in it
+
+Three things, mainly.
+
+**Family.** The book opens not with an outfitting list but with his parents: his father Benjamin, who served the priests at the Moravian station and went round the other stations to lead the service on the great holidays; his mother Ernestine, who had charge of the church lamps and had come from Agdluitsok, at the end of the country. It sets out his brothers by name — Simion, Joel, and the youngest Nathaniel — and the reason he went: his father had died, the younger boys had not "grown food-winners as yet", and the ship offered payment to the family of whoever joined. His mother begged him not to go.
+
+**Cost.** "When I left my countrymen and relatives, to be sure it was very disheartening. Still, I thought, if I do not perish I shall return. How strange! This was not to be fulfilled." He never lived in the south again.
+
+**Being doubted.** The most uncomfortable passages are about how he was treated. When Hayes's astronomer August Sonntag died on a sledge journey in 1860 Hans was cross-questioned about it, and he records that the others "conceived suspicions". Those passages are collected in [[topic:kane-hall-polaris]] — see [[artifact:kane-hall-polaris-031]] and [[artifact:kane-hall-polaris-030]]. Rink, translating, added the flat question that no expedition narrative had thought to ask: who caught the seals? ([[artifact:kane-hall-polaris-034]]).
+
+He was on the ice floe through the whole six-month drift of 1872-73 with his wife Merkut and their four children ([[artifact:kane-hall-polaris-033]]). Nineteen people came off that floe alive, and the reason was that two Inuit families were on it.
+
+## Pictures drawn by Greenlanders
+
+The other Inuit-authored body of work from the same years is in [[source:rink1875tales|Henry Rink's Tales and Traditions of the Eskimo]] (Edinburgh, 1875). Its title page reads "with numerous illustrations, drawn and engraved by Eskimo", and the preface says that some of the illustrations were "designed as well as drawn and engraved on wood by natives of Greenland", from blocks Rink supplied to the publisher. The book is Greenlandic oral tradition, collected between 1848 and 1868, printed alongside pictures made by Greenlanders — which makes it one of the earliest printed books in which Inuit narrative and Inuit images stand together.
+
+Some are ethnographic plates, captioned by the engraver: [[artifact:inuit-oral-history-031|a winter house]] banked with turf, with its glazed windows and its stovepipe; [[artifact:inuit-oral-history-032|a woman with a child in the amaut]] and [[artifact:inuit-oral-history-033|a girl in holiday dress]] at Nuuk (Godthaab); [[artifact:inuit-oral-history-034|the kayak with its harpoon, thrower and paddle]]; [[artifact:inuit-oral-history-035|the large lance]]. Others are full-page scenes set into the tales themselves, and carry no caption at all: [[artifact:inuit-oral-history-036|a crowd round a bear brought in on a sledge]], [[artifact:inuit-oral-history-037|armed men on a shore beside a boat]], [[artifact:inuit-oral-history-038|people scattering down a slope in falling snow]], [[artifact:inuit-oral-history-039|a congregation at a service in a plank-built mission house]]. The last two sections of the book are tales about Europeans and about the Danish colony, and the pictures go with them: this is a Greenlandic view of the colonists, drawn and cut by Greenlanders and printed in Edinburgh. [[artifact:inuit-oral-history-040|The whole volume is here]].
+
+## The other Inuit-authored material
+
+- **The charts.** [[person:Iligliuk]]'s [[artifact:inuit-oral-history-001|Eskimaux Chart No. 1]], [[person:Ikmallik]]'s [[artifact:inuit-oral-history-002|chart of the Gulf of Boothia]], and the five charts in [[source:boas1888central|The Central Eskimo]] by [[person:Itu]], [[person:Sunapignang]], [[person:Angutuqdjuaq]] and [[person:Aranin]] are documents made by named Inuit authors, published under their names, and still readable as geography. See [[page:inuit-drawn-maps]].
+- **The testimony.** The interviews [[source:gilder1881schwatkas|Gilder printed as he recorded them]] in 1881 are, in effect, dictated first-person narratives by [[person:Ikinnelikpatolok]], [[person:Tooktoocheer]] and [[person:Ogzeuckjeuwock]], with Gilder as stenographer rather than author. He said so himself, printing them "so that each reader may draw his own conclusions." See [[page:franklin-testimony-vindicated]].
+
+## How to read the rest
+
+The practical consequence is a reading rule. When a narrative says "we found", ask who was on the sledge; when it gives a coastline the ship never approached, ask who drew it; and when it reports what the local people said, ask who translated. The answer is usually a named person who is not on the title page.
+
+
+@@@@@@@@@@
+# Knowledge alive today: Kamookak and the Gjoa Haven Guardians
+[page · inuit-oral-history · good]
+
+The oral history in these pages is not a nineteenth-century subject. It is held now, by people now, in communities that have kept it through everything the twentieth century did to them, and it is currently doing work that no other kind of evidence could do.
+
+## Louie Kamookak
+
+[[person:Louie Kamookak]] was born in 1959 at a seal-hunting camp on the Boothia Peninsula near [[place:Taloyoak]]. He became a teacher, and later an elder, at [[place:Uqsuqtuuq]] (Gjoa Haven), and for more than thirty years he was the person who recorded what Nattilik elders remembered about ships and about white men on their coast.
+
+What started him was a story his mother told him when he was a boy: "a mound, and at the end of the mound there was a rock with markings on it. The mound was the length of a human, and because it was the length of a human they were afraid to go near it." He thought it might be [[person:John Franklin]]'s grave, and looking for it took the rest of his life. He was consistent about the priority. Finding the ships mattered, he said, but "it's not my mission. I'm looking for Franklin." What he wanted from the grave was plain enough: "I want Canada to be able to return his body to England. I want to prove my grandma's story was right."
+
+His method is the part worth teaching. He did not treat the testimony as sacred and he did not treat it as folklore. [[source:harper2025kamookak|Kenn Harper records him saying]] that "the oral tradition tells a lot of history, but isn't always very accurate," and Kamookak spent as much effort finding where accounts had drifted as finding where they were right. He worked out, for instance, that elders' accounts of white men hauling a large boat on a sled, and of men scattering in different directions and dying, had merged two separate events — [[person:John Ross]]'s people from the Victory on the Boothia Peninsula in the early 1830s and Franklin's men on their final march. He read the printed narratives against the testimony and corrected errors in both directions. His own family stood in both records: his grandmother had found relics left by the stranded Franklin crews, among them metal spoons and forks, and his forebears included William "Paddy" Gibson, a long-serving Hudson's Bay Company post manager on King William Island who was himself a keen Franklin researcher.
+
+He also worked with Inuit place names, which is where geography and memory are stored in the same object. Names carry what happened at a place and what is found there, and a name can outlive the account that explains it.
+
+That body of work is part of why the search that found HMS Erebus on 2 September 2014 was looking in [[place:Wilmot and Crampton Bay]], where an old Ookjoolik man, [[person:Ikinnelikpatolok]], had [[artifact:inuit-oral-history-021|placed a sunken ship in 1879]]. See [[page:franklin-testimony-vindicated]].
+
+Kamookak was appointed to the Order of Nunavut and, in 2017, to the Order of Canada; he held the Polar Medal, the Royal Canadian Geographical Society's Lawrence J. Burpee Medal, awarded in 2015, and the Inuit Heritage Trust Recognition Award. (The two obituaries disagree in detail: [[source:harper2025kamookak|Kenn Harper]] puts the Order of Nunavut in 2016 and makes the Order of Canada an officer's grade, while [[source:walker2018kamookak|Canadian Geographic]] puts both in 2017 and says member.) He died of cancer at Yellowknife on 22 March 2018, aged 58. He told Canadian Geographic in 2015: "My thoughts always go first to the Elders I've interviewed in the past, and the knowledge that they give to me to pass on to other people."
+
+## The Guardians
+
+The wreck sites are now watched by Inuit from Uqsuqtuuq. [[source:parkscanada2022guardians|The Inuit Guardians programme]] was developed by Parks Canada with the Franklin Interim Advisory Committee and began in 2017. Each summer community members from Gjoa Haven take up duties at Guardian camps near both wreck sites; the programme's stated purpose is to involve Inuit in protecting and monitoring the sites and to carry Inuit knowledge further into how they are run, working alongside Parks Canada's underwater archaeology team when the two are there together, and in time hosting visitors to the wrecks.
+
+There is a plain symmetry here worth stating. In 1854 an Inuit account of these ships was published in London and dismissed as the word of savages. The sites of those same ships are now in the keeping, season by season, of the descendants of the people who gave the account. The wrecks themselves, and how they are managed, are described in [[topic:franklin-1845]] at [[page:franklin-1845-the-wrecks]].
+
+## Testimony as evidence, generally
+
+The same argument about whose word counts has been fought much more recently and about much worse things. The [[source:qtc2013nuutauniq|Qikiqtani Truth Commission]] was established by the Qikiqtani Inuit Association to establish what happened in the Baffin region between 1950 and 1975 — the moves off the land, the dog slaughter, the sanatoria in the south, the residential schools. Its evidence is Inuit testimony, taken from people who were there and set against the written government record. Its own statement of method is [[artifact:inuit-oral-history-028|"as told by Inuit, for Inuit, to Inuit"]]. See [[topic:relocations-qtc]].
+
+That is the same evidentiary move that took a century and a half to be made about Franklin. It is worth noticing that it was made by Inuit organisations, on their own initiative, and not conceded by the institutions that had spent the previous century declining to make it.
+
+## For a ship working here now
+
+Two practical points.
+
+The knowledge is current, not historical. Sea-ice conditions, currents, polynyas, where the animals are and when, safe travel routes on landfast ice: this is held in the communities the ship passes and is actively maintained. [[artifact:inuit-oral-history-024|Boas wrote in 1888]] that "the state of the ice regulates the distribution of the natives during the greater part of the year," which is a statement about the same coupled system the ship's instruments measure.
+
+And the record of it is in the communities' hands. Inuit Heritage Trust holds the Nunavut place-names work; the Qikiqtani Inuit Association holds the Truth Commission archive; the Guardians at the wreck sites are people of Gjoa Haven. Anything written here about Inuit knowledge should be understood as pointing at those bodies, not standing in for them.
+
+
+@@@@@@@@@@

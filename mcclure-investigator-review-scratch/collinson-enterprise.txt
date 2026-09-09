@@ -1,0 +1,110 @@
+# Collinson and the Enterprise: five seasons and two near misses
+[page · mcclure-investigator · draft]
+
+[[person:Richard Collinson]] was [[person:Robert McClure]]'s senior officer. He
+took HMS Enterprise into the Arctic from the Pacific five times, wintered twice
+inside the archipelago, sledged to within sight of the ground where Franklin's
+people died, and came home in 1855 having met nobody, found nothing decisive
+and quarrelled with his officers. His journal was not published until 1889, six
+years after he died. He is the counter-example to McClure in almost every
+respect, and the more interesting of the two commanders for anyone who has to
+work ice.
+
+Most of the Enterprise's story belongs to the western Arctic and to Victoria
+Island rather than to the Queen Elizabeth Islands, so this page is short. The
+track is [[artifact:mcclure-investigator-041|here]] and the detail is in
+`mcclure-investigator/notes/collinson1889-notes.md`.
+
+## A year behind
+
+Both ships cleared Plymouth on 20 January 1850. The Enterprise, the slower
+sailer, came through [[place:Bering Strait]] on 11 August, a fortnight after
+McClure, found the season gone, and went back out — to Sitka, to Hawaii, and to
+Hong Kong for the winter, a passage of 35,225 miles from Plymouth. That winter
+of waiting is the whole difference between the two voyages.
+
+In February 1851 he learned that Lieutenant John Barnard, detached towards the
+Yukon, had been killed at the Russian post at Nulato. Barnard was the only
+officer aboard with previous Arctic service.
+
+Coming north again in the summer of 1851, Collinson did exactly what McClure had
+done a year before: he entered [[place:Prince of Wales Strait]] and worked
+north up it. On 29 August he landed on the
+[[place:Princess Royal Islands]] and found two copper cylinders on a flagstaff,
+one holding a Union Jack and the other McClure's notice: the Investigator had
+wintered four miles to the north-east, and a party from her had reached the
+north end of the strait in October. On 31 August the ice stopped him at 73° 30'
+N, 114° 35' W — a few miles short of where McClure had stood — and he could not
+even see [[place:Melville Island]].
+
+He wintered at [[place:Walker Bay]] on the west coast of Victoria Island, 1851-52.
+
+## Iqaluktuuttiaq, 1852-53
+
+In the summer of 1852 he was driven back out of Prince of Wales Strait, went
+south instead through Dolphin and Union Strait and Coronation Gulf, and on 3
+October 1852 settled for the winter at [[place:Iqaluktuuttiaq]] (Cambridge
+Bay) — the Amundsen's own most frequent western port of call, and at that date
+a place no European ship had wintered.
+
+Two things came out of that winter, and both were near misses.
+
+On 8 May 1853 a sledge party found [[person:John Rae]]'s record of 13 August
+1851 on the Victoria Island shore, telling Collinson the coast he was searching
+had already been searched. Two days later, on 10 May, the same party built a
+cairn on an island in Victoria Strait at 70° 26' N, 100° 47' W, saw no land
+beyond, and turned back for want of provisions and because the ice was too
+rough for their strength. Ahead of them, across the strait, lay King William
+Island and the line of the retreat from the Erebus and Terror — see
+[[topic:franklin-1845]] and [[topic:franklin-search]]. Six years later
+[[person:Francis Leopold McClintock]] found the record at Victory Point.
+
+Then in early July 1853, at the Finlayson Islands near Cambridge Bay, one of
+the crew picked up at the high-water mark two pieces of fir nailed together,
+with a copper door-hasp bearing the Queen's broad arrow. Collinson described it
+carefully and called it
+[[artifact:mcclure-investigator-043|"almost the only article we have met with
+which could have belonged to the missing ships"]] — and did not know what he
+had. It was, in all likelihood, wreckage from one of Franklin's ships carried
+south, and it was picked up more than twenty years before anybody looked
+seriously in that quarter.
+
+## What the Inuit told him, and what he did not ask
+
+Collinson's journal is worth reading for the encounters. Near Point Barrow in
+July 1851 Inupiat came out over the ice, gave him the local place names —
+Noo-na-hoo, Too-na-mut, Oo-fe-la — and drew him a chart of a coast the Navy had
+been guessing at. At [[place:Walker Bay]] in October 1851 an old man named
+[[person:Ip-pee-ra]] came aboard with his wife and two sons-in-law from a camp
+of twenty-five at Isthmus Lake ([[artifact:mcclure-investigator-042]]). At
+Cambridge Bay the Copper Inuit visited repeatedly through the winter and, as
+Collinson recorded with some surprise, took nothing, though the stores lay open
+on the ice.
+
+And at [[place:Camden Bay]] on the Alaskan coast in July 1854, forty-one people
+came out in two umiaks, and a boy among them was wearing buttons engraved with
+a record of the movements of the search squadrons in 1850-52. That is how the
+Royal Navy's own despatches were travelling along that coast: through Inuit
+hands, faster and more reliably than through its ships.
+
+Nobody aboard the Enterprise could speak the language. The Investigator had
+[[person:Johann August Miertsching]]; Collinson had nobody. It is a plain
+reason why the men who could have told him where Franklin's ships were did not
+tell him.
+
+## Home, and silence
+
+A third winter at Camden Bay, then out through Bering Strait in August 1854 —
+[[artifact:mcclure-investigator-044|"it was not until the 5th of May that we got
+a sight of Old England"]], five years and four months out.
+
+His brother's 1889 edition adds a note headed "Personal Troubles in the
+Enterprise", saying that by the spring of 1853 some of the officers were
+suspended from duty, and expressly declining to give particulars. The journal as
+printed gives no hint of it. What happened aboard that ship is not in the record
+this layer holds, and it should not be guessed at here.
+
+McClure got the knighthood and the £10,000. Collinson got the Founder's Medal of
+the Royal Geographical Society, eventually, and the reputation of a man who had
+been very nearly everywhere that mattered.
+

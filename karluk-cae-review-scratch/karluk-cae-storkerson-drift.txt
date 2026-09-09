@@ -1,0 +1,114 @@
+# Storkerson's drift and the end of the expedition, 1917-1918
+[page · karluk-cae · draft]
+
+# Storkerson's drift and the end of the expedition, 1917-1918
+
+The Canadian Arctic Expedition's last journey was the strangest of them: five men
+who went out onto the Beaufort Sea, found a floe they liked, and stayed on it for
+six months on purpose.
+
+## Why drift
+
+By 1917 [[person:Vilhjalmur Stefansson]] had established that a party could feed
+itself on the polar pack. The next question was oceanographic. Was there a
+permanent current in the Beaufort Sea, as almost everyone assumed - the current
+that had taken Nansen's Fram across, and that had carried the
+[[page:karluk-cae-the-karluk|Karluk]] west to her death? And did Keenan Land
+exist, the land marked on a 1912 map published by the American Geographical
+Society and the American Museum of Natural History in the unsounded water north
+of Alaska?
+
+The way to answer both was to sit on an ice floe with a sextant, a chronometer
+and a sounding line and let it take you where it would. The plan was to drift for
+a year.
+
+## The floe
+
+[[person:Storker Storkerson]] left Cross Island on the Alaskan coast on 15 March
+1918. The route out and back is [[artifact:karluk-cae-005]]. By 3 April the party
+was 105 miles out; on 14 April observations put them at 73 degrees 3 minutes
+north, 148 degrees 32 minutes west, about 190 miles north of the Colville delta,
+and [[person:Aarnout Castel]] took the last support party home with the mail.
+
+Five men stayed: Storkerson, [[person:August Masik]],
+[[person:Adelbert Gumaer]], [[person:E. Lorne Knight]] and
+[[person:Martin Kilian]], with sixteen dogs and exactly 101 days' full rations.
+[[person:Fred Volki]], a boy, had volunteered and was sent home because five men
+were enough.
+
+On 16 April they moved camp three miles east onto the young ice of a refrozen
+lead, where the seals were, and did not move again for six months. Kilian kept
+the meteorological record. Storkerson took the astronomical observations and the
+soundings. By the middle of June they had killed forty-two seals and four polar
+bears, about three tons of meat, and the food brought from shore was still
+untouched: it was being saved for the walk home.
+
+## What they found
+
+Two negatives, both of them worth having.
+
+There is no permanent current in the Beaufort Sea between about 72.5 and 74
+degrees north. The floe's drift, tracked by observation for six months, followed
+the wind and nothing else. (Stefansson, to his credit, footnoted his own man's
+conclusion in print: "It is possible that further study may show that the ice
+movement was not entirely controlled by the local winds and that Storkerson's
+statement is here too emphatic." Modern work on the Beaufort Gyre says
+Stefansson's caution was the better guess, but Storkerson's six months of
+positions were real data where there had been none.)
+
+And Keenan Land does not exist. The floe drifted straight through where it was
+drawn on the map, and the sounding line found no bottom at 1,600 fathoms.
+
+## Coming off
+
+They came off early. Storkerson fell ill with asthma, and on 9 October 1918,
+after 184 days on the floe, the party started for land from latitude 73.9 north,
+a little over 200 miles out, with fifty-five days' rations left.
+
+October is the worst month of the year to travel on sea ice: the light is going,
+the fog and snow are continuous, and new ice under snow looks exactly like ice
+that will hold. They crossed it in a month, some of the leads in sled-boats, and
+camped on dry ground in the Colville delta on 8 November 1918, after 238 days
+living on sea ice. Storkerson's whole account of the crossing is one sentence:
+[[artifact:karluk-cae-005|"We started from a point a little over 200 miles from
+shore on October 9th and reached land November 8th without accident or
+hardship."]] Asked about it later he added: "We took every ordinary precaution
+and no extraordinary circumstance came up."
+
+(A note for anyone checking the dates: the version of Storkerson's narrative
+printed in [[source:stefansson1921friendly]] gives the landfall as 5 November
+1919. That is a misprint. He started on 15 March 1918 and counted 238 days on the
+ice, which ends on 8 November 1918.)
+
+## The end
+
+That was the fifth and last exploring trip of the Canadian Arctic Expedition.
+Storkerson wintered at [[place:Herschel Island]] and went out the next spring up
+the Mackenzie with an inspector of the Royal North-West Mounted Police, and was
+ordered by telegram to report to his commander at Banff, Alberta.
+
+Stefansson himself had come out sick. He caught typhoid in 1918 and lay ill for
+months at Herschel Island; he did not go north again. The expedition had run five
+years, cost eleven lives on the Karluk and two more on the ice of M'Clure Strait,
+and produced five new islands, a great deal of coastal survey, the first
+soundings of the Beaufort Sea, and fourteen thick volumes of natural history and
+ethnology - but not, in the end, the volume that mattered most. Volume I of the
+Report of the Canadian Arctic Expedition was to have carried the narrative of
+both parties. Every other volume published from 1919 onward lists it as "in
+preparation." It never appeared. That is why the only continuous account of the
+Northern Party is Stefansson's own [[artifact:karluk-cae-042|The Friendly
+Arctic]] - a partisan book, written by a man defending himself, and the only one
+there is.
+
+## Afterwards
+
+Stefansson's last Arctic venture was the worst of them. In 1921 he sent five
+people to occupy [[place:Wrangel Island]] and claim it for the British Empire -
+a claim Britain did not want, Canada disavowed and the Soviet Union enforced
+against. Four of the five died: [[person:E. Lorne Knight]], who had spent six
+months on Storkerson's floe, and [[person:Fred Maurer]], who had already survived
+Wrangel Island once as a Karluk castaway. The only survivor was Ada Blackjack,
+the Inupiaq seamstress hired at Nome, who kept herself alive alone on the island
+for two years and was fetched off by [[person:Harold Noice]] - the man who had
+stepped ashore first on [[place:Meighen Island]] in 1916.
+

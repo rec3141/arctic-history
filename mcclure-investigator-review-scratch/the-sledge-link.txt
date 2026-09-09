@@ -1,0 +1,145 @@
+# The sledge link across Viscount Melville Sound
+[page · mcclure-investigator · draft]
+
+The distance from [[place:Dealy Island]] on the south coast of
+[[place:Melville Island]] to the Bay of Mercy on the north coast of
+[[place:Banks Island]] is about 160 statute miles in a straight line across
+[[place:Viscount Melville Sound]]. In 1852 and 1853 that stretch of ice was
+crossed four times, in both directions, by men on foot. Those crossings are
+what actually joined the Pacific and the Atlantic, and they are the reason
+sixty-one men came home.
+
+## The record at Parry's Rock
+
+In April 1852 [[person:Robert McClure]], twenty months in the ice and with his
+crew already on two-thirds rations, sledged from the Bay of Mercy to
+[[place:Winter Harbour]] on Melville Island. Parry's Hecla and Griper had
+wintered there in 1819-20 — see [[topic:ross-parry]] — and Parry's men had cut
+their ships' names into a great block of sandstone above the beach: [[place:Parry's Rock]]. McClure
+hoped to find a ship, or at least a depot. He found neither, only a notice
+McClintock had left in 1851.
+
+So on 28 April 1852 he put his own journal of proceedings and a chart of his
+discoveries under Parry's Rock, and walked the 160 miles back to his ship. It
+was the only message he could send. Nobody had any reason to look for it.
+
+## Mecham reads it, 12 October 1852
+
+[[person:Henry Kellett]]'s HMS Resolute and the steam tender Intrepid had
+hauled into winter quarters at Dealy Island on 10 September 1852, after failing
+to get the last six miles into Winter Harbour through solid floe. In October
+[[person:George Frederick Mecham]] went out laying depots for the next spring,
+went round by Liddon Gulf and back to Winter Harbour, and looked at Parry's
+rock more closely than usual.
+
+> "Lieut. Mecham could hardly credit his senses when he discovered a document
+> upon its summit, detailing the accomplishment of the north-west passage, and
+> the position of H. M. S. 'Investigator' in Banks Land!"
+
+([[artifact:mcclure-investigator-017|Osborn 1856, p. 287]].) A rock carved by
+one expedition in 1820 had served as a letter-box for another thirty-two years
+later. Kellett's people now knew that a ship from the Pacific lay about 180
+miles to the south-west, and that she might be abandoned before they could
+reach her.
+
+## Pim's journey, 10 March to 6 April 1853
+
+Kellett sent [[person:Bedford Pim]] off absurdly early — 10 March 1853, at
+half past eight in the morning, with the sledge *John Barrow* and the motto
+"Hope on, Hope ever", seven men and eighty-eight days' provisions, and
+[[person:William Thomas Domville]] with a dog sledge alongside.
+M'Dougall's footnote calls it "the earliest extended spring journey on record".
+Mr Roche's sledge went as far as Cape Providence in support and turned back on
+20 March.
+
+What happened next is told two ways. M'Dougall, writing in 1857, says Pim's own
+sledge broke down on 29 March some twenty-odd miles south-west of
+[[place:Cape Dundas]], that he handed his gear to
+[[person:William Thomas Domville]] — who then had to shift fifteen
+hundredweight twenty-five miles over rough ice by double-tripping — and went on
+with the dogs and two men. Pim's own journal, printed in the
+[[source:greatbritain1855further|blue book of January 1855]], instead has him
+send Domville ahead with the *John Barrow* on 20 March, near
+[[place:Cape Providence]], and press on past him again on the 29th. The two
+accounts of the same fortnight are not reconcilable and both are recorded here.
+
+What is not in doubt is the surface. Pim, 25 March, in mid-sound:
+[[artifact:mcclure-investigator-061|"The floe, if floe it can be called, proved
+bad indeed: hummocks after hummocks followed each other in apparently endless
+succession... the surface was so glassy and uneven that the men could scarcely
+stand."]]
+
+He was at the Bay of Mercy on 6 April: twenty-eight days out, 160 miles direct,
+427 statute miles actually travelled. McClure had fixed 15 April to abandon the
+ship. [[artifact:mcclure-investigator-006|The track is here]], redrawn from
+Pim's own journal.
+
+Pim's own version of the meeting, written up for Kellett, is the flattest and
+the best: [[artifact:mcclure-investigator-062|"Arrived within 100 yards without
+being observed; then, however, two persons taking exercise on the ice discovered
+that I did not belong to their ship. Upon beckoning, they quickly approached,
+and proved to be Capt. M'Clure and Lieut. Haswell."]] He gives the time as five
+in the afternoon.
+
+M'Dougall's telling, from hearsay three years later, is the one everybody
+quotes, and it is the best-told moment in the whole search.
+[[person:Robert McClure]] and Lieutenant Haswell were pacing the floe beside
+the ship, discussing where to dig a grave for the man who had died the day
+before, when a figure came running at them out of the rough ice, face black
+with soot and grease, gesturing. Taking him for an Inuk, McClure shouted in
+English: [[artifact:mcclure-investigator-018|"In the name of God, who are
+you?"]] The answer came back in English too.
+
+Below decks a man had caught the words and roused all hands. The sick came up
+with the healthy; [[artifact:mcclure-investigator-019|the carpenters dropped
+their tools — they were making the first coffin]] — and the burial party ashore
+left the half-dug grave and ran.
+
+## Back and forth across the sound
+
+McClure went straight back with Pim to argue his case
+([[artifact:mcclure-investigator-007]]). His own despatch to the Admiralty says
+he left the ship on 8 April and was aboard the Resolute on the 19th; under Cape
+Bounty on the way he overtook Domville, still double-tripping the depot back to
+Cape Dundas. Kellett and both ships' companies came out over the floe to meet
+him. He wanted to keep his ship, send
+the weakest men home overland, and take her out in the summer of 1853 with a
+skeleton crew — which would have made the Investigator, not the Fox or the Gjøa,
+the first ship through.
+
+[[person:Henry Kellett]] would not take his word for the state of the crew.
+Instead he wrote a letter to be read to the ship's company, offering them the
+choice of staying another season for the chance of getting the Investigator out,
+or of quitting her at once without discredit, and he sent Domville back across
+the sound to survey them. McClure left the Resolute on the evening of 5 May and
+was back in Mercy Bay on the 21st; the letter was read the next morning, and
+besides the officers exactly four men volunteered to stay. Then Domville and the
+ship's surgeon [[person:Alexander Armstrong]] signed the certificate that ended
+the argument: the crew's health was
+[[artifact:mcclure-investigator-020|"such as renders them utterly unfit to
+undergo the rigour of another winter in this climate"]].
+
+Meanwhile [[person:Samuel Gurney Cresswell]] had already taken the invalids
+away over the ice on 15 April — he drew the scene himself
+([[artifact:mcclure-investigator-005]]) — and, going on from Melville Island to
+[[place:Beechey Island]] and home in the Phoenix that autumn, became the first
+person to travel the North-West Passage from the Pacific side to the Atlantic.
+
+## The last crossing, June 1853
+
+HMS Investigator was abandoned on 3 June 1853. A depot was landed on the beach
+— what Parks Canada now calls McClure's Cache — the three new graves were
+marked, and sixty-one officers and men started walking
+([[artifact:mcclure-investigator-008]]).
+
+They were aboard the Resolute and Intrepid at Dealy Island on 17 June. The
+united ships' companies now numbered 138 souls, which is a large part of why
+the next winter went as badly as it did.
+
+That fortnight's walk is the North-West Passage, in the only sense in which
+anybody had completed it by 1853: men who had entered the Arctic from the
+Pacific arriving, alive, on ships that had entered it from the Atlantic.
+Parliament thought so too, and voted McClure £10,000. It would be sixty-eight
+years before a single vessel — Amundsen's Gjøa in 1903-06, then the
+[[topic:st-roch-modern|St. Roch]] — did the whole thing on her own bottom.
+

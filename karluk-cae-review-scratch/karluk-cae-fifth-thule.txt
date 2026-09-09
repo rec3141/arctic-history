@@ -1,0 +1,144 @@
+# The Fifth Thule Expedition, 1921-1924
+[page · karluk-cae · draft]
+
+# The Fifth Thule Expedition, 1921-1924
+
+The third strand of this topic has nothing to do with the Canadian Arctic
+Expedition except that it was in the field at the same time, over some of the
+same country, asking different questions. Where [[person:Vilhjalmur Stefansson]]
+wanted new land, the Danes wanted to know where the Inuit had come from.
+
+## The plan and the base
+
+The Fifth Thule Expedition was [[person:Knud Rasmussen]]'s. He was born at
+Ilulissat in Greenland to a Danish missionary father and a Greenlandic-Danish
+mother, spoke Kalaallisut as a first language, and had already made four
+expeditions out of the trading station he and [[person:Peter Freuchen]] founded
+at Thule in 1910. The fifth was the big one: to travel from Greenland to the
+Pacific and collect, from every Inuit group along the way, the material remains,
+the language and the stories that would show whether all these people were one
+people, and where they had come from.
+
+The schooner left Copenhagen in June 1921, called at Thule on 3 August to engage
+the Inughuit hunters and dog drivers on whom everything would depend, and went
+on through Hudson Strait and round the north of Southampton Island. In September
+1921 the party found a harbour at a small, uninhabited and unmapped island in
+[[place:Foxe Basin]] and spent a month building a house there. They called the
+house the Blow-hole, for the wind, and the island [[place:Danish Island]].
+Rasmussen's own observation put it at 65 degrees 54 minutes north, 85 degrees 50
+minutes west; the modern position is about two degrees further east, which is a
+fair measure of how thin the charts of Foxe Basin still were in 1921. See
+[[artifact:karluk-cae-007|the expedition's track]].
+
+The scientific staff was small and each man had a region. Peter Freuchen mapped
+the coasts of the Melville Peninsula and Baffin Island; in the winter of 1923 he
+was caught out in a blizzard, froze his left foot, cut away the gangrenous toes
+himself and later lost the leg below the knee. [[person:Kaj Birket-Smith]] and
+[[person:Helge Bangsted]] went inland to the Caribou Inuit of the Barren Grounds.
+[[person:Jacob Olsen]], a West Greenlandic catechist, worked as interpreter and
+collector and wrote his own account of the expedition in Greenlandic.
+[[person:Therkel Mathiassen]] dug.
+
+## Mathiassen at Naujan and Iglulik
+
+Mathiassen was twenty-nine and an archaeologist, and what he did in the summers
+of 1922 and 1923 changed the subject. At [[place:Naujan]] on Repulse Bay he
+excavated a village of winter houses built of stone, whalebone and turf, full of
+harpoon heads, sledge shoes, snow knives and the bones of bowhead whales. He
+found the same culture again at [[place:Iglulik]], at Ponds Inlet and at
+Malerualik on King William Island. It was not the culture of the people living
+there in 1922: the Iglulingmiut of the 1920s did not hunt bowhead whales and did
+not build houses like these.
+
+Mathiassen named it the Thule culture, after the station in Greenland, and argued
+that it had spread eastward from Alaska across the whole Arctic, carrying the
+whale hunt with it, and that the modern Inuit of the central Arctic were its
+descendants, reduced to sealing and caribou hunting when the whales became
+unreachable. His report, [[source:mathiassen1927archaeology]], is still the frame
+of eastern Arctic archaeology; the topic [[topic:thule-dorset]] follows the
+argument forward, through [[person:Diamond Jenness]]'s identification of an
+older, un-Thule culture that he called Dorset, to the radiocarbon dates that have
+since pushed the migration later than Mathiassen thought.
+
+Birket-Smith drew the opposite conclusion from his own material. The Caribou
+Inuit, he wrote in [[source:birketsmith1929caribou]], were a relic inland people,
+proto-Eskimo, from whom the coastal Inuit had descended - the Arctic peopled from
+the forest edge outward rather than from Alaska eastward. He and Mathiassen
+argued it out in print for years. Mathiassen was right, and the excavated
+evidence is why.
+
+## The seasons of digging, dated
+
+Mathiassen's own introduction to [[artifact:karluk-cae-063|volume IV of the
+Report]] is the only place the archaeological work is set out season by season,
+and it is what fixes the dates on [[artifact:karluk-cae-007|the expedition's
+track]]. The schooner reached Danish Island on **18 September 1921**, so late
+that nothing could be dug that autumn: [[artifact:karluk-cae-069|the passage is
+quoted here]]. In the **summer of 1922** Mathiassen excavated for two months at
+[[place:Naujan]] on Repulse Bay, joined for the last month by
+[[person:Jacob Olsen]], with a small dig at Aivilik as well; in the middle of
+August he crossed to Kuk in [[place:Duke of York Bay]] on Southampton Island and
+worked there until **6 September 1922**, the day an attempt to get off the island
+failed. In the **summer of 1923** he dug at [[place:Mittimatalik]] - the old
+settlements of [[place:Qilalukan]] and Mitimatalik, and [[place:Button Point]] on
+Bylot Island - while [[person:Knud Rasmussen]] dug on King William Island,
+[[person:Peter Freuchen]] at Chesterfield Inlet, [[person:Kaj Birket-Smith]] on
+Sentry Island and [[person:Helge Bangsted]] on Vansittart Island. Mathiassen and
+Birket-Smith went home that autumn and Freuchen carried the Qilalukan excavation
+on through the **summer of 1924**. Ten sites in all, and about 6,400 catalogued
+specimens, dug with no proper tools into ground that thawed two or three
+centimetres a day: Mathiassen says it took him more than a month to reach the
+bottom of one levelled house ruin.
+
+## The texts
+
+Both of the volumes this page leans on are now held here in full.
+[[artifact:karluk-cae-063]] is volume IV, Mathiassen's *Archaeology of the
+Central Eskimos*, and [[artifact:karluk-cae-062]] is volume V, Birket-Smith's
+*The Caribou Eskimos* - each written in Danish, published in English at
+Copenhagen in W. E. Calvert's translation, and taken here from the Wikisource
+transcription of the scanned original. Two chapters of Mathiassen's volume are
+missing from that transcription, and they are the two a reader would want first:
+chapter 1, the Naujan find, and chapter 2, the archaeology of northern Baffin
+Land. For those there is only [[artifact:karluk-cae-064|the page images]].
+
+## The sledge journey
+
+On about 11 March 1923 Rasmussen left Danish Island for Alaska with two sledges,
+twenty-four dogs and two companions: [[person:Qaavigarsuaq]], called Miteq, then
+twenty-two, and his cousin [[person:Arnarulunnguaq]], then twenty-eight, both
+from Thule. "Two continents lay between us and home."
+
+They went north through Committee Bay to Pelly Bay, spent the summer of 1923 at
+Malerualik among the Netsilingmiut - the material of
+[[source:rasmussen1931netsilik]] - crossed Queen Maud Gulf and the Kent Peninsula
+in the autumn, wintered among the Copper Inuit of Coronation Gulf, and went west
+along the mainland coast through Cape Bathurst, the Mackenzie delta and
+[[place:Herschel Island]] to Point Barrow in May 1924. They reached Kotzebue in
+August and [[place:Nome]] on the mail schooner Silver Wave on 31 August 1924,
+then crossed Bering Strait to East Cape in Siberia to see the Asiatic Inuit
+before turning for home. Rasmussen's own figure for the whole thing is "say,
+20,000 miles; more or less."
+
+Arnarulunnguaq was the first Inuit woman to cross Arctic North America. She and
+Qaavigarsuaq went on from Nome to Seattle, New York and Copenhagen, and back to
+Greenland by ship - round most of the world.
+
+What Rasmussen brought back was not chiefly a map. It was
+[[source:rasmussen1929intellectual]] and [[source:rasmussen1931netsilik]] and the
+volumes that followed them: songs, hunting law, taboo, the words of named people.
+He could do this because he spoke the language and the people he met could hear
+their own speech in his. That is the difference between the Fifth Thule
+Expedition and almost every other expedition on this map, and it is why the
+Report of the Fifth Thule Expedition is still read in Nunavut and Greenland when
+the geographical reports beside it are not.
+
+## Copyright note
+
+[[source:rasmussen1927across]] was published in 1927 and Rasmussen died in 1933.
+The Danish original and the 1927 English translation are out of copyright in
+Canada, where the term for a work of a known author who died before 1972 has long
+expired, and the 1927 English text has been in the public domain in the United
+States since 1 January 2023. It is quoted here on that basis.
+
+

@@ -1,0 +1,159 @@
+# Eenoolooapik and the opening of Tenudiakbeek
+[page · whaling · draft]
+
+In the summer of 1839 the Aberdeen whaling master [[person:William Penny]] was
+at Durban Island, on the Baffin coast near [[place:Cape Searle]], asking after a
+thing he had been looking for and failing to find for years: a great inlet the
+Inuit spoke of, running west out of Davis Strait, full of whales. He had been in
+three times and missed it.
+
+At Durban he met a young man of about twenty called
+[[person:Eenoolooapik]], who was from there. Penny asked him to draw the coast.
+
+> he performed with remarkable facility
+
+writes [[person:Alexander M'Donald]], the surgeon of Penny's ship the *Neptune*,
+who published the whole story two years later
+([[source:mdonald1841narrative]], p. 11). What Eenoolooapik drew was a chart:
+the shore leaving the general line of Davis Strait abruptly and running west
+about sixty miles, then trending north; a deep inlet called Kingaite cutting in
+from the south almost far enough to make an island of the land below it; another,
+Kingoua, closing the head of it; the eastern coast bold and precipitous and
+broken by bays; the western shore low and hidden almost its whole length behind a
+dense mass of islands. The Inuit name for the water was Tenudiakbeek.
+
+That chart is one of the more consequential documents in the history of the
+region, and it was drawn from memory by a man in his early twenties for a
+stranger who wanted to kill whales.
+
+## Aberdeen
+
+Penny invited him to Scotland. He had asked before, in 1837 and 1838, and each
+time Eenoolooapik's mother Nootaapik had wept until he changed his mind. In
+October 1839 he went. They raised Aberdeen on the night of 8 November.
+
+The winter nearly killed him. He caught a pulmonary infection aboard the
+*Neptune*, from the crowds of visitors who came to look at him in an overheated
+cabin, and it never really left him. He recovered enough to paddle his kayak on
+the Dee for spectators, which set it off again; he relapsed after acting out a
+seal hunt for a room of people, and was confined for three months, "brought to
+the very brink of the grave". M'Donald records that when he thought he was dying
+he wept and blamed Penny for bringing him away, and that what distressed him was
+the thought of his mother. He objected strongly to being bled until he was told
+it was that or death. Afterwards he took a professional interest in his own
+pulse, and would take hold of his wrist the moment the physician let go of it.
+
+He was taught the alphabet, which he learned quickly and then ignored; he drew
+extremely well, and M'Donald thought that with instruction he could have become
+an artist. He went to the theatre with enthusiasm. He complained that Scottish
+cooking left food "oko too little" — not hot enough. The Lords of the Treasury
+granted £20 to fit him out for the voyage home. He was glad to be going: there
+was, he said, "too much cough" in Scotland.
+
+## The voyage of the Bon Accord, 1840
+
+Penny took command of the *Bon Accord* and sailed from Aberdeen on
+[[artifact:whaling-001|1 April 1840]] with Eenoolooapik and M'Donald aboard. The
+outward passage was ordinary and bad: a man named George Thomson lost overboard
+on 18 April stowing the jib; icebergs from 1 May; one under the lee bow at
+midnight on the 4th, cleared by wearing ship.
+
+Then Penny did something that looks strange until you see the reasoning. Instead
+of going straight to the sound he was carrying its pilot to, he ran the whole
+[[page:whaling-the-baffin-bay-circuit|Baffin Bay Circuit]] first — the East Side,
+Lievely on Disko on 20 May, Upernavik on 2 June, beset off Cape Shackleton on the
+8th and two days of sawing to get out, the Devil's Thumb on 17 June, and
+[[place:Melville Bay]] to 75 degrees north by the 22nd. He was a whaling master
+with a season to make. Discovery could wait for the ice.
+
+On 23 June the ice took the *Hecla* alongside them and, in M'Donald's words,
+crushed her to pieces in a moment; the *Bon Accord* was caught on the starboard
+quarter and held with her port side against the land floe until the ice broke.
+Eenoolooapik, who had known ice all his life, had never seen anything at that
+scale, and wept. Penny gave Melville Bay until 10 July and then gave up on it,
+came back south past the Devil's Thumb on the 12th, and went to look for
+Tenudiakbeek.
+
+**27 July.** Off Saunderson's Tower, ten miles from a coast that seemed to end
+abruptly, with an opening of great size beyond it:
+
+> Eenoo was immediately called upon for his opinion. He accordingly went aloft,
+> and after a careful examination declared it to be as we had supposed. Correct
+> observations being made, the ship's latitude was determined to be 65° 1'.
+
+([[source:mdonald1841narrative]], p. 74.) Penny named it Hogarth's Sound, after
+William Hogarth of Aberdeen, who had been kind to Eenoolooapik. The name did not
+last: it was soon recognised as the Cumberland Sound John Davis had entered in
+1585 and nobody European had entered since, and it is [[place:Cumberland Sound]]
+on the chart today.
+
+**2 August.** They ran inside the entrance, signalling two Newcastle ships, the
+*Lady Jane* and the *Lord Gambier*, to follow. Eenoolooapik began naming the
+eastern shore as it came into view. Five days of continuous work in the ice
+barrier brought them into open water on **10 August** near a point they called
+Queen's Cape.
+
+**11 August.** They passed Keimooksook, Eenoolooapik's birthplace, and met four
+people on an ice stream, two of them his own cousins. M'Donald was struck that
+there was no greeting of any kind: they told him his mother was well, and that
+she had gone round to Keimooksook because she thought the ice would stop the ship
+short of Durban and he would be landed there. They told him the whales had been
+plentiful to the south the day before and would be plentiful in Kingoua. Then
+they asked to try his guns, and one of them hit his mark and was delighted. They
+advised him not to go back to Britain.
+
+At the village of Noodlook the whole population came aboard, and Eenoolooapik
+met Coonook, the adopted daughter of an old man named Aaniapik. He asked M'Donald
+to marry them at once "all the same as the Kudloonite"; M'Donald declined; he
+settled it directly with Aaniapik instead, for a green-painted canoe. Penny went
+forty miles up Kingoua with Aaniapik and Eenoolooapik as guides and found the
+place where a whale had been killed and cut up ten days earlier — not less than
+twenty tuns of blubber piled on the beach.
+
+The fishing that season was a failure. The whales had gone out with the ice.
+Eenoolooapik was landed near Keimooksook on 20 August among about sixty of his
+people; the *Bon Accord* worked the sound into September in company with the
+*Truelove* and others, lost two harpooned whales, had boats smashed on the rocks
+in a run of gales, and bore up for home on 22 September. She reached Aberdeen on
+[[artifact:whaling-001|11 October 1840]]. When they went back for news of
+Eenoolooapik he was inland hunting, and married.
+
+The chart he had drawn in Aberdeen was compared with the coast as surveyed and
+"found to bear a close resemblance". The one substantial error — that
+Tenudiakbeek opened out of Cumberland Strait — M'Donald says was not
+Eenoolooapik's at all, but came in when the sketch was fitted to the Admiralty's
+published chart.
+
+## What followed
+
+Everything on [[page:whaling-kekerten-and-the-shore-stations]] follows from this
+voyage. Within eleven years American whalers were wintering in Cumberland Sound;
+within seventeen there was a permanent station at [[place:Kekerten]]; within
+fifty the sound's bowheads were effectively gone and its people were living at
+the stations. Eenoolooapik piloted a ship into his own country and the ship
+brought the industry in behind it.
+
+He himself died of consumption in the summer of 1847, about twenty-seven years
+old — the disease he first showed signs of in that Aberdeen winter.
+[[person:Tookoolito]], who went to England in 1853, met Queen Victoria, and
+became Charles Francis Hall's interpreter and the best-documented Inuk of the
+century ([[topic:kane-hall-polaris]]), is recorded as his sister. M'Donald's
+narrative does not mention her, and the connection comes from later sources;
+it is generally accepted but it is not in the 1841 book.
+
+M'Donald's own end is worth setting beside it. Having written a sympathetic book
+about a young Inuk's mind and geography, he joined HMS *Terror* as assistant
+surgeon in 1845 and died somewhere on or near King William Island with the rest
+of the Franklin expedition ([[topic:franklin-1845]]). The Inuit who watched those
+men die were the neighbours of the people he had written about.
+
+## A note on reading the book
+
+M'Donald is affectionate, curious and often perceptive: he thought Eenoolooapik's
+gift for geography the strongest thing in his mind, and said so at length. He is
+also a Scot of 1841 writing about a man he calls a savage, and the last pages
+hope that a stay in Britain may "soften the remaining barbarity of his nature".
+Both things are in the same book. The geography in it is Eenoolooapik's; the
+frame around it is M'Donald's, and the frame has dated far worse than the
+geography.
+

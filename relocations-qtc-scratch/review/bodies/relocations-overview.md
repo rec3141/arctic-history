@@ -1,0 +1,127 @@
+Between 1950 and 1975 the Canadian government changed almost everything about
+how Inuit lived in the Qikiqtani region: where they camped, who fed them, who
+taught their children, who owned their dogs, and who decided whether a sick
+person went south on a ship. Most of the people who lived through it are still
+alive, and their communities are the ones the *Amundsen* calls at.
+
+In 2007 the Qikiqtani Inuit Association set up the **Qikiqtani Truth
+Commission** to find out what had happened. Over three years the QTC took
+statements from about 350 people in thirteen communities, set that testimony
+beside the departmental files and the RCMP's own reports, and published its
+findings in 2013: Commissioner Igloliorte's final report and twenty-two
+companion volumes — thirteen community histories and nine thematic reports and
+special studies. This topic follows the QTC's account, in the QTC's own terms.
+
+One boundary has to be marked at the outset. In the Commissioner's own words,
+"the QTC's mandate specifically excluded the High Arctic relocations and
+residential schools issues": the relocations had already been examined by the
+Royal Commission on Aboriginal Peoples, and the schools were before the Truth
+and Reconciliation Commission of Canada. The QTC's community histories for
+Ausuittuq and Qausuittuq tell the relocation story anyway, because it is their
+founding story, but the weight on the 1953-55 material here rests on
+[[source:rcap1994high|RCAP's 1994 report]] and the testimony given to it.
+
+## The words the Commission uses
+
+The QTC found that Inuit did not experience these years as a policy but as a
+series of things done to them by people they could not refuse. Four words carry
+most of the argument:
+
+- **ilira** — the deep, deferential fear of a person with power over you: a fear
+  that produces agreement without consent. The QTC uses it to explain why a
+  file can record a "volunteer" where a family remembers having no choice.
+- **qimmiit** — the dogs. Not pets and not equipment: the means of hunting,
+  travel, rescue and independence. When the dogs went, the ability to leave the
+  settlement went with them.
+- **ilagiit nunagivaktangit** — the places where extended families lived and
+  camped, the ordinary settlement pattern before centralization.
+- **saimaqatigiingniq** — "when past opponents get back together, meet in the
+  middle, are at peace." It is the Commission's name for what it was trying to
+  reach, and the title of its final report is *Achieving Saimaqatigiingniq*.
+
+## What happened
+
+**The High Arctic relocations.** In the summer of 1953 ten families — 54
+people, seven from [[place:Inukjuak]] in Nunavik and three from
+[[place:Mittimatalik]] — were carried north aboard the C. D. Howe and the
+d'Iberville and put ashore in two places more than 2,000 km from home:
+[[place:Qausuittuq]] on Cornwallis Island and Craig Harbour on Ellesmere
+Island, from which the camp moved to the [[place:Lindstrom Peninsula]] and
+eventually to [[place:Ausuittuq]]. Six more families followed in 1955. They had
+been promised game, and told they could come home. Neither promise was kept.
+See [[page:relocations-the-1953-and-1955-high-arctic-relocations]].
+
+**The qimmiit.** Between the late 1950s and the early 1970s the dog teams of
+Qikiqtaaluk were destroyed — shot by police and other officials, killed by
+distemper spread through the new settlements, and made unusable by the
+ordinances and the crowding of settlement life. The QTC did not find a written
+order to kill the dogs, and did not need one to find that Inuit lost them
+because of what governments did. See [[page:relocations-the-killing-of-the-qimmiit]].
+
+**Tuberculosis.** Through the 1950s the annual Eastern Arctic Patrol ship —
+the C. D. Howe, [[artifact:relocations-qtc-042]] — x-rayed whole communities at
+the ship's rail and took the positives south on the spot, sometimes without a
+word to the family on shore. By 1955 almost a thousand Inuit had been taken
+south, and in 1956, the QTC reckons, one Inuk in seven was in a hospital in
+southern Canada. Some were away for years; some never came back, and their
+families were not told where they were buried. See
+[[page:relocations-the-ships-that-took-people-south]].
+
+**Into the settlements.** Families that had lived in ilagiit nunagivaktangit
+were drawn into the settlements by the school, the nursing station, the family
+allowance and the housing programme, and by the loss of the dogs that made
+camp life possible. See [[page:relocations-moving-into-the-settlements]].
+
+## The reckoning
+
+The relocatees pressed their case from the late 1970s. The House of Commons
+Standing Committee on Aboriginal Affairs twice found their complaints
+substantiated; [[person:John Amagoalik]], then president of the Inuit Tapirisat
+of Canada, put it to the committee in March 1990. In 1993 the Royal Commission
+on Aboriginal Peoples heard the relocatees themselves, and in 1994
+published [[source:rcap1994high|*The High Arctic Relocation*]], which found the
+move had not been made with free and informed consent. In 1996 Canada signed a
+memorandum of agreement with the Makivik Corporation and paid \$10 million into
+a trust for the survivors — and refused to apologise.
+
+The apology came on 18 August 2010, at Inukjuak, and named the failures one by
+one: the families separated, the shelter and supplies not provided, the
+distance never explained, the promise of return not kept
+([[artifact:relocations-qtc-013]]). The QTC's own community histories, written
+from testimony given before that day, still record people waiting for it
+([[artifact:relocations-qtc-012]]). Two further apologies followed in 2019, for
+the handling of the tuberculosis epidemic and for the QTC's findings
+themselves.
+
+On 10 September 2010, three weeks after the apology, a boulder with a bronze
+plaque was unveiled at Ausuittuq beside a granite carving of a woman and child
+by [[person:Looty Pijamini]], one of two monuments Nunavut Tunngavik Inc. had
+commissioned in April 2008 ([[artifact:relocations-qtc-041]]); the companion
+figure of a man, carved by [[person:Simeonie Amagoalik]], had been unveiled at
+Qausuittuq two days earlier ([[artifact:relocations-qtc-051]]). The plaque's
+wording is worth reading beside the Commission's: it credits the relocatees
+with having "dedicated their lives to Canada's sovereignty in these lands and
+waters."
+
+The Commission asked for more than an apology. *Achieving Saimaqatigiingniq*
+sets out twenty-five recommendations, and the standard it sets is not that the
+record be corrected but that the relationship be repaired. See
+[[page:relocations-saimaqatigiingniq]].
+
+## Why it belongs on this ship
+
+Every community the *Amundsen* works out of in Qikiqtaaluk exists in its
+present form because of these years. Ausuittuq and Qausuittuq exist *only*
+because of them: they were made by an act of government in 1953, and the
+families put ashore at Qausuittuq are named one by one in
+[[artifact:relocations-qtc-016]]. When the ship takes on a community liaison
+at [[place:Mittimatalik]] or lands gear at [[place:Qausuittuq]], it is working
+with families who were split by a decision taken in Ottawa within living
+memory.
+
+The related topics are [[topic:posts-rcmp-missions]], on the police posts and
+missions that were the government's first presence here, and
+[[topic:st-roch-modern]], for [[person:Henry Larsen]], who commanded the
+St. Roch through the Northwest Passage and then, as Officer Commanding "G"
+Division, made the promise of return that Ottawa did not honour
+([[artifact:relocations-qtc-011]]).

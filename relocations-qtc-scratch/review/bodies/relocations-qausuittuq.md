@@ -1,0 +1,238 @@
+[[place:Qausuittuq]] means "the place with no dawn". The other Inuktitut name
+for it is Qarnartakuj, "the place of the ruins", after the whalebone mounds of a
+Thule site near the hamlet. Tuniit and Thule people lived on
+[[place:Cornwallis Island]] on and off from about 1500 BCE until roughly a
+thousand years ago, and then nobody did. No Inuit lived on or near the island
+when the Government of Canada put four families ashore there in September 1953.
+Everything else in this page follows from that.
+
+The people of Qausuittuq call themselves Qausuitturmiut. This page follows the
+Qikiqtani Truth Commission's community history of Resolute Bay
+([[artifact:relocations-qtc-054]]), which is the fullest account there is, with
+RCAP's 1994 report behind it where the relocation itself is concerned. The
+companion community, [[place:Ausuittuq]] (Grise Fiord), gets a paragraph at the
+end; the general story of the two relocations together is
+[[page:relocations-the-1953-and-1955-high-arctic-relocations]].
+
+## What was already there
+
+An RCAF air photograph of about 1950 shows the bay and Griffith Island as the
+government knew the place on paper ([[artifact:relocations-qtc-061]]). A joint
+Canadian and American weather station went up on the south shore of Cornwallis
+Island in 1947. It had been meant for Winter Harbour on Melville
+Island, and ice sent the ship to Resolute Bay instead: the bay usually clears in
+summer, so bulk cargo can be landed. An airstrip came with it, and in 1949 an
+RCAF base three kilometres from the strip. The field turned out to be one of the
+most useful in the North — usable all year, with a big paved apron — and it
+supplied Alert, Isachsen and Mould Bay. Atlas Aviation, the first air company
+headquartered in the Arctic islands, based itself there in 1962.
+
+So the relocatees were not landed in an empty place. They were landed eight
+kilometres from a military base that had not been told they were coming, and
+which informed Northern Affairs that it would not be housing, feeding, clothing
+or treating them. The base and the weather station were out of bounds to Inuit
+unless they worked there; the settlement was out of bounds to Qallunaat; women
+and children were in practice not to leave it. The RCMP constable was the
+channel between the two. [[person:David Kalluk]] told the Commission what that
+looked like from inside: "RCMP were the leaders back then. They seemed to be
+higher than any other bosses because they were very scary."
+
+The other thing already there was the game law. Inuit hunting had been
+restricted since the Northwest Game Act of 1917 and the Arctic Islands Game
+Preserve of 1926, and the relocatees, who had been recruited with promises of
+plentiful game, arrived to find they were inside a preserve.
+
+## September 1953
+
+Three families from [[place:Inukjuak]] and one from [[place:Mittimatalik]]
+(Pond Inlet) came ashore with their qimmiit and their possessions in early
+September 1953, with Constable [[person:Ross Gibson]] and the kit for a
+detachment and a small police store. No site had been picked. The only rule was
+that they must not settle too near RCAF property, so the village went up on the
+beach on the west side of Resolute Bay ([[artifact:relocations-qtc-055]]).
+
+The QTC names them all ([[artifact:relocations-qtc-016]]):
+[[person:Jaybeddie Amagoalik]] and Kanoinoo with Ekaksak, Merrari and Sippora,
+from Mittimatalik; [[person:Daniel Salluviniq]] and Sarah with
+[[person:Allie Salluviniq]], Louisa and Jeannie; [[person:Simeonie Amagoalik]]
+and Sarah with [[person:Paul Amagoalik]], who had been born on the ship, his
+brother Jaybeddie and his grandmother Nellie; and [[person:Alex Patsauq]] and
+[[person:Edith Patsauq]] with [[person:Markoosie Patsauq]], Johnny, Jimmy and
+Lizzie. The Mittimatalik family was included because Ottawa thought they could
+teach the others a northern country.
+
+Inukjuak is 2,250 km from Resolute — Toronto to Miami. Mittimatalik is 566 km
+away. The families had come from a place with wood, a school, a church, a
+trading post and a doctor once a year; they arrived in September, when the
+walrus had already gone, the few caribou were protected, and the fish in the
+lakes were full of parasites ([[artifact:relocations-qtc-014]]).
+Then the sun went down. [[person:Dora Pudluk]]: "I found it scary . . . the dark
+season frightened me. I came here when it was cold and dark. There wasn't really
+a real home and it was starting to get dark at that time."
+
+Nobody had told either group about the other, and their dialects were far apart
+enough that the Tununirmiut took the Itivimiut to be speaking English
+([[artifact:relocations-qtc-046]]). The Mittimatalik families had been told the
+Inukjuak people were poor and living on relief, and expected to be paid for
+teaching them; no payment came.
+
+Gibson reported shortages of more than a thousand dollars' worth of goods, tents
+in very poor condition, no boat but two one-man kayaks, no storage and no store,
+and had to beg accommodation and cartage off the RCAF. Ottawa's answer came
+from [[person:James Cantley]], an advisor for the relocation experiment
+([[artifact:relocations-qtc-049]]): the families had been living in those
+tents before, so conditions could not be worse than what they had left.
+
+In the first spring the community asked to go home. They were told there was
+nothing to be done, and that if they were lonely, perhaps their relatives could
+be persuaded to come too ([[artifact:relocations-qtc-015]]).
+
+## 1955, and the years of building
+
+In 1955 thirty-four more people were landed: [[person:Johnnie Echalook]]'s large
+household, [[person:Levi Nungak]] and his wife Alici — [[person:Alacee Nungaq]] in Library
+and Archives Canada's caption — with their four children, [[person:Joseph Idlout]]'s family from Mittimatalik and
+[[person:Horatio Kudloo]]'s. [[person:Markoosie Patsauq]], twelve years old,
+described the arrival at the monument unveiling half a century later: "we had
+arrived in a dead land . . . We were blind hunters"
+([[artifact:relocations-qtc-057]]).
+
+Materials for three houses came in 1955, late and damaged, with most of the food
+spoiled. What could be salvaged became a store, a warehouse and a school the
+following year. Everything else the community built itself out of the base and
+weather-station dumps: a hall in the first autumn that served as workshop, drying
+room, church and dark-season classroom; eleven houses along the beach by 1957,
+each with a single electric light run from the base; fourteen by 1960; eighteen
+by 1964. Gar Lunney photographed the Nungak household outside in March 1956 —
+Alici in an amauti with three of her children, the scrap-built houses behind
+her ([[artifact:relocations-qtc-045]]). [[person:Martha Flaherty]] told RCAP
+what the same years felt like:
+"I remember the men being out for months . . . We were completely cut off from
+the world for the first three or four years."
+
+Not everyone stayed on the beach. Between 1955 and 1960 three or four families
+lived at [[place:Kuvinajuq]], an ilagiit nunagivaktangat on Somerset Island,
+some 300 km south across Barrow Strait, in old caribou country
+([[artifact:relocations-qtc-056]]). It is the only camp away from the beach the
+community history names, and nothing records its closing; it simply falls out
+of the record after 1960, once there were houses, wages and a co-operative at
+Resolute.
+
+Wage work was the difference between Qausuittuq and every other community in
+Qikiqtaaluk. There was no Hudson's Bay post — the police constable was the
+trader — but there was a base. Four men had permanent jobs in 1960, nine by
+1963; most others got seasonal work loading aircraft, and later with the Polar
+Continental Shelf Project. Men were often paid in credits at the police store
+rather than in money, and many say they worked without being paid at all. That
+ended when the co-op was founded in November 1960. The base also brought
+alcohol: [[person:Martha Idlout]] remembered that before the canteen was
+restricted in 1961 "the whole town would be drunk for a whole week" when a
+shipment came in.
+
+Medicine came once a year on the C. D. Howe, which x-rayed everyone and decided
+who would be taken south ([[page:relocations-the-ships-that-took-people-south]]).
+In the first two years, [[person:John Amagoalik]] remembered, about five or six
+adults and some children were taken aboard and sent south — among them his
+mother and an older brother; his younger brother Jimmy was away two years, and
+he was himself treated for two years at the Charles Camsell Hospital in Edmonton
+([[artifact:relocations-qtc-053]]). Twenty-two people had been landed in 1953,
+so that was a large fraction of the community. In 1957 the ship arrived with
+measles aboard, put the infected passengers ashore near the settlement, and
+infected it.
+
+## The qimmiit
+
+The count tells it. In 1958 there were more than a hundred qimmiit at Qausuittuq
+and four motor boats. By 1964 there were eighty qimmiit — seven of them lost to
+rabies — fifteen motor boats and eleven snowmobiles. By 1966 the anthropologist
+[[person:David Damas]] counted only one full-time hunter in the community,
+though most of the men in wage work still hunted for food when they were not
+working.
+
+Resolute was built as an Inuit settlement, and no allowance was made for the fact
+that hunting from a settlement means dogs in the settlement. The Ordinance
+Respecting Dogs required qimmiit to be tied at all times. In 1959 the RCMP
+reported that many were loose and that the Ordinance would have to be enforced,
+without saying how; as the QTC observes, there was only one way to enforce it,
+since a working team cannot be chained or muzzled. [[person:Dora Pudluk]] told
+the Commission what enforcement was ([[artifact:relocations-qtc-047]]): her
+husband's team shot because some were loose, and her own puppies, tied up, shot
+with them and hung in the garbage while the men laughed. The wider pattern is
+[[page:relocations-the-killing-of-the-qimmiit]].
+
+## 1975, and after
+
+By the early 1970s Resolute was three places: the Inuit settlement, the airport,
+and South Camp between them, where the contractors, the Bay store and the school
+were. Drifting snow, the airport approach and a wish to join the three led to a
+plan for a new town; [[person:Ralph Erskine]] designed a community for seven
+hundred behind a wall of apartment blocks, of which about one building was ever
+built. In the summer of 1975 every useful building except those in the airport
+area was hauled roughly three kilometres from the west shore of the bay to the
+east. The old site was left with the cemetery and a few unusable buildings.
+[[person:Saroomie Manik]] told the Commission she was sorry they
+moved: the new town sits back from the water, so you cannot watch for animals
+from the houses and gear has to be dragged overland to the boats
+([[artifact:relocations-qtc-052]]).
+
+The community that the government made turned out to be a political one. It sent
+[[person:Ludy Pudluk]] to the Legislative Assembly of the Northwest Territories
+for nearly twenty years; [[person:John Amagoalik]] went from here into the work
+that produced Nunavut; [[person:Simeonie Amagoalik]] spoke for the community
+against the seismic testing and mining near Resolute, and the political
+engagement of Qausuitturmiut and of Inuit organizations delayed the opening of
+Cominco's Avarik (Polaris) mine until 1980. In 1974 [[person:Simeonie
+Amarualik]], [[person:Walter Audla]] and
+[[person:Peter Paniloo]] wrote to the minister, pointing out that a government
+which had moved them here to hunt was now approving work that would drive the
+caribou away, and setting down their own account of themselves
+([[artifact:relocations-qtc-048]]): "we became a part of the community there.
+Now Resolute Bay is our home and we do not want to leave it."
+
+Canada paid for those who wanted to go back in 1988, and signed the $10 million
+Memorandum of Agreement with Makivik in 1996 while refusing to apologise. The
+apology came at Inukjuak on 18 August 2010 ([[artifact:relocations-qtc-013]]).
+Three weeks later, on 8 September, [[person:Simeonie Amagoalik]] — landed here as
+a boy in 1953 — unveiled the stone man he had carved for the community
+([[artifact:relocations-qtc-051]]). Its plaque reads: "They came to these
+desolate shores to pursue the government promise of a more prosperous life. They
+endured and overcame great hardship, and dedicated their lives to Canada's
+sovereignty in these lands and waters."
+
+## Ausuittuq, the other half
+
+The families who were not landed here were put ashore at
+[[place:Craig Harbour]] on 29 August 1953 and moved shortly after to the
+[[place:Lindstrom Peninsula]], and from there in 1961 to
+[[place:Ausuittuq]] (Grise Fiord), Canada's northernmost civilian community. The
+separation itself — the announcement on the deck of the C. D. Howe that half of
+them would get off here — is [[artifact:relocations-qtc-001]]. Their first years
+are in the same register as these: the flashlight passed from shelter to shelter
+so people could eat ([[artifact:relocations-qtc-002]]), one caribou a year and a
+$5,000 fine for a muskox ([[artifact:relocations-qtc-003]]), the dark
+([[artifact:relocations-qtc-004]]), flour and water for a baby
+([[artifact:relocations-qtc-005]]). [[person:Larry Audlaluk]], taken north as an
+infant, has been the community's voice on it for decades
+([[artifact:relocations-qtc-007]]). [[person:Looty Pijamini]]'s granite woman and
+child stands there ([[artifact:relocations-qtc-041]]), facing the man at
+Qausuittuq across a thousand kilometres.
+
+## For the ship
+
+The *Amundsen* works out of and around this place. Resolute is the transport and
+logistics centre for the High Arctic and the home of the Polar Continental Shelf
+Program base that outfits much of the field science done in these islands —
+which is to say that the scientific station and the relocated community are the
+same settlement, and have been since 1953. The base at Resolute was one reason
+the site was chosen, and PCSP work was already one of the community's employers
+by 1963. What that relationship looks like from the station's side is
+[[page:the-station-and-the-settlement]] in [[topic:science-stations]].
+
+Two practical points. First, the people named in this page are not distant: the
+1953 and 1955 relocatees include people still living, and their children run the
+hamlet, the co-op and the outfitting. Second, the old village site and the
+cemetery on the west shore of the bay are three kilometres from the present
+town and are not marked on most charts.
+
+Related: [[topic:posts-rcmp-missions]], [[topic:sverdrup-bernier-peary]],
+[[topic:inuit-oral-history]], [[page:relocations-overview]].

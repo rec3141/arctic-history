@@ -1,0 +1,108 @@
+# The North Magnetic Pole, 1 June 1831
+[page · ross-victory · draft]
+
+At eight in the morning on 1 June 1831, six men walked onto a low limestone shore on the west
+side of [[place:Boothia Peninsula]] where the dipping needle stood at 89 degrees 59 minutes —
+one minute from vertical — and no horizontal compass would move at all. It is the first time
+anyone stood on a magnetic pole of the Earth. Of everything in this topic, it is the piece
+that still bears directly on work being done from a ship today.
+
+## Why anyone cared
+
+A compass does not point north. It points along the horizontal component of the Earth's
+magnetic field, and the difference between that and true north — the variation — changes with
+place and with time. For a navigator in high latitudes it changes fast and becomes enormous,
+and near the magnetic pole the horizontal component vanishes and the compass stops working
+altogether. The *Victory*'s own compasses "ceased to traverse" whenever the ship had way on
+her, from Prince Regent Inlet onward.
+
+By the 1820s the variation had been mapped across the world's oceans well enough for
+Professor Peter Barlow to draw the lines of equal variation converging on a point in the
+Canadian Arctic that nobody had visited. Fixing that point by observation was a first-rank
+scientific object, and it is why the Admiralty's own committee later concluded that this
+expedition, whatever else, had performed a great public service.
+
+## The journey
+
+[[person:James Clark Ross]] had come within about ten miles of the calculated place in 1830
+while surveying west, without the instruments to do anything about it, and spent the winter of
+1830-31 at [[place:Sheriff's Harbour]] taking magnetic observations that gave him a better
+position and a dip already above 89 degrees.
+
+He left the ship at [[place:Victoria Harbour]] on 27 May 1831 with a party of six, John Ross
+in company as far as the western sea. The
+[[artifact:ross-victory-002|track of that journey]] is unusually well fixed, because he
+printed his observed latitude and longitude at every halt:
+
+| date | position | dip |
+| --- | --- | --- |
+| 28 May, 8 a.m. | 69° 34′ 45″ N, 94° 54′ 23″ W | 89° 41′ |
+| 29 May | 69° 40′ 27″ N, 95° 22′ 35″ W | |
+| 30 May, 8 a.m. | 69° 46′ 25″ N, 95° 49′ 11″ W | |
+| 1 June, 8 a.m. | 70° 05′ 17″ N, 96° 46′ 45″ W | 89° 59′ |
+
+Four of the party were snow-blind on the second day. On 31 May, fourteen miles short, they
+left most of their baggage and provisions behind and made a rapid march.
+
+## The place
+
+[[artifact:ross-victory-029|"Nature had here erected no monument to denote the spot"]]. The
+land was low near the coast and rose to ridges of fifty or sixty feet about a mile inland.
+There were Inuit snow houses on it, not long abandoned; the party moved into them, and camped
+half a mile west. Ross was drily aware of the comedy: nobody had expected a mountain of iron,
+but they had hoped for something.
+
+The observations ran through that day and most of the next. Then
+[[artifact:ross-victory-027|"we fixed the British flag on the spot, and took possession of the
+North Magnetic Pole and its adjoining territory, in the name of Great Britain and King William
+the Fourth"]], and built a limestone cairn over a canister holding a record. Neither cairn nor
+canister has ever been found. The flag was laid before the King at Windsor on 20 October 1833,
+and the pole was named after him.
+
+The scientific paper went to the Royal Society; the details are in the
+[[artifact:ross-victory-011|appendix volume]], not the narrative. Gratifyingly, the place
+Ross had reached was within a few miles of where Barlow's curves said it should be.
+
+## The honest sentence
+
+The part of this that deserves to be read out in a wardroom is what James Clark Ross wrote
+next. He had every incentive to leave the flag-planting as the last word. Instead:
+
+> as far as our instruments can be trusted, we had placed ourselves within one minute of the
+> magnetic pole, but had not fixed on the precise spot... if popular conversation gives to
+> this voyage the credit of having placed its flag on the very point, on the summit of that
+> mysterious pole which it perhaps views as a visible and tangible reality, it can now correct
+> itself as it may please.
+
+He goes on to say what a real determination would need: several observers, at different
+distances and in different directions from the calculated place, working together. That is
+precisely the method by which the magnetic pole is tracked now.
+([[artifact:ross-victory-028|the passage]])
+
+## Where the pole is now
+
+It has not stayed. From James Clark Ross's 1831 position on the west coast of Boothia the
+north magnetic pole has travelled well over a thousand kilometres to the north-north-west,
+out of the Canadian Arctic islands and across the Arctic Ocean toward Siberia, and it has
+been moving faster over the last few decades than at any time in the record. The 1831 fix is
+the anchor point of that whole track: everything since is measured back to a party of six men
+with a dip circle and a limestone cairn.
+
+That is also why the position matters to a ship working here. The magnetic declination in the
+Canadian Arctic Archipelago is large, changes quickly, and is the reason no one navigates
+these channels by magnetic compass. The World Magnetic Model that a modern instrument corrects
+against is the descendant of the observations James Clark Ross made in a snow house on
+1 June 1831.
+
+## A note on the other Ross
+
+John Ross published the discovery in his own book and, in a passage that has been held against
+him ever since, took some pains to say that it belonged to the ship and to the man who paid
+for her: "it was the ship Victory, under the command of Captain John Ross, which assigned the
+north-west Magnetic Pole, in the year 1831, and that this vessel was fitted out by him whom I
+can now call Sir [[person:Felix Booth]]". Before the Commons committee in 1834 the two Rosses
+disagreed openly about who had commanded the expedition at all —
+[[person:Robert Huish]] reprints the exchange with relish
+([[page:the-isabella-and-after]]). The needle was James Clark Ross's; the four winters that
+put it there were both of theirs.
+

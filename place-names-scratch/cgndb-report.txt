@@ -1,0 +1,590 @@
+== Admiralty Inlet
+   db: 72.5000 -86.0000  hist='Admiralty Inlet' iu='Tununiq' topic=place-names
+   CGNDB OAAKF official BAY 72.5000 -86.0000 decision=1951-03-07 dist 0 km
+== Alexander Island
+   db: 75.8667 -102.6167  hist='' iu='' topic=place-names
+   note claims decision: 1 February 1962
+   CGNDB OAAQZ official ISL 75.8667 -102.6167 decision=1962-02-01 dist 0 km
+   CGNDB FACGQ official ISL 46.9763 -80.0950 decision=1950-11-03 dist 3264 km
+   CGNDB IAQGU official ISL 57.1472 -111.6142 decision=1950-06-02 dist 2092 km
+   CGNDB HABLF official ISL 55.4167 -105.9838 decision=1958-06-05 dist 2272 km
+== Amadjuak Lake
+   db: 64.9167 -71.1333  hist='' iu='Amaqdjuaq' topic=place-names
+   CGNDB OAATO official LAKE 64.9167 -71.1333 decision=1945-09-28 dist 0 km
+== Amund Ringnes Island
+   db: 78.3300 -96.4200  hist="Amund Ringnes's Land (Sverdrup, 1901)" iu='' topic=sverdrup-bernier-peary
+   CGNDB OAAVU official ISL 78.3333 -96.4167 decision=1910-12-31 dist 0 km
+== Archer Fiord
+   db: 81.3000 -73.0000  hist='' iu='' topic=place-names
+   CGNDB OABBI official BAY 81.4167 -67.0000 decision=1910-12-31 dist 102 km
+== Assistance Bay
+   db: 74.6700 -94.5500  hist='Assistance Harbour' iu='' topic=franklin-search
+   CGNDB OABFD official BAY 74.6500 -94.3000 decision=1952-09-04 dist 8 km
+== Austin Channel
+   db: 75.4333 -103.2667  hist='' iu='' topic=place-names
+   note claims decision: 31 May 1982
+   CGNDB OABIR official CHAN 75.4333 -103.2667 decision=1982-05-31 dist 0 km
+== Ausuittuq
+   db: 76.4183 -82.9033  hist='Grise Fiord' iu='Ausuittuq' topic=posts-rcmp-missions
+   CGNDB: no exact-name match; got: []
+== Axel Heiberg Island
+   db: 79.4000 -90.8000  hist='Heiberg Land; Axel Heibergs Land (Sverdrup, 1900)' iu='' topic=sverdrup-bernier-peary
+   CGNDB OABKA official ISL 79.7500 -91.0000 decision=1939-12-12 dist 39 km
+== Baillie-Hamilton Island
+   db: 75.8667 -94.5833  hist='Baillie-Hamilton Island' iu='' topic=place-names
+   note claims decision: 10 March 1953
+   CGNDB OABNA official ISL 75.8667 -94.5833 decision=1953-03-10 dist 0 km
+== Ballantyne Strait
+   db: 77.5841 -115.1032  hist='' iu='' topic=place-names
+   note claims decision: 31 May 1982
+   CGNDB LACAC official CHAN 77.5841 -115.1032 decision=1982-05-31 dist 0 km
+== Barbeau Peak
+   db: 81.9083 -75.0250  hist='' iu='' topic=operation-hazen-1957
+   CGNDB OABPE official MTN 81.9083 -75.0250 decision=1969-10-14 dist 0 km
+== Barrow Strait
+   db: 74.4000 -95.0000  hist='Barrow Strait' iu='' topic=franklin-search
+   CGNDB OABRK official CHAN 74.4000 -94.1667 decision=1952-09-04 dist 25 km
+== Bathurst Island
+   db: 75.7700 -99.5000  hist='Bathurst Island (Parry, 1819)' iu='' topic=mcclure-investigator
+   CGNDB OABTF official ISL 75.7500 -100.0000 decision=1910-06-30 dist 14 km
+== Beechey Island
+   db: 74.7139 -91.8472  hist='Beechey Island' iu='Iluvilik' topic=franklin-1845
+   CGNDB OABWW official ISL 74.7167 -91.8500 decision=1952-09-04 dist 0 km
+== Belcher Channel
+   db: 77.2500 -95.0000  hist='' iu='' topic=place-names
+   note claims decision: 31 December 1910
+   CGNDB OABXK official CHAN 77.2500 -95.0000 decision=1910-12-31 dist 0 km
+== Bellot Strait
+   db: 71.9900 -94.5500  hist='Bellot Strait' iu='' topic=franklin-search
+   CGNDB OABYJ official CHAN 71.9931 -94.8056 decision=1982-05-31 dist 9 km
+== Boothia Peninsula
+   db: 70.5000 -94.5000  hist='Boothia Felix' iu='Kitikmeot region; the Netsilik country' topic=ross-victory
+   CGNDB OACLL official CAPE 71.0000 -94.0000 decision=1961-07-05 dist 59 km
+== Borden Island
+   db: 78.4319 -109.6694  hist='Borden Island' iu='' topic=karluk-cae
+   CGNDB OAUGW official ISL 78.4319 -109.6694 decision=1982-06-01 dist 0 km
+   CGNDB LADKT official ISL 78.4319 -109.6694 decision=1982-06-01 dist 0 km
+   CGNDB FAKOQ official ISL 48.5156 -88.3556 decision=1954-09-02 dist 3354 km
+== Brock Island
+   db: 77.8675 -114.3200  hist='Brock Island' iu='' topic=karluk-cae
+   CGNDB LADSM official ISL 77.8675 -114.3199 decision=1950-06-02 dist 0 km
+   CGNDB FALUH official ISL 44.5691 -78.0854 decision=1956-01-19 dist 3792 km
+   CGNDB FALUG official ISL 45.9497 -80.8992 decision=1950-10-05 dist 3628 km
+   CGNDB FALUF previouslyOfficial ISL 44.3167 -76.1000 decision=1964-11-13 dist 3829 km
+== Browne Island
+   db: 74.8167 -96.3500  hist='' iu='' topic=place-names
+   note claims decision: 30 June 1910
+   CGNDB OACSX official ISL 74.8167 -96.3500 decision=1910-06-30 dist 0 km
+== CFS Alert
+   db: 82.5018 -62.3481  hist='Alert' iu='' topic=nares-greely
+   CGNDB: no exact-name match; got: []
+== Cameron Island
+   db: 76.5000 -103.8333  hist='' iu='' topic=place-names
+   note claims decision: 6 June 1952
+   CGNDB OADAR official ISL 76.5000 -103.8333 decision=1952-06-06 dist 0 km
+   CGNDB FANZM official ISL 45.1675 -79.7170 decision=1951-01-17 dist 3534 km
+   CGNDB CAFTT official ISL 45.8143 -61.0146 decision=1951-05-03 dist 3582 km
+   CGNDB HAASB official ISL 56.8334 -102.4337 decision=1958-06-05 dist 2183 km
+== Cape Dyer
+   db: 66.6644 -61.3558  hist="Dyer's Cape" iu='' topic=wrecks-disasters
+   CGNDB OAEUA official CAPE 66.6167 -61.2667 decision=1926-05-04 dist 7 km
+   CGNDB OADDD official UNP 66.6667 -61.3667 decision=1967-07-31 dist 1 km
+== Cape Mercy
+   db: 64.8700 -63.4700  hist='Cape Mercy' iu='' topic=franklin-search
+   CGNDB OAKSR official CAPE 64.8833 -63.5333 decision=1910-12-31 dist 3 km
+== Cape Walsingham
+   db: 66.0333 -61.9667  hist='Cape Walsingham' iu='' topic=place-names
+   CGNDB OARPE official CAPE 66.0333 -61.9667 decision=1910-06-30 dist 0 km
+== Cape Wolstenholme
+   db: 62.5500 -77.5000  hist='' iu='' topic=davis-baffin-hudson
+   CGNDB: no exact-name match; got: [('Cap Wolstenholme', 62.5805556, -77.5097222)]
+== Chesterfield Inlet
+   NO PLACE ROW IN DB
+   CGNDB OADJS official HAM 63.3389 -90.7014 decision=1980-04-01
+   CGNDB OADJR official BAY 63.7167 -92.0000 decision=1980-04-09
+== Coats Island
+   db: 62.5000 -83.0000  hist='Coats Island' iu='' topic=place-names
+   CGNDB OADOY official ISL 62.5000 -83.0000 decision=1910-12-31 dist 0 km
+== Cobourg Island
+   db: 75.9167 -79.4167  hist='' iu='Qurvik' topic=rcmp-high-arctic-patrols
+   CGNDB: no exact-name match; got: []
+== Cornwallis Island
+   db: 75.2000 -94.9000  hist='Cornwallis Island' iu='' topic=relocations-qtc
+   CGNDB OADUY official ISL 75.1333 -95.0000 decision=1905-12-05 dist 8 km
+== Countess of Warwick's Sound
+   db: 62.8200 -65.4500  hist="Countess of Warwick's Sound" iu='Tikkoon area, Frobisher Bay' topic=frobisher
+   CGNDB: no exact-name match; got: []
+== Craig Harbour
+   db: 76.2070 -81.0000  hist='Craig Harbour' iu='' topic=posts-rcmp-missions
+   CGNDB OADXD official UNP 76.2069 -81.0000 decision=1980-03-13 dist 0 km
+== Crozier Channel
+   db: 75.9173 -119.0032  hist='' iu='' topic=place-names
+   note claims decision: 31 December 1910
+   CGNDB LAFSU official CHAN 75.9173 -119.0032 decision=1910-12-31 dist 0 km
+   CGNDB LAFSV official CHAN 76.1673 -118.5032 decision=1949-03-03 dist 31 km
+== Cumberland Sound
+   db: 65.3000 -65.6000  hist='Cumberland Gulf' iu='Kangiqtualuk' topic=davis-baffin-hudson
+   CGNDB OAEAQ official CHAN 65.3333 -66.0167 decision=1945-09-28 dist 20 km
+== Danish Strait
+   db: 78.0333 -101.7500  hist='' iu='' topic=place-names
+   note claims decision: 9 June 1982
+   CGNDB OAEDD official CHAN 78.0333 -101.7500 decision=1982-06-09 dist 0 km
+== Dealy Island
+   db: 74.9500 -108.7333  hist='Dealy Island' iu='' topic=franklin-search
+   CGNDB OAEEW official ISL 74.9500 -108.7333 decision=1950-12-07 dist 0 km
+== Devon Island
+   db: 75.4000 -85.0000  hist='North Devon (Parry, 1819)' iu='Tallurutit' topic=cook-1908-axel-heiberg
+   CGNDB OAEJB official ISL 75.2500 -88.0000 decision=1982-06-09 dist 86 km
+== Digges Islands
+   db: 62.5800 -77.8300  hist='Isles of Digges' iu='' topic=davis-baffin-hudson
+   CGNDB OAEKK official ISL 62.5833 -77.8333 decision=1945-11-13 dist 0 km
+== Discovery Harbour
+   db: 81.7000 -65.3333  hist='Discovery Harbour' iu='' topic=nares-greely
+   CGNDB OAEKY official BAY 81.7000 -65.3333 decision=1910-12-31 dist 0 km
+== Dundas Harbour
+   db: 74.5333 -82.3833  hist='Dundas Harbour' iu='' topic=relocations-qtc
+   CGNDB OAERW official UNP 74.5333 -82.3833 decision=1952-11-06 dist 0 km
+   CGNDB OAERV official BAY 74.5500 -82.5000 decision=1910-12-31 dist 4 km
+== Dundas Island
+   db: 76.0833 -94.9667  hist='' iu='' topic=place-names
+   note claims decision: 31 December 1910
+   CGNDB JCTDN official ISL 54.5631 -130.8728 decision=1948-11-04 dist 2574 km
+   CGNDB OAERZ official ISL 76.0833 -94.9667 decision=1910-12-31 dist 0 km
+   CGNDB OAERX official ISL 69.3333 -94.2833 decision=1967-08-24 dist 749 km
+== Eclipse Sound
+   db: 72.6331 -78.6119  hist='Eclipse Sound' iu='' topic=place-names
+   CGNDB OAEWR previouslyOfficial CHAN 72.6331 -78.6119 decision=2007-03-14 dist 0 km
+== Ellef Ringnes Island
+   db: 78.5000 -102.5000  hist="Ellef Ringnes's Land (Sverdrup, 1901)" iu='' topic=sverdrup-bernier-peary
+   CGNDB OAFCD official ISL 78.5000 -102.2500 decision=1982-06-09 dist 6 km
+== Ellesmere Island
+   db: 79.8000 -78.0000  hist='Ellesmere Island' iu='Umingmak Nuna' topic=relocations-qtc
+   CGNDB OAFCH official ISL 79.8333 -78.0000 decision=1982-06-09 dist 4 km
+== Etah
+   db: 78.3170 -72.6330  hist='Etah' iu='Iita' topic=kane-hall-polaris
+   CGNDB: no exact-name match; got: []
+== Exeter Sound
+   db: 66.7000 -61.3000  hist='Exeter Sound' iu='' topic=davis-baffin-hudson
+   CGNDB OAFKH official CHAN 66.2333 -62.0500 decision=1945-06-21 dist 61 km
+== Exmouth Island
+   db: 77.2167 -95.9000  hist='' iu='' topic=place-names
+   note claims decision: 31 December 1910
+   CGNDB OAFKJ official ISL 77.2167 -95.9000 decision=1910-12-31 dist 0 km
+== Felix Harbour
+   db: 69.9800 -92.0300  hist='Felix Harbour' iu='' topic=ross-victory
+   CGNDB OAFNZ official BAY 69.9861 -92.0667 decision=1980-04-15 dist 2 km
+== Fitzwilliam Strait
+   db: 76.4174 -116.1697  hist='' iu='' topic=place-names
+   note claims decision: 3 March 1949
+   CGNDB LAIEX official CHAN 76.4174 -116.1697 decision=1949-03-03 dist 0 km
+== Fosheim Peninsula
+   db: 79.6667 -83.7500  hist='' iu='' topic=place-names
+   note claims decision: 9 June 1982
+   CGNDB OAFVQ official CAPE 79.6667 -83.7500 decision=1982-06-09 dist 0 km
+== Foulke Fiord
+   db: 78.3000 -72.7000  hist='Foulke Fiord' iu='' topic=crocker-land-1913
+   CGNDB: no exact-name match; got: []
+== Fury and Hecla Strait
+   db: 69.9300 -84.5000  hist='Strait of the Fury and Hecla' iu='' topic=ross-parry
+   CGNDB OAGCC official CHAN 69.8333 -83.0000 decision=1910-06-30 dist 58 km
+== Garrett Island
+   db: 74.7500 -98.2500  hist='' iu='' topic=place-names
+   note claims decision: 31 December 1910
+   CGNDB OAGDN official ISL 74.7500 -98.2500 decision=1910-12-31 dist 0 km
+   CGNDB FBGRU previouslyOfficial ISL 44.3610 -76.0111 decision=1966-10-05 dist 3435 km
+== Griffith Island
+   db: 74.5800 -95.5000  hist='Griffith Island' iu='' topic=franklin-search
+   CGNDB OAGPF official ISL 74.5833 -95.5000 decision=1952-09-04 dist 0 km
+   CGNDB FBKEV official ISL 44.8432 -80.9075 decision=1946-06-21 dist 3329 km
+   CGNDB FBKET official ISL 45.9731 -82.9013 decision=1976-01-07 dist 3197 km
+   CGNDB JAFXU official ISL 59.3025 -133.8375 decision=1951-10-04 dist 2039 km
+== Hazen Camp
+   db: 81.8167 -71.3000  hist='Hazen Camp, Operation Hazen base' iu='' topic=operation-hazen-1957
+   CGNDB OAHAT official UNP 81.8167 -71.3333 decision=1960-03-03 dist 1 km
+== Herbert Island
+   db: 77.4167 -70.0000  hist='Herbert Island' iu='Qeqertarsuaq' topic=greenland-inughuit
+   CGNDB OAHDL official ISL 76.8167 -96.7500 decision=1959-04-03 dist 650 km
+   CGNDB FBNFX official ISL 46.1353 -83.2725 decision=1939-12-12 dist 3487 km
+   CGNDB JBWHS official ISL 50.9400 -127.6328 decision=1947-05-06 dist 3253 km
+   CGNDB HAQCA official ISL 55.6640 -103.4026 decision=1956-01-19 dist 2546 km
+== Hudson Strait
+   db: 61.5000 -70.5000  hist='Fretum Hudson; the Furious Overfall' iu='Tasiujarjuaq' topic=davis-baffin-hudson
+   CGNDB OAHKY official CHAN 62.0000 -70.0000 decision=1982-01-18 dist 61 km
+== Iglulik
+   db: 69.3770 -81.7990  hist='Igloolik' iu='Iglulik' topic=ross-parry
+   CGNDB LCBDQ official CAPE 71.4371 -116.0747 decision=2006-04-01 dist 1359 km
+   CGNDB OEBTW official ISL 66.9852 -84.7077 decision=2013-04-25 dist 289 km
+   CGNDB OATYX official CAMP 69.3444 -81.4897 decision=2009-12-11 dist 13 km
+== Ikpiarjuk
+   db: 73.0355 -85.0203  hist='Arctic Bay' iu='Ikpiarjuk' topic=relocations-qtc
+   CGNDB OEBFE official BAY 69.3751 -81.7393 decision=2009-12-11 dist 420 km
+   CGNDB OBAVE official CAMP 72.6389 -76.6383 decision=2010-03-12 dist 275 km
+== Ile Vanier
+   db: 76.1667 -103.2500  hist='' iu='' topic=place-names
+   CGNDB OARJL official ISL 76.1667 -103.2500 decision=1962-02-01 dist 0 km
+== Ilulissat
+   db: 69.2198 -51.0986  hist='Jakobshavn' iu='Ilulissat' topic=place-names
+   CGNDB: no exact-name match; got: []
+== Iqaluit
+   db: 63.7467 -68.5170  hist='Frobisher Bay' iu='Iqaluit' topic=relocations-qtc
+   CGNDB OATRP official CITY 63.7500 -68.5167 decision=2001-04-19 dist 0 km
+   CGNDB OATZG official BAY 69.9297 -81.7694 decision=2009-12-11 dist 946 km
+   CGNDB OEAIF official RIV 71.9562 -79.1373 decision=2007-03-14 dist 1050 km
+   CGNDB OEAII official CAPE 71.9775 -79.2077 decision=2007-03-14 dist 1054 km
+== Johan Peninsula
+   db: 78.7000 -75.5000  hist='' iu='' topic=place-names
+   note claims decision: 30 June 1910
+   CGNDB OAIIE official CAPE 78.7000 -75.5000 decision=1910-06-30 dist 0 km
+== Jones Sound
+   db: 76.0000 -83.0000  hist='Alderman Jones his Sound' iu='' topic=davis-baffin-hudson
+   CGNDB OAIJZ official CHAN 76.0000 -86.0000 decision=1910-06-30 dist 81 km
+== Judge Daly Promontory
+   db: 81.2500 -67.0000  hist='' iu='' topic=place-names
+   note claims decision: 31 December 1910
+   CGNDB OAIKX official CAPE 81.2500 -67.0000 decision=1910-12-31 dist 0 km
+== Kane Basin
+   db: 79.5000 -69.0000  hist='Kane Sea' iu='' topic=nares-greely
+   CGNDB OAINK official CHAN 79.0750 -73.0861 decision=1910-06-30 dist 95 km
+== Kangiqtugaapik
+   db: 70.4720 -68.5914  hist='Clyde River' iu='Kangiqtugaapik' topic=relocations-qtc
+   CGNDB OEAWJ official BAY 70.2435 -68.9603 decision=2007-03-14 dist 29 km
+   CGNDB OEAQV official BAY 69.1156 -68.9999 decision=2012-01-19 dist 151 km
+== Kekerten
+   db: 65.7000 -65.8170  hist='Kekerten' iu='Qikiqtat' topic=posts-rcmp-missions
+   CGNDB OAITD official UNP 65.7153 -65.8278 decision=1980-05-12 dist 2 km
+== Kellett Strait
+   db: 75.7507 -117.5030  hist='' iu='' topic=place-names
+   note claims decision: 31 December 1910
+   CGNDB LAMQC official CHAN 75.7507 -117.5030 decision=1910-12-31 dist 0 km
+== Kennedy Channel
+   db: 80.9167 -66.5000  hist='Kennedy Channel' iu='' topic=nares-greely
+   CGNDB OAIUP official CHAN 80.9167 -66.5000 decision=1910-06-30 dist 0 km
+== Killiniq
+   db: 60.4000 -64.5000  hist="Chidley's Cape" iu='Killiniq' topic=davis-baffin-hudson
+   CGNDB EMANL previouslyOfficial UNP 60.4211 -64.8317 decision=2026-03-11 dist 18 km
+== Kimmirut
+   db: 62.8484 -69.8722  hist='Lake Harbour' iu='Kimmirut' topic=relocations-qtc
+   CGNDB OAUDP official HAM 62.8467 -69.8719 decision=1996-01-01 dist 0 km
+== King Christian Island
+   db: 77.7500 -101.5000  hist='' iu='' topic=sverdrup-bernier-peary
+   CGNDB OAIZQ official ISL 77.8000 -101.6667 decision=1924-03-31 dist 7 km
+== King William Island
+   db: 69.0000 -97.5000  hist='King William Land' iu='Qikiqtaq' topic=franklin-search
+   CGNDB OAJBV official ISL 69.1667 -97.4167 decision=1910-12-31 dist 19 km
+   CGNDB FBUUV official ISL 45.8943 -81.8636 decision=1950-08-02 dist 2639 km
+== Kingittorsuaq Island
+   db: 72.9656 -56.2377  hist='Kingigtorssuaq' iu='Kingittorsuaq' topic=norse-helluland
+   CGNDB: no exact-name match; got: []
+== Kinngait
+   db: 64.2306 -76.5386  hist='Cape Dorset' iu='Kinngait' topic=relocations-qtc
+   CGNDB OBCVP official HAM 64.2333 -76.5417 decision=2020-02-28 dist 0 km
+   CGNDB OECFP official MTN 64.2167 -76.5667 decision=2017-02-23 dist 2 km
+   CGNDB OECBV official MTN 69.4504 -106.2679 decision=2012-09-21 dist 1547 km
+   CGNDB OECCG official MTN 69.3778 -106.1215 decision=2012-09-21 dist 1538 km
+== Kodlunarn Island
+   db: 62.8170 -65.4330  hist='Kodlunarn Island, Countess of Warwick Sound' iu='Qallunaat Island' topic=kane-hall-polaris
+   CGNDB OAJFN official ISL 62.8167 -65.4167 decision=1910-12-31 dist 1 km
+== Kugaaruk
+   db: 68.5347 -89.8267  hist='Pelly Bay' iu='Kugaaruk' topic=inuit-oral-history
+   CGNDB OAUPF official HAM 68.5347 -89.8250 decision=1999-12-03 dist 0 km
+== Kullorsuaq
+   db: 74.5786 -57.2211  hist='' iu='Kullorsuaq' topic=place-names
+   CGNDB: no exact-name match; got: []
+== Lake Hazen
+   db: 81.7972 -71.0167  hist='Lake Hazen' iu='' topic=oxford-ellesmere-1934
+   CGNDB OAHAW official LAKE 81.7972 -71.0167 decision=1982-06-01 dist 0 km
+== Lancaster Sound
+   db: 74.2000 -80.0000  hist='Lancaster Sound' iu='Tallurutiup Imanga' topic=ross-parry
+   CGNDB OAJNS official CHAN 74.2167 -84.0000 decision=1951-03-07 dist 121 km
+== Little Cornwallis Island
+   db: 75.5000 -96.5000  hist='' iu='' topic=place-names
+   note claims decision: 5 September 1957
+   CGNDB OAJUZ official ISL 75.5000 -96.5000 decision=1957-09-05 dist 0 km
+== Loks Land
+   db: 62.4333 -64.6333  hist="Lok's Land" iu='' topic=place-names
+   CGNDB OAJWR official ISL 62.4333 -64.6333 decision=1910-12-31 dist 0 km
+== Lougheed Island
+   db: 77.4333 -105.1000  hist='Lougheed Island' iu='' topic=karluk-cae
+   CGNDB OAJZI official ISL 77.4333 -105.1000 decision=1939-12-12 dist 0 km
+== Lowther Island
+   db: 74.5500 -97.5000  hist='' iu='' topic=place-names
+   note claims decision: 31 December 1910
+   CGNDB OAKAS official ISL 74.5500 -97.5000 decision=1910-12-31 dist 0 km
+   CGNDB HAHDM official ISL 57.6001 -102.4337 decision=1957-06-06 dist 1887 km
+== Luke Sound
+   db: 62.6500 -65.1000  hist='Luke Sound' iu='' topic=place-names
+   CGNDB: no exact-name match; got: []
+== Mackenzie King Island
+   db: 78.0333 -109.8333  hist='Mackenzie King Island' iu='' topic=karluk-cae
+   CGNDB OAUII official ISL 78.0333 -109.8333 decision=1950-06-02 dist 0 km
+   CGNDB LAOPV official ISL 78.0333 -109.8333 decision=1950-06-02 dist 0 km
+== Maclean Strait
+   db: 77.5000 -103.5000  hist='' iu='' topic=place-names
+   note claims decision: 5 April 1921
+   CGNDB OAKEG official CHAN 77.5000 -103.5000 decision=1921-04-05 dist 0 km
+== Mansel Island
+   db: 62.0000 -80.0000  hist='Mansfield Island' iu='' topic=hudson-strait-south-baffin
+   CGNDB OAKIN official ISL 61.9917 -79.8333 decision=1910-06-30 dist 9 km
+== Massey Island
+   db: 76.0000 -103.0000  hist='' iu='' topic=place-names
+   note claims decision: 1 February 1962
+   CGNDB OAKLP official ISL 76.0000 -103.0000 decision=1962-02-01 dist 0 km
+== Meighen Island
+   db: 79.9167 -99.5000  hist='Meighen Island' iu='' topic=karluk-cae
+   CGNDB OAKRW official ISL 79.9167 -99.5000 decision=1921-12-31 dist 0 km
+== Melville Bay
+   db: 75.5000 -61.0000  hist='Melville Bay' iu='Qimusseriarsuaq' topic=whaling
+   CGNDB FEBOZ official BAY 45.7011 -82.4014 decision=1976-01-07 dist 3361 km
+== Melville Island
+   db: 75.5000 -111.5000  hist="Melville Island; one of Parry's North Georgian Islands, 1819" iu='' topic=sverdrup-bernier-peary
+   CGNDB LAPMX official ISL 75.5007 -111.5024 decision=1949-03-03 dist 0 km
+   CGNDB JCLIE official ISL 54.3806 -130.7472 decision=1954-07-08 dist 2405 km
+   CGNDB OAUIL official ISL 75.5007 -111.5024 decision=1949-03-03 dist 0 km
+   CGNDB JBOCS official ISL 50.1433 -124.7175 decision=1952-11-06 dist 2838 km
+== Melville Peninsula
+   db: 68.0000 -84.0000  hist='Melville Peninsula' iu='' topic=place-names
+   CGNDB OAKSI official CAPE 68.0000 -84.0000 decision=1910-12-31 dist 0 km
+== Mercy Bay
+   db: 74.0839 -119.0029  hist="Bay of God's Mercy" iu='' topic=franklin-search
+   CGNDB LAPNO official BAY 74.0839 -119.0029 decision=1910-12-31 dist 0 km
+== Meta Incognita Peninsula
+   db: 62.7503 -68.4997  hist='Meta Incognita' iu='' topic=place-names
+   CGNDB OAKTE official CAPE 62.7503 -68.4997 decision=1957-10-03 dist 0 km
+== Milne Inlet
+   db: 72.2000 -80.6000  hist='Milne Inlet' iu='' topic=place-names
+   CGNDB OAKWC official BAY 72.3333 -80.5000 decision=1951-03-07 dist 15 km
+== Mittimatalik
+   db: 72.6989 -77.9578  hist='Pond Inlet' iu='Mittimatalik' topic=sverdrup-bernier-peary
+   CGNDB: no exact-name match; got: []
+== Mould Bay
+   db: 76.2400 -119.3200  hist='Mould Bay (Mecham, 1853, at the request of Nares)' iu='' topic=science-stations
+   CGNDB LAQCZ official UNP 76.2340 -119.3366 decision=1949-04-03 dist 1 km
+   CGNDB LAQDA official BAY 76.2006 -119.4200 decision=1949-03-03 dist 5 km
+== Mount Aqiatushuk
+   db: 76.4262 -83.2339  hist='' iu='Aqiattusuk' topic=place-names
+   CGNDB OATUU official MTN 76.4278 -83.2500 decision=1994-10-17 dist 0 km
+== Mount Raleigh
+   db: 66.8500 -61.5500  hist='Mount Raleigh' iu='' topic=place-names
+   CGNDB OANRN official MTN 66.5167 -62.2833 decision=1945-06-21 dist 49 km
+   CGNDB JBPLF official MTN 50.9103 -124.2742 decision=1950-04-06 dist 3259 km
+== Naujaat
+   db: 66.5200 -86.2500  hist='Repulse Bay' iu='Naujaat' topic=ross-parry
+   CGNDB OBCRT official HAM 66.5333 -86.2500 decision=2015-07-02 dist 1 km
+   CGNDB OALKT official BAY 66.5253 -86.1903 decision=2013-04-25 dist 3 km
+   CGNDB OEADI official MTN 66.1842 -65.7112 decision=2009-12-11 dist 909 km
+   CGNDB OEAZP official CLF 67.3433 -63.9541 decision=2009-12-11 dist 990 km
+== Navy Board Inlet
+   db: 73.2500 -81.0000  hist='Navy Board Inlet' iu='' topic=place-names
+   CGNDB OALMA official BAY 73.2500 -81.0000 decision=1951-03-07 dist 0 km
+== Nerky
+   db: 77.6000 -71.0000  hist='Nerky' iu='Neqi' topic=crocker-land-1913
+   CGNDB: no exact-name match; got: []
+== Nettilling Lake
+   db: 66.4833 -70.3333  hist='' iu='Nettilling' topic=place-names
+   CGNDB OALOQ official LAKE 66.4833 -70.3333 decision=1982-07-09 dist 0 km
+== Nottingham Island
+   db: 63.1167 -77.8833  hist='Nottingham Island' iu='' topic=hudson-strait-south-baffin
+   CGNDB OALXS official ISL 63.3333 -77.9167 decision=1945-11-13 dist 24 km
+   CGNDB OALXR official UNP 63.1167 -77.9333 decision=1945-11-13 dist 3 km
+== Nuuk
+   db: 64.1814 -51.6941  hist='Godthaab' iu='Nuuk' topic=place-names
+   CGNDB: no exact-name match; got: []
+== Nuup Kangerlua
+   db: 64.1800 -51.7200  hist='Gilbert Sound' iu='Nuup Kangerlua' topic=davis-baffin-hudson
+   CGNDB: no exact-name match; got: []
+== Panniqtuuq
+   db: 66.1451 -65.7125  hist='Pangnirtung' iu='Panniqtuuq' topic=relocations-qtc
+   CGNDB OECLJ official LAKE 64.7088 -75.1674 decision=2017-02-23 dist 453 km
+   CGNDB OECLI official CAPE 64.3667 -75.8000 decision=2017-02-23 dist 494 km
+   CGNDB OEAWF official ISL 70.1263 -68.3482 decision=2007-03-14 dist 457 km
+== Peary Channel
+   db: 79.6667 -101.5000  hist='' iu='' topic=place-names
+   note claims decision: 12 December 1939
+   CGNDB OAMPY official CHAN 79.6667 -101.5000 decision=1939-12-12 dist 0 km
+== Penny Strait
+   db: 76.5000 -97.0000  hist='' iu='' topic=place-names
+   note claims decision: 31 December 1910
+   CGNDB OAMSF official CHAN 76.5000 -97.0000 decision=1910-12-31 dist 0 km
+== Pituffik
+   db: 76.5312 -68.7032  hist='Thule Air Base' iu='Pituffik' topic=greenland-inughuit
+   CGNDB: no exact-name match; got: []
+== Ponds Inlet
+   db: 72.8000 -77.0000  hist="Pond's Bay" iu='Mittimatalik' topic=place-names
+   CGNDB OANBC previouslyOfficial BAY 72.8000 -77.0000 decision=1926-05-04 dist 0 km
+== Prince Patrick Island
+   db: 76.8000 -119.5000  hist='Prince Patrick Island' iu='' topic=science-stations
+   CGNDB LATCW official ISL 76.7507 -119.5034 decision=1949-03-03 dist 5 km
+== Qaanaaq
+   db: 77.4670 -69.2310  hist='New Thule' iu='Qaanaaq' topic=greenland-inughuit
+   CGNDB: no exact-name match; got: []
+== Qatiktalik
+   db: 63.9500 -88.7667  hist='Cape Fullerton' iu='Qatiktalik' topic=whaling
+   CGNDB: no exact-name match; got: []
+== Qausuittuq
+   db: 74.6973 -94.8297  hist='Resolute Bay' iu='Qausuittuq' topic=relocations-qtc
+   CGNDB: no exact-name match; got: [('Parc national Qausuittuq du Canada', 76.124066, -101.03123), ('Qausuittuq National Park of Canada', 76.124066, -101.03123)]
+== Qeqertarsuaq
+   db: 69.2472 -53.5350  hist='Godhavn' iu='Qeqertarsuaq' topic=amundsen-gjoa
+   CGNDB: no exact-name match; got: []
+== Qikiqtarjuaq
+   db: 67.5547 -64.0281  hist='Broughton Island' iu='Qikiqtarjuaq' topic=place-names
+   CGNDB OAUGJ official HAM 67.5547 -64.0281 decision=1998-11-01 dist 0 km
+   CGNDB OEAJX official ISL 62.6867 -70.6024 decision=2006-01-17 dist 608 km
+   CGNDB OEBTU official ISL 66.7431 -83.9950 decision=2013-04-25 dist 851 km
+== Qimusseriarsuaq
+   db: 75.5000 -60.0000  hist='Melville Bay' iu='Qimusseriarsuaq' topic=greenland-inughuit
+   CGNDB: no exact-name match; got: []
+== Queen Elizabeth Islands
+   db: 76.3340 -114.5028  hist='the Parry Islands' iu='' topic=place-names
+   CGNDB OAUJD official ISL 76.3341 -114.5028 decision=1983-11-23 dist 0 km
+   CGNDB LATOW official ISL 76.3341 -114.5028 decision=1983-11-23 dist 0 km
+== Quttinirpaaq National Park
+   db: 82.2167 -72.2167  hist='Ellesmere Island National Park Reserve' iu='Quttinirpaaq' topic=operation-hazen-1957
+   CGNDB: no exact-name match; got: [('Parc national du Canada Quttinirpaaq', 82.2166667, -72.2166667), ('Quttinirpaaq National Park of Canada', 82.2166667, -72.2166667)]
+== Raanes Peninsula
+   db: 78.5000 -86.0000  hist='' iu='' topic=place-names
+   note claims decision: 9 July 1982
+   CGNDB OANQJ official CAPE 78.5000 -86.0000 decision=1982-07-09 dist 0 km
+== Repulse Bay
+   db: 66.5200 -86.2500  hist='Repulse Bay' iu='Naujaat' topic=franklin-search
+   CGNDB OANWT previouslyOfficial HAM 66.5333 -86.2500 decision=2015-07-02 dist 1 km
+   CGNDB OANWS previouslyOfficial BAY 66.3333 -86.0000 decision=2013-04-25 dist 23 km
+== Robeson Channel
+   db: 82.0000 -61.5000  hist='Robeson Channel' iu='' topic=nares-greely
+   CGNDB OAOAU official CHAN 82.0000 -61.5000 decision=1910-06-30 dist 0 km
+== Salisbury Island
+   db: 63.3500 -77.1500  hist='Salisbury Island' iu='' topic=hudson-strait-south-baffin
+   CGNDB OAOIO official ISL 63.5333 -77.0000 decision=1945-11-13 dist 22 km
+   CGNDB CBGXM official ISL 44.8216 -62.5209 decision=1939-12-12 dist 2182 km
+   CGNDB FDXTC official ISL 45.9894 -81.2311 decision=1965-12-09 dist 1938 km
+   CGNDB FDTDR official ISL 44.8269 -79.6814 decision=1932-07-06 dist 2060 km
+== Salliq
+   db: 64.1400 -83.1700  hist='Southampton Island' iu='Salliq' topic=whaling
+   CGNDB OECNA official ISL 64.3301 -75.3017 decision=2017-02-23 dist 382 km
+== Sanderson's Hope
+   db: 72.2000 -55.9000  hist='Hope Sanderson' iu='Kingittuarsuk' topic=davis-baffin-hudson
+   CGNDB: no exact-name match; got: []
+== Sanirajak
+   db: 68.7903 -81.2375  hist='Hall Beach' iu='Sanirajak' topic=place-names
+   CGNDB OAURC official HAM 68.7903 -81.2375 decision=2020-02-28 dist 0 km
+== Savissivik
+   db: 76.0197 -65.1136  hist='Savigsivik' iu='Savissivik' topic=greenland-inughuit
+   CGNDB: no exact-name match; got: []
+== Schei Peninsula
+   db: 80.2500 -88.0000  hist='' iu='' topic=kruger-1930
+   CGNDB OAOOQ official CAPE 80.2500 -88.0000 decision=1960-04-07 dist 0 km
+== Sherard Osborn Island
+   db: 76.7000 -99.6500  hist='' iu='' topic=place-names
+   note claims decision: 3 April 1959
+   CGNDB OAOVS official ISL 76.7000 -99.6500 decision=1959-04-03 dist 0 km
+== Sheriff's Harbour
+   db: 70.0500 -91.8700  hist="Sheriff's Harbour" iu='' topic=ross-victory
+   CGNDB: no exact-name match; got: []
+== Simmons Peninsula
+   db: 76.6667 -89.1167  hist='' iu='' topic=place-names
+   note claims decision: 30 June 1910
+   CGNDB OAPAC official CAPE 76.6667 -89.1167 decision=1910-06-30 dist 0 km
+   CGNDB GBKBK official CAPE 59.6283 -97.8428 decision=1995-03-24 dist 1904 km
+== Siorapaluk
+   db: 77.7897 -70.6431  hist='' iu='Siorapaluk' topic=greenland-inughuit
+   CGNDB: no exact-name match; got: []
+== Sisimiut
+   db: 66.9395 -53.6735  hist='Holsteinsborg' iu='Sisimiut' topic=place-names
+   CGNDB: no exact-name match; got: []
+== Smith Sound
+   db: 78.3000 -74.0000  hist='Sir Thomas Smith his Sound' iu='' topic=davis-baffin-hudson
+   CGNDB AAUKA official BAY 48.1575 -53.6964 decision=1951-12-06 dist 3377 km
+   CGNDB OAPGF official CHAN 78.4167 -74.0000 decision=1910-06-30 dist 13 km
+   CGNDB JBVXC official CHAN 51.3000 -127.7000 decision=1948-10-07 dist 3232 km
+   CGNDB ACZZA official UNP 48.2003 -53.8019 decision=2016-02-10 dist 3372 km
+== Somerset Island
+   db: 73.2500 -93.5000  hist='North Somerset' iu='' topic=place-names
+   CGNDB OAPIK official ISL 73.2500 -93.5000 decision=1905-12-05 dist 0 km
+   CGNDB FCPZM official ISL 45.1552 -80.0946 decision=1930-07-04 dist 3148 km
+== Somerville Island
+   db: 74.7333 -96.1833  hist='' iu='' topic=place-names
+   note claims decision: 30 June 1910
+   CGNDB OAPIL official ISL 74.7333 -96.1833 decision=1910-06-30 dist 0 km
+   CGNDB JCOOQ official ISL 54.7403 -130.2800 decision=1933-03-07 dist 2433 km
+   CGNDB GBJFH official ISL 55.2719 -101.2325 decision=1995-03-13 dist 2165 km
+   CGNDB FCPZQ official ISL 46.1861 -79.5417 decision=1962-11-12 dist 3206 km
+== Spence Bay
+   NO PLACE ROW IN DB
+   CGNDB OAADP official BAY 69.4069 -93.8333 decision=1982-07-09
+   CGNDB HAJBQ official BAY 53.4673 -108.1085 decision=1967-05-03
+   CGNDB OAPMO previouslyOfficial UNP 69.5361 -93.5208 decision=1992-07-01
+   CGNDB HAJBP official BAY 51.2635 -106.8375 decision=1970-03-13
+== Svendsen Peninsula
+   db: 77.7500 -84.0000  hist='' iu='' topic=place-names
+   note claims decision: 31 December 1910
+   CGNDB OAPYI official CAPE 77.7500 -84.0000 decision=1910-12-31 dist 0 km
+== Sverdrup Islands
+   db: 79.0000 -96.0000  hist='' iu='' topic=place-names
+   note claims decision: 30 June 1910
+   CGNDB OAPYO official ISL 79.0000 -96.0000 decision=1910-06-30 dist 0 km
+== Table Island
+   db: 77.2000 -95.4667  hist='' iu='' topic=place-names
+   note claims decision: 31 December 1910
+   CGNDB OAQAS official ISL 77.2000 -95.4667 decision=1910-12-31 dist 0 km
+   CGNDB JBVYW official ISL 51.2647 -127.8064 decision=1948-10-07 dist 2987 km
+   CGNDB CBLHR official ISL 44.9214 -62.1856 decision=1976-07-13 dist 3675 km
+   CGNDB JBDUB previouslyOfficial ISL 48.9533 -125.3639 decision=1934-04-03 dist 3220 km
+== Tallurutiup Imanga
+   db: 74.2000 -80.0000  hist='Lancaster Sound' iu='Tallurutiup Imanga' topic=davis-baffin-hudson
+   CGNDB: no exact-name match; got: []
+== Taloyoak
+   db: 69.5372 -93.5220  hist='Spence Bay' iu='Taloyoak' topic=inuit-oral-history
+   CGNDB OATTU official HAM 69.5361 -93.5208 decision=1992-07-01 dist 0 km
+== Tanquary Fiord
+   db: 81.4000 -76.9000  hist='' iu='' topic=crocker-land-1913
+   CGNDB OAQDL official BAY 81.0833 -79.7500 decision=1928-02-07 dist 59 km
+== Terror Bay
+   db: 68.9000 -98.9300  hist='' iu='' topic=franklin-1845
+   CGNDB OAQIM official BAY 68.8667 -98.9500 decision=1910-06-30 dist 4 km
+== The North Water
+   db: 77.0000 -74.0000  hist='the North Water' iu='Pikialasorsuaq' topic=whaling
+   CGNDB: no exact-name match; got: []
+== Truro Island
+   db: 75.2833 -97.1833  hist='' iu='' topic=place-names
+   note claims decision: 30 June 1910
+   CGNDB OAQVU official ISL 75.2833 -97.1833 decision=1910-06-30 dist 0 km
+   CGNDB JCKKL official ISL 54.7278 -130.3708 decision=1949-03-03 dist 2466 km
+== Upernavik
+   db: 72.7868 -56.1549  hist='Upernavik' iu='Upernavik' topic=kane-hall-polaris
+   CGNDB: no exact-name match; got: [('Upernavik Island', 58.4924473, -62.9730541)]
+== Uqsuqtuuq
+   db: 68.6252 -95.8797  hist='Gjoa Haven' iu='Uqsuqtuuq' topic=franklin-1845
+   CGNDB: no exact-name match; got: []
+== Uumanarjuaq
+   db: 64.9830 -66.2000  hist='Blacklead Island' iu='Uumanarjuaq' topic=posts-rcmp-missions
+   CGNDB: no exact-name match; got: []
+== Uummannaq
+   db: 70.6747 -52.1264  hist='Umanak' iu='Uummannaq' topic=place-names
+   CGNDB OBAXD official ISL 72.4000 -79.1272 decision=2007-03-14 dist 1010 km
+   CGNDB OEAWG official ISL 70.2066 -68.5030 decision=2007-03-14 dist 604 km
+   CGNDB OECBT official ISL 69.2843 -106.6693 decision=2012-09-21 dist 2009 km
+== Uummannaq (Thule)
+   db: 76.5500 -68.8300  hist='Thule; Dundas' iu='Uummannaq' topic=greenland-inughuit
+   CGNDB: no exact-name match; got: []
+== Victoria Harbour
+   db: 70.1550 -91.5090  hist='Victory Harbour, renamed Victoria Harbour' iu='' topic=ross-victory
+   CGNDB FCZWY official UNP 44.7356 -79.7697 decision=1994-01-01 dist 2856 km
+   CGNDB BACOU official BAY 46.2020 -63.4855 decision=1966-11-21 dist 2861 km
+   CGNDB CBNEL official UNP 45.1108 -64.8842 decision=2010-12-06 dist 2955 km
+   CGNDB OARKX official BAY 70.1500 -91.5833 decision=1951-11-01 dist 3 km
+== Wilmot and Crampton Bay
+   db: 68.2300 -98.7100  hist='' iu='' topic=franklin-1845
+   CGNDB OARZE official BAY 68.1833 -98.7500 decision=1960-05-05 dist 5 km
+== Winter Harbour
+   db: 74.7830 -110.8000  hist='Winter Harbour, Melville Island' iu='' topic=ross-parry
+   CGNDB JCDOP official UNP 50.5167 -128.0333 decision=1983-03-15 dist 2740 km
+   CGNDB JBTML official BAY 50.5311 -128.0086 decision=1947-01-07 dist 2738 km
+   CGNDB LBAGE official BAY 74.7673 -110.5356 decision=1950-12-07 dist 8 km
+   CGNDB JCSMJ previouslyOfficial BAY 54.8167 -130.4433 decision=1947-01-07 dist 2289 km
+== Young Island
+   db: 74.3167 -98.6667  hist='' iu='' topic=place-names
+   note claims decision: 30 June 1910
+   CGNDB OASEP official ISL 74.3167 -98.6667 decision=1910-06-30 dist 0 km
+   CGNDB OASER official ISL 58.4917 -78.3500 decision=1945-06-07 dist 1859 km
+   CGNDB HAVSY official ISL 55.9268 -104.6154 decision=1950-01-16 dist 2049 km
+   CGNDB HASBI official ISL 52.0000 -106.7173 decision=1963-07-03 dist 2489 km

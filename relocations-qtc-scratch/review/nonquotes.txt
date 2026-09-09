@@ -1,0 +1,248 @@
+=== relocations-qtc-016 text 1953/1955
+T: The families relocated to Qausuittuq, 1953 and 1955
+CR: Qikiqtani Inuit Association | BIB: qtc2013resolutebay | PG: pp. 25, 31
+CREDIT: Qikiqtani Truth Commission, Community Histories 1950-1975: Resolute Bay, tables 1 and 2, pp. 25 and 31; spellings from 1990 Makivik Corporation documents
+LIC: quoted under fair dealing for research and private study; text copyright Qikiqtani Inuit Association
+FILE: relocations-qtc/notes/relocatee-families.md | DL: 
+PEOPLE: ["Jaybeddie Amagoalik", "Simeonie Amagoalik", "Markoosie Patsauq", "Joseph Idlout", "Leah Idlout-Paulson", "Ludy Pudluk"]
+D: The QTC's two tables of the families put ashore at Qausuittuq, named person by person, with the RCAP totals for both destinations and the distances involved. Transcribed in full to relocations-qtc/notes/relocatee-families.md, with the discrepancy between the QTC and RCAP dates for the Craig Harbour landings set out at the end.
+=== relocations-qtc-028 track 1957
+T: The route of the C. D. Howe, 1957
+CR:  | BIB: qtc2013health | PG: 
+CREDIT: ports after the map 'Route of the C.G.S. C.D. Howe, 1957' in Qikiqtani Truth Commission, Aaniajurliriniq: Health Care in the Qikiqtani Region 1950-1975, p. 11
+LIC: route redrawn from the QTC map; text copyright Qikiqtani Inuit Association
+FILE: relocations-qtc/files/relocations-qtc-healthcare.pdf | DL: 
+PEOPLE: []
+D: The annual medical circuit that took Inuit south. The ports are those the QTC's 1957 route map names; the ORDER in which they are strung here is inferred from the usual Eastern Arctic Patrol itinerary - out from Montreal, through Hudson Strait, round the Nunavik and Hudson Bay coast, then north up the Qikiqtaaluk shore to Lancaster Sound, Qausuittuq and Ausuittuq - and is NOT taken from the map, which shows the track without a sequence. The map also names anchorages not plotted here because their positions are not certain: Hoare Bay, Home Bay, Aggijjat, Kivitoo, Padloping Island, Cape Christian (Pinnguarjuk), Eric Cove, Navy Board Inlet and Admiralty Inlet. Treat the line as the shape of the season, not as a log.
+=== relocations-qtc-034 text 2013
+T: The QTC's Key Findings
+CR: Qikiqtani Truth Commission | BIB: qtc2013keyfindings | PG: 
+CREDIT: Qikiqtani Truth Commission, Key Findings, qtcommission.ca, retrieved 8 September 2026
+LIC: quoted under fair dealing for research and private study; text copyright Qikiqtani Inuit Association
+FILE: relocations-qtc/files/relocations-qtc-key-findings.txt | DL: 
+PEOPLE: []
+D: The Commission's summary of its own conclusions, in about 2,500 words, opening: "no single truth will explain the changes Qikiqtani Inuit experienced from 1950 to 1975: nor are there easily identified villains and victims." It states flatly that the Canadian government was the primary agent of change, that its policy was "to make the North more like the South and Inuit more like southern Canadians", and that this "was not a gradual progression from a traditional to a modern way of life: it was a revolutionary transformation."
+=== relocations-qtc-035 text 2013
+T: Community history: Ikpiarjuk (Arctic Bay), 1950-1975
+CR: Qikiqtani Truth Commission | BIB: qtc2013arcticbay | PG: 
+CREDIT: Qikiqtani Truth Commission, Community Histories 1950-1975: Arctic Bay (2024 revised edition, CW_24-110_Report-2_Arctic-Bay_E_v7)
+LIC: quoted under fair dealing for research and private study; text copyright Qikiqtani Inuit Association
+FILE: relocations-qtc/files/relocations-qtc-arcticbay.txt | DL: 
+PEOPLE: []
+D: The full text of the QTC's history of Ikpiarjuk, with the PDF at relocations-qtc/files/relocations-qtc-arcticbay.pdf. Recovered on 8 September 2026 through the QTC's file-download endpoint after the copy in _staging turned out to be a saved 404 page.
+=== relocations-qtc-036 text 2013
+T: Community history: Kinngait (Cape Dorset), 1950-1975
+CR: Qikiqtani Truth Commission | BIB: qtc2013kinngait | PG: 
+CREDIT: Qikiqtani Truth Commission, Community Histories 1950-1975: Kinngait (2024 revised edition, CW_24-110_Report-10_Kinngait_E_v3)
+LIC: quoted under fair dealing for research and private study; text copyright Qikiqtani Inuit Association
+FILE: relocations-qtc/files/relocations-qtc-kinngait.txt | DL: 
+PEOPLE: []
+D: The full text of the QTC's history of Kinngait, with the PDF at relocations-qtc/files/relocations-qtc-kinngait.pdf. Kinngait is one of the places where the third wave of qimmiit killings began earliest, and the community from which families were moved to Dundas Harbour in 1934. Recovered on 8 September 2026 after the staged copy proved to be a saved 404 page.
+=== relocations-qtc-037 text 2013
+T: Qimmiliriniq: Inuit Sled Dogs in the Qikiqtani Region
+CR: Qikiqtani Truth Commission | BIB: qtc2013qimmiit | PG: 
+CREDIT: Qikiqtani Truth Commission, Qimmiliriniq: Inuit Sled Dogs in the Qikiqtani Region (2024 revised edition)
+LIC: quoted under fair dealing for research and private study; text copyright Qikiqtani Inuit Association
+FILE: relocations-qtc/files/relocations-qtc-qimmiit.txt | DL: 
+PEOPLE: []
+D: The full text of the thematic report on the dogs, with the PDF alongside it. It carries the figure this topic turns on - three or four thousand qimmiit in Qikiqtaaluk in 1950, a few dozen by 1975 - the account of the Ordinance Respecting Dogs, the three waves of killings, and the testimony of witnesses including Pauloosie Veevee, Mosesee Qiyuakjuk and Levi Evic.
+=== relocations-qtc-038 text 2013
+T: Aaniajurliriniq: Health Care in the Qikiqtani Region, 1950-1975
+CR: Qikiqtani Truth Commission | BIB: qtc2013health | PG: 
+CREDIT: Qikiqtani Truth Commission, Aaniajurliriniq: Health Care in the Qikiqtani Region 1950-1975 (2024 revised edition)
+LIC: quoted under fair dealing for research and private study; text copyright Qikiqtani Inuit Association
+FILE: relocations-qtc/files/relocations-qtc-healthcare.txt | DL: 
+PEOPLE: []
+D: The full text of the thematic report on health care, with the PDF alongside it. It carries the account of the Eastern Arctic Patrol's x-ray screening from 1946, the fitting out of the C. D. Howe, the route map for 1957, the figures for evacuations to southern sanatoria, and the testimony of Miluqtituttuq Akesuk, Elijah Padluq and Walter Rudnicki.
+=== relocations-qtc-039 text 2013
+T: Achieving Saimaqatigiingniq: Final Report of the Commissioner
+CR: Qikiqtani Truth Commission | BIB: qtc2013final | PG: 
+CREDIT: Qikiqtani Truth Commission, Achieving Saimaqatigiingniq: Final Report of the Commissioner (2024 revised edition)
+LIC: quoted under fair dealing for research and private study; text copyright Qikiqtani Inuit Association
+FILE: relocations-qtc/files/relocations-qtc-finalreport.txt | DL: 
+PEOPLE: []
+D: The full text of Commissioner James Igloliorte's report, with the PDF alongside it: how the Commission worked, what its mandate covered and what it expressly excluded, what he heard in the thirteen communities, and the twenty-five recommendations grouped under acknowledging and healing past wrongs, strengthening Inuit governance, strengthening Inuit culture and creating healthy communities.
+=== relocations-qtc-040 text 2013
+T: Analysis of the RCMP Sled Dog Report
+CR: Qikiqtani Truth Commission | BIB: qtc2013rcmpreview | PG: 
+CREDIT: Qikiqtani Truth Commission, Analysis of the RCMP Sled Dog Report (2024 revised edition)
+LIC: quoted under fair dealing for research and private study; text copyright Qikiqtani Inuit Association
+FILE: relocations-qtc/files/relocations-qtc-rcmpsleddog.txt | DL: 
+PEOPLE: []
+D: The full text of the QTC's point-by-point answer to the RCMP's 2006 self-review of the dog killings, with the PDF alongside it. It sets out why an internal police inquiry could not command Inuit cooperation, why the Commission rejected the framing of the question as one of conspiracy or no conspiracy, and its charge that the RCMP's analysis was aimed at discrediting Inuit memory.
+=== relocations-qtc-041 image 2010-09
+T: The relocation monument at Ausuittuq (Grise Fiord)
+CR: Looty Pijamini, sculptor; photograph by Timkal | BIB: commons2011grise | PG: 
+CREDIT: Photograph by Timkal, Wikimedia Commons, CC BY-SA 3.0; monument by Looty Pijamini, commissioned by Nunavut Tunngavik Inc.
+LIC: CC BY-SA 3.0
+FILE: relocations-qtc/files/relocations-qtc-grise-plaque.jpg | DL: 
+PEOPLE: ["Looty Pijamini"]
+D: The bronze plaque set in a boulder at Ausuittuq, unveiled in September 2010, a month after the apology at Inukjuak. It reads: "IN MEMORY OF INUIT LANDED HERE IN 1953 & 1955, AND THOSE WHO CAME AFTER. They came to these desolate shores to pursue the Government's promise of a more prosperous life. They endured and overcame great hardship, and dedicated their lives to Canada's sovereignty in these lands and waters." The same text follows in Inuktitut syllabics. Sculptor Looty Pijamini, assistant sculptor Matthew Pijamini, commissioned by Nunavut Tunngavik Inc. A companion monument stands at Qausuittuq. Note whose words these are: the monument, unlike the QTC, credits the relocatees with holding the sovereignty the government wanted.
+=== relocations-qtc-042 image 1955
+T: The C. D. Howe
+CR: photographer unknown; copy photograph by Sebastien Lapointe, 2004 | BIB: lapointe2004cdhowe | PG: 
+CREDIT: Photograph of a print in the Resolute archives, by Sebastien Lapointe, July 2004; Wikimedia Commons, CC BY-SA 3.0. Original photographer unknown.
+LIC: CC BY-SA 3.0
+FILE: relocations-qtc/files/relocations-qtc-cdhowe.jpg | DL: 
+PEOPLE: []
+D: The ship, moored stern-on, name and port of registry on the counter: C. D. HOWE, OTTAWA. A helicopter sits on the after deck - the machine the tuberculosis patrol used to fetch in people from camps who had not come to the ship. She carried the relocatees north in 1953 and 1955 and the x-ray survey round the coast every summer until the Eastern Arctic Patrol's last charter in 1969. The Commons caption dates the image loosely to the 1955 voyage; the print is undated and the original photographer is not recorded, so treat the date as approximate.
+=== relocations-qtc-045 image 1956-03
+T: Alacee Nungaq and three of her children at Resolute Bay, March 1956
+CR: Gar Lunney | BIB: qtc2013resolutebay | PG: identified from the QTC's 1955 family table, p. 30
+CREDIT: Gar Lunney / National Film Board of Canada. Phototheque / Library and Archives Canada / e010949311
+LIC: CC BY 2.0 (Library and Archives Canada Flickr stream)
+FILE: relocations-qtc/files/relocations-qtc-nungaq-resolute-1956.jpg | DL: 
+PEOPLE: ["Alacee Nungaq", "Levi Nungak"]
+D: The only photograph found under a usable licence of a family relocated to Qausuittuq. LAC's caption reads: "Inuit woman [Alacee Nungaq] wearing an amauti and three children [Philip, Annie and Anna Levi] outside in Resolute Bay, Northwest Territories." Taken in March 1956, five months after the family's second winter began. The names match the QTC's table of the 1955 relocatees, which lists Levi Nungak and his wife Alici with their daughters Annie, Minnie and Anna and their son Philipusie; the archive's spelling and the Makivik spelling differ, and the archive has given the children their father's given name as a surname, a habit of the period. Behind them is the settlement on the west shore of Resolute Bay, then a row of houses the families had built from scrap taken off the RCAF dump. Commons file name: Woman and three children outside in winter clothes Femme et trois enfants a l'exterieur en vetements d'hiver (7342566364).jpg. Position is the old village site and approximate to about 1.5 km.
+=== relocations-qtc-051 object 2010-09-08
+T: The Arctic Exile monument at Qausuittuq, by Simeonie Amagoalik
+CR: Simeonie Amagoalik | BIB: zarate2010high | PG: Nunatsiaq News, 9 September 2010
+CREDIT: described from Nunatsiaq News (Gabriel Zarate, 9 September 2010) and Nunavut Tunngavik Incorporated, Arctic Exile Monument Project
+LIC: description text: this layer. No photograph is registered: none of the monument was found under a licence that permits reuse.
+FILE:  | DL: 
+PEOPLE: ["Simeonie Amagoalik", "Jeffrey Amagoalik", "Markoosie Patsauq", "Ludy Pudluk", "John Duncan"]
+D: A carving of a single man, cut from local stone by Simeonie Amagoalik, who was himself put ashore here as a boy in September 1953. Nunavut Tunngavik Incorporated commissioned two monuments in April 2008, one for each of the communities the relocations made, and required each carver to train an apprentice: Jeffrey Amagoalik worked with Simeonie Amagoalik at Qausuittuq, Matt Pijamini with Looty Pijamini at Ausuittuq, where the companion piece is a granite woman and child ([[artifact:relocations-qtc-041]]). The two figures stand a thousand kilometres apart and are meant to be read together: they show the families divided at Craig Harbour on 29 August 1953, the man left on one shore and the woman and child carried on to the other. Unveiled at Qausuittuq on 8 September 2010, three weeks after the apology at Inukjuak; the Ausuittuq monument followed on 10 September. John Duncan, Minister of Indian Affairs and Northern Development, attended both and presented each hamlet with a framed copy of the apology in English, French and Inuktitut, and healing circles were held afterwards in both communities. The plaque, in English and Inuktitut, reads: "They came to these desolate shores to pursue the government promise of a more prosperous life. They endured and overcame great hardship, and dedicated their lives to Canada's sovereignty in these lands and waters." POSITION: given here as the ha
+=== relocations-qtc-054 text 2013
+T: Community history: Qausuittuq (Resolute Bay), 1950-1975
+CR: Qikiqtani Inuit Association | BIB: qtc2013resolutebay | PG: 48 pp.
+CREDIT: Qikiqtani Truth Commission, Community Histories 1950-1975: Resolute Bay (Qikiqtani Inuit Association / Inhabit Media, 2013)
+LIC: copyright Qikiqtani Inuit Association; archived here for research
+FILE: relocations-qtc/files/relocations-qtc-resolutebay.txt | DL: 
+PEOPLE: []
+D: The full text of the QTC's history of Qausuittuq, with the PDF at relocations-qtc/files/relocations-qtc-resolutebay.pdf. It is the source for most of [[page:relocations-qausuittuq]]: the two family tables of 1953 and 1955, the winter-by-winter record of the houses built from the RCAF dump, the ilagiit nunagivaktangat at Kuvinajuq, the qimmiit counts of 1958 and 1964, the 1957 measles landing, and the move across the bay in 1975. It ends with the 1974 letter to Jean Chretien rather than with a conclusion of its own. Note that the QTC's mandate excluded the High Arctic relocations, which were RCAP's subject; this community history nonetheless narrates them, because Qausuittuq has no other founding.
+=== relocations-qtc-055 place 1953-09
+T: The old Inuit village on the west shore of Resolute Bay, 1953-1975
+CR:  | BIB: qtc2013resolutebay | PG: pp. 24-25, 41-43
+CREDIT: Qikiqtani Truth Commission, Community Histories 1950-1975: Resolute Bay (Qikiqtani Inuit Association, 2013)
+LIC: this layer
+FILE:  | DL: 
+PEOPLE: []
+D: Where the relocatees actually lived for twenty-two years. No site had been chosen before the ship came; the only instruction was that the settlement must not be too close to RCAF property, and in the end the detachment, the store and the houses went up about eight kilometres from the base and weather station, on the beach on the west side of Resolute Bay. Tents in the first autumn; then a hall built from timber off the weather-station dump, used for drying skins, as a workshop, as a church and, through the first dark season, as a classroom; then eleven scrap-built houses along the beach by 1957, each with one electric light run from the base; fourteen by 1960; eighteen by 1964. In the summer of 1975 every useful building was hauled about three kilometres to the present townsite on the east shore. The old site was left with a few unusable buildings and the cemetery. POSITION APPROXIMATE, to about 1.5 km: it is reckoned from the report's two measurements, 8 km from the base and 3 km west of the present townsite, which do not quite agree.
+=== relocations-qtc-056 place 1955
+T: Kuvinajuq: the ilagiit nunagivaktangat on Somerset Island, 1955-1960
+CR:  | BIB: qtc2013resolutebay | PG: pp. 30-31
+CREDIT: Qikiqtani Truth Commission, Community Histories 1950-1975: Resolute Bay (Qikiqtani Inuit Association, 2013)
+LIC: this layer
+FILE:  | DL: 
+PEOPLE: []
+D: The one camp away from the settlement that the Resolute Bay community history names. Three or four families lived at Kuvinajuq on Somerset Island between 1955 and 1960 rather than on the beach at Resolute Bay: the island had long been caribou country and Kuvinajuq a favoured site. It is roughly 300 km south of Resolute, and reaching it meant crossing Barrow Strait. The camp is not recorded as being closed by anyone; it simply stops appearing after 1960, as the houses, the wage work at the base and, from November 1960, the co-op drew people in. POSITION APPROXIMATE: the report places it only 'on Somerset Island at Bellot Strait and Creswell Bay', two places 90 km apart, and these coordinates take the Bellot Strait end.
+=== relocations-qtc-058 text 2013
+T: Community history: Qausuittuq (Resolute Bay), 1950-1975 - the printed report
+CR: Qikiqtani Inuit Association | BIB: qtc2013resolutebay | PG: 48 pp.
+CREDIT: Qikiqtani Truth Commission, Community Histories 1950-1975: Resolute Bay (Qikiqtani Inuit Association / Inhabit Media, 2013)
+LIC: copyright Qikiqtani Inuit Association; archived here for research
+FILE: relocations-qtc/files/relocations-qtc-resolutebay.pdf | DL: 
+PEOPLE: []
+D: The scanned report as published, with its photographs and captions, alongside the OCR text at [[artifact:relocations-qtc-054]]. The photographs are the reason to keep the PDF: eight of them, credited only to 'library and archives canada' or 'nwt archives' with no accession numbers, including Edith Patsauq playing the concertina at Resolute Bay in March 1956 and the airbase seen from behind in 1960.
+=== relocations-qtc-059 text 2019-03-08
+T: News release: the Prime Minister delivers the apology, 8 March 2019
+CR: Office of the Prime Minister of Canada | BIB: canada2019tbapology | PG: news release of 8 March 2019
+CREDIT: Office of the Prime Minister of Canada
+LIC: Crown copyright, non-commercial reproduction permitted
+FILE: relocations-qtc/files/relocations-qtc-tb-apology-2019-release.html | DL: 
+PEOPLE: ["Justin Trudeau", "Natan Obed"]
+D: The release that accompanied the apology, fetched through the Wayback Machine because pm.gc.ca times out from this host. It carries what the speech does not: the attributed responses of Natan Obed for Inuit Tapiriit Kanatami, Johannes Lampe for Nunatsiavut and Adamie D Alaku for Makivik; the partners in the Nanilavut Initiative; and the money - 7.5 million over five years for Inuit-led tuberculosis elimination from Budget 2018, inside 09.5 million for Inuit public health, housing and employment, plus 40 million over ten years from Budget 2017 for housing in Nunavut. It also records the 23 March 2018 commitment to eliminate tuberculosis across Inuit Nunangat by 2030 and halve active tuberculosis by 2025.
+=== relocations-qtc-060 image 1950
+T: Grise Fiord from the air, before the community existed
+CR: Royal Canadian Air Force | BIB: dunbar1956arctic | PG: Dunbar and Greenaway 1956, fig. 349, p. 328
+CREDIT: RCAF trimetrogon oblique reproduced in Dunbar and Greenaway, Arctic Canada from the Air (Defence Research Board, 1956); HathiTrust scan of the University of Illinois copy
+LIC: public domain in Canada (Crown copyright of 1956 expired 2007 under the fifty-year Crown term; HathiTrust records the volume as in the public domain outside the United States)
+FILE: qei-from-the-air-1947/files/qei-from-the-air-1947-dunbar1956-fig349-grise-fiord.jpg | DL: 
+PEOPLE: []
+D: The south coast of Ellesmere Island looking west at Grise Fiord, with Harbour Fiord and South Cape beyond, photographed by the RCAF around 1950. The families moved north from Inukjuak and Mittimatalik in 1953 were landed on this coast; Ausuittuq (Grise Fiord) was established here. The photograph shows the place as the government saw it on paper when the decision was made - from the air, uninhabited, and with no indication of what living there in winter would require.
+=== relocations-qtc-061 image 1950
+T: Resolute Bay and Griffith Island from the air, about 1950
+CR: Royal Canadian Air Force | BIB: dunbar1956arctic | PG: Dunbar and Greenaway 1956, fig. 314, p. 271; RCAF T410R-55
+CREDIT: RCAF trimetrogon oblique reproduced in Dunbar and Greenaway, Arctic Canada from the Air (Defence Research Board, 1956); HathiTrust scan of the University of Illinois copy
+LIC: public domain in Canada (Crown copyright of 1956 expired 2007 under the fifty-year Crown term; HathiTrust records the volume as in the public domain outside the United States)
+FILE: qei-from-the-air-1947/files/qei-from-the-air-1947-dunbar1956-fig314-resolute-bay-griffith-island.jpg | DL: 
+PEOPLE: []
+D: Looking west at Resolute Bay and Griffith Island. The airfield and joint Arctic weather station at Resolute are the reason the 1953 relocation went to this bay: the families from Inukjuak and Mittimatalik were landed near an existing government installation, and Qausuittuq (Resolute) grew up beside it.
+=== relocations-qtc-062 image 1929
+T: Shappa clearing dog traces, Kinngait, 1929
+CR: Joseph Dewey Soper | BIB: qtc2024qimmiliriniq | PG: credited in Qimmiliriniq (QTC 2024)
+CREDIT: Joseph Dewey Soper / Department of Indian Affairs and Northern Development fonds / Library and Archives Canada / a101386-v6
+LIC: public domain (a Canadian government photograph of 1929; Crown copyright has expired). Library and Archives Canada serves the image openly at data2.archives.ca with no access restriction.
+FILE: relocations-qtc/files/relocations-qtc-lac-a101386-shappa-dog-traces-1929.jpg | DL: https://data2.archives.ca/ap/a/a101386-v6.jpg
+PEOPLE: []
+D: A man crouched on the snow clearing the tangled traces of a fan-hitch team, photographed at Kinngait (Cape Dorset) in 1929 by Joseph Dewey Soper, the Dominion naturalist. The QTC's thematic report on qimmiit prints it beside the sentence that by the mid-1970s almost every team of qimmiit in Qikiqtaaluk had been destroyed. Soper's photograph is what the fan-hitch and the daily work of keeping a team running looked like a generation before that.
+=== relocations-qtc-063 image 1953-06
+T: Six dog teams and sleds heading west over the ice of Pond Inlet towards the settlement, June 1953
+CR: Doug Wilkinson | BIB: qtc2024qimmiliriniq | PG: credited in Qimmiliriniq (QTC 2024), p. 2
+CREDIT: NWT Archives, Northwest Territories, Doug Wilkinson fonds, N-1979-051: 0092
+LIC: NOT CLEARED. The reference is printed in a Qikiqtani Truth Commission report whose own copyright page reserves all rights, so no page image has been cut from it. The underlying photograph is held by the institution named in the credit and its copyright status has not been verified; it is recorded here by identifier only, with no file, until a person confirms the terms.
+FILE:  | DL: https://www.nwtarchives.ca/
+PEOPLE: []
+D: Six teams strung out over the sea ice of Mittimatalik (Pond Inlet) in June 1953, driving in towards the settlement. The QTC report prints it at the head of its thematic study of qimmiit. NWT Archives reference: Doug Wilkinson fonds, N-1979-051: 0092.
+=== relocations-qtc-064 image 1950
+T: A man and boy being pulled by qimmiit, 1950
+CR: Gavin White | BIB: qtc2024qimmiliriniq | PG: credited in Qimmiliriniq (QTC 2024)
+CREDIT: Gavin White / Library and Archives Canada / e004665233
+LIC: NOT CLEARED. The reference is printed in a Qikiqtani Truth Commission report whose own copyright page reserves all rights, so no page image has been cut from it. The underlying photograph is held by the institution named in the credit and its copyright status has not been verified; it is recorded here by identifier only, with no file, until a person confirms the terms.
+FILE:  | DL: https://recherche-collection-search.bac-lac.gc.ca/eng/Home/Search?q=e004665233
+PEOPLE: []
+D: A man and a boy on a qamutiik behind a fan-hitch team. The QTC report prints it beside its description of the fan hitch - each qimmiq on its own trace - and of dogs tracking scents to follow a path through a blizzard, as Isaac Shooyook of Ikpiarjuk described. Library and Archives Canada reference e004665233, photographer Gavin White.
+=== relocations-qtc-065 image 1969
+T: An Inuit family preparing to travel, Ikpiarjuk (Arctic Bay), 1969
+CR: Northwest Territories Department of Information | BIB: qtc2024qimmiliriniq | PG: credited in Qimmiliriniq (QTC 2024)
+CREDIT: NWT Archives, Northwest Territories, Department of Information fonds, G-1979-023: 1385
+LIC: NOT CLEARED. The reference is printed in a Qikiqtani Truth Commission report whose own copyright page reserves all rights, so no page image has been cut from it. The underlying photograph is held by the institution named in the credit and its copyright status has not been verified; it is recorded here by identifier only, with no file, until a person confirms the terms.
+FILE:  | DL: https://www.nwtarchives.ca/
+PEOPLE: []
+D: A family loading a qamutiik at Ikpiarjuk in 1969, printed in the QTC report beside its account of how RCMP officers found opportunities to kill qimmiit they considered surplus to Inuit needs. NWT Archives reference: Department of Information fonds, G-1979-023: 1385.
+=== relocations-qtc-066 image 1964
+T: A break on the way to Tunu's camp, using a snow machine and qimmiit, 1964
+CR: Charles Gimpel | BIB: qtc2024qimmiliriniq | PG: credited in Qimmiliriniq (QTC 2024)
+CREDIT: Charles Gimpel / Library and Archives Canada / Charles Gimpel fonds / e011211941-v8
+LIC: NOT CLEARED. The reference is printed in a Qikiqtani Truth Commission report whose own copyright page reserves all rights, so no page image has been cut from it. The underlying photograph is held by the institution named in the credit and its copyright status has not been verified; it is recorded here by identifier only, with no file, until a person confirms the terms.
+FILE:  | DL: https://recherche-collection-search.bac-lac.gc.ca/eng/Home/Search?q=e011211941
+PEOPLE: []
+D: Travellers resting on the ice with both a snow machine and a dog team, photographed by Charles Gimpel in 1964. The QTC report prints it beside its account of the first snow machines: manufactured in limited numbers in the 1950s, few in use, and providing transport only within and near settlements - the point being that the machine did not replace the qimmiq before the qimmiit were killed. Library and Archives Canada reference: Charles Gimpel fonds, e011211941-v8.
+=== relocations-qtc-067 image 1958
+T: Kinngarmiut unloading cargo at Kinngait, 1958
+CR: Charles Gimpel | BIB: qtc2013kinngait | PG: credited in the QTC community history of Kinngait
+CREDIT: Charles Gimpel / Library and Archives Canada / e004922713
+LIC: NOT CLEARED. The reference is printed in a Qikiqtani Truth Commission report whose own copyright page reserves all rights, so no page image has been cut from it. The underlying photograph is held by the institution named in the credit and its copyright status has not been verified; it is recorded here by identifier only, with no file, until a person confirms the terms.
+FILE:  | DL: https://recherche-collection-search.bac-lac.gc.ca/eng/Home/Search?q=e004922713
+PEOPLE: []
+D: People carrying cargo ashore at Kinngait in 1958, printed in the QTC's Kinngait community history beside its account of centralization and the growing reliance on imported provisions. Library and Archives Canada reference e004922713, photographer Charles Gimpel.
+=== relocations-qtc-068 image 1960
+T: Kenojuak Ashevak drawing inside her tent, 1960
+CR: Rosemary Gilliat | BIB: qtc2013kinngait | PG: credited in the QTC community history of Kinngait
+CREDIT: Rosemary Gilliat / National Film Board of Canada. Photothèque / Library and Archives Canada / PA-146503
+LIC: NOT CLEARED. The reference is printed in a Qikiqtani Truth Commission report whose own copyright page reserves all rights, so no page image has been cut from it. The underlying photograph is held by the institution named in the credit and its copyright status has not been verified; it is recorded here by identifier only, with no file, until a person confirms the terms.
+FILE:  | DL: https://recherche-collection-search.bac-lac.gc.ca/eng/Home/Search?q=PA-146503
+PEOPLE: []
+D: Kenojuak Ashevak at work on a drawing inside a tent at Kinngait in 1960, photographed by Rosemary Gilliat for the National Film Board. The QTC report names her with Napachie Pootoogook, Kiakshuk, Nuna Parr, Joanasie Salomonie, Eegyadluk Ragee and Lucy Quinnuayuak among the printmakers whose work made Kinngait an artistic centre. Library and Archives Canada reference PA-146503.
+=== relocations-qtc-069 image 1951
+T: Inuit paddling a child on a stretcher from the CGS C. D. Howe at Iqaluit for transfer to hospital in Montreal, 1951
+CR: Wilfrid Doucette | BIB: qtc2013health | PG: credited in the QTC thematic report on health care
+CREDIT: Wilfrid Doucette / National Film Board of Canada, Still Photography Division / Library and Archives Canada / PA-189642
+LIC: NOT CLEARED. The reference is printed in a Qikiqtani Truth Commission report whose own copyright page reserves all rights, so no page image has been cut from it. The underlying photograph is held by the institution named in the credit and its copyright status has not been verified; it is recorded here by identifier only, with no file, until a person confirms the terms.
+FILE:  | DL: https://recherche-collection-search.bac-lac.gc.ca/eng/Home/Search?q=PA-189642
+PEOPLE: []
+D: A child on a stretcher being carried by boat from the C. D. Howe, anchored offshore at Iqaluit, for transfer by aircraft to a hospital in Montreal in 1951. The annual visit of the C. D. Howe with its X-ray equipment is the central image of the tuberculosis evacuations, in which people were taken south for years at a time and families were often not told where they had gone or whether they had died. Library and Archives Canada reference PA-189642.
+=== relocations-qtc-070 image 1957
+T: An Inuk boy in a classroom at the Mountain Sanatorium, Hamilton, Ontario, 1957
+CR: Walter Curtin | BIB: qtc2013health | PG: credited in the QTC thematic report on health care
+CREDIT: Walter Curtin / Walter Curtin fonds / Library and Archives Canada / e011502551
+LIC: NOT CLEARED. The reference is printed in a Qikiqtani Truth Commission report whose own copyright page reserves all rights, so no page image has been cut from it. The underlying photograph is held by the institution named in the credit and its copyright status has not been verified; it is recorded here by identifier only, with no file, until a person confirms the terms.
+FILE:  | DL: https://recherche-collection-search.bac-lac.gc.ca/eng/Home/Search?q=e011502551
+PEOPLE: []
+D: A boy at a school desk in the Mountain Sanatorium at Hamilton, where Inuit children and adults were sent for tuberculosis treatment. The QTC report prints it beside its account of patients returned to the wrong communities and of families who waited for children and parents who had already died in hospital. Library and Archives Canada reference e011502551.
+=== relocations-qtc-071 image 1935
+T: Tununirusirmiut unloading the RMS Nascopie off Ikpiarjuk, 1930s
+CR: unattributed | BIB: qtc2013arcticbay | PG: credited in the QTC community history of Arctic Bay
+CREDIT: Canada. Indian and Northern Affairs / Library and Archives Canada / PA-203632
+LIC: NOT CLEARED. The reference is printed in a Qikiqtani Truth Commission report whose own copyright page reserves all rights, so no page image has been cut from it. The underlying photograph is held by the institution named in the credit and its copyright status has not been verified; it is recorded here by identifier only, with no file, until a person confirms the terms.
+FILE:  | DL: https://recherche-collection-search.bac-lac.gc.ca/eng/Home/Search?q=PA-203632
+PEOPLE: []
+D: People unloading the Hudson's Bay Company supply ship RMS Nascopie, anchored offshore at Ikpiarjuk, in the 1930s. Library and Archives Canada reference PA-203632.
+=== relocations-qtc-072 image 1969
+T: A dog team running through a whiteout near Ikpiarjuk, 1969
+CR: Northwest Territories Department of Information | BIB: qtc2013arcticbay | PG: credited in the QTC community history of Arctic Bay
+CREDIT: NWT Archives, Northwest Territories, Department of Information fonds, G-1979-023: 1451
+LIC: NOT CLEARED. The reference is printed in a Qikiqtani Truth Commission report whose own copyright page reserves all rights, so no page image has been cut from it. The underlying photograph is held by the institution named in the credit and its copyright status has not been verified; it is recorded here by identifier only, with no file, until a person confirms the terms.
+FILE:  | DL: https://www.nwtarchives.ca/
+PEOPLE: []
+D: A team driving through a whiteout near Ikpiarjuk in 1969. NWT Archives reference: Department of Information fonds, G-1979-023: 1451.

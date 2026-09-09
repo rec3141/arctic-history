@@ -1,0 +1,120 @@
+# The ice that stopped them: an 1850s record of the western Parry Channel
+[page · mcclure-investigator · draft]
+
+This page is for people on the Amundsen. Everything below is an ice observation
+made by a sailing ship in the same waters the ship works now, between 1850 and
+1854, with the position and the date attached. Read as a set, these voyages are
+a long, expensive, involuntary experiment in what the ice of the western Parry
+Channel does to shipping.
+
+## The barrier that stopped everybody in the same place
+
+McClure was turned back twice in [[place:Prince of Wales Strait]] at almost
+exactly the same point:
+
+- **17 September 1850**, 73° 10' N, 117° 10' W — about thirty miles short of
+  Barrow Strait.
+- **16 August 1851**, 73° 43' 43" N, 115° 32' 30" W — twenty-five miles short.
+
+[[person:Richard Collinson]], a year behind him and without knowing it, was
+stopped at **73° 30' N, 114° 35' W on 31 August 1851** — between McClure's two
+positions. Three attempts by two ships in two seasons, all halted within about
+forty miles of one another.
+
+What stops a ship there is not the strait's own ice. It is old, thick,
+multi-year floe driven south and east out of the Beaufort Sea into
+[[place:Viscount Melville Sound]] and jammed against the islands. The same
+material is why [[person:Henry Kellett]] could not get his ships the last six
+miles into [[place:Winter Harbour]] in September 1852 — the fast ice was, in
+M'Dougall's words,
+[[artifact:mcclure-investigator-057|"too absurd to be long entertained"]] as
+something to saw through — and why McClure, forced to go round the outside of
+[[place:Banks Island]] instead, was nearly crushed against the cliffs on
+20 August 1851 ([[artifact:mcclure-investigator-004]]).
+
+This is the same ice regime that keeps the northern route of the passage
+unreliable today while the southern route through Victoria Strait opens most
+summers. It is why [[topic:st-roch-modern|the St. Roch]] went the southern way
+eastbound and needed a whole season the northern way westbound, and why
+[[topic:amundsen-gjoa|Amundsen]] never considered the northern route at all.
+
+## The one open season, and what it was worth
+
+In three days from 17 to 19 August 1851, the Investigator ran about three
+hundred miles from Nelson Head north up the *west* coast of Banks Island in
+clear water. That coast faces the Beaufort pack directly and is normally the
+worst ice in the archipelago. It happened once, and it took McClure to a place
+he could not leave.
+
+Then, on 10 September 1851, drifting into the pack:
+[[artifact:mcclure-investigator-016|"Thus we launch into this formidable frozen
+sea."]] Thirteen days later he was aground in
+[[place:Mercy Bay]] and the voyage was over.
+
+The lesson a modern reader can take from that pair of facts is not that the
+Arctic was worse then. It is that a single anomalous open season on an
+exposed coast is a trap for anyone with no way out, and that the ice which
+matters is the ice at the far end of the passage, in the season after the one
+you are sailing in.
+
+## Freeze-up, in a navigator's words
+
+M'Dougall on 8 September 1852, off the south coast of Melville Island:
+[[artifact:mcclure-investigator-058|"the whole sea was covered with a thick
+sludge, which the seamen not inaptly likened to thick pea-soup"]] — grease ice,
+making the ship unmanageable without a strong breeze. By two the next morning
+they were pushing through bay ice an inch and a half thick, formed overnight;
+by 10 September the Resolute had been warped into a canal sawn through the fast
+ice at [[place:Dealy Island]] and was in winter quarters.
+
+Two days from open water to a ship immobilised for eleven months. The Resolute
+was blown out of that berth by a gale on 17 August 1853, got about a hundred
+and fifty miles east, and was caught again in young ice within six hours of
+casting off on 10 September ([[artifact:mcclure-investigator-012]]).
+
+## Drift
+
+The [[artifact:mcclure-investigator-012|Resolute's beset drift]] is one of the
+better-documented Barrow Strait drift records of the nineteenth century, because
+her officers had nothing else to do and kept a table: from 74° 59' N, 105° 38' W
+on 10 September 1853, north to 75° 04' N on 13 October, then south and east to
+74° 41' N, 101° 22' W by 5 November — 180 miles in eight weeks, then effectively
+stationary all winter.
+
+Then the part nobody measured. Left in the pack on 15 May 1854 at 74° 41' N,
+101° 22' W, the ship went out through Barrow Strait, down Lancaster Sound, and
+south through Baffin Bay and Davis Strait on her own, and was found on
+10 September 1855 off the Baffin Island coast — about twelve hundred miles in
+sixteen months, working out at something like two and a half miles a day made
+good. [[artifact:mcclure-investigator-014|The track drawn here]] has real
+endpoints and an invented middle, and is marked as such.
+
+## Cold
+
+- **6 January 1853**, Mercy Bay: mean −61.6 °F over twenty-four hours, with an
+  interval at −67 °F. Two caribou were shot that day.
+- The Resolute's winter of 1853-54 in the pack off [[place:Cape Cockburn]] is
+  covered by a meteorological journal printed in M'Dougall's appendix
+  (pp. 512-522), kept at a fixed drifting position of 74° 41' 34" N,
+  101° 22' 06" W. That is a full winter's instrumental record from the middle
+  of Barrow Strait, and it is in the blue book and the narrative, unexploited
+  here: see [[artifact:mcclure-investigator-039]].
+
+## What a scientist might do with this
+
+The historical value of these voyages is not the anecdote. It is that they
+produce dated, positioned ice observations from a period two centuries before
+the satellite record, in a sector where the multi-year ice budget still governs
+whether the northern route is passable. Three of them are unusually clean:
+
+1. The three "stopped here" positions of 1850, 1851 and 1851 in Prince of Wales
+   Strait, all within forty miles, from two independent ships.
+2. The 1851 open-water anomaly on the west coast of Banks Island — a season
+   when the Beaufort pack was off that shore in mid-August.
+3. The freeze-up sequence of 7-10 September 1852 at Dealy Island, described
+   hour by hour, and the corresponding 1853 sequence a week later in the same
+   waters.
+
+Every one of them is pinned on the map in this layer with the source and the
+page, and the underlying texts are held in full.
+

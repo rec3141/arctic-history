@@ -1,0 +1,39 @@
+# The wrecks: Erebus 2014, Terror 2016
+
+Both ships were found in the water Inuit witnesses had described, within two years of each other, 166 and 168 years after they were abandoned; [[artifact:franklin-1845-021|Parks Canada's map]] puts the two positions against the expedition's route. Neither was where the Victory Point record says they were left.
+
+## HMS *Erebus*, 2 September 2014
+
+Parks Canada had been surveying for the wrecks since 2008. The 2014 season, the Victoria Strait Expedition, put an unusual fleet in the water: the Coast Guard icebreaker *Sir Wilfrid Laurier*, HMCS *Kingston*, the Arctic Research Foundation's *Martin Bergmann*, the *One Ocean Voyager*, and Parks Canada's small research vessel *Investigator*, lowered from the *Laurier*'s well deck each morning to tow side-scan sonar from about seven in the morning until eight at night.
+
+Ice closed the intended northern search area. The search moved south — into the water off the Adelaide Peninsula that [[person:In-nook-poo-zhee-jook]] had pointed out on McClintock's chart in 1869 and that [[person:Ikinnelikpatolok]] had described to [[person:Frederick Schwatka|Schwatka]]'s party in 1879. Then, on 1 September, a Government of Nunavut archaeology team investigating an Inuit tent ring on a small island found a piece of rusted metal on the shore. The helicopter pilot, Andrew Stirling, spotted it; it turned out to be a davit pintle, the fitting for raising and lowering a ship's boats, and it matched the plans of HMS *Erebus* exactly. [[person:Douglas R. Stenton]], Nunavut's director of heritage, carried it out to the *Laurier* that evening, with a wooden deck hawse plug found with it. That fixed the area.
+
+On the second survey line in the new area, the wreck came up on the screen whole. [[person:Ryan Harris]], who had been looking at that screen since 2008, told [[person:Jonathan Moore]] on camera a few minutes later that he would liken it to winning the Stanley Cup. A 40-minute dive by remotely operated vehicle a few days later found two cannon lying off the stern. The find was announced in Ottawa on 9 September 2014 and the ship was confirmed as [[vessel:HMS Erebus|the *Erebus*]] on 1 October. [[artifact:franklin-1845-018|Parks Canada's own account, with the film transcript, is here.]]
+
+She lies in [[place:Wilmot and Crampton Bay]], near [[place:O'Reilly Island]], upright and largely intact — on the first dive the hull loomed two storeys above the divers' heads, and the wreck stands five or six metres proud of the bottom — but in water shallow enough that autumn storms and moving ice work at her every year. That is roughly where [[person:Charles Francis Hall|Hall]] wrote down, from In-nook-poo-zhee-jook's finger on the chart, "lat. 68° 30' N., long. 99° W."
+
+## HMS *Terror*, 3 September 2016
+
+After 2014 the search moved back north, on the reasonable logic that if one ship had gone south, the other was probably nearer where the crews left them, in northern Alexandra Strait.
+
+On 3 September 2016 the *Martin Bergmann* was running from [[place:Uqsuqtuuq]] (Gjoa Haven) up to that northern area. [[person:Sammy Kogvik]], a lifelong resident of Uqsuqtuuq, had been aboard for a day. He mentioned to a crewmate that some six years earlier, on a hunting trip, he had seen a large piece of wood standing out of the ice in [[place:Terror Bay]]. Similar accounts had circulated in the community for years. The crew turned into the bay and dropped a sonar.
+
+They found a three-masted ship sitting upright on the bottom, almost 100 kilometres from where the rest of the search team was surveying, and about 130 kilometres south of the position where the ships were deserted. A remotely operated vehicle showed intact crew quarters, a mess hall, a food store. The Arctic Research Foundation notified the Canadian government on 11 September. Parks Canada's divers, delayed three days by weather, worked the site for three days and on 18 September confirmed her as [[vessel:HMS Terror|the *Terror*]] from the double-wheeled helm and the iron sheathing on the bow, checked against nineteenth-century ship drawings. [[artifact:franklin-1845-019|That account is here.]] The bay had been named for the ship in 1910, long before anyone knew she was in it.
+
+She is in deeper, sheltered water and is astonishingly well preserved: some hatches closed and others open, and some window glass still in place. In the spring of 2017 Parks Canada and Inuit from the Gjoa Haven Hunters and Trappers Association set an ice camp over her, the Inuit cutting the holes through which the vehicles were dropped. Which raises the question the archaeologists put first: not what she is, but why she is there, upright and tidy, a hundred and thirty kilometres from where she was abandoned. She was not left at anchor. A small boat appears to have gone down with her.
+
+## What this does to the story
+
+The written record ends on 26 April 1848 with 105 men walking south. The wrecks say something the record cannot: at least one ship, and probably both, moved a long way after that, and did so under some kind of control. A ship does not drift into a bay and settle upright with her hatches closed. This is exactly what Inuit testimony had said for a century and a half — that men returned to the ships, that at least one was sailed south, that Inuit boarded her at Ook-joo-lik and found a dead man in a locked cabin, and that she sank there after a hole was cut in her side. See [[page:franklin-1845-inuit-testimony]].
+
+It also means the expedition's own men, or some of them, very likely completed the last unsailed link of the Northwest Passage — going south along the west side of King William Island in a ship — fifty-eight years before [[person:Roald Amundsen]] took [[vessel:Gjoa|the *Gjøa*]] through the whole of it. Hall said as much in his letter of July 1869: "The same year that the *Erebus* and *Terror* were abandoned one of them consummated the Great Northwest Passage, having five men aboard." He was ignored.
+
+## Whose wrecks they are
+
+The two sites together are the Wrecks of HMS Erebus and HMS Terror National Historic Site, in Parks Canada's own words "the first national historic site in Nunavut cooperatively managed with Inuit". It is managed by Parks Canada together with the Inuit Heritage Trust and the Nattilik Heritage Society, with support from the Kitikmeot Inuit Association; the Nattilik Heritage Society administers the Wrecks Guardian Program, and [[place:Uqsuqtuuq]] holds the annual Umiyaqtutt Festival marking the finds. What is excavated is jointly owned by Parks Canada and the Inuit Heritage Trust: it goes to Ottawa for study and conservation, and a selection returns for display at the Nattilik Heritage Centre in Uqsuqtuuq.
+
+The work has been going on every season since 2015, from vessels including [[artifact:franklin-1845-008|the barge *Qiniqtiryuaq*]], which in [[artifact:franklin-1845-057|2024 carried fifty dives in thirteen days]] on the wreck of the *Erebus* — a seaman's chest in the forecastle, a drawer thought to be Third Lieutenant James Fairholme's, and remotely operated vehicles down to the engine room and two coal bunkers scraped empty. From 2025 Parks Canada moves from active excavation to a monitoring programme co-developed with Inuit.
+
+[[person:Louie Kamookak]] of Uqsuqtuuq, who spent more than thirty years collecting elders' accounts and matching them to the written record and to place names, did not live to see the *Terror* fully surveyed; he died in 2018. [[artifact:franklin-1845-020|Parks Canada's own account]] says plainly that Inuit Qaujimajatuqangit, together with western science, is what found the ships.
+
+They are also graves. At least one man was still aboard when Inuit boarded the ship at Ook-joo-lik, and the seabed around both wrecks is an archaeological site under a Superintendent's order. Vessels working these waters — this one included — are surveying a burial place.

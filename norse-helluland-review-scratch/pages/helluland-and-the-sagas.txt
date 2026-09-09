@@ -1,0 +1,129 @@
+# Helluland and the sagas: what the texts actually say
+[page · norse-helluland · draft]
+
+# Helluland and the sagas: what the texts actually say
+
+Two Icelandic sagas describe voyages from Greenland to lands in the west. They
+are the whole of the written evidence for those voyages, and they are not
+records. Before using them it is worth being precise about what they are.
+
+## The manuscripts
+
+[[source:gathornehardy1921norse|Grœnlendinga saga]], the Saga of the
+Greenlanders, survives in one place only: Flateyjarbók, a large illuminated
+Icelandic codex written in the 1380s, roughly four hundred years after the
+events it narrates.
+
+[[source:sephton1880eirik|Eiríks saga rauða]], the Saga of Erik the Red,
+survives in two fourteenth-century manuscripts, Hauksbók and AM 557 4to,
+which differ from one another.
+
+Both were composed in Iceland, by people who had never seen North America, for
+audiences interested in the ancestry of prominent Icelandic families. They are
+good literature and they may well preserve real memory. They are not logs, and
+nobody aboard either voyage wrote anything down.
+
+## What the two sagas agree on
+
+Very little, but the little is the important part.
+
+Sailing west and then south from the Greenland settlements you come first to a
+barren land of flat rock, then to a low wooded land with white sand beaches,
+then further south to a land warm enough for grapes and self-sown wheat. The
+Norse called them Helluland, Markland and Vinland. Wherever these lands are,
+the sequence — bare, wooded, warm, going south — is the same in both texts and
+it matches the actual North American coast.
+
+Both also agree that people were already living in these lands, that they were
+called *skrælingar*, that there was trade, and that the trade ended in killing.
+
+## What they disagree on
+
+Nearly everything else, and the disagreements are not small.
+
+**Who found the lands.** Grœnlendinga saga gives the first sighting to
+[[person:Bjarni Herjolfsson]], a trader blown off course between Iceland and
+Greenland who sighted three unknown coasts and would not land, and was
+criticised at the Norwegian court for his incuriosity. Eiríks saga rauða has
+never heard of Bjarni. It gives the discovery to
+[[person:Leif Eiriksson]], blown off course on the way back from Norway.
+
+**Who named Helluland.** In Grœnlendinga saga,
+[[artifact:norse-helluland-001|Leif names it]]: "all the intermediate land from
+the sea to the glaciers was like one flat rock, and the country seemed to them
+destitute of value." In Eiríks saga rauða the naming happens on
+[[person:Thorfinn Karlsefni]]'s much larger expedition years later, and the
+description is different —
+[[artifact:norse-helluland-002|flat stones "so great that two men might well lie
+on them stretched on their backs with heel to heel"]], and arctic foxes in
+abundance.
+
+**How many voyages, in what order, and who died on which.** The two accounts
+cannot be harmonised without deciding that one of them is wrong. Every published
+reconstruction of the Vinland voyages is a choice about which saga to believe.
+
+## The two descriptions of Helluland
+
+They are not the same place, or at least not obviously.
+
+Grœnlendinga saga's Helluland is glaciated: no grass, great glaciers behind, the
+foreground one sheet of rock. That describes the fiorded east coast of
+[[place:Qikiqtaaluk]] very well, or the Torngats.
+
+Eiríks saga's is not glaciated at all. It has flagstones big enough to lie on
+and it has arctic foxes, and Karlsefni's party reach it in two *dœgr* from the
+Bear Isles. It reads like a lower, flatter coast.
+
+Both can be Baffin Island, which is big. That is the point: the descriptions are
+loose enough that they can be almost anywhere on a two-thousand-kilometre coast.
+
+## The identification with Baffin Island
+
+Most scholars now place Helluland on Qikiqtaaluk, and the reasons are decent
+ones. It is the first land you meet sailing west from the Greenland settlements.
+Its eastern coast is exactly bare glaciated rock. The direction and the sailing
+times fit. And the *Icelandic geography*, a fourteenth-century treatise,
+places it in the same relative position:
+[[artifact:norse-helluland-006|"South from Greenland is Helluland, next to it is
+Markland, thence it is not far to Wineland the Good."]]
+
+But this is an inference from texts, not a finding on the ground, and it has
+been argued the other way by serious people:
+
+- **G. M. Gathorne-Hardy** (1921), whose translation is the one used here,
+  rejected the Labrador identification of Helluland outright and argued for
+  Newfoundland, on the grounds of the sailing directions between the lands.
+- **H. P. Steensby** (1918) put Karlsefni's Helluland landfall at Resolution
+  Island, in the mouth of Hudson Strait.
+- **Sir Wilfred Grenfell** (1934) placed it at Kangalaksiorvik Bay in northern
+  Labrador, where he had seen "endless acres of flat stones".
+- **Gustav Storm** put Helluland in Labrador, Markland in Newfoundland.
+
+*Hella* means flat stone. There is a great deal of flat stone in the eastern
+Arctic. The name is a description, not an address.
+
+## Helluland's uninhabited regions
+
+There is a second, stranger body of Helluland material that has nothing to do
+with the Vinland voyages. In the *fornaldarsögur*, the legendary sagas written
+in the thirteenth and fourteenth centuries, "Helluland's *óbygðir*" — its
+uninhabited regions — is a standard setting for monsters. In *Örvar-Odds saga*
+an enemy hides in Skuggifjörðr in Helluland's óbygðir; in *Hálfdanar saga
+Eysteinssonar* a hero "brought Helluland's óbygðir under his sway and destroyed
+all the giants there".
+
+This tells us something real, though not what it appears to. By the time these
+were written, Helluland was no longer a place anyone was going. It had become
+what the far north always becomes in literature: the place where the story puts
+the giants. Any claim built on these texts is a claim about Icelandic
+storytelling, not about Baffin Island.
+
+## What follows
+
+The sagas cannot be checked, and nothing found on Baffin Island so far confirms
+them. The medieval **record** — annals, letters, law — is a different and better
+kind of evidence, and it survives in fragments: see
+[[page:the-northern-hunting-grounds]]. What is in the ground is treated in
+[[page:norse-things-in-inuit-houses]] and
+[[page:the-helluland-project-and-its-critics]].
+

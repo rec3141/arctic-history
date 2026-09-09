@@ -1,0 +1,72 @@
+
+######## place-names-overview-northern-half
+
+######## place-names-inuit-and-inughuit-names-of-the-north
+FUZZ  0.74 No Eskimos lived in Cornwallis Island from the time of its discovery until 1953, though there is evidence of earlier occ
+      FOUND[qei-from-the-air-1947-dunbar1956-arctic-]: ttlement its no eskimos lived in cornwallis island from the time of discovery until in though earlier occupation of 1953 there evidence 
+SHORT 0.00 cliffs where murres nest.
+SHORT 0.00 the waters of Tallurutit
+
+######## place-names-parrys-names-1819-20
+
+######## place-names-the-franklin-searchs-names
+MISS  0.00 after my esteemed friend Admiral Sir Samuel Pym
+MISS  0.00 facetiously christened by the seamen
+
+######## place-names-sverdrups-norwegian-archipelago
+
+######## place-names-american-names-on-smith-sound-and-ellesmere
+MISS  0.00 in honour of my Alma Mater
+FUZZ  0.83 in honour of the date, July 4th
+      FOUND[greenland-inughuit-peary1898-v1.txt]: y in onour of the date july 4th the grea
+
+######## place-names-twentieth-century-names-in-the-queen-elizabeth-islands
+FUZZ  0.82 in honor of the man who did more than any other member toward success
+      FOUND[karluk-cae-stefansson1921-friendly-arcti]: n honor of the man who did more than any other member of the expedition towards
+SHORT 0.00 Queen Elizabeth Islands
+
+######## place-names-what-nunavut-has-renamed
+MISS  0.00 Keep in mind these names are still being developed, many aren't official yet, and there may be errors,
+MISS  0.00 which of these names are Inuktitut?
+
+######## place-names-the-inuit-names-of-the-south
+SHORT 0.00 the intervening country
+MISS  0.00 the place where Mittima lies
+MISS  0.00 where Inuit place names have long been recognized
+
+######## place-names-the-elizabethan-names
+
+######## place-names-the-merchants-names
+
+######## place-names-whalers-and-the-company
+MISS  0.00 the big heart-shaped one
+
+######## place-names-parry-and-ross
+MISS  0.00 after the Board of Admiralty
+FUZZ  0.78 This being the anniversary of the birthday of His Royal Highness the Prince Regent, it naturally suggested to us the pro
+      FOUND[place-names-gbc1910-ninth-report.txt]: y 1819 this being the anniversary of the birthday of his royal highness the prince regent it naturally sug gested to us the propriety of honouring the large iidet which we had been exploring and in wh
+SHORT 0.00 after Clyde river, Scotland
+FUZZ  0.88 after Captain John Quilliam, of the Royal Navy
+      FOUND[place-names-gbc1910-ninth-report.txt]: y 1822 after captain jofin quilliam of the royal navy i
+FUZZ  0.90 at the request of James Ross, after a friend
+      FOUND[place-names-gbc1910-ninth-report.txt]: y 1821 at the request j of james ross after a friend 
+FUZZ  0.86 the place where there are houses
+      FOUND[posts-rcmp-missions-grant2002-arctic-jus]: the place where there are igloos or houses
+
+######## place-names-king-william-and-boothia
+
+######## place-names-what-the-communities-are-called-now
+FUZZ  0.86 the place where there are houses
+      FOUND[posts-rcmp-missions-grant2002-arctic-jus]: the place where there are igloos or houses
+MISS  0.00 We're getting our traditional name back and keeping our language strong.
+MISS  0.00 Starting now, Hall Beach will be known as Sanirajak, and what was called Cape Dorset, starting this morning will be call
+
+######## place-names-who-decides
+MISS  0.00 where Inuit place names have long been recognized
+MISS  0.00 the government did not have a policy in place
+
+######## place-names-the-greenland-shore
+MISS  0.00 there where one spends the springtime
+SHORT 0.00 Kangertittivaq (Scoresby Sund)
+SHORT 0.00 Kangikajik (Kap Brewster)
+MISS  0.00 where Inuit place names have long been recognized

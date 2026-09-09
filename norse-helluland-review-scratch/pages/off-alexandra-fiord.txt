@@ -1,0 +1,112 @@
+# Off Alexandra Fiord: what is on the ground, and who dug it
+[page · norse-helluland · draft]
+
+# Off Alexandra Fiord: what is on the ground, and who dug it
+
+If the ship is anywhere in Buchanan Bay, the archaeology is within sight. This
+page is meant to be usable from the bridge: where the sites are, what is in
+them, and whose work you are looking at.
+
+## Where things are
+
+[[place:Skraeling Island]] lies at the mouth of [[place:Alexandra Fiord]], about
+5 km northeast of the abandoned RCMP station on the fiord's south shore. It is a
+small island, roughly 2 by 1.4 km, ridged with raised gravel beaches. The
+archaeological site — SfFk-4 in the Borden system — is on the island's southern
+extension: twenty-three Thule winter house ruins, seventeen of them in five
+clusters and six scattered, with tent rings, kayak and umiaq supports and food
+caches among them. All twenty-three have been at least partly excavated. Higher
+up the island, at 29 to 30 m above sea level, is SfFk-6, an Arctic Small Tool
+tradition site four thousand years older, where a partly buried walrus tusk
+dated 5390 plus or minus 380 BP, about 3440 BC, though the excavator says its
+association with the stone tools there can only be inferred.
+
+North and west of the fiord, [[place:Bache Peninsula]] and
+[[place:Knud Peninsula]] carry more. On Knud Peninsula there is a Late Dorset
+longhouse 45 m long and 5 m wide, with lines of joined stone hearths beside it —
+one unbroken run of them 32 m long, of eighteen units — where whole communities
+seem to have cooked together and eaten inside the enclosure. There is the Thule
+winter site of Eskimobyen. Further west, in the Flagler Bay area, is
+[[place:Haa Island]]. Across Smith Sound on the Greenland side is
+[[place:Ruin Island]], which gave the whole cultural phase its name.
+
+The scale is easy to underestimate. A season of helicopter reconnaissance in
+1978, from Wade Point on Smith Sound to Norman Lockyer Island in Princess Marie
+Bay, located 125 new sites. The count of Thule winter dwellings alone in the
+Bache Peninsula region passed two hundred.
+
+## Why here
+
+Polynyas. Skraeling Island sits on the western edge of the North Water, just
+south of the Flagler Bay polynyas, near several smaller and less reliable
+openings. Another polynya forms between Knud and Bache Peninsulas and, on
+satellite imagery, begins to open in late April or early May. When
+[[person:Peter Schledermann]]'s party arrived on Knud Peninsula in early July
+1978 they counted about three hundred walrus distributed across eighteen ice
+floes in it.
+
+That is the whole explanation for the density of sites. Ringed and bearded seal
+and polar bear are there year round; beluga, narwhal, bowhead and walrus come
+in summer; the North Water carries the largest concentration of seabirds in the
+Arctic. This coast is one of the few places in the High Arctic where a family
+could live through a winter without moving.
+
+## Who dug it
+
+- **1875.** [[person:George Strong Nares]]'s expedition notes seasonal camp
+  remains in passing.
+- **1899-1900.** [[person:Otto Sverdrup]]'s men observe and name the winter
+  house ruins on Knud Peninsula, and dig into one or two. The site is still
+  called Eskimobyen because of them. See [[topic:sverdrup-bernier-peary]].
+- **1924.** The RCMP establish a detachment on Bache Peninsula; its members
+  record further sites.
+- **1939.** T. C. Lethbridge spends a few days excavating and mapping
+  Eskimopolis, the site Sverdrup had first noted.
+- **1930s-40s.** [[person:Erik Holtved]] digs the Thule winter houses on the
+  northwest Greenland coast, including Ruin Island, and names the Ruin Island
+  phase — the earliest known Inuit occupation of the region.
+- **1977 onward.** Peter Schledermann of the Arctic Institute of North America,
+  with [[person:Karen M. McCullough]], surveys and then excavates the whole
+  region, in seasons that ran into the 1990s. W. Blake Jr. of the Geological Survey of Canada runs the radiocarbon
+  programme, deliberately dating several different materials from single
+  structures to measure how far they disagree.
+- **2013.** [[person:Lesley Howse]] returns to the animal bone from
+  [[artifact:norse-helluland-042|House 15]] and reads it against Inuit oral
+  history and ethnography.
+
+## Who the Ruin Islanders were
+
+They were newcomers, and their belongings say where from. The house plan puts a
+separate kitchen at the end of its own tunnel running parallel to the entrance
+passage — a Bering Sea arrangement.
+[[artifact:norse-helluland-040|Clay pottery]] from the site carries the stamped
+curvilinear paddle marks of Barrow Curvilinear Paddled ware, made on the Bering
+Sea coast. There is [[artifact:norse-helluland-041|an ivory brow band]] of a
+kind common at Cape Denbigh on Norton Sound.
+[[artifact:norse-helluland-038|The decorated ivory needle case]] found within a
+few centimetres of the chain mail in House 6 matches specimens from Nunagiak and
+from a Tigara burial at Point Hope, and lacks the flaring wings of the eastern
+Arctic style entirely.
+
+[[source:schledermann1980western|Schledermann and McCullough argued in 1980]]
+that these people had come the whole way from Alaska, and that they arrived
+about AD 1050 to 1100. The first half of that has held up. The second half has
+not: the redating of the Thule migration since the 2000s puts the arrival
+around AD 1200 or later, and the Ruin Island phase is now normally given as
+1200 to 1300. Their own evidence pointed that way, had they trusted it — the
+Sicco harpoon heads they used to argue for an early arrival had no radiocarbon
+date earlier than the twelfth century.
+
+The people themselves, and the Dorset who were here before them, belong to
+[[topic:thule-dorset]]; their descendants across Smith Sound are
+[[topic:greenland-inughuit]].
+
+## The Norse material
+
+That is the point of this topic, and it has its own page:
+[[page:norse-things-in-inuit-houses]]. In short: chain mail, boat rivets, an oak
+carpenter's plane, iron knife blades hafted in wood and musk-ox horn, copper,
+two pieces of woven woollen cloth, barrel bottoms and a piece of an oak box —
+all of it out of Inuit houses, none of it out of a Norse structure, because
+there is no Norse structure here.
+

@@ -4,7 +4,7 @@ Two of Sir Edward Belcher's five ships spent the winter of 1852-53 in a place no
 
 [[artifact:franklin-search-024|The Assistance and the steam tender Pioneer]] came up [[place:Wellington Channel]] in August 1852, found no ice barrier where [[person:William Penny|Penny]] had reported one the year before, and on 18 August secured themselves in [[place:Northumberland Sound]] on the north side of the [[place:Grinnell Peninsula]], about 76° 57′ N. [[person:William John Samuel Pullen|Commander Pullen]] and HMS North Star lay 120 miles south at [[place:Beechey Island]] with the mail and the stores. [[place:Dealy Island]], where [[person:Henry Kellett|Kellett]] had the Resolute and Intrepid, was 250 miles to the south-west across two straits.
 
-Three parties went out in the spring: Belcher himself to the north-east, [[person:George Henry Richards|Commander Richards]] to the south-west with [[person:Sherard Osborn|Lieutenant Osborn]] under him, and a string of auxiliary, commissariat and mail sledges behind them. Nothing about this is guesswork: Belcher printed his own journal in volume I of [[source:belcher1855last|The Last of the Arctic Voyages]] and Richards's journal, in long extract, in volume II.
+Three parties went out in the spring: Belcher himself to the north-east, [[person:George Henry Richards|Commander Richards]] to the south-west with [[person:Sherard Osborn|Lieutenant Osborn]] under him, and a string of auxiliary, commissariat and mail sledges behind them. Both journeys are told from the men who made them: Belcher printed his own journal in volume I of [[source:belcher1855last|The Last of the Arctic Voyages]] and Richards's journal, in long extract, in volume II.
 
 ## Belcher's own journey, 2 May to 23 June
 
@@ -18,7 +18,7 @@ The ground was poor. In fifty days his party killed two hares, five ptarmigan an
 
 ## Richards to Melville Island — and the one meeting
 
-[[artifact:franklin-search-082|Richards left the ship on 10 April 1853]] with six sledges and fifty-seven men and the thermometer at −4°F, and came back on 12 July: fifty-six days out heavy and thirty-five home light, ninety-six days by Belcher's count. He shed his auxiliaries one by one — Grove at the Deception Group on 16 April, Dr [[person:David Lyall|Lyall]] on the 25th, Herbert at Point Success — and went on alone.
+[[artifact:franklin-search-082|Richards left the ship on 10 April 1853]] with six sledges and fifty-seven men and the thermometer at −4°F, and came back on 12 July. Belcher's summary is that "the outward heavy journey took fifty-six days, and the return, light, thirty-five days; total, ninetysix days" — his own two figures make ninety-one, and the calendar makes ninety-four. He shed his auxiliaries one by one — Grove at the Deception Group on 16 April, Dr [[person:David Lyall|Lyall]] on the 25th, Herbert at Point Success — and went on alone.
 
 On 29 April he reached the north-east point of Byam Martin Channel, proved it open to [[place:Queens Channel]], named the place Point Success and left Belcher's despatches there in 76° 32′ N, 105° 4′ W, twenty-eight miles from the rendezvous the two commanders had agreed on the floe at Beechey Island the year before. On 6 May he landed on the north-east point of [[place:Melville Island]] and surveyed its whole northern coast, which he found does not go above 76° 48′ 30″ N.
 
@@ -26,7 +26,7 @@ Then, at one in the afternoon of 17 May, [[artifact:franklin-search-084|his part
 
 Richards walked on. He met [[person:Bedford Pim]] weather-bound on 31 May, sighted Kellett's ships on 3 June, and [[artifact:franklin-search-083|came aboard the Resolute alone at five in the morning of the 5th]]: "They were not prepared for a solitary visit from 'the Wellington Channel.'" Kellett came in on the 7th, fed him venison, musk-ox, hare and ptarmigan, gave him his despatches and walked him a day's march out on the dog-sledge. Richards's return brought Belcher the first news of [[topic:mcclure-investigator|McClure and the Investigator]] that had not come by way of England.
 
-Osborn had gone off to the south-west when the division split about 17 May, under Belcher's written order that Richards take "the northernmost and westernmost, and Lieutenant Osborn that to the south-west." What he did there is thinly recorded: on 10 July Richards found Osborn's tent and two of his men at Cape Lady Franklin, their officer "gone southerly." It is a real gap in this topic's record.
+Osborn had gone off to the south-west when the division split about 17 May, under Belcher's written order that Richards take "the northernmost and westernmost, and Lieutenant Osborn that to the south-west." What he did there is thinly recorded: Belcher's own volume says almost nothing of it, and the one glimpse is Richards finding Osborn's tent and two of his men at Cape Lady Franklin on 10 July, their officer "gone southerly." Osborn's own book stops in 1851, so the south-western half of the eastern division's season is the least documented part of the whole search.
 
 ## The mail
 

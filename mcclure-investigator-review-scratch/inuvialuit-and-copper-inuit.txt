@@ -1,0 +1,161 @@
+# The people the Investigator met
+[page · mcclure-investigator · draft]
+
+HMS Investigator carried one man who could talk to the people whose country she
+was sailing through: [[person:Johann August Miertsching]], a Saxon Moravian who
+had spent years at the Labrador mission and whose Inuttitut turned out to be
+close enough to be understood from Point Barrow to Victoria Island. HMS
+Enterprise, following a year behind, carried nobody who could. The difference
+runs through both records.
+
+Miertsching kept a diary in German. It was published at Gnadau in 1855, the
+year after he came home, [[source:miertsching1855reise|Reise-Tagebuch des
+Missionars Joh. Aug. Miertsching]], and the whole text is held here; the English
+most readers meet is L. H. Neatby's *Frozen Ships* (1967), which is still in
+copyright. The extraction from the German is in
+`mcclure-investigator/notes/miertsching1855-inuit.md`.
+
+Nothing on this page comes from the people it describes. It is a missionary's
+diary and two naval officers' books, written for readers in Saxony and London,
+and it is the only record there is of these meetings. The names below are three
+Europeans' attempts to spell what they heard.
+
+## The Alaskan coast, August 1850
+
+**8 August, off Point Drew.** Three unarmed men waited on the beach and led the
+landing party a little way inland. Later fifteen people came out by umiak, sang
+and danced on deck, and told Miertsching they called themselves Kogarmiut and
+traded with Russian traders on the great river. Boatloads that came later sold
+fish for tobacco and began taking things, and were sent away.
+[[person:Alexander Armstrong]] remembered the greeting:
+[[artifact:mcclure-investigator-024|"in a few minutes we were rubbing noses"]].
+
+**11 August, at the mouth of the Colville.** Arrows were shot towards the boats
+before anyone landed. Then the nose-touch greeting, repeated with each person,
+settled it. [[person:Attua]] — Armstrong spells him Aitawa —
+[[artifact:mcclure-investigator-049|"a very handsome and sensible man"]], had
+three wives and thirteen children, wintered three days inland, and traded each
+summer at a place called Nuniwokingak. He had never heard of Franklin. McClure
+gave him a flag and a letter to carry to the Russian posts, and Miertsching
+noted drily that among Eskimos promising and keeping are two different things.
+Whether the letter arrived is not known.
+
+**24 August, near Point Warren.** Spears, drawn bows, and blank pistol shots,
+then trade in caribou hides and fox and bear furs for knives and saws.
+[[person:Kairoluak]] kept his camp, Miertsching thought, in better order than
+any he had seen. His son lay with a freshly broken leg the ship's doctor could
+not help in one afternoon. And Kairoluak told a story about strangers who had
+come without boats, built a driftwood house on a point nearby, driven off the
+seals and caribou and birds simply by being there, and starved one by one; the
+last of them was found dead demanding the game back, and Kairoluak had buried
+him.
+
+McClure had every reason to want that story to be about Franklin. The next day
+he and Armstrong and Miertsching walked to the point and found two collapsed
+driftwood winter houses, broken stone lamps and a wrecked kayak — ordinary Inuit
+ruins, and nothing European at all. Miertsching guessed the tale was older than
+any European in the country.
+
+## Nuvuak, Cape Bathurst, 30 August to 1 September 1850
+
+The camp at [[place:Cape Bathurst]] was about thirty tents and nine winter
+houses. Two women, [[person:Kunatsiak]] and [[person:Kenalik]], were found alone
+on the beach ten miles off, the men being away whale-hunting; they showed rings,
+earrings and beads got from three boatloads of Europeans who had stayed two days
+on their land some years before.
+
+At the camp the landing party was rushed by an armed, shouting crowd.
+Miertsching walked out alone to meet them, blank shots were fired, and he drew a
+line in the snow that neither side was to cross. Within the hour the crowd had
+brought its women and children and was putting infants into the visitors' arms.
+
+These people traded with the Loucheux inland, who carried goods on to Fort Good
+Hope on the Mackenzie. They knew nothing of Franklin. They gave Miertsching
+their names for the country: Nuvuak for the cape, Akkunek and Tuppeliosak for
+the islands, Koruk for the water between. And [[person:Kenalualik]], the elder
+who took McClure's letters for the Hudson's Bay post, explained the sky:
+[[artifact:mcclure-investigator-050|"above us is a very large, blue box, the
+house of the sun"]], the stars being light coming through holes in it. He pressed
+Miertsching to stay the winter, offering a sledge, dogs and a tent, and at last
+offered him his daughter, about sixteen —
+[[artifact:mcclure-investigator-053|"takka unna! — take this one!"]] Miertsching
+declined, saying he owed duty to his own angajuga. Fifteen kayaks escorted the
+boats back to the ship.
+
+The next day, aboard, a man described in exact physical detail a party of
+Europeans who had camped ashore — two boats, a polar bear shot on the ice, a
+stout sea-captain who paced twenty steps and turned — and said it had happened
+the day before yesterday. McClure worked out that he was describing
+[[person:John Richardson]]'s boat expedition from the Mackenzie to the
+Coppermine, about two years earlier. A woman said she had seen Europeans with
+masted skin boats three summers ago, and another backed her. That is what
+British intelligence about British ships looked like coming back through Inuit
+memory: exact in substance, elastic about when.
+
+It is also the reason the Franklin search took so long. Everything the searchers
+most needed to know was, by the 1850s, in Inuit heads somewhere between the
+Mackenzie and Iglulik. Almost nobody in the Navy could ask for it. See
+[[topic:inuit-oral-history]].
+
+## The Copper Inuit of Prince Albert Land, 3 June 1851
+
+A sledge party in May 1851 reported five tents on a headland about a hundred
+miles from the beset ship, whose people were friendly but could only be
+understood by signs. McClure went himself, with Miertsching.
+
+They cried [[artifact:mcclure-investigator-051|sivoravogut, erksidlarpogut — we
+are afraid]] — nobody there had seen an outsider, and there were no weapons to
+hand. Then Miertsching, dressed as they were, spoke, and was understood. They
+were astonished to learn that other inhabited lands existed; they had believed
+they were the only people.
+
+What followed is the single most useful hour the expedition spent. On paper laid
+over a sealskin, the band drew McClure the coast: correctly extended to Point
+Parry, correctly marking Sutton and Liston Islands in Dolphin and Union Strait,
+with the further points named and the families who lived on them. Miertsching
+did not write those names down, which is the loss of the century in this
+material. They spoke of a large land to the south, *nunavaksuaraluk*; of caribou
+(*Tuktut*) and musk-ox (*Umingmak*) inland, hunted with bow and throwing-spear;
+and of a high inland mountain where their ancestors had lived during a very
+great water.
+
+Their harpoons, knives, axes, arrowheads and needles
+[[artifact:mcclure-investigator-052|were all native copper]], traded from people
+further east for seal oil and narwhal horn — a working account of the Coppermine
+trade, taken down by a Saxon missionary on Victoria Island in 1851.
+
+McClure tied his own red shawl round the neck of a young mother, who tried at
+first to hand over her baby in payment, not understanding the idea of a gift.
+The party had to leave in a hurry: a seaman named Hewlett had badly frostbitten
+feet.
+
+## Collinson, without an interpreter
+
+[[person:Richard Collinson]] met people too. Near Point Barrow in July 1851
+Inupiat came out over the ice, gave him the local place names and drew him a
+chart of a coast the Navy had been guessing at. At [[place:Walker Bay]] in
+October 1851 an old man named [[person:Ip-pee-ra]] came aboard with his wife and
+two sons-in-law from a camp of twenty-five, and
+[[artifact:mcclure-investigator-042|chose a knife over a boarding pike]]. At
+[[place:Iqaluktuuttiaq]] the Copper Inuit visited all winter and took nothing,
+though the stores lay open on the ice. And at [[place:Camden Bay]] in July 1854
+a boy was wearing buttons engraved with the movements of the search squadrons.
+
+But Collinson had no interpreter, and the conversations stop there. He was
+within a hundred miles of the Franklin evidence twice and did not know it. See
+[[page:collinson-enterprise]].
+
+## What it meant afterwards
+
+McClure landed his stores on the beach at [[place:Mercy Bay]] on 3 June 1853 and
+walked away. For a century and a half Inuvialuit families travelled to
+[[place:McClure's Cache]] for the iron, copper, wood and canvas, and Parks
+Canada records that material from the Investigator has been documented at sites
+right across the western Arctic and that the cache shaped travel routes in the
+region. The wreck lies in Inuvialuit waters, the cache and the graves are inside
+[[place:Aulavik National Park]], and the survey of May 2026 was made because the
+park's Cooperative Management Board asked for it.
+
+The ship's most lasting contribution to the country she was mapping was her
+scrap.
+

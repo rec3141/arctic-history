@@ -1,0 +1,84 @@
+======================================================================
+ross-victory-020 | 1829-05-24 | The constructors of our execrable machinery | pages: p. 9 | bib: ross1835narrative | lat 51.44 lon 0.37
+people: ["John Ross", "John Ericsson"]
+DESC: At Gravesend, the day after leaving Woolwich: 'here the constructors of our execrable machinery, Messrs. Braithwaite and Erickson left us.' Ross wrote the sentence six years later, but the engine had failed within days of the start. John Ericsson went on to design the screw propeller and the USS Monitor.
+======================================================================
+ross-victory-021 | 1829-10 | Not merely useless: a serious encumbrance | pages: pp. 181-182 | bib: ross1835narrative | lat 69.98 lon -92.03
+people: ["John Ross"]
+DESC: Ross's verdict on the first purpose-built steam vessel taken into the Arctic: 'thus rendering us no service, the engine was not merely useless: it was a serious encumbrance; since it occupied, with its fuel, two-thirds of our tonnage, in weight and measurement.' It also required four men who were landsmen, not sailors. In October 1829 it was hoisted out and landed on the beach.
+======================================================================
+ross-victory-022 | 1830-08 | The caches of Messrs. Braithwaite and Erickson | pages: ch. XXXII | bib: ross1835narrative | lat 69.98 lon -92.03
+people: []
+DESC: With the engine ashore and the ship refitted: 'We had obtained abundant room by the dismissal of the engine; and that was no small gain, to compensate a loss, if that machinery can be esteemed a loss, whence we had derived so little advantage and undergone so much inconvenience and vexation. It was probable that the Esquimaux would profit for a long time to come, by the caches of Messrs. Braithwaite and Erickson.' The boiler plate and iron of the Victory's engine went into Netsilingmiut hands and, presumably, into tools.
+======================================================================
+ross-victory-023 | 1830-01-09 | Tima tima: the first meeting, 9 January 1830 | pages: pp. 242-243 | bib: ross1835narrative | lat 69.98 lon -92.03
+people: ["John Ross", "James Clark Ross"]
+DESC: 'Proceeding then alone, to within a hundred yards, I found that each was armed with a spear and a knife, but saw no bows and arrows. Knowing that the word of salutation between meeting tribes was Tima tima, I hailed them in their own language, and was answered by a general shout of the same kind.' Both parties then threw down their weapons. It was the first meeting between this community and any European.
+======================================================================
+ross-victory-024 | 1830-01-20 | The wooden leg had enabled our friend to attend the seal hunt | pages: p. 270 | bib: ross1835narrative | lat 69.98 lon -92.03
+people: ["Tulluahiu", "Chimham Thomas"]
+DESC: Ross, after a page of complaint that Netsilingmiut family news would not interest an English village: 'It was much more important than all that I might have here told... to find that the wooden leg had enabled our friend to attend the seal hunt: but as the philosophy of our worthy carpenter, Chimham Thomas, had contrived a more fitting foot to it, for walking on snow, and that the said foot was in progress to completion, he was appointed to come for it on the following day.' The same paragraph ends with the digging of the armourer's grave.
+======================================================================
+ross-victory-025 | 1830-09-17 | Immovable as the ice and the rocks around it | pages: p. 470 | bib: ross1835narrative | lat 69.98 lon -92.03
+people: []
+DESC: The Victory under sail again after eleven and a half months: 'what seaman could feel this as we did, when this creature, which used to carry us buoyantly over the ocean, had been during an entire year immovable as the ice and the rocks around it, helpless, disobedient, dead.' She made three miles that day, and in the whole of 1830 gained four.
+======================================================================
+ross-victory-026 | 1831-09-14 | Snow our decks, snow our larders, snow our salt | pages: pp. 602-603 | bib: ross1835narrative | lat 70.303 lon -91.6
+people: []
+DESC: From the long tirade against ice and snow written in the third autumn: 'when snow was our decks, snow our awnings, snow our observatories, snow our larders, snow our salt; and, when all the other uses of snow should be at last of no more avail, our coffins and our graves were to be graves and coffins of snow.'
+======================================================================
+ross-victory-027 | 1831-06-01 | We fixed the British flag on the spot | pages: p. 557 | bib: ross1835narrative | lat 70.0881 lon -96.7792
+people: ["James Clark Ross"]
+DESC: 'As soon as I had satisfied my own mind on this subject, I made known to the party this gratifying result of all our joint labours; and it was then, that amidst mutual congratulations, we fixed the British flag on the spot, and took possession of the North Magnetic Pole and its adjoining territory, in the name of Great Britain and King William the Fourth.' They built a limestone cairn over a canister holding a record of the fact.
+======================================================================
+ross-victory-028 | 1831-06-01 | Within one minute, but not the precise spot | pages: p. 558 | bib: ross1835narrative | lat 70.0881 lon -96.7792
+people: ["James Clark Ross"]
+DESC: The scientist correcting his own legend: 'as far as our instruments can be trusted, we had placed ourselves within one minute of the magnetic pole, but had not fixed on the precise spot... if popular conversation gives to this voyage the credit of having placed its flag on the very point, on the summit of that mysterious pole which it perhaps views as a visible and tangible reality, it can now correct itself as it may please.' He adds that a precise determination would need several observers at different distances and bearings.
+======================================================================
+ross-victory-029 | 1831-06-01 | No monument to denote the spot | pages: pp. 555-556 | bib: ross1835narrative | lat 70.0881 lon -96.7792
+people: ["James Clark Ross"]
+DESC: 'We could have wished that a place so important had possessed more of mark or note... But Nature had here erected no monument to denote the spot which she had chosen as the centre of one of her great and dark powers.' They found instead some recently abandoned Inuit snow houses, took possession of them, and made the observations from there.
+======================================================================
+ross-victory-030 | 1832-05-29 | The colours were hoisted and nailed to the mast | pages: p. 643 | bib: ross1835narrative | lat 70.155 lon -91.509
+people: ["John Ross"]
+DESC: 'The colours were therefore hoisted and nailed to the mast, we drank a parting glass to our poor ship, and having seen every man out, in the evening, I took my own adieu of the Victory, which had deserved a better fate. It was the first vessel that I had ever been obliged to abandon, after having served in thirty-six, during a period of forty-two years.'
+======================================================================
+ross-victory-031 | 1832-11 | The inhabitants of an iceberg | pages: Addenda, p. 734 | bib: ross1835narrative | lat 72.7 lon -91.92
+people: []
+DESC: On Somerset House at Fury Beach: the roof 'covered with snow from four to seven feet thick, which being saturated with water when the temperature was 15 degrees below zero, immediately took the consistency of ice, and thus we actually became the inhabitants of an iceberg during one of the most severe winters hitherto recorded: our sufferings, aggravated by want of bedding, clothing, and animal food, need not be dwelt upon.'
+======================================================================
+ross-victory-032 | 1833-08-26 | The Isabella of Hull, once commanded by Captain Ross | pages: p. 720 | bib: ross1835narrative | lat 73.9 lon -80.5
+people: ["John Ross", "Richard Humphreys"]
+DESC: 'I was answered that it was the Isabella of Hull, once commanded by Captain Ross; on which I stated that I was the identical man in question, and my people the crew of the Victory... with the usual blunderheadedness of men on such occasions, he assured me that I had been dead two years.'
+======================================================================
+ross-victory-033 | 1833-08-26 | Never was seen a more miserable-looking set of wretches | pages: p. 721 | bib: ross1835narrative | lat 73.9 lon -80.5
+people: []
+DESC: On coming aboard the Isabella: 'Unshaven since I know not when, dirty, dressed in the rags of wild beasts instead of the tatters of civilization, and starved to the very bones, our gaunt and grim looks, when contrasted with those of the well-dressed and well-fed men around us, made us all feel, I believe for the first time, what we really were, as well as what we seemed to others.' Few of them could sleep in a bed that night; Ross spent it in a chair.
+======================================================================
+ross-victory-034 | 1829-08-13 | Not our luxury but our very existence | pages: p. 108 | bib: ross1835narrative | lat 72.7 lon -91.92
+people: []
+DESC: On opening the Fury's canisters after four years on the beach: 'On examining the contents, they were not found frozen, nor did the taste of the several articles appear to have been in the least degree altered. This was indeed no small satisfaction; as it was not our luxury but our very existence and the prospect of success, which were implicated in this most gratifying discovery.' Ross credits Donkin's patent for the tinned meat.
+======================================================================
+ross-victory-035 | 1831-08-13 | Even the visits of barbarians were welcome | pages: pp. 589-590 | bib: ross1835narrative | lat 70.05 lon -91.87
+people: []
+DESC: Recorded here because it is what the record actually says. In the third summer, twenty-three Netsilingmiut came to the ship and were given dinner: 'we found a relief from the self-converse of our own minds... in the converse of these greasy gormandizing specimens of humanity, whose language we could scarcely comprehend'. And: 'is it wonderful that even the visits of barbarians were welcome?' The people Ross wrote of in these terms had already kept his crew in fresh meat, taught them the country, drawn its chart, and would be the reason several of them came home.
+======================================================================
+ross-victory-036 | 1832 | Huish on the ration: the dainties of the cabin | pages: pp. 410-411 | bib: huish1835last | lat 72.7 lon -91.92
+people: ["John Ross", "William Light"]
+DESC: The hostile account: 'whilst the table of the cabin was daily supplied with all the dainties, which the ship could afford, or the chase could supply; the crew were put upon a contracted allowance; at the same time, that the stock of provisions on board, did not require, that any change should be made in the quantity of food allotted to them.' The men made a formal complaint, which was met at first with anger and then conceded. Huish never went north and wrote from an informant's account; Ross's own narrative says nothing of it.
+======================================================================
+ross-victory-037 | 1829 | Huish on the choice of engine | pages: p. 105 | bib: huish1835last | lat 51.5155 lon -0.0982
+people: ["John Ross"]
+DESC: 'Capt. Ross was peculiarly unfortunate in the choice which he made of the engine, for although the principles on which it was constructed might be according to the strict rules of science, yet as it was almost the first of its kind which had undergone the test of a trial, so it should have been the last to have been affixed to a vessel, about to sail on an expedition, where the utmost strength would be required.' Huish adds that trials on the river in April 1829 already showed defects 'too manifest to excite any hope of obtaining any benefit from its use'.
+======================================================================
+ross-victory-038 | 1833-09 | Two great seas divided by a narrow neck of land | pages: Addenda, p. 732 | bib: ross1835narrative | lat 70.0 lon -93.0
+people: ["John Ross", "Ikmallik", "Awack", "Ooblooria"]
+DESC: Ross reporting to the Admiralty what settled the geography of Boothia: 'from them we gradually obtained the important information that we had already seen the Continent of America, that, about forty miles to the south-west there were two great seas, one to the west, which was divided from that to the east by a narrow strait or neck of land. The verification of this intelligence either way, on which our future operations so materially depended, devolved on Commander Ross.' The intelligence was Netsilingmiut; the verification was a sledge journey with Netsilingmiut guides.
+======================================================================
+ross-victory-039 | 1833-09 | Only one man can be said to have perished | pages: Addenda, p. 734 | bib: ross1835narrative | lat 72.7 lon -91.92
+people: ["William Thom", "George Macdiarmid"]
+DESC: Ross on the survival: 'the distribution and economy of provisions, and to his judicious plans and suggestions must be attributed the uncommon degree of health which our crew enjoyed; and as two out of the three who died the four and a half years, were cut off early in the voyage by diseases not peculiar to the climate, only one man can be said to have perished.' Three of twenty-three did not come home from four winters beset and a fifth ashore.
+======================================================================
+ross-victory-040 | 1830-04 | The woman who called out not to fire | pages: pp. 341-342 | bib: ross1835narrative | lat 69.9 lon -92.4
+people: ["Pow-weet-yah", "James Clark Ross"]
+DESC: 'we were relieved by the courage or confidence of one of the women, who came out of a hut just as I was again raising my gun, and called to me not to fire, advancing up to our party immediately, without showing the least mark of fear. From her, we soon learned the cause of all this hubbub.' Her name is not recorded. A boy of seven or eight had been killed in the night by a falling stone and the death laid to the ship's people.
