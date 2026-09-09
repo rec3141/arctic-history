@@ -936,6 +936,8 @@ def resume_state(c, topic: str) -> dict:
         "SELECT local_file FROM artifacts WHERE topic=? AND local_file<>''", (t,))}
     registered |= {Path(r["local_file"]).name for r in c.execute(
         "SELECT local_file FROM sources WHERE topic=? AND local_file<>''", (t,))}
+    registered |= {Path(r["view_file"]).name for r in c.execute(
+        "SELECT view_file FROM artifacts WHERE topic=? AND view_file<>''", (t,))}
     log = [dict(r) for r in c.execute("SELECT * FROM worklog WHERE topic=? ORDER BY id DESC LIMIT 12", (t,))]
     reindex_links(c)
     wanted = [dict(r) for r in c.execute(
