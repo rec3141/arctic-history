@@ -17,3 +17,4 @@ db/history/SIGNATURE.txt
 # the ship's front-end work-in-progress lives in underway/ inside its clone;
 # grid never sees it and neither should git on either side
 underway/
+.route-venv/
