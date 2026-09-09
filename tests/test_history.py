@@ -448,5 +448,29 @@ class HistoryTests(unittest.TestCase):
                                      "https://example.org/report-1929"])
 
 
+    def test_faces_keywords_and_ontology_round_trip(self):
+        self.artifact(id="crew-photo", type="image", people="James Mutch", local_file="x/files/crew.jpg")
+        H.add_person(self.c, "James Mutch", role="whaling agent")
+        H.add_face(self.c, "crew-photo", 1, "x/files/faces/crew-photo-1.jpg", box=[1, 2, 30, 30],
+                   person="James Mutch", confidence=0.9, method="yunet; single-name")
+        H.add_face(self.c, "crew-photo", 1, "x/files/faces/crew-photo-1.jpg", box=[1, 2, 31, 31])   # re-run replaces
+        self.assertEqual(self.c.execute("SELECT COUNT(*) FROM faces").fetchone()[0], 1)
+        with self.assertRaises(ValueError):
+            H.add_face(self.c, "crew-photo", 2, "x/files/faces/crew-photo-2.jpg", person="Nobody Known")
+        H.add_keywords(self.c, "crew-photo", ["Ships & boats > Whalers > Dundee fleet", "Ice > Besetment"], source="llm:test")
+        H.add_keywords(self.c, "crew-photo", ["People & portraits > Crews"], source="crew")
+        self.assertEqual(H.artifact_keywords(self.c, "crew-photo")[0], "People & portraits > Crews")
+        H.add_keywords(self.c, "crew-photo", ["Ice > Besetment"], source="llm:test")             # replace drops the old
+        self.assertEqual(H.artifact_keywords(self.c, "crew-photo"), ["People & portraits > Crews", "Ice > Besetment"])
+        H.set_ontology(self.c, {"Ice": {"Besetment": []}}, model="test")
+        self.assertEqual(H.get_ontology(self.c)["tree"], {"Ice": {"Besetment": []}})
+
+    def test_check_wants_a_raster_for_a_map_in_a_pdf(self):
+        self.artifact(id="chart-pdf", type="map", local_file="x/files/chart.pdf")
+        self.assertTrue(any(p["what"] == "chart-pdf" and "raster" in p["detail"] for p in H.validate(self.c)["problems"]))
+        self.artifact(id="chart-pdf", type="map", local_file="x/files/chart.pdf", view_file="x/files/chart-view.png")
+        self.assertFalse(any(p["what"] == "chart-pdf" and "raster" in p["detail"] for p in H.validate(self.c)["problems"]))
+
+
 if __name__ == "__main__":
     unittest.main()

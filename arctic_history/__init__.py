@@ -264,6 +264,46 @@ CREATE INDEX IF NOT EXISTS links_target ON links (target);
 
 
 # ---------------------------------------------------------------- plumbing
+SCHEMA_EXTRA = """
+-- faces cut from the photographs for the People page (issue #2)
+CREATE TABLE IF NOT EXISTS faces (
+  id          INTEGER PRIMARY KEY AUTOINCREMENT,
+  artifact_id TEXT NOT NULL,
+  n           INTEGER NOT NULL,
+  file        TEXT NOT NULL,               -- relative to db/history/, under <topic>/files/faces/
+  box         TEXT DEFAULT '',             -- [x, y, w, h] in the original raster, JSON
+  person      TEXT DEFAULT '',             -- a name in people, or '' when unidentified
+  confidence  REAL,
+  method      TEXT DEFAULT '',             -- detector and identification rule
+  updated     TEXT DEFAULT '',
+  UNIQUE (artifact_id, n)
+);
+-- subject paths on artifacts, from the crew or a local model (issue #3)
+CREATE TABLE IF NOT EXISTS keywords (
+  artifact_id TEXT NOT NULL,
+  path        TEXT NOT NULL,               -- levels joined by ' > '
+  ordinal     INTEGER NOT NULL DEFAULT 0,
+  source      TEXT NOT NULL DEFAULT 'crew', -- 'crew' or 'llm:<model>'
+  updated     TEXT DEFAULT '',
+  PRIMARY KEY (artifact_id, path, source)
+);
+-- the one ontology tree the keyword paths belong to
+CREATE TABLE IF NOT EXISTS ontology (
+  id          INTEGER PRIMARY KEY CHECK (id = 1),
+  tree        TEXT NOT NULL DEFAULT '{}',  -- {"Level 1": {"Level 2": ["Level 3", ...]}}, JSON
+  model       TEXT DEFAULT '',
+  generated   TEXT DEFAULT ''
+);
+"""
+
+RASTER_SUFFIXES = (".jpg", ".jpeg", ".png", ".gif", ".tif", ".tiff", ".webp")
+ROUTING = ("", "water", "as-given")       # how a track's line is drawn: routed through water, or as its waypoints
+
+
+def is_raster(name: str) -> bool:
+    return str(name or "").lower().endswith(RASTER_SUFFIXES)
+
+
 def connect(path: Path | None = None, create: bool = True) -> sqlite3.Connection:
     """Open the history database. Twenty researchers write at once, so every
     connection uses the write-ahead log and waits rather than failing."""
@@ -279,11 +319,13 @@ def connect(path: Path | None = None, create: bool = True) -> sqlite3.Connection
     c.execute("PRAGMA foreign_keys=OFF")     # sources may arrive after the artifact citing them
     if create:
         c.executescript(SCHEMA)
+        c.executescript(SCHEMA_EXTRA)
         if "status" not in {r[1] for r in c.execute("PRAGMA table_info(pages)")}:
             c.execute("ALTER TABLE pages ADD COLUMN status TEXT NOT NULL DEFAULT 'draft'")
         for table, col, default in (("sources", "language", "''"), ("sources", "orig_language", "''"),
                                     ("sources", "translator", "''"), ("artifacts", "language", "''"),
-                                    ("pages", "language", "'en'")):
+                                    ("pages", "language", "'en'"),
+                                    ("artifacts", "view_file", "''"), ("artifacts", "routing", "''")):
             if col not in {r[1] for r in c.execute(f"PRAGMA table_info({table})")}:
                 c.execute(f"ALTER TABLE {table} ADD COLUMN {col} TEXT DEFAULT {default}")
         c.commit()
@@ -524,9 +566,11 @@ def add_artifact(c, id: str, topic: str, type: str, title: str, **kw) -> str:
            "lat": None if kw.get("lat") in (None, "") else float(kw["lat"]),
            "lon": None if kw.get("lon") in (None, "") else float(kw["lon"])}
     for f in ("creator", "description", "source_url", "download_url", "local_file",
-              "licence", "credit", "bibkey", "pages", "language"):
+              "licence", "credit", "bibkey", "pages", "language", "view_file", "routing"):
         if kw.get(f) is not None:
             row[f] = str(kw[f])
+    if row.get("routing", "") not in ROUTING:
+        raise ValueError(f"routing must be one of {', '.join(repr(x) for x in ROUTING)}")
     for f in ("geometry", "waypoints"):
         v = kw.get(f)
         if v not in (None, ""):
@@ -1156,6 +1200,89 @@ def _points(coords):
                 yield from _points(v)
 
 
+# ------------------------------------------------ faces, keywords, ontology
+def add_face(c, artifact_id: str, n: int, file: str, **kw) -> int:
+    """One face cut from an image artifact. ``file`` is relative to
+    db/history/ and should sit under <topic>/files/faces/ so the ship's pull
+    brings it. ``person`` is a name in people or '' when unidentified."""
+    if not c.execute("SELECT 1 FROM artifacts WHERE id=?", (artifact_id,)).fetchone():
+        raise ValueError(f"no artifact {artifact_id!r}")
+    box = kw.get("box")
+    if box not in (None, ""):
+        box = box if isinstance(box, str) else json.dumps(box)
+        if len(json.loads(box)) != 4:
+            raise ValueError("box must be [x, y, w, h]")
+    person = (kw.get("person") or "").strip()
+    if person and not c.execute("SELECT 1 FROM people WHERE name=?", (person,)).fetchone():
+        raise ValueError(f"person {person!r} is not in people; enter them first or leave the face unidentified")
+    row = {"artifact_id": artifact_id, "n": int(n), "file": file, "box": box or "",
+           "person": person, "confidence": kw.get("confidence"), "method": kw.get("method", ""),
+           "updated": now()}
+    cols = ",".join(row); marks = ",".join("?" * len(row))
+    sets = ",".join(f"{k}=excluded.{k}" for k in row if k not in ("artifact_id", "n"))
+    c.execute(f"INSERT INTO faces ({cols}) VALUES ({marks}) ON CONFLICT(artifact_id, n) DO UPDATE SET {sets}",
+              tuple(row.values()))
+    c.commit()
+    return int(c.execute("SELECT id FROM faces WHERE artifact_id=? AND n=?", (artifact_id, int(n))).fetchone()["id"])
+
+
+def forget_faces(c, artifact_id: str) -> int:
+    n = c.execute("DELETE FROM faces WHERE artifact_id=?", (artifact_id,)).rowcount
+    c.commit()
+    return n
+
+
+def add_keywords(c, artifact_id: str, paths: list, source: str = "crew", replace: bool = True) -> int:
+    """Subject paths on an artifact, e.g. 'Ships & boats > Whalers > Dundee
+    fleet'. ``replace`` drops that source's earlier paths first, so a re-run
+    of the model does not pile up. A crew path outranks the model's."""
+    if not c.execute("SELECT 1 FROM artifacts WHERE id=?", (artifact_id,)).fetchone():
+        raise ValueError(f"no artifact {artifact_id!r}")
+    if not (source == "crew" or source.startswith("llm:")):
+        raise ValueError("source must be 'crew' or 'llm:<model>'")
+    clean = []
+    for p in paths:
+        p = " > ".join(part.strip() for part in str(p).split(">") if part.strip())
+        if p and p not in clean:
+            clean.append(p)
+    if replace:
+        c.execute("DELETE FROM keywords WHERE artifact_id=? AND source=?", (artifact_id, source))
+    for i, p in enumerate(clean[:3]):
+        c.execute("INSERT OR REPLACE INTO keywords (artifact_id, path, ordinal, source, updated) VALUES (?,?,?,?,?)",
+                  (artifact_id, p, i, source, now()))
+    c.commit()
+    return len(clean[:3])
+
+
+def artifact_keywords(c, artifact_id: str) -> list:
+    """The paths to publish: the crew's first, then the model's, three at most."""
+    rows = c.execute("SELECT path, source, ordinal FROM keywords WHERE artifact_id=? "
+                     "ORDER BY CASE WHEN source='crew' THEN 0 ELSE 1 END, ordinal", (artifact_id,)).fetchall()
+    out = []
+    for r in rows:
+        if r["path"] not in out:
+            out.append(r["path"])
+    return out[:3]
+
+
+def set_ontology(c, tree: dict, model: str = "") -> None:
+    """The one tree every keyword path belongs to. Kept stable between runs:
+    a later run extends it rather than replacing it, so pages do not reshuffle."""
+    if not isinstance(tree, dict):
+        raise ValueError("the ontology is a dict of level-1 -> {level-2: [level-3, ...]}")
+    c.execute("INSERT INTO ontology (id, tree, model, generated) VALUES (1, ?, ?, ?) "
+              "ON CONFLICT(id) DO UPDATE SET tree=excluded.tree, model=excluded.model, generated=excluded.generated",
+              (json.dumps(tree, ensure_ascii=False), model, now()))
+    c.commit()
+
+
+def get_ontology(c) -> dict | None:
+    r = c.execute("SELECT tree, model, generated FROM ontology WHERE id=1").fetchone()
+    if not r:
+        return None
+    return {"generated": r["generated"], "model": r["model"], "tree": json.loads(r["tree"] or "{}")}
+
+
 def validate(c) -> dict:
     """Everything wrong that a reader would notice: an artifact with no
     credit or no source, a bibkey that resolves to nothing, a coordinate on
@@ -1169,6 +1296,13 @@ def validate(c) -> dict:
     for r in c.execute("SELECT * FROM artifacts"):
         if not r["credit"]:
             bad("artifact", r["id"], "no credit line")
+        if r["type"] in ("map", "image") and not r["view_file"]:
+            # the ship thumbnails a raster; a PDF, a zip or a page shows as "no picture yet"
+            if r["local_file"] and not is_raster(r["local_file"]):
+                bad("artifact", r["id"], f"{r['type']} has no raster to show: render one and set --view-file "
+                                         f"(pdftoppm for a PDF, a screenshot for a page)")
+            elif r["type"] == "map" and not r["local_file"] and not r["download_url"]:
+                bad("artifact", r["id"], "map has no file at all: render its geometry or chart to a raster and set --view-file")
         if not r["bibkey"]:
             bad("artifact", r["id"], "no bibkey")
         elif r["bibkey"] not in keys:
@@ -1293,14 +1427,31 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
                     except json.JSONDecodeError:
                         log.warning("artifact %s has unreadable %s", r["id"], f)
             a["page"] = page_slug("artifact", r["id"])
+            a["routing"] = r["routing"] or ""
+            a["keywords"] = artifact_keywords(c, r["id"])
+
+            def ship(rel: str) -> str | None:
+                src = HISTORY_DIR / rel
+                if not src.is_file():
+                    return None
+                dest = out / "files" / Path(rel).name
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                if not dest.exists() or dest.stat().st_mtime < src.stat().st_mtime:
+                    shutil.copy2(src, dest)
+                return f"data/history/files/{dest.name}"
+
             if r["local_file"]:
-                src = HISTORY_DIR / r["local_file"]
-                if src.is_file():
-                    dest = out / "files" / Path(r["local_file"]).name
-                    dest.parent.mkdir(parents=True, exist_ok=True)
-                    if not dest.exists() or dest.stat().st_mtime < src.stat().st_mtime:
-                        shutil.copy2(src, dest)
-                    a["url"] = f"data/history/files/{dest.name}"
+                url = ship(r["local_file"])
+                if url:
+                    a["url"] = url
+            if r["view_file"]:
+                # a raster view of a PDF, a page or a zipped GeoTIFF: the ship
+                # thumbnails `url`; the original stays reachable as original_url
+                view = ship(r["view_file"])
+                if view:
+                    if a.get("url"):
+                        a["original_url"] = a["url"]
+                    a["url"] = view
             arts.append(a)
 
         # 3. the timeline, and the topics that own everything
@@ -1337,6 +1488,29 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
                 timeline.append(item)
         atomic(out / "timeline.json", json.dumps({"timeline": timeline}, ensure_ascii=False))
         atomic(out / "artifacts.json", json.dumps({"artifacts": arts}, ensure_ascii=False))
+
+        # faces cut from the photographs, for the People page; unknown sitters last
+        faces = []
+        for r in c.execute("SELECT f.*, a.title FROM faces f JOIN artifacts a ON a.id=f.artifact_id "
+                           "ORDER BY CASE WHEN f.person='' THEN 1 ELSE 0 END, f.person, f.artifact_id, f.n"):
+            src = HISTORY_DIR / r["file"]
+            if not src.is_file():
+                continue
+            dest = out / "files" / "faces" / src.name
+            dest.parent.mkdir(parents=True, exist_ok=True)
+            if not dest.exists() or dest.stat().st_mtime < src.stat().st_mtime:
+                shutil.copy2(src, dest)
+            faces.append({"artifact": r["artifact_id"], "page": page_slug("artifact", r["artifact_id"]),
+                          "title": r["title"], "file": f"data/history/files/faces/{dest.name}",
+                          "box": json.loads(r["box"]) if r["box"] else [],
+                          "person": r["person"] or "",
+                          "person_page": page_slug("person", r["person"]) if r["person"] else "",
+                          "confidence": r["confidence"], "method": r["method"] or ""})
+        if faces:
+            atomic(out / "faces.json", json.dumps({"faces": faces}, ensure_ascii=False))
+        onto = get_ontology(c)
+        if onto:
+            atomic(out / "ontology.json", json.dumps(onto, ensure_ascii=False))
         atomic(out / "events.json", json.dumps({"events": events}, ensure_ascii=False))
         # the named places with their positions, machine-readable — an "in this
         # place" vignette wants coordinates, not just the generated wiki pages
@@ -1356,7 +1530,7 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
         atomic(out / "references.bib", to_bibtex(c.execute("SELECT * FROM sources ORDER BY bibkey")))
         stamp = max([r["updated"] for r in c.execute(
             "SELECT MAX(updated) AS updated FROM artifacts")] + [""]) or now()
-        return {"file": "data/history/index.json", "stamp": stamp, "artifacts": len(arts),
+        return {"file": "data/history/index.json", "stamp": stamp, "artifacts": len(arts), "faces": len(faces),
                 "pages": len(pages), "events": len(events), "topics": len(topics),
                 "places": len(places), "people": len(people_rows),
                 "dates": len(rows), "timeline": len(timeline),

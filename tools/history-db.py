@@ -120,6 +120,10 @@ def main(argv=None) -> int:
         a.add_argument("--language", default="", help="of a text or quote, when not English (ISO 639-1)")
         a.add_argument("--people", default="", help="semicolon separated")
         a.add_argument("--tags", default="", help="comma separated")
+        a.add_argument("--view-file", default=None,
+                       help="a raster view of a non-raster local file (PDF page, page screenshot, GeoTIFF), relative to db/history/")
+        a.add_argument("--routing", default=None, choices=["", "water", "as-given"],
+                       help="tracks: draw the line routed through water, or as the waypoints are given")
 
     p = sub.add_parser("person", help="add or update a person")
     p.add_argument("--name", required=True)
@@ -247,6 +251,23 @@ def main(argv=None) -> int:
     an.add_argument("--status", required=True, choices=list(H.REQUEST_STATUS))
     an.add_argument("--answer", default="")
 
+    fc = sub.add_parser("face", help="record one face cut from an image artifact (issue #2)")
+    fc.add_argument("--artifact", required=True)
+    fc.add_argument("--n", required=True, type=int, help="the face's number within the image, from 1")
+    fc.add_argument("--file", required=True, help="the crop, relative to db/history/, under <topic>/files/faces/")
+    fc.add_argument("--box", default="", help="[x, y, w, h] in the original raster, JSON")
+    fc.add_argument("--person", default="", help="a name in people, or nothing when unidentified")
+    fc.add_argument("--confidence", type=float, default=None)
+    fc.add_argument("--method", default="", help="detector and identification rule, e.g. yunet; single-name-in-people")
+    fc.add_argument("--forget", action="store_true", help="delete every face of this artifact instead")
+    kwp = sub.add_parser("keyword", help="subject paths on an artifact, 'Level > Level > Level' (issue #3)")
+    kwp.add_argument("--artifact", required=True)
+    kwp.add_argument("--path", action="append", default=[], help="repeatable, up to three")
+    kwp.add_argument("--source", default="crew", help="'crew' or 'llm:<model>'")
+    kwp.add_argument("--keep", action="store_true", help="add to that source's existing paths instead of replacing them")
+    on = sub.add_parser("ontology", help="the keyword tree (issue #3): set it from a JSON file, or show it")
+    on.add_argument("--file", default=None, help='{"Level 1": {"Level 2": ["Level 3", ...]}}')
+    on.add_argument("--model", default="")
     sub.add_parser("stats", help="row counts")
     sub.add_parser("check", help="what is missing or inconsistent")
     sub.add_parser("wanted", help="wikilinks named but not written")
@@ -281,7 +302,8 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
                   description=_read(a.description, a.description_file),
                   lat=a.lat, lon=a.lon, source_url=a.source_url, download_url=a.download_url,
                   local_file=a.local_file, licence=a.licence, credit=a.credit, bibkey=a.bibkey,
-                  pages=a.pages, people=a.people, tags=a.tags, language=a.language)
+                  pages=a.pages, people=a.people, tags=a.tags, language=a.language,
+                  view_file=a.view_file, routing=a.routing)
         geom = _read(a.geometry, a.geometry_file)
         way = _read(a.waypoints, a.waypoints_file)
         if way:
@@ -444,6 +466,20 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
                 print(f"     next: {r['next']}")
             if r["open"]:
                 print(f"     open: {r['open']}")
+    elif a.cmd == "face":
+        if a.forget:
+            print(f"forgot {H.forget_faces(c, a.artifact)} faces of {a.artifact}")
+        else:
+            print(H.add_face(c, a.artifact, a.n, a.file, box=a.box, person=a.person,
+                             confidence=a.confidence, method=a.method))
+    elif a.cmd == "keyword":
+        n = H.add_keywords(c, a.artifact, a.path, source=a.source, replace=not a.keep)
+        print(f"{a.artifact}: {n} path(s) from {a.source}; published as {H.artifact_keywords(c, a.artifact)}")
+    elif a.cmd == "ontology":
+        if a.file:
+            H.set_ontology(c, json.loads(Path(a.file).read_text()), model=a.model)
+        o = H.get_ontology(c)
+        print(json.dumps(o, ensure_ascii=False, indent=1) if o else "no ontology yet")
     elif a.cmd == "stats":
         v = H.validate(c)
         for k, n in v["stats"].items():
