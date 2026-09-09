@@ -1,0 +1,41 @@
+# Knowledge alive today: Kamookak and the Gjoa Haven guardians
+[page · inuit-oral-history · draft]
+
+The oral history in this topic is not a nineteenth-century subject. It is held now, by people now, in communities that have kept it through everything the twentieth century did to them, and it is currently doing work that no other kind of evidence could do.
+
+## Louie Kamookak
+
+[[person:Louie Kamookak]] was born in 1959 at a seal-hunting camp on the Boothia Peninsula near [[place:Taloyoak]]. He became a teacher at [[place:Uqsuqtuuq]] (Gjoa Haven) and, for more than thirty years, the person who recorded what Nattilik elders remembered about ships and about white men on their coast.
+
+The thing that started him was a story his mother told him, of a mound with a rock at the end of it that had markings on it. He thought it might be [[person:John Franklin]]'s grave, and looking for it took the rest of his life. He was consistent about this: he was not primarily interested in finding the ships. "I want Canada to be able to return his body to England," he said.
+
+His method is the part worth teaching. He did not treat the testimony as sacred and he did not treat it as folklore. [[source:harper2018kamookak|Kenn Harper records him saying]] that "the oral tradition tells a lot of history, but isn't always very accurate," and Kamookak spent as much effort finding where accounts had drifted as finding where they were right. He worked out, for instance, that elders' accounts of white men hauling boats had merged two separate events — [[person:John Ross]]'s people from the Victory in the early 1830s and Franklin's from 1848 — because both had happened on the same coast to the same generation's grandparents. He then read the printed narratives against the testimony and corrected errors in both directions.
+
+He also worked with Inuit place names, which is where geography and memory are stored in the same object. Names carry what happened at a place and what is found there, and a name can outlive the account that explains it.
+
+That body of work is part of why the search that found HMS Erebus on 2 September 2014 was looking in [[place:Wilmot and Crampton Bay]], where the Ukjulingmiut elder [[person:Ikinnelikpatolok]] had [[artifact:inuit-oral-history-021|placed a sunken ship in 1879]]. See [[page:franklin-testimony-vindicated]].
+
+Kamookak was made a member of the Order of Nunavut and of the Order of Canada in 2017, and held the Polar Medal, the Lawrence J. Burpee Medal and the Inuit Heritage Trust Recognition Award. He died of cancer at Yellowknife on 22 March 2018, aged 58. Asked in 2015 what he thought about, he answered: "My thoughts always go first to the Elders I've interviewed in the past, and the knowledge that they give to me to pass on to other people."
+
+## The Guardians
+
+The wreck sites are now watched by Inuit from Uqsuqtuuq. [[source:parkscanada2026guardians|The Inuit Guardians programme]] began in 2017, is administered by the Nattilik Heritage Society, and its members monitor the two wreck sites and the marine traffic around them, with the standing to report incidents to law enforcement, and take part in the archaeology and the visitor programme. During the pandemic seasons, when Parks Canada could not dive, the Guardians were the only people at the sites.
+
+In March 2023 the Kitikmeot Inuit Association and the Government of Canada signed a ten-year Inuit Impact and Benefit Agreement for the Wrecks of HMS Erebus and HMS Terror National Historic Site, on the stated intention that it will progressively become a fully Inuit-led national historic site. The Nattilik Heritage Centre in Gjoa Haven holds the exhibits, including the Erebus ship's bell, and the annual Umiyaqtutt Festival marks the finding of the ships and the Inuit knowledge that led to them.
+
+There is a plain symmetry here that is worth stating. In 1854 an Inuit account of these ships was published in London and dismissed as the word of savages. In 2023 the sites of those same ships were placed under the care of the descendants of the people who gave the account.
+
+## Testimony as evidence, generally
+
+The same argument about whose word counts has been fought much more recently and about much worse things. The [[source:qtc2013nuutauniq|Qikiqtani Truth Commission]] was established by the Qikiqtani Inuit Association to establish what happened in the Baffin region between 1950 and 1975 — the moves off the land, the dog slaughter, the sanatoria in the south, the residential schools. Its evidence is Inuit testimony, taken from people who were there, set against the written government record and preferred to it where the two disagree and the record can be shown to be self-serving. Its own statement of method is [[artifact:inuit-oral-history-028|"as told by Inuit, for Inuit, to Inuit"]]. See [[topic:relocations-qtc]].
+
+That is the same evidentiary move that took a century and a half to be made about Franklin. It is worth noticing that it was made by Inuit organisations, on their own initiative, and not conceded by the institutions that had spent the previous century declining to make it.
+
+## For a ship working here now
+
+Two practical points.
+
+The knowledge is current, not historical. Sea-ice conditions, currents, polynyas, where the animals are and when, safe travel routes on landfast ice: this is held in the communities the ship passes and is actively maintained. [[artifact:inuit-oral-history-024|Boas wrote in 1888]] that "the state of the ice regulates the distribution of the natives during the greater part of the year," which is a statement about the same coupled system the ship's instruments measure.
+
+And the record of it is in the communities' hands. Inuit Heritage Trust holds the Nunavut place-names work; the Nattilik Heritage Society runs the Guardians and the heritage centre; the QIA holds the Truth Commission archive. Anything this history layer says about Inuit knowledge should be understood as pointing at those bodies, not standing in for them.
+

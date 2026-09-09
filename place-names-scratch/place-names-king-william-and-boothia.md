@@ -1,0 +1,25 @@
+# The Franklin names of King William Island and Boothia
+[page · place-names · draft]
+
+The chart of **[[place:King William Island]]** is unusual. Most of it was drawn before the disaster it commemorates, and the rest was drawn by men looking for the bodies.
+
+The Inuktitut name of the island is **Qikiqtaq**, "the island". [[person:James Clark Ross]] reached its north-west corner on foot in May 1830 from the *Victory*'s winter quarters in Boothia and named it King William Land, for the King who had just come to the throne. On that one sledge journey he laid down three names that would be read very differently later: **Cape Felix**, "after the founder of our expedition", [[person:Felix Booth]]; **Victory Point**, after the ship; and **Point Franklin**, after [[person:John Franklin]], then a celebrated survivor of two overland expeditions. He also named **Jane Franklin Point** — the Board credits John Ross with it, in 1830 — for [[person:Jane Franklin]], seventeen years before she became the woman who would not let the search stop.
+
+In April 1848 the survivors of the *Erebus* and *Terror* abandoned their ships and landed at Victory Point, and left the record that [[person:William Hobson]] found in 1859. The names Ross had put there in 1830 were on the paper they wrote on.
+
+## The names the search added
+
+[[person:Francis Leopold McClintock]] in 1859, and the searchers before and after him, covered the island and the coasts around it with the dead. **Cape Crozier** is [[person:Francis Crozier]], who commanded the retreat; **Gore Point** is [[person:Graham Gore]], first lieutenant of the *Erebus*, who had signed the record in May 1847 when all was still well; **Irving Island** is Lieutenant John Irving of the *Terror*, whose grave Schwatka found; **Cape Sabine**, **Cape Abernethy** — the last for John Abernethy, second mate of Ross's *Victory*, so that a man of the 1829 voyage and the men of 1845 share one shoreline. **Erebus Bay** and **Terror Bay** are the ships. **[[place:Bellot Strait]]**, the cut between Somerset Island and Boothia, is [[person:Joseph Rene Bellot]], the young French volunteer drowned in Wellington Channel in 1853 while searching. **Franklin Strait** and **Franklin Isthmus** are McClintock's.
+
+Two of the names are Lady Franklin's own. The **Tasmania Islands** off Boothia were named by McClintock in 1859 "at the request of Lady Franklin, in grateful acknowledgment of many proofs of affectionate sympathy received from the colony over which her husband presided for several years". And the *Fox*'s name went onto the **Fox Islands** in Bellot Strait, where McClintock said, "I may venture to confer our little vessel's name upon" them.
+
+Not everything was a memorial. **Matty Island**, in the shoal water where the ships were beset, was named by James Clark Ross in 1830 "in compliment to the fair donors of the beautiful silk colours, which we then displayed in honour of the day"; **Cape Louis Philippe** is the King of France, **Humboldt Channel** the German naturalist, **Cape William of Württemberg** a Continental royalty. Even a coast of graves keeps its share of court flattery.
+
+## What the Inuit called it, and what they knew
+
+The names that mattered for finding the bodies were not on the chart at all. The Netsilik knew the coast in detail, and their accounts of where the ships went down, of the boat at Erebus Bay and of the men walking south were given to [[person:John Rae]] in 1854, to [[person:Charles Francis Hall]] in the 1860s and to [[person:Frederick Schwatka]] in 1879, and were doubted in London for a century and a half. It was Inuit testimony, carried forward by [[person:Louie Kamookak]] and read alongside the archaeology, that put searchers within reach of the two wrecks found in 2014 and 2016 — **[[place:Wilmot and Crampton Bay]]** and **[[place:Terror Bay]]**. See [[topic:franklin-1845]], [[topic:franklin-search]] and [[topic:inuit-oral-history]].
+
+One name on this coast was given by somebody who was neither a searcher nor a naval officer. **[[place:Uqsuqtuuq]]** — "lots of fat", a place where blubber was plentiful — is what the Netsilik called the harbour on the south-east side of the island. [[person:Roald Amundsen]] wintered there twice in 1903-05, learned from the Netsilik how to live and travel, and named it **Gjoa Haven** "after his vessel the Gjoa, 47 tons register" ([[artifact:place-names-091]]). Gjoa Haven is still the hamlet's official name. Uqsuqtuuq is what the community calls itself. See [[topic:amundsen-gjoa]].
+
+Further west, on Banks Island, the same pattern of naming out of feeling: [[person:Robert McClure]], beset in 1851 at the place where he abandoned the *Investigator*, wrote that "Not without feelings of deep thankfulness was it called the Bay of Mercy" ([[artifact:place-names-092]]) — **[[place:Mercy Bay]]**. The island itself is Parry's, for Sir Joseph Banks; the Inuvialuit name is Ikahuak, "the place you cross to". See [[topic:mcclure-investigator]].
+

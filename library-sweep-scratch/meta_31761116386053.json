@@ -1,0 +1,148 @@
+{"alternate_locations":{"servers":[{"server":"dn760107.eu.archive.org","dir":"/0/items/31761116386053"}],"workable":[{"server":"dn760107.eu.archive.org","dir":"/0/items/31761116386053"}]},"created":1788941993,"d1":"ia601604.us.archive.org","d2":"ia801604.us.archive.org","dir":"/5/items/31761116386053","events":{"checkin_0":["associate-josephine-ochavo",1675360356,""]},"files":[{"name":"31761116386053.pdf","source":"derivative","format":"Text PDF","original":"31761116386053_page_numbers.json","mtime":"1713373614","size":"1960085","md5":"cbf0993aabb14a4af39f2cc549d65700","crc32":"5134b42d","sha1":"9811ab0f7fb351530bd999d1bcd218eb66663118"},{"name":"31761116386053_archive.torrent","source":"metadata","btih":"e38f5043c26bbd532ed7fc04abdf0c5a8747f9ab","mtime":"1772580820","size":"6234","md5":"bdcc5108ce78fc3412a024a7bd05ff89","crc32":"79b78ab8","sha1":"41c983c38f4c0912226f2daef10c3c5f617a8be8","format":"Archive BitTorrent"},{"name":"31761116386053_chocr.html.gz","source":"derivative","ocr":"tesseract 5.3.0-1-gd3a4","ocr_parameters":"-l eng","ocr_module_version":"0.0.18","ocr_detected_script":"Latin","ocr_detected_script_conf":"0.9779","ocr_detected_lang":"en","ocr_detected_lang_conf":"1.0000","format":"chOCR","original":"31761116386053_jp2.zip","mtime":"1675360722","size":"294333","md5":"54b4114c031ab7182fb3d660dd2d90ec","crc32":"7370949f","sha1":"9c42f234be0a6c9c053651836dc8e76661e0e86e"},{"name":"31761116386053_cloth_detection.log","source":"derivative","cloth_cover_detection_module_version":"1.2","format":"Cloth Cover Detection Log","original":"31761116386053_scandata.xml","mtime":"1675360735","size":"746","md5":"8e9e402322a58c76464916df2ea407b3","crc32":"8fa8d27e","sha1":"02e4cba244ae8e113e260d695c471b96f66c8d79"},{"name":"31761116386053_dc.xml","source":"original","format":"Dublin Core","mtime":"1772580817","size":"414","md5":"62a0f9d62eed142fe609a3749f199071","crc32":"d33d8ca9","sha1":"e1879937071400737ed3ac730de272ef56f086f9"},{"name":"31761116386053_djvu.txt","source":"derivative","format":"DjVuTXT","original":"31761116386053_djvu.xml","mtime":"1675360778","size":"20962","md5":"d0d23f0578389eaf57ef01dae7872836","crc32":"b904c55d","sha1":"46f788b5c6e55ae5674769bc23767d635c641e28"},{"name":"31761116386053_djvu.xml","source":"derivative","format":"Djvu XML","original":"31761116386053_hocr.html","mtime":"1675360760","size":"256430","md5":"934ec6eb5bd9fc0f0f07fdedd16b372f","crc32":"149d2fe4","sha1":"d2a16a859f6b899f0981f410f2c2ae3bb2fd3deb"},{"name":"31761116386053_events.json","source":"original","mtime":"1675360359","size":"58","md5":"a007733073b70d5461d89d1781695d1e","crc32":"bd4f4e2e","sha1":"0b42ec6631873fe9021f47e0ad833264a0050e0e","format":"JSON"},{"name":"31761116386053_files.xml","source":"original","format":"Metadata","summation":"md5","md5":"6b6a8ab2cb84a4a3c6371e672e0d812a"},{"name":"31761116386053_hocr.html","source":"derivative","hocr_char_to_word_module_version":"1.1.0","hocr_char_to_word_hocr_version":"1.1.15","ocr_parameters":"-l eng","ocr_module_version":"0.0.18","ocr_detected_script":"Latin","ocr_detected_script_conf":"0.9779","ocr_detected_lang":"en","ocr_detected_lang_conf":"1.0000","format":"hOCR","original":"31761116386053_chocr.html.gz","mtime":"1675360743","size":"490789","md5":"5dfdd13c1dce7a5d982a61fc01907be5","crc32":"f9542a67","sha1":"c4b0b0e28efd07b690f92ec586edb00e85a35da1"},{"name":"31761116386053_hocr_pageindex.json.gz","source":"derivative","hocr_pageindex_module_version":"1.0.0","hocr_pageindex_hocr_version":"1.1.15","format":"OCR Page Index","original":"31761116386053_hocr.html","mtime":"1675360763","size":"254","md5":"2bed4ed08163baf9f894cc0b353d414c","crc32":"afef4d45","sha1":"e05c4d162065f83c6d8a554f08c9e6ddaa3bf4d3"},{"name":"31761116386053_hocr_searchtext.txt.gz","source":"derivative","hocr_fts_text_module_version":"1.1.0","hocr_fts_text_hocr_version":"1.1.15","word_conf_0_10":"40","word_conf_11_20":"15","word_conf_21_30":"15","word_conf_31_40":"20","word_conf_41_50":"8","word_conf_51_60":"11","word_conf_61_70":"12","word_conf_71_80":"18","word_conf_81_90":"93","word_conf_91_100":"2805","format":"OCR Search Text","original":"31761116386053_hocr.html","mtime":"1675360771","size":"8057","md5":"db7de44a6aa59be6d2d3f84e8c2113fb","crc32":"e22ad8a4","sha1":"113d53f7d9d5f1a3a69e943017e2cd127d66d033"},{"name":"31761116386053_jp2.zip","source":"derivative","format":"Single Page Processed JP2 ZIP","original":"31761116386053_orig_jp2.tar","mtime":"1675360616","size":"15246191","md5":"0cfd527ebb982496738d291e0629c1b4","crc32":"8fe8c99a","sha1":"afd5a17002dd00b9dadbe04aaadd345af32c3974","filecount":"22"},{"name":"31761116386053_marc.xml","source":"original","format":"MARC","mtime":"1772580817","size":"2930","md5":"2898a969a221cfb32a7b6a821792efbd","crc32":"d7fd8e2d","sha1":"34c60e3284db789e29d4466b5ff50abf2d39c55c"},{"name":"31761116386053_meta.mrc","source":"original","format":"MARC Binary","mtime":"1772580817","size":"889","md5":"02280549be0a538f0b95defbe244f9d7","crc32":"5e5369d4","sha1":"0ecf0627b3ce0098bee26cf0592a9bf74595d5ef"},{"name":"31761116386053_meta.sqlite","source":"original","mtime":"1675360391","size":"40960","md5":"0de69dfd920a9fdebef7bc18ccf6cd2b","crc32":"bae6abb0","sha1":"e8c2ed31203a36c0bcd19f06319dadc6ec695686","format":"Metadata"},{"name":"31761116386053_meta.xml","source":"original","mtime":"1772580817","size":"2708","md5":"6293f8f3e6b7733e8ab25561f111f26e","crc32":"f9d8fac2","sha1":"b5303be08fb4b63d05772a1e75783dfa879aa2c6","format":"Metadata"},{"name":"31761116386053_metasource.xml","source":"original","mtime":"1772579361","size":"213","md5":"885a438ae33161d106efa6948af378ec","crc32":"3036a4a5","sha1":"2e45906608abf950dfa3a44e3ae072778f8e6540","format":"MARC Source"},{"name":"31761116386053_orig_jp2.tar","source":"original","format":"Single Page Original JP2 Tar","original":"31761116386053_preimage.zip","mtime":"1675360390","size":"63477760","md5":"b9b071175e96ea305c6fabb1f4cec44e","crc32":"c0126683","sha1":"d3d037e5b1a652d2f6923b37506a411dd6cbb165","filecount":"22"},{"name":"31761116386053_page_numbers.json","source":"derivative","hocr_pagenumber_module_version":"1.0.5","hocr_pagenumber_hocr_version":"1.1.54","hocr_pagenumber_confidence":"64","format":"Page Numbers JSON","original":"31761116386053_hocr.html","mtime":"1713373613","size":"3491","md5":"120f5283aad90f0c200434ecf2e5924f","crc32":"8cb543ae","sha1":"e3cfe414be535205fef7c359b5a5bfc0876299db"},{"name":"31761116386053_repub_final.log","source":"derivative","republisher_deriver_version":"0.0.14","confidence_accurate":"False","crops_accurate":"False","initial_crop_confidence":"100","format":"RePublisher Final Processing Log","original":"31761116386053_scandata.xml","mtime":"1675360753","size":"5975","md5":"6adceba6df47f349779fa0526832ddab","crc32":"094f4234","sha1":"d635bc4fbd18141cc489c53b8124bdac997f89e7"},{"name":"31761116386053_repub_initial.log","source":"derivative","republisher_deriver_version":"0.0.14","format":"RePublisher Initial Processing Log","original":"31761116386053_preimage.zip","mtime":"1675357581","size":"27","md5":"08ec62964ef5fd9ce32e032e552b9d58","crc32":"2960f426","sha1":"40d9163175b1d24f4b2d6c4c44067eb0bf6af787"},{"name":"31761116386053_scandata.xml","source":"original","format":"Scandata","original":"31761116386053_preimage.zip","mtime":"1675360735","size":"23292","crc32":"a1110764","sha1":"82a310c0205836466a56ab43dfcd9e57e73b52fc","md5":"a170eb6466858179386f82d58d8994f5"},{"name":"__ia_thumb.jpg","source":"original","mtime":"1675360845","size":"34222","md5":"08ca267155b81a2d7c3f3ae5daceb454","crc32":"0893d236","sha1":"0ec75055d3fcd6a553fb5c70f88f7265c6dc24a6","format":"Item Tile","rotation":"0"},{"name":"logs\/31761116386053_iabdash_2023-02-0211:57:38.log","source":"original","mtime":"1675357060","size":"633","md5":"10c9b2c52b963206ef1f83269e61cc31","crc32":"be4a7ff1","sha1":"10e4d066b1098c901859e493bce1532eb324abaf","format":"Log"},{"name":"logs\/31761116386053_scanning_2023-02-0211:57:40.log","source":"original","mtime":"1675357062","size":"204124","md5":"b87ae4b04d0a70525f7b8d3d553791eb","crc32":"c5f80bab","sha1":"fbdbb83777c9e0ff28640937f53bdb5c442d9230","format":"Log"},{"name":"logs\/31761116386053_status_history_2023-02-0211:57:35.log","source":"original","mtime":"1675357058","size":"552","md5":"8b1519d68664acde8feeee6119bbc7a0","crc32":"be5293ba","sha1":"b81fbfb2093233020e0f0182c08c260c85abd504","format":"Log"}],"files_count":27,"item_last_updated":1772580820,"item_size":82082329,"metadata":{"identifier":"31761116386053","barcode":"31761116386053","call_number":"ca1..sg..61-71c15","camera":"USB PTP Class Camera","collection_set":"Gov Docs 5th Floor","contributor":"Robarts - University of Toronto","language":"eng","mediatype":"texts","operator":"associate-mary-parr@archive.org","page-progression":"lr","partner":"University of Toronto - Gov Docs Digitization 2021-22","rcs_key":"25794","repub_state":"19","scanner":"scribe7.toronto.archive.org","scanningcenter":"uoft","shiptracking":"utg0182","sponsor":"University of Toronto","title":"CAREER OPPORTUNITIES FOR UNIVERSITY GRADUATES WITH THE ROYAL CANADIAN MOUNTED POLICE","tts_version":"5.4-initial-25-ga9c0370c","uploader":"scribe7.toronto@archive.org","publicdate":"2023-02-02 16:57:36","identifier-access":"http://archive.org/details/31761116386053","identifier-ark":"ark:/13960/s2mn1xqqzbb","scandate":"20230202170621","imagecount":"22","autocrop_version":"0.0.14_books-20220331-0.2","notes":"Text obscured on front cover.","ppi":"500","republisher_operator":"associate-josephine-ochavo@archive.org","republisher_date":"20230203015235","republisher_time":"119","foldoutcount":"0","bookplateleaf":"0002","ocr":"tesseract 5.3.0-1-gd3a4","ocr_parameters":"-l eng","ocr_module_version":"0.0.18","ocr_detected_script":"Latin","ocr_detected_script_conf":"0.9779","ocr_detected_lang":"en","ocr_detected_lang_conf":"1.0000","page_number_confidence":"64","pdf_module_version":"0.0.20","addeddate":"2023-02-02 18:01:01","scanfee":"300;12;240","invoice":"2091","sponsordate":"20230131","page_number_module_version":"1.0.5","collection":["uoftgovpubs","robarts","governmentpublications","toronto","university_of_toronto"],"force-update":"true","govdocs_refetch":"2026-03-02","creator":"Royal Canadian Mounted Police","oclc-id":"976970807","description":"PF"},"page_numbers":{
+    "identifier": "31761116386053",
+    "format-version": "2",
+    "archive-hocr-tools-version": "1.1.54",
+    "confidence": 64,
+    "pages": [
+        {
+            "leafNum": 1,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 2,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 3,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 4,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 5,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 6,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 7,
+            "confidence": 94,
+            "pageNumber": "5",
+            "pageProb": 84,
+            "wordConf": 92
+        },
+        {
+            "leafNum": 8,
+            "confidence": 84,
+            "pageNumber": "6",
+            "pageProb": 74,
+            "wordConf": 96
+        },
+        {
+            "leafNum": 9,
+            "confidence": null,
+            "pageNumber": "7",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 10,
+            "confidence": 92,
+            "pageNumber": "8",
+            "pageProb": 82,
+            "wordConf": 96
+        },
+        {
+            "leafNum": 11,
+            "confidence": null,
+            "pageNumber": "9",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 12,
+            "confidence": 87,
+            "pageNumber": "10",
+            "pageProb": 77,
+            "wordConf": 96
+        },
+        {
+            "leafNum": 13,
+            "confidence": 92,
+            "pageNumber": "11",
+            "pageProb": 82,
+            "wordConf": 96
+        },
+        {
+            "leafNum": 14,
+            "confidence": 87,
+            "pageNumber": "12",
+            "pageProb": 77,
+            "wordConf": 38
+        },
+        {
+            "leafNum": 15,
+            "confidence": 89,
+            "pageNumber": "13",
+            "pageProb": 79,
+            "wordConf": 96
+        },
+        {
+            "leafNum": 16,
+            "confidence": 100,
+            "pageNumber": "14",
+            "pageProb": 93,
+            "wordConf": 95
+        },
+        {
+            "leafNum": 17,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 18,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 19,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        },
+        {
+            "leafNum": 20,
+            "confidence": null,
+            "pageNumber": "",
+            "pageProb": null,
+            "wordConf": null
+        }
+    ]
+},"server":"ia601604.us.archive.org","uniq":1223838553,"workable_servers":["ia601604.us.archive.org","ia801604.us.archive.org"]}

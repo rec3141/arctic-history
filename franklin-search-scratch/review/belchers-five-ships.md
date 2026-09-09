@@ -1,0 +1,55 @@
+The Royal Navy's last and largest Franklin search sailed from Greenhithe on 21 April 1852: five ships under [[person:Edward Belcher]], with orders to settle the question of [[place:Wellington Channel]] once and for all. Two years later four of those five ships were standing empty in the ice, abandoned by Belcher's own order, and the Navy was out of the Arctic for twenty years.
+
+## The five ships and the plan
+
+- **HMS Assistance** (Belcher) and the screw steam tender **Pioneer** (Sherard Osborn) — north, up Wellington Channel.
+- **HMS Resolute** ([[person:Henry Kellett]]) and the screw tender **Intrepid** ([[person:Francis Leopold McClintock]]) — west along [[place:Barrow Strait]] towards [[place:Melville Island]].
+- **HMS North Star** ([[person:William John Samuel Pullen]]) — depot ship, to sit at [[place:Beechey Island]] and hold the stores and the mail.
+
+The split was a direct consequence of what had, and had not, been found at Beechey Island two years earlier (see [[page:beechey-island-1850]]): with no record saying which way Franklin had gone, the search still had to cover two directions at once. [[person:William Penny|Penny's]] open water at the head of [[place:Queens Channel]] in May 1851 is what sent Belcher north; [[topic:mcclure-investigator|McClure's Investigator]], missing since 1850 somewhere in the western Arctic, is part of what sent Kellett west.
+
+The squadron reached Beechey Island on 10–11 August 1852 and divided there on the 14th at ten at night. [[artifact:franklin-search-040|Belcher and Kellett shook hands on the floe and agreed to try to meet again "in 77° N. and 105° W."]] They never did.
+
+## Belcher's division: Northumberland Sound and the Grinnell Peninsula
+
+[[artifact:franklin-search-024|The Assistance and Pioneer]] went up Wellington Channel and found no icy barrier where Penny had reported one. Belcher was through Queen's Channel in three days and on 18 August 1852 secured his ships in a place he named [[place:Northumberland Sound]], on the north side of the [[place:Grinnell Peninsula]] of Devon Island. "From that spot," he wrote, "the ship never moved… that season." [[artifact:franklin-search-044|He was defensive about it in print afterwards]].
+
+He used the autumn well. Boat and sledge parties took possession of Exmouth Island on 27 August, reached the "Land's End of North Cornwall" at 77° 34′ N at the end of the month, and got as far north as Pell Point, 77° 29′ N, on 3 September. The spring of 1853 was the eastern division's great season, and it has a page of its own: [[page:belchers-eastern-division-1853]]. In summary, [[artifact:franklin-search-086|Belcher took three sledges and a sledge-boat north-east from 2 May to 23 June]] and on 20 May stood at the top of Britannia Cliffs looking down on [[artifact:franklin-search-085|"an open navigable sea"]], while [[artifact:franklin-search-082|Commander Richards walked to Melville Island and back in ninety-six days]] and met [[topic:mcclure-investigator|Kellett's Lieutenant Hamilton]] on the way — the only contact between the two divisions in two years.
+
+None of it produced the least trace of Franklin, and it could not have: Franklin had never gone that way. But it is the reason the north-western corner of Devon Island and the channels above it are on the chart at all, and Belcher's own survey corrected the coast between Cape Osborn and Cape Becher and moved Penny's Cape Sir John Franklin to where it actually is.
+
+## Kellett's division, in one paragraph
+
+The western half of the squadron wintered at [[place:Dealy Island]] in Bridport Inlet, Melville Island, and did the hardest sledge work of the entire search from it — including [[person:Bedford Pim|Pim's]] journey of 427 statute miles in twenty-eight days that reached the [[topic:mcclure-investigator|Investigator]] in [[place:Mercy Bay]] on 6 April 1853, nine days before McClure meant to abandon her. That story, and McClure's, belong to [[topic:mcclure-investigator]] and are told there. What matters here is the arithmetic: in the spring of 1853 alone, McClintock (1,328 statute miles in 106 days), [[person:George Frederick Mecham|Mecham]] (1,163 in 94) and [[person:Richard Vesey Hamilton|Hamilton]] (604 in 54) put **1,618 geographical miles of new coast** on the chart, and Kellett's division walked 9,432 geographical miles in two years. See [[page:the-mapping-of-the-archipelago]].
+
+## 1853: the year everything went wrong at once
+
+August 1853 was a bad month in a small area. On the 18th a heavy south-easterly gale broke up the ice in Wellington Channel and [[person:Joseph Rene Bellot]] was blown off the floe and drowned, carrying despatches from [[person:Edward Augustus Inglefield|Inglefield's]] Phoenix up to Belcher (see [[page:prince-albert-and-bellot]]). The same gale drove Belcher's two ships west towards Cape Majendie, from which they escaped into an anchorage he named Port Refuge; and it blew [[artifact:franklin-search-023|the Resolute]] clean out of her winter quarters at Dealy Island after eleven months. Two or three days later [[artifact:franklin-search-046|the transport Breadalbane was nipped and sank off Beechey Island in a quarter of an hour]].
+
+Belcher then made the decision that decided everything else. Free of Port Refuge on 31 August, he could have run for Beechey Island — but Beechey was "one hundred and twenty miles as the crow flies… too far to transport crew, invalids, and effects, if compelled to abandon next season." So he came only part way down Wellington Channel and froze in at [[place:Disaster Bay]], fifty-two miles north of the North Star. The Resolute, beset on 10 September, drifted 180 miles east in the pack before freezing in for the winter twenty-eight miles south-west of [[place:Cape Cockburn]].
+
+## The order to abandon
+
+On 7 February 1854 Belcher wrote to Kellett *requesting* that he bring his officers and crews to Beechey Island before 26 August. [[artifact:franklin-search-041|Kellett refused]]: nothing in his orders justified abandoning his ships, the ice around the Resolute was only one season old, and it was the unanimous opinion aboard that she would come out at the break-up. He asked Belcher for "final, decided, and most unmistakeable orders." Belcher sent them, and on 28 April McClintock walked them in from Beechey Island.
+
+Belcher printed the paper himself. [[artifact:franklin-search-093|His order of 21 April 1854]], written aboard the Assistance in Wellington Channel and answering Kellett's letters of the 12th, is flat: "You are therefore hereby directed to withdraw from the 'Resolute,' the valuable stores, chronometers and instruments, officers and crew, and repair for further instructions to Beechey Island." It is not, however, the order of a man writing his ships off. The same page tells Kellett to batten both vessels down and disturb nothing, "so that they may be re-occupied, should I deem it necessary, in July or August next." With it went a private note: [[artifact:franklin-search-094|"This abandonment goes mightily against the grain... No! all must come; no volunteering will satisfy me!"]]
+
+The Resolute and Intrepid were left at seven in the evening of **15 May 1854**, in 74° 41′ N, 101° 22′ W. [[artifact:franklin-search-042|The crews cheered them from a quarter of a mile away and heard nothing back]]. Forty-two men then hauled four sledges thirteen days across Barrow Strait to the North Star. Belcher left the Assistance and Pioneer at five in the morning of **25 August**, two miles south of [[place:Cape Osborn]], and rowed to Beechey Island; every boat was alongside by five the next afternoon. An hour and a half after he arrived, the Phoenix and the Talbot came round Cape Riley with the news that Britain was at war with Russia — and with [[artifact:franklin-search-043|an Admiralty letter of 28 April ordering the whole force withdrawn anyway]].
+
+## The court martial, and the ship that came back
+
+A court martial sat aboard HMS Waterloo at Sheerness on 18–20 October 1854. Kellett was honourably acquitted and had his sword returned with a compliment. McClure was acquitted and praised. Belcher was acquitted too — the loss of the ships was covered by the Admiralty's own withdrawal order — but the finding added that he should have consulted Kellett if circumstances had allowed, and M'Dougall, who was there, records only that "the president then returned Sir Edward Belcher his sword, and the court broke up." No compliment. Belcher never went to sea again.
+
+Then the Arctic delivered its verdict. On 10 September 1855 Captain James Buddington of the New London whaler George Henry found the Resolute derelict in Davis Strait near Cape Mercy — upright, undamaged, more than a thousand miles from where she had been left, exactly as Kellett had said she would be. Buddington's prize crew brought her into New London on Christmas Eve. Congress bought her from the salvors for $40,000, the Navy Yard refitted her completely, and in December 1856 she was sailed to Cowes and handed back to Queen Victoria as a gift. When she was broken up in 1879 the Queen had a desk made from her timbers and sent it to the President of the United States. It is still in the Oval Office.
+
+## Belcher's own case
+
+Everything above is the story as [[person:George Frederick M'Dougall|M'Dougall]] told it, and M'Dougall was Kellett's master. Belcher's volume II gives his side, and it deserves stating.
+
+His physical case: the Assistance and Pioneer lay warped into a tidal fissure with forty feet of play in ice seven feet thick, and [[artifact:franklin-search-089|"any decided nip left no hope of saving the vessels: it was too stubborn to bend or break."]] His procedural case: he had discussed it with every officer qualified to advise him and not one adverse opinion was offered, and [[artifact:franklin-search-090|he decided to withdraw the crews "for none volunteered to remain out"]]. His predictive case is the one that failed. [[artifact:franklin-search-092|"Confident I am that those vessels would cease to float before the autumn gales conclude... no hope of their southern drift can be entertained"]] — and he gave his reasons, including that wreckage of the Breadalbane had drifted north to his own winter quarters without a gale. Fourteen months later the Resolute was afloat in Davis Strait.
+
+He also allowed himself one sentence that is not a defence at all: [[artifact:franklin-search-091|"It becomes the child of our adoption, the only object in these remote regions on which we lavish all our affections!"]]
+
+## What to make of it
+
+The usual verdict is that Belcher lost his nerve. That is probably fair, and Kellett's judgement about the Resolute was demonstrably better than Belcher's. But two things should be said with it. Belcher had orders from an Admiralty that had already decided the search was over and wanted its men home for a war; and he was searching, with great energy, a region where Franklin had never been, because the evidence available to him pointed north. The four abandoned ships were the price of a theory that Beechey Island had failed to disprove.

@@ -1,0 +1,140 @@
+~~~  hall-among-the-inuit:6  cov=0.944  kane-hall-polaris-hall1864.txt  unmatched=['n']
+   PAGE: in lat 63 n when near the coast of greenland and about 300 miles from his native place
+   BOOK: far away when his final moments came he died in lat 63 k when near the coast of greenland and about 300 miles from his native place suitable preparations were soon made for his
+~~~  hall-among-the-inuit:12  cov=0.957  kane-hall-polaris-hall1864.txt  unmatched=['georgiana', 'george']
+   PAGE: on the 27th day of september 1860 there broke upon us that fearful gale which caused the loss of my expedition boat and the far famed rescue drove the georgiana on shore and came near proving the destruction of the george henry and all on board
+   BOOK: side of davis s straits let my countrymen look to it whenever the first opportunity arrives on the 27th day of september 1860 there broke upon us that fearful gale which caused the loss of my expedition boat and the far famed rescue drove the oeorgiana on shore and came near proving the destruction of the oeorge henry and all on board as it was of so serious a character i will here give the particulars in detail wednesday
+OK   hall-among-the-inuit:14  cov=1.000  kane-hall-polaris-hall1864.txt  unmatched=[]
+OK   hall-among-the-inuit:18  cov=1.000  kane-hall-polaris-hall1864.txt  unmatched=[]
+OK   hall-among-the-inuit:26  cov=0.981  kane-hall-polaris-hall1864.txt  unmatched=['one']
+OK   hall-among-the-inuit:30  cov=1.000  kane-hall-polaris-hall1864.txt  unmatched=[]
+BAD  hall-among-the-inuit:30  cov=0.889  kane-hall-polaris-hall1864.txt  unmatched=['i']
+   PAGE: at last i could count nineteen between her inspirations
+   BOOK: increasing to even double that number at last 1 could count nineteen between her inspirations but her respirations were short
+OK   hall-among-the-inuit:30  cov=1.000  kane-hall-polaris-hall1864.txt  unmatched=[]
+~~~  hall-among-the-inuit:40  cov=0.978  kane-hall-polaris-hall1864.txt  unmatched=['i']
+   PAGE: nine generations had passed away since the visit of frobisher yet now on the 11th of may 1861 i received from an old woman probably a hundred years old statements which i could not otherwise than believe to be facts concerning him and his co adventurers
+   BOOK: of the icy north who have no written language can correctly preserve history from one generation to another nine generations had passed away since the visit of frobisher yet now on the 11th of may 1861 1 received from an old woman probably a hundred years old statements which i could not otherwise than believe to be facts concerning him and his co adventurers i was astonished and also in a measure pleased for it gave me stronger hopes
+BAD  hall-among-the-inuit:44  cov=0.900  kane-hall-polaris-hall1864.txt  unmatched=['brick']
+   PAGE: my eye accidentally caught sight of a piece of brick
+   BOOK: back to the ship while this transfer was being made my eye accidentally caught sight of a piece of hrick among sundry
+OK   hall-among-the-inuit:44  cov=1.000  kane-hall-polaris-hall1864.txt  unmatched=[]
+~~~  hall-among-the-inuit:44  cov=0.955  kane-hall-polaris-hall1864.txt  unmatched=['the']
+   PAGE: this relic then was more precious to me than the gold which frobisher sought there under the direct patronage of queen elizabeth
+   BOOK: the discovery of america by columbus since which time it has remained unknown to the civilized world this relic then was more precious to me than tlie gold which frobisher sought there under the direct patronage of queen elizabeth until now
+OK   hall-among-the-inuit:44  cov=1.000  kane-hall-polaris-nourse1879.txt  unmatched=[]
+OK   hall-among-the-inuit:54  cov=1.000  kane-hall-polaris-nourse1879.txt  unmatched=[]
+OK   hall-among-the-inuit:58  cov=1.000  kane-hall-polaris-nourse1879.txt  unmatched=[]
+~~~  hall-at-repulse-bay:6  cov=0.955  kane-hall-polaris-nourse1879.txt  unmatched=['whole']
+   PAGE: it was more than a disappointment to hall for it proved to be the loss of a whole year to the expedition
+   BOOK: the monticello and it could have been readily and safely made it was more than a disappointment to hall for it proved to be the j loss of a tvjiole year to the expedition had the landing been secured at the
+~~~  hall-at-repulse-bay:12  cov=0.933  kane-hall-polaris-nourse1879.txt  unmatched=['snow', 'house']
+   PAGE: i exchanged tent for snow house and have now been in the igloo sixty days and all the time as comfortable as i ever was in winter in my life
+   BOOK: chapel october is64 some weeks after this hall wrote to his friend the captain of the monticello at depot island i exchanged tent for suow liouse and have now been in the igloo sixty days and all the time as comfortable as i ever was in winter in my life you would be quite
+~~~  hall-at-repulse-bay:12  cov=0.953  kane-hall-polaris-nourse1879.txt  unmatched=['children', 'ebierbing']
+   PAGE: one main igloo for myself and eskimo children ebierbing and too koo li too and three igloos all joined to the main for store houses a low crooked passage way of some 50 feet in length made of snow leads into our residence
+   BOOK: i ever was in winter in my life you would be quite interested in taking a walk through my winter quarters one main igloo for v myself and eskimo childi en ebierbiug and too koo li too and three igloos all joined to the main for store houses a low crooked passage way of some 50 feet in length made of snow leads into our residence which as you will know from the word
+~~~  hall-at-repulse-bay:14  cov=0.932  kane-hall-polaris-nourse1879.txt  unmatched=['i', 'more', 'of']
+   PAGE: i never before knew any eskimos so provident as this tribe or clan i am wintering with i doubt not they have four hundred or more of reindeer killed last summer on deposit within the distance of a circle of 20 miles in diameter
+   BOOK: the word igloo means a snow house its shape is hemispherical 1 never before knew any eskimos so provident as this tribe or clan i am wintering with i doubt not they have four hundred or mofe tjf reindeer killed last summer on deposit within the distance of a circle of 20 miles in diameter we are now living on polar bear and walrus meat five polar bears some musk oxen a great many partridges and
+OK   hall-at-repulse-bay:24  cov=1.000  kane-hall-polaris-nourse1879.txt  unmatched=[]
+OK   hall-at-repulse-bay:32  cov=1.000  kane-hall-polaris-nourse1879.txt  unmatched=[]
+OK   hall-at-repulse-bay:38  cov=1.000  kane-hall-polaris-nourse1879.txt  unmatched=[]
+BAD  hall-at-repulse-bay:46  cov=0.842  kane-hall-polaris-nourse1879.txt  unmatched=['nook', 'poo', 'zhe', 'jook', 'and', 'very']
+   PAGE: his name is in nook poo zhe jook and he is a native of neitchille a very great traveler and very intelligent he is in fact a walking history of the fate of sir john franklin s expedition
+   BOOK: having died to the westward of where he dr eae then was pelly bay in the spring of 1854 his name is in noo1c 2 oozhe joojc and he is a native of neitchille a very great traveler aadr cery intelligent he is in fact a walking history of the fate of sir john franklin s expedition this native i met when within one day s
+~~~  hall-at-repulse-bay:48  cov=0.912  kane-hall-polaris-nourse1879.txt  unmatched=['suffer', 'provisions', 'when']
+   PAGE: did secretly and hastily abandon crozier and his party to suffer and die for need of fresh provisions when in truth it was in the power of the natives to save every man alive
+   BOOK: my heart with sadness intermingled with rage for it was a confession that they with their companions did secretly and hastily abandon crozier and his party to sufier and die for need of fresh pro dsions avhen in truth it was in the power of the natives to save every man alive the next trace of crozier and his party
+OK   hall-at-repulse-bay:52  cov=1.000  kane-hall-polaris-nourse1879.txt  unmatched=[]
+OK   hayes-and-the-open-polar-sea:10  cov=1.000  kane-hall-polaris-hayes1867.txt  unmatched=[]
+OK   hayes-and-the-open-polar-sea:14  cov=1.000  kane-hall-polaris-hayes1867.txt  unmatched=[]
+OK   hayes-and-the-open-polar-sea:14  cov=1.000  kane-hall-polaris-hayes1867.txt  unmatched=[]
+OK   hayes-and-the-open-polar-sea:18  cov=1.000  kane-hall-polaris-hayes1867.txt  unmatched=[]
+OK   hayes-and-the-open-polar-sea:22  cov=1.000  kane-hall-polaris-hayes1867.txt  unmatched=[]
+OK   hayes-and-the-open-polar-sea:28  cov=1.000  kane-hall-polaris-hayes1867.txt  unmatched=[]
+OK   hayes-and-the-open-polar-sea:30  cov=1.000  kane-hall-polaris-hayes1867.txt  unmatched=[]
+OK   hayes-and-the-open-polar-sea:30  cov=1.000  kane-hall-polaris-hayes1867.txt  unmatched=[]
+OK   hayes-and-the-open-polar-sea:36  cov=1.000  kane-hall-polaris-hayes1867.txt  unmatched=[]
+OK   hayes-and-the-open-polar-sea:40  cov=1.000  kane-hall-polaris-hayes1867.txt  unmatched=[]
+~~~  hayes-and-the-open-polar-sea:40  cov=0.917  kane-hall-polaris-hayes1867.txt  unmatched=['w']
+   PAGE: my observations place us in latitude 81 35 longitude 70 30 w
+   BOOK: my winter harbor near cape alexander at the mouth of smith sound my observations place us in latitude 81 35 longitude 70 30 tv our
+OK   hayes-and-the-open-polar-sea:44  cov=1.000  kane-hall-polaris-hayes1867.txt  unmatched=[]
+OK   hayes-and-the-open-polar-sea:52  cov=1.000  kane-hall-polaris-hayes1867.txt  unmatched=[]
+OK   hayes-and-the-open-polar-sea:52  cov=1.000  kane-hall-polaris-hayes1867.txt  unmatched=[]
+OK   hayes-and-the-open-polar-sea:54  cov=1.000  kane-hall-polaris-hayes1867.txt  unmatched=[]
+OK   hayes-and-the-open-polar-sea:54  cov=1.000  kane-hall-polaris-hayes1867.txt  unmatched=[]
+OK   hayes-and-the-open-polar-sea:56  cov=1.000  kane-hall-polaris-hayes1867.txt  unmatched=[]
+OK   kane-at-rensselaer-harbour:4  cov=1.000  kane-hall-polaris-kane1856-v1.txt  unmatched=[]
+~~~  kane-at-rensselaer-harbour:12  cov=0.978  kane-hall-polaris-kane1856-v1.txt  unmatched=['soundings']
+   PAGE: we found seven fathom soundings and a perfect shelter from the outside ice and thus laid our little brig in the harbor which we were fated never to leave together a long resting place to her indeed for the same ice is around her still
+   BOOK: upon remaining and gave at once the order to warp in bet the winter harbor 103 tween the islands we found seven fathom soundinsrs o and a perfect shelter from the outside ice and thus laid our little brig in the harbor which we were fated never to leave together a long resting place to her indeed for the same ice is around her still winltr harboij tlie same ice is around her still j j fh rensselaer
+OK   kane-at-rensselaer-harbour:22  cov=1.000  kane-hall-polaris-kane1856-v1.txt  unmatched=[]
+OK   kane-at-rensselaer-harbour:26  cov=1.000  kane-hall-polaris-hendrik1878.txt  unmatched=[]
+OK   kane-at-rensselaer-harbour:26  cov=1.000  kane-hall-polaris-hendrik1878.txt  unmatched=[]
+OK   kane-at-rensselaer-harbour:28  cov=1.000  kane-hall-polaris-kane1856-v1.txt  unmatched=[]
+OK   kane-at-rensselaer-harbour:32  cov=1.000  kane-hall-polaris-kane1856-v1.txt  unmatched=[]
+OK   kane-at-rensselaer-harbour:34  cov=1.000  kane-hall-polaris-kane1856-v2.txt  unmatched=[]
+OK   kane-at-rensselaer-harbour:40  cov=1.000  kane-hall-polaris-kane1856-v2.txt  unmatched=[]
+OK   kane-at-rensselaer-harbour:40  cov=1.000  kane-hall-polaris-kane1856-v2.txt  unmatched=[]
+OK   kane-at-rensselaer-harbour:46  cov=1.000  kane-hall-polaris-kane1856-v2.txt  unmatched=[]
+OK   kane-at-rensselaer-harbour:48  cov=1.000  kane-hall-polaris-kane1856-v2.txt  unmatched=[]
+OK   khp-overview:26  cov=1.000  kane-hall-polaris-hayes1867.txt  unmatched=[]
+~~~  the-inuit-of-these-expeditions:12  cov=0.960  kane-hall-polaris-hendrik1878.txt  unmatched=['eventually']
+   PAGE: eventually my companions began to think of abandoning their vessel and repairing to upernivik i did not believe they would be able to reach it
+   BOOK: order to take part in a walrus hunt i got one walrus even32 voyage with dr kane tually my companions began to think of abandoning their vessel and repairing to upernivik i did not believe they would be able to reach it at the same time
+OK   the-inuit-of-these-expeditions:12  cov=1.000  kane-hall-polaris-hendrik1878.txt  unmatched=[]
+OK   the-inuit-of-these-expeditions:12  cov=1.000  kane-hall-polaris-hendrik1878.txt  unmatched=[]
+OK   the-inuit-of-these-expeditions:14  cov=1.000  kane-hall-polaris-hendrik1878.txt  unmatched=[]
+OK   the-inuit-of-these-expeditions:18  cov=1.000  kane-hall-polaris-hendrik1878.txt  unmatched=[]
+OK   the-inuit-of-these-expeditions:18  cov=1.000  kane-hall-polaris-hendrik1878.txt  unmatched=[]
+OK   the-inuit-of-these-expeditions:18  cov=1.000  kane-hall-polaris-hendrik1878.txt  unmatched=[]
+OK   the-inuit-of-these-expeditions:22  cov=1.000  kane-hall-polaris-hendrik1878.txt  unmatched=[]
+OK   the-inuit-of-these-expeditions:22  cov=1.000  kane-hall-polaris-hendrik1878.txt  unmatched=[]
+OK   the-inuit-of-these-expeditions:28  cov=1.000  kane-hall-polaris-nourse1879.txt  unmatched=[]
+OK   the-inuit-of-these-expeditions:40  cov=1.000  kane-hall-polaris-hayes1867.txt  unmatched=[]
+OK   the-inuit-of-these-expeditions:42  cov=1.000  kane-hall-polaris-hayes1867.txt  unmatched=[]
+BAD  the-inuit-of-these-expeditions:48  cov=0.750  kane-hall-polaris-davis1876.txt  unmatched=['man', 'is']
+   PAGE: in the open polar sea the man is
+   BOOK: sound in the precise position of kane s open polar sea with a bay on the greenland side
+BAD  the-inuit-of-these-expeditions:48  cov=0.368  kane-hall-polaris-davis1876.txt  unmatched=['for', 'four', 'hundred', 'pages', 'in', 'rink', 's', 'list', 'nineteen', 'ebierbing', 'tookoolito', 'appear']
+   PAGE: for four hundred pages in rink s list of the nineteen on the floe ebierbing and tookoolito appear as
+   BOOK: of the crew were employed in finishing the house on the floe and another part in hauling ice to the ship the engi neers had made arrangements to melt ice so as to have fresh water
+OK   the-inuit-of-these-expeditions:52  cov=1.000  kane-hall-polaris-hendrik1878.txt  unmatched=[]
+OK   the-polaris-and-the-floe-drift:10  cov=1.000  kane-hall-polaris-davis1876.txt  unmatched=[]
+~~~  the-polaris-and-the-floe-drift:16  cov=0.974  kane-hall-polaris-davis1876.txt  unmatched=['vomited']
+   PAGE: he had not been in the cabin more than a half hour when john herron the steward brought him a cup of coffee he drank it and was immediately taken very sick he vomited a good deal retching violently
+   BOOK: he ex pected in a couple of days to start upon another sledgejourney which would complete the fall work he had not been in the cabin more than a half hour when john herron the steward brought him a cup of coffee he drank it and was immediately taken very sick he vom ited a good deal retching violently he went at once to bed dr bessels who
+OK   the-polaris-and-the-floe-drift:16  cov=1.000  kane-hall-polaris-davis1876.txt  unmatched=[]
+OK   the-polaris-and-the-floe-drift:18  cov=1.000  kane-hall-polaris-tyson1874.txt  unmatched=[]
+BAD  the-polaris-and-the-floe-drift:18  cov=0.846  kane-hall-polaris-davis1876.txt  unmatched=['to', 'take']
+   PAGE: refused to take any nutriment from the hands of any one except hannah
+   BOOK: how ever in his delirium he suspected even morton s fidelity and refused any nutriment from the hands of any to take one except hannah haws
+OK   the-polaris-and-the-floe-drift:18  cov=1.000  kane-hall-polaris-davis1876.txt  unmatched=[]
+~~~  the-polaris-and-the-floe-drift:20  cov=0.957  kane-hall-polaris-davis1876.txt  unmatched=['by']
+   PAGE: died from natural causes viz apoplexy and that the treatment of the case by dr bessels was the best practicable under the circumstances
+   BOOK: the witnesses we are conclusively of the opinion that captain hall died from natural causes viz apoplexy digging the grave 1 83 1 and that the treatment of the case hy dr bessels was 1871 november the best practicable under the circumstances
+~~~  the-polaris-and-the-floe-drift:28  cov=0.935  kane-hall-polaris-tyson1874.txt  unmatched=['very', 'we']
+   PAGE: very shortly after the ice exploded under our feet and broke in many places and the ship broke away in the darkness and we lost sight of her in a moment
+   BOOK: calling out to get every thing back as far as possible on the ice yery shortly after the ice exploded under our feet and broke in many places and the ship broke away in the darkness and ive lost sight of her in a moment gone but an ice bound horror seemed to cling to
+OK   the-polaris-and-the-floe-drift:34  cov=1.000  kane-hall-polaris-hendrik1878.txt  unmatched=[]
+OK   the-polaris-and-the-floe-drift:38  cov=1.000  kane-hall-polaris-tyson1874.txt  unmatched=[]
+OK   the-polaris-and-the-floe-drift:42  cov=1.000  kane-hall-polaris-tyson1874.txt  unmatched=[]
+OK   the-polaris-and-the-floe-drift:44  cov=1.000  kane-hall-polaris-tyson1874.txt  unmatched=[]
+OK   the-polaris-and-the-floe-drift:44  cov=1.000  kane-hall-polaris-tyson1874.txt  unmatched=[]
+BAD  the-polaris-and-the-floe-drift:50  cov=0.705  kane-hall-polaris-tyson1874.txt  unmatched=['and', 'eat', 'hans', 'and', 'family', 'and', 'he', 'knows', 'hannah', 's', 'puney', 's', 'next']
+   PAGE: he says he don t like the look out of the men s eyes i know what he fears he thinks they will first kill and eat hans and family and then he knows hannah s puney s and his turn would be next
+   BOOK: pistol and did not seem willing even to lend me the latter has voluntarily brought it to me he says he don t like the look out of the men s eyes i know what he fears and eat hans and family and he thinks they will first kill then heknows hannaks puneyh and his turn would he next god forbid that any of this company should be tempted to such a crime however i have
+~~~  the-polaris-and-the-floe-drift:50  cov=0.955  kane-hall-polaris-tyson1874.txt  unmatched=['god']
+   PAGE: it will go hard with any one who harms even the smallest child on this god made raft hannah seems much alarmed
+   BOOK: to such a crime however i have the pistol now and it will go hard with any one who harms even the smallest child on this grod made raft hannah seems much alarmed setting aside the crime of cannibalism for if
+OK   the-polaris-and-the-floe-drift:52  cov=1.000  kane-hall-polaris-hendrik1878.txt  unmatched=[]
+OK   the-polaris-and-the-floe-drift:56  cov=1.000  kane-hall-polaris-davis1876.txt  unmatched=[]
+~~~  the-polaris-and-the-floe-drift:56  cov=0.933  kane-hall-polaris-tyson1874.txt  unmatched=['look', 'out']
+   PAGE: the watch on the look out espied a steamer coming through the fog and the first i heard was a loud cry there s a steamer there s a steamer
+   BOOK: lying in the boat it being my watch below but which had just expired the watch on the lookout espied a steamer coming through the fog and the first i heard was a loud cry there s a steamer there s a steamer on hearing the outcry i sprang up as if endued with
+OK   the-polaris-and-the-floe-drift:56  cov=1.000  kane-hall-polaris-tyson1874.txt  unmatched=[]
+BAD  the-polaris-and-the-floe-drift:58  cov=0.778  kane-hall-polaris-davis1876.txt  unmatched=['n', 'harbour']
+   PAGE: in latitude 53 35 n off grady harbour labrador
+   BOOK: congratulated upon their miraculous escape they were picked up in latitude 53 35 k off grady harbor labrador the next

@@ -1,0 +1,35 @@
+# The interpreters and guides
+[page · inuit-oral-history · draft]
+
+In the first half of the nineteenth century, [[source:smith1985ooligbuck|by one estimate]], fewer than ten Inuit could interpret between Inuktitut and English. Almost every European account of this coast passed through one of them. They are named in the books, usually once, usually under a nickname given by a whaling crew, and then the narrative goes on as if the explorer had been talking directly to everyone.
+
+## Tattannoeuck and Ooligbuck: the overland expeditions
+
+[[person:Tattannoeuck]] — his name means "it is full"; the books call him Augustus — was born on the west coast of Hudson Bay about two hundred miles north of Churchill and trained as an interpreter at the Hudson's Bay Company post there from 1812. He and another Inuk, Hoeootoerock, interpreted for [[topic:franklin-1845|John Franklin's]] first overland expedition of 1819-22. Their job on the Coppermine was almost impossible: Samuel Hearne's Dene guides had massacred a band of Inuit at Bloody Falls fifty years earlier, and an armed party coming down that river again was the worst thing the local people could see. Tattannoeuck and Hoeootoerock were sent ahead alone to say otherwise. Twice the people fled anyway; from an old man too frail to run, Tattannoeuck got an account of the coast and its resources.
+
+The retreat from the coast killed more than half the party. Hoeootoerock vanished on a hunting trip and Tattannoeuck searched for him in vain. Starving, he pushed ahead of the struggling column, got lost in country he had never seen, and found Fort Enterprise anyway; Franklin called it "a remarkable proof of sagacity."
+
+He interpreted again in 1825-27, and in July 1826, after several hundred Inuit at the Mackenzie mouth had pillaged Franklin's boats, he walked alone into their camp at night and argued with forty men. His argument, as Franklin recorded it, was economic and unsentimental: "My tribe were in the same unhappy state in which you now are, before the white people came to Churchill, but at present they are supplied with everything they need, and you see that I am well clothed." He was not persuasive; they planned to kill the whole party, Tattannoeuck included, the next day, and were only prevented by circumstance. In the winter of 1834 he set out on foot from Churchill for Fort Resolution, with a lame leg and a pound of gunpowder, to join Back's search for [[person:John Ross]]. He lost his way and died of exposure.
+
+[[person:Ooligbuck]] joined the same 1825-27 expedition as hunter and companion, spoke no English at first, learned it, and went on to serve for nearly thirty years: Fort-Chimo on Ungava Bay, the Dease and Simpson survey east to the Castor and Pollux River in 1839, and [[person:John Rae]]'s 1846-47 expedition, by which time he could no longer keep the pace of sledge travel. He refused to attend church at Churchill and would not travel without at least one other Inuk in the party. He died late in 1852.
+
+## William Ouligbuck and the 1854 report
+
+Ooligbuck's son [[person:William Ouligbuck]] went north with Rae in 1853-54. In April 1854 near Pelly Bay, now [[place:Kugaaruk]], he interpreted the conversation that changed what Britain knew about the Franklin expedition. Everything in [[artifact:inuit-oral-history-019|Rae's report to the Admiralty]] — the forty men dragging a boat south over the ice, the bodies near the Great Fish River, the relics with the officers' crests on them — reached English through him. It is worth being exact about this: the most consequential single piece of Arctic testimony in the nineteenth century was spoken in Inuktitut by Inuit witnesses and rendered into English by a young Inuk employee of the Hudson's Bay Company, and the argument that followed in London was conducted entirely without reference to any of them. See [[page:franklin-testimony-vindicated]].
+
+## Eenoolooapik and the sound that could not be found
+
+[[person:Eenoolooapik]] was born about 1820 at Qimisuk in Tenudiakbeek — Cumberland Sound. The Aberdeen whaling master William Penny had heard from Inuit of a great bay full of whales and had failed three times to find it. In September 1839 he met a young man who had been born there and knew its geography in detail, and took him home to Scotland aboard the Neptune; they landed at Aberdeen on 8 November. Eenoolooapik nearly died of pneumonia after kayaking on the River Dee for the crowds, recovered, went to the theatre and to two balls for the Queen's wedding, and over the winter he and Penny drew a map of the sound. The Admiralty was sent it, paid £20 towards his keep, and was not interested.
+
+In the summer of 1840 he took the Bon Accord in. Penny named it Hogarth's Sound, believing it new; it turned out to be the Cumberland Gulf that [[person:John Davis]] had entered in 1585, which the Admiralty could have discovered from its own charts. Eenoolooapik went back to his family, married Amitak, traded baleen with Penny each year, and died of consumption in the summer of 1847, before the whalers began wintering in the sound in 1852 and before the consequences of what he had shown them became clear. His sister was [[person:Tookoolito]].
+
+## Tookoolito and Ebierbing
+
+[[person:Tookoolito]] and her husband [[person:Ebierbing]] worked with [[person:Charles Francis Hall]] from 1860 until his death in 1871, and afterwards on the Polaris and the six-month ice-floe drift; Ebierbing then guided Schwatka's search on King William Island in 1878-80. Tookoolito had been taken to England in 1853 and presented to Queen Victoria, and read and wrote English. Nearly everything Hall recorded from Inuit informants — [[person:Ookijoxy Ninoo]] on the Frobisher voyages, [[person:In-nook-poo-zhee-jook]] on Franklin — is her translation. She is the reason those testimonies exist in English at all, and she is credited in the books as a servant.
+
+[[artifact:inuit-oral-history-011|A tintype survives of the two of them together]], and portraits of each: [[artifact:inuit-oral-history-009|Tookoolito engraved in 1862]], [[artifact:inuit-oral-history-010|Ebierbing photographed about 1873]] with a sealing harpoon. Their story is told at length in [[topic:kane-hall-polaris]], at [[page:hall-among-the-inuit]] and [[page:the-inuit-of-these-expeditions]].
+
+## Hans Hendrik
+
+[[person:Hans Hendrik]] of Fiskernaesset in south Greenland shipped with Kane at eighteen and served on four expeditions over twenty-three years — Kane, Hayes, Hall's Polaris, Nares — which is more Arctic service than most of the officers who employed him. He is the one member of this group who wrote his own book. See [[page:inuit-authorship]].
+

@@ -1,0 +1,39 @@
+Two of Sir Edward Belcher's five ships spent the winter of 1852-53 in a place no European had seen, at the top of Wellington Channel. What they did with the following spring is the last great sledging season of the Franklin search — and the last of it that found nothing, because Franklin had never been within four hundred miles of the ground they covered.
+
+## Where they were
+
+[[artifact:franklin-search-024|The Assistance and the steam tender Pioneer]] came up [[place:Wellington Channel]] in August 1852, found no ice barrier where [[person:William Penny|Penny]] had reported one the year before, and on 18 August secured themselves in [[place:Northumberland Sound]] on the north side of the [[place:Grinnell Peninsula]], about 76° 57′ N. [[person:William John Samuel Pullen|Commander Pullen]] and HMS North Star lay 120 miles south at [[place:Beechey Island]] with the mail and the stores. [[place:Dealy Island]], where [[person:Henry Kellett|Kellett]] had the Resolute and Intrepid, was 250 miles to the south-west across two straits.
+
+Three parties went out in the spring: Belcher himself to the north-east, [[person:George Henry Richards|Commander Richards]] to the south-west with [[person:Sherard Osborn|Lieutenant Osborn]] under him, and a string of auxiliary, commissariat and mail sledges behind them. Nothing about this is guesswork: Belcher printed his own journal in volume I of [[source:belcher1855last|The Last of the Arctic Voyages]] and Richards's journal, in long extract, in volume II.
+
+## Belcher's own journey, 2 May to 23 June
+
+[[artifact:franklin-search-086|Belcher took the field himself]] — three sledges, a sledge-boat named Hamilton, twenty-eight men, two Cape York dogs and 1,230 rations — and worked east along a coast nobody had mapped. He was at Princess Royal Island on 8 May, at Cape Disraeli (76° 41′ 30″ N) on the 13th, and on 14 May saw two white headlands thirty-six miles to the east and understood what they were: "The key of Jones's Sound. Such it proved."
+
+On 20 May he stood on his furthest, a cliff he put at fifteen hundred feet and named Britannia Cliffs after one of his sledge banner ladies. [[artifact:franklin-search-085|What he saw from it]] is the whole northern theory of the search in one sentence: "in latitude 76° 30′ 42″ north, and eastward of 90° west, with an open navigable sea below us: yes! the 'Polar Sea,' for aught any man knows to the contrary, beneath us." He named North Kent and Prince Edward's Cape from that spot, built cairns, and turned back.
+
+Coming home he found things that were not Franklin and could not be explained: a hollow cairn eight feet across and forty courses high, packed with moss and sand, at a place he named Cape Disappointment; two grave-shaped trenches cut in solid rock on Grave Mount, seven or eight feet long, holding nothing but dead moss and fly larvae. On 28 May, at midnight from a hilltop, [[place:Wellington Channel]] opened out below with Dundas and Hamilton Islands and Cape Majendie in sight, and the next day the party drank the first running water since the previous August.
+
+The ground was poor. In fifty days his party killed two hares, five ptarmigan and one brent-goose. That single fact explains a good deal about why Belcher's men were weaker than Kellett's, whose people on [[place:Melville Island]] were eating musk-ox and venison all spring.
+
+## Richards to Melville Island — and the one meeting
+
+[[artifact:franklin-search-082|Richards left the ship on 10 April 1853]] with six sledges and fifty-seven men and the thermometer at −4°F, and came back on 12 July: fifty-six days out heavy and thirty-five home light, ninety-six days by Belcher's count. He shed his auxiliaries one by one — Grove at the Deception Group on 16 April, Dr [[person:David Lyall|Lyall]] on the 25th, Herbert at Point Success — and went on alone.
+
+On 29 April he reached the north-east point of Byam Martin Channel, proved it open to [[place:Queens Channel]], named the place Point Success and left Belcher's despatches there in 76° 32′ N, 105° 4′ W, twenty-eight miles from the rendezvous the two commanders had agreed on the floe at Beechey Island the year before. On 6 May he landed on the north-east point of [[place:Melville Island]] and surveyed its whole northern coast, which he found does not go above 76° 48′ 30″ N.
+
+Then, at one in the afternoon of 17 May, [[artifact:franklin-search-084|his party crossed a fresh sledge-track]]. "After an hour's quick walking, we saw an encampment, and, on coming up to it, found it to be a party from the 'Resolute,' under Lieutenant Hamilton. The surprise of himself and his party may be imagined at being awoke from their dreams by the hail of a stranger!" In two years, on ground the size of France, that is the only time the two halves of Belcher's squadron met. Hamilton's own return, in the 1853 [[artifact:franklin-search-081|Compendium of Travelling Operations]], dates it to the 18th; the western side of the meeting belongs to [[topic:mcclure-investigator]] and is recorded there.
+
+Richards walked on. He met [[person:Bedford Pim]] weather-bound on 31 May, sighted Kellett's ships on 3 June, and [[artifact:franklin-search-083|came aboard the Resolute alone at five in the morning of the 5th]]: "They were not prepared for a solitary visit from 'the Wellington Channel.'" Kellett came in on the 7th, fed him venison, musk-ox, hare and ptarmigan, gave him his despatches and walked him a day's march out on the dog-sledge. Richards's return brought Belcher the first news of [[topic:mcclure-investigator|McClure and the Investigator]] that had not come by way of England.
+
+Osborn had gone off to the south-west when the division split about 17 May, under Belcher's written order that Richards take "the northernmost and westernmost, and Lieutenant Osborn that to the south-west." What he did there is thinly recorded: on 10 July Richards found Osborn's tent and two of his men at Cape Lady Franklin, their officer "gone southerly." It is a real gap in this topic's record.
+
+## The mail
+
+The eastern division's post office was a cairn at Cape Becher, halfway to Beechey. On 20 April 1853 [[person:John Powles Cheyne|Lieutenant Cheyne]] was sent down with ten days' rations under the Victory banner to fetch what Pullen had left there. He was back at half past three on the morning of the 28th announcing an English mail — and [[artifact:franklin-search-088|had left the despatches behind]]. Belcher decided that no change of orders could have come, and started north-east four days later without them.
+
+The other direction of that mail is what killed [[person:Joseph Rene Bellot]]. He was blown off the floe and drowned in Wellington Channel on 18 August 1853 carrying despatches from the Phoenix up to Belcher (see [[page:prince-albert-and-bellot]]). Belcher's ships, by then frozen in at [[place:Disaster Bay]], learned of it five weeks later: on 22 September Osborn's sledge came in over the floe and [[artifact:franklin-search-087|announced three things at once]] — the Phoenix had arrived, the transport Breadalbane was lost, and Bellot was dead.
+
+## What it was worth
+
+Not one trace of Franklin, and none was possible. The value of the season is on the chart: the north coast of [[place:Bathurst Island]], the whole north coast of Melville Island, Byam Martin Channel proved open, the north-west of [[place:Cornwallis Island]], and the coasts and channels between the Grinnell Peninsula and the head of Jones Sound. Belcher was a difficult and disliked man who lost four ships, but the eastern division put roughly as much new coastline on the map in 1853 as any single season of the search except Kellett's, and a modern ship in Norwegian Bay or Penny Strait is using names his sledge parties gave. See [[page:the-mapping-of-the-archipelago]] and, for what happened to the ships, [[page:belchers-five-ships]].

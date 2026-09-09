@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+            <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+            <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+            <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+            <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+            <head><META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<link rel="shortcut icon" href="/themes/Mirage2/images/favicon.ico">
+<link rel="apple-touch-icon" href="/themes/Mirage2/images/apple-touch-icon.png">
+<script crossorigin="anonymous" src="https://unpkg.com/react@18.2.0/umd/react.production.min.js" type="7dab9f9ac0e315e314d76aba-text/javascript"></script><script crossorigin="anonymous" src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js" type="7dab9f9ac0e315e314d76aba-text/javascript"></script><script src="https://unpkg.com/metrics-widget@1/dist/index.js" type="7dab9f9ac0e315e314d76aba-text/javascript"></script>
+<link href="https://unpkg.com/metrics-widget@1/dist/index.css" rel="stylesheet">
+<meta name="Generator" content="DSpace 6.3">
+<link href="/themes/Mirage2/styles/main.css" rel="stylesheet">
+<link type="application/opensearchdescription+xml" rel="search" href="https://directory.doabooks.org:443/open-search/description.xml" title="DSpace">
+<script type="7dab9f9ac0e315e314d76aba-text/javascript">
+        //Clear default text of empty text areas on focus
+        function tFocus(element)
+        {
+        if (element.value == ''){element.value='';}
+        }
+        //Clear default text of empty text areas on submit
+        function tSubmit(form)
+        {
+        var defaultedElements = document.getElementsByTagName("textarea");
+        for (var i=0; i != defaultedElements.length; i++){
+        if (defaultedElements[i].value == ''){
+        defaultedElements[i].value='';}}
+        }
+        //Disable pressing 'enter' key to submit a form (otherwise pressing 'enter' causes a submission to start over)
+        function disableEnterKey(e)
+        {
+        var key;
+
+        if(window.event)
+        key = window.event.keyCode; //Internet Explorer
+        else
+        key = e.which; //Firefox and Netscape
+
+        if(key == 13) //if "Enter" pressed, then disable!
+        return false;
+        else
+        return true;
+        }
+      </script><!--[if lt IE 9]>
+            <script src="/themes/Mirage2/vendor/html5shiv/dist/html5shiv.js"> </script>
+        <script src="/themes/Mirage2/vendor/respond/dest/respond.min.js"> </script>
+        <![endif]--><script src="/themes/Mirage2/vendor/modernizr/modernizr.js" type="7dab9f9ac0e315e314d76aba-text/javascript"> </script>
+<title>Search</title>
+<link href="https://storage.googleapis.com/operas/metrics-widget/hirmeos-metrics-0.2.0.css" rel="stylesheet">
+</head><body>
+<header>
+<div role="navigation" class="navbar navbar-default navbar-static-top">
+<div class="container">
+<div class="navbar-header">
+<a class="navbar-image" href="https://www.doabooks.org/en"><img class="doab-logo" alt="Logo DOAB" src="/themes/Mirage2/images/doab-logo.png"></a><button data-toggle="offcanvas" class="button navbar-toggle visible-sm visible-xs" type="button"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+</div>
+<div class="flex navbar-header pull-right">
+<div class="nav pull-left btn button">
+<li>
+<a href="/login"><span>Publisher login</span></a>
+</li>
+</div>
+<div class="nav pull-left button btn">
+<ul class="nav">
+<li>
+<a href="https://www.doabooks.org/en/support">Support</a>
+</li>
+</ul>
+</div>
+<div class="nav pull-left button btn languageNavButton">
+<ul class="nav">
+<li class="dropdown" id="ds-language-selection">
+<a data-toggle="dropdown" class="dropdown-toggle" role="button" href="#" id="language-dropdown-toggle"><span><span class="icon is-left"><i class="doab-lang-icon fas fa-globe"></i></span>Language&nbsp;<i aria-hidden="true" class="fa fa-angle-down"></i></span></a>
+<ul data-no-collapse="true" aria-labelledby="language-dropdown-toggle" role="menu" class="dropdown-menu pull-right">
+<li role="presentation" class="disabled">
+<a href="?query=Contact+Continuity+and+Collapse+Norse+Colonization&locale-attribute=en">English</a>
+</li>
+<li role="presentation">
+<a href="?query=Contact+Continuity+and+Collapse+Norse+Colonization&locale-attribute=fr">fran&ccedil;ais</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="nav pull-left button btn doab-btn-deposit">
+<ul class="nav">
+<li>
+<a href="/submit">
+                    Deposit
+                  </a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="navbar-menu doab-mainnav navbar-default">
+<div class="container">
+<div class="navbar-brand">
+<button aria-controls="navbar" aria-expanded="false" data-target="#navbarMainCollapsible" data-toggle="collapse" class="navbar-toggle2 collapsed" type="button"><span class="sr-only">Toggle navigation</span><i aria-hidden="true" class="fa fa-bars"></i><i aria-hidden="true" class="fa fa-times"></i></button>
+</div>
+<div style="height: 0px;" class="navbar-menu collapse" id="navbarMainCollapsible">
+<ul class="navbar-start pull-left"></ul>
+<ul class="navbar-end pull-right"></ul>
+</div>
+<div class="navbar-menu" id="navbarMain">
+<ul class="navbar-start pull-left"></ul>
+<ul class="navbar-end pull-right"></ul>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="trail-wrapper hidden-print">
+<div class="container">
+<div class="row">
+<div class="col-xs-12">
+<div class="breadcrumb dropdown visible-xs">
+<a data-toggle="dropdown" class="dropdown-toggle" role="button" href="#" id="trail-dropdown-toggle">Search&nbsp;<b class="caret"></b></a>
+<ul aria-labelledby="trail-dropdown-toggle" role="menu" class="dropdown-menu">
+<li role="presentation">
+<a role="menuitem" href="/"><i aria-hidden="true" class="glyphicon glyphicon-home"></i>&nbsp;
+                        DOAB Home</a>
+</li>
+<li role="presentation" class="disabled">
+<a href="#" role="menuitem">Search</a>
+</li>
+</ul>
+</div>
+<ul class="breadcrumb hidden-xs">
+<li>
+<i aria-hidden="true" class="glyphicon glyphicon-home"></i>&nbsp;
+            <a href="/">DOAB Home</a>
+</li>
+<li class="active">Search</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="hidden" id="no-js-warning-wrapper">
+<div id="no-js-warning">
+<div class="notice failure">JavaScript is disabled for your browser. Some features of this site may not work without it.</div>
+</div>
+</div>
+<div class="container" id="main-container">
+<div class="row row-offcanvas row-offcanvas-right">
+<div class="horizontal-slider clearfix">
+<div class="col-xs-12 col-sm-12 col-md-9 main-content">
+<div>
+<h2 class="ds-div-head page-header first-page-header">Search</h2>
+<div id="aspect_discovery_SimpleSearch_div_search" class="ds-static-div primary">
+<p class="ds-paragraph">
+<input id="aspect_discovery_SimpleSearch_field_discovery-json-search-url" class="ds-hidden-field form-control" name="discovery-json-search-url" type="hidden" value="https://directory.doabooks.org/JSON/discovery/search">
+</p>
+<p class="ds-paragraph">
+<input id="aspect_discovery_SimpleSearch_field_contextpath" class="ds-hidden-field form-control" name="contextpath" type="hidden" value="">
+</p>
+<div id="aspect_discovery_SimpleSearch_div_discovery-search-box" class="ds-static-div discoverySearchBox">
+<form id="aspect_discovery_SimpleSearch_div_general-query" class="ds-interactive-div discover-search-box" action="discover" method="get" onsubmit="if (!window.__cfRLUnblockHandlers) return false; javascript:tSubmit(this);" data-cf-modified-7dab9f9ac0e315e314d76aba-="">
+<fieldset id="aspect_discovery_SimpleSearch_list_primary-search" class="ds-form-list">
+<div class="ds-form-item row">
+<div class="col-sm-12">
+<p class="input-group">
+<input id="aspect_discovery_SimpleSearch_field_query" class="ds-text-field form-control" name="query" type="text" value="Contact Continuity and Collapse Norse Colonization"><span class="input-group-btn"><button id="aspect_discovery_SimpleSearch_field_submit" class="ds-button-field btn btn-default search-icon search-icon" name="submit" type="submit">Go</button></span>
+</p>
+</div>
+</div>
+<div id="filters-overview-wrapper-squared"></div>
+</fieldset>
+</form>
+<form id="aspect_discovery_SimpleSearch_div_search-filters" class="ds-interactive-div discover-filters-box" action="discover" method="get" onsubmit="if (!window.__cfRLUnblockHandlers) return false; javascript:tSubmit(this);" data-cf-modified-7dab9f9ac0e315e314d76aba-="">
+<div class="ds-static-div clearfix">
+<p class="ds-paragraph pull-right">
+<a href="#" class="show-advanced-filters">Show Advanced Filters</a><a href="#" class="hide-advanced-filters hidden">Hide Advanced Filters</a>
+</p>
+</div>
+<h3 class="ds-div-head discovery-filters-wrapper-head hidden">Filters</h3>
+<div id="aspect_discovery_SimpleSearch_div_discovery-filters-wrapper" class="ds-static-div  hidden">
+<p class="ds-paragraph">Use filters to refine the search results.</p>
+<script type="7dab9f9ac0e315e314d76aba-text/javascript">
+                if (!window.DSpace) {
+                    window.DSpace = {};
+                }
+                if (!window.DSpace.discovery) {
+                    window.DSpace.discovery = {};
+                }
+                if (!window.DSpace.discovery.filters) {
+                    window.DSpace.discovery.filters = [];
+                }
+            </script><script type="7dab9f9ac0e315e314d76aba-text/javascript">
+            if (!window.DSpace.i18n) {
+                window.DSpace.i18n = {};
+            }
+            if (!window.DSpace.i18n.discovery) {
+                window.DSpace.i18n.discovery = {};
+            }
+        
+                    if (!window.DSpace.i18n.discovery.filtertype) {
+                        window.DSpace.i18n.discovery.filtertype = {};
+                    }
+                window.DSpace.i18n.discovery.filtertype['title']='Title';window.DSpace.i18n.discovery.filtertype['contributor']='Contributor';window.DSpace.i18n.discovery.filtertype['publisher']='Publisher';window.DSpace.i18n.discovery.filtertype['funder']='Funder';window.DSpace.i18n.discovery.filtertype['language']='Language';window.DSpace.i18n.discovery.filtertype['dateIssued']='Date Issued';window.DSpace.i18n.discovery.filtertype['classification_text']='Subject';window.DSpace.i18n.discovery.filtertype['collection']='Collection';window.DSpace.i18n.discovery.filtertype['doi']='DOI';window.DSpace.i18n.discovery.filtertype['publication_type']='Publication Type';window.DSpace.i18n.discovery.filtertype['license']='License';window.DSpace.i18n.discovery.filtertype['isbn']='ISBN';window.DSpace.i18n.discovery.filtertype['grantors']='Grantors';
+                    if (!window.DSpace.i18n.discovery.filter_relational_operator) {
+                        window.DSpace.i18n.discovery.filter_relational_operator = {};
+                    }
+                window.DSpace.i18n.discovery.filter_relational_operator['contains']='Contains';window.DSpace.i18n.discovery.filter_relational_operator['equals']='Equals';window.DSpace.i18n.discovery.filter_relational_operator['authority']='ID';window.DSpace.i18n.discovery.filter_relational_operator['notcontains']='Not Contains';window.DSpace.i18n.discovery.filter_relational_operator['notequals']='Not Equals';window.DSpace.i18n.discovery.filter_relational_operator['notauthority']='Not ID';</script>
+<div id="aspect_discovery_SimpleSearch_row_filter-controls" class="ds-form-item apply-filter">
+<div>
+<div class="">
+<p class="btn-group">
+<button id="aspect_discovery_SimpleSearch_field_submit_reset_filter" class="ds-button-field btn btn-default discovery-reset-filter-button discovery-reset-filter-button" name="submit_reset_filter" type="submit">Reset</button><button class="ds-button-field btn btn-default discovery-add-filter-button visible-xs discovery-add-filter-button visible-xs " name="submit_add_filter" type="submit">Add New Filter</button><button id="aspect_discovery_SimpleSearch_field_submit_apply_filter" class="ds-button-field btn btn-default discovery-apply-filter-button discovery-apply-filter-button" name="submit_apply_filter" type="submit">Apply</button>
+</p>
+</div>
+</div>
+</div>
+</div>
+<p id="aspect_discovery_SimpleSearch_p_hidden-fields" class="ds-paragraph hidden">
+<input id="aspect_discovery_SimpleSearch_field_query" class="ds-hidden-field form-control" name="query" type="hidden" value="Contact Continuity and Collapse Norse Colonization">
+</p>
+</form>
+</div>
+<form id="aspect_discovery_SimpleSearch_div_main-form" class="ds-interactive-div " action="/discover" method="post" onsubmit="if (!window.__cfRLUnblockHandlers) return false; javascript:tSubmit(this);" data-cf-modified-7dab9f9ac0e315e314d76aba-="">
+<p class="ds-paragraph">
+<input id="aspect_discovery_SimpleSearch_field_search-result" class="ds-hidden-field form-control" name="search-result" type="hidden" value="true">
+</p>
+<p class="ds-paragraph">
+<input id="aspect_discovery_SimpleSearch_field_query" class="ds-hidden-field form-control" name="query" type="hidden" value="Contact Continuity and Collapse Norse Colonization">
+</p>
+<p class="ds-paragraph">
+<input id="aspect_discovery_SimpleSearch_field_current-scope" class="ds-hidden-field form-control" name="current-scope" type="hidden" value="">
+</p>
+<p class="ds-paragraph">
+<input id="aspect_discovery_SimpleSearch_field_rpp" class="ds-hidden-field form-control" name="rpp" type="hidden" value="10">
+</p>
+<p class="ds-paragraph">
+<input id="aspect_discovery_SimpleSearch_field_sort_by" class="ds-hidden-field form-control" name="sort_by" type="hidden" value="score">
+</p>
+<p class="ds-paragraph">
+<input id="aspect_discovery_SimpleSearch_field_order" class="ds-hidden-field form-control" name="order" type="hidden" value="desc">
+</p>
+</form>
+<div id="aspect_discovery_SimpleSearch_div_search-results" class="ds-static-div primary">
+<p class="ds-paragraph">Search produced no results.</p>
+</div>
+</div>
+</div>
+</div>
+<div role="navigation" id="sidebar" class="col-xs-6 col-sm-3 sidebar-offcanvas">
+<div class="word-break hidden-print" id="ds-options">
+<h2 class="ds-option-set-head  h6">Browse</h2>
+<div id="aspect_viewArtifacts_Navigation_list_browse" class="list-group">
+<a class="list-group-item active"><span class="h5 list-group-item-heading  h5">All of DOAB</span></a><a href="/browse?type=classification_text" class="list-group-item ds-option">Subjects</a><a href="/browse?type=publisher" class="list-group-item ds-option">Publishers</a><a href="/browse?type=language" class="list-group-item ds-option">Languages</a><a href="/browse?type=collection" class="list-group-item ds-option">Collections</a>
+</div>
+<h2 class="ds-option-set-head  h6">My Account</h2>
+<div id="aspect_viewArtifacts_Navigation_list_account" class="list-group">
+<a href="/login" class="list-group-item ds-option">Login</a><a href="/register" class="list-group-item ds-option">Register</a>
+</div>
+<div id="aspect_viewArtifacts_Navigation_list_context" class="list-group"></div>
+<div id="aspect_viewArtifacts_Navigation_list_administrative" class="list-group"></div>
+<h2 class="ds-option-set-head  h6">Export</h2>
+<div id="com_atmire_export_Navigation_list_export" class="list-group">
+<a href="https://www.doabooks.org/en/doab/metadata-harvesting-and-content-dissemination" class="list-group-item ds-option">Repository metadata</a>
+</div>
+<div id="aspect_discovery_Navigation_list_discovery" class="list-group"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer id="Doab-footer" class="footer">
+<div class="container">
+<div class="doab-ftr-header">
+<div class="hidden">
+            Doabooks
+          </div>
+<hr class="is-hidden">
+</div>
+<div class="row footer-columns">
+<div class="column doab-footer-nav">
+<ul class="menu-list">
+<li>
+<a href="https://www.doabooks.org/en/researchers">For Researchers</a>
+</li>
+<li>
+<a href="https://www.doabooks.org/en/librarians">For Librarians</a>
+</li>
+<li>
+<a href="https://www.doabooks.org/en/publishers">For Publishers</a>
+</li>
+<li>
+<a href="https://www.doabooks.org/en/supporters">Our Supporters</a>
+</li>
+<li>
+<a href="https://www.doabooks.org/en/resources">Resources</a>
+</li>
+<li>
+<a href="https://www.doabooks.org/en/doab">DOAB</a>
+</li>
+</ul>
+</div>
+<div class="column">
+<div class="doab-newsletter">
+<h4 class="title">Newsletter</h4>
+<hr class="is-hidden">
+<i class="fas fa-envelope-open-text pull-left"></i>
+<ul>
+<li>
+<a href="https://oapen.us4.list-manage.com/subscribe?u=314fa411ba5eaaee7244c95e1&id=a362459f54">subscribe to our newsletter</a>
+</li>
+<li>
+<a href="https://us4.campaign-archive.com/home/?u=314fa411ba5eaaee7244c95e1&id=a362459f54">view our news archive</a>
+</li>
+</ul>
+</div>
+<div style="margin-bottom:2rem" class="doab-social-links">
+<h4 class="title is-6">Follow us on</h4>
+<ul>
+<li>
+<a href="https://twitter.com/doabooks"><i aria-hidden="true" class="fab fa-twitter-square"></i><span class="hidden">Twitter</span></a>
+</li>
+</ul>
+</div>
+<div class="doab-license">
+<h4 class="title is-6">License</h4>
+<ul>
+<li>If not noted otherwise all contents are available under Attribution 4.0 International (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>)</li>
+</ul>
+</div>
+<div>
+<h4 class="title is-6">donate</h4>
+<hr class="is-hidden">
+<ul style="text-align:center">
+<li>
+<img style="width:128px;height:128px;max-height:none;max-width:none;" alt="Donate" src="/themes/Mirage2/images/donation-qr-code.png"><br>
+<small class="is-size-7">Support DOAB and the OAPEN Library</small>
+</li>
+<li>
+<form style="margin-top:1em;" target="_top" method="post" action="https://www.paypal.com/donate">
+<input value="VPW4DRBLBM9J8/" name="hosted_button_id" type="hidden"><input alt="Donate with PayPal button" title="PayPal - The safer, easier way to pay online!" name="submit" style="border:none" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" type="image"><img style="margin-left: 4px;" height="1" width="1" src="https://www.paypal.com/en_NL/i/scr/pixel.gif" border="0" alt=""></form>
+</li>
+</ul>
+</div>
+</div>
+<div class="column doab-credits">
+<h4 class="title is-6">Credits</h4>
+<hr class="is-hidden">
+<ul>
+<li>
+<a href="https://www.enseignementsup-recherche.gouv.fr/pid24578/investissements-d-avenir.html/"><img alt="logo Investir l'avenir" width="100" src="/themes/Mirage2/images/investirlavenir.png"><span class="hidden">Investir l'avenir</span></a>
+</li>
+<li>
+<a href="https://fundit.fr/fr/institutions/ministere-lenseignement-superieur-et-recherche-france-menesr-0"><img alt="logo MESRI" width="100" src="/themes/Mirage2/images/logo_MESRI_2021.jpeg"><span class="hidden">MESRI</span></a>
+</li>
+<li>
+<a href="https://europa.eu/european-union/index_en"><img alt="logo EU" width="100" src="/themes/Mirage2/images/eu-flag.png"><span class="hidden">European Union</span>
+<br>
+<small class="is-size-7">This project received funding from the European Union&rsquo;s Horizon 2020 research and innovation programme under grant agreement No 871069.</small></a>
+</li>
+</ul>
+</div>
+<div class="column doab-addresses">
+<hr class="is-sr-only">
+<p>Directory of Open Access Books is a joint service of <a href="https://www.oapen.org/">OAPEN</a>,
+              <a href="https://www.openedition.org/">OpenEdition</a>,
+              <a href="https://www.cnrs.fr/">CNRS</a> and <a href="https://www.univ-amu.fr/">Aix-Marseille Universit&eacute;</a>, provided by DOAB Foundation.</p>
+<p>
+<b>Websites:</b>
+</p>
+<p>
+              DOAB
+              <br>
+<a href="https://www.doabooks.org">www.doabooks.org</a>
+</p>
+<p>OAPEN Home<br>
+<a href="https://www.oapen.org">www.oapen.org</a>
+<br>
+</p>
+<p>OAPEN OA Books Toolkit<br>
+<a href="https://www.oabooks-toolkit.org">www.oabooks-toolkit.org</a>
+</p>
+</div>
+</div>
+</div>
+<a class="hidden" href="/htmlmap"></a>
+</footer>
+<script type="7dab9f9ac0e315e314d76aba-text/javascript">
+                         if(typeof window.publication === 'undefined'){
+                            window.publication={};
+                          };
+                        window.publication.contextPath= '';window.publication.themePath= '/themes/Mirage2/';</script><script type="7dab9f9ac0e315e314d76aba-text/javascript">if(!window.DSpace){window.DSpace={};}window.DSpace.context_path='';window.DSpace.theme_path='/themes/Mirage2/';</script><script src="/themes/Mirage2/scripts/theme.js" type="7dab9f9ac0e315e314d76aba-text/javascript"> </script><script src="/themes/Mirage2/scripts/peer-review-modal.js" type="7dab9f9ac0e315e314d76aba-text/javascript"> </script><script src="/static/js/discovery/discovery-results.js" type="7dab9f9ac0e315e314d76aba-text/javascript"> </script><script src="/aspects/MetadataQuality/mqm-global.js" type="7dab9f9ac0e315e314d76aba-text/javascript"> </script><script type="7dab9f9ac0e315e314d76aba-text/javascript">
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-18280509-1', 'directory.doabooks.org');
+                ga('send', 'pageview');
+            </script>
+<div aria-labelledby="helpModal" role="dialog" tabindex="-1" id="helpModal" class="modal fade">
+<div role="document" class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 id="myModalLabel" class="modal-title">Export search results</h4>
+</div>
+<div class="modal-body">
+<p>
+    The export option will allow you to export the current search results of the entered query to a file. Differen
+    formats are available for download. To export the items, click on the button corresponding with the preferred download format.
+  </p>
+<p>
+    A logged-in user can export up to 15000 items. If you're not logged in, you can export no more than 500 items.
+  </p>
+<p>
+    To select a subset of the search results, click "Selective Export" button and make a selection of the items you want to export.
+    The amount of items that can be exported at once is similarly restricted as the full export.
+  </p>
+<p>
+    After making a selection, click one of the export format buttons. The amount of items that will be exported is indicated in the bubble next to export format.
+  </p>
+</div>
+<div class="modal-footer">
+<button data-dismiss="modal" class="btn btn-default" type="button">Close</button>
+</div>
+</div>
+</div>
+</div>
+<script type="7dab9f9ac0e315e314d76aba-text/javascript">if(!window.DSpace){window.DSpace={};}window.DSpace.peerReviewRestEndpoint='https://directory.doabooks.org/rest/peerReviews';</script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="7dab9f9ac0e315e314d76aba-|49" defer></script></body></html>

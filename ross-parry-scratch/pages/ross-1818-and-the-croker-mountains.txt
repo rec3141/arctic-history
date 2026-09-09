@@ -1,0 +1,118 @@
+# Ross in 1818, and the mountains that were not there
+[page · ross-parry · draft]
+
+The Admiralty's 1818 expedition had two objects: find the entrance to a
+Northwest Passage, and settle whether William Baffin's 1616 chart of Baffin
+Bay — quietly dropped from the maps as a fabrication — was true. It settled
+the second question emphatically and got the first one badly wrong.
+
+Two whalers were bought and strengthened: the Isabella of 385 tons under
+[[person:John Ross]], and the Alexander of 252 tons under Lieutenant
+[[person:William Edward Parry]]. [[person:Edward Sabine]] of the Royal
+Artillery came as astronomer. They sailed from the Thames in April 1818 and
+were home in November. The route is
+[[artifact:ross-parry-001|reconstructed here from the marginal positions in
+Ross's own narrative]].
+
+## Meeting the Inughuit, 10 August 1818
+
+Working north up the Greenland coast, on 10 August the ships were beset in
+latitude 75° 55' N, longitude 65° 32' W, off [[place:Cape York]], when eight
+dog sledges appeared and halted a mile off. The expedition carried
+[[person:John Sacheuse]], a young West Greenlander who had stowed away to
+Leith two years earlier, taught himself English, and volunteered now to go
+out onto the ice alone and unarmed with a white flag and a bundle of presents.
+
+A chasm in the ice separated the two parties. Sacheuse tried the Humooke
+dialect and found it close enough. The first man drew a knife from his boot
+and told him to go away — "I can kill you." Sacheuse threw an English knife
+across, and they picked it up. Then, said Ross, they pointed at the ships and
+asked [[artifact:ross-parry-030|what great creatures those were]]: did they
+come from the sun or the moon? Sacheuse said they were houses made of wood.
+"No," they answered, "they are alive, we have seen them move their wings."
+
+These were the Inughuit of northwest Greenland, perhaps two hundred people,
+cut off from the rest of Greenland and from each other's knowledge of the
+world; Ross called them "Arctic Highlanders." They had iron, hammered cold
+from the Cape York meteorites, and no wood to speak of. See
+[[topic:greenland-inughuit]] for what became of them and their meteoric iron.
+
+Sacheuse painted the encounter himself, and the picture was engraved for
+Ross's book: [[artifact:ross-parry-010|First Communication with the Natives of
+Prince Regents Bay]]. It is among the earliest published works by a
+Greenlandic Inuk artist. Sacheuse died of typhus at Edinburgh in 1819, aged
+about twenty-two, before the argument over the rest of the voyage had properly
+begun. The full passage is at
+[[artifact:ross-parry-020|Ross's account of the first communication]].
+
+## The Crimson Cliffs, 17 August 1818
+
+A week later, running along the same coast, the ships passed cliffs whose snow
+was stained [[artifact:ross-parry-032|a deep crimson colour]]. Ross sent a
+boat with Mr Ross, midshipman, and Mr Beverley, assistant surgeon, to bring
+back specimens; bird droppings were ruled out on the spot, because thousands of
+birds were sitting on clean snow all around. The samples went home to the
+botanist Robert Brown, who identified the cause as a microscopic alga — what
+is now called *Chlamydomonas nivalis*, snow algae. The cliffs are still the
+[[place:Crimson Cliffs]] on the chart, and red snow is still measured there,
+now as an albedo-lowering feedback on melting ice. See
+[[artifact:ross-parry-021|the excerpt]].
+
+## The Croker Mountains, 31 August 1818
+
+Ross crossed the head of Baffin Bay, confirmed Baffin's bays and sounds one by
+one, and on 30 August landed at [[place:Possession Bay]] on the north shore of
+a wide opening. He noted that it "answered exactly to the latitude given by
+Baffin of Lancaster Sound," and called Baffin's accuracy "a most remarkable
+instance" — the rehabilitation of a two-hundred-year-old chart in a sentence.
+See [[topic:davis-baffin-hudson]].
+
+The next day the ships stood west into [[place:Lancaster Sound]] in thick
+weather, Ross's position for the day about 74° 03' N, 81° 28' W. At half past
+two Ross went below to dinner, leaving orders to be called if land or ice
+showed ahead. At three the officer of the watch reported it clearing at the
+bottom of the bay. Ross went on deck; it cleared completely for about ten
+minutes; and he
+
+> distinctly saw the land, round the bottom of the bay, forming a connected
+> chain of mountains with those which extended along the north and south sides.
+
+He had the master, Mr Lewis, and a leading man, James Haig, take its bearings
+for the log. He named the capes on either hand after Warrender and
+Castlereagh, the ice-filled southwest corner Barrow's Bay, and
+[[artifact:ross-parry-031|the mountains in the centre Croker's Mountains,
+after the Secretary to the Admiralty]]. At a quarter past three it was thick
+again. "Being now perfectly satisfied that there was no passage in this
+direction," he tacked and stood back for the Alexander.
+
+There are no mountains there. Lancaster Sound opens west into Barrow Strait
+and runs, ice permitting, most of the way across the archipelago. It is
+[[place:Lancaster Sound|Tallurutiup Imanga]], now Canada's largest marine
+protected area, and ships including this one pass through it every season.
+
+## The quarrel
+
+Nobody on the Alexander saw the mountains. Parry, six or seven miles astern,
+had seen the sound still open. Sabine, aboard the Isabella, said publicly that
+he had been on deck and had seen nothing, and that Ross had put words in his
+mouth; he published a pamphlet saying so in 1819, and Ross published a reply.
+John Barrow, whose project the whole thing was, reviewed Ross's book
+anonymously and destroyed it.
+
+The most likely explanation is not fraud. Ross saw something in ten minutes of
+clear weather at the end of a long thick day: superior mirage, common in the
+Arctic, will lift a distant coast into a wall across an open channel, and the
+land on both sides of Lancaster Sound is genuinely mountainous. The failure was
+one of method — he did not sail on to check, and he did not send the Alexander
+in — and it was a failure of exactly the kind that a service which had never
+wintered in the ice was liable to.
+
+The consequence was that the Admiralty gave the next voyage to Parry, who
+sailed through the Croker Mountains in the first week of August 1820 without
+comment: see [[page:parry-at-melville-island-1819-20]]. Ross never held
+another Admiralty command. When he went north again in 1829 it was in a
+private steam vessel paid for by a gin distiller, and the voyage ended with
+his crew walking to [[place:Fury Beach]] to live on the stores Parry had left
+there ([[topic:ross-victory]]) — a coda in which the man who invented a
+mountain range was saved by another man's shipwreck.
+

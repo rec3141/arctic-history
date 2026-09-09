@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <language>eng</language>
+  <scanningcenter>uoft</scanningcenter>
+  <sponsor>University of Toronto</sponsor>
+  <contributor>Robarts - University of Toronto</contributor>
+  <title>ANNUAL REPORT OF THE ROYAL CANADIAN MOUNTED POLICE</title>
+  <creator>Royal Canadian Mounted Police</creator>
+  <collection>uoftgovpubs</collection>
+  <collection>robarts</collection>
+  <collection>governmentpublications</collection>
+  <collection>toronto</collection>
+  <shiptracking>utg0264</shiptracking>
+  <barcode>31761116488826</barcode>
+  <oclc-id>977672100</oclc-id>
+  <description>AN</description>
+  <description>FROM 1969 PUBLISHED IN THE ANNUAL REPORT OF THE SOLICITOR GENERAL</description>
+  <mediatype>texts</mediatype>
+  <repub_state>19</repub_state>
+  <page-progression>lr</page-progression>
+  <updatedate>2023-06-19 17:10:08</updatedate>
+  <updater>angela.dugas@archive.org</updater>
+  <identifier>31761116488826</identifier>
+  <uploader>angela.dugas@archive.org</uploader>
+  <publicdate>2023-06-19 17:10:11</publicdate>
+  <operator>associate-julian-freeman@archive.org</operator>
+  <scanner>scribe4.toronto.archive.org</scanner>
+  <camera>Sony Alpha-A6300 (Control)</camera>
+  <tts_version>5.7-initial-24-gde4a12cb</tts_version>
+  <identifier-access>http://archive.org/details/31761116488826</identifier-access>
+  <identifier-ark>ark:/13960/s2gd7r6h01t</identifier-ark>
+  <scandate>20230706023206</scandate>
+  <imagecount>802</imagecount>
+  <autocrop_version>0.0.15_books-20220331-0.2</autocrop_version>
+  <ppi>500</ppi>
+  <republisher_operator>associate-rhegrace-oplas@archive.org;associate-josephine-ochavo@archive.org</republisher_operator>
+  <republisher_date>20230707214918</republisher_date>
+  <republisher_time>1318</republisher_time>
+  <foldoutcount>0</foldoutcount>
+  <bookplateleaf>0002</bookplateleaf>
+  <ocr>tesseract 5.3.0-3-g9920</ocr>
+  <ocr_parameters>-l eng</ocr_parameters>
+  <ocr_module_version>0.0.21</ocr_module_version>
+  <ocr_detected_script>Latin</ocr_detected_script>
+  <ocr_detected_script_conf>0.9903</ocr_detected_script_conf>
+  <ocr_detected_lang>en</ocr_detected_lang>
+  <ocr_detected_lang_conf>1.0000</ocr_detected_lang_conf>
+  <page_number_confidence>100</page_number_confidence>
+  <page_number_module_version>1.0.3</page_number_module_version>
+  <pdf_module_version>0.0.23</pdf_module_version>
+  <addeddate>2023-07-08 02:55:16</addeddate>
+  <scanfee>300;12;240</scanfee>
+  <invoice>2091</invoice>
+  <sponsordate>20230630</sponsordate>
+  <collection>university_of_toronto</collection>
+</metadata>

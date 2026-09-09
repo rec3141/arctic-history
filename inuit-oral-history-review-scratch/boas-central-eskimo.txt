@@ -1,0 +1,35 @@
+# Boas, The Central Eskimo, and the named cartographers of Qikiqtaaluk
+[page · inuit-oral-history · draft]
+
+[[person:Franz Boas]] was twenty-five, trained in physics and geography, when he went to [[place:Cumberland Sound]] in August 1883 to find out how a people and a country shape each other. He stayed a year, travelled by dog sledge with Inuit companions round the sound and north along the Davis Strait coast, and published the result in 1888 as [[source:boas1888central|The Central Eskimo]], in the Sixth Annual Report of the Bureau of Ethnology. [[artifact:inuit-oral-history-013|The whole text is held here]].
+
+It is the fullest nineteenth-century account of [[place:Qikiqtaaluk]] geography, and most of it is Inuit knowledge written down.
+
+## The map and the divisions
+
+[[artifact:inuit-oral-history-003|Plate II]] shows the territory of each named group in detail: the Oqomiut and Akudnirmiut of Cumberland Sound and Davis Strait, the Nugumiut of Frobisher Bay, the Tununirmiut of Eclipse Sound and Admiralty Inlet, the Aivilingmiut and Iglulingmiut of Repulse Bay and Lyon Inlet, the Netsilingmiut of the Boothia isthmus and King William Land. The names are Inuktitut and so are the boundaries; the divisions are the ones Inuit used.
+
+Boas is candid about where his coastline came from. Of the interior of the peninsula between Frobisher Bay and Cumberland Sound he writes flatly, [[artifact:inuit-oral-history-023|"From Eskimo reports I conclude that the plateau of Nugumiut... is comparatively level"]]. That sentence pattern runs through the physical geography chapter. He surveyed what he could reach and took the rest from people who had been there, and he said so.
+
+## The named cartographers
+
+Four men drew charts for him, and he printed each with its author's name and group: [[person:Itu]] a Nugumio ([[artifact:inuit-oral-history-005|fig. 543]], [[artifact:inuit-oral-history-007|fig. 545]]), [[person:Sunapignang]] an Oqomio ([[artifact:inuit-oral-history-006|fig. 544]]), [[person:Angutuqdjuaq]] a Padlimio ([[artifact:inuit-oral-history-008|fig. 546]]) and [[person:Aranin]] a Saumingmio ([[artifact:inuit-oral-history-004|Plate IV]]). Boas's comment on them is a scientific claim, not a compliment: "A comparison between the maps and these charts will prove their correctness."
+
+These four names are, so far as this database can tell, the earliest Inuit cartographers of Qikiqtaaluk whose work survives with their names attached. Their charts are discussed in [[page:inuit-drawn-maps]].
+
+## Place names as data
+
+The paper carries several hundred Inuktitut place names with their meanings, which is the largest such collection made in the region in the nineteenth century. They are geography compressed: names describing shape, ice, current, where the fish are, where a kayak must be carried. Boas's spellings follow Kleinschmidt and are not modern orthography, but the names are recoverable, and many are still in use in the Nunavut place-names record. Anyone reading them today should expect a name like Qivitung to appear on a modern map as [[place:Kivitoo]].
+
+His chapter on travel is where the practical knowledge is set down: steering by sun, dawn, moon and the constellations Tuktuqdjung, Sakietaun and Udleqdjun; steering by wind when the sky is thick and by the direction of the snowdrifts after a gale; not travelling at all in calm fog. And, [[artifact:inuit-oral-history-015|for country a man does not know]], having a map drawn for him in the snow by someone who does.
+
+## Why it reads oddly now
+
+The title is not a name any Inuk used, and the paper is organised as natural history: the people appear as a subject studied rather than as the colleagues they plainly were on the sledge. Boas names the men who drew charts but almost never names the people he travelled and lived with, so a year of daily collaboration is largely anonymous in the text. He also worked in a whaling economy already fifty years old and did not much examine what it was doing to the people he was describing.
+
+Against that: he recorded the charts under their authors' names, recorded the place names with their meanings, distinguished what he had seen from what he had been told, and wrote down a working account of Inuit navigation that has held up. Set beside most of what was published about the region in the 1880s, that is a high standard.
+
+## The sea ice paragraph
+
+One passage is worth putting in front of anyone doing science in these waters. Boas concluded that [[artifact:inuit-oral-history-024|the ice, not the land, is the organising fact]]: the winter land-ice is the only road between communities for most of the year, and the seal goes where the extensive floes form, "therefore the state of the ice regulates the distribution of the natives during the greater part of the year." That is a statement about sea-ice extent, landfast-ice stability and marine mammal distribution, made in 1888 from a year of Inuit-guided travel, and it is the same coupled system a ship measures here today.
+

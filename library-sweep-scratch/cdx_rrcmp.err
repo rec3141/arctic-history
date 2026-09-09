@@ -1,0 +1,34 @@
+*   Trying 207.241.237.3:80...
+* TCP_NODELAY set
+* Connected to web.archive.org (207.241.237.3) port 80 (#0)
+> GET /cdx/search/cdx?url=publicsafety.gc.ca/lbrr/archives/rcmp-rrcmp*&output=json&limit=5000 HTTP/1.1
+> Host: web.archive.org
+> User-Agent: curl/7.68.0
+> Accept: */*
+> 
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< Server: nginx
+< Date: Wed, 09 Sep 2026 08:23:26 GMT
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Connection: keep-alive
+< server-timing: exclusion.robots;dur=0.079053, exclusion.robots.policy;dur=0.068358, esindex;dur=0.007550
+< x-app-server: wwwb-app217-dc8
+< x-ts: 200
+< x-tr: 645
+< server-timing: TR;dur=0,Tw;dur=4005,Tc;dur=1
+< set-cookie: wb-cdx-nomatch-SERVER=wwwb-app217; path=/
+< X-location: cdx
+< X-RL: 0
+< X-NA: 0
+< X-Page-Cache: BYPASS
+< Server-Timing: BYPASS
+< X-NID: UMANITOBA
+< Referrer-Policy: no-referrer-when-downgrade
+< Permissions-Policy: interest-cohort=()
+< X-sd: 0
+< X-be: wb_cdx_pygwb_nomatch
+< 
+{ [2101 bytes data]
+* Connection #0 to host web.archive.org left intact

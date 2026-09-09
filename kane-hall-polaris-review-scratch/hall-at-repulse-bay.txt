@@ -1,0 +1,55 @@
+# Hall at Naujaat: five years, and the Inuit testimony on Franklin, 1864-1869
+[page · kane-hall-polaris · draft]
+
+[[person:Charles Francis Hall]]'s second expedition is the least known and, on the evidence, the most valuable. He embarked on the whaling brig *Monticello* at New London on 1 July 1864 and came home to New Bedford on 26 September 1869. Five years, five winters, two attempts at King William Island, and for almost all of it no white companions at all — he lived in Inuit households, travelled with Inuit families, and worked through [[person:Tookoolito]] and [[person:Ebierbing]], who were with him the whole time.
+
+It began badly. On 31 August 1864 the tender *Helen F.* put his party ashore in the early morning about forty miles south of where they meant to be, at lat. 64 deg 35 min N, long. 87 deg 33 min W on [[place:Roes Welcome Sound|Roes Welcome Sound]]. "It was more than a disappointment to Hall, for it proved to be the loss of a whole year to the expedition."
+
+## Living in the household
+
+He did not visit Inuit camps; he lived in them. From his first autumn, writing to the captain of the *Monticello*:
+
+> "I exchanged tent for snow-house, and have now been in the igloo sixty days, and all the time as comfortable as I ever was in winter in my life... one main igloo for myself and Eskimo children (Ebierbing and Too-koo-li-too), and three igloos, all joined to the main, for store-houses. A low, crooked passage-way of some 50 feet in length, made of snow, leads into our residence." ([[artifact:kane-hall-polaris-053]])
+
+The same letter records what actually made five years possible: "I never before knew any Eskimos so provident as this tribe or clan I am wintering with. I doubt not they have four hundred or more of reindeer, killed last summer, on deposit within the distance of a circle of 20 miles in diameter." A caching system covering a circle twenty miles across, holding several hundred caribou through the winter, is not a detail of local colour. It is the food economy that carried the expedition, and Hall knew it.
+
+(He also called two adults his "Eskimo children". The condescension and the accurate observation sit in the same sentence, and this page leaves both.)
+
+## The testimony
+
+His base for most of the five years was Naujaat (Repulse Bay), the same ground [[topic:franklin-search|John Rae]] had worked. What Hall did there that nobody else did was sit in winter igloos, night after night, listening.
+
+The single best illustration is 6 December 1864. Hall was in a snow house on Roes Welcome Sound with Ar-mou, Ar-too-a, [[person:Ou-e-la]] and Shoo-she-ark-nuk, who were talking among themselves.
+
+> "I had not got two words out before Too-koo-li-too signaled to me by a motion of her hand to keep silent. She then said, They are saying something that I will like much to hear." ([[artifact:kane-hall-polaris-025]])
+
+What followed was the Inuit account of Francis Crozier: that Crozier and three men, starving, would not eat the flesh of their dead companions as the others did. Hall obtained the most important body of Franklin evidence of his career because his interpreter knew the moment to tell him to be quiet. That sentence is worth more than most of the exploration literature of the century put together, and it belongs to Tookoolito.
+
+## The shooting of Patrick Coleman
+
+Hall was not a saint, and the record should not be tidied. In 1868 he had five white men hired from the whalers at Repulse Bay. Believing [[person:Patrick Coleman]] to be the leader of a mutiny among them, on **31 July 1868** he shot him:
+
+> "His reply being still more threatening, I pulled trigger, and in a few minutes he staggered and fell."
+
+Coleman lingered a fortnight and died on **14 August 1868**. Two days later the whalers *Ansell Gibbs* and *Concordia* appeared and the four surviving hired men were discharged and sent home. No inquiry was ever held; Hall was never charged; the killing had no consequence for him at all. (Earlier summaries of this topic date the shooting to 1864; [[source:nourse1879narrative|the text]] is unambiguous that it was 1868.)
+
+## King William Island, 1869
+
+On 23 March 1869 Hall finally set out for King William Island: eleven people, two sledges loaded to 2,724 and 2,521 pounds, eighteen dogs, ninety days out and back. The eleven were Hall, five Inuit men, three women and two children — Ebierbing and Tookoolito with their adopted daughter [[person:Panik]]; Ou-e-la; Pa-pa; Nu-ker-zhoo and his wife, who was Panik's birth mother, so that the adoption was an arrangement between two families travelling together rather than a removal; Eek-choo-ar-choo, called Jerry, and his wife with an infant in her hood. He had failed at the same journey in 1866, on which return [[person:Tookoolito]] and [[person:Ebierbing]]'s second child died on the trail on 13 May and was buried the same evening at the angakkuq's insistence — "The almost distracted mother, the moment she found that it was really dead, rushed out of the igloo, pressing the dead baby to her bosom." Hall built a monument of five stones over the grave the next day.
+
+He reached the island in the spring of 1869 and put his question. He had come nine hundred miles to ask it, and it was four words:
+
+> *Nou-tima Ag-loo-kar* — where is Crozier?
+
+Aglooka was the Inuit name for Francis Crozier. The man he asked, on about 1 May 1869, was [[person:In-nook-poo-zhee-jook]], a Netsilik traveller who gave him over the following days the fullest Inuit account of the Franklin retreat anyone had collected. Hall wrote to Henry Grinnell:
+
+> "His name is In-nook-poo-zhe-jook, and he is a native of Neitchille, a very great traveler and very intelligent. He is, in fact, a walking history of the fate of Sir John Franklin's Expedition." ([[artifact:kane-hall-polaris-026]])
+
+In the same letter he recorded, with anger, what he had been told: that the Inuit "did secretly and hastily abandon Crozier and his party to suffer and die for need of fresh provisions, when in truth it was in the power of the natives to save every man alive." That judgement is Hall's, made from a warm igloo he had been fed in for five years, about people facing a starving party of forty white men in a season when their own food would not stretch. It should be read as his verdict, not as a finding.
+
+He found a thigh bone on the Todd Islands on 11 May and an unburied skeleton near the mouth of the Peffer River on the 12th; he half-masted the American flag, built a five-foot stone monument, fired a salute and sent the remains home. He raised three monuments in all. His guides would not take him across to the west coast of King William Island, where the retreat had actually passed — which is why the physical search there had to wait for Schwatka in 1878-80.
+
+He reached New Bedford on 26 September 1869: "How thankful to High Heaven ought my poor heart to be for the blessed privilege of again placing my foot upon the land of my country." (Nourse's own text also gives the *Ansell Gibbs* leaving the Welcome on 28 September, which cannot both be true; the chapter's running heads are corrupt in the same place.)
+
+Two years later he had a ship, a naval commission and a mandate to reach the North Pole. See [[page:the-polaris-and-the-floe-drift]].
+

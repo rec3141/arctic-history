@@ -1,0 +1,144 @@
+# Two winters among the Iglulingmiut, 1821-23
+[page · ross-parry · draft]
+
+Melville Island had shown Parry that the way west along Barrow Strait was
+blocked by heavy old ice. So in 1821 he tried the other door: through Hudson
+Strait and north up the west side of Foxe Basin, hunting for a channel out of
+the top of Hudson Bay. He took [[source:parry1824journal|HMS Fury]] himself
+and gave the Hecla to [[person:George Francis Lyon]], who kept a second and
+much more personal journal ([[source:lyon1824private]]). They were away from
+May 1821 to the autumn of 1823.
+
+Geographically the voyage was a long defeat. They shut door after door: the
+Duke of York Bay, Repulse Bay, Hoppner Inlet, Lyon Inlet all turned out to be
+closed. The one real opening they found —
+[[place:Fury and Hecla Strait]], named for the two ships — is a narrow gut
+between Melville Peninsula and Baffin Island that they could see led to the
+western sea and could not sail through, because a fixed barrier of ice held in
+it through both summers. It still does most years.
+
+What the voyage did produce was the fullest first-hand British account of
+Inuit life recorded in the nineteenth century, gathered over two winters of
+daily, ordinary contact.
+
+## Winter Island, 1821-22
+
+The ships were secured for the winter in a bay on the south side of
+[[place:Winter Island]] in early October 1821. Parry repeated the Melville
+Island regime — housing over the decks, an observatory and house on shore,
+fortnightly theatricals — and added something new: schools, where officers
+taught the men to read and write through the dark months.
+
+On the morning of 1 February 1822 strangers were reported coming over the ice
+from the westward. Parry and Lyon walked out to meet twenty-five Inuit drawn
+up abreast in a line, who stood still and waited. What had looked like spears
+were blades of whalebone brought for trade. Their "quiet and orderly
+behaviour," Parry wrote, contrasted sharply with the noisy crowds of Hudson
+Strait. Some of the women began stripping off their outer clothes to sell,
+with the thermometer at 23° below zero, which alarmed the officers until they
+realised everyone was wearing a complete double suit of caribou skin.
+
+Then the visitors led them home, and the officers found, two miles from ships
+that had been watched from all winter,
+
+> an establishment of five huts, with canoes, sledges, dogs, and above sixty
+> men, women, and children, as regularly and, to all appearance as
+> permanently fixed, as if they had occupied the same spot for the whole
+> winter.
+
+Not a single material had been used in building them but snow and ice. Parry's
+description of creeping through two low arched passages into a domed
+antechamber, and from it into three lit rooms with a window of clear ice set
+in each roof, is one of the classic passages of Arctic writing — the more so
+because he understood at once that he was looking at engineering: each block
+"cut into the shape requisite to form a substantial arch ... having no support
+whatever but what this principle of building supplied."
+
+The people of that village were the Iglulingmiut, and the record names them:
+[[person:Iligliuk]] and her husband [[person:Okotook]];
+[[person:Arnaneelia]] and [[person:Aneetka]]; the old man
+[[person:Kaoongut]] and his son [[person:Toolooak]], a hunter Parry admired
+without reserve; [[person:Ewerat]], the only man at Winter Island claiming the
+title of angakkuq, and his wife [[person:Togolat]], whom Lyon drew. Lyon's
+portraits of Winter Island and Iglulik people are the best visual record of
+the voyage: [[artifact:ross-parry-014|Arnaneelia]],
+[[artifact:ross-parry-015|Oomna]].
+
+It was a hungry winter. Sealing failed repeatedly; the men came back from
+excursion after excursion with nothing. Parry, on Lyon's suggestion, began
+issuing bread-dust from the ships' casks, which the Iglulingmiut took straight
+home to their children. In February and March, in return, Iligliuk drew the
+charts that changed the expedition's plan — see [[page:iligliuk-and-her-chart]].
+
+Three of the Fury's men died at Winter Island: James Pringle, who fell behind
+a walking party and lay down on the snow; and the quartermaster William Souter
+and, days later, John Reid, whom the surgeon thought was hastened by the
+depression of spirits at Souter's death. Their graves were built over with
+stone tombs before the ships left on 2 July 1822.
+
+## Iglulik, 1822-23
+
+The ships worked north along the Melville Peninsula coast, exactly as
+Iligliuk's chart had said they should, reached the eastern entrance of
+[[place:Fury and Hecla Strait]] in the summer of 1822, and were stopped by
+fixed ice. Sledge and walking parties went through by land instead and saw the
+open water beyond, confirming an outlet to the Polar Sea. The ships could not
+follow. On 31 October 1822 the Fury was cut in to her winter station off
+[[place:Iglulik]], a canal of 4,343 feet, with a line strung between the two
+ships on snow pillars the height of a man so nobody would be lost between them
+in a storm.
+
+The Iglulik winter is Lyon's book more than Parry's. He recorded a full
+account of an angakkuq's séance, given to him voluntarily in his own cabin by a
+man named [[person:Ooyara]] — the drawn knife, the darkened hut, the voice
+travelling away underground and returning with a yell, the convulsions, the
+blood of Tornga on the blade — as a description of [[person:Toolemak]], the
+angakkuq of the Iglulik people, at work. Lyon reported it as a performance
+whose techniques Ooyara was frank about, and did not pretend to know what it
+was for. It remains one of the earliest detailed outside descriptions of a
+shamanic seance in the eastern Arctic; the Iglulingmiut oral tradition on the
+same practices is a separate and better source, and belongs with
+[[topic:inuit-oral-history]].
+
+The second winter was also an epidemic. Coughs and catarrhs went through the
+Iglulik camps and turned into something worse. The Fury's sick bay filled with
+Inuit patients until the ship's own men had to be moved out of it, so Parry had
+Lieutenant Nias build a hospital inside the walls of the ships' shore square:
+twelve feet square, of spars, turf, snow and canvas, with two doors, five
+bed-places and a warming stove, put up in two days at "no expense but that of
+labour." Innooksioo, one of the strongest men in the camp, was brought in on
+old Nannow's sledge so reduced that his face could not be recognised. Kaga was
+nursed by Lyon. Kooeetseek recovered and was sledged home. Others died, among
+them Togolat.
+
+It is worth being plain about this. The record does not let us say what the
+disease was, and both captains wrote about it as an act of God. But respiratory
+epidemics arriving with ships, in camps with no immunity, are a pattern that
+repeats through the whole history of contact in this region, from the whaling
+years ([[topic:whaling]]) through to the tuberculosis evacuations documented by
+the Qikiqtani Truth Commission ([[topic:relocations-qtc]]). The Fury and Hecla
+were among the first ships to overwinter beside an Inuit community, and an
+epidemic followed them.
+
+The crews suffered too. Scurvy appeared among the seamen and marines in the
+spring of 1823. Alexander Elder, Greenland mate of the Hecla and a veteran of
+all three of Parry's expeditions, died at Iglulik. Parry decided the passage
+could not be forced, sent the Hecla home, and brought both ships south; the
+Fury was beset and drifted back up Lyon Inlet on the way out, and George Fife
+died before they reached England in the autumn of 1823. Five men dead in two
+years, against one in the ten months at Melville Island.
+
+## What the Iglulingmiut knew
+
+Parry left convinced of two geographical facts he had been given rather than
+found: that Melville Peninsula was a peninsula and the coast turned west
+beyond it, and that a strait ran through to a western sea. Both were Inuit
+knowledge, drawn on paper by Iligliuk and corroborated by Ewerat, and both were
+right. See [[page:iligliuk-and-her-chart]].
+
+He also brought back a report he could not check, and neither can we: the
+Iglulingmiut told him that two fishing ships had been wrecked somewhere to the
+northward. Whalers were already working the Baffin Bay grounds by 1823
+([[topic:whaling]]), and this may be the earliest Inuit testimony about a
+European wreck in the region recorded by a naval expedition.
+

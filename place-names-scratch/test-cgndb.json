@@ -1,0 +1,88 @@
+{
+"links": {
+    "self": { "href": "https://geogratis.gc.ca/services/geoname/en/geonames?q=Exmouth%20Island" },
+    "alternate": [ 
+         { "mediatype": "application/json", "href": "https://geogratis.gc.ca/services/geoname/en/geonames.json?q=Exmouth%20Island" },
+         { "mediatype": "text/html", "href": "https://geogratis.gc.ca/services/geoname/en/geonames.html?q=Exmouth%20Island" },
+         { "mediatype": "text/csv", "href": "https://geogratis.gc.ca/services/geoname/en/geonames.csv?q=Exmouth%20Island" }, 
+         { "mediatype": "application/vnd.google-earth.kml+xml", "href": "https://geogratis.gc.ca/services/geoname/en/geonames.kml?q=Exmouth%20Island" },
+         { "mediatype": "application/gml+xml", "href": "https://geogratis.gc.ca/services/geoname/en/geonames.gml?q=Exmouth%20Island" },
+         { "mediatype": "application/vnd.geo+json", "href": "https://geogratis.gc.ca/services/geoname/en/geonames.geojson?q=Exmouth%20Island" }
+         
+     ]
+},
+"items": [
+
+    {   
+        "id": "OAFKJ",
+        "links": {
+           "self": { "href": "https://geogratis.gc.ca/services/geoname/en/geonames/OAFKJ" },
+           "feature": { "href": "https://geogratis.gc.ca/services/geoname/en/features/0cf8cc2f849c20c368cdfce8bac8c170" },"language": { "href": "https://geogratis.gc.ca/services/geoname/en/codes/language/und" },
+           "status": { "href": "https://geogratis.gc.ca/services/geoname/en/codes/status/official" },
+           "concise": { "href": "https://geogratis.gc.ca/services/geoname/en/codes/concise/ISL" },
+           "generic": { "href": "https://geogratis.gc.ca/services/geoname/en/codes/generic/2300" },
+           "province": { "href": "https://geogratis.gc.ca/services/geoname/en/codes/province/62" }  
+        },
+        "name": "Exmouth Island",
+        
+        "language": {
+            "code": "und",
+            
+            "links": {
+                "self": { "href": "https://geogratis.gc.ca/services/geoname/en/codes/language/und" }
+            } 
+        },
+        "feature": {
+            "id": "0cf8cc2f849c20c368cdfce8bac8c170",
+            
+            "links": {
+                "self": { "href": "https://geogratis.gc.ca/services/geoname/en/features/0cf8cc2f849c20c368cdfce8bac8c170" }
+            }
+        },
+        
+        "category": "O",
+        "status": {
+            "code": "official",
+            
+            "links": {
+                "self": { "href": "https://geogratis.gc.ca/services/geoname/en/codes/status/official" }
+            } 
+        },
+        "concise": {
+            "code": "ISL",
+            
+            "links": {
+                "self": { "href": "https://geogratis.gc.ca/services/geoname/en/codes/concise/ISL" }
+            } 
+        },
+        "generic": {
+            "code": "2300",
+            
+            "links": {
+                "self": { "href": "https://geogratis.gc.ca/services/geoname/en/codes/generic/2300" }
+            } 
+        },   
+        "location": null,
+        "province": {
+            "code": "62",
+            
+            "links": {
+                "self": { "href": "https://geogratis.gc.ca/services/geoname/en/codes/province/62" }
+            } 
+        },
+        "latitude": 77.216667,
+        "longitude": -95.9,
+        "map": ["059C04","059C00"],
+        "relevance": 1000000,
+        "bbox": [
+            -95.9675717,
+            77.2017336,
+            -95.8121082,
+            77.238059
+        ],
+        "accuracy": 100,
+        "position": {"type":"Point","coordinates":[-95.9,77.216667]},
+        
+        "decision": "1910-12-31"
+    }
+]}

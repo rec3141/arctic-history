@@ -1,0 +1,90 @@
+# Lyon and the Griper, 1824
+[page · ross-parry · draft]
+
+The 1824 season was meant to be a pincer. [[person:William Edward Parry]] would
+go down Prince Regent Inlet with the Hecla and Fury
+([[page:the-loss-of-the-fury]]); John Franklin would come down the Mackenzie and
+work east along the continental coast; and [[person:George Francis Lyon]],
+promoted captain after his two winters among the Iglulingmiut, would land a
+party at Repulse Bay and sledge west overland to Point Turnagain, the farthest
+point Franklin had reached in 1821. Between them they would close the gap.
+
+Lyon was given the Griper. She was the same slow, cranky gun-brig that had held
+Parry back all through 1819-20, she was loaded far beyond what she could
+carry, and she was the only ship the Admiralty would spare. Everything that
+followed came from that.
+
+He left Deptford on 10 June 1824 and the Little Nore on the 16th, sailed from
+Stromness on 3 July, and parted company with his transport the Snap off Cape
+Chidley on 4 August. He was in Hudson Strait through the middle of August,
+beset and hanging to floes, and landed on Southampton Island at Point Leyson on
+24 August. On the 27th he met Inuit on the south coast who were still striking
+fire with flint. The route is [[artifact:ross-parry-005|traced here]].
+
+## The gale of 1 September 1824
+
+By the end of August he was in Roes Welcome Sound, on a coast that was
+badly charted, in a ship that could not work off a lee shore, with tides of
+twelve to fifteen feet. On 1 September a gale drove him into shoal water and he
+anchored because there was nothing else to do.
+
+The tide began to fall. Lyon had the long-boat hoisted out and the four smaller
+boats stored with arms and provisions, which meant throwing overboard the stores
+the long-boat had been full of, because there was no room for them on decks
+that heavy seas were sweeping. Then the officers drew lots for boats.
+
+> it was evident to all, that the long-boat was the only one which had the
+> slightest chance of living under the lee of the ship, should she be wrecked,
+> but every officer and man drew his lot with the greatest composure, although
+> two of our boats would have been swamped the instant they were lowered.
+
+In the afternoon the weather cleared enough to show a low beach astern of them
+with surf running to an awful height, "and it appeared evident that no human
+powers could save us." At three the tide had fallen to twenty-two feet — six
+more than the ship drew — and a sea lifted her and dropped her, and she struck
+the whole length of her keel. She went on striking every few minutes for hours,
+in water so shallow the seas were breaking rather than passing, and did not
+break up. See [[artifact:ross-parry-026|the excerpt]].
+
+She held. Standing out from the anchorage the next day, Lyon named it, in what
+he called humble gratitude for their deliverance, the **Bay of God's Mercy**.
+
+## The second gale, and the decision
+
+He tried again. On the night of 11 September the Griper reached 65° 20' N,
+her farthest, and was still more than eighty miles from
+[[place:Naujaat|Repulse Bay]]. On the 12th another gale caught her at anchor
+between Whale Point and Cape Fullerton. At half past four on the morning of the
+13th the best bower cable parted; by six every remaining cable had gone, and the
+ship lay helpless with no anchors left to bring her up.
+
+Lyon put the question to his officers in writing rather than deciding alone.
+After noon on Wednesday 15 September 1824 he bore up — "with a sad heart," he
+wrote — and gave up the attempt. He came down Hudson Strait through late
+September, was gale-bound in Davis Strait in October, sighted Land's End on
+8 November and ran into Portsmouth Harbour on 10 November 1824, having no
+anchors to bring up with. The Griper was paid off on 13 December.
+
+## Afterwards
+
+Lyon had achieved nothing he was sent to do and lost every anchor and cable in
+the ship. He published [[source:lyon1825brief|A Brief Narrative of an
+Unsuccessful Attempt]] the following year — the title is his own, and the book
+is unusually honest about the ship, the loading, and his own judgement. It is
+the best surviving account of what a small overloaded vessel does on a shoal
+Arctic coast, and it should be read next to his
+[[source:lyon1824private|Private Journal]] of 1821-23, which is the best
+account of Inuit life the expeditions produced.
+
+He never got another command. He left the Navy, lost his money in a Mexican
+mining venture, and died at sea in 1832, aged thirty-seven. His portrait,
+painted in 1823 between the two voyages, is
+[[artifact:ross-parry-018|here]]; his drawings of the Iglulingmiut, including
+[[artifact:ross-parry-014|Arnaneelia]] and [[artifact:ross-parry-015|Oomna]],
+are what most people have actually seen of him.
+
+The gap he was sent to close stayed open. It was closed on foot, over the next
+twenty-five years, by Rae and by the Franklin searchers — and the last piece of
+it, the stretch of coast Lyon was aiming for, is where the Erebus and Terror
+were lost ([[topic:franklin-1845]]).
+

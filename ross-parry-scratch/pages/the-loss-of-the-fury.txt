@@ -1,0 +1,120 @@
+# The loss of the Fury, 1824-25
+[page · ross-parry · draft]
+
+Parry's third voyage, in 1824-25, was his least successful and his most
+consequential. He took the Hecla, gave the Fury to Captain Henry Parkyns
+Hoppner, and went back to [[place:Lancaster Sound]] to try the one door he had
+left open in 1819: Prince Regent Inlet, running south out of Barrow Strait. He
+lost a ship, made no discoveries worth the name, and left a pile of provisions
+on a beach that would save more than thirty lives seven years later.
+
+## A bad year for ice
+
+1824 was one of the worst ice seasons of the century in Baffin Bay. Parry had
+sailed through the middle ice in six weeks in 1819; in 1824 it took until
+September. The ships entered Lancaster Sound in the middle of that month, with
+young ice already forming around them and the season effectively over before
+it had begun.
+
+Rather than be driven back east, Parry took the ships into Port Bowen on the
+east side of Prince Regent Inlet at the end of September and made fast in
+sixty-two fathoms. He was frank that this was a decision made out of dread:
+what he and Hoppner feared most was not danger to the ships but "the too
+obvious probability of our once more being driven back to the eastward."
+
+## The winter at Port Bowen, 1824-25
+
+By his third wintering Parry had refined the routine considerably, and had
+also decided the theatricals of Melville Island had run their course. In their
+place he instituted a **masquerade**, once a month, alternately in each ship,
+in which officers and men both took part in costume and nobody was obliged to
+join. "Masquerades without licentiousness — carnivals without excess," he
+wrote, noting with some pride that no instance of disrespect toward an officer
+came out of any of them.
+
+The more serious innovation was schools. Mr Hooper ran the Hecla's and Mr Mogg
+the Fury's, teaching the eighteen or twenty men who could not read; Parry
+thought the effect spread through the whole lower deck and credited it, along
+with the diet, for the "extraordinary state of health" of that winter.
+
+The science was the best of any of his voyages. The magnetic observations grew
+until the ground round the observatory "assumed ere long almost the appearance
+of a scattered village," seven or eight detached huts each with its own needle,
+sited apart to keep the instruments from disturbing one another. Lieutenant
+Foster, needing to place a meridian mark on the far shore, posted a man
+halfway across the harbour to relay his shouted instructions and found the
+relay unnecessary: at -18°, calm and clear, he held a conversation across 6,696
+feet — about a mile and a quarter — of frozen harbour. It is an offhand
+paragraph and it is a real measurement of low-temperature sound propagation,
+made in 1825.
+
+In the spring the crews spread gravel along the line of a canal so the sun
+would melt it through, then cut the rest by hand. On 19 July 1825 the floe
+split across the harbour on its own. Every man worked twenty-six hours with
+half an hour off for supper — fifteen of them in the water at one moment,
+several of them three times over — and the ships were towed to sea on the
+morning of 20 July.
+
+## The Fury driven ashore, 21 August 1825
+
+They crossed Prince Regent Inlet to the western shore and found what the shore
+of Somerset Island offers in a bad year: a steep beach, no harbour, and heavy
+ice driving down on the land. The Fury was forced aground once, got off,
+and was found to be leaking so badly she had to be run ashore deliberately to
+be repaired. The two crews built a wall of grounded icebergs to shelter her
+and unloaded her stores onto the beach to lighten her.
+
+It failed. Through the night of 20-21 August the ice worked in against the
+bergs and the cables. At four in the morning on the 21st another mass came in
+and threatened to sweep away every remaining security. At two in the afternoon
+Parry saw that the Hecla could no longer be held there "with the smallest
+chance of safety," and at a quarter past three he cast off and stood off and
+on, leaving Hoppner and every man he could spare aboard the wreck. At twenty
+minutes past four —
+
+> being an hour and five minutes after the _Hecla_ had cast off, I was informed
+> by signal that the _Fury_ was on shore.
+
+She had been driven up the beach by grounded ice pushing her ahead of it, and
+was blocked in on the seaward side by the same masses. See
+[[artifact:ross-parry-025|the excerpt from Parry's journal]].
+
+For four days the Hecla stood off and on, unable to get near her in a strong
+southerly current. On 25 August Parry went aboard with Hoppner, Lieutenants
+Austin and Sherer, and Mr Pulfer, the Fury's carpenter, and ordered a survey —
+giving the order the instant they came aboard, so that nobody could take a
+lead from his own opinion. They spent several hours going over her. Pulfer's
+verdict: five days to pump her out; the pumps would not keep her free even
+then; twenty days' work hove down to make her seaworthy, with the means they
+had. The officers reported that abandonment was an absolute necessity.
+
+Parry made the signal for the Fury's people to be sent for their clothes, most
+of which were already on the beach with the stores. The boats were hauled up,
+and he left her at two in the morning; Hoppner, Austin and the last of the men
+followed half an hour later. Every one of the Fury's stores stayed where it
+was — there was no room in the Hecla for anything but two ships' companies.
+
+Parry fixed the spot: latitude 72° 42' 30" N, longitude 91° 50' 05" W by
+chronometer, magnetic dip 88° 19' 22", variation 129° 25' west. It is
+[[place:Fury Beach]]. The Hecla came home with both crews in the autumn of
+1825. Nobody was lost.
+
+## What the beach became
+
+Casks of flour, sugar, cocoa, spirits, preserved meat and vegetables, coal,
+canvas, spars, and the Fury's own boats sat on that shingle in a climate that
+preserves things. Seven years later they were found by [[person:John Ross]],
+whose privately funded steam vessel Victory had been abandoned in the ice
+further south. Ross's men walked north to Fury Beach, built a hut they called
+Somerset House over the stores, wintered there in 1832-33, and finally got
+away in the Fury's boats — to be picked up in Lancaster Sound by the whaler
+Isabella, the same ship Ross had commanded in 1818. The whole of that story is
+[[topic:ross-victory]].
+
+So the two ends of this topic close on each other. The officer who saw
+mountains across Lancaster Sound in 1818, and lost his career for it, was kept
+alive through three Arctic winters by the wreck of a ship belonging to the
+officer who had sailed through them. Later searchers for Franklin called at
+Fury Beach too, and found the stores still there
+([[topic:franklin-search]]).
+

@@ -1512,6 +1512,14 @@ def validate(c) -> dict:
             bad("artifact", r["id"], "no licence stated")
         if r["lat"] is None and not r["geometry"]:
             bad("artifact", r["id"], "neither a position nor a geometry")
+        ppl = json.loads(r["people"] or "[]")
+        if ppl and (r["description"] or "").strip():
+            d = r["description"] + " " + r["title"]
+            named = [p2 for p2 in ppl if p2 in r["description"] or
+                     (p2.split() and p2.split()[-1] in r["description"])]
+            if not named:
+                bad("artifact", r["id"], "its people appear only in the title or list; "
+                                         "the description must name who it is about")
         # a documented, genuinely eastern position (Novaya Zemlya, the far
         # side of the dateline) is vouched for with the east-verified tag
         msg = None if "east-verified" in (r["tags"] or "") else _off_map(r["lat"], r["lon"])

@@ -1,0 +1,37 @@
+# Inuit authorship: Hans Hendrik's Memoirs and the rest
+[page · inuit-oral-history · draft]
+
+Nearly all of this record was written by people who did not live here, about people who did. There are a small number of exceptions, and they are worth reading closely, because they show what the same events look like from the other side of the interpreter.
+
+## Hans Hendrik's Memoirs
+
+[[person:Hans Hendrik]] — Suersaq — was a Kalaallit hunter from Kekertarsuatsiak (Fiskernaesset) in south Greenland. [[person:Elisha Kent Kane]] shipped him in 1853, when he was eighteen, because nobody else would go. He served on four expeditions over twenty-three years: Kane 1853-55, Hayes 1860-61, Hall's Polaris 1871-73, and Nares 1875-76. That is more Arctic service than most of the naval officers who employed him, and on at least two of those expeditions the survival of the party depended on his hunting.
+
+He then wrote it down himself, in Kalaallisut. Henry Rink, director of the Royal Greenland Board of Trade, translated it, and it was published in London in 1878 as [[source:hendrik1878memoirs|Memoirs of Hans Hendrik, the Arctic Traveller, Serving under Kane, Hayes, Hall and Nares, 1853-1876, Written by Himself]]. [[artifact:inuit-oral-history-027|The full text is held here]].
+
+[[artifact:inuit-oral-history-026|The first sentence declares the whole project]]: "To relate how the northern part of the big country came to be explored, I write this — I, Hans Hendrik, who first lived at Kekertarsuatsiak, belonging to the Germans, but have now removed north, to Kangersuatsiak, belonging to Upernivik."
+
+## What is different in it
+
+Three things, mainly.
+
+**Family.** The book opens not with an outfitting list but with his parents: his father Benjamin, who served the Moravian priests and went round the stations to lead services on the great holidays; his mother Ernestine, who had charge of the church lamps and came from Agdluitsok at the end of the country. It sets out his brothers by name and their ages, and the reason he went: his father had died, the younger boys were not yet food-winners, and the ship was offering payment to the family of whoever joined. His mother told him not to go.
+
+**Cost.** "When I left my countrymen and relatives, to be sure it was very disheartening. Still, I thought, if I do not perish I shall return. How strange! This was not to be fulfilled." He was gone from the south for the rest of his life.
+
+**Being doubted.** The most uncomfortable passages are about how he was treated. When Hayes's astronomer August Sonntag died on a sledge journey in 1860 Hans was cross-questioned about it; he records, in his own words, that the others "conceived suspicions". Those passages are collected in [[topic:kane-hall-polaris]] — see [[artifact:kane-hall-polaris-031]] and [[artifact:kane-hall-polaris-030]]. Rink, translating, added the flat question that no expedition narrative had thought to ask: who caught the seals? ([[artifact:kane-hall-polaris-034]]).
+
+He was on the ice floe through the whole six-month drift of 1872-73 with his wife Merkut and four children ([[artifact:kane-hall-polaris-033]]). Nineteen people came off that floe alive, and the reason was that two Inuit families were on it.
+
+## The other Inuit-authored material
+
+There is not much else in book form from this region in the nineteenth century, but there is more Inuit authorship in the record than the title pages suggest:
+
+- **The charts.** [[person:Iligliuk]]'s [[artifact:inuit-oral-history-001|Eskimaux Chart No. 1]], [[person:Ikmallik]]'s [[artifact:inuit-oral-history-002|chart of the Gulf of Boothia]], and the five charts in [[source:boas1888central|The Central Eskimo]] by [[person:Itu]], [[person:Sunapignang]], [[person:Angutuqdjuaq]] and [[person:Aranin]] are documents made by named Inuit authors, published under their names, and still readable as geography. See [[page:inuit-drawn-maps]].
+- **The testimony.** The interviews [[source:gilder1881schwatkas|Gilder printed as recorded]] in 1881 are, in effect, dictated first-person narratives by [[person:Ikinnelikpatolok]], [[person:Tooktoocheer]] and [[person:Ogzeuckjeuwock]], with Gilder as stenographer rather than author. He said so himself, printing them "so that each reader may draw his own conclusions." See [[page:franklin-testimony-vindicated]].
+- **The drawings and carvings.** Boas reproduced Inuit drawings and carvings in the same volume as the charts, and Rink's Tales and Traditions of the Eskimo was illustrated throughout by Greenlandic Inuit artists.
+
+## How to read the rest
+
+The practical consequence for anyone using this database is a reading rule. When a narrative says "we found", ask who was on the sledge; when it gives a coastline the ship never approached, ask who drew it; and when it reports what the local people said, ask who translated. The answer is usually a named person who is in this database and is not on the title page.
+

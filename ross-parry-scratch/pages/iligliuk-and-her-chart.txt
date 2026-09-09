@@ -1,0 +1,119 @@
+# Iligliuk and her chart
+[page · ross-parry · draft]
+
+In March 1822 an Iglulingmiut woman in her twenties sat down in a cabin on
+HMS Fury, at [[place:Winter Island]], and drew for the Royal Navy a map of a
+coast none of them had seen. It was substantially right. Parry sailed north on
+it the following summer and found the strait she had put at the top of it.
+
+## Who she was
+
+[[person:Iligliuk]] was born on Amitioke, an island she told Parry was sixteen
+days' journey to the north — Amitturmiut country, near
+[[place:Iglulik]]. She was married to [[person:Okotook]], "a fine active manly
+young man"; [[person:Togolat]] was Okotook's sister. She came to the ships from
+the village of five snow houses discovered two miles off on
+1 February 1822 (see [[page:two-winters-among-the-iglulingmiut]]).
+
+She learned faster than anyone else in either community. Within weeks the
+quartermasters at the Fury's gangway were letting her aboard without asking,
+calling her "the wise woman," and Parry writes that "whenever any explanation
+was necessary between the Esquimaux and us, Iligliuk was sent for quite as an
+interpreter; information was chiefly obtained through her." She was, in
+practice, the expedition's interpreter, ethnographic informant and
+cartographer at once, and no one gave her a rank or a wage.
+
+## The charts
+
+Parry describes the process carefully, because he wanted his readers to judge
+"the kind and degree of dependence that is to be placed in geographical notices
+thus obtained."
+
+**First attempt, 4 March 1822.** Parry laid down on a large sheet the coast he
+already knew — Repulse Bay, Lyon Inlet, Winter Island — and asked Iligliuk to
+continue it northward. Drawing on the known coast first was, in his view, an
+indispensable precaution: it gave her a scale and an orientation to work into
+rather than a blank page. She took a pencil and carried the line on, naming the
+places as she went, until the sheet ran out; another was tacked on, and
+another, until ten or twelve sheets lay across the table and Winter Island —
+*Neyuning-Eitua* in her language — had gone off the far end.
+
+**Chart No. 1.** Within a week other people drew charts too, mostly at the
+request of Lyon and Mr Griffiths. No two much resembled each other, and most
+were poor where the officers could check them. The exception was one Iligliuk
+drew for Lyon, engraved in Parry's book at about one-twelfth of the original's
+scale: [[artifact:ross-parry-011|Eskimaux Chart No. 1]]. Its small circles are
+sleeping places a day's journey apart and its dotted line a sledge track — it
+is a travel chart, drawn in days rather than degrees, which is precisely why
+its proportions did not satisfy a naval surveyor. Parry noticed that it made
+the bearing from Repulse Bay to Winter Island about the same as that from
+Winter Island to Amitioke, "though they are in fact exactly at right angles."
+
+**The decisive chart.** So Parry tried again, smaller, and did something rather
+good. He had by now learned the Inuktitut words for the four cardinal points.
+He ruled them on the paper as lines, laid down the known coast, and made
+Iligliuk "box the compass" repeatedly until she was fluent in his convention —
+then asked her to draw the rest, and to do it *mikhee*, small. What followed is
+one of the few passages where Parry's prose gives way completely:
+
+> never were the tracings of a pencil watched with more eager solicitude.
+
+She drew the continental coast running nearly north from Winter Island rather
+than east. Then, without lifting the pencil from the paper, she brought it
+round to the westward and afterwards to the south-southwest, to within three or
+four days' journey of Repulse Bay. The land on the far side she called
+Akkoolee, inhabited by numerous people. Halfway between it and Repulse Bay she
+put a large lake with streams running to the sea on each side, where her people
+went every summer for fish of the salmon kind, with caribou on the banks.
+Westward of Akkoolee, from hills she described as high, there was nothing but
+one wide-extended sea.
+
+Parry then set her a trap. He asked her to continue the coast south of
+Akkoolee, to see whether she would invent a Wager River he knew was there.
+She dropped the pencil and said she knew no more about it. A few days later
+[[person:Ewerat]] drew a chart corresponding with hers in every material point.
+
+## What she was right about
+
+In outline, this: Melville Peninsula is a peninsula; a strait runs through the
+top of it; the coast then turns west and south; there is a large body of water
+beyond. All correct. The strait is [[place:Fury and Hecla Strait]], which the
+ships reached in the summer of 1822 exactly where the chart put it — and could
+not enter, because it was full of fixed ice, as it is most years still. The
+"wide-extended sea" to the west is the Gulf of Boothia. The refusal to draw
+south of Akkoolee marked the honest edge of her people's knowledge.
+
+There are two ways to read this and only one of them is right. Parry read the
+errors of proportion as the measure of what such information was worth. But the
+distortions in Chart No. 1 are what you get when travel time is converted to
+distance on paper, and they largely vanished as soon as Parry supplied a
+compass convention — which is to say the geography was in her head and only the
+projection had to be negotiated. The 1822 season's plan was made on her
+information. So, in the standard modern account of Arctic exploration, was a
+piece of the map.
+
+## Afterwards
+
+Parry is unsparing about what the attention did. "Iligliuk in February and
+Iligliuk in April were confessedly very different persons." As the presents and
+the deference accumulated she came, he complains, to treat admission to the
+ships as a right rather than a favour, stopped thanking anyone, and grew
+"listless and inattentive in unravelling the meaning of our questions." He
+allows that a "too sudden accession of good fortune" would do the same to
+anyone "from the equator to the poles," which is more self-awareness than most
+of his contemporaries managed, and then goes on complaining.
+
+The plainer reading is that a woman who had made herself indispensable stopped
+performing gratitude for it. She had been paid in needles and beads for
+navigational intelligence that redirected a Royal Navy expedition; when the
+officers wanted more, the price went up. Parry called her understanding
+"superior" and "extraordinary" and never quite worked out what to do with the
+fact.
+
+Her name is on the engraving — "Drawn by Iligliuk at Winter Island 1822" —
+which makes her one of the first named Inuit cartographers whose work was
+published in Europe, alongside the maps later given to Hall and to Rae by
+Inuit informants ([[topic:kane-hall-polaris]], [[topic:inuit-oral-history]]).
+Iglulik and Naujaat are still there; so are the routes she drew, which are the
+routes people travelled.
+

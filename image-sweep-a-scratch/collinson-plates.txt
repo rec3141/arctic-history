@@ -1,0 +1,7 @@
+    1  tone 1800x750x1
+  202  tone 587x224x1
+  304  tone 660x224x1
+  368  tone 686x182x1
+  395  tone 739x650x1
+
+5 flagged leaves of 413; typical leaf 2956x5032, median weight 57K
