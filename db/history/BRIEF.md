@@ -135,6 +135,12 @@ east of 40 (Novaya Zemlya, the far side of the dateline) carries
 `--tags east-verified` so `check` accepts what would otherwise look like a
 dropped minus sign.
 
+An entry is about people and things: **name them in the description itself**,
+not only in the title or the `--people` list. A reader of the description
+alone — and the model reading it as an excerpt — must learn who and what the
+entry concerns. `check` flags an artifact or event whose people never appear
+in its own prose.
+
 A `quote` is a short verbatim passage (under 80 words) from an out-of-copyright
 primary text, pinned where it was written or spoken, with `--pages`.
 
@@ -267,6 +273,12 @@ across topic boundaries: `[[topic:whaling]]`, `[[person:Tookoolito]]` and
 once they have written it. A link to something not yet written is kept and
 listed by `history-db.py wanted`; it marks work to do rather than breaking
 anything, so do not avoid it.
+
+The wiki is self-contained: its reader is a scientist aboard, not the crew.
+Never reference the research process — no notes/ files, worklogs, extraction
+files, contact sheets, leaf numbers, "a previous run", "this run", or "the
+database". If a notes file holds something the reader needs, the place for it
+is the page itself or an artifact; the pointer stays in the worklog.
 
 Write plainly, for an intelligent reader who is not a historian. Concrete, with
 dates and with quotations from primary sources where they exist. Indigenous

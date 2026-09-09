@@ -154,6 +154,19 @@ class HistoryTests(unittest.TestCase):
         self.assertTrue(any("endpoint" in p["detail"] for p in problems))
 
     # ---------------------------------------------------------------- wiki
+    def test_an_entry_naming_its_people_only_in_the_title_is_flagged(self):
+        H.add_person(self.c, "Tookoolito")
+        self.artifact(id="t1", title="Tookoolito at Repulse Bay",
+                      description="A portrait taken during the second expedition.",
+                      people="Tookoolito")
+        self.assertTrue(any(p["what"] == "t1" and "only in the title" in p["detail"]
+                            for p in H.validate(self.c)["problems"]))
+        self.artifact(id="t1", title="Tookoolito at Repulse Bay",
+                      description="Tookoolito, photographed during the second expedition.",
+                      people="Tookoolito")
+        self.assertFalse(any(p["what"] == "t1" and "only in the title" in p["detail"]
+                             for p in H.validate(self.c)["problems"]))
+
     def test_bare_mentions_and_page_people_reach_the_links_table(self):
         H.add_person(self.c, "Tookoolito", indigenous=True)
         H.add_person(self.c, "Hans Hendrik", indigenous=True)
