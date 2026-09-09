@@ -126,6 +126,8 @@ concern; a missing original cannot be recovered later.
       --description "..." --tags franklin,abandonment --people "Crozier;Fitzjames" \
       --source-url https://... --local-file <your-slug>/files/name.jpg
 
+**A re-run of `artifact` replaces every field**: pass the complete command,
+never just the field you are changing, or the unpassed fields are wiped.
 Ids are `<your-slug>-NNN`, zero padded, unique. Types: `image`, `text`, `track`,
 `place`, `event`, `map`, `quote`, `object`. Aim for 15 to 40 artifacts, mixed in
 type. Every artifact needs a `--credit` and a `--bibkey`; the tool refuses one
