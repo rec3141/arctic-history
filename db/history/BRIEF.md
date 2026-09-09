@@ -254,7 +254,11 @@ rough and early, revise freely. Bodies are Markdown holding wikilinks:
 
 Every artifact, source, person and place gets its page generated automatically;
 you never write those. Your narrative pages are what cross-link them, and a
-narrative sentence that mentions a thing should link to it. Link generously
+narrative sentence that mentions a thing should link to it. Name the page's
+principal people with `--people "A;B"`: the tab's People strip and their
+"Mentioned in" backlinks use it exactly. Bare first mentions of known people,
+places, animals and vessels are indexed automatically at publish, and events
+have pages too — `[[event:<id>]]` links one. Link generously
 across topic boundaries: `[[topic:whaling]]`, `[[person:Tookoolito]]` and
 `[[place:Pond Inlet]]` may belong to someone else and the link still resolves
 once they have written it. A link to something not yet written is kept and

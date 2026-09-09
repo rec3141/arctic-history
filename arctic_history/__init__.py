@@ -44,7 +44,7 @@ HISTORY_DIR = DB_DIR / "history"
 HISTORY_DB = HISTORY_DIR / "history.sqlite"
 
 # the kinds of thing a wiki page can be about; `page` is a hand-written narrative
-KINDS = ("page", "artifact", "source", "person", "place", "topic", "animal", "vessel")
+KINDS = ("page", "artifact", "source", "person", "place", "event", "topic", "animal", "vessel")
 ARTIFACT_TYPES = ("image", "text", "track", "place", "event", "map", "quote", "object")
 LICENCE_HINT = ("public domain", "crown copyright expired", "cc0", "cc by", "cc by-sa",
                 "fair dealing", "all rights reserved", "unknown")
@@ -360,7 +360,8 @@ def connect(path: Path | None = None, create: bool = True) -> sqlite3.Connection
         for table, col, default in (("sources", "language", "''"), ("sources", "orig_language", "''"),
                                     ("sources", "translator", "''"), ("artifacts", "language", "''"),
                                     ("pages", "language", "'en'"),
-                                    ("artifacts", "view_file", "''"), ("artifacts", "routing", "''")):
+                                    ("artifacts", "view_file", "''"), ("artifacts", "routing", "''"),
+                                    ("pages", "people", "'[]'")):
             if col not in {r[1] for r in c.execute(f"PRAGMA table_info({table})")}:
                 c.execute(f"ALTER TABLE {table} ADD COLUMN {col} TEXT DEFAULT {default}")
         c.commit()
@@ -708,7 +709,9 @@ def add_page(c, slug: str, title: str, body: str, **kw) -> str:
                   (s, old["title"], old["summary"], old["body"], old["status"], now()))
     row = {"slug": s, "kind": kind if kind in KINDS else "page", "title": title, "body": body,
            "topic": slugify(kw["topic"]) if kw.get("topic") else "",
-           "summary": summary, "ordering": int(kw.get("ordering", 100)), "status": status}
+           "summary": summary, "ordering": int(kw.get("ordering", 100)), "status": status,
+           "people": _json_list(kw["people"]) if kw.get("people") is not None
+                     else (old["people"] if old else "[]")}
     return _upsert(c, "pages", "slug", row)
 
 
@@ -1042,8 +1045,12 @@ def index_targets(c) -> dict:
         titles.setdefault(r["title"].lower(), page_slug("artifact", r["id"]))
     for r in c.execute("SELECT bibkey, title FROM sources"):
         put("source", r["bibkey"], page_slug("source", r["bibkey"]), r["title"])
-    for r in c.execute("SELECT name FROM people"):
-        put("person", r["name"], page_slug("person", r["name"]))
+    for r in c.execute("SELECT name, also FROM people"):
+        slug = page_slug("person", r["name"])
+        put("person", r["name"], slug)
+        for alt in (r["also"] or "").split(";"):
+            if alt.strip():
+                put("person", alt.strip(), slug, r["name"])
     for table, kind in (("animals", "animal"), ("vessels", "vessel")):
         for r in c.execute(f"SELECT name, also FROM {table}"):
             slug = page_slug(kind, r["name"])
@@ -1060,6 +1067,9 @@ def index_targets(c) -> dict:
     for r in c.execute("SELECT slug, kind, title FROM pages"):
         put(r["kind"] or "page", r["slug"].split("/")[-1], r["slug"], r["title"])
         titles.setdefault(r["title"].lower(), r["slug"])
+    for r in c.execute("SELECT id, title FROM events"):
+        put("event", str(r["id"]), page_slug("event", str(r["id"])), r["title"])
+        titles.setdefault(r["title"].lower(), page_slug("event", str(r["id"])))
     for r in c.execute("SELECT slug, title FROM topics"):
         put("topic", slug_last(slug := page_slug("topic", r["slug"])), slug, r["title"])
         idx[("topic", r["slug"].lower())] = slug
@@ -1085,17 +1095,55 @@ def resolve(targets: dict, kind: str, name: str) -> str:
     return ""
 
 
+def _mention_index(c) -> tuple[dict, "re.Pattern | None"]:
+    """Names the ship's pane auto-links on first mention — people, places
+    (historic and Inuktitut forms too), animals and vessels — so the links
+    table can index the same mentions. Longest name wins a nested match."""
+    mention: dict[str, tuple[str, str]] = {}
+    for r in c.execute("SELECT name, also FROM people"):
+        slug = page_slug("person", r["name"])
+        mention.setdefault(r["name"], ("person", slug))
+        for alt in (r["also"] or "").split(";"):
+            if alt.strip():
+                mention.setdefault(alt.strip(), ("person", slug))
+    for r in c.execute("SELECT name, historic, inuktitut FROM places"):
+        slug = page_slug("place", r["name"])
+        for nm in (r["name"], r["historic"], r["inuktitut"]):
+            if nm:
+                mention.setdefault(nm, ("place", slug))
+    for table, kind in (("animals", "animal"), ("vessels", "vessel")):
+        for r in c.execute(f"SELECT name, also FROM {table}"):
+            slug = page_slug(kind, r["name"])
+            mention.setdefault(r["name"], (kind, slug))
+            for alt in (r["also"] or "").split(";"):
+                if alt.strip():
+                    mention.setdefault(alt.strip(), (kind, slug))
+    mention = {k: v for k, v in mention.items() if len(k) >= 3}
+    if not mention:
+        return mention, None
+    rx = re.compile(r"\b(" + "|".join(re.escape(n) for n in
+                                      sorted(mention, key=len, reverse=True)) + r")\b")
+    return mention, rx
+
+
 def reindex_links(c) -> dict:
-    """Re-read every page's wikilinks. Returns counts and the wanted links —
-    named but not yet written, which is the crew's to-do list."""
+    """Re-read every page's links: explicit wikilinks, the people the page
+    names in its people field, and bare first mentions of known people,
+    places, animals and vessels — the same mentions the ship's pane links
+    when it renders, so backlinks see them and `wanted` shrinks to the real
+    gaps. Only explicit wikilinks can be wanted; a mention only ever points
+    at something that exists."""
     targets = index_targets(c)
+    mention, rx = _mention_index(c)
     c.execute("DELETE FROM links")
     wanted: dict[str, list[str]] = {}
-    rows = c.execute("SELECT slug, body, summary FROM pages").fetchall()
+    rows = c.execute("SELECT slug, body, summary, people FROM pages").fetchall()
     n = 0
     for r in rows:
         seen = set()
-        for m in LINK_RX.finditer((r["body"] or "") + "\n" + (r["summary"] or "")):
+        targeted = set()
+        text = (r["body"] or "") + "\n" + (r["summary"] or "")
+        for m in LINK_RX.finditer(text):
             kind, name = link_parts(m.group(1))
             if (kind, name) in seen:
                 continue
@@ -1104,8 +1152,26 @@ def reindex_links(c) -> dict:
             c.execute("INSERT OR REPLACE INTO links (src, kind, name, target) VALUES (?,?,?,?)",
                       (r["slug"], kind, name, slug))
             n += 1
-            if not slug:
+            if slug:
+                targeted.add(slug)
+            else:
                 wanted.setdefault(f"{kind}:{name}" if kind else name, []).append(r["slug"])
+        for name in json.loads(r["people"] or "[]"):
+            slug = page_slug("person", name)
+            if slug not in targeted:
+                targeted.add(slug)
+                c.execute("INSERT OR REPLACE INTO links (src, kind, name, target) VALUES (?,?,?,?)",
+                          (r["slug"], "person", name, slug))
+                n += 1
+        if rx:
+            for m in rx.finditer(LINK_RX.sub(" ", text)):
+                kind, slug = mention[m.group(1)]
+                if slug in targeted:
+                    continue
+                targeted.add(slug)
+                c.execute("INSERT OR REPLACE INTO links (src, kind, name, target) VALUES (?,?,?,?)",
+                          (r["slug"], kind, m.group(1), slug))
+                n += 1
     c.commit()
     return {"links": n, "pages": len(rows), "wanted": wanted}
 
@@ -1238,10 +1304,34 @@ def vessel_body(r: sqlite3.Row) -> str:
     return "\n".join(lines).strip()
 
 
+def event_body(r: sqlite3.Row) -> str:
+    lines = []
+    when = r["date_text"] or (r["date_start"] + (f" to {r['date_end']}" if r["date_end"] else ""))
+    head = " \u00b7 ".join(x for x in (when, r["place"]) if x)
+    if head:
+        lines.append(head)
+    if r["detail"]:
+        lines += ["", r["detail"]]
+    people = json.loads(r["people"] or "[]")
+    if people:
+        lines += ["", "People: " + ", ".join(f"[[person:{x}]]" for x in people) + "."]
+    if r["place"]:
+        lines += ["", f"Place: [[place:{r['place']}]]."]
+    if r["bibkey"]:
+        lines += ["", f"Source: [[source:{r['bibkey']}]]."]
+    if r["topic"]:
+        lines += ["", f"Topic: [[topic:{r['topic']}]]."]
+    return "\n".join(lines)
+
+
 def generated_pages(c) -> list[dict]:
-    """A page for every artifact, source, person and place. These are derived,
-    so they are rebuilt on every publish rather than stored."""
+    """A page for every artifact, source, person, place and event. These are
+    derived, so they are rebuilt on every publish rather than stored."""
     out = []
+    for r in c.execute("SELECT * FROM events ORDER BY id"):
+        out.append({"slug": page_slug("event", str(r["id"])), "kind": "event", "title": r["title"],
+                    "topic": r["topic"], "summary": r["date_text"] or r["date_start"],
+                    "body": event_body(r), "ref": str(r["id"])})
     for r in c.execute("SELECT * FROM artifacts ORDER BY id"):
         out.append({"slug": page_slug("artifact", r["id"]), "kind": "artifact", "title": r["title"],
                     "topic": r["topic"], "summary": (r["description"] or "")[:300],
@@ -1510,13 +1600,14 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
         # 1. the wiki: hand-written narrative pages and the generated ones
         pages, index = [], []
         written = [dict(r, ref="") for r in (dict(x) for x in c.execute(
-            "SELECT slug, kind, title, topic, summary, body, ordering, status FROM pages ORDER BY ordering, title"))]
+            "SELECT slug, kind, title, topic, summary, body, ordering, status, people FROM pages ORDER BY ordering, title"))]
         for pg in written + generated_pages(c):
             back = [r["src"] for r in c.execute(
                 "SELECT DISTINCT src FROM links WHERE target=? ORDER BY src", (pg["slug"],))]
             doc = {"slug": pg["slug"], "kind": pg["kind"], "title": pg["title"], "topic": pg.get("topic", ""),
                    "summary": pg.get("summary", ""), "ref": pg.get("ref", ""),
                    "status": pg.get("status", ""),
+                   "people": json.loads(pg.get("people") or "[]"),
                    "html": render_markdown(pg["body"], targets), "backlinks": back}
             pages.append(doc)
             index.append({k: doc[k] for k in ("slug", "kind", "title", "topic", "summary", "status")})

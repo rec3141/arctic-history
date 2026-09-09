@@ -98,7 +98,7 @@ sys.path.insert(0, str(ROOT))
 
 import cv2                                    # noqa: E402
 import numpy as np                            # noqa: E402
-from PIL import Image                         # noqa: E402
+from PIL import Image, ImageOps               # noqa: E402
 
 import arctic_history as H                    # noqa: E402
 
@@ -116,6 +116,11 @@ def load_working(path: Path, max_edge: int):
     """Return (BGR array, scale, original size).  ``scale`` multiplies working
     coordinates back into the original raster."""
     im = Image.open(path)
+    # honour the camera's EXIF orientation before any size or pixel is read,
+    # matching the ship's thumbnailer, so crops from a turned photograph come
+    # out upright; a turned photo forgoes the cheap JPEG draft
+    if (im.getexif().get(0x0112) or 1) != 1:
+        im = ImageOps.exif_transpose(im)
     ow, oh = im.size
     if max(ow, oh) > max_edge:
         try:
