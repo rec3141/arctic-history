@@ -210,6 +210,9 @@ def main(argv=None) -> int:
     pg.add_argument("--body", default="")
     pg.add_argument("--file", default=None, help="the Markdown body, or - for stdin")
     pg.add_argument("--ordering", type=int, default=100, help="lower sorts earlier in the topic")
+    pg.add_argument("--people", default=None,
+                    help="semicolon separated: the people this page is about, for exact "
+                         "People strips and backlinks (bare name mentions are also indexed)")
     pg.add_argument("--status", default=None, choices=list(H.PAGE_STATUS),
                     help="draft (the default for a new page) or good; a rewrite keeps the "
                          "status it had unless told otherwise, and every save keeps the "
@@ -395,7 +398,7 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
             print("a page needs a body (--body or --file)", file=sys.stderr)
             return 2
         print(H.add_page(c, a.slug, a.title, body, topic=a.topic, summary=a.summary,
-                         ordering=a.ordering, status=a.status))
+                         ordering=a.ordering, status=a.status, people=a.people))
     elif a.cmd == "forget":
         r = H.forget(c, a.kind, a.id)
         print(f"{r['deleted']}; {r['dates']} date row(s) went with it")

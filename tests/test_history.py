@@ -154,6 +154,29 @@ class HistoryTests(unittest.TestCase):
         self.assertTrue(any("endpoint" in p["detail"] for p in problems))
 
     # ---------------------------------------------------------------- wiki
+    def test_bare_mentions_and_page_people_reach_the_links_table(self):
+        H.add_person(self.c, "Tookoolito", indigenous=True)
+        H.add_person(self.c, "Hans Hendrik", indigenous=True)
+        H.add_page(self.c, "the-march", "The march",
+                   "Tookoolito interpreted throughout.", topic="franklin-1845",
+                   people=["Hans Hendrik"])
+        H.reindex_links(self.c)
+        rows = {(r["kind"], r["target"]) for r in self.c.execute(
+            "SELECT kind, target FROM links WHERE src='the-march'")}
+        self.assertIn(("person", "person/tookoolito"), rows)      # bare mention
+        self.assertIn(("person", "person/hans-hendrik"), rows)    # people field
+        # a mention is never "wanted": it only points at what exists
+        self.assertEqual(H.reindex_links(self.c)["wanted"], {})
+
+    def test_events_get_generated_pages_and_are_linkable(self):
+        ident = H.add_event(self.c, "franklin-1845", "1847-06-11", "Franklin dies",
+                            lat=70.08, lon=-98.4, people="Crozier", bibkey="mcclintock1859voyage")
+        pages = {p["slug"]: p for p in H.generated_pages(self.c)}
+        self.assertIn(f"event/{ident}", pages)
+        self.assertIn("[[source:mcclintock1859voyage]]", pages[f"event/{ident}"]["body"])
+        H.add_page(self.c, "one", "One", f"See [[event:{ident}]].")
+        self.assertEqual(H.reindex_links(self.c)["wanted"], {})
+
     def test_wikilinks_resolve_by_kind_and_by_title(self):
         self.artifact(title="A plate")
         H.add_person(self.c, "Tookoolito", indigenous=True, role="interpreter")
