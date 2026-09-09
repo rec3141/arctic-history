@@ -131,6 +131,15 @@ def main(argv=None) -> int:
         p.add_argument(f"--{f}", default=None)
     p.add_argument("--indigenous", action="store_true", help="an Inuit, Inughuit or other Indigenous participant")
 
+    an = sub.add_parser("animal", help="add or update a named animal: a dog, a pony, a ship's cat, a bear cub")
+    an.add_argument("--name", required=True)
+    for f in ("kind", "also", "role", "born", "died", "affiliation", "note", "bibkey", "topic"):
+        an.add_argument(f"--{f}", default=None)
+    ve = sub.add_parser("vessel", help="add or update a ship, boat or aircraft")
+    ve.add_argument("--name", required=True)
+    for f in ("kind", "also", "role", "built", "lost", "affiliation", "tonnage", "note", "bibkey", "topic"):
+        ve.add_argument(f"--{f}", default=None)
+
     pl = sub.add_parser("place", help="add or update a place")
     pl.add_argument("--name", required=True)
     pl.add_argument("--lat", type=float, default=None)
@@ -156,7 +165,7 @@ def main(argv=None) -> int:
                    help="the source's own hedge: circa, before, after, by, early, mid, late")
 
     d = sub.add_parser("date", help="record one atomic date on any record")
-    d.add_argument("--kind", required=True, choices=["artifact", "event", "person", "place", "source", "page", "topic"])
+    d.add_argument("--kind", required=True, choices=["artifact", "event", "person", "place", "source", "page", "topic", "animal", "vessel"])
     d.add_argument("--id", required=True, help="the artifact id, event id, person or place name, bibkey or page slug")
     d.add_argument("--date", required=True, help="YYYY, YYYY-MM or YYYY-MM-DD")
     d.add_argument("--role", default="point", choices=list(H.DATE_ROLES))
@@ -212,7 +221,7 @@ def main(argv=None) -> int:
     fg = sub.add_parser("forget", help="delete one mistaken row and the dates attached to it — "
                                        "a duplicate person, a stray date. For errors, not "
                                        "revisions; note what you removed in the worklog.")
-    fg.add_argument("--kind", required=True, choices=["artifact", "event", "person", "place", "source", "date"])
+    fg.add_argument("--kind", required=True, choices=["artifact", "event", "person", "place", "source", "date", "animal", "vessel"])
     fg.add_argument("--id", required=True,
                     help="the artifact id, the event or date row number, or the person or place name")
 
@@ -256,7 +265,9 @@ def main(argv=None) -> int:
     fc.add_argument("--n", required=True, type=int, help="the face's number within the image, from 1")
     fc.add_argument("--file", required=True, help="the crop, relative to db/history/, under <topic>/files/faces/")
     fc.add_argument("--box", default="", help="[x, y, w, h] in the original raster, JSON")
-    fc.add_argument("--person", default="", help="a name in people, or nothing when unidentified")
+    fc.add_argument("--kind", default="person", choices=["person", "animal", "vessel"],
+                    help="what the crop shows; --person then names a row of people, animals or vessels")
+    fc.add_argument("--person", default="", help="a name in people (or animals, vessels), or nothing when unidentified")
     fc.add_argument("--confidence", type=float, default=None)
     fc.add_argument("--method", default="", help="detector and identification rule, e.g. yunet; single-name-in-people")
     fc.add_argument("--forget", action="store_true", help="delete every face of this artifact instead")
@@ -274,7 +285,7 @@ def main(argv=None) -> int:
     sh = sub.add_parser("show", help="print one page as stored")
     sh.add_argument("--slug", required=True)
     li = sub.add_parser("list", help="list rows of one kind")
-    li.add_argument("--what", required=True, choices=["topics", "sources", "artifacts", "pages", "people", "places", "events"])
+    li.add_argument("--what", required=True, choices=["topics", "sources", "artifacts", "pages", "people", "places", "events", "animals", "vessels"])
     li.add_argument("--topic", default="")
     ex = sub.add_parser("export", help="write the bibliography out")
     ex.add_argument("--bib", required=True)
@@ -322,6 +333,12 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
     elif a.cmd == "person":
         kw = {k: v for k, v in vars(a).items() if k not in {"cmd", "db", "name"} and v is not None}
         print(H.add_person(c, a.name, **kw))
+    elif a.cmd == "animal":
+        kw = {k: v for k, v in vars(a).items() if k not in {"cmd", "db", "name"} and v is not None}
+        print(H.add_animal(c, a.name, **kw))
+    elif a.cmd == "vessel":
+        kw = {k: v for k, v in vars(a).items() if k not in {"cmd", "db", "name"} and v is not None}
+        print(H.add_vessel(c, a.name, **kw))
     elif a.cmd == "place":
         kw = {k: v for k, v in vars(a).items() if k not in {"cmd", "db", "name"} and v is not None}
         print(H.add_place(c, a.name, **kw))
@@ -470,7 +487,7 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
         if a.forget:
             print(f"forgot {H.forget_faces(c, a.artifact)} faces of {a.artifact}")
         else:
-            print(H.add_face(c, a.artifact, a.n, a.file, box=a.box, person=a.person,
+            print(H.add_face(c, a.artifact, a.n, a.file, box=a.box, person=a.person, kind=a.kind,
                              confidence=a.confidence, method=a.method))
     elif a.cmd == "keyword":
         n = H.add_keywords(c, a.artifact, a.path, source=a.source, replace=not a.keep)
@@ -505,7 +522,8 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
     elif a.cmd == "list":
         cols = {"topics": "slug, title, status", "sources": "bibkey, year, title",
                 "artifacts": "id, type, date_text, title", "pages": "slug, kind, status, title",
-                "people": "name, role", "places": "name, lat, lon", "events": "date_start, topic, title"}[a.what]
+                "people": "name, role", "places": "name, lat, lon", "events": "date_start, topic, title",
+                "animals": "name, kind, role", "vessels": "name, kind, built"}[a.what]
         q = f"SELECT {cols} FROM {a.what}"
         args: tuple = ()
         if a.topic and a.what != "topics":

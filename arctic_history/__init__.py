@@ -44,7 +44,7 @@ HISTORY_DIR = DB_DIR / "history"
 HISTORY_DB = HISTORY_DIR / "history.sqlite"
 
 # the kinds of thing a wiki page can be about; `page` is a hand-written narrative
-KINDS = ("page", "artifact", "source", "person", "place", "topic")
+KINDS = ("page", "artifact", "source", "person", "place", "topic", "animal", "vessel")
 ARTIFACT_TYPES = ("image", "text", "track", "place", "event", "map", "quote", "object")
 LICENCE_HINT = ("public domain", "crown copyright expired", "cc0", "cc by", "cc by-sa",
                 "fair dealing", "all rights reserved", "unknown")
@@ -296,6 +296,38 @@ CREATE TABLE IF NOT EXISTS ontology (
 );
 """
 
+SCHEMA_ANIMALS_VESSELS = """
+-- the dogs, ponies, cats and bear cubs of the expeditions, first-class like people
+CREATE TABLE IF NOT EXISTS animals (
+  name        TEXT PRIMARY KEY,
+  kind        TEXT DEFAULT '',             -- dog, pony, cat, bear, ox, fox, ...
+  also        TEXT DEFAULT '',             -- other names or spellings, semicolon separated
+  role        TEXT DEFAULT '',             -- lead dog of the 1909 polar party; ship's cat of the Karluk
+  born        TEXT DEFAULT '',
+  died        TEXT DEFAULT '',
+  affiliation TEXT DEFAULT '',             -- expedition, ship, owner or driver
+  note        TEXT DEFAULT '',
+  bibkey      TEXT DEFAULT '',
+  topic       TEXT DEFAULT '',
+  updated     TEXT DEFAULT ''
+);
+-- the ships, boats and aircraft, first-class like people
+CREATE TABLE IF NOT EXISTS vessels (
+  name        TEXT PRIMARY KEY,            -- as usually written: HMS Investigator, Gjoa, CCGS Amundsen
+  kind        TEXT DEFAULT '',             -- bomb vessel, steam whaler, schooner, icebreaker, Lancaster bomber
+  also        TEXT DEFAULT '',             -- former or later names, semicolon separated
+  role        TEXT DEFAULT '',             -- what she did in this history
+  built       TEXT DEFAULT '',             -- year, yard, place
+  lost        TEXT DEFAULT '',             -- fate, with a date
+  affiliation TEXT DEFAULT '',             -- navy, owner, expedition, port
+  tonnage     TEXT DEFAULT '',
+  note        TEXT DEFAULT '',
+  bibkey      TEXT DEFAULT '',
+  topic       TEXT DEFAULT '',
+  updated     TEXT DEFAULT ''
+);
+"""
+
 RASTER_SUFFIXES = (".jpg", ".jpeg", ".png", ".gif", ".tif", ".tiff", ".webp")
 ROUTING = ("", "water", "as-given")       # how a track's line is drawn: routed through water, or as its waypoints
 
@@ -320,6 +352,9 @@ def connect(path: Path | None = None, create: bool = True) -> sqlite3.Connection
     if create:
         c.executescript(SCHEMA)
         c.executescript(SCHEMA_EXTRA)
+        c.executescript(SCHEMA_ANIMALS_VESSELS)
+        if "kind" not in {r[1] for r in c.execute("PRAGMA table_info(faces)")}:
+            c.execute("ALTER TABLE faces ADD COLUMN kind TEXT NOT NULL DEFAULT 'person'")
         if "status" not in {r[1] for r in c.execute("PRAGMA table_info(pages)")}:
             c.execute("ALTER TABLE pages ADD COLUMN status TEXT NOT NULL DEFAULT 'draft'")
         for table, col, default in (("sources", "language", "''"), ("sources", "orig_language", "''"),
@@ -634,6 +669,7 @@ def forget(c, kind: str, ident) -> dict:
         return {"deleted": f"date {ident} ({r['date']} {r['role']} {r['label']})", "dates": 1}
     tables = {"artifact": ("artifacts", "id"), "event": ("events", "id"),
               "person": ("people", "name"), "place": ("places", "name"),
+              "animal": ("animals", "name"), "vessel": ("vessels", "name"),
               "source": ("sources", "bibkey")}
     if kind not in tables:
         raise ValueError(f"kind must be date or one of {', '.join(tables)}")
@@ -715,6 +751,27 @@ def add_place(c, name: str, **kw) -> str:
         if kw.get(f) is not None:
             row[f] = str(kw[f])
     return _upsert(c, "places", "name", row)
+
+
+def add_animal(c, name: str, **kw) -> str:
+    """A named animal — a dog, a pony, a ship's cat, a bear cub. Like people:
+    the topic that first entered it keeps it, later runs fill blanks."""
+    kw = _keep_home_topic(c, "animals", name, kw)
+    row = {"name": name.strip()}
+    for f in ("kind", "also", "role", "born", "died", "affiliation", "note", "bibkey", "topic"):
+        if kw.get(f) is not None:
+            row[f] = str(kw[f])
+    return _upsert(c, "animals", "name", row)
+
+
+def add_vessel(c, name: str, **kw) -> str:
+    """A ship, boat or aircraft, by the name it is usually written under."""
+    kw = _keep_home_topic(c, "vessels", name, kw)
+    row = {"name": name.strip()}
+    for f in ("kind", "also", "role", "built", "lost", "affiliation", "tonnage", "note", "bibkey", "topic"):
+        if kw.get(f) is not None:
+            row[f] = str(kw[f])
+    return _upsert(c, "vessels", "name", row)
 
 
 def add_event(c, topic: str, date: str, title: str, **kw) -> int:
@@ -987,6 +1044,13 @@ def index_targets(c) -> dict:
         put("source", r["bibkey"], page_slug("source", r["bibkey"]), r["title"])
     for r in c.execute("SELECT name FROM people"):
         put("person", r["name"], page_slug("person", r["name"]))
+    for table, kind in (("animals", "animal"), ("vessels", "vessel")):
+        for r in c.execute(f"SELECT name, also FROM {table}"):
+            slug = page_slug(kind, r["name"])
+            put(kind, r["name"], slug)
+            for alt in (r["also"] or "").split(";"):
+                if alt.strip():
+                    put(kind, alt.strip(), slug, r["name"])
     for r in c.execute("SELECT name, historic, inuktitut FROM places"):
         slug = page_slug("place", r["name"])
         put("place", r["name"], slug)
@@ -1139,6 +1203,41 @@ def place_body(r: sqlite3.Row) -> str:
     return "\n".join(lines).strip()
 
 
+def animal_body(r: sqlite3.Row) -> str:
+    lines = []
+    head = " · ".join(x for x in (r["kind"], r["role"], r["affiliation"],
+                                  f"{r['born']}–{r['died']}" if (r["born"] or r["died"]) else "") if x)
+    if head:
+        lines.append(head)
+    if r["also"]:
+        lines += ["", f"Also called {r['also']}."]
+    if r["note"]:
+        lines += ["", r["note"]]
+    if r["bibkey"]:
+        lines += ["", f"**Source** [[source:{r['bibkey']}]]"]
+    return "\n".join(lines).strip()
+
+
+def vessel_body(r: sqlite3.Row) -> str:
+    lines = []
+    head = " · ".join(x for x in (r["kind"], r["affiliation"], r["tonnage"]) if x)
+    if head:
+        lines.append(head)
+    if r["role"]:
+        lines += ["", r["role"]]
+    if r["built"]:
+        lines += ["", f"**Built** {r['built']}"]
+    if r["lost"]:
+        lines += ["", f"**Fate** {r['lost']}"]
+    if r["also"]:
+        lines += ["", f"Also {r['also']}."]
+    if r["note"]:
+        lines += ["", r["note"]]
+    if r["bibkey"]:
+        lines += ["", f"**Source** [[source:{r['bibkey']}]]"]
+    return "\n".join(lines).strip()
+
+
 def generated_pages(c) -> list[dict]:
     """A page for every artifact, source, person and place. These are derived,
     so they are rebuilt on every publish rather than stored."""
@@ -1157,6 +1256,14 @@ def generated_pages(c) -> list[dict]:
     for r in c.execute("SELECT * FROM places ORDER BY name"):
         out.append({"slug": page_slug("place", r["name"]), "kind": "place", "title": r["name"],
                     "topic": r["topic"], "summary": r["kind"] or "", "body": place_body(r), "ref": r["name"]})
+    for r in c.execute("SELECT * FROM animals ORDER BY name"):
+        out.append({"slug": page_slug("animal", r["name"]), "kind": "animal", "title": r["name"],
+                    "topic": r["topic"], "summary": " · ".join(x for x in (r["kind"], r["role"]) if x),
+                    "body": animal_body(r), "ref": r["name"]})
+    for r in c.execute("SELECT * FROM vessels ORDER BY name"):
+        out.append({"slug": page_slug("vessel", r["name"]), "kind": "vessel", "title": r["name"],
+                    "topic": r["topic"], "summary": " · ".join(x for x in (r["kind"], r["role"]) if x),
+                    "body": vessel_body(r), "ref": r["name"]})
     return out
 
 
@@ -1212,10 +1319,14 @@ def add_face(c, artifact_id: str, n: int, file: str, **kw) -> int:
         box = box if isinstance(box, str) else json.dumps(box)
         if len(json.loads(box)) != 4:
             raise ValueError("box must be [x, y, w, h]")
+    kind = (kw.get("kind") or "person").strip()
+    table = {"person": "people", "animal": "animals", "vessel": "vessels"}.get(kind)
+    if not table:
+        raise ValueError("a face's kind is person, animal or vessel")
     person = (kw.get("person") or "").strip()
-    if person and not c.execute("SELECT 1 FROM people WHERE name=?", (person,)).fetchone():
-        raise ValueError(f"person {person!r} is not in people; enter them first or leave the face unidentified")
-    row = {"artifact_id": artifact_id, "n": int(n), "file": file, "box": box or "",
+    if person and not c.execute(f"SELECT 1 FROM {table} WHERE name=?", (person,)).fetchone():
+        raise ValueError(f"{kind} {person!r} is not in {table}; enter it first or leave the crop unidentified")
+    row = {"artifact_id": artifact_id, "n": int(n), "file": file, "box": box or "", "kind": kind,
            "person": person, "confidence": kw.get("confidence"), "method": kw.get("method", ""),
            "updated": now()}
     cols = ",".join(row); marks = ",".join("?" * len(row))
@@ -1503,8 +1614,9 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
             faces.append({"artifact": r["artifact_id"], "page": page_slug("artifact", r["artifact_id"]),
                           "title": r["title"], "file": f"data/history/files/faces/{dest.name}",
                           "box": json.loads(r["box"]) if r["box"] else [],
+                          "kind": r["kind"] or "person",
                           "person": r["person"] or "",
-                          "person_page": page_slug("person", r["person"]) if r["person"] else "",
+                          "person_page": page_slug(r["kind"] or "person", r["person"]) if r["person"] else "",
                           "confidence": r["confidence"], "method": r["method"] or ""})
         if faces:
             atomic(out / "faces.json", json.dumps({"faces": faces}, ensure_ascii=False))
@@ -1525,6 +1637,16 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
                         "page": page_slug("person", r["name"])}
                        for r in c.execute("SELECT * FROM people ORDER BY name")]
         atomic(out / "people.json", json.dumps({"people": people_rows}, ensure_ascii=False))
+        animal_rows = [{**{k: r[k] for k in ("name", "kind", "also", "role", "born", "died",
+                                             "affiliation", "note", "topic")},
+                        "page": page_slug("animal", r["name"])}
+                       for r in c.execute("SELECT * FROM animals ORDER BY name")]
+        atomic(out / "animals.json", json.dumps({"animals": animal_rows}, ensure_ascii=False))
+        vessel_rows = [{**{k: r[k] for k in ("name", "kind", "also", "role", "built", "lost",
+                                             "affiliation", "tonnage", "note", "topic")},
+                        "page": page_slug("vessel", r["name"])}
+                       for r in c.execute("SELECT * FROM vessels ORDER BY name")]
+        atomic(out / "vessels.json", json.dumps({"vessels": vessel_rows}, ensure_ascii=False))
         atomic(out / "index.json", json.dumps({"pages": index, "topics": topics,
                                                "wanted": info["wanted"]}, ensure_ascii=False))
         atomic(out / "references.bib", to_bibtex(c.execute("SELECT * FROM sources ORDER BY bibkey")))
@@ -1533,6 +1655,7 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
         return {"file": "data/history/index.json", "stamp": stamp, "artifacts": len(arts), "faces": len(faces),
                 "pages": len(pages), "events": len(events), "topics": len(topics),
                 "places": len(places), "people": len(people_rows),
+                "animals": len(animal_rows), "vessels": len(vessel_rows),
                 "dates": len(rows), "timeline": len(timeline),
                 "sources": c.execute("SELECT COUNT(*) AS n FROM sources").fetchone()["n"],
                 "wanted": len(info["wanted"])}

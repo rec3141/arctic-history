@@ -472,5 +472,24 @@ class HistoryTests(unittest.TestCase):
         self.assertFalse(any(p["what"] == "chart-pdf" and "raster" in p["detail"] for p in H.validate(self.c)["problems"]))
 
 
+    def test_animals_and_vessels_are_first_class(self):
+        H.add_animal(self.c, "Mike", kind="dog", role="Natkusiak's dog on the 1916 ice journey", topic="karluk-cae")
+        H.add_vessel(self.c, "HMS Investigator", kind="barque", built="1848, Greenock", lost="abandoned in Mercy Bay, 1853",
+                     also="Investigator", topic="mcclure-investigator")
+        H.add_vessel(self.c, "HMS Investigator", role="McClure's ship", topic="franklin-search")   # foreign run: fills blanks only
+        r = self.c.execute("SELECT topic, role, kind FROM vessels WHERE name='HMS Investigator'").fetchone()
+        self.assertEqual((r["topic"], r["role"], r["kind"]), ("mcclure-investigator", "McClure's ship", "barque"))
+        idx = H.index_targets(self.c)
+        self.assertEqual(idx["idx"][("vessel", "investigator")], "vessel/hms-investigator")
+        self.assertEqual(idx["idx"][("animal", "mike")], "animal/mike")
+        kinds = {p["kind"] for p in H.generated_pages(self.c)}
+        self.assertTrue({"animal", "vessel"} <= kinds)
+        self.artifact(id="dog-photo", type="image", local_file="x/files/dog.jpg")
+        H.add_face(self.c, "dog-photo", 1, "x/files/faces/dog-photo-1.jpg", kind="animal", person="Mike")
+        with self.assertRaises(ValueError):
+            H.add_face(self.c, "dog-photo", 2, "x/files/faces/dog-photo-2.jpg", kind="vessel", person="Mike")
+        self.assertEqual(self.c.execute("SELECT kind, person FROM faces WHERE n=1").fetchone()[1], "Mike")
+
+
 if __name__ == "__main__":
     unittest.main()
