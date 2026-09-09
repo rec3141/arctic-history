@@ -715,6 +715,38 @@ REQUEST_KINDS = ("download", "api_key", "question", "access", "other")
 REQUEST_STATUS = ("open", "approved", "denied", "done")
 
 
+_STRUCTURAL = re.compile(r"^\s*(?:[-*\u2022]|\d{1,3}[.)]|\(?[a-z0-9]\)|[A-Z][A-Za-z ,/]{0,40}:)(?:\s|$)")
+_BARE_URL = re.compile(r"^\s*<?https?://\S+>?\s*$")
+
+
+def unwrap_hard_wraps(text: str) -> str:
+    """Researchers often type a request through a shell heredoc wrapped at
+    80 columns, and the review page then shows it as ragged short lines.
+    Join the lines of a paragraph back into prose; keep blank-line paragraph
+    breaks, list items, 'Label:' lines, salutations and bare URLs on their
+    own lines."""
+    if not text or "\n" not in text:
+        return text
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
+    paras = []
+    for para in re.split(r"\n[ \t]*\n", text):
+        joined: list[str] = []
+        for line in para.split("\n"):
+            line = line.rstrip()
+            if not line.strip():
+                continue
+            prev = joined[-1] if joined else None
+            structural = bool(_STRUCTURAL.match(line)) or _BARE_URL.match(line)
+            can_join = (prev is not None and not structural and len(prev) >= 50
+                        and not prev.rstrip().endswith(":") and not _BARE_URL.match(prev))
+            if can_join:
+                joined[-1] = prev + " " + line.strip()
+            else:
+                joined.append(line)
+        paras.append("\n".join(joined))
+    return "\n\n".join(p for p in paras if p)
+
+
 def add_request(c, topic: str, kind: str, what: str, **kw) -> int:
     """File a request for a person and carry on: requests are asynchronous by
     design. The person acts on it alone, from the review page, possibly days
@@ -728,7 +760,9 @@ def add_request(c, topic: str, kind: str, what: str, **kw) -> int:
     # a literal backslash-n typed inside a shell argument is the line break
     # the researcher meant; the review page showed a lot of them
     def _nl(v):
-        return v.replace("\\r\\n", "\n").replace("\\n", "\n") if isinstance(v, str) else v
+        if not isinstance(v, str):
+            return v
+        return unwrap_hard_wraps(v.replace("\\r\\n", "\n").replace("\\n", "\n"))
     what = _nl(what)
     kw = {k: _nl(v) for k, v in kw.items()}
     if len(kw.get("why", "").strip()) < 40:

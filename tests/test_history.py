@@ -416,9 +416,36 @@ class HistoryTests(unittest.TestCase):
         rid = H.add_request(self.c, "franklin-1845", "access", "A title\\nwith a break", url="https://example.org/x",
                             why="Line one of a reason that is long enough to pass the guard.\\nLine two, also long enough to count.")
         r = self.c.execute("SELECT what, why FROM requests WHERE id=?", (rid,)).fetchone()
-        self.assertEqual(r["what"], "A title\nwith a break")
+        self.assertEqual(r["what"], "A title\nwith a break")        # short first line: the break stays
         self.assertNotIn("\\n", r["why"])
-        self.assertIn("\n", r["why"])
+        self.assertNotIn("\n", r["why"])                            # two wrapped prose lines become one
+
+
+    def test_hard_wrapped_request_text_is_unwrapped_but_structure_kept(self):
+        raw = ("The single most important document this topic still lacks. Inspector Joy's\n"
+               "1929 sledge patrol - Dundas Harbour on Devon Island to Winter Harbour on\n"
+               "Melville Island - is described only in the annual report.\n"
+               "\n"
+               "FORWARD TO: reproduction@example.org\n"
+               "Subject: Reference question - Joy's patrol\n"
+               "\n"
+               "Dear Reference Services,\n"
+               "I am writing about the report for the year ended 30 September 1929, which\n"
+               "is not online anywhere I can reach.\n"
+               "- pages 62-71, the patrol report\n"
+               "- the sketch map that accompanies it\n"
+               "https://example.org/report-1929\n")
+        out = H.unwrap_hard_wraps(raw)
+        paras = out.split("\n\n")
+        self.assertEqual(len(paras), 3)
+        self.assertNotIn("\n", paras[0])                        # the wrapped prose is one line
+        self.assertEqual(paras[1].split("\n"), ["FORWARD TO: reproduction@example.org",
+                                                 "Subject: Reference question - Joy's patrol"])
+        lines = paras[2].split("\n")
+        self.assertEqual(lines[0], "Dear Reference Services,")   # short salutation kept
+        self.assertTrue(lines[1].startswith("I am writing") and lines[1].endswith("can reach."))
+        self.assertEqual(lines[2:], ["- pages 62-71, the patrol report", "- the sketch map that accompanies it",
+                                     "https://example.org/report-1929"])
 
 
 if __name__ == "__main__":
