@@ -89,9 +89,10 @@ class Grid:
         self.x0, self.y1 = x0, y1
         gpkg = os.path.join(out, f"{name}-land3857.gpkg")
         if not os.path.exists(gpkg):
+            # the clip is given in the destination's metres: the sources may be in any projection
             for i, src in enumerate(lands):
-                subprocess.run(["ogr2ogr", "-q", "-t_srs", "EPSG:3857", "-nlt", "PROMOTE_TO_MULTI", "-clipsrc"] + [str(v) for v in (bbox[0], bbox[1], bbox[2], bbox[3])]
-                               + (["-update"] if i else []) + [gpkg, src, "-nln", f"land{i}"], check=False)
+                subprocess.run(["ogr2ogr", "-q", "-t_srs", "EPSG:3857", "-nlt", "PROMOTE_TO_MULTI", "-clipdst", f"{x0:.1f}", f"{y0:.1f}", f"{x1:.1f}", f"{y1:.1f}"]
+                               + (["-update"] if i else []) + [gpkg, src, "-nln", f"land{i}"], check=True)
         tif = os.path.join(out, f"{name}-land.tif")
         if not os.path.exists(tif):
             for i in range(len(lands)):
@@ -100,6 +101,8 @@ class Grid:
         if not os.path.exists(raw):
             subprocess.run(["gdal_translate", "-q", "-of", "ENVI", tif, raw], check=True)
         self.land = np.fromfile(raw, dtype=np.uint8).reshape(nrows, ncols).astype(bool)
+        if not self.land.any():
+            sys.exit(f"{name}: the land mask is empty; the land vectors did not rasterize into {bbox}")
         elev = None
         if gebco:
             ebin = os.path.join(out, f"{name}-elev.bin")
