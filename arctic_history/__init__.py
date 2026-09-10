@@ -1473,8 +1473,45 @@ def reindex_links(c) -> dict:
                 c.execute("INSERT OR REPLACE INTO links (src, kind, name, target) VALUES (?,?,?,?)",
                           (r["slug"], kind, m.group(1), slug))
                 n += 1
+    n += _row_links(c, targets)
     c.commit()
     return {"links": n, "pages": len(rows), "wanted": wanted}
+
+
+def _row_links(c, targets: dict) -> int:
+    """The links a generated page carries by virtue of its row: the source it
+    cites, the people it names, the place an event happened at. These are the
+    backlinks a person, source or place page shows as "Mentioned in" from the
+    artifacts and events, and they come from the fields, not the body, which
+    is prose alone. A topic is not linked this way: every artifact points at
+    its topic already, and thousands of backlinks would bury the topic page.
+    A bibkey that names no source is `check`'s problem, not a wanted link."""
+    n = 0
+
+    def put(src: str, kind: str, name: str, slug: str, seen: set) -> None:
+        nonlocal n
+        if slug and slug not in seen:
+            seen.add(slug)
+            c.execute("INSERT OR REPLACE INTO links (src, kind, name, target) VALUES (?,?,?,?)",
+                      (src, kind, name, slug))
+            n += 1
+
+    for r in c.execute("SELECT id, bibkey, people FROM artifacts"):
+        src, seen = page_slug("artifact", r["id"]), set()
+        put(src, "source", r["bibkey"], resolve(targets, "source", r["bibkey"]) if r["bibkey"] else "", seen)
+        for p in json.loads(r["people"] or "[]"):
+            put(src, "person", p, page_slug("person", p), seen)
+    for r in c.execute("SELECT id, bibkey, people, place FROM events"):
+        src, seen = page_slug("event", str(r["id"])), set()
+        put(src, "source", r["bibkey"], resolve(targets, "source", r["bibkey"]) if r["bibkey"] else "", seen)
+        for p in json.loads(r["people"] or "[]"):
+            put(src, "person", p, page_slug("person", p), seen)
+        if r["place"]:
+            put(src, "place", r["place"], resolve(targets, "place", r["place"]), seen)
+    for table, kind in (("people", "person"), ("places", "place"), ("animals", "animal"), ("vessels", "vessel")):
+        for r in c.execute(f"SELECT name, bibkey FROM {table} WHERE bibkey<>''"):
+            put(page_slug(kind, r["name"]), "source", r["bibkey"], resolve(targets, "source", r["bibkey"]), set())
+    return n
 
 
 def render_markdown(body: str, targets: dict, base: str = "") -> str:
