@@ -285,6 +285,13 @@ class HistoryTests(unittest.TestCase):
         self.assertEqual(parsed[0]["title"], "The Voyage of the Fox")
         self.assertTrue(parsed[0]["primary"])
 
+    def test_bibtex_carries_the_licence_phrase_but_not_the_rights_note(self):
+        H.add_source(self.c, "mcclintock1859voyage", "The Voyage of the Fox", licence="crown-expired",
+                     rights_note="Crown copyright of 1859 expired; internal wording for the crew")
+        text = H.to_bibtex(self.c.execute("SELECT * FROM sources"))
+        self.assertIn("Crown copyright expired; public domain", text)
+        self.assertNotIn("internal wording", text)
+
     def test_importing_a_bib_file_adds_sources(self):
         keys = H.import_bib(self.c, """
             @book{parry1821journal,
