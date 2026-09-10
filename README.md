@@ -21,6 +21,7 @@ fetched files are not committed — they move by rsync.
     tools/history-sync.sh      grid -> ship, pull only
     tests/test_history.py      python3 -m unittest tests.test_history
     db/history/BRIEF.md        the brief every researcher works from: READ THIS FIRST
+    db/history/PROVENANCE.md   how the layer was made: AI's part, the review pass, the stats
     db/history/history.sqlite  the database
     db/history/<topic>/        files/ (downloads), notes/ (extractions), RESUME.md (first-run leftovers)
     db/history/_staging/       primary texts fetched by the first runs; MANIFEST.md lists them
