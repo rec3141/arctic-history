@@ -120,7 +120,7 @@ def curl(args: list[str], jar: bool = False, timeout: int = 600) -> subprocess.C
     url = next((x for x in args if x.startswith("http")), "")
     if url:
         pace(url)
-    cmd = ["curl", "-sS", "-L", "--max-time", str(timeout), "-A", UA]
+    cmd = ["curl", "-sS", "-L", "--http1.1", "--max-time", str(timeout), "-A", UA]
     if jar:
         JAR.parent.mkdir(parents=True, exist_ok=True)
         cmd += ["-c", str(JAR), "-b", str(JAR)]
