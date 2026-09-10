@@ -873,6 +873,34 @@ class NatureTests(unittest.TestCase):
         self.assertIn("person:Otto Sverdrup", back)
         self.assertIn("source:sverdrup1904new", back)
 
+    def test_journal_photographs_resolve_beside_the_journal(self):
+        inc = self.root / "_journal" / "incoming"
+        (inc / "img").mkdir(parents=True)
+        (inc / "img" / "2026-09-11-007.jpg").write_bytes(b"\xff\xd8\xff" + b"0" * 5000)
+        j = inc / "2026-09.jsonl"
+        j.write_text("\n".join([
+            json.dumps({"id": "amundsen-2026-09-11-007", "subject": "muskox", "date": "2026-09-11",
+                        "lat": 76.1, "lon": -92.4, "count": "2", "method": "camera", "observer": "A. Crew",
+                        "detail": "Two on the beach.", "artifact_file": "_journal/img/2026-09-11-007.jpg"}),
+            json.dumps({"id": "amundsen-2026-09-11-008", "subject": "muskox", "date": "2026-09-11",
+                        "lat": 76.1, "lon": -92.4, "count": "1", "method": "camera", "observer": "A. Crew",
+                        "detail": "No picture.", "artifact_file": "_journal/img/missing.jpg"}),
+        ]) + "\n")
+        old = H.HISTORY_DIR
+        H.HISTORY_DIR = self.root
+        try:
+            r = H.ingest_journal(self.c, j)
+        finally:
+            H.HISTORY_DIR = old
+        self.assertEqual(len(r["done"]), 1)
+        self.assertEqual(len(r["failed"]), 1)
+        self.assertIn("not found beside the journal", r["failed"][0]["error"])
+        a = self.c.execute("SELECT local_file, credit FROM artifacts WHERE id='amundsen-2026-09-11-007-img'").fetchone()
+        self.assertEqual(a["local_file"], "_journal/incoming/img/2026-09-11-007.jpg")
+        self.assertIn("A. Crew", a["credit"])
+        self.assertEqual(self.c.execute("SELECT artifact_id FROM observations WHERE id='amundsen-2026-09-11-007'").fetchone()["artifact_id"],
+                         "amundsen-2026-09-11-007-img")
+
     def test_journal_ingest_is_idempotent_and_reports_failures(self):
         j = self.root / "journal.jsonl"
         j.write_text("\n".join([

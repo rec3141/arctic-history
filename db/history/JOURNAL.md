@@ -51,7 +51,7 @@ Fields, all as `history-db.py observation --help` describes them:
 | `detail` | yes | the sentence that says what was seen |
 | `confidence` | | `certain`, `probable`, `doubtful` |
 | `sensitive` | | `1` for a den, a nest, a haul-out, a calving ground: published coarsened |
-| `artifact_file` | | a photograph beside the journal, relative to `db/history/`; ingest registers it as an image artifact credited to the observer |
+| `artifact_file` | | a photograph beside the journal, written aboard as `_journal/img/<name>`; ingest resolves it against the journal file's own directory (so it is found under `_journal/incoming/img/` on grid) and registers it as an image artifact credited to the observer; a line whose photograph is not there fails with that reason |
 | `licence` | | for the photograph; defaults to `attribution` with the photographer credited |
 | `origin` | | `ship` (the default at ingest) or `crew` |
 | `topic` | | defaults to `ship-journal`; the ingest declares the topic and the dataset source `amundsenjournal` if they do not exist |

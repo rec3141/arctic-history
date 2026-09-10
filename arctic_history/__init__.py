@@ -1511,6 +1511,7 @@ def ingest_journal(c, path: Path, who: str = "ship") -> dict:
                            url="https://github.com/rec3141/arctic-history", topic=topic,
                            rights_note="entered aboard by the crew and the resident scientist; credit the observer named")
             if image:
+                image = _journal_file(Path(path), image)
                 photographer = d.get("observer", "the ship's company")
                 add_artifact(c, f"{ident}-img", topic, "image", f"{subject}, {date}",
                              date=date, lat=d.get("lat"), lon=d.get("lon"), local_file=image,
@@ -1525,6 +1526,24 @@ def ingest_journal(c, path: Path, who: str = "ship") -> dict:
         add_worklog(c, JOURNAL_TOPIC, f"journal ingest: {len(done)} line(s) from {Path(path).name}"
                     + (f"; {len(failed)} failed" if failed else ""), who=who)
     return {"done": done, "failed": failed}
+
+
+def _journal_file(journal: Path, rel: str) -> str:
+    """Where a journal line's photograph is on grid. Aboard, the line says
+    `_journal/img/<name>`; push-journal lands the whole directory under
+    `_journal/incoming/`, so the path is resolved against the journal file's
+    own directory and returned relative to db/history/. A photograph that is
+    not there fails the line rather than registering a dangling artifact."""
+    rel = str(rel).strip()
+    tail = rel.split("_journal/", 1)[1] if "_journal/" in rel else rel
+    base = Path(journal).resolve().parent
+    for candidate in (base / tail, HISTORY_DIR / rel, Path(rel)):
+        if candidate.is_file():
+            try:
+                return str(candidate.resolve().relative_to(HISTORY_DIR.resolve()))
+            except ValueError:
+                return str(candidate)
+    raise ValueError(f"photograph {rel!r} not found beside the journal ({base / tail})")
 
 
 JOURNAL_TOPIC = "ship-journal"
