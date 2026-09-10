@@ -957,3 +957,13 @@ class NatureTests(unittest.TestCase):
         timeline = json.loads((out / "data/history/timeline.json").read_text())["timeline"]
         kinds = {t["entity_kind"] for t in timeline}
         self.assertIn("observation", kinds)
+        # an artifact carries its topic's domain and the natural domains of the
+        # observations it is evidence for
+        H.add_source(self.c, "amundsenjournal", "journal", url="x", licence="attribution", entry_type="dataset")
+        H.add_artifact(self.c, "muskox-and-caribou-001", "muskox-and-caribou", "image", "a muskox", credit="c",
+                       bibkey="sverdrup1904new", licence="public-domain", lat=78.6, lon=-95.2, tags="ovibos-moschatus")
+        self.obs(artifact_id="muskox-and-caribou-001")
+        H.publish(out, self.root / "history.sqlite")
+        arts = {a["id"]: a for a in json.loads((out / "data/history/artifacts.json").read_text())["artifacts"]}
+        self.assertEqual(arts["muskox-and-caribou-001"]["domain"], "nature")
+        self.assertEqual(arts["muskox-and-caribou-001"]["domains"], ["biology"])

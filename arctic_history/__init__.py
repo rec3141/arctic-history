@@ -2533,6 +2533,18 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
 
         # 2. the map layer: artifacts with a position or a geometry
         arts = []
+        # the natural domain of an artifact: its topic's domain, and for the
+        # natural half the domains of the subjects whose observations cite it
+        # as evidence or whose names are among its tags, so a hub topic's
+        # pictures fall into the domains they belong to rather than all of them
+        topic_domain = {r["slug"]: r["domain"] or "history" for r in c.execute("SELECT slug, domain FROM topics")}
+        subj_domain = {r["name"]: r["domain"] for r in c.execute("SELECT name, domain FROM subjects")}
+        subj_by_tag = {slugify(r["name"]): r["domain"] for r in c.execute("SELECT name, domain FROM subjects")}
+        obs_domains: dict[str, set] = {}
+        for r in c.execute("SELECT artifact_id, subject FROM observations WHERE artifact_id<>''"):
+            d = subj_domain.get(r["subject"])
+            if d:
+                obs_domains.setdefault(r["artifact_id"], set()).add(d)
         for r in c.execute(f"SELECT * FROM artifacts ORDER BY {date_order('date_start')}, id"):
             a = {k: r[k] for k in ("id", "topic", "type", "title", "date_text", "date_start", "creator",
                                    "description", "lat", "lon", "credit", "bibkey", "licence",
@@ -2549,6 +2561,10 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
             a["page"] = page_slug("artifact", r["id"])
             a["routing"] = r["routing"] or ""
             a["keywords"] = artifact_keywords(c, r["id"])
+            a["domain"] = topic_domain.get(r["topic"], "history")
+            nat = set(obs_domains.get(r["id"], ()))
+            nat |= {subj_by_tag[t] for t in a["tags"] if t in subj_by_tag}
+            a["domains"] = sorted(nat)
 
             def ship(rel: str) -> str | None:
                 src = HISTORY_DIR / rel
