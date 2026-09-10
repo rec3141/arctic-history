@@ -104,6 +104,22 @@ item give `--archive` (the holding institution) and `--callno` (the accession or
 catalogue number). If you already have a BibTeX file, `history-db.py bib --file
 refs.bib --topic <your-slug>` imports it whole.
 
+`--archive` is the institution's own name, nothing else: `Arctic Institute of
+North America`, not `Arctic (AINA)`, `ARCTIC journal` or `Arctic 36(4):
+380-381`. Anything in it that identifies the copy (an item, microform,
+catalogue or accession number) goes in `--callno`, and the journal, volume and
+pages go in `--container`, `--volume` and `--pages`. The tool corrects a
+spelling it already knows; `check` flags the rest.
+
+**Choose `--entry-type`. Do not leave it at `misc`.** `book` a standalone work,
+`article` a piece in a journal, magazine or newspaper, `incollection` a chapter
+or paper in a book or a report series, `report` a government or institutional
+report, `thesis` a thesis, `online` a web page or catalogue record, `dataset` a
+data file or service. `misc` is only for what none of them fits: an artwork, a
+photograph, an object, a manuscript. `article` and `online` print `--container`
+as the journal in the bibliography and `incollection` prints it as the book, so
+the type and the container must agree.
+
 **`--licence` is a code, not a sentence.** The tool refuses anything else.
 Pick the one that describes what this layer may do with the item:
 
