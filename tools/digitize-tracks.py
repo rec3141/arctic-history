@@ -173,13 +173,17 @@ multiplier:
 
     land        1.3 x (1 + 6 (tan slope / 0.12)^2, capped at 60)
                     x (1 + elevation above 100 m / 500 m)
-    ice cap     the land cost x 4, or x 1.2 when the narrative says the ice
-                cap was crossed (a note on either waypoint of the leg, or the
-                track's description or tags naming an ice cap or glacier)
+    ice cap     the land cost x 4; or, when the narrative says the ice cap
+                was crossed (a note on either waypoint of the leg naming an
+                ice cap or glacier or a crossing, or, when no note does, the
+                track's description or tags naming an ice cap), 1.3 x 1.2 x
+                the slope term alone, an ice cap being smooth going
     sea ice     1.0 in the sledging season (November to June by the leg's date)
-    open water  50 in July to October when both ends of the leg are on land
-                (they walked); 1.5 whatever the month when both ends are in
-                the sea (a boat leg); 3 when one end is
+    open water  4 in July to October when both ends of the leg are on land
+                (they walked, and a crossing between islands is dear but not
+                a wall); 1.5 whatever the month when both ends are in the sea
+                or the track's title, description or tags name a boat (a boat
+                leg); 3 when one end is
     corridor    x (1 + 3 min(1, (d / 12 km)^2)), d the distance to the
                 digitized line, when a digitized line exists for the track
 
@@ -273,7 +277,8 @@ LAND_BASE = 1.3
 SLOPE_W, SLOPE_S, SLOPE_CAP = 6.0, 0.12, 60.0
 ELEV_FLOOR, ELEV_S = 100.0, 500.0
 ICE_DEAR, ICE_CROSSED = 4.0, 1.2
-SEA_ICE, SEA_SUMMER, SEA_BOAT, SEA_MIXED = 1.0, 50.0, 1.5, 3.0
+SEA_ICE, SEA_SUMMER, SEA_BOAT, SEA_MIXED = 1.0, 4.0, 1.5, 3.0
+BOAT_WORDS = ("boat", "umiak", "canoe", "kayak", "whaleboat", "raft")
 CORR_W, CORR_KM = 3.0, 12.0
 WINDOW_MARGIN_KM, WINDOW_MARGIN_FRAC = 40.0, 0.5
 WINDOW_BUDGET = 6_000_000
@@ -281,6 +286,7 @@ DOWN = 4
 REFINE_KM = 10.0
 SLEDGE_MONTHS = {11, 12, 1, 2, 3, 4, 5, 6}
 ICE_WORDS = ("ice cap", "ice-cap", "icecap", "glacier", "ice sheet", "inland ice")
+CROSS_WORDS = ("crossing", "crossed", "across", "overland", "portage", "over the pass", "up the valley")
 
 # the georeference
 FIT_RMS_PX, FIT_MAX_PX = 4.0, 10.0
@@ -319,12 +325,22 @@ MAPS = {
     "crocker-land-1913-022": dict(rotate=0, ink="dashes",
                                   tracks={"crocker-land-1913-002": None, "crocker-land-1913-003": None,
                                           "crocker-land-1913-004": None}),
-    "cook-1908-axel-heiberg-041": dict(rotate=0, ink="dashes",
+    "cook-1908-axel-heiberg-041": dict(rotate=0, ink="dashes", erase_coast=True,      # a stippled coast
                                        tracks={"cook-1908-axel-heiberg-001": None, "cook-1908-axel-heiberg-002": None}),
     "sverdrup-bernier-peary-064": dict(rotate=0, ink="dashes",
                                        tracks={"sverdrup-bernier-peary-300": None, "sverdrup-bernier-peary-301": None}),
     "kane-hall-polaris-193": dict(rotate=0, ink="dashes", tracks={"kane-hall-polaris-263": None}),
     "sverdrup-bernier-peary-154": dict(rotate=0, ink="dashes", tracks={}),
+}
+
+
+# maps in the candidate list that have no track to digitize onto, and why
+MAP_NOTES = {
+    "kruger-1930-027": "Krüger's own sketch of the route he intended, not the one he took: nothing to route.",
+    "kruger-1930-061": "the 1957 Geological Survey sledge journey to Meighen Island has no track artifact yet.",
+    "nares-greely-204": "Lockwood's chart of his March to April 1883 journey north from Fort Conger; the only 1883 "
+                        "track in the database is the August retreat (nares-greely-025), which this map does not show.",
+    "sverdrup-bernier-peary-154": "the Falcon's 1893 voyage to Bowdoin Bay is a ship's track, the sea router's.",
 }
 
 
@@ -1182,8 +1198,9 @@ def digitize_track(map_id, track_id, terrain=None, ink=None):
     spec = MAPS.get(map_id, {})
     ink = ink or spec.get("tracks", {}).get(track_id) or spec.get("ink", "dashes")
     mask = ink_mask(img, ink)
-    if ink == "solid" or ink.startswith("colour:"):
+    if ink == "solid" or ink.startswith("colour:") or spec.get("erase_coast"):
         # erase the shoreline through the model, so the coast is not the route
+        # (a solid route would be chained along it; a stippled coast is dots)
         from PIL import Image, ImageDraw
         W, H = img.size
         lon, lat = g.to_ll(np.array([0, W, 0, W]), np.array([0, 0, H, H]))
@@ -1310,7 +1327,7 @@ def ice_allowed(row, wps_raw, i):
     """The ice cap is cheap on a leg whose waypoint notes name it; when no note
     does but the description or the tags do, on every leg."""
     notes = " ".join([(wps_raw[i].get("note") or ""), (wps_raw[i + 1].get("note") or "")]).lower()
-    if any(w in notes for w in ICE_WORDS):
+    if any(w in notes for w in ICE_WORDS + CROSS_WORDS):
         return True
     if any(any(w in (wp.get("note") or "").lower() for w in ICE_WORDS) for wp in wps_raw):
         return False
@@ -1332,7 +1349,13 @@ class Router:
         tan = np.tan(np.radians(slope))
         m = LAND_BASE * np.minimum(SLOPE_CAP, 1.0 + SLOPE_W * (tan / SLOPE_S) ** 2) \
             * (1.0 + np.maximum(0.0, dem - ELEV_FLOOR) / ELEV_S)
-        m = np.where(ice & land, m * (ICE_CROSSED if ice_ok else ICE_DEAR), m)
+        if ice_ok:
+            # an ice cap the narrative says was crossed: smooth going, so the
+            # slope alone, no elevation term
+            m_ice = LAND_BASE * ICE_CROSSED * np.minimum(SLOPE_CAP, 1.0 + SLOPE_W * (tan / SLOPE_S) ** 2)
+            m = np.where(ice & land, m_ice, m)
+        else:
+            m = np.where(ice & land, m * ICE_DEAR, m)
         if month in SLEDGE_MONTHS or month is None:
             sea = SEA_ICE
         elif ends_in_sea == 2:
@@ -1364,7 +1387,7 @@ class Router:
             return None
         return ndimage.distance_transform_edt(~seed).astype(np.float32)
 
-    def route_leg(self, p, q, month, ice_ok, corridor_ll=None):
+    def route_leg(self, p, q, month, ice_ok, corridor_ll=None, boat=False):
         T = self.T
         r0, c0 = T.rc(*p)
         r1, c1 = T.rc(*q)
@@ -1377,6 +1400,8 @@ class Router:
         ra, rb = max(0, min(r0, r1) - m), min(T.nrows, max(r0, r1) + m + 1)
         ca, cb = max(0, min(c0, c1) - m), min(T.ncols, max(c0, c1) + m + 1)
         ends_in_sea = int(not T.land[r0, c0]) + int(not T.land[r1, c1])
+        if boat:
+            ends_in_sea = 2          # the narrative names a boat: water is cheap whatever the month
         cd = self.corridor_distance(ra, rb, ca, cb, corridor_ll) if corridor_ll else None
         cost = self.cost_window(ra, rb, ca, cb, month, ends_in_sea, ice_ok, cd)
         info = dict(window=[rb - ra, cb - ca], ends_in_sea=ends_in_sea, month=month, ice_ok=ice_ok,
@@ -1428,13 +1453,15 @@ class Router:
         wps_raw = apply_moves(waypoints_raw(row), moves)
         wps = [(float(w["lat"]), float(w["lon"])) for w in wps_raw]
         dates = leg_dates(row, wps_raw)
+        text = " ".join([row["title"] or "", row["description"] or "", row["tags"] or ""]).lower()
+        boat = any(w in text for w in BOAT_WORDS)
         line, legs = [wps[0]], []
         t0 = time.time()
         for i in range(len(wps) - 1):
             corr = None
             if digitized and i < len(digitized["legs"]) and digitized["legs"][i]["source"] == "ink":
                 corr = digitized["legs"][i]["ll"]
-            seg, info = self.route_leg(wps[i], wps[i + 1], dates[i][1], ice_allowed(row, wps_raw, i), corr)
+            seg, info = self.route_leg(wps[i], wps[i + 1], dates[i][1], ice_allowed(row, wps_raw, i), corr, boat)
             info["leg"] = i
             info["straight_km"] = gc_km(wps[i], wps[i + 1])
             legs.append(info)
@@ -1773,7 +1800,8 @@ def verdict(rec):
 
 def render_summary(recs, georefs, meta, path):
     L = ["# Routing the overland tracks through the terrain", "",
-         f"{meta['run']} — {len(recs)} tracks routed in {meta['seconds']:.0f} s. Command: `{meta['cmd']}`", "",
+         f"{meta['run']} — {meta.get('this_run', len(recs))} tracks routed in {meta['seconds']:.0f} s, "
+         f"{len(recs)} on file from this and earlier runs. Command: `{meta['cmd']}`", "",
          "**Written to the database.**" if meta.get("wrote") else "**The database was not written to** "
          "(`--write` is off).", "",
          "## The DEM", "",
@@ -1788,6 +1816,9 @@ def render_summary(recs, georefs, meta, path):
     grades = {}
     for r in recs:
         grades.setdefault(r["grade"], []).append(r)
+    fitted = {m["map"] for m in georefs}
+    L += ["", "Maps in the candidate list without a fit: " + "; ".join(
+        f"**{mid}**: {MAP_NOTES.get(mid, 'no control points read yet')}" for mid in MAPS if mid not in fitted), ""]
     L += ["", "## The grades", "",
           "- **recommend** — every leg routed inside the DEM, and where a printed map was digitized at least "
           "half the legs follow its ink: a line to write back once the owner has looked at it.",
@@ -1890,6 +1921,10 @@ def render_gallery(path):
         if fig_m.exists():
             H.append(f"<img src='figures/{fig_m.name}' loading='lazy'>")
     H.append("<h2 id='maps'>The maps and their georeferences</h2>")
+    fitted = {m["map"] for m in maps}
+    H.append("<p>" + " ".join(
+        f"<b>{html.escape(mid)}</b>: {html.escape(MAP_NOTES.get(mid, 'no control points read yet.'))}"
+        for mid in MAPS if mid not in fitted) + "</p>")
     H.append("<table><tr><th>map</th><th>family</th><th>parameters</th><th>points</th><th>rms px</th><th>rms km</th>"
              "<th>worst px</th><th>km/px</th><th>fit</th></tr>")
     for m in maps:
@@ -1919,7 +1954,11 @@ def cmd_route(a):
     ro = db_ro()
     rows = {r["id"]: r for r in ro.execute("SELECT * FROM artifacts WHERE type='track' ORDER BY id")}
     if a.all:
-        want = [i for i, r in rows.items() if (r["routing"] or "") in ("as-given", "terrain")]
+        # every as-given or terrain track, and an unflagged one the sea
+        # router's rule would call as-given
+        decide = _load_route_tracks().decide
+        want = [i for i, r in rows.items() if (r["routing"] or "") in ("as-given", "terrain")
+                or (not (r["routing"] or "") and decide(r)[0] == "as-given")]
     else:
         want = list(a.track)
     missing = [i for i in want if i not in rows]
@@ -1984,7 +2023,7 @@ def cmd_route(a):
     georefs = [json.loads(p.read_text()) for p in sorted(GEOREF.glob("*.georef.json"))]
     meta = dict(run=time.strftime("%Y-%m-%d %H:%M"), seconds=time.time() - t_start,
                 cmd=" ".join(["python tools/digitize-tracks.py"] + sys.argv[1:]), wrote=a.write,
-                shape=[T.nrows, T.ncols])
+                shape=[T.nrows, T.ncols], this_run=len(want))
     render_summary([f["properties"] for f in feats], georefs, meta, OUT / "summary.md")
     render_gallery(OUT / "gallery.html")
     if a.write:
