@@ -45,6 +45,16 @@ class HistoryTests(unittest.TestCase):
         self.artifact(lat=None, lon=None, type="track",
                       geometry={"type": "LineString", "coordinates": [[-91, 74], [-92, 75]]})
 
+    def test_routing_codes(self):
+        line = {"type": "LineString", "coordinates": [[-91, 74], [-92, 75]]}
+        for code in H.ROUTING:
+            self.artifact(type="track", geometry=line, routing=code)
+        self.assertIn("terrain", H.ROUTING)
+        row = self.c.execute("SELECT routing FROM artifacts").fetchone()
+        self.assertEqual(row["routing"], "terrain")
+        with self.assertRaises(ValueError):
+            self.artifact(type="track", geometry=line, routing="overland")
+
     def test_out_of_range_coordinates_are_refused(self):
         with self.assertRaises(ValueError):
             self.artifact(lat=91)

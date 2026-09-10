@@ -144,8 +144,9 @@ def main(argv=None) -> int:
         a.add_argument("--tags", default="", help=TAGS_HELP)
         a.add_argument("--view-file", default=None,
                        help="a raster view of a non-raster local file (PDF page, page screenshot, GeoTIFF), relative to db/history/")
-        a.add_argument("--routing", default=None, choices=["", "water", "as-given"],
-                       help="tracks: draw the line routed through water, or as the waypoints are given")
+        a.add_argument("--routing", default=None, choices=["", "water", "as-given", "terrain"],
+                       help="tracks: draw the line routed through water, as the waypoints are given, or "
+                            "routed over the terrain (the line from tools/digitize-tracks.py)")
 
     p = sub.add_parser("person", help="add or update a person")
     p.add_argument("--name", required=True)

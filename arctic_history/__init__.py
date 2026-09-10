@@ -762,7 +762,8 @@ CREATE TABLE IF NOT EXISTS vessels (
 """
 
 RASTER_SUFFIXES = (".jpg", ".jpeg", ".png", ".gif", ".tif", ".tiff", ".webp")
-ROUTING = ("", "water", "as-given")       # how a track's line is drawn: routed through water, or as its waypoints
+ROUTING = ("", "water", "as-given", "terrain")   # how a track's line is drawn: routed through water, as its
+                                                 # waypoints, or routed over the terrain (tools/digitize-tracks.py)
 
 
 def is_raster(name: str) -> bool:
