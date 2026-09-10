@@ -14,16 +14,16 @@ fact. A second pass of AI reviewers checked every narrative page against the
 primary sources: every quotation word for word, every date, coordinate, link
 and licence. A page a reviewer could not stand behind stays marked as a
 draft. A person, R. Eric Collins of the University of Manitoba, wrote the
-brief, answered the fifty questions the agents referred up, made the
-judgement calls, and owns the result.
+brief, answered the fifty questions the agents referred up, and owns the
+result.
 
 ## What the review caught
 
-Two fabricated quotations, attributed to real authors and found nowhere in
-their work. Inuit survivor testimony credited to the wrong person. A cause of
-death the source never gave. Coordinates wrong by tens to hundreds of
-kilometres. All corrected against the sources. An unreviewed AI draft makes
-mistakes of exactly this kind, which is why a draft mark is worth noticing.
+Two fabricated quotations, found nowhere in the work they were attributed
+to. Inuit survivor testimony credited to the wrong person. A cause of death
+the source never gave. Coordinates wrong by tens of kilometres. All corrected
+against the sources. An unreviewed AI draft makes mistakes of exactly this
+kind, which is why a draft mark is worth noticing.
 
 ## The standards
 
@@ -38,7 +38,7 @@ says so.
 
 Nothing here replaces the primary sources; every artifact carries a credit
 and a source to follow. A track is a reconstruction from a narrative,
-accurate to about ten kilometres. Coordinates are as coarse as their
+accurate to about ten kilometres, and coordinates are as coarse as their
 sources.
 
 ## The record, in numbers
