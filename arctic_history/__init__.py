@@ -98,6 +98,69 @@ def _check_licence(code: str) -> None:
                          f"{', '.join(LICENCE_CODES)}, or cc-by / cc-by-sa / cc-by-nc-sa / cc-by-nc-nd "
                          f"with a version (cc-by-4.0). Put the detail in --rights-note.")
 
+# A vessel's `kind` is a code from this vocabulary: the hull, rig or craft
+# type at the level the map and the wiki filter on. Everything the code does
+# not say (the class, the aircraft model, the trade she worked, a conversion,
+# the navy that bought her) goes in `kind_note`, free text.
+#
+# Choosing between two readings of the same entry: the code names what the
+# vessel is where the entry names a rig or a hull, and what she was built or
+# fitted for where that is all the entry gives. So a whaling barque is a
+# `barque` with "whaler" in the note, while a whaler whose rig no source
+# records is a `whaler`. Rig spellings and near neighbours are folded (bark to
+# barque, brigantine to brig), and propulsion is a note, not a code, except for
+# `steam-whaler`, which is an era of its own. Sailing rigs first, then small
+# craft, then power, then the trades and the work.
+VESSEL_KINDS = {
+    "ship": "full-rigged ship",
+    "barque": "barque",
+    "brig": "brig",
+    "schooner": "schooner",
+    "sloop": "sloop",
+    "yacht": "yacht",
+    "bomb-vessel": "bomb vessel",
+    "boat": "ship's boat",
+    "umiak": "umiak, an open skin boat",
+    "steamer": "steamer",
+    "tender": "tender",
+    "icebreaker": "icebreaker",
+    "submarine": "submarine",
+    "whaler": "whaler",
+    "steam-whaler": "steam whaler",
+    "sealer": "sealer",
+    "research-vessel": "research or survey vessel",
+    "cruise-ship": "cruise ship",
+    "transport": "transport or supply ship",
+    "freighter": "freighter",
+    "tanker": "tanker",
+    "aircraft": "aircraft",
+}
+
+
+def is_vessel_kind(code: str) -> bool:
+    return code in VESSEL_KINDS
+
+
+def vessel_kind_label(code: str) -> str:
+    return VESSEL_KINDS.get(code, code)
+
+
+def vessel_kind_text(r) -> str:
+    """The reader's line: the code's word, then the note if there is one, so
+    that `barque` and "purchased into the Navy" read as they were written. A
+    legacy free-text kind (pre-vocabulary) is shown as it stands."""
+    code = r["kind"] or ""
+    note = (r["kind_note"] or "") if "kind_note" in r.keys() else ""
+    text = vessel_kind_label(code)
+    return f"{text}, {note}" if note and text else (note or text)
+
+
+def _check_vessel_kind(code: str) -> None:
+    if code and not is_vessel_kind(code):
+        raise ValueError(f"a vessel's kind must be a code, not free text: {code!r}. One of "
+                         f"{', '.join(VESSEL_KINDS)}. Put the class, the model, the trade, "
+                         f"the conversion or the owner in --kind-note.")
+
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS topics (
   slug        TEXT PRIMARY KEY,
@@ -365,7 +428,8 @@ CREATE TABLE IF NOT EXISTS animals (
 -- the ships, boats and aircraft, first-class like people
 CREATE TABLE IF NOT EXISTS vessels (
   name        TEXT PRIMARY KEY,            -- as usually written: HMS Investigator, Gjoa, CCGS Amundsen
-  kind        TEXT DEFAULT '',             -- bomb vessel, steam whaler, schooner, icebreaker, Lancaster bomber
+  kind        TEXT DEFAULT '',             -- a code from VESSEL_KINDS: barque, whaler, icebreaker, aircraft
+  kind_note   TEXT DEFAULT '',             -- what the code does not say: Wind class, DHC-3 Otter: free text
   also        TEXT DEFAULT '',             -- former or later names, semicolon separated
   role        TEXT DEFAULT '',             -- what she did in this history
   built       TEXT DEFAULT '',             -- year, yard, place
@@ -413,7 +477,8 @@ def connect(path: Path | None = None, create: bool = True) -> sqlite3.Connection
                                     ("pages", "language", "'en'"),
                                     ("artifacts", "view_file", "''"), ("artifacts", "routing", "''"),
                                     ("pages", "people", "'[]'"),
-                                    ("sources", "rights_note", "''"), ("artifacts", "rights_note", "''")):
+                                    ("sources", "rights_note", "''"), ("artifacts", "rights_note", "''"),
+                                    ("vessels", "kind_note", "''")):
             if col not in {r[1] for r in c.execute(f"PRAGMA table_info({table})")}:
                 c.execute(f"ALTER TABLE {table} ADD COLUMN {col} TEXT DEFAULT {default}")
         c.commit()
@@ -833,9 +898,11 @@ def add_vessel(c, name: str, **kw) -> str:
     """A ship, boat or aircraft, by the name it is usually written under."""
     kw = _keep_home_topic(c, "vessels", name, kw)
     row = {"name": name.strip()}
-    for f in ("kind", "also", "role", "built", "lost", "affiliation", "tonnage", "note", "bibkey", "topic"):
+    for f in ("kind", "kind_note", "also", "role", "built", "lost", "affiliation", "tonnage",
+              "note", "bibkey", "topic"):
         if kw.get(f) is not None:
             row[f] = str(kw[f])
+    _check_vessel_kind(row.get("kind", ""))
     return _upsert(c, "vessels", "name", row)
 
 
@@ -1366,7 +1433,7 @@ def animal_body(r: sqlite3.Row) -> str:
 
 def vessel_body(r: sqlite3.Row) -> str:
     lines = []
-    head = " · ".join(x for x in (r["kind"], r["affiliation"], r["tonnage"]) if x)
+    head = " · ".join(x for x in (vessel_kind_text(r), r["affiliation"], r["tonnage"]) if x)
     if head:
         lines.append(head)
     if r["role"]:
@@ -1646,6 +1713,9 @@ def validate(c) -> dict:
             bad("source", r["bibkey"], f"licence is not a code: {r['licence'][:60]!r}")
         if not r["url"]:
             bad("source", r["bibkey"], "no URL")
+    for r in c.execute("SELECT name, kind FROM vessels WHERE kind<>''"):
+        if not is_vessel_kind(r["kind"]):
+            bad("vessel", r["name"], f"kind is not a code: {r['kind'][:60]!r}")
     for r in c.execute("SELECT name, lat, lon FROM places WHERE lat IS NOT NULL"):
         msg = _off_map(r["lat"], r["lon"])
         if msg:
@@ -1833,8 +1903,9 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
                         "page": page_slug("animal", r["name"])}
                        for r in c.execute("SELECT * FROM animals ORDER BY name")]
         atomic(out / "animals.json", json.dumps({"animals": animal_rows}, ensure_ascii=False))
-        vessel_rows = [{**{k: r[k] for k in ("name", "kind", "also", "role", "built", "lost",
-                                             "affiliation", "tonnage", "note", "topic")},
+        vessel_rows = [{**{k: r[k] for k in ("name", "kind", "kind_note", "also", "role", "built",
+                                             "lost", "affiliation", "tonnage", "note", "topic")},
+                        "kind_label": vessel_kind_label(r["kind"]),
                         "page": page_slug("vessel", r["name"])}
                        for r in c.execute("SELECT * FROM vessels ORDER BY name")]
         atomic(out / "vessels.json", json.dumps({"vessels": vessel_rows}, ensure_ascii=False))

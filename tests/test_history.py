@@ -544,6 +544,24 @@ class HistoryTests(unittest.TestCase):
             H.add_face(self.c, "dog-photo", 2, "x/files/faces/dog-photo-2.jpg", kind="vessel", person="Mike")
         self.assertEqual(self.c.execute("SELECT kind, person FROM faces WHERE n=1").fetchone()[1], "Mike")
 
+    def test_a_vessels_kind_is_a_code_and_the_detail_lives_in_the_kind_note(self):
+        with self.assertRaises(ValueError):
+            H.add_vessel(self.c, "HMS Resolute", kind="barque, purchased into the Navy")
+        with self.assertRaises(ValueError):
+            H.add_vessel(self.c, "USS Seadragon", kind="nuclear submarine")
+        H.add_vessel(self.c, "USCGC Northwind", kind="icebreaker", kind_note="Wind class",
+                     affiliation="United States Coast Guard", topic="science-stations")
+        r = self.c.execute("SELECT * FROM vessels WHERE name='USCGC Northwind'").fetchone()
+        self.assertEqual((r["kind"], r["kind_note"]), ("icebreaker", "Wind class"))
+        self.assertTrue(H.vessel_body(r).startswith("icebreaker, Wind class · United States Coast Guard"))
+        self.assertEqual(H.vessel_kind_label("umiak"), "umiak, an open skin boat")
+        self.assertTrue(H.is_vessel_kind("steam-whaler"))
+        self.assertFalse(H.is_vessel_kind("steam whaler"))
+        # a legacy free-text row is reported by check, not hidden
+        self.c.execute("UPDATE vessels SET kind='icebreaker, Wind class' WHERE name='USCGC Northwind'")
+        problems = H.validate(self.c)["problems"]
+        self.assertTrue(any(p["what"] == "USCGC Northwind" and "not a code" in p["detail"] for p in problems))
+
 
 if __name__ == "__main__":
     unittest.main()
