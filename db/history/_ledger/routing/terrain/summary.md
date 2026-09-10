@@ -1,8 +1,8 @@
 # Routing the overland tracks through the terrain
 
-2026-09-10 00:57 — 1 tracks routed in 1 s, 101 on file from this and earlier runs. Command: `python tools/digitize-tracks.py route --track haig-thomas-1937-001 --write`
+2026-09-10 00:58 — 3 tracks routed in 2 s, 101 on file from this and earlier runs. Command: `python tools/digitize-tracks.py route --track nares-greely-022 --track nares-greely-038 --track nares-greely-039`
 
-**Written to the database.**
+**The database was not written to** (`--write` is off).
 
 ## The DEM
 
@@ -70,11 +70,11 @@ outside: 15 · recommend: 52 · review: 33 · same: 1
 | mcclure-investigator-012 | recommend | 5 | 0 | 217 | 206 | 0 | 0 | 0 | 9 | 0 | 0.1 |
 | mcclure-investigator-013 | recommend | 5 | 0 | 330 | 304 | 25 | 0 | 212 | 31 | 0 | 0.3 |
 | mcclure-investigator-054 | recommend | 3 | 0 | 254 | 227 | 152 | 0 | 380 | 25 | 0 | 0.2 |
-| nares-greely-022 | recommend | 5 | 0 | 227 | 213 | 0 | 0 | 0 | 9 | 0 | 0.1 |
+| nares-greely-022 | recommend | 5 | 4 | 237 | 213 | 0 | 0 | 0 | 8 | 0 | 0.1 |
 | nares-greely-023 | recommend | 5 | 0 | 897 | 790 | 49 | 0 | 823 | 38 | 0 | 1.0 |
 | nares-greely-025 | recommend | 9 | 0 | 514 | 416 | 130 | 0 | 965 | 25 | 0 | 0.5 |
-| nares-greely-038 | recommend | 24 | 0 | 1,091 | 786 | 403 | 13 | 541 | 20 | 0 | 0.8 |
-| nares-greely-039 | recommend | 24 | 0 | 652 | 584 | 37 | 3 | 774 | 26 | 0 | 0.4 |
+| nares-greely-038 | recommend | 24 | 16 | 1,024 | 786 | 416 | 17 | 617 | 20 | 0 | 0.7 |
+| nares-greely-039 | recommend | 24 | 13 | 662 | 584 | 78 | 3 | 774 | 20 | 0 | 0.4 |
 | operation-hazen-1957-041 | recommend | 6 | 0 | 661 | 617 | 69 | 0 | 28 | 15 | 0 | 0.9 |
 | operation-hazen-1957-042 | recommend | 9 | 0 | 511 | 445 | 48 | 1 | 395 | 16 | 0 | 0.3 |
 | oxford-ellesmere-1934-002 | recommend | 21 | 18 | 1,685 | 1,304 | 478 | 162 | 1798 | 56 | 0 | 0.9 |
@@ -205,15 +205,15 @@ outside: 15 · recommend: 52 · review: 33 · same: 1
 - **mcclure-investigator-054** (recommend) — McClure's sledge journey to Parry's Rock, April 1852  
   254 km routed against 227 km straight, 152 km over land, 0 km over ice cap, highest 380 m; the line in the database is 227 km and 11 points; this one 19 points; waypoints on land whose note names water: 0; it runs 7.0 km from the line in the database on average and 25 km at most
 - **nares-greely-022** (recommend) — Markham and Parr's sledge journey to 83 deg 20 min 26 sec N, April-June 1876  
-  227 km routed against 213 km straight, 0 km over land, 0 km over ice cap, highest 0 m; the line in the database is 213 km and 10 points; this one 19 points; it runs 2.7 km from the line in the database on average and 9 km at most
+  4 of 5 legs follow ink digitized from nares-greely-171 (georef rms 0.5 km); the routed line runs 0.6 km from the printed one on average; 237 km routed against 213 km straight, 0 km over land, 0 km over ice cap, highest 0 m; the line in the database is 213 km and 10 points; this one 28 points; proposed moves, not applied: 1 (inferred; moved 6 km onto the printed route); 2 (inferred; moved 9 km onto the printed route); 3 (inferred; moved 10 km onto the printed route); 4 (inferred; moved 12 km onto the printed route); it runs 2.5 km from the line in the database on average and 8 km at most
 - **nares-greely-023** (recommend) — Lockwood, Brainard and Christiansen's journey to 83 deg 24 min N, April-June 1882  
   897 km routed against 790 km straight, 49 km over land, 0 km over ice cap, highest 823 m; the line in the database is 790 km and 38 points; this one 90 points; it runs 6.3 km from the line in the database on average and 38 km at most
 - **nares-greely-025** (recommend) — The retreat from Fort Conger to Cape Sabine, August-October 1883  
   514 km routed against 416 km straight, 130 km over land, 0 km over ice cap, highest 965 m; the line in the database is 416 km and 23 points; this one 71 points; it runs 6.5 km from the line in the database on average and 25 km at most
 - **nares-greely-038** (recommend) — Aldrich's western sledge journey to Cape Alfred Ernest, April-June 1876  
-  1,091 km routed against 786 km straight, 403 km over land, 13 km over ice cap, highest 541 m; the line in the database is 786 km and 38 points; this one 166 points; it runs 6.1 km from the line in the database on average and 20 km at most
+  16 of 24 legs follow ink digitized from nares-greely-171 (georef rms 0.5 km), 2 chained through hachures or lettering and doubted; the routed line runs 2.4 km from the printed one on average; 1,024 km routed against 786 km straight, 416 km over land, 17 km over ice cap, highest 617 m; the line in the database is 786 km and 38 points; this one 160 points; it runs 4.7 km from the line in the database on average and 20 km at most
 - **nares-greely-039** (recommend) — Beaumont's north Greenland sledge journey, April-August 1876  
-  652 km routed against 584 km straight, 37 km over land, 3 km over ice cap, highest 774 m; the line in the database is 584 km and 36 points; this one 74 points; waypoints on land whose note names water: 19, 20, 21; it runs 3.6 km from the line in the database on average and 26 km at most
+  13 of 24 legs follow ink digitized from nares-greely-171 (georef rms 0.5 km), 1 chained through hachures or lettering and doubted; the routed line runs 2.1 km from the printed one on average; 662 km routed against 584 km straight, 78 km over land, 3 km over ice cap, highest 774 m; the line in the database is 584 km and 36 points; this one 88 points; waypoints on land whose note names water: 19, 20, 21; proposed moves, not applied: 3 (inferred; moved 6 km onto the printed route); 22 (inferred; moved 14 km onto the printed route); 23 (inferred; moved 16 km onto the printed route); it runs 2.9 km from the line in the database on average and 20 km at most
 - **operation-hazen-1957-041** (recommend) — Christie and Hattersley-Smith to Lands Lokk, May-June 1954  
   661 km routed against 617 km straight, 69 km over land, 0 km over ice cap, highest 28 m; the line in the database is 617 km and 31 points; this one 48 points; it runs 2.4 km from the line in the database on average and 15 km at most
 - **operation-hazen-1957-042** (recommend) — The 1953 sledge journey west from Alert  
@@ -387,9 +387,16 @@ A waypoint on land whose note names water, or one whose note calls it inferred a
 - mcclure-investigator-007 waypoint 0: land at 306 m — McClure leaves the Bay of Mercy to see Kellett in person rather than answer his 
 - mcclure-investigator-007 waypoint 5: land at 306 m — back in the Bay of Mercy; the letter is read to the crew next morning, and only 
 - mcclure-investigator-054 waypoint 0: land at 306 m — McClure and six men leave the Investigator in the Bay of Mercy with one sledge
-- nares-greely-039 waypoint 19: land at 4 m — Charles Paul dies within sight of Polaris Bay; the printed narrative gives only 
-- nares-greely-039 waypoint 20: land at 4 m — Polaris Bay, Hall's Rest: the whole crew arrives with scurvy. Hans Hendrik's sea
-- nares-greely-039 waypoint 21: land at 4 m — after a gale, a start for Discovery Bay in a fifteen-foot ice-boat with the sled
+- nares-greely-022 waypoint 1: sea, 6 km from the ink; proposed 82.812 -63.105 (inferred; moved 6 km onto the printed route) — Cape Joseph Henry: the party leaves the land for the polar pack; date approximat
+- nares-greely-022 waypoint 2: sea, 9 km from the ink; proposed 83.294 -63.189 (inferred; moved 9 km onto the printed route) — farthest north, 83 deg 20 min 26 sec N, proclaimed at noon; longitude approximat
+- nares-greely-022 waypoint 3: sea, 10 km from the ink; proposed 82.774 -63.158 (inferred; moved 10 km onto the printed route) — eleven of fifteen men down with scurvy; Parr sets out alone for the ship; positi
+- nares-greely-022 waypoint 4: sea, 12 km from the ink; proposed 82.750 -63.214 (inferred; moved 12 km onto the printed route) — George Porter dies on the floe; position approximate
+- nares-greely-039 waypoint 3: land at 173 m, 6 km from the ink; proposed 82.395 -61.212 (inferred; moved 6 km onto the printed route) — start from the Cape Rawson depot across Robeson Channel for the Greenland shore;
+- nares-greely-039 waypoint 19: land at 4 m, 2 km from the ink — Charles Paul dies within sight of Polaris Bay; the printed narrative gives only 
+- nares-greely-039 waypoint 20: land at 4 m, 2 km from the ink — Polaris Bay, Hall's Rest: the whole crew arrives with scurvy. Hans Hendrik's sea
+- nares-greely-039 waypoint 21: land at 4 m, 2 km from the ink — after a gale, a start for Discovery Bay in a fifteen-foot ice-boat with the sled
+- nares-greely-039 waypoint 22: sea, 14 km from the ink; proposed 81.596 -63.380 (inferred; moved 14 km onto the printed route) — the shore of Daly Peninsula between Cape Lieber and Cape Baird reached at 7 a.m.
+- nares-greely-039 waypoint 23: sea, 16 km from the ink; proposed 81.824 -65.144 (inferred; moved 16 km onto the printed route) — after twenty-two hours' dragging across Lady Franklin Sound the party camps two 
 - operation-hazen-1957-026 waypoint 2: land at 549 m — north end of Kennedy Channel, axis parallel to the channel; position inferred fr
 - oxford-ellesmere-1934-002 waypoint 10: land at 156 m, 8 km from the ink; proposed 81.798 -70.540 (on land though the note names water; moved 8 km onto the printed route) — the east end of Lake Hazen after three days: the ice only four to five feet thic
 - oxford-ellesmere-1934-002 waypoint 14: ice cap at 1520 m, 15 km from the ink; proposed 82.458 -72.546 (inferred; moved 15 km onto the printed route) — the summit climbed again in clear weather. Nukapinguaq points out through the gl
