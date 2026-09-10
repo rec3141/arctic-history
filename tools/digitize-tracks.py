@@ -242,6 +242,15 @@ straight), **outside** (every leg outside the DEM: not this tool's track) and
 **written** (already in the database with this line).  The gallery shows, per
 track, the verdict, a table of the waypoints with their ground and flags, the
 hillshade figure and the map figure.
+
+A grade is not a judgement, and one thing in particular the numbers cannot
+settle: a long leg held by no ink.  Over uniform sea ice every path of the same
+ground length costs the same, so which detour the search returns is arbitrary,
+and a party's single long homeward leg can come back as a bow into the middle of
+a sound or a circuit round the wrong side of an island.  The verdict therefore
+names every leg with no ink that the terrain lengthens by more than a quarter
+and by more than twenty kilometres; those are the legs to look at in the figure
+before the track is written back.
 """
 import argparse, importlib.util, json, math, os, sys, time, zipfile
 from pathlib import Path
@@ -303,6 +312,11 @@ CORRIDOR_KM = 60.0                        # fragments this far from a leg's stra
 HOP_POWER = 1.6                           # edge cost = d^HOP_POWER, so short hops beat long jumps
 DOUBT_FACTOR, DOUBT_KM = 1.5, 5.0        # a chain longer than this times the leg is doubted
 
+# a leg with no ink that the terrain lengthens by more than this is named in the
+# verdict: over uniform sea ice the cheapest path is degenerate and the detour it
+# picks is arbitrary, so a long unpinned leg is the first thing to look at
+DETOUR_FACTOR, DETOUR_KM = 1.25, 20.0
+
 # maps in the collection and the tracks drawn on them.  ``rotate`` is quarter
 # turns anticlockwise to north-up; ``ink`` how the route is drawn
 MAPS = {
@@ -322,7 +336,7 @@ MAPS = {
     "kruger-1930-006": dict(rotate=0, ink="dashes", tracks={}),      # georeferenced, but no route drawn on it
     "kruger-1930-027": dict(rotate=0, ink="dashes", tracks={}),
     "kruger-1930-061": dict(rotate=0, ink="dashes", tracks={}),
-    "nares-greely-154": dict(rotate=0, ink="dashes", tracks={"nares-greely-023": None}),
+    "nares-greely-154": dict(rotate=0, ink="dashes", tracks={}),   # georeferenced, but nothing extractable
     "nares-greely-171": dict(rotate=0, ink="dots",
                              tracks={"nares-greely-022": None, "nares-greely-038": None, "nares-greely-039": None}),
     "nares-greely-204": dict(rotate=0, ink="dashes", tracks={}),
@@ -352,6 +366,14 @@ MAP_NOTES = {
                        "all, only coasts, names and the two posts, so there is nothing on it to digitize.",
     "kruger-1930-027": "Krüger's own sketch of the route he intended, not the one he took: nothing to route.",
     "kruger-1930-061": "the 1957 Geological Survey sledge journey to Meighen Island has no track artifact yet.",
+    "nares-greely-154": "Lockwood's chart of the north Greenland coast: georeferenced against its own coast to "
+                        "1.7 px (0.1 km), but its route is a hairline strung between small numbered camp circles "
+                        "and the whole sheet is dense hachured relief.  The hachure strokes are a dash's size and "
+                        "a dot's, so the morphology returns 7,000 of them and none of the route; skeletonizing the "
+                        "sheet instead gives 61,000 fragments and the chain runs up Mascart Inlet through the "
+                        "shading.  The sheet also covers only the last of the five legs (Cape Britannia to "
+                        "Lockwood Island), so even a clean extraction would leave the track short of the half "
+                        "the grade asks for.  nares-greely-023 is routed from its waypoints alone.",
     "nares-greely-204": "Lockwood's chart of his March to April 1883 journey north from Fort Conger; the only 1883 "
                         "track in the database is the August retreat (nares-greely-025), which this map does not show.",
     "sverdrup-bernier-peary-154": "the Falcon's 1893 voyage to Bowdoin Bay is a ship's track, the sea router's.",
@@ -1787,6 +1809,13 @@ def verdict(rec):
     if rec["old_km"]:
         bits.append(f"the line in the database is {rec['old_km']:,.0f} km and {rec['old_points']} points; "
                     f"this one {rec['points']} points")
+    det = [l for l in legs
+           if not l.get("corridor") and not l.get("fallback")
+           and l.get("km", 0.0) > DETOUR_FACTOR * l.get("straight_km", 0.0)
+           and l.get("km", 0.0) - l.get("straight_km", 0.0) > DETOUR_KM]
+    if det:
+        bits.append("legs held by no ink that the terrain lengthens by more than a quarter, to look at: " + "; ".join(
+            f"{l['leg']} ({l['straight_km']:,.0f} km straight, {l['km']:,.0f} routed)" for l in det))
     diag = rec.get("diagnostics") or []
     odd = [d for d in diag if d.get("contradicted")]
     if odd:
@@ -1845,8 +1874,9 @@ def render_summary(recs, georefs, meta, path):
     for r in recs:
         grades.setdefault(r["grade"], []).append(r)
     fitted = {m["map"] for m in georefs}
-    L += ["", "Maps in the candidate list without a fit: " + "; ".join(
-        f"**{mid}**: {MAP_NOTES.get(mid, 'no control points read yet')}" for mid in MAPS if mid not in fitted), ""]
+    L += ["", "Maps in the candidate list with no track digitized from them: " + "; ".join(
+        f"**{mid}**: {MAP_NOTES.get(mid, 'no control points read yet')}"
+        for mid in MAPS if mid not in fitted or mid in MAP_NOTES), ""]
     L += ["", "## The grades", "",
           "- **recommend** — every leg routed inside the DEM, and where a printed map was digitized at least "
           "half the legs follow its ink: a line to write back once the owner has looked at it.",
@@ -1952,7 +1982,7 @@ def render_gallery(path):
     fitted = {m["map"] for m in maps}
     H.append("<p>" + " ".join(
         f"<b>{html.escape(mid)}</b>: {html.escape(MAP_NOTES.get(mid, 'no control points read yet.'))}"
-        for mid in MAPS if mid not in fitted) + "</p>")
+        for mid in MAPS if mid not in fitted or mid in MAP_NOTES) + "</p>")
     H.append("<table><tr><th>map</th><th>family</th><th>parameters</th><th>points</th><th>rms px</th><th>rms km</th>"
              "<th>worst px</th><th>km/px</th><th>fit</th></tr>")
     for m in maps:

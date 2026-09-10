@@ -2388,6 +2388,8 @@ def validate(c) -> dict:
             bad("vessel", r["name"], f"kind is not a code: {r['kind'][:60]!r}")
     # the natural half: a subject resolves in its backbone or says why not;
     # an observation has its subject, its date, its position and its source
+    # `keys` was rebound by the archive loop above; the source set again
+    source_keys = {r["bibkey"] for r in c.execute("SELECT bibkey FROM sources")}
     subjects = {r["name"]: dict(r) for r in c.execute("SELECT * FROM subjects")}
     for name, r in subjects.items():
         if r["kind"] not in SUBJECT_KINDS:
@@ -2398,7 +2400,7 @@ def validate(c) -> dict:
             bad("subject", name, f"parent {r['parent']!r} is no subject")
         if not r["backbone_id"] and not (r["note"] or "").strip():
             bad("subject", name, "no backbone id (GBIF, WoRMS, WEBLEX, IAU) and no note saying why")
-        if r["bibkey"] and r["bibkey"] not in keys:
+        if r["bibkey"] and r["bibkey"] not in source_keys:
             bad("subject", name, f"bibkey {r['bibkey']} is in no source entry")
     for r in c.execute("SELECT * FROM observations"):
         if r["subject"] not in subjects:
@@ -2413,7 +2415,7 @@ def validate(c) -> dict:
                 bad("observation", r["id"], msg)
         if not r["bibkey"]:
             bad("observation", r["id"], "no bibkey")
-        elif r["bibkey"] not in keys:
+        elif r["bibkey"] not in source_keys:
             bad("observation", r["id"], f"bibkey {r['bibkey']} is in no source entry")
         if r["method"] in ("transect", "catch-record", "aerial-survey") and not r["count"] and r["value"] is None:
             bad("observation", r["id"], f"a {r['method']} wants a count")
