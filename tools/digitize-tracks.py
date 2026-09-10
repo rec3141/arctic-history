@@ -188,6 +188,8 @@ multiplier:
                 leg); 3 when one end is
     corridor    x (1 + 3 min(1, (d / 12 km)^2)), d the distance to the
                 digitized line, when a digitized line exists for the track
+    straight    x (1 + 0.08 min(1, d / 25 km)), d the distance to the leg's
+                great circle, on a leg with no digitized line instead
 
 so a valley floor is cheap, a valley wall dear, a plateau dearer the higher it
 is, a pass the cheapest way over a divide, and fiord ice the cheapest way of
@@ -197,7 +199,33 @@ route go round a plateau through the valleys rather than over it.  The corridor
 term pulls the path toward the printed route without pinning it: a valley five
 kilometres off the drawn line costs a fifth more, a pass twenty kilometres off
 four times as much, so the result follows what the map shows but through the
-valley the map's scale hides.  A leg's date is the waypoint's own where it has
+valley the map's scale hides.
+
+The straightness term is the same idea for a leg no ink holds.  Over sea ice
+the surface is flat: every path of the same ground length costs the same, so
+which detour the search returns is arbitrary, and it is not even quite flat,
+because the stereographic scale makes a cell one per cent cheaper at one end of
+the grid than the other, which is enough to bow a 500 km leg by forty
+kilometres into the middle of a sound.  The term is linear in the distance from
+the great circle, not quadratic, so that it bites at once and beats that
+artefact within a kilometre or two of the line, and it is capped at eight per
+cent, a quarter of what the cheapest land costs over sea ice and a fiftieth of
+an ice cap, so it settles a tie and never outvotes the terrain: a party that
+went round an island still goes round it, and one that crossed featureless ice
+goes straight.  It is off wherever a digitized line exists, the ink being
+better evidence than the straight line.
+
+The ice mask is clipped to the land: Natural Earth's glaciated areas are drawn
+at 10 m and spill over the fiords the glaciers head, and ice cannot be where
+the full-resolution shoreline says sea.  And a waypoint plotted to a tenth of a
+degree often falls a few kilometres inland of the water its own note names -- a
+sound, a fiord, the pack -- which would make the leg climb the shore and come
+back down.  Such a waypoint has the nearest sea within twelve kilometres cut
+open to it, a channel at the sea-ice cost, and counts as a sea end for the
+season's sake.  The waypoint itself is not moved: the line still passes through
+it exactly, by the shortest way to the water.
+
+A leg's date is the waypoint's own where it has
 one and otherwise interpolated between the dated waypoints either side (the
 track's own dates at the ends).
 
@@ -291,6 +319,22 @@ ICE_DEAR, ICE_CROSSED = 4.0, 1.2
 SEA_ICE, SEA_SUMMER, SEA_BOAT, SEA_MIXED = 1.0, 4.0, 1.5, 3.0
 BOAT_WORDS = ("boat", "umiak", "canoe", "kayak", "whaleboat", "raft")
 CORR_W, CORR_KM = 3.0, 12.0
+# the straightness prior on a leg held by no ink: over featureless sea ice the
+# cost surface is flat and every path of the same ground length ties, so the
+# search returns an arbitrary bow -- and it is not quite flat, because the
+# stereographic scale makes a cell one per cent cheaper at one end of the grid
+# than the other, which is enough to bend a long leg by forty kilometres.  A
+# weak pull toward the leg's great circle breaks the tie.  It is linear in the
+# distance, not quadratic, so that it bites at once (a kilometre off the line
+# already costs more than the scale artefact), and it is capped at eight per
+# cent, far below the cheapest land's thirty over sea ice and the ice cap's
+# four hundred, so real terrain still bends the route where terrain is what is
+# in the way and only a tie is settled by the straight line
+STRAIGHT_W, STRAIGHT_KM = 0.08, 25.0
+# a waypoint whose note names water but which the shoreline puts on land: the
+# nearest sea within this far is cut open to it at the sea-ice cost, so the leg
+# reaches the fiord instead of climbing the shore, and the end counts as sea
+SHORE_KM = 12.0
 WINDOW_MARGIN_KM, WINDOW_MARGIN_FRAC = 40.0, 0.5
 WINDOW_BUDGET = 6_000_000
 DOWN = 4
@@ -477,6 +521,12 @@ class Terrain:
         self.dem = np.load(MOSAIC / "dem.npy", mmap_mode="r")
         self.slope = np.load(MOSAIC / "slope.npy", mmap_mode="r")
         self.land = np.load(MOSAIC / "land.npy", mmap_mode="r")
+        if not (MOSAIC / "ice.clipped").exists():
+            # a cache built before the ice was clipped to the land
+            ice = np.load(MOSAIC / "ice.npy") & np.load(MOSAIC / "land.npy", mmap_mode="r")
+            np.save(MOSAIC / "ice.npy", ice)
+            (MOSAIC / "ice.clipped").write_text("ice &= land\n")
+            del ice
         self.ice = np.load(MOSAIC / "ice.npy", mmap_mode="r")
 
     # -- coordinates
@@ -594,6 +644,12 @@ class Terrain:
                 shapes.append(({"type": "Polygon", "coordinates": [np.column_stack([x, y]).tolist()]}, 1))
             mask = rasterio.features.rasterize(shapes, out_shape=(self.nrows, self.ncols), fill=0,
                                                dtype="uint8", transform=dst_t, all_touched=False)
+            if name == "ice":
+                # Natural Earth's glaciated areas are drawn at 10 m and spill
+                # over the fiords and sounds they head; ice cannot be where the
+                # full-resolution shoreline says sea, so the ice is clipped to
+                # the land
+                mask &= np.load(MOSAIC / "land.npy", mmap_mode="r")
             np.save(MOSAIC / f"{name}.npy", mask.astype(np.uint8))
             print(f"{name}: {len(shapes)} polygons, {mask.mean():.1%} of the grid, "
                   f"{time.time() - t0:.0f} s", file=sys.stderr)
@@ -1382,7 +1438,8 @@ class Router:
     def __init__(self, terrain):
         self.T = terrain
 
-    def cost_window(self, ra, rb, ca, cb, month, ends_in_sea, ice_ok, corridor_px=None, down=1):
+    def cost_window(self, ra, rb, ca, cb, month, ends_in_sea, ice_ok, corridor_px=None, down=1,
+                    straight_px=None):
         T = self.T
         dem = np.asarray(T.dem[ra:rb, ca:cb]).astype(np.float32)
         slope = np.asarray(T.slope[ra:rb, ca:cb]).astype(np.float32)
@@ -1399,21 +1456,23 @@ class Router:
             m = np.where(ice & land, m_ice, m)
         else:
             m = np.where(ice & land, m * ICE_DEAR, m)
-        if month in SLEDGE_MONTHS or month is None:
-            sea = SEA_ICE
-        elif ends_in_sea == 2:
-            sea = SEA_BOAT
-        elif ends_in_sea == 1:
-            sea = SEA_MIXED
-        else:
-            sea = SEA_SUMMER
-        if ends_in_sea == 2 and month not in SLEDGE_MONTHS:
-            sea = SEA_BOAT
+        sea = self.sea_multiplier(month, ends_in_sea)
         m = np.where(land, m, sea).astype(np.float32)
         if corridor_px is not None:
             dkm = corridor_px * (RES / 1000.0)
             m *= (1.0 + CORR_W * np.minimum(1.0, (dkm / CORR_KM) ** 2)).astype(np.float32)
+        elif straight_px is not None:
+            # no ink holds this leg: break the flat-ice tie toward the great circle
+            dkm = straight_px * (RES / 1000.0)
+            m *= (1.0 + STRAIGHT_W * np.minimum(1.0, dkm / STRAIGHT_KM)).astype(np.float32)
         return (m * g).astype(np.float32)
+
+    def sea_multiplier(self, month, ends_in_sea):
+        if month in SLEDGE_MONTHS or month is None:
+            return SEA_ICE
+        if ends_in_sea == 2:
+            return SEA_BOAT
+        return SEA_MIXED if ends_in_sea == 1 else SEA_SUMMER
 
     def corridor_distance(self, ra, rb, ca, cb, line_ll):
         """Distance in cells from every cell of the window to the digitized line."""
@@ -1430,7 +1489,29 @@ class Router:
             return None
         return ndimage.distance_transform_edt(~seed).astype(np.float32)
 
-    def route_leg(self, p, q, month, ice_ok, corridor_ll=None, boat=False):
+    def shore_cell(self, p):
+        """The nearest sea cell to a waypoint within SHORE_KM, or None.  A
+        waypoint plotted to a tenth of a degree whose note names a sound or a
+        fiord often lands a few kilometres inland of the shoreline; this is
+        where the water it names actually is."""
+        T = self.T
+        r, c = T.rc(*p)
+        if not T.inside(r, c) or not T.land[r, c]:
+            return None
+        k = int(SHORE_KM * 1000.0 / RES)
+        ra, rb = max(0, r - k), min(T.nrows, r + k + 1)
+        ca, cb = max(0, c - k), min(T.ncols, c + k + 1)
+        sea = ~np.asarray(T.land[ra:rb, ca:cb]).astype(bool)
+        if not sea.any():
+            return None
+        rr, cc = np.nonzero(sea)
+        d = np.hypot(rr - (r - ra), cc - (c - ca))
+        i = int(np.argmin(d))
+        if d[i] > k:
+            return None
+        return int(rr[i] + ra), int(cc[i] + ca)
+
+    def route_leg(self, p, q, month, ice_ok, corridor_ll=None, boat=False, shore=(None, None)):
         T = self.T
         r0, c0 = T.rc(*p)
         r1, c1 = T.rc(*q)
@@ -1442,13 +1523,31 @@ class Router:
         m = int(max(WINDOW_MARGIN_KM, WINDOW_MARGIN_FRAC * L) * 1000.0 / RES)
         ra, rb = max(0, min(r0, r1) - m), min(T.nrows, max(r0, r1) + m + 1)
         ca, cb = max(0, min(c0, c1) - m), min(T.ncols, max(c0, c1) + m + 1)
-        ends_in_sea = int(not T.land[r0, c0]) + int(not T.land[r1, c1])
+        ends_in_sea = int(not T.land[r0, c0] or shore[0] is not None) + \
+            int(not T.land[r1, c1] or shore[1] is not None)
         if boat:
             ends_in_sea = 2          # the narrative names a boat: water is cheap whatever the month
         cd = self.corridor_distance(ra, rb, ca, cb, corridor_ll) if corridor_ll else None
-        cost = self.cost_window(ra, rb, ca, cb, month, ends_in_sea, ice_ok, cd)
+        sd = None if cd is not None else self.corridor_distance(ra, rb, ca, cb,
+                                                                great_circle(p, q, step_km=10.0))
+        cost = self.cost_window(ra, rb, ca, cb, month, ends_in_sea, ice_ok, cd, straight_px=sd)
+        # cut the shore open: a channel at the sea-ice cost from a waypoint the
+        # mask puts on land to the water its note names
+        shore_km = 0.0
+        for end, cell in zip(((r0, c0), (r1, c1)), shore):
+            if cell is None:
+                continue
+            n = int(max(abs(cell[0] - end[0]), abs(cell[1] - end[1]))) + 1
+            rr = np.rint(np.linspace(end[0], cell[0], n + 1)).astype(int) - ra
+            cc = np.rint(np.linspace(end[1], cell[1], n + 1)).astype(int) - ca
+            ok = (rr >= 0) & (rr < cost.shape[0]) & (cc >= 0) & (cc < cost.shape[1])
+            gg = T.ground_km(ra, rb, ca, cb)
+            cost[rr[ok], cc[ok]] = (self.sea_multiplier(month, ends_in_sea) * gg[rr[ok], cc[ok]]).astype(np.float32)
+            shore_km = max(shore_km, math.hypot(cell[0] - end[0], cell[1] - end[1]) * RES / 1000.0)
         info = dict(window=[rb - ra, cb - ca], ends_in_sea=ends_in_sea, month=month, ice_ok=ice_ok,
                     corridor=cd is not None)
+        if shore_km:
+            info["shore_km"] = round(shore_km, 1)
         s, e = (r0 - ra, c0 - ca), (r1 - ra, c1 - ca)
         if cost.size > WINDOW_BUDGET:
             # pooled first, by the cheapest cell so no valley closes; then refined
@@ -1498,13 +1597,17 @@ class Router:
         dates = leg_dates(row, wps_raw)
         text = " ".join([row["title"] or "", row["description"] or "", row["tags"] or ""]).lower()
         boat = any(w in text for w in BOAT_WORDS)
+        # the waypoints the shoreline puts on land though their notes name water
+        shore = [self.shore_cell(p) if note_names_water(w.get("note")) else None
+                 for p, w in zip(wps, wps_raw)]
         line, legs = [wps[0]], []
         t0 = time.time()
         for i in range(len(wps) - 1):
             corr = None
             if digitized and i < len(digitized["legs"]) and digitized["legs"][i]["source"] == "ink":
                 corr = digitized["legs"][i]["ll"]
-            seg, info = self.route_leg(wps[i], wps[i + 1], dates[i][1], ice_allowed(row, wps_raw, i), corr, boat)
+            seg, info = self.route_leg(wps[i], wps[i + 1], dates[i][1], ice_allowed(row, wps_raw, i), corr, boat,
+                                       (shore[i], shore[i + 1]))
             info["leg"] = i
             info["straight_km"] = gc_km(wps[i], wps[i + 1])
             legs.append(info)
@@ -1547,7 +1650,21 @@ def waypoints_of(row):
 
 INFERRED_WORDS = ("inferred", "approximate", "approx.", "unmapped", "position uncertain", "placed by")
 WATER_WORDS = ("sound", "fiord", "fjord", "bay ", "bay,", "bay;", "channel", "strait", "sea ice", "the ice",
-               "pack", "floe", "off ", "inlet", "basin", "harbour")
+               "pack", "floe", "off ", "inlet", "basin", "harbour",
+               # Sverdrup's names, which half this collection keeps in Norwegian:
+               # a sund is a sound and a fjorden a fiord ("sund" alone would take
+               # Sunday with it)
+               "sundet", "sund ", "sund,", "sund;", "fjorden")
+# a note that names the shore itself, or a thing standing on it, is not a note
+# that puts the party on the water
+LAND_WORDS = ("hut", "post", "camp", "cairn", "depot", "point", "cape", "shore", "coast", "island", "land")
+
+
+def note_names_water(note):
+    """True when a waypoint's own note says the party was on the water (or its
+    ice) and says nothing of the shore."""
+    note = (note or "").lower()
+    return any(k in note for k in WATER_WORDS) and not any(k in note for k in LAND_WORDS)
 
 
 def load_moves(track_id):
@@ -1620,9 +1737,7 @@ def waypoint_diagnostics(T, wps_raw, digitized):
         else:
             d.update(ground="outside the DEM", elevation=None)
         d["inferred"] = any(k in note for k in INFERRED_WORDS)
-        d["contradicted"] = (d["ground"] == "land" and any(k in note for k in WATER_WORDS)
-                             and not any(k in note for k in ("hut", "post", "camp", "cairn", "depot", "point",
-                                                              "cape", "shore", "coast", "island", "land")))
+        d["contradicted"] = d["ground"] in ("land", "ice cap") and note_names_water(note)
         if ink:
             q, dk = None, math.inf
             for part in ink:
