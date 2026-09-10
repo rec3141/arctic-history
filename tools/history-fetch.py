@@ -56,7 +56,7 @@ import arctic_history as H          # noqa: E402
 
 EZPROXY = "uml.idm.oclc.org"
 JAR = H.HISTORY_DIR / "_ledger" / "ezproxy-cookies.txt"
-UA = "Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0 underway-history-research"
+UA = "arctic-history-layer/1.0 (https://github.com/rec3141/arctic-history; research fetcher for the CCGS Amundsen history tab) curl"
 
 # hosts the library proxies; anything else is fetched as is
 PROXIED = ("jstor.org", "cambridge.org", "tandfonline.com", "wiley.com", "springer.com",
