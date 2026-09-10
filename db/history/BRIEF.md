@@ -164,6 +164,17 @@ east of 40 (Novaya Zemlya, the far side of the dateline) carries
 `--tags east-verified` so `check` accepts what would otherwise look like a
 dropped minus sign.
 
+**`--tags` takes one thing per tag, comma separated**, and the tool stores
+them one per tag. Write a tag lowercase, with its words hyphenated at the
+boundary: `musk-ox`, `fort-conger`, `ice-shelf`, `st-roch`, `full-text`, never
+run together (`muskox`) or spaced (`musk ox`). A tag is singular, because it
+names a kind of thing and not a count: `dog`, `wreck`, `grave`, `vessel`,
+`relic`. A proper name keeps the form it is written in, plural and all:
+`queen-elizabeth-islands`. Known variants are folded to the canonical spelling
+as they are written, and `check` names any left in an older row. Reuse a tag
+the layer already has rather than coining a near-copy of it; `check` lists
+every tag used only once, which is where the near-copies show up.
+
 An entry is about people and things: **name them in the description itself**,
 not only in the title or the `--people` list. A reader of the description
 alone — and the model reading it as an excerpt — must learn who and what the

@@ -54,6 +54,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from arctic_history import *  # noqa: F401,F403
 import arctic_history as H          # noqa: E402
 
+TAGS_HELP = ("comma separated, stored one per tag: lowercase, words hyphenated at the boundary "
+             "(musk-ox, fort-conger, full-text) and singular (dog, wreck, vessel), a proper name "
+             "as it is written (queen-elizabeth-islands)")
 LICENCE_HELP = ("a code: " + ", ".join(H.LICENCE_CODES) +
                 ", or cc-by / cc-by-sa / cc-by-nc-sa / cc-by-nc-nd with a version (cc-by-4.0)")
 RIGHTS_HELP = ("free text behind the code: the holder, the term and why it is expired, "
@@ -126,7 +129,7 @@ def main(argv=None) -> int:
         a.add_argument("--pages", default="", help="where in the cited work")
         a.add_argument("--language", default="", help="of a text or quote, when not English (ISO 639-1)")
         a.add_argument("--people", default="", help="semicolon separated")
-        a.add_argument("--tags", default="", help="comma separated")
+        a.add_argument("--tags", default="", help=TAGS_HELP)
         a.add_argument("--view-file", default=None,
                        help="a raster view of a non-raster local file (PDF page, page screenshot, GeoTIFF), relative to db/history/")
         a.add_argument("--routing", default=None, choices=["", "water", "as-given"],
@@ -165,7 +168,7 @@ def main(argv=None) -> int:
     e.add_argument("--place", default="")
     e.add_argument("--people", default="")
     e.add_argument("--bibkey", default="")
-    e.add_argument("--tags", default="")
+    e.add_argument("--tags", default="", help=TAGS_HELP)
     e.add_argument("--precision", default=None, choices=list(H.PRECISIONS),
                    help="how much of the date the source gives (guessed from its shape by default)")
     e.add_argument("--qualifier", default="", choices=list(H.QUALIFIERS),
@@ -200,7 +203,7 @@ def main(argv=None) -> int:
     ac.add_argument("--place", default="")
     ac.add_argument("--people", default="")
     ac.add_argument("--bibkey", default="")
-    ac.add_argument("--tags", default="")
+    ac.add_argument("--tags", default="", help=TAGS_HELP)
     ac.add_argument("--precision", default=None, choices=list(H.PRECISIONS))
     ac.add_argument("--qualifier", default="", choices=list(H.QUALIFIERS))
 
@@ -517,7 +520,11 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
         v = H.validate(c)
         for p in v["problems"]:
             print(f"{p['kind']:9s} {p['what']:34s} {p['detail']}")
-        print(f"-- {len(v['problems'])} problems", file=sys.stderr)
+        if v["notes"]:
+            print(f"\n-- notes ({len(v['notes'])}): nothing wrong, but worth a look")
+            for p in v["notes"]:
+                print(f"{p['kind']:9s} {p['what']:34s} {p['detail']}")
+        print(f"-- {len(v['problems'])} problems, {len(v['notes'])} notes", file=sys.stderr)
         return 1 if v["problems"] else 0
     elif a.cmd == "wanted":
         info = H.reindex_links(c)
