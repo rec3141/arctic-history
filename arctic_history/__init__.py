@@ -1462,7 +1462,8 @@ def to_bibtex(rows) -> str:
         for name, col in (("publisher", "publisher"), ("address", "address"), ("volume", "volume"),
                           ("pages", "pages"), ("doi", "doi"), ("url", "url"), ("urldate", "urldate")):
             fields.append((name, r[col]))
-        note = "; ".join(x for x in (r["archive"], r["callno"], rights_text(r), r["note"]) if x)
+        # the licence's phrase travels with the citation; the rights note is for the crew
+        note = "; ".join(x for x in (r["archive"], r["callno"], licence_label(r["licence"] or ""), r["note"]) if x)
         fields.append(("note", note))
         fields.append(("keywords", "primary" if r["primary_src"] else "secondary"))
         body = ",\n".join(f"  {k} = {{{v}}}" for k, v in fields if v)
