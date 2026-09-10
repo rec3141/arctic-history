@@ -1,0 +1,46 @@
+# The atlas style for the history layer's figures: every plate across twenty
+# topics is drawn with this, so the layer reads as one atlas. Use it with
+#   import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
+#   plt.style.use("tools/atlas.mplstyle")
+# and draw the caption and the source line with tools/atlas.py.
+figure.figsize: 16, 9
+figure.dpi: 100
+savefig.dpi: 100
+figure.facecolor: f7f3ea
+savefig.facecolor: f7f3ea
+axes.facecolor: f7f3ea
+axes.edgecolor: 5a5247
+axes.linewidth: 0.8
+axes.spines.top: False
+axes.spines.right: False
+axes.grid: True
+grid.color: d9d2c3
+grid.linewidth: 0.6
+grid.linestyle: -
+axes.axisbelow: True
+axes.titlesize: 18
+axes.titleweight: normal
+axes.titlelocation: left
+axes.titlepad: 14
+axes.labelsize: 13
+axes.labelcolor: 3b352d
+axes.prop_cycle: cycler('color', ['1f3a5f', 'a4552b', '5b7553', '8b6f2e', '6d5a7a', '2e6f7e', 'b23a3a'])
+xtick.color: 3b352d
+ytick.color: 3b352d
+xtick.labelsize: 11
+ytick.labelsize: 11
+xtick.direction: out
+ytick.direction: out
+xtick.major.size: 4
+ytick.major.size: 4
+lines.linewidth: 1.6
+lines.markersize: 5
+patch.edgecolor: f7f3ea
+legend.frameon: False
+legend.fontsize: 11
+font.family: serif
+font.serif: Bitstream Charter, Georgia, Liberation Serif, DejaVu Serif
+font.size: 12
+text.color: 2a2620
+mathtext.fontset: dejavuserif
+image.cmap: cividis
