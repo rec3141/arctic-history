@@ -10,6 +10,11 @@
 #   history-sync.sh pull <relpath>..  fetch named objects regardless of size,
 #                                     e.g. pull davis-baffin-hudson/files/big-map.png
 #   history-sync.sh status            row counts on both sides
+#   history-sync.sh push-journal      ship -> grid: the ship's natural-history
+#                                     journal (db/history/_journal/) goes up to
+#                                     grid's _journal/incoming/, where grid
+#                                     ingests it (see db/history/JOURNAL.md);
+#                                     the one thing the ship sends
 #
 # The database is copied as a snapshot made with SQLite's own backup, never as
 # the live file, and installed automatically: the ship never writes, so there
@@ -56,9 +61,17 @@ EOF"
     echo "--- ship"; "$PY" "$HERE/tools/history-db.py" stats
     echo "--- grid"; ssh "$GRID" "cd $REMOTE && python3 tools/history-db.py stats"
     ;;
+  push-journal)
+    if [ ! -d "$HERE/db/history/_journal" ]; then
+      echo "no journal at $HERE/db/history/_journal" >&2; exit 1
+    fi
+    ssh "$GRID" "mkdir -p $REMOTE/db/history/_journal/incoming"
+    $RSYNC "$HERE/db/history/_journal/" "$GRID:$REMOTE/db/history/_journal/incoming/"
+    echo "journal pushed; grid ingests it with: tools/history-db.py ingest --journal db/history/_journal/incoming/<file>.jsonl"
+    ;;
   push)
-    echo "push is gone: grid owns the database, and code moves through git" >&2
+    echo "push is gone: grid owns the database, and code moves through git; the journal goes up with push-journal" >&2
     exit 1
     ;;
-  *) echo "usage: history-sync.sh {pull [relpath...]|status}"; exit 1 ;;
+  *) echo "usage: history-sync.sh {pull [relpath...]|status|push-journal}"; exit 1 ;;
 esac

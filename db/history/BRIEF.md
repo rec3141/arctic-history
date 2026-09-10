@@ -345,7 +345,8 @@ Kalutunah, Qitdlarssuaq, In-nook-poo-zhee-jook, Tattannoeuck, Ouligbuck, Hans
 Hendrik, Iligliuk, Eenoolooapik, Arnarulunnguaq, Qaavigarsuaq, Nuqallaq.
 
 Place kinds: `community`, `harbour`, `cape`, `strait`, `site`, `wreck`,
-`station`, `post`. Use the current Inuktitut name as `--name` for a living
+`station`, `post`, `island`, `region`, `port`, `bay`, `river`, `lake`, and the
+natural kinds of section 9. Use the current Inuktitut name as `--name` for a living
 community, with the historic English name in `--historic`.
 
 ### 6. Wiki pages — the narrative
@@ -511,6 +512,165 @@ but this:
 Kinds: `download`, `api_key`, `question`, `access`, `other`; `download` and
 `access` also need `--url`. Answers come back through
 `history-db.py requests --topic <your-slug>`, and `resume` lists them too.
+
+### 9. Natural history — subjects and observations
+
+The History tab holds what people did in the archipelago. The natural half
+holds what the archipelago is and does: the rock and its fossils, the ice on
+land and at sea, the water under the ship, the sky above it, the weather, the
+magnetic field, and the living things, together with what every one of those
+people wrote down about them on the way. A `nature` topic (the topic row says
+`domain nature`) produces everything above — sources, artifacts, dates,
+people, places, pages — and two more kinds of row: **subjects** and
+**observations**. `db/history/NATURE-DESIGN.md` is the design; this section
+is the contract.
+
+**Nothing here was discovered.** It was observed, measured, recorded,
+sounded, collected, named.
+
+**The subject** is what an observation is of: a species, a rock unit, a
+fossil bed, a mineral, a landform, a kind of ice, a variable of the water or
+the weather, a thing in the sky, a feature of the magnetic field. One table,
+one kind of page, one link form for all of them. `--kind` and `--domain` are
+codes (`--help` lists them):
+
+    tools/history-db.py subject --name "Ovibos moschatus" --kind taxon --domain biology \
+      --rank species --parent Bovidae --english muskox --french "boeuf musqué" \
+      --inuktitut umingmak --kalaallisut umimmak --also "musk-ox; musk ox" \
+      --backbone-id gbif:2441090 --status "COSEWIC not at risk 2007" \
+      --topic <your-slug> --bibkey <where the names and the note come from> \
+      --note "two to five sentences: what it is, where it lives or lies in the region, why it matters here"
+
+    tools/history-db.py subject --name "air temperature" --kind weather --domain meteorology \
+      --unit C --topic <your-slug> --note "..."          # a variable: observations of it carry a value
+
+    tools/history-db.py subject --name "North Magnetic Pole" --kind field --domain geomagnetism \
+      --backbone-id "nrcan:north-magnetic-pole" --topic <your-slug> --note "..."
+
+- `--name` is the scientific or technical name; the page is generated from
+  `--note`, so write the note as the species account, the rock unit's
+  description, the phenomenon's explanation, for a scientist aboard. Any of
+  the names resolves a link or an observation: `[[subject:Ovibos moschatus]]`,
+  `[[subject:muskox]]`, `[[subject:umingmak]]` all reach the one page.
+- **Names in the languages of the region are knowledge somebody holds.** Give
+  `--english`, `--french`, `--inuktitut` and `--kalaallisut` where the sources
+  give them, in the orthography the source uses, with the community's current
+  spelling in `--also` when it differs, and cite the source of the names in
+  `--bibkey` or the note. The sea-ice vocabulary above all.
+- **`--backbone-id` ties the subject to the world's catalogue** so the layer
+  can join GBIF, OBIS and the rest: `gbif:<usageKey>` for land and birds
+  (`curl -s "https://api.gbif.org/v1/species/match?name=Ovibos%20moschatus"`
+  gives `usageKey`), `worms:<AphiaID>` for the sea
+  (`curl -s "https://www.marinespecies.org/rest/AphiaIDByName/Balaena%20mysticetus?marine_only=true"`),
+  `weblex:<unit id>` for a rock unit (the Lexicon of Canadian Geologic Units,
+  weblex.canada.ca), `iau:<name>` for a sky object, `meteoritical:<name>`
+  for a meteorite. A variable or a phenomenon has no backbone: leave it blank
+  and the note says what it is. `check` flags a subject with neither.
+- Genus and family rows exist so the tree can be walked (`--parent`), as
+  formation and group rows do for the stratigraphic column. Enter the parent
+  before the child. Check `list --what subjects` first: another researcher's
+  `Cetacea` is yours too.
+- `--status` is the COSEWIC or IUCN code with its year, for a taxon.
+- A named individual animal stays an `animal` row; give it `--subject` (its
+  species) so the two join.
+
+**The observation** is the atom of the natural half, as the date is of the
+timeline: one subject, one date, one position, one source, and where there
+is a number, the number in the unit it was written in.
+
+    tools/history-db.py observation --id <your-slug>-001 --topic <your-slug> \
+      --subject umingmak --date 1900-04-13 --lat 78.6 --lon -95.2 \
+      --count "a herd of 17" --method hunt --observer "Otto Sverdrup" \
+      --bibkey sverdrup1904new --pages "v. 1 p. 412" \
+      --detail "Sverdrup's party shot four of a herd of seventeen muskoxen at the head of the fiord, to feed the dogs."
+
+    tools/history-db.py observation --id <your-slug>-002 --topic <your-slug> \
+      --subject "air temperature" --date 1882-02-04 --place "Fort Conger" \
+      --value -58.5 --unit F --qualifier "coldest of the winter" --method station-record \
+      --instrument "spirit thermometer" --observer "Adolphus Greely" --bibkey greely1888report \
+      --pages "v. 1 appendix" --detail "The minimum of the winter of 1881-82 at Fort Conger, read at the station."
+
+    tools/history-db.py observation --id <your-slug>-003 --topic <your-slug> \
+      --subject sounding --date 1871-08-28 --lat 82.1 --lon -60.5 --qualifier "no bottom at" \
+      --value 1000 --unit fathoms --method sounding --vessel "USS Polaris" --bibkey davis1876narrative \
+      --detail "The Polaris found no bottom at 1,000 fathoms off Cape Union."
+
+    tools/history-db.py observation --id <your-slug>-004 --topic <your-slug> \
+      --subject "Ursus maritimus" --date 1924-08 --lat 74.55 --lon -82.4 --sensitive \
+      --count 2 --stage "cub" --behaviour "denning" --method sighting --confidence probable \
+      --observer "A. H. Joy" --bibkey rcmp1925report --pages "p. 42" \
+      --detail "Joy reported a bear den with two cubs on the slope above the harbour."
+
+- `--id` is `<your-slug>-NNN`, stable, so a re-run replaces. `--subject` is
+  any of the subject's names, and the subject must exist first. `--date` as
+  written (`1900-04-13`, `1882-02`, `1820/1821`). `--lat/--lon`, or a
+  `--place` row that has them. `--bibkey` and `--pages` always. `--detail`
+  is the sentence that says what was seen, naming the observer. `--method` is
+  a code (`--help`). `--observer` is a `people` name where the record names
+  one (enter the person), or the party or the watch. `--artifact` points at
+  the evidence (the plate, the quote, the specimen); `--event` at the
+  human-history event this also is, so the timeline shows one thing, not two.
+- **Numbers are entered as written, in the unit written**, never converted:
+  Greely's Fahrenheit stays Fahrenheit, a lead-line sounding stays in fathoms.
+  The page does the arithmetic and says so. A variable's subject carries the
+  unit the page converts to; the observation carries the unit as written.
+- **Doubt goes in `--confidence`, not in the subject.** A narrative's "a
+  whale" is `Cetacea`, not a guessed species; "a great depth" with no lead is
+  a `--qualifier`, not a `--value`; a count the source estimates is
+  `--count "about 200"`.
+- **Sensitive sites are marked at entry**: a den, a nest, a haul-out, a
+  calving ground, a fossil site at risk. `--sensitive` publishes the row with
+  its position rounded to half a degree and its place blank; the full row
+  stays here; the page prose never names the site.
+- **Time series are not re-entered.** A station's daily record, a survey's
+  transects, an ice chart series is a source with `--entry-type dataset`, and
+  the layer enters the extremes, the firsts and the milestones (the coldest
+  day, the first open water, the year the shelf calved) as observations that
+  cite it, with a page that says where the whole series lives.
+- A specimen, a rock sample, a meteorite, an ice core is an artifact of type
+  `object` with the catalogue number in `--credit`; the observation points at
+  it with `--artifact`. A photograph of the animal, the outcrop, the aurora
+  is an `image` artifact the observation cites.
+
+**Natural places.** Enter the glacier, the bird cliff, the haul-out, the
+polynya, the fossil site, the weather station as a `place` with a natural
+kind: `glacier`, `ice-cap`, `ice-shelf`, `ice-island`, `polynya`,
+`bird-cliff`, `haul-out`, `denning-area`, `calving-ground`, `fossil-site`,
+`outcrop`, `meteorite-fall`, `hot-spring`, `pingo`, `ice-core-site`,
+`tide-station`, `magnetic-station`, `weather-station`, `lake`, `river`,
+`range`, `basin`, `sound`, `channel`, `fiord`, beside the human kinds.
+
+**Read inward before outward.** Every primary narrative already on disk
+carries natural history of every kind: Parry's appendices, Ross at the
+Magnetic Pole, Kane's, Hayes's and Hall's tables, Nares's and Greely's
+appendices, Sverdrup's hunting returns and Schei's geology, the whalers'
+catches, the RCMP patrol reports, Krüger's geology, the aerial descriptions,
+Tener's survey, the oral-history record of animals, ice and weather and
+their names. The texts are under `db/history/<topic>/files/*.txt` and
+`_staging/` (`grep -ril "musk" db/history/*/files/*.txt` finds them; the
+human topic's `list --what artifacts` gives the bibkey and the artifact id
+to cite). Their sources are already entered: cite the same bibkey with your
+pages, and point `--artifact` at the human topic's quote or plate where one
+exists, or add your own quote artifact under your slug. Haiku readers over
+the text layers find the passages; you enter them. Only then look outward,
+to the open catalogues and series (NATURE-DESIGN.md section 8a): most of
+the modern record is open and reachable from grid without the library.
+
+**Pages.** The same five to nine narrative pages as a history topic, with
+the overview at `--ordering 10`, and they link the subjects
+(`[[subject:...]]`), the places, the people who made the observations and
+the history topics where the record came from. The subject pages are
+generated from `--note` and the front end lays out the names, the status,
+and **the record**: every observation of the subject in date order with
+observer, value and source. So the muskox page reads as a species account
+followed by a two-hundred-year sighting log. Do not write the record into
+the prose; write the note well and enter the observations.
+
+**`check` demands** a subject that exists, a date, a position or a place, and
+a bibkey; a value with its unit; a count for a transect or a catch record; a
+depth or a value for a sounding; and a backbone id or a note for every
+subject. `resume` lists your subjects with their observation counts, and
+nags for pages once twenty observations are in.
 
 ## Helpers and the web
 
