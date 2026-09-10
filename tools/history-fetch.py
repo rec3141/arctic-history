@@ -84,7 +84,42 @@ def needs_proxy(url: str) -> bool:
     return any(host == p or host.endswith("." + p) for p in PROXIED)
 
 
+PACED = {"upload.wikimedia.org": 4.0, "commons.wikimedia.org": 4.0, "archive.org": 2.0,
+         "iiif.archive.org": 2.0, "www.biodiversitylibrary.org": 2.0, "api.nb.no": 1.0, "www.nb.no": 1.0}
+
+
+def pace(url: str) -> float:
+    """Crew-wide pacing for the hosts that rate-limit this campus address.
+    Seven researchers fetching from Wikimedia Commons at once got the whole
+    address 429-locked; one shared clock keeps the crew under the limit.
+    Blocks until the host's slot opens, stamps the ledger, returns the wait."""
+    import fcntl
+    host = (urlsplit(url).hostname or "").lower()
+    gap = next((g for h, g in PACED.items() if host == h or host.endswith("." + h)), 0)
+    if not gap:
+        return 0.0
+    ledger = H.HISTORY_DIR / "_ledger" / "pacing.json"
+    ledger.parent.mkdir(parents=True, exist_ok=True)
+    lock = ledger.with_suffix(".lock")
+    with open(lock, "w") as lk:
+        fcntl.flock(lk, fcntl.LOCK_EX)
+        try:
+            data = json.loads(ledger.read_text())
+        except (OSError, ValueError):
+            data = {}
+        last = float(data.get(host, 0))
+        wait = max(0.0, last + gap - time.time())
+        if wait:
+            time.sleep(wait)
+        data[host] = time.time()
+        ledger.write_text(json.dumps(data, indent=1))
+    return wait
+
+
 def curl(args: list[str], jar: bool = False, timeout: int = 600) -> subprocess.CompletedProcess:
+    url = next((x for x in args if x.startswith("http")), "")
+    if url:
+        pace(url)
     cmd = ["curl", "-sS", "-L", "--max-time", str(timeout), "-A", UA]
     if jar:
         JAR.parent.mkdir(parents=True, exist_ok=True)
@@ -260,9 +295,19 @@ def main(argv=None) -> int:
     tmp = dest.with_suffix(dest.suffix + ".part")
     r = curl(["-o", str(tmp), "-w", "%{http_code}\t%{size_download}\t%{speed_download}", url], proxied)
     code, got, speed = (r.stdout.strip().split("\t") + ["", "0", "0"])[:3]
+    if code == "429":
+        # the host's limit on this address: one long wait and one more try
+        # is cheaper than a researcher stopping its run
+        time.sleep(60)
+        r = curl(["-o", str(tmp), "-w", "%{http_code}\t%{size_download}\t%{speed_download}", url], proxied)
+        code, got, speed = (r.stdout.strip().split("\t") + ["", "0", "0"])[:3]
     if r.returncode != 0 or not code.startswith("2"):
         tmp.unlink(missing_ok=True)
         print(f"fetch failed: HTTP {code or '?'} {r.stderr.strip()[:200]}", file=sys.stderr)
+        if code == "429":
+            print("the host is rate-limiting this campus address; this tool paces the whole crew, so wait a "
+                  "minute and fetch again rather than looping, and fetch Commons files ONLY through this tool",
+                  file=sys.stderr)
         return 1
     problem = check_file(tmp, dest.suffix)
     if problem:
