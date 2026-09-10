@@ -186,7 +186,7 @@ class HistoryTests(unittest.TestCase):
                             lat=70.08, lon=-98.4, people="Crozier", bibkey="mcclintock1859voyage")
         pages = {p["slug"]: p for p in H.generated_pages(self.c)}
         self.assertIn(f"event/{ident}", pages)
-        self.assertIn("[[source:mcclintock1859voyage]]", pages[f"event/{ident}"]["body"])
+        self.assertEqual(pages[f"event/{ident}"]["body"], "")     # prose only: the row carries the fields
         H.add_page(self.c, "one", "One", f"See [[event:{ident}]].")
         self.assertEqual(H.reindex_links(self.c)["wanted"], {})
 
@@ -297,7 +297,8 @@ class HistoryTests(unittest.TestCase):
         self.artifact(licence="crown-expired", rights_note="Crown copyright of 1961 expired 2011")
         r = self.c.execute("SELECT * FROM artifacts WHERE id='franklin-1845-001'").fetchone()
         self.assertEqual(r["licence"], "crown-expired")
-        self.assertIn("Crown copyright expired; public domain. Crown copyright of 1961", H.artifact_body(r))
+        self.assertEqual(H.rights_text(r), "Crown copyright expired; public domain. Crown copyright of 1961 expired 2011")
+        self.assertNotIn("Crown", H.artifact_body(r))          # the page body is prose only
         for code in ("cc-by-4.0", "cc-by-sa-2.5", "cc-by-nc-nd-4.0", "cc-by", "cc0", "not-cleared"):
             self.assertTrue(H.is_licence_code(code), code)
         self.assertEqual(H.licence_label("cc-by-sa-4.0"), "CC BY-SA 4.0")
@@ -428,7 +429,7 @@ class HistoryTests(unittest.TestCase):
         page = json.loads((web / "data/history/pages/the-march.json").read_text())
         self.assertIn("(artifact/franklin-1845-001)", page["html"])
         gen = json.loads((web / "data/history/pages/artifact__franklin-1845-001.json").read_text())
-        self.assertIn("Royal Museums Greenwich", gen["html"])
+        self.assertNotIn("Royal Museums Greenwich", gen["html"])   # the credit is a row field, not body text
         self.assertIn("the-march", gen["backlinks"])
         self.assertIn("@book{mcclintock1859voyage,", (web / "data/history/references.bib").read_text())
 
@@ -597,7 +598,8 @@ class HistoryTests(unittest.TestCase):
                      affiliation="United States Coast Guard", topic="science-stations")
         r = self.c.execute("SELECT * FROM vessels WHERE name='USCGC Northwind'").fetchone()
         self.assertEqual((r["kind"], r["kind_note"]), ("icebreaker", "Wind class"))
-        self.assertTrue(H.vessel_body(r).startswith("icebreaker, Wind class · United States Coast Guard"))
+        self.assertEqual(H.vessel_kind_text(r), "icebreaker, Wind class")
+        self.assertEqual(H.vessel_body(r), "")
         self.assertEqual(H.vessel_kind_label("umiak"), "umiak, an open skin boat")
         self.assertTrue(H.is_vessel_kind("steam-whaler"))
         self.assertFalse(H.is_vessel_kind("steam whaler"))

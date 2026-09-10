@@ -1495,134 +1495,39 @@ def render_markdown(body: str, targets: dict, base: str = "") -> str:
 
 
 # ---------------------------------------------------------------- generated pages
+# A generated page carries the row's prose alone. The row's fields (date,
+# creator, position, licence, credit, source, people, the holding institution,
+# a place's kind, a vessel's build and fate) stay in the row and the ship's
+# front end lays them out beside the picture and the map; writing them into
+# the body showed a reader every fact twice. The rights note is for the crew
+# and is never part of a page.
 def artifact_body(r: sqlite3.Row) -> str:
-    """The generated page for one artifact: what it is, where it is, who to
-    credit, and the source to follow."""
-    lines = [r["description"] or ""]
-    facts = []
-    if r["date_text"]:
-        facts.append(f"**Date** {r['date_text']}")
-    if r["creator"]:
-        facts.append(f"**Creator** {r['creator']}")
-    if r["lat"] is not None:
-        facts.append(f"**Position** {r['lat']:.4f}, {r['lon']:.4f}")
-    if r["licence"]:
-        facts.append(f"**Licence** {rights_text(r)}")
-    if facts:
-        lines += ["", " · ".join(facts)]
-    if r["credit"]:
-        lines += ["", f"**Credit** {r['credit']}"]
-    if r["bibkey"]:
-        pages = f", {r['pages']}" if r["pages"] else ""
-        lines += ["", f"**Source** [[source:{r['bibkey']}]]{pages}"]
-    people = json.loads(r["people"] or "[]")
-    if people:
-        lines += ["", "**People** " + ", ".join(f"[[person:{p}]]" for p in people)]
-    if r["source_url"]:
-        lines += ["", f"[At the holding institution]({r['source_url']})"]
-    return "\n".join(lines).strip()
+    """The generated page for one artifact: its description."""
+    return (r["description"] or "").strip()
 
 
 def source_body(r: sqlite3.Row) -> str:
-    lines = []
-    cite = ", ".join(x for x in (r["author"], f"*{r['title']}*", r["container"], r["publisher"], r["year"]) if x)
-    lines.append(cite + ".")
-    if r["archive"] or r["callno"]:
-        lines += ["", "**Held at** " + ", ".join(x for x in (r["archive"], r["callno"]) if x)]
-    if r["licence"]:
-        lines += ["", f"**Copyright** {rights_text(r)}"]
-    if r["note"]:
-        lines += ["", r["note"]]
-    lines += ["", "**Kind** " + ("primary source" if r["primary_src"] else "secondary source")]
-    if r["url"]:
-        lines += ["", f"[Read it]({r['url']})"]
-    return "\n".join(lines).strip()
+    return (r["note"] or "").strip()
 
 
 def person_body(r: sqlite3.Row) -> str:
-    lines = []
-    head = " · ".join(x for x in (r["role"], r["affiliation"],
-                                  f"{r['born']}–{r['died']}" if (r["born"] or r["died"]) else "") if x)
-    if head:
-        lines.append(head)
-    if r["also"]:
-        lines += ["", f"Also written {r['also']}."]
-    if r["note"]:
-        lines += ["", r["note"]]
-    if r["bibkey"]:
-        lines += ["", f"**Source** [[source:{r['bibkey']}]]"]
-    return "\n".join(lines).strip()
+    return (r["note"] or "").strip()
 
 
 def place_body(r: sqlite3.Row) -> str:
-    lines = []
-    names = [x for x in (r["inuktitut"], r["historic"]) if x]
-    if names:
-        lines.append("Also " + ", ".join(names) + ".")
-    if r["lat"] is not None:
-        lines += ["", f"**Position** {r['lat']:.4f}, {r['lon']:.4f}"]
-    if r["kind"]:
-        lines += ["", f"**Kind** {r['kind']}"]
-    if r["note"]:
-        lines += ["", r["note"]]
-    if r["bibkey"]:
-        lines += ["", f"**Source** [[source:{r['bibkey']}]]"]
-    return "\n".join(lines).strip()
+    return (r["note"] or "").strip()
 
 
 def animal_body(r: sqlite3.Row) -> str:
-    lines = []
-    head = " · ".join(x for x in (r["kind"], r["role"], r["affiliation"],
-                                  f"{r['born']}–{r['died']}" if (r["born"] or r["died"]) else "") if x)
-    if head:
-        lines.append(head)
-    if r["also"]:
-        lines += ["", f"Also called {r['also']}."]
-    if r["note"]:
-        lines += ["", r["note"]]
-    if r["bibkey"]:
-        lines += ["", f"**Source** [[source:{r['bibkey']}]]"]
-    return "\n".join(lines).strip()
+    return (r["note"] or "").strip()
 
 
 def vessel_body(r: sqlite3.Row) -> str:
-    lines = []
-    head = " · ".join(x for x in (vessel_kind_text(r), r["affiliation"], r["tonnage"]) if x)
-    if head:
-        lines.append(head)
-    if r["role"]:
-        lines += ["", r["role"]]
-    if r["built"]:
-        lines += ["", f"**Built** {r['built']}"]
-    if r["lost"]:
-        lines += ["", f"**Fate** {r['lost']}"]
-    if r["also"]:
-        lines += ["", f"Also {r['also']}."]
-    if r["note"]:
-        lines += ["", r["note"]]
-    if r["bibkey"]:
-        lines += ["", f"**Source** [[source:{r['bibkey']}]]"]
-    return "\n".join(lines).strip()
+    return (r["note"] or "").strip()
 
 
 def event_body(r: sqlite3.Row) -> str:
-    lines = []
-    when = r["date_text"] or (r["date_start"] + (f" to {r['date_end']}" if r["date_end"] else ""))
-    head = " \u00b7 ".join(x for x in (when, r["place"]) if x)
-    if head:
-        lines.append(head)
-    if r["detail"]:
-        lines += ["", r["detail"]]
-    people = json.loads(r["people"] or "[]")
-    if people:
-        lines += ["", "People: " + ", ".join(f"[[person:{x}]]" for x in people) + "."]
-    if r["place"]:
-        lines += ["", f"Place: [[place:{r['place']}]]."]
-    if r["bibkey"]:
-        lines += ["", f"Source: [[source:{r['bibkey']}]]."]
-    if r["topic"]:
-        lines += ["", f"Topic: [[topic:{r['topic']}]]."]
-    return "\n".join(lines)
+    return (r["detail"] or "").strip()
 
 
 def generated_pages(c) -> list[dict]:
