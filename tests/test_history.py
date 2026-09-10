@@ -253,6 +253,23 @@ class HistoryTests(unittest.TestCase):
             "SELECT src FROM links WHERE target='person/tookoolito' ORDER BY src")]
         self.assertEqual(srcs, ["one", "two"])
 
+    def test_generated_pages_link_by_their_row_fields(self):
+        H.add_person(self.c, "Tookoolito")
+        H.add_place(self.c, "Beechey Island", lat=74.71, lon=-91.85)
+        self.artifact(people="Tookoolito")
+        ev = H.add_event(self.c, "franklin-1845", "1845-09", "Wintering", people="Tookoolito",
+                         place="Beechey Island", bibkey="mcclintock1859voyage")
+        H.reindex_links(self.c)
+        rows = {(r["src"], r["target"]) for r in self.c.execute("SELECT src, target FROM links")}
+        self.assertIn(("artifact/franklin-1845-001", "person/tookoolito"), rows)
+        self.assertIn(("artifact/franklin-1845-001", "source/mcclintock1859voyage"), rows)
+        self.assertIn((f"event/{ev}", "person/tookoolito"), rows)
+        self.assertIn((f"event/{ev}", "place/beechey-island"), rows)
+        self.assertIn((f"event/{ev}", "source/mcclintock1859voyage"), rows)
+        # a row field never makes a wanted link; check reports a bibkey with no source
+        self.artifact(id="franklin-1845-002", bibkey="nosuchkey")
+        self.assertEqual(H.reindex_links(self.c)["wanted"], {})
+
     def test_slugify_keeps_arctic_spellings_legible(self):
         self.assertEqual(H.slugify("Gjøa Haven"), "gjoa-haven")
         self.assertEqual(H.slugify("Grœnlendinga saga"), "gr-nlendinga-saga")
