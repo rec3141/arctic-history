@@ -20,6 +20,9 @@ transactions on a write-ahead log, so many researchers may work at once.
                             --bibkey cyriax1939franklin --credit "..." --waypoints waypoints.json
     history-db.py person    --name Tookoolito --also "Hannah; Taqulittuq" --indigenous \
                             --role "interpreter and guide" --born 1838 --died 1876 --topic kane-hall-polaris
+    history-db.py vessel    --name "HMS Investigator" --kind barque \
+                            --kind-note "purchased into the Navy" --built "1848, Greenock" \
+                            --lost "abandoned in the Bay of Mercy, 3 June 1853" --topic mcclure-investigator
     history-db.py place     --name "Beechey Island" --lat 74.7139 --lon -91.8472 --kind site \
                             --historic "Beechey Island" --topic franklin-1845
     history-db.py event     --topic franklin-1845 --date 1847-06-11 --title "Franklin dies" \
@@ -58,6 +61,9 @@ LICENCE_HELP = ("a code: " + ", ".join(H.LICENCE_CODES) +
                 ", or cc-by / cc-by-sa / cc-by-nc-sa / cc-by-nc-nd with a version (cc-by-4.0)")
 RIGHTS_HELP = ("free text behind the code: the holder, the term and why it is expired, "
                "the request number, what is and is not held")
+KIND_HELP = "a vessel's hull or craft type, one code: " + ", ".join(H.VESSEL_KINDS)
+KIND_NOTE_HELP = ("free text behind the code: the class, the aircraft model, the trade she "
+                  "worked, a conversion, the navy or company that bought her")
 
 
 def _read(value: str | None, file: str | None) -> str:
@@ -144,8 +150,10 @@ def main(argv=None) -> int:
         an.add_argument(f"--{f}", default=None)
     ve = sub.add_parser("vessel", help="add or update a ship, boat or aircraft")
     ve.add_argument("--name", required=True)
-    for f in ("kind", "also", "role", "built", "lost", "affiliation", "tonnage", "note", "bibkey", "topic"):
-        ve.add_argument(f"--{f}", default=None)
+    for f in ("kind", "kind-note", "also", "role", "built", "lost", "affiliation", "tonnage",
+              "note", "bibkey", "topic"):
+        ve.add_argument(f"--{f}", default=None,
+                        help=KIND_HELP if f == "kind" else KIND_NOTE_HELP if f == "kind-note" else None)
 
     pl = sub.add_parser("place", help="add or update a place")
     pl.add_argument("--name", required=True)
