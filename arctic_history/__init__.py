@@ -98,6 +98,155 @@ def _check_licence(code: str) -> None:
                          f"{', '.join(LICENCE_CODES)}, or cc-by / cc-by-sa / cc-by-nc-sa / cc-by-nc-nd "
                          f"with a version (cc-by-4.0). Put the detail in --rights-note.")
 
+
+# A tag has a shape: lowercase, one tag per array element, words joined by
+# hyphens at the boundary (`musk-ox`, `fort-conger`, `full-text`), and singular,
+# because a tag names a kind of thing and not a count. A proper name keeps the
+# form it is written in, plural included (`queen-elizabeth-islands`). The
+# writers put every tag into that shape; this table then folds the spellings
+# already in use into the one form the layer searches on. `leads` (the open
+# water in the ice) is deliberately not folded to `lead`, which tags the metal
+# in the Franklin bones.
+TAG_ALIASES = {
+    # run together where the words divide
+    "axelheiberg": "axel-heiberg",
+    "banksisland": "banks-island",
+    "barrowstrait": "barrow-strait",
+    "breakup": "break-up",
+    "capecolumbia": "cape-columbia",
+    "capesabine": "cape-sabine",
+    "capethomashubbard": "cape-thomas-hubbard",
+    "capeyork": "cape-york",
+    "crockerland": "crocker-land",
+    "davisstrait": "davis-strait",
+    "dewline": "dew-line",
+    "eurekasound": "eureka-sound",
+    "fifththule": "fifth-thule",
+    "fortconger": "fort-conger",
+    "franklinsearch": "franklin-search",
+    "fulltext": "full-text",
+    "icecap": "ice-cap",
+    "iceisland": "ice-island",
+    "iceshelf": "ice-shelf",
+    "kingchristian": "king-christian",
+    "kingwilliamisland": "king-william-island",
+    "manhauling": "man-hauling",
+    "massbalance": "mass-balance",
+    "melvillebay": "melville-bay",
+    "mercybay": "mercy-bay",
+    "mouldbay": "mould-bay",
+    "muskox": "musk-ox",
+    "northgreenland": "north-greenland",
+    "oralhistory": "oral-history",
+    "payerharbour": "payer-harbour",
+    "polarsea": "polar-sea",
+    "pressureridge": "pressure-ridge",
+    "primarysource": "primary-source",
+    "queenelizabethislands": "queen-elizabeth-islands",
+    "r.c.m.p.": "rcmp",
+    "resolutionisland": "resolution-island",
+    "seaice": "sea-ice",
+    "searchandrescue": "search-and-rescue",
+    "smithsound": "smith-sound",
+    "snowhouse": "snow-house",
+    "stroch": "st-roch",
+    "supplyship": "supply-ship",
+    "sverdruppass": "sverdrup-pass",
+    "t3": "t-3",
+    "wardhunt": "ward-hunt",
+    "wellingtonchannel": "wellington-channel",
+    # plural where the tag names a kind of thing
+    "archives": "archive",
+    "bears": "bear",
+    "boats": "boat",
+    "buildings": "building",
+    "cairns": "cairn",
+    "clouds": "cloud",
+    "communications": "communication",
+    "corrections": "correction",
+    "deaths": "death",
+    "documents": "document",
+    "dogs": "dog",
+    "drawings": "drawing",
+    "encounters": "encounter",
+    "events": "event",
+    "expeditions": "expedition",
+    "families": "family",
+    "floebergs": "floeberg",
+    "glaciers": "glacier",
+    "graves": "grave",
+    "icebergs": "iceberg",
+    "icebreakers": "icebreaker",
+    "instruments": "instrument",
+    "maps": "map",
+    "meteorites": "meteorite",
+    "missions": "mission",
+    "new-islands": "new-island",
+    "orders": "order",
+    "photographs": "photograph",
+    "plans": "plan",
+    "posts": "post",
+    "rations": "ration",
+    "relics": "relic",
+    "routes": "route",
+    "settlements": "settlement",
+    "ships": "ship",
+    "skills": "skill",
+    "specimens": "specimen",
+    "supplies": "supply",
+    "survivors": "survivor",
+    "tent-rings": "tent-ring",
+    "vessels": "vessel",
+    "weather-stations": "weather-station",
+    "wrecks": "wreck",
+}
+
+
+def normalise_tag(tag: str) -> str:
+    """One tag in the form it is stored in: lowercase, trimmed, spaces and
+    underscores hyphenated, a known variant folded to its canonical form."""
+    t = re.sub(r"[\s_]+", "-", str(tag or "").strip().lower())
+    t = re.sub(r"-{2,}", "-", t).strip("-")
+    return TAG_ALIASES.get(t, t)
+
+
+def normalise_tags(v) -> list:
+    """Tags as they are written to the database: one per element, in the order
+    given, with a comma-joined string taken apart and empties and repeats
+    dropped. Accepts a list, a JSON array, or a comma or semicolon separated
+    string, so an older row re-read from the database comes back clean."""
+    if v is None or v == "":
+        return []
+    if isinstance(v, str):
+        try:
+            parsed = json.loads(v)
+        except (json.JSONDecodeError, ValueError):
+            items = [v]
+        else:
+            items = parsed if isinstance(parsed, list) else [v]
+    elif isinstance(v, (list, tuple)):
+        items = list(v)
+    else:
+        items = [v]
+    out: list = []
+    for item in items:
+        for part in re.split(r"[,;]", str(item)):
+            t = normalise_tag(part)
+            if t and t not in out:
+                out.append(t)
+    return out
+
+
+def stored_tags(raw) -> list:
+    """The tag elements of a row as they stand, unnormalised: what `check`
+    reads to find a row written before the vocabulary settled."""
+    try:
+        v = json.loads(raw or "[]")
+    except (json.JSONDecodeError, ValueError):
+        return [str(raw)]
+    return [str(x) for x in v] if isinstance(v, list) else [str(v)]
+
+
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS topics (
   slug        TEXT PRIMARY KEY,
@@ -454,6 +603,11 @@ def _json_list(v) -> str:
     return json.dumps(list(v), ensure_ascii=False)
 
 
+def _tag_list(v) -> str:
+    """Tags, stored one per element in the canonical form."""
+    return json.dumps(normalise_tags(v), ensure_ascii=False)
+
+
 def _iso(v: str) -> str:
     """The sortable form of a date written as a year, a month or a full date.
     A range ("1845/1848") yields its first date; anything unparseable is ''."""
@@ -659,7 +813,7 @@ def add_artifact(c, id: str, topic: str, type: str, title: str, **kw) -> str:
            "date_text": date_text,
            "date_start": _iso(kw.get("date_start") or date_text),
            "date_end": _iso(kw.get("date_end") or (date_text.split("/")[-1] if "/" in date_text else "")),
-           "people": _json_list(kw.get("people")), "tags": _json_list(kw.get("tags")),
+           "people": _json_list(kw.get("people")), "tags": _tag_list(kw.get("tags")),
            "lat": None if kw.get("lat") in (None, "") else float(kw["lat"]),
            "lon": None if kw.get("lon") in (None, "") else float(kw["lon"])}
     for f in ("creator", "description", "source_url", "download_url", "local_file",
@@ -844,7 +998,7 @@ def add_event(c, topic: str, date: str, title: str, **kw) -> int:
            "date_end": _iso(kw.get("date_end", "")), "title": title,
            "detail": kw.get("detail", ""), "place": kw.get("place", ""),
            "bibkey": kw.get("bibkey", ""), "people": _json_list(kw.get("people")),
-           "tags": _json_list(kw.get("tags")), "updated": now(),
+           "tags": _tag_list(kw.get("tags")), "updated": now(),
            "lat": None if kw.get("lat") in (None, "") else float(kw["lat"]),
            "lon": None if kw.get("lon") in (None, "") else float(kw["lon"])}
     if not row["date_start"]:
@@ -1567,11 +1721,18 @@ def get_ontology(c) -> dict | None:
 def validate(c) -> dict:
     """Everything wrong that a reader would notice: an artifact with no
     credit or no source, a bibkey that resolves to nothing, a coordinate on
-    dry land in the wrong hemisphere, a page that links nowhere."""
+    dry land in the wrong hemisphere, a page that links nowhere.
+
+    ``notes`` carries what is worth a look but is not wrong: the tags used
+    only once, which are where a near-copy of an established tag hides."""
     problems: list[dict] = []
+    notes: list[dict] = []
 
     def bad(kind, what, detail):
         problems.append({"kind": kind, "what": what, "detail": detail})
+
+    def note(kind, what, detail):
+        notes.append({"kind": kind, "what": what, "detail": detail})
 
     keys = {r["bibkey"] for r in c.execute("SELECT bibkey FROM sources")}
     for r in c.execute("SELECT * FROM artifacts"):
@@ -1646,6 +1807,26 @@ def validate(c) -> dict:
             bad("source", r["bibkey"], f"licence is not a code: {r['licence'][:60]!r}")
         if not r["url"]:
             bad("source", r["bibkey"], "no URL")
+    # tags: a spelling the writers no longer accept is a legacy row to mend,
+    # and a tag used once is the long tail, reported as a note
+    where: dict = {}
+    for kind, sql in (("artifact", "SELECT id AS what, tags FROM artifacts"),
+                      ("event", "SELECT id AS what, tags FROM events")):
+        for r in c.execute(sql):
+            ident = str(r["what"])
+            for raw in stored_tags(r["tags"]):
+                fixed = normalise_tags(raw)
+                if fixed != [raw]:
+                    if raw in TAG_ALIASES:
+                        bad(kind, ident, f"tag {raw!r} is a variant of {TAG_ALIASES[raw]!r}")
+                    else:
+                        bad(kind, ident, f"tag {raw[:60]!r} is not in the canonical form: "
+                                         f"{', '.join(fixed) or '(nothing)'}")
+                for t in fixed:
+                    where.setdefault(t, []).append(f"{kind} {ident}")
+    for t, used in sorted(where.items()):
+        if len(used) == 1:
+            note("tag", t, f"used once, on {used[0]}")
     for r in c.execute("SELECT name, lat, lon FROM places WHERE lat IS NOT NULL"):
         msg = _off_map(r["lat"], r["lon"])
         if msg:
@@ -1672,7 +1853,7 @@ def validate(c) -> dict:
             bad("dates", r["span"], f"ends {r['b']} before it starts {r['a']}")
     stats = {t: c.execute(f"SELECT COUNT(*) AS n FROM {t}").fetchone()["n"]
              for t in ("topics", "sources", "artifacts", "pages", "people", "places", "events", "dates")}
-    return {"problems": problems, "stats": stats}
+    return {"problems": problems, "notes": notes, "stats": stats}
 
 
 # ---------------------------------------------------------------- publish
@@ -1716,7 +1897,7 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
                                    "rights_note", "source_url", "local_file", "pages")}
             a["licence_label"] = licence_label(r["licence"])
             a["people"] = json.loads(r["people"] or "[]")
-            a["tags"] = json.loads(r["tags"] or "[]")
+            a["tags"] = normalise_tags(r["tags"])
             for f in ("geometry", "waypoints"):
                 if r[f]:
                     try:
@@ -1754,7 +1935,7 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
         # 3. the timeline, and the topics that own everything
         events = [{**{k: r[k] for k in ("id", "topic", "date_text", "date_start", "date_end",
                                         "title", "detail", "lat", "lon", "place", "bibkey")},
-                   "people": json.loads(r["people"] or "[]"), "tags": json.loads(r["tags"] or "[]")}
+                   "people": json.loads(r["people"] or "[]"), "tags": normalise_tags(r["tags"])}
                   for r in c.execute(f"SELECT * FROM events ORDER BY {date_order('date_start')}, id")]
         topics = [dict(r) for r in c.execute("SELECT slug, title, summary, status FROM topics ORDER BY title")]
         for t in topics:

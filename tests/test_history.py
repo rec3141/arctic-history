@@ -307,6 +307,50 @@ class HistoryTests(unittest.TestCase):
         self.c.execute("UPDATE artifacts SET licence='public domain' WHERE id='franklin-1845-001'")
         self.assertTrue(any("not a code" in p["detail"] for p in H.validate(self.c)["problems"]))
 
+    def test_tags_are_stored_one_per_element_in_the_canonical_form(self):
+        # a comma-joined string is taken apart, the shape is fixed, the repeats go
+        self.artifact(tags="Nares, alert,DISCOVERY , plate,plate, ,fort conger")
+        r = self.c.execute("SELECT tags FROM artifacts WHERE id='franklin-1845-001'").fetchone()
+        self.assertEqual(json.loads(r["tags"]),
+                         ["nares", "alert", "discovery", "plate", "fort-conger"])
+        # a list comes through the same way, and an underscore is a word boundary
+        self.artifact(id="franklin-1845-002", tags=["Musk_Ox", "ice shelf"])
+        r = self.c.execute("SELECT tags FROM artifacts WHERE id='franklin-1845-002'").fetchone()
+        self.assertEqual(json.loads(r["tags"]), ["musk-ox", "ice-shelf"])
+        self.assertEqual(H.normalise_tags(""), [])
+
+    def test_a_known_variant_is_mapped_to_its_canonical_tag(self):
+        # hyphenated at the word boundary, and singular
+        self.artifact(tags="stroch,dogs,fulltext,crockerland,vessels,queenelizabethislands")
+        r = self.c.execute("SELECT tags FROM artifacts WHERE id='franklin-1845-001'").fetchone()
+        self.assertEqual(json.loads(r["tags"]),
+                         ["st-roch", "dog", "full-text", "crocker-land", "vessel",
+                          "queen-elizabeth-islands"])
+        # events take the same route
+        H.add_event(self.c, "franklin-1845", "1848-04-25", "The record is left",
+                    tags="wrecks,muskox", lat=69.97, lon=-98.55)
+        r = self.c.execute("SELECT tags FROM events WHERE title='The record is left'").fetchone()
+        self.assertEqual(json.loads(r["tags"]), ["wreck", "musk-ox"])
+        # `leads` is the open water in the ice, not the metal in the bones
+        self.assertEqual(H.normalise_tag("leads"), "leads")
+
+    def test_check_flags_a_legacy_tag_and_notes_the_long_tail(self):
+        self.artifact(tags="plate,nares")
+        self.artifact(id="franklin-1845-002", tags="plate")
+        self.artifact(id="franklin-1845-003", tags="plate")
+        # a row written before the vocabulary settled
+        self.c.execute("UPDATE artifacts SET tags='[\"stroch,ICE SHELF\"]' "
+                       "WHERE id='franklin-1845-001'")
+        v = H.validate(self.c)
+        self.assertTrue(any("is not in the canonical form" in p["detail"] and "st-roch" in p["detail"]
+                            for p in v["problems"]))
+        self.c.execute("UPDATE artifacts SET tags='[\"fulltext\"]' WHERE id='franklin-1845-001'")
+        v = H.validate(self.c)
+        self.assertTrue(any("is a variant of 'full-text'" in p["detail"] for p in v["problems"]))
+        # `plate` is used twice and stays quiet; `full-text` is the long tail
+        self.assertIn(("tag", "full-text"), [(n["kind"], n["what"]) for n in v["notes"]])
+        self.assertNotIn("plate", [n["what"] for n in v["notes"]])
+
     def test_validate_flags_a_dropped_minus_sign_but_allows_europe(self):
         # the Beard daguerreotypes were taken at Greenhithe, genuinely 0.28 east
         self.artifact(id="greenhithe", lat=51.45, lon=0.28)
