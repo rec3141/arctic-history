@@ -8,13 +8,13 @@ transactions on a write-ahead log, so many researchers may work at once.
     history-db.py topic     --slug franklin-1845 --title "The Franklin expedition" --summary "..."
     history-db.py source    --bibkey mcclintock1859voyage --title "The Voyage of the Fox..." \
                             --author "McClintock, Francis Leopold" --year 1859 --primary \
-                            --publisher John Murray --url https://... --licence "public domain" \
+                            --publisher John Murray --url https://... --licence public-domain \
                             --archive "Internet Archive" --note "the Victory Point record in facsimile"
     history-db.py bib       --topic franklin-1845 --file refs.bib      # import a whole BibTeX file
     history-db.py artifact  --id franklin-1845-004 --topic franklin-1845 --type quote \
                             --title "The Victory Point record" --date 1848-04-25 \
                             --lat 69.97 --lon -98.55 --bibkey mcclintock1859voyage --pages "p. 283" \
-                            --credit "Royal Museums Greenwich" --licence "public domain" \
+                            --credit "Royal Museums Greenwich" --licence public-domain \
                             --description "..." --tags franklin,abandonment --people "Crozier;Fitzjames"
     history-db.py track     --id franklin-1845-001 --topic franklin-1845 --title "Erebus and Terror" \
                             --bibkey cyriax1939franklin --credit "..." --waypoints waypoints.json
@@ -54,6 +54,11 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from arctic_history import *  # noqa: F401,F403
 import arctic_history as H          # noqa: E402
 
+LICENCE_HELP = ("a code: " + ", ".join(H.LICENCE_CODES) +
+                ", or cc-by / cc-by-sa / cc-by-nc-sa / cc-by-nc-nd with a version (cc-by-4.0)")
+RIGHTS_HELP = ("free text behind the code: the holder, the term and why it is expired, "
+               "the request number, what is and is not held")
+
 
 def _read(value: str | None, file: str | None) -> str:
     """A field given inline, or from a file when it is long (a page body, a
@@ -82,9 +87,10 @@ def main(argv=None) -> int:
     s.add_argument("--entry-type", default="misc",
                    help="book, article, incollection, misc, online, report, thesis")
     for f in ("author", "year", "container", "publisher", "address", "volume", "pages",
-              "url", "urldate", "doi", "archive", "callno", "licence", "note", "local-file", "topic",
+              "url", "urldate", "doi", "archive", "callno", "licence", "rights-note", "note", "local-file", "topic",
               "language", "orig-language", "translator"):
-        s.add_argument(f"--{f}", default=None)
+        s.add_argument(f"--{f}", default=None,
+                       help=LICENCE_HELP if f == "licence" else RIGHTS_HELP if f == "rights-note" else None)
     s.add_argument("--primary", action="store_true", help="a primary source: a journal, log, narrative or testimony")
 
     b = sub.add_parser("bib", help="import a BibTeX file")
@@ -115,7 +121,8 @@ def main(argv=None) -> int:
         a.add_argument("--source-url", default="")
         a.add_argument("--download-url", default="")
         a.add_argument("--local-file", default="", help="a downloaded copy, relative to db/history/")
-        a.add_argument("--licence", default="")
+        a.add_argument("--licence", default="", help=LICENCE_HELP)
+        a.add_argument("--rights-note", default="", help=RIGHTS_HELP)
         a.add_argument("--pages", default="", help="where in the cited work")
         a.add_argument("--language", default="", help="of a text or quote, when not English (ISO 639-1)")
         a.add_argument("--people", default="", help="semicolon separated")
@@ -315,7 +322,8 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
         kw = dict(date=a.date, date_end=a.date_end, creator=a.creator,
                   description=_read(a.description, a.description_file),
                   lat=a.lat, lon=a.lon, source_url=a.source_url, download_url=a.download_url,
-                  local_file=a.local_file, licence=a.licence, credit=a.credit, bibkey=a.bibkey,
+                  local_file=a.local_file, licence=a.licence, rights_note=a.rights_note,
+                  credit=a.credit, bibkey=a.bibkey,
                   pages=a.pages, people=a.people, tags=a.tags, language=a.language,
                   view_file=a.view_file, routing=a.routing)
         geom = _read(a.geometry, a.geometry_file)
