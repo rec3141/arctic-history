@@ -1,0 +1,22 @@
+{
+ "moves": [
+  {
+   "index": 2,
+   "lat": 76.6408,
+   "lon": -95.7701,
+   "why": "inferred; moved 7 km onto the printed route"
+  },
+  {
+   "index": 5,
+   "lat": 76.696,
+   "lon": -90.0731,
+   "why": "inferred; moved 9 km onto the printed route"
+  },
+  {
+   "index": 6,
+   "lat": 76.3608,
+   "lon": -88.9868,
+   "why": "inferred; moved 15 km onto the printed route"
+  }
+ ]
+}

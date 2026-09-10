@@ -1,0 +1,16 @@
+{
+ "moves": [
+  {
+   "index": 10,
+   "lat": 81.7976,
+   "lon": -70.5405,
+   "why": "on land though the note names water; moved 8 km onto the printed route"
+  },
+  {
+   "index": 14,
+   "lat": 82.4579,
+   "lon": -72.5459,
+   "why": "inferred; moved 15 km onto the printed route"
+  }
+ ]
+}

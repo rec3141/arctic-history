@@ -125,10 +125,12 @@ and after the refinement, with the coast match (the median distance of the
 projected shoreline from the nearest ink, inside the control points' box, and
 the share within 3 and 6 px).  **A fit is accepted when the control-point RMS
 is under four pixels with no point over ten, or, after the coast refinement,
-when the coast match's median is under eight pixels with at least 40 per cent
-of the shoreline within six**; four pixels is the width of a drawn line on
-these scans and eight is what a sketch map's coast can be held to, and a fit
-worse than that is refused as a coincidence.  The check figure draws the
+when the coast match's median is under eight pixels and eight kilometres with
+at least 40 per cent of the shoreline within six pixels**; four pixels is the
+width of a drawn line on these scans and eight is what a sketch map's coast
+can be held to, and a fit worse than that is refused as a coincidence.  The
+kilometre ceiling is what refuses the Crocker Land plate, a pictorial globe at
+2 km/px whose coast the warp can hold to seven pixels and sixteen kilometres.  The check figure draws the
 shoreline through the model over the scan, which is the test a number cannot
 replace.  The model is saved beside the figures and read back by every later
 run, so a map is fitted once.
@@ -291,6 +293,7 @@ CROSS_WORDS = ("crossing", "crossed", "across", "overland", "portage", "over the
 # the georeference
 FIT_RMS_PX, FIT_MAX_PX = 4.0, 10.0
 COAST_MEDIAN_PX, COAST_WITHIN_6 = 8.0, 0.4    # after the coastline refinement
+COAST_MEDIAN_KM = 8.0                          # and on the ground: a pictorial globe at 2 km/px is no map
 FAMILIES = ("stere", "lcc", "eqdc", "aea", "bonne", "poly", "merc", "eqc", "laea", "aeqd")
 
 # the extraction
@@ -298,6 +301,7 @@ DOT_AREA, DOT_SIZE = (2, 60), 10          # a dot: area in px, longest side
 DASH_AREA, DASH_SIZE = (2, 400), 40       # a dash
 CORRIDOR_KM = 60.0                        # fragments this far from a leg's straight line are its candidates
 HOP_POWER = 1.6                           # edge cost = d^HOP_POWER, so short hops beat long jumps
+DOUBT_FACTOR, DOUBT_KM = 1.5, 5.0        # a chain longer than this times the leg is doubted
 
 # maps in the collection and the tracks drawn on them.  ``rotate`` is quarter
 # turns anticlockwise to north-up; ``ink`` how the route is drawn
@@ -315,7 +319,7 @@ MAPS = {
                                           "rcmp-high-arctic-patrols-007", "rcmp-high-arctic-patrols-008",
                                           "rcmp-high-arctic-patrols-009", "rcmp-high-arctic-patrols-010",
                                           "posts-rcmp-missions-023")}),
-    "kruger-1930-006": dict(rotate=0, ink="dashes", tracks={"kruger-1930-001": None}),
+    "kruger-1930-006": dict(rotate=0, ink="dashes", tracks={}),      # georeferenced, but no route drawn on it
     "kruger-1930-027": dict(rotate=0, ink="dashes", tracks={}),
     "kruger-1930-061": dict(rotate=0, ink="dashes", tracks={}),
     "nares-greely-154": dict(rotate=0, ink="dashes", tracks={"nares-greely-023": None}),
@@ -327,15 +331,25 @@ MAPS = {
                                           "crocker-land-1913-004": None}),
     "cook-1908-axel-heiberg-041": dict(rotate=0, ink="dashes", erase_coast=True,      # a stippled coast
                                        tracks={"cook-1908-axel-heiberg-001": None, "cook-1908-axel-heiberg-002": None}),
-    "sverdrup-bernier-peary-064": dict(rotate=0, ink="dashes",
+    "sverdrup-bernier-peary-064": dict(rotate=0, ink="dashes", erase_coast=True,     # hachured relief
+                                       grade_cap="review",
+                                       note="a first-reconnaissance sketch with hachured relief: the dash-dot "
+                                            "route is hard to tell from the shading and the chain wanders, so "
+                                            "the corridor is weak evidence here",
                                        tracks={"sverdrup-bernier-peary-300": None, "sverdrup-bernier-peary-301": None}),
-    "kane-hall-polaris-193": dict(rotate=0, ink="dashes", tracks={"kane-hall-polaris-263": None}),
+    "kane-hall-polaris-193": dict(rotate=0, ink="dots", erase_coast=True,          # hachured coasts
+                                  tracks={"kane-hall-polaris-263": None},
+                                  grade_cap="review",   # Hayes's Ellesmere coast is a degree out
+                                  note="Hayes's own chart puts the Ellesmere coast a degree too far north, so "
+                                       "a route digitized against it is only as good as his coast"),
     "sverdrup-bernier-peary-154": dict(rotate=0, ink="dashes", tracks={}),
 }
 
 
 # maps in the candidate list that have no track to digitize onto, and why
 MAP_NOTES = {
+    "kruger-1930-006": "Barr's locator map of the search area: georeferenced (3 px), but it draws no route at "
+                       "all, only coasts, names and the two posts, so there is nothing on it to digitize.",
     "kruger-1930-027": "Krüger's own sketch of the route he intended, not the one he took: nothing to route.",
     "kruger-1930-061": "the 1957 Geological Survey sledge journey to Meighen Island has no track artifact yet.",
     "nares-greely-204": "Lockwood's chart of his March to April 1883 journey north from Fort Conger; the only 1883 "
@@ -1013,9 +1027,11 @@ def georef_map(map_id, family=None, no_coast=False):
     res = np.hypot(px - np.array([c["px"] for c in cps]), py - np.array([c["py"] for c in cps]))
     rms, mx = float(np.sqrt((res ** 2).mean())), float(res.max())
     by_points = rms <= FIT_RMS_PX and mx <= FIT_MAX_PX
-    by_coast = bool(coast) and coast["coast_median_px"] <= COAST_MEDIAN_PX and coast["coast_within_6px"] >= COAST_WITHIN_6
+    by_coast = (bool(coast) and coast["coast_median_px"] <= COAST_MEDIAN_PX
+                and coast["coast_within_6px"] >= COAST_WITHIN_6 and coast["coast_median_px"] * km <= COAST_MEDIAN_KM)
     report = dict(map=map_id, rotate=rotate, n=len(cps), family=g.family, params=g.params, lon0=g.lon0,
                   scale=g.scale, affine=g.A.ravel().tolist(), quadratic=g.quad,
+                  warp=g.warp.to_dict() if g.warp is not None else None,
                   rms_px=rms, max_px=mx, km_per_px=km, rms_km=rms * km, max_km=mx * km,
                   rms_px_before_coast=rms0, max_px_before_coast=mx0,
                   accepted=bool(by_points or by_coast),
@@ -1252,8 +1268,12 @@ def digitize_track(map_id, track_id, terrain=None, ink=None):
         p2 = path[keep]
         lon, lat = g.to_ll(p2[:, 0], p2[:, 1])
         ll = [wps[i]] + [(float(la), float(lo)) for la, lo in zip(lat[1:-1], lon[1:-1])] + [wps[i + 1]]
-        legs.append(dict(source="ink", ll=ll, px=p2.tolist()))
-        report.append((i, "ink", len(p2)))
+        # a chain much longer than the leg is hachures or lettering, not the
+        # route: kept for the picture, doubted for the routing
+        straight = gc_km(wps[i], wps[i + 1])
+        source = "ink" if line_km(ll) <= DOUBT_FACTOR * straight + DOUBT_KM else "ink-doubtful"
+        legs.append(dict(source=source, ll=ll, px=p2.tolist()))
+        report.append((i, source, len(p2)))
     DIGIT.mkdir(parents=True, exist_ok=True)
     fc = {"type": "FeatureCollection", "map": map_id, "track": track_id, "ink": ink,
           "km_per_px": km, "fragments": int(len(frags)), "spacing_px": spacing,
@@ -1263,8 +1283,9 @@ def digitize_track(map_id, track_id, terrain=None, ink=None):
                        for i, lg in enumerate(legs)]}
     (DIGIT / f"{track_id}.geojson").write_text(json.dumps(fc))
     n_ink = sum(1 for lg in legs if lg["source"] == "ink")
+    n_doubt = sum(1 for lg in legs if lg["source"] == "ink-doubtful")
     print(f"{track_id} on {map_id}: {len(frags)} fragments ({ink}, spacing {spacing:.1f} px), "
-          f"{n_ink} of {len(legs)} legs from ink", file=sys.stderr)
+          f"{n_ink} of {len(legs)} legs from ink, {n_doubt} doubted", file=sys.stderr)
     return legs, fc
 
 
@@ -1751,7 +1772,9 @@ def verdict(rec):
     if rec.get("digitized"):
         n_ink = rec["digitized_ink_legs"]
         bits.append(f"{n_ink} of {len(legs)} legs follow ink digitized from {rec['map']} "
-                    f"(georef rms {rec['georef_rms_km']:.1f} km)")
+                    f"(georef rms {rec['georef_rms_km']:.1f} km)"
+                    + (f", {rec['digitized_doubtful_legs']} chained through hachures or lettering and doubted"
+                       if rec.get("digitized_doubtful_legs") else ""))
         offs = [l["mean_off_map_km"] for l in legs if "mean_off_map_km" in l]
         if offs:
             bits.append(f"the routed line runs {np.mean(offs):.1f} km from the printed one on average")
@@ -1791,10 +1814,15 @@ def verdict(rec):
     elif fb:
         rec["grade"] = "review"
         bits.append("the legs outside the DEM stay great circles, which is right over the sea ice; review the rest")
-    elif rec.get("digitized") and rec["digitized_ink_legs"] < 0.5 * len(legs):
+    elif rec.get("digitized") and (rec["digitized_ink_legs"] < 0.5 * len(legs)
+                                   or rec.get("digitized_doubtful_legs", 0) > 0.2 * len(legs)):
         rec["grade"] = "review"
     else:
         rec["grade"] = "recommend"
+    spec = MAPS.get(rec.get("map") or "", {})
+    if spec.get("grade_cap") and rec["grade"] == "recommend":
+        rec["grade"] = spec["grade_cap"]
+        bits.append(spec.get("note", "the map is not to be trusted for this"))
     return "; ".join(bits)
 
 
@@ -1994,7 +2022,8 @@ def cmd_route(a):
                    waypoints_moved=[dict(index=i, lat=w["lat"], lon=w["lon"], was=w["was"], why=w.get("moved_why", ""))
                                     for i, w in enumerate(wps_raw) if "was" in w])
         if dig:
-            rec.update(digitized=True, map=dig["map"], digitized_ink_legs=sum(1 for l in dig["legs"] if l["source"] == "ink"))
+            rec.update(digitized=True, map=dig["map"], digitized_ink_legs=sum(1 for l in dig["legs"] if l["source"] == "ink"),
+                       digitized_doubtful_legs=sum(1 for l in dig["legs"] if l["source"] == "ink-doubtful"))
             _, grep = load_georef(dig["map"])
             rec["georef_rms_km"] = grep["rms_km"] if grep else float("nan")
         if len(old) > 1 and len(line) > 1:
