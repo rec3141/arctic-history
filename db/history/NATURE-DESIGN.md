@@ -12,7 +12,8 @@ model aboard answers a question about ice thickness in McClure Strait with
 Seadragon's 1960 soundings and the Amundsen's own.
 
 This document is the design to argue with before any table is made. Aboard,
-the domain belongs to @doc; the entry side is built with him.
+the domain belongs to @doc, the resident scientist, with @ada, the ship's
+library, beside him; the entry side is built with them (section 7a).
 
 ## 1. Principles carried over
 
