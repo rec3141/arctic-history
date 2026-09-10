@@ -2422,6 +2422,13 @@ def validate(c) -> dict:
             bad("subject", name, "no backbone id (GBIF, WoRMS, WEBLEX, IAU) and no note saying why")
         if r["bibkey"] and r["bibkey"] not in source_keys:
             bad("subject", name, f"bibkey {r['bibkey']} is in no source entry")
+        # the names in the languages of the region are half the record: a
+        # living thing, a kind of ice, a weather, a thing in the sky without
+        # its Inuktitut or Kalaallisut name is worth a researcher's eye
+        if r["kind"] in ("taxon", "ice", "weather", "sky", "water", "landform", "phenomenon") \
+                and not r["inuktitut"] and not r["kalaallisut"] and r["rank"] not in ("family", "order", "class", "phylum", "kingdom"):
+            note("subject", name, "no Inuktitut or Kalaallisut name: look in Rasmussen's and Boas's vocabularies, "
+                                  "the NWMB species lists and the IQ studies, or say in the note that none is recorded")
     for r in c.execute("SELECT * FROM observations"):
         if r["subject"] not in subjects:
             bad("observation", r["id"], f"subject {r['subject']!r} is no subject")
