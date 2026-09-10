@@ -248,11 +248,50 @@ timeline that reads oddly is usually a date entered at the wrong precision.
 ship's cat or bear cub is an `animal` row (`history-db.py animal --name Mike
 --kind dog --role "..." --affiliation "..." --bibkey ...`), a ship, boat or
 aircraft is a `vessel` row (`history-db.py vessel --name "HMS Investigator"
---kind barque --built "1848, Greenock" --lost "..." --affiliation ...`), and
-pages link them as [[animal:Mike]] and [[vessel:HMS Investigator]]. Use the
-name as it is usually written, check `list --what animals` or `vessels`
-first, and put the ship's other names in `--also`. Every vessel a track
-belongs to should exist as a row.
+--kind barque --kind-note "purchased into the Navy" --built "1848, Greenock"
+--lost "..." --affiliation ...`), and pages link them as [[animal:Mike]] and
+[[vessel:HMS Investigator]]. Use the name as it is usually written, check
+`list --what animals` or `vessels` first, and put the ship's other names in
+`--also`. Every vessel a track belongs to should exist as a row.
+
+**A vessel's `--kind` is a code, not a sentence.** The map filters on it, so
+the tool refuses anything else. Pick the hull, rig or craft type:
+
+| code | use it for |
+|---|---|
+| `ship` | full-rigged: a discovery ship, a frigate, an Elizabethan ship of the Queen's navy |
+| `barque` | barque or bark, three masts with the mizzen fore-and-aft |
+| `brig` | brig, brigantine, gun-brig |
+| `schooner` | schooner of any number of masts, with or without an auxiliary |
+| `sloop` | single-masted, and the small converted craft rigged that way |
+| `yacht` | a private or converted yacht, under sail or screw |
+| `bomb-vessel` | the mortar ships taken into the discovery service: Erebus, Terror, Hecla, Fury |
+| `boat` | a ship's boat, a pinnace, a steam launch: anything carried, towed or rowed |
+| `umiak` | an open skin boat |
+| `steamer` | powered and nothing more particular: paddle, screw, tug, gunboat, revenue cutter |
+| `tender` | a small steamer attached to a squadron |
+| `icebreaker` | built to break ice, from the Wind class to the Polar class |
+| `submarine` | a submarine |
+| `whaler` | a whaling vessel whose rig no source gives |
+| `steam-whaler` | the steam whalers of the last whaling decades |
+| `sealer` | a sealing vessel, whether steam, motor or sail |
+| `research-vessel` | research and survey work |
+| `cruise-ship` | tourist and expedition cruising |
+| `transport` | a storeship, a supply or hospital ship, a chartered transport |
+| `freighter` | cargo |
+| `tanker` | oil |
+| `aircraft` | any aeroplane; the type goes in the note |
+
+The code names the rig or the hull where a source gives one, and the work
+where that is all it gives: a whaling barque is `--kind barque` with
+`--kind-note whaler`, while a whaler whose rig nobody recorded is `--kind
+whaler`. Everything the code leaves out goes in `--kind-note`, free text: the
+class (`--kind icebreaker --kind-note "Wind class"`), the aircraft type
+(`--kind aircraft --kind-note "DHC-3 Otter"`), the trade, a conversion
+(`--kind sloop --kind-note "converted herring boat"`), who bought her
+(`--kind whaler --kind-note "purchased into the Navy"`). The wiki shows the
+code's word and then the note, so write the note as it would be read after a
+comma. When the code says it all, leave the note off.
 
 **This is not Wikipedia: there is no notoriety requirement.** Enter every
 person a source names — the seamstress, the dog driver, the ship's cook, the
