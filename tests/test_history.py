@@ -734,3 +734,198 @@ class HistoryTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class NatureTests(unittest.TestCase):
+    """The natural half: subjects, observations, the journal, the publish."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name)
+        self.c = H.connect(self.root / "history.sqlite")
+        self.addCleanup(self.c.close)
+        H.add_topic(self.c, "muskox-and-caribou", "Muskox and caribou", domain="nature")
+        H.add_source(self.c, "sverdrup1904new", "New Land", author="Sverdrup", year="1904",
+                     url="https://example.invalid/newland", licence="public-domain", primary=True, entry_type="book")
+        H.add_subject(self.c, "Bovidae", kind="taxon", domain="biology", rank="family", backbone_id="gbif:9614",
+                      topic="muskox-and-caribou")
+        H.add_subject(self.c, "Ovibos moschatus", kind="taxon", domain="biology", rank="species", parent="Bovidae",
+                      english="muskox", french="boeuf musqué", inuktitut="umingmak", also="musk-ox; musk ox",
+                      backbone_id="gbif:2441090", topic="muskox-and-caribou", bibkey="sverdrup1904new",
+                      note="The muskox is the archipelago's one large grazer.")
+        H.add_subject(self.c, "air temperature", kind="weather", domain="meteorology", unit="C",
+                      note="The air temperature as the expeditions read it.", topic="muskox-and-caribou")
+        H.add_place(self.c, "Eureka", lat=79.99, lon=-85.94, kind="weather-station")
+
+    def obs(self, ident="muskox-and-caribou-001", **kw):
+        base = dict(date="1900-04-13", lat=78.6, lon=-95.2, count="a herd of 17", method="hunt",
+                    observer="Otto Sverdrup", bibkey="sverdrup1904new", pages="v. 1 p. 412",
+                    detail="Sverdrup's party shot four of a herd of seventeen muskoxen.")
+        base.update(kw)
+        subject = base.pop("subject", "muskox")
+        return H.add_observation(self.c, ident, "muskox-and-caribou", subject, **base)
+
+    def test_topic_domain_is_a_code(self):
+        self.assertEqual(self.c.execute("SELECT domain FROM topics").fetchone()["domain"], "nature")
+        with self.assertRaises(ValueError):
+            H.add_topic(self.c, "x", "X", domain="science")
+        H.add_topic(self.c, "franklin-1845", "Franklin")
+        self.assertEqual(self.c.execute("SELECT domain FROM topics WHERE slug='franklin-1845'").fetchone()["domain"], "history")
+
+    def test_subject_kind_and_domain_are_codes(self):
+        with self.assertRaises(ValueError):
+            H.add_subject(self.c, "aurora", kind="light", domain="astronomy")
+        with self.assertRaises(ValueError):
+            H.add_subject(self.c, "aurora", kind="sky", domain="skies")
+        H.add_subject(self.c, "aurora", kind="sky", domain="astronomy", note="The northern lights.")
+        # a re-run without kind keeps the kind
+        H.add_subject(self.c, "aurora", english="northern lights")
+        r = self.c.execute("SELECT kind, english FROM subjects WHERE name='aurora'").fetchone()
+        self.assertEqual((r["kind"], r["english"]), ("sky", "northern lights"))
+
+    def test_any_name_resolves(self):
+        for name in ("Ovibos moschatus", "ovibos moschatus", "muskox", "umingmak", "musk ox", "Musk-ox", "boeuf musqué"):
+            self.assertEqual(H.resolve_subject(self.c, name), "Ovibos moschatus", name)
+        self.assertEqual(H.resolve_subject(self.c, "narwhal"), "")
+        self.assertEqual(self.c.execute("SELECT parent FROM subjects WHERE name='Ovibos moschatus'").fetchone()["parent"], "Bovidae")
+
+    def test_observation_is_refused_without_its_parts(self):
+        with self.assertRaises(ValueError):
+            self.obs(subject="narwhal")
+        with self.assertRaises(ValueError):
+            self.obs(bibkey="")
+        with self.assertRaises(ValueError):
+            self.obs(date="spring")
+        with self.assertRaises(ValueError):
+            self.obs(lat=None, lon=None)
+        with self.assertRaises(ValueError):
+            self.obs(lat=None, lon=None, place="Nowhere")
+        with self.assertRaises(ValueError):
+            self.obs(detail="")
+        with self.assertRaises(ValueError):
+            self.obs(method="guess")
+        with self.assertRaises(ValueError):
+            self.obs(confidence="sure")
+        # a variable wants its number and unit as written
+        with self.assertRaises(ValueError):
+            self.obs(subject="air temperature", count="")
+        with self.assertRaises(ValueError):
+            self.obs(subject="air temperature", value=-58.5)
+        self.obs(subject="air temperature", value=-58.5, unit="F", method="instrument", count="")
+        r = self.c.execute("SELECT value, unit FROM observations").fetchone()
+        self.assertEqual((r["value"], r["unit"]), (-58.5, "F"))
+
+    def test_a_place_supplies_the_position_and_the_timeline_gets_a_row(self):
+        self.obs(lat=None, lon=None, place="Eureka", subject="air temperature", value=-40, unit="C",
+                 method="station-record", count="", qualifier="coldest of the winter")
+        r = self.c.execute("SELECT lat, lon, subject FROM observations").fetchone()
+        self.assertAlmostEqual(r["lat"], 79.99)
+        self.assertEqual(r["subject"], "air temperature")
+        d = self.c.execute("SELECT * FROM dates WHERE entity_kind='observation'").fetchone()
+        self.assertEqual(d["date"], "1900-04-13")
+        self.assertEqual(d["label"], "air temperature, -40 C, coldest of the winter")
+        self.assertEqual(d["place"], "Eureka")
+        # re-dating replaces the timeline row
+        self.obs(lat=None, lon=None, place="Eureka", subject="air temperature", value=-40, unit="C",
+                 method="station-record", count="", qualifier="coldest of the winter", date="1901-02-04")
+        rows = self.c.execute("SELECT date FROM dates WHERE entity_kind='observation'").fetchall()
+        self.assertEqual([r["date"] for r in rows], ["1901-02-04"])
+
+    def test_forget_guards_a_subject_with_a_record(self):
+        self.obs()
+        with self.assertRaises(ValueError):
+            H.forget(self.c, "subject", "Ovibos moschatus")
+        r = H.forget(self.c, "observation", "muskox-and-caribou-001")
+        self.assertEqual(r["dates"], 1)
+        H.forget(self.c, "subject", "Ovibos moschatus")
+
+    def test_check_finds_what_is_wrong(self):
+        H.add_subject(self.c, "Rangifer tarandus", kind="taxon", domain="biology", topic="muskox-and-caribou")
+        self.obs()
+        self.c.execute("UPDATE observations SET subject='Nobody', bibkey='nokey'")
+        self.c.commit()
+        v = H.validate(self.c)
+        whats = {(p["kind"], p["what"], p["detail"][:24]) for p in v["problems"]}
+        self.assertIn(("subject", "Rangifer tarandus", "no backbone id (GBIF, Wo"), whats)
+        self.assertIn(("observation", "muskox-and-caribou-001", "subject 'Nobody' is no s"), whats)
+        self.assertIn(("observation", "muskox-and-caribou-001", "bibkey nokey is in no so"), whats)
+        self.assertEqual(v["stats"]["subjects"], 4)
+        self.assertEqual(v["stats"]["observations"], 1)
+
+    def test_links_resolve_subjects_by_any_name_and_mentions_by_proper_name(self):
+        H.add_page(self.c, "muskox-overview", "The muskox", "Sverdrup fed his dogs on [[subject:umingmak]]; "
+                   "the herds of Ovibos moschatus and the air temperature. [[subject:muskox|the beast]]",
+                   topic="muskox-and-caribou")
+        info = H.reindex_links(self.c)
+        self.assertEqual(info["wanted"], {})
+        rows = self.c.execute("SELECT kind, name, target FROM links WHERE src='muskox-overview' ORDER BY name").fetchall()
+        targets = {(r["kind"], r["name"]): r["target"] for r in rows}
+        self.assertEqual(targets[("subject", "umingmak")], "subject/ovibos-moschatus")
+        self.assertEqual(targets[("subject", "muskox")], "subject/ovibos-moschatus")
+        self.assertNotIn(("subject", "air temperature"), targets)   # a bare common noun does not auto-link
+        # the observation ties the subject page to its observer and source
+        H.add_person(self.c, "Otto Sverdrup", role="leader")
+        self.obs()
+        H.reindex_links(self.c)
+        back = {r["kind"] + ":" + r["name"] for r in self.c.execute(
+            "SELECT kind, name FROM links WHERE src='subject/ovibos-moschatus'")}
+        self.assertIn("person:Otto Sverdrup", back)
+        self.assertIn("source:sverdrup1904new", back)
+
+    def test_journal_ingest_is_idempotent_and_reports_failures(self):
+        j = self.root / "journal.jsonl"
+        j.write_text("\n".join([
+            json.dumps({"kind": "observation", "id": "amundsen-2026-09-11-003", "subject": "muskox",
+                        "date": "2026-09-11", "lat": 76.104, "lon": -92.41, "count": "3", "method": "sighting",
+                        "observer": "the bridge watch", "vessel": "CCGS Amundsen",
+                        "detail": "Three muskoxen on the shore off the port bow."}),
+            json.dumps({"kind": "observation", "id": "amundsen-2026-09-11-004", "subject": "narwhal",
+                        "date": "2026-09-11", "lat": 76.2, "lon": -92.6, "detail": "no such subject"}),
+            json.dumps({"kind": "observation", "id": "amundsen-2026-09-11-005", "subject": "Ovibos moschatus",
+                        "date": "2026-09-12", "lat": 76.3, "lon": -92.7, "sensitive": 1, "method": "sighting",
+                        "detail": "A cow with a calf, bedded down.", "place": "Eureka"}),
+        ]) + "\n")
+        r = H.ingest_journal(self.c, j)
+        self.assertEqual(len(r["done"]), 2)
+        self.assertEqual(len(r["failed"]), 1)
+        self.assertIn("narwhal", r["failed"][0]["error"])
+        row = self.c.execute("SELECT topic, origin, bibkey FROM observations WHERE id='amundsen-2026-09-11-003'").fetchone()
+        self.assertEqual((row["topic"], row["origin"], row["bibkey"]), ("ship-journal", "ship", "amundsenjournal"))
+        self.assertTrue(self.c.execute("SELECT 1 FROM sources WHERE bibkey='amundsenjournal'").fetchone())
+        # a corrected line replaces the row
+        j.write_text(json.dumps({"kind": "observation", "id": "amundsen-2026-09-11-003", "subject": "muskox",
+                                 "date": "2026-09-11", "lat": 76.104, "lon": -92.41, "count": "4", "method": "sighting",
+                                 "observer": "the bridge watch", "detail": "Four, on a second look."}) + "\n")
+        H.ingest_journal(self.c, j)
+        self.assertEqual(self.c.execute("SELECT COUNT(*) AS n FROM observations").fetchone()["n"], 2)
+        self.assertEqual(self.c.execute("SELECT count FROM observations WHERE id='amundsen-2026-09-11-003'").fetchone()["count"], "4")
+        # the sensitive one publishes coarsened, with its place blank
+        out = self.root / "pub"
+        m = H.publish(out, self.root / "history.sqlite")
+        self.assertEqual(m["observations"], 2)
+        self.assertEqual(m["subjects"], 3)
+        pub = json.loads((out / "data/history/observations.json").read_text())["observations"]
+        sens = [o for o in pub if o["id"] == "amundsen-2026-09-11-005"][0]
+        self.assertEqual((sens["lat"], sens["lon"], sens["place"]), (76.5, -92.5, ""))
+        self.assertEqual(sens["domain"], "biology")
+        full = self.c.execute("SELECT lat, place FROM observations WHERE id='amundsen-2026-09-11-005'").fetchone()
+        self.assertEqual((full["lat"], full["place"]), (76.3, "Eureka"))
+        subs = json.loads((out / "data/history/subjects.json").read_text())["subjects"]
+        musk = [s for s in subs if s["name"] == "Ovibos moschatus"][0]
+        self.assertEqual(musk["observations"], 2)
+        self.assertEqual(musk["page"], "subject/ovibos-moschatus")
+        bov = [s for s in subs if s["name"] == "Bovidae"][0]
+        self.assertEqual(bov["children"], ["Ovibos moschatus"])
+        page = json.loads((out / "data/history/pages/subject__ovibos-moschatus.json").read_text())
+        self.assertEqual(page["kind"], "subject")
+        self.assertIn("one large grazer", page["html"])
+        excerpt = (out / "data/history/excerpts/subject__ovibos-moschatus.txt").read_text()
+        self.assertIn("## The record", excerpt)
+        self.assertIn("2026-09-11: Ovibos moschatus, 4", excerpt)
+        self.assertNotIn("Eureka", excerpt)     # the sensitive row's place stays on grid
+        topics = json.loads((out / "data/history/index.json").read_text())["topics"]
+        self.assertEqual({t["slug"]: t["domain"] for t in topics}["muskox-and-caribou"], "nature")
+        timeline = json.loads((out / "data/history/timeline.json").read_text())["timeline"]
+        kinds = {t["entity_kind"] for t in timeline}
+        self.assertIn("observation", kinds)

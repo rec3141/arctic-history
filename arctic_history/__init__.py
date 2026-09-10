@@ -44,7 +44,7 @@ HISTORY_DIR = DB_DIR / "history"
 HISTORY_DB = HISTORY_DIR / "history.sqlite"
 
 # the kinds of thing a wiki page can be about; `page` is a hand-written narrative
-KINDS = ("page", "artifact", "source", "person", "place", "event", "topic", "animal", "vessel")
+KINDS = ("page", "artifact", "source", "person", "place", "event", "topic", "animal", "vessel", "subject")
 ARTIFACT_TYPES = ("image", "text", "track", "place", "event", "map", "quote", "object")
 # `licence` is a code from this vocabulary; what the code does not say (the
 # holder, the term, the request number, why it is thought expired) goes in
@@ -761,6 +761,104 @@ CREATE TABLE IF NOT EXISTS vessels (
 );
 """
 
+SCHEMA_NATURE = """
+-- The natural half of the layer. A subject is what an observation is of: a
+-- species, a rock unit, a fossil bed, a kind of ice, a variable like air
+-- temperature, a named thing that happens like an aurora or a magnetic storm.
+-- One table for every kind, because the wiki wants one kind of page and one
+-- link form ([[subject:Ovibos moschatus]], [[subject:muskox]], [[subject:umingmak]]).
+CREATE TABLE IF NOT EXISTS subjects (
+  name        TEXT PRIMARY KEY,            -- Ovibos moschatus; Eureka Sound Group; aurora; air temperature
+  kind        TEXT NOT NULL DEFAULT '',    -- a code from SUBJECT_KINDS
+  domain      TEXT NOT NULL DEFAULT '',    -- a code from DOMAINS
+  rank        TEXT DEFAULT '',             -- taxa and rock units: species, genus, family; formation, group
+  parent      TEXT DEFAULT '',             -- the next rank up, by name: the tree
+  english     TEXT DEFAULT '',
+  french      TEXT DEFAULT '',
+  inuktitut   TEXT DEFAULT '',
+  kalaallisut TEXT DEFAULT '',
+  also        TEXT DEFAULT '',             -- other names, synonyms, spellings; semicolon separated
+  unit        TEXT DEFAULT '',             -- for a variable: F, C, fathoms, m, deg, hPa, cm
+  status      TEXT DEFAULT '',             -- COSEWIC or IUCN code with its year, for a taxon
+  backbone_id TEXT DEFAULT '',             -- GBIF or WoRMS id; a WEBLEX unit id; an IAU or SIMBAD name
+  note        TEXT DEFAULT '',             -- the reader's paragraph: the generated page's body
+  bibkey      TEXT DEFAULT '',
+  topic       TEXT DEFAULT '',
+  updated     TEXT DEFAULT ''
+);
+CREATE INDEX IF NOT EXISTS subjects_kind ON subjects (kind);
+CREATE INDEX IF NOT EXISTS subjects_domain ON subjects (domain);
+
+-- The observation is the atom of the natural half, as the date is of the
+-- timeline: one subject, one date, one position, one source, and where there
+-- is a number, the number in the unit it was written in.
+CREATE TABLE IF NOT EXISTS observations (
+  id          TEXT PRIMARY KEY,            -- <topic>-<nnn> from research; amundsen-<date>-<nnn> from the ship
+  topic       TEXT NOT NULL,
+  subject     TEXT NOT NULL,               -- subjects.name; the writer resolves any of its names
+  date_text   TEXT DEFAULT '',             -- as written
+  date_start  TEXT DEFAULT '',             -- ISO
+  date_end    TEXT DEFAULT '',
+  lat         REAL,
+  lon         REAL,
+  place       TEXT DEFAULT '',             -- places.name; fills lat/lon when they are not given
+  depth       REAL,                        -- metres below the surface: the water column, a core
+  height      REAL,                        -- metres above: the sky and the air
+  value       REAL,                        -- the number, when there is one
+  unit        TEXT DEFAULT '',             -- as written: F, fathoms, feet, deg, cm; never converted here
+  count       TEXT DEFAULT '',             -- living things: "about 200", "12", "a herd", "present", "absent"
+  qualifier   TEXT DEFAULT '',             -- "first of the season", "coldest of the winter", "no bottom at"
+  stage       TEXT DEFAULT '',             -- calf, juvenile, adult; flowering; in seed
+  sex         TEXT DEFAULT '',
+  behaviour   TEXT DEFAULT '',             -- hauled out, feeding, migrating, denning
+  method      TEXT DEFAULT '',             -- a code from METHODS
+  instrument  TEXT DEFAULT '',             -- the thermometer, the dip circle, the lead line, the CTD
+  observer    TEXT DEFAULT '',             -- people.name, or the party or the watch
+  vessel      TEXT DEFAULT '',             -- vessels.name when it applies
+  detail      TEXT NOT NULL DEFAULT '',    -- the sentence that says what was seen, naming the observer
+  confidence  TEXT DEFAULT '',             -- certain, probable, doubtful: the identification or the reading
+  artifact_id TEXT DEFAULT '',             -- the photograph, quote, chart or object that is the evidence
+  event_id    INTEGER,                     -- the human-history event this also is
+  sensitive   INTEGER NOT NULL DEFAULT 0,  -- a den, a nest, a haul-out, a fossil site at risk: published coarsened
+  origin      TEXT NOT NULL DEFAULT 'research',  -- research, ship, crew
+  bibkey      TEXT NOT NULL DEFAULT '',
+  pages       TEXT DEFAULT '',
+  tags        TEXT DEFAULT '[]',
+  updated     TEXT DEFAULT ''
+);
+CREATE INDEX IF NOT EXISTS observations_subject ON observations (subject);
+CREATE INDEX IF NOT EXISTS observations_topic ON observations (topic);
+CREATE INDEX IF NOT EXISTS observations_date ON observations (date_start);
+"""
+
+SUBJECT_KINDS = {
+    "taxon": "a living thing at any rank: Ovibos moschatus, Cetacea, Saxifraga oppositifolia, a sea-ice diatom",
+    "unit": "a rock unit or structure: Eureka Sound Group, Strand Fiord Formation, the Sverdrup Basin, a salt diapir",
+    "fossil": "a fossil bed or find: the Geodetic Hills forest, a Devonian fish from Ellesmere, the Miocene beaver pond",
+    "mineral": "a mineral, ore or meteorite: the Cape York irons, native iron of Disko, coal at Bache Peninsula",
+    "landform": "a form of the land surface: pingo, patterned ground, raised beach, ice-wedge polygon",
+    "ice": "a kind of ice or ice event: ice shelf, ice island, glacier surge, sikuliaq, multiyear floe, polynya",
+    "water": "the water column and the sea floor: sounding, water temperature, salinity, current, tide, wave",
+    "weather": "a weather variable or phenomenon: air temperature, pressure, wind, fog, blizzard, parhelion",
+    "sky": "the sky: aurora, the midnight sun, an eclipse, a comet, Venus in daylight",
+    "field": "the magnetic field: declination, dip, the North Magnetic Pole, a magnetic storm",
+    "phenomenon": "anything else that happens: mirage and looming, a rock fall, an earthquake felt",
+}
+DOMAINS = ("biology", "geology", "glaciology", "oceanography", "sea-ice", "meteorology", "astronomy",
+           "geomagnetism", "hydrography", "freshwater")
+TOPIC_DOMAINS = ("history", "nature")
+METHODS = ("sighting", "hunt", "specimen", "transect", "aerial-survey", "camera", "acoustic", "edna",
+           "catch-record", "testimony", "instrument", "sounding", "dredge", "trawl", "net", "trap", "core",
+           "sample", "station-record", "survey", "satellite", "chart")
+CONFIDENCE = ("", "certain", "probable", "doubtful")
+ORIGINS = ("research", "ship", "crew")
+# the kinds of places the natural half adds to the human half's vocabulary
+PLACE_KINDS = ("community", "harbour", "cape", "strait", "site", "wreck", "station", "post", "island",
+               "region", "port", "river", "bay", "lake", "sound", "channel", "range", "basin", "fiord",
+               "glacier", "ice-cap", "ice-shelf", "ice-island", "polynya", "bird-cliff", "haul-out",
+               "denning-area", "calving-ground", "fossil-site", "outcrop", "meteorite-fall", "hot-spring",
+               "pingo", "ice-core-site", "tide-station", "magnetic-station", "weather-station")
+
 RASTER_SUFFIXES = (".jpg", ".jpeg", ".png", ".gif", ".tif", ".tiff", ".webp")
 ROUTING = ("", "water", "as-given", "terrain")   # how a track's line is drawn: routed through water, as its
                                                  # waypoints, or routed over the terrain (tools/digitize-tracks.py)
@@ -787,6 +885,7 @@ def connect(path: Path | None = None, create: bool = True) -> sqlite3.Connection
         c.executescript(SCHEMA)
         c.executescript(SCHEMA_EXTRA)
         c.executescript(SCHEMA_ANIMALS_VESSELS)
+        c.executescript(SCHEMA_NATURE)
         if "kind" not in {r[1] for r in c.execute("PRAGMA table_info(faces)")}:
             c.execute("ALTER TABLE faces ADD COLUMN kind TEXT NOT NULL DEFAULT 'person'")
         if "status" not in {r[1] for r in c.execute("PRAGMA table_info(pages)")}:
@@ -797,7 +896,8 @@ def connect(path: Path | None = None, create: bool = True) -> sqlite3.Connection
                                     ("artifacts", "view_file", "''"), ("artifacts", "routing", "''"),
                                     ("pages", "people", "'[]'"),
                                     ("sources", "rights_note", "''"), ("artifacts", "rights_note", "''"),
-                                    ("vessels", "kind_note", "''")):
+                                    ("vessels", "kind_note", "''"),
+                                    ("topics", "domain", "'history'"), ("animals", "subject", "''")):
             if col not in {r[1] for r in c.execute(f"PRAGMA table_info({table})")}:
                 c.execute(f"ALTER TABLE {table} ADD COLUMN {col} TEXT DEFAULT {default}")
         c.commit()
@@ -1003,9 +1103,11 @@ def add_topic(c, slug: str, title: str | None = None, **kw) -> str:
     row = {"slug": slugify(slug)}
     if title:
         row["title"] = title
-    for f in ("summary", "researcher", "status"):
+    for f in ("summary", "researcher", "status", "domain"):
         if kw.get(f) not in (None, ""):
             row[f] = kw[f]
+    if row.get("domain", "history") not in TOPIC_DOMAINS:
+        raise ValueError(f"a topic's domain is one of {', '.join(TOPIC_DOMAINS)}")
     exists = c.execute("SELECT 1 FROM topics WHERE slug=?", (row["slug"],)).fetchone()
     if exists:
         # a plain UPDATE: an upsert's INSERT half would trip the NOT NULL title
@@ -1020,6 +1122,7 @@ def add_topic(c, slug: str, title: str | None = None, **kw) -> str:
     row.setdefault("summary", "")
     row.setdefault("researcher", "")
     row.setdefault("status", "open")
+    row.setdefault("domain", "history")
     return _upsert(c, "topics", "slug", row)
 
 
@@ -1124,7 +1227,8 @@ def forget(c, kind: str, ident) -> dict:
     tables = {"artifact": ("artifacts", "id"), "event": ("events", "id"),
               "person": ("people", "name"), "place": ("places", "name"),
               "animal": ("animals", "name"), "vessel": ("vessels", "name"),
-              "source": ("sources", "bibkey")}
+              "source": ("sources", "bibkey"), "subject": ("subjects", "name"),
+              "observation": ("observations", "id")}
     if kind not in tables:
         raise ValueError(f"kind must be date or one of {', '.join(tables)}")
     table, key = tables[kind]
@@ -1132,10 +1236,14 @@ def forget(c, kind: str, ident) -> dict:
     if not r:
         raise ValueError(f"no {kind} {ident!r}")
     if kind == "source":
-        users = [t for t in ("artifacts", "events", "people", "places")
+        users = [t for t in ("artifacts", "events", "people", "places", "observations", "subjects")
                  if c.execute(f"SELECT 1 FROM {t} WHERE bibkey=? LIMIT 1", (ident,)).fetchone()]
         if users:
             raise ValueError(f"source {ident!r} is still cited by rows in {', '.join(users)}; re-point them first")
+    if kind == "subject":
+        n_obs = c.execute("SELECT COUNT(*) AS n FROM observations WHERE subject=?", (ident,)).fetchone()["n"]
+        if n_obs:
+            raise ValueError(f"subject {ident!r} has {n_obs} observation(s); re-point or forget them first")
     n = c.execute("DELETE FROM dates WHERE entity_kind=? AND entity_id=?", (kind, str(ident))).rowcount
     c.execute(f"DELETE FROM {table} WHERE {key}=?", (ident,))
     c.commit()
@@ -1214,9 +1322,11 @@ def add_animal(c, name: str, **kw) -> str:
     the topic that first entered it keeps it, later runs fill blanks."""
     kw = _keep_home_topic(c, "animals", name, kw)
     row = {"name": name.strip()}
-    for f in ("kind", "also", "role", "born", "died", "affiliation", "note", "bibkey", "topic"):
+    for f in ("kind", "also", "role", "born", "died", "affiliation", "note", "bibkey", "topic", "subject"):
         if kw.get(f) is not None:
             row[f] = str(kw[f])
+    if row.get("subject"):
+        row["subject"] = resolve_subject(c, row["subject"]) or row["subject"]
     return _upsert(c, "animals", "name", row)
 
 
@@ -1230,6 +1340,195 @@ def add_vessel(c, name: str, **kw) -> str:
             row[f] = str(kw[f])
     _check_vessel_kind(row.get("kind", ""))
     return _upsert(c, "vessels", "name", row)
+
+
+# ---------------------------------------------------------------- the natural half
+def resolve_subject(c, name: str) -> str:
+    """The subjects.name behind any of a subject's names: the scientific or
+    technical name itself, or its English, French, Inuktitut or Kalaallisut
+    name, or a synonym in ``also``. '' when nothing matches."""
+    n = (name or "").strip()
+    if not n:
+        return ""
+    r = c.execute("SELECT name FROM subjects WHERE name=? COLLATE NOCASE", (n,)).fetchone()
+    if r:
+        return r["name"]
+    for col in ("english", "french", "inuktitut", "kalaallisut"):
+        r = c.execute(f"SELECT name FROM subjects WHERE {col}=? COLLATE NOCASE", (n,)).fetchone()
+        if r:
+            return r["name"]
+    low = n.lower()
+    for r in c.execute("SELECT name, also FROM subjects WHERE also<>''"):
+        if low in [x.strip().lower() for x in r["also"].split(";")]:
+            return r["name"]
+    return ""
+
+
+def add_subject(c, name: str, **kw) -> str:
+    """A subject of observation: a taxon, a rock unit, a kind of ice, a
+    variable, a thing in the sky. Like people: the topic that first entered
+    it keeps it, later runs fill blanks. ``kind`` and ``domain`` are codes."""
+    kw = _keep_home_topic(c, "subjects", name, kw)
+    row = {"name": name.strip()}
+    for f in ("kind", "domain", "rank", "parent", "english", "french", "inuktitut", "kalaallisut",
+              "also", "unit", "status", "backbone_id", "note", "bibkey", "topic"):
+        if kw.get(f) is not None:
+            row[f] = str(kw[f]).strip()
+    old = c.execute("SELECT kind, domain FROM subjects WHERE name=?", (row["name"],)).fetchone()
+    kind = row.get("kind") or (old["kind"] if old else "")
+    domain = row.get("domain") or (old["domain"] if old else "")
+    if kind not in SUBJECT_KINDS:
+        raise ValueError(f"a subject's kind is a code: {', '.join(SUBJECT_KINDS)}")
+    if domain not in DOMAINS:
+        raise ValueError(f"a subject's domain is a code: {', '.join(DOMAINS)}")
+    if row.get("parent"):
+        row["parent"] = resolve_subject(c, row["parent"]) or row["parent"]
+    return _upsert(c, "subjects", "name", row)
+
+
+def add_observation(c, id: str, topic: str, subject: str, **kw) -> str:
+    """One observation of nature: a subject, a date, a position, a source,
+    and the number as written. Refused without a subject that exists, a
+    date, a position or a place, and a bibkey — as an artifact is refused
+    without a credit. A variable (a subject with a unit) wants a value."""
+    ident = str(id).strip()
+    if not ident:
+        raise ValueError("an observation needs an id: <topic>-<nnn>, or amundsen-<date>-<nnn> from the ship")
+    name = resolve_subject(c, subject)
+    if not name:
+        raise ValueError(f"no subject {subject!r}: enter it with `subject` first (any of its names resolves)")
+    if not kw.get("bibkey"):
+        raise ValueError("every observation cites a bibkey")
+    date_text = str(kw.get("date", kw.get("date_text", "")) or "")
+    row = {"id": ident, "topic": slugify(topic), "subject": name, "date_text": date_text,
+           "date_start": _iso(kw.get("date_start") or date_text),
+           "date_end": _iso(kw.get("date_end") or (date_text.split("/")[-1] if "/" in date_text else "")),
+           "tags": _tag_list(kw.get("tags")),
+           "sensitive": 1 if kw.get("sensitive") else 0,
+           "origin": kw.get("origin") or "research"}
+    if not row["date_start"]:
+        raise ValueError(f"an observation needs a date; {date_text!r} is not one")
+    for f in ("lat", "lon", "depth", "height", "value"):
+        row[f] = None if kw.get(f) in (None, "") else float(kw[f])
+    for f in ("place", "unit", "count", "qualifier", "stage", "sex", "behaviour", "method", "instrument",
+              "observer", "vessel", "detail", "confidence", "artifact_id", "bibkey", "pages"):
+        if kw.get(f) is not None:
+            row[f] = str(kw[f]).strip()
+    if kw.get("event_id") not in (None, ""):
+        row["event_id"] = int(kw["event_id"])
+    if row.get("place") and (row["lat"] is None or row["lon"] is None):
+        pl = c.execute("SELECT lat, lon FROM places WHERE name=?", (row["place"],)).fetchone()
+        if pl and pl["lat"] is not None:
+            row["lat"], row["lon"] = pl["lat"], pl["lon"]
+    if row["lat"] is None or row["lon"] is None:
+        if not row.get("place"):
+            raise ValueError("an observation needs a lat/lon, or a place that has one")
+        if not c.execute("SELECT 1 FROM places WHERE name=?", (row["place"],)).fetchone():
+            raise ValueError(f"no place {row['place']!r} to take a position from: enter it, or give --lat/--lon")
+    if row["lat"] is not None and not -90 <= row["lat"] <= 90:
+        raise ValueError(f"latitude out of range: {row['lat']}")
+    if row["lon"] is not None and not -180 <= row["lon"] <= 180:
+        raise ValueError(f"longitude out of range: {row['lon']}")
+    if row.get("method", "") not in METHODS:
+        raise ValueError(f"method is a code: {', '.join(METHODS)}")
+    if row.get("confidence", "") not in CONFIDENCE:
+        raise ValueError("confidence is certain, probable or doubtful")
+    if row["origin"] not in ORIGINS:
+        raise ValueError(f"origin is one of {', '.join(ORIGINS)}")
+    if not row.get("detail"):
+        raise ValueError("an observation needs a detail: the sentence saying what was seen, naming the observer")
+    subj = c.execute("SELECT unit FROM subjects WHERE name=?", (name,)).fetchone()
+    if subj["unit"] and row.get("value") is None and not row.get("qualifier"):
+        raise ValueError(f"{name} is a variable in {subj['unit']}: give --value (and --unit as written), "
+                         "or a --qualifier saying why there is no number")
+    if row.get("value") is not None and not row.get("unit"):
+        raise ValueError("a value needs its unit, as written in the source")
+    prev = c.execute("SELECT date_start, date_end FROM observations WHERE id=?", (ident,)).fetchone()
+    out = _upsert(c, "observations", "id", row)
+    label = _observation_label(row)
+    _record_dates(c, "observation", out, row["date_start"], row["date_end"], date_text,
+                  old={**dict(prev), "title": _observation_label(dict(prev, **{k: row[k] for k in row if k not in prev.keys()}))} if prev else None,
+                  topic=row["topic"], label=label, lat=row["lat"], lon=row["lon"],
+                  place=row.get("place", ""), bibkey=row["bibkey"])
+    return out
+
+
+def _observation_label(row: dict) -> str:
+    """What the timeline shows for an observation: the subject, the number
+    or count, the qualifier."""
+    bits = [row.get("subject", "")]
+    if row.get("value") is not None:
+        bits.append(f"{row['value']:g} {row.get('unit', '')}".strip())
+    elif row.get("count"):
+        bits.append(str(row["count"]))
+    if row.get("qualifier"):
+        bits.append(row["qualifier"])
+    return ", ".join(b for b in bits if b)
+
+
+def coarsen(lat, lon, step: float = 0.5):
+    """A sensitive site's published position: rounded to the grid."""
+    if lat is None or lon is None:
+        return lat, lon
+    return round(round(lat / step) * step, 2), round(round(lon / step) * step, 2)
+
+
+def ingest_journal(c, path: Path, who: str = "ship") -> dict:
+    """The ship's journal: one JSON object per line, in the CLI's own
+    vocabulary, appended aboard and rsynced up. Each line becomes a row
+    through the same writers as everything else, so the brief's rules apply;
+    idempotent on id, so a corrected line replaces the row. A line that fails
+    is reported, not dropped silently, and the rest go in."""
+    done, failed = [], []
+    for n, line in enumerate(Path(path).read_text(encoding="utf-8").splitlines(), 1):
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        try:
+            d = json.loads(line)
+            kind = d.pop("kind", "observation")
+            if kind == "subject":
+                name = d.pop("name")
+                d.setdefault("topic", JOURNAL_TOPIC)
+                done.append(("subject", add_subject(c, name, **d)))
+                continue
+            if kind != "observation":
+                raise ValueError(f"unknown journal kind {kind!r}")
+            ident = d.pop("id")
+            subject = d.pop("subject")
+            topic = d.pop("topic", JOURNAL_TOPIC)
+            d.setdefault("origin", "ship")
+            d.setdefault("bibkey", JOURNAL_BIBKEY)
+            date = d.pop("date", d.pop("date_text", ""))
+            image = d.pop("artifact_file", "")
+            if not c.execute("SELECT 1 FROM topics WHERE slug=?", (slugify(topic),)).fetchone():
+                add_topic(c, topic, "The ship's journal", domain="nature",
+                          summary="What the Amundsen's own people saw and measured, entered aboard")
+            if d["bibkey"] == JOURNAL_BIBKEY and not c.execute(
+                    "SELECT 1 FROM sources WHERE bibkey=?", (JOURNAL_BIBKEY,)).fetchone():
+                add_source(c, JOURNAL_BIBKEY, "CCGS Amundsen natural-history journal", entry_type="dataset",
+                           author="the ship's company", year=str(datetime.now().year), licence="attribution",
+                           url="https://github.com/rec3141/arctic-history", topic=topic,
+                           rights_note="entered aboard by the crew and the resident scientist; credit the observer named")
+            if image:
+                photographer = d.get("observer", "the ship's company")
+                add_artifact(c, f"{ident}-img", topic, "image", f"{subject}, {date}",
+                             date=date, lat=d.get("lat"), lon=d.get("lon"), local_file=image,
+                             credit=f"Photograph: {photographer}, CCGS Amundsen", licence=d.pop("licence", "attribution"),
+                             bibkey=d["bibkey"], description=d.get("detail", ""), tags=d.get("tags", ""),
+                             people=[photographer] if c.execute("SELECT 1 FROM people WHERE name=?", (photographer,)).fetchone() else [])
+                d.setdefault("artifact_id", f"{ident}-img")
+            done.append(("observation", add_observation(c, ident, topic, subject, date=date, **d)))
+        except (ValueError, KeyError, TypeError, json.JSONDecodeError) as e:
+            failed.append({"line": n, "error": f"{type(e).__name__}: {e}", "text": line[:200]})
+    if done:
+        add_worklog(c, JOURNAL_TOPIC, f"journal ingest: {len(done)} line(s) from {Path(path).name}"
+                    + (f"; {len(failed)} failed" if failed else ""), who=who)
+    return {"done": done, "failed": failed}
+
+
+JOURNAL_TOPIC = "ship-journal"
+JOURNAL_BIBKEY = "amundsenjournal"
 
 
 def add_event(c, topic: str, date: str, title: str, **kw) -> int:
@@ -1373,7 +1672,7 @@ def resume_state(c, topic: str) -> dict:
     t = slugify(topic)
     row = c.execute("SELECT * FROM topics WHERE slug=?", (t,)).fetchone()
     counts = {}
-    for table in ("sources", "artifacts", "pages", "people", "places", "events"):
+    for table in ("sources", "artifacts", "pages", "people", "places", "events", "subjects", "observations"):
         counts[table] = c.execute(f"SELECT COUNT(*) AS n FROM {table} WHERE topic=?", (t,)).fetchone()["n"]
     counts["tracks"] = c.execute("SELECT COUNT(*) AS n FROM artifacts WHERE topic=? AND type='track'", (t,)).fetchone()["n"]
     counts["dates"] = c.execute("SELECT COUNT(*) AS n FROM dates WHERE topic=?", (t,)).fetchone()["n"]
@@ -1390,9 +1689,9 @@ def resume_state(c, topic: str) -> dict:
     wanted = [dict(r) for r in c.execute(
         "SELECT l.kind, l.name, l.src FROM links l JOIN pages p ON p.slug=l.src "
         "WHERE p.topic=? AND l.target='' ORDER BY l.kind, l.name", (t,))]
-    problems = [p for p in validate(c)["problems"]
-                if p["what"].startswith(t) or p["what"] in {r["bibkey"] for r in c.execute(
-                    "SELECT bibkey FROM sources WHERE topic=?", (t,))}]
+    own = {r["bibkey"] for r in c.execute("SELECT bibkey FROM sources WHERE topic=?", (t,))}
+    own |= {r["name"] for r in c.execute("SELECT name FROM subjects WHERE topic=?", (t,))}
+    problems = [p for p in validate(c)["problems"] if p["what"].startswith(t) or p["what"] in own]
     return {"topic": dict(row) if row else None, "counts": counts, "files": files,
             "requests": list_requests(c, topic=t),
             "unregistered_files": [f for f in files if f not in registered],
@@ -1402,7 +1701,10 @@ def resume_state(c, topic: str) -> dict:
             "pages": [dict(r) for r in c.execute(
                 "SELECT slug, title, ordering, status, length(body) AS words FROM pages WHERE topic=? ORDER BY ordering", (t,))],
             "sources": [dict(r) for r in c.execute(
-                "SELECT bibkey, year, title FROM sources WHERE topic=? ORDER BY bibkey", (t,))]}
+                "SELECT bibkey, year, title FROM sources WHERE topic=? ORDER BY bibkey", (t,))],
+            "subjects": [dict(r) for r in c.execute(
+                "SELECT s.name, s.kind, s.english, (SELECT COUNT(*) FROM observations o WHERE o.subject=s.name) AS n "
+                "FROM subjects s WHERE s.topic=? ORDER BY s.name", (t,))]}
 
 
 # ---------------------------------------------------------------- BibTeX
@@ -1524,6 +1826,12 @@ def index_targets(c) -> dict:
         for alt in (r["historic"], r["inuktitut"]):
             if alt:
                 put("place", alt, slug)
+    for r in c.execute("SELECT name, english, french, inuktitut, kalaallisut, also FROM subjects"):
+        slug = page_slug("subject", r["name"])
+        put("subject", r["name"], slug)
+        for alt in [r["english"], r["french"], r["inuktitut"], r["kalaallisut"]] + (r["also"] or "").split(";"):
+            if alt and alt.strip():
+                put("subject", alt.strip(), slug, r["name"])
     for r in c.execute("SELECT slug, kind, title FROM pages"):
         put(r["kind"] or "page", r["slug"].split("/")[-1], r["slug"], r["title"])
         titles.setdefault(r["title"].lower(), r["slug"])
@@ -1578,6 +1886,17 @@ def _mention_index(c) -> tuple[dict, "re.Pattern | None"]:
             for alt in (r["also"] or "").split(";"):
                 if alt.strip():
                     mention.setdefault(alt.strip(), (kind, slug))
+    # a subject links on first mention by its scientific name and its
+    # capitalised names (Ovibos moschatus, North Magnetic Pole, Eureka Sound
+    # Group); a common noun (fog, wind, muskox, sea ice, air temperature)
+    # would link half the wiki to the weather, so those resolve only as
+    # explicit [[subject:]] links
+    for r in c.execute("SELECT name, english, french, inuktitut, kalaallisut, also FROM subjects"):
+        slug = page_slug("subject", r["name"])
+        for nm in [r["name"], r["english"], r["french"], r["inuktitut"], r["kalaallisut"]] + (r["also"] or "").split(";"):
+            nm = (nm or "").strip()
+            if nm and nm[:1].isupper():
+                mention.setdefault(nm, ("subject", slug))
     mention = {k: v for k, v in mention.items() if len(k) >= 3}
     # a single word that also occurs inside a longer known name ("Arctic" in
     # C.G.S. Arctic and Arctic Bay, "Baffin" in William Baffin and Baffin Bay,
@@ -1683,9 +2002,30 @@ def _row_links(c, targets: dict) -> int:
             put(src, "person", p, page_slug("person", p), seen)
         if r["place"]:
             put(src, "place", r["place"], resolve(targets, "place", r["place"]), seen)
-    for table, kind in (("people", "person"), ("places", "place"), ("animals", "animal"), ("vessels", "vessel")):
+    for table, kind in (("people", "person"), ("places", "place"), ("animals", "animal"), ("vessels", "vessel"),
+                        ("subjects", "subject")):
         for r in c.execute(f"SELECT name, bibkey FROM {table} WHERE bibkey<>''"):
             put(page_slug(kind, r["name"]), "source", r["bibkey"], resolve(targets, "source", r["bibkey"]), set())
+    # an observation has no page of its own: its subject's page carries the
+    # record, so the subject page is where its source, observer, place,
+    # evidence and event are linked from
+    seen_by_subject: dict[str, set] = {}
+    for r in c.execute("SELECT subject, bibkey, observer, place, artifact_id, event_id, vessel FROM observations"):
+        src = page_slug("subject", r["subject"])
+        seen = seen_by_subject.setdefault(src, set())
+        put(src, "source", r["bibkey"], resolve(targets, "source", r["bibkey"]) if r["bibkey"] else "", seen)
+        if r["observer"]:
+            put(src, "person", r["observer"], resolve(targets, "person", r["observer"]), seen)
+        if r["place"]:
+            put(src, "place", r["place"], resolve(targets, "place", r["place"]), seen)
+        if r["artifact_id"]:
+            put(src, "artifact", r["artifact_id"], resolve(targets, "artifact", r["artifact_id"]), seen)
+        if r["event_id"]:
+            put(src, "event", str(r["event_id"]), resolve(targets, "event", str(r["event_id"])), seen)
+        if r["vessel"]:
+            put(src, "vessel", r["vessel"], resolve(targets, "vessel", r["vessel"]), seen)
+    for r in c.execute("SELECT name, subject FROM animals WHERE subject<>''"):
+        put(page_slug("animal", r["name"]), "subject", r["subject"], resolve(targets, "subject", r["subject"]), set())
     return n
 
 
@@ -1742,6 +2082,15 @@ def event_body(r: sqlite3.Row) -> str:
     return (r["detail"] or "").strip()
 
 
+def subject_body(r: sqlite3.Row) -> str:
+    return (r["note"] or "").strip()
+
+
+def subject_summary(r) -> str:
+    names = " · ".join(x for x in (r["english"], r["inuktitut"]) if x)
+    return " · ".join(x for x in (r["kind"], r["domain"], names) if x)
+
+
 def generated_pages(c) -> list[dict]:
     """A page for every artifact, source, person, place and event. These are
     derived, so they are rebuilt on every publish rather than stored."""
@@ -1772,6 +2121,9 @@ def generated_pages(c) -> list[dict]:
         out.append({"slug": page_slug("vessel", r["name"]), "kind": "vessel", "title": r["name"],
                     "topic": r["topic"], "summary": " · ".join(x for x in (r["kind"], r["role"]) if x),
                     "body": vessel_body(r), "ref": r["name"]})
+    for r in c.execute("SELECT * FROM subjects ORDER BY name"):
+        out.append({"slug": page_slug("subject", r["name"]), "kind": "subject", "title": r["name"],
+                    "topic": r["topic"], "summary": subject_summary(r), "body": subject_body(r), "ref": r["name"]})
     return out
 
 
@@ -2034,6 +2386,57 @@ def validate(c) -> dict:
     for r in c.execute("SELECT name, kind FROM vessels WHERE kind<>''"):
         if not is_vessel_kind(r["kind"]):
             bad("vessel", r["name"], f"kind is not a code: {r['kind'][:60]!r}")
+    # the natural half: a subject resolves in its backbone or says why not;
+    # an observation has its subject, its date, its position and its source
+    subjects = {r["name"]: dict(r) for r in c.execute("SELECT * FROM subjects")}
+    for name, r in subjects.items():
+        if r["kind"] not in SUBJECT_KINDS:
+            bad("subject", name, f"kind is not a code: {r['kind'][:40]!r}")
+        if r["domain"] not in DOMAINS:
+            bad("subject", name, f"domain is not a code: {r['domain'][:40]!r}")
+        if r["parent"] and r["parent"] not in subjects:
+            bad("subject", name, f"parent {r['parent']!r} is no subject")
+        if not r["backbone_id"] and not (r["note"] or "").strip():
+            bad("subject", name, "no backbone id (GBIF, WoRMS, WEBLEX, IAU) and no note saying why")
+        if r["bibkey"] and r["bibkey"] not in keys:
+            bad("subject", name, f"bibkey {r['bibkey']} is in no source entry")
+    for r in c.execute("SELECT * FROM observations"):
+        if r["subject"] not in subjects:
+            bad("observation", r["id"], f"subject {r['subject']!r} is no subject")
+        if not r["date_start"]:
+            bad("observation", r["id"], "no date")
+        if r["lat"] is None or r["lon"] is None:
+            bad("observation", r["id"], "no position, and its place gives none")
+        else:
+            msg = _off_map(r["lat"], r["lon"])
+            if msg:
+                bad("observation", r["id"], msg)
+        if not r["bibkey"]:
+            bad("observation", r["id"], "no bibkey")
+        elif r["bibkey"] not in keys:
+            bad("observation", r["id"], f"bibkey {r['bibkey']} is in no source entry")
+        if r["method"] in ("transect", "catch-record", "aerial-survey") and not r["count"] and r["value"] is None:
+            bad("observation", r["id"], f"a {r['method']} wants a count")
+        if r["method"] == "sounding" and r["depth"] is None and r["value"] is None:
+            bad("observation", r["id"], "a sounding wants a depth or a value")
+        if r["value"] is not None and not r["unit"]:
+            bad("observation", r["id"], "a value without its unit")
+        if r["place"] and not c.execute("SELECT 1 FROM places WHERE name=?", (r["place"],)).fetchone():
+            bad("observation", r["id"], f"place {r['place']!r} is no place row")
+        if r["observer"] and " " in r["observer"] and not c.execute(
+                "SELECT 1 FROM people WHERE name=?", (r["observer"],)).fetchone():
+            note("observation", r["id"], f"observer {r['observer']!r} has no person row (fine for a party or a watch)")
+        if r["artifact_id"] and not c.execute("SELECT 1 FROM artifacts WHERE id=?", (r["artifact_id"],)).fetchone():
+            bad("observation", r["id"], f"artifact {r['artifact_id']!r} does not exist")
+        if r["sensitive"] and r["place"]:
+            note("observation", r["id"], "sensitive: the place is published blank and the position coarsened")
+    for r in c.execute("SELECT slug, domain FROM topics"):
+        if r["domain"] not in TOPIC_DOMAINS:
+            bad("topic", r["slug"], f"domain is not history or nature: {r['domain']!r}")
+    for r in c.execute("SELECT kind, COUNT(*) AS n FROM places WHERE kind<>'' GROUP BY kind"):
+        if r["kind"] not in PLACE_KINDS:
+            note("place-kind", r["kind"], f"used on {r['n']} place(s) and not in the vocabulary: "
+                                         + ", ".join(PLACE_KINDS))
     for r in c.execute("SELECT name, lat, lon FROM places WHERE lat IS NOT NULL"):
         msg = _off_map(r["lat"], r["lon"])
         if msg:
@@ -2059,7 +2462,8 @@ def validate(c) -> dict:
         if chrono(r["b"]) < chrono(r["a"]):
             bad("dates", r["span"], f"ends {r['b']} before it starts {r['a']}")
     stats = {t: c.execute(f"SELECT COUNT(*) AS n FROM {t}").fetchone()["n"]
-             for t in ("topics", "sources", "artifacts", "pages", "people", "places", "events", "dates")}
+             for t in ("topics", "sources", "artifacts", "pages", "people", "places", "events", "dates",
+                       "subjects", "observations")}
     return {"problems": problems, "notes": notes, "stats": stats}
 
 
@@ -2144,15 +2548,21 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
                                         "title", "detail", "lat", "lon", "place", "bibkey")},
                    "people": json.loads(r["people"] or "[]"), "tags": normalise_tags(r["tags"])}
                   for r in c.execute(f"SELECT * FROM events ORDER BY {date_order('date_start')}, id")]
-        topics = [dict(r) for r in c.execute("SELECT slug, title, summary, status FROM topics ORDER BY title")]
+        topics = [dict(r) for r in c.execute("SELECT slug, title, summary, status, domain FROM topics ORDER BY title")]
         for t in topics:
             t["artifacts"] = c.execute("SELECT COUNT(*) AS n FROM artifacts WHERE topic=?", (t["slug"],)).fetchone()["n"]
             t["pages"] = c.execute("SELECT COUNT(*) AS n FROM pages WHERE topic=?", (t["slug"],)).fetchone()["n"]
+            t["observations"] = c.execute("SELECT COUNT(*) AS n FROM observations WHERE topic=?", (t["slug"],)).fetchone()["n"]
 
         # the timeline: every atomic date, with the spans of the time-limited
         # activities resolved into one row carrying both endpoints
         rows = [dict(r) for r in c.execute(
             f"SELECT * FROM dates ORDER BY {date_order('date')}, role DESC, id")]
+        hidden = {r["id"] for r in c.execute("SELECT id FROM observations WHERE sensitive=1")}
+        for r in rows:
+            if r["entity_kind"] == "observation" and r["entity_id"] in hidden:
+                r["lat"], r["lon"] = coarsen(r["lat"], r["lon"])
+                r["place"] = ""
         spans: dict[str, dict] = {}
         timeline = []
         for r in rows:
@@ -2227,20 +2637,98 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
                         "page": page_slug("vessel", r["name"])}
                        for r in c.execute("SELECT * FROM vessels ORDER BY name")]
         atomic(out / "vessels.json", json.dumps({"vessels": vessel_rows}, ensure_ascii=False))
+        subject_rows, observation_rows = publish_nature(c, out)
         atomic(out / "index.json", json.dumps({"pages": index, "topics": topics,
                                                "wanted": info["wanted"]}, ensure_ascii=False))
         atomic(out / "references.bib", to_bibtex(c.execute("SELECT * FROM sources ORDER BY bibkey")))
-        stamp = max([r["updated"] for r in c.execute(
+        stamp = max([r["updated"] or "" for r in c.execute(
             "SELECT MAX(updated) AS updated FROM artifacts")] + [""]) or now()
         return {"file": "data/history/index.json", "stamp": stamp, "artifacts": len(arts), "faces": len(faces),
                 "pages": len(pages), "events": len(events), "topics": len(topics),
                 "places": len(places), "people": len(people_rows),
                 "animals": len(animal_rows), "vessels": len(vessel_rows),
+                "subjects": len(subject_rows), "observations": len(observation_rows),
                 "dates": len(rows), "timeline": len(timeline),
                 "sources": c.execute("SELECT COUNT(*) AS n FROM sources").fetchone()["n"],
                 "wanted": len(info["wanted"])}
     finally:
         c.close()
+
+
+def publish_nature(c, out: Path) -> tuple[list, list]:
+    """The natural half's published files: ``subjects.json`` (every subject
+    with its names and its record's size), ``observations.json`` (a map
+    layer: points by subject and domain with the date and the number, so the
+    map can play the season, the century and the value; sensitive rows
+    coarsened to half a degree with the place blank), and the excerpts a
+    small model aboard reads: one text per subject (the page body followed
+    by its record as dated lines) and one per place with observations."""
+    subjects = [dict(r) for r in c.execute("SELECT * FROM subjects ORDER BY name")]
+    by_name = {s["name"]: s for s in subjects}
+    obs_all = [dict(r) for r in c.execute(
+        f"SELECT * FROM observations ORDER BY {date_order('date_start')}, id")]
+    record: dict[str, list] = {}
+    published = []
+    for o in obs_all:
+        o["tags"] = normalise_tags(o["tags"])
+        s = by_name.get(o["subject"], {})
+        o["domain"] = s.get("domain", "")
+        o["kind"] = s.get("kind", "")
+        o["subject_page"] = page_slug("subject", o["subject"])
+        o["label"] = _observation_label(o)
+        pub = dict(o)
+        if o["sensitive"]:
+            pub["lat"], pub["lon"] = coarsen(o["lat"], o["lon"])
+            pub["place"] = ""
+        published.append(pub)
+        record.setdefault(o["subject"], []).append(pub)
+    for s in subjects:
+        s["page"] = page_slug("subject", s["name"])
+        s["observations"] = len(record.get(s["name"], []))
+        s["children"] = [x["name"] for x in subjects if x["parent"] == s["name"]]
+    atomic(out / "subjects.json", json.dumps({"subjects": subjects}, ensure_ascii=False))
+    atomic(out / "observations.json", json.dumps({"observations": published}, ensure_ascii=False))
+
+    def line(o: dict) -> str:
+        who = o["observer"] or o["vessel"] or ""
+        where = o["place"] or (f"{o['lat']:.2f} {o['lon']:.2f}" if o["lat"] is not None else "")
+        cite = o["bibkey"] + (f" {o['pages']}" if o["pages"] else "")
+        return f"- {o['date_text'] or o['date_start']}: {o['label']}" + (f", {where}" if where else "") \
+               + (f" ({who})" if who else "") + f". {o['detail']} [{cite}]"
+
+    exc = out / "excerpts"
+    exc.mkdir(parents=True, exist_ok=True)
+    for s in subjects:
+        names = "; ".join(x for x in (s["english"], s["french"], s["inuktitut"], s["kalaallisut"], s["also"]) if x)
+        head = f"# {s['name']}" + (f" ({names})" if names else "") + f"\n{s['kind']}, {s['domain']}" \
+               + (f", {s['unit']}" if s["unit"] else "") + (f"; status {s['status']}" if s["status"] else "") + "\n\n"
+        body = (s["note"] or "").strip()
+        rec = record.get(s["name"], [])
+        text = head + body + ("\n\n## The record\n" + "\n".join(line(o) for o in rec) if rec else "") + "\n"
+        atomic(exc / f"subject__{slugify(s['name'])}.txt", text)
+    # one text per place: every observation placed there or within 25 km of it
+    places = [dict(r) for r in c.execute("SELECT name, lat, lon, kind, note FROM places")]
+    placed = [o for o in published if o["lat"] is not None]
+    for p in places:
+        near = [o for o in placed if o["place"] == p["name"]]
+        if p["lat"] is not None:
+            near += [o for o in placed if o["place"] != p["name"] and _near(p["lat"], p["lon"], o["lat"], o["lon"], 25)]
+        if not near:
+            continue
+        near.sort(key=lambda o: (o["date_start"], o["id"]))
+        text = f"# {p['name']}" + (f" ({p['kind']})" if p["kind"] else "") + "\n\n" + (p["note"] or "").strip() \
+               + "\n\n## Observations here\n" + "\n".join(line(o) for o in near) + "\n"
+        atomic(exc / f"place__{slugify(p['name'])}.txt", text)
+    return subjects, published
+
+
+def _near(lat1, lon1, lat2, lon2, km: float) -> bool:
+    """Within km of each other, on the sphere."""
+    from math import radians, sin, cos, asin, sqrt
+    if None in (lat1, lon1, lat2, lon2):
+        return False
+    a = sin(radians(lat2 - lat1) / 2) ** 2 + cos(radians(lat1)) * cos(radians(lat2)) * sin(radians(lon2 - lon1) / 2) ** 2
+    return 2 * 6371 * asin(sqrt(a)) <= km
 
 
 def atomic(path: Path, text: str) -> None:

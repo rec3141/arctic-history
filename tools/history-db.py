@@ -29,6 +29,14 @@ transactions on a write-ahead log, so many researchers may work at once.
                             --lat 70.08 --lon -98.4 --bibkey mcclintock1859voyage
     history-db.py page      --slug franklin-the-death-march --title "The death march" \
                             --topic franklin-1845 --file page.md --summary "..."
+    history-db.py subject   --name "Ovibos moschatus" --kind taxon --domain biology --rank species \
+                            --english muskox --french "boeuf musqué" --inuktitut umingmak \
+                            --backbone-id gbif:2441090 --status "COSEWIC not at risk" --topic muskox-and-caribou
+    history-db.py observation --id muskox-and-caribou-001 --topic muskox-and-caribou --subject muskox \
+                            --date 1900-04-13 --lat 78.6 --lon -95.2 --count "a herd of 17" --method hunt \
+                            --observer "Otto Sverdrup" --bibkey sverdrup1904new --pages "v. 1 p. 412" \
+                            --detail "Sverdrup's party shot four of a herd of seventeen muskoxen at ..."
+    history-db.py ingest    --journal db/history/_journal/2026-09.jsonl     # the ship's lines
     history-db.py stats
     history-db.py check                     # what is missing or wrong
     history-db.py wanted                    # wikilinks named but not yet written
@@ -40,6 +48,7 @@ A page body is Markdown holding ``[[wikilinks]]``:
     [[artifact:franklin-1845-004]]  [[source:mcclintock1859voyage]]
     [[person:John Rae]]  [[place:Beechey Island]]  [[topic:franklin-search]]
     [[page:the-death-march]]        [[artifact:franklin-1845-004|the record itself]]
+    [[subject:Ovibos moschatus]]    [[subject:muskox]]  [[subject:umingmak]]   (any of its names)
 
 A link to something not written yet is kept and listed by ``wanted``; it marks
 work to do rather than breaking anything.
@@ -95,6 +104,8 @@ def main(argv=None) -> int:
     t.add_argument("--summary")
     t.add_argument("--researcher")
     t.add_argument("--status", choices=["open", "drafted", "done"])
+    t.add_argument("--domain", choices=list(H.TOPIC_DOMAINS), default=None,
+                   help="history (what people did) or nature (what the archipelago is and does); the tab of each")
 
     s = sub.add_parser("source", help="add or update a bibliography entry")
     s.add_argument("--bibkey", required=True)
@@ -158,6 +169,7 @@ def main(argv=None) -> int:
     an.add_argument("--name", required=True)
     for f in ("kind", "also", "role", "born", "died", "affiliation", "note", "bibkey", "topic"):
         an.add_argument(f"--{f}", default=None)
+    an.add_argument("--subject", default=None, help="its species: a subject name (Canis familiaris, or 'dog' if that resolves)")
     ve = sub.add_parser("vessel", help="add or update a ship, boat or aircraft")
     ve.add_argument("--name", required=True)
     for f in ("kind", "kind-note", "also", "role", "built", "lost", "affiliation", "tonnage",
@@ -171,6 +183,60 @@ def main(argv=None) -> int:
     pl.add_argument("--lon", type=float, default=None)
     for f in ("historic", "inuktitut", "kind", "note", "bibkey", "topic"):
         pl.add_argument(f"--{f}", default=None)
+
+    sj = sub.add_parser("subject", help="add or update a subject of observation: a species, a rock unit, a kind "
+                                        "of ice, a variable, a thing in the sky")
+    sj.add_argument("--name", required=True, help="the scientific or technical name: Ovibos moschatus, Eureka Sound Group, "
+                                                  "aurora, air temperature, North Magnetic Pole")
+    sj.add_argument("--kind", default=None, help="a code: " + "; ".join(f"{k}: {v}" for k, v in H.SUBJECT_KINDS.items()))
+    sj.add_argument("--domain", default=None, choices=list(H.DOMAINS))
+    for f in ("rank", "parent", "english", "french", "inuktitut", "kalaallisut", "also", "unit", "status",
+              "backbone-id", "note", "bibkey", "topic"):
+        sj.add_argument(f"--{f}", default=None,
+                        help={"parent": "the next rank up, by any of its names: Ovibos, Bovidae; Eureka Sound Group",
+                              "also": "synonyms, other spellings, old names; semicolon separated",
+                              "unit": "for a variable: the unit the page converts to (C, m, hPa); observations keep the unit as written",
+                              "status": "COSEWIC or IUCN code with its year: 'COSEWIC special concern 2022'",
+                              "backbone-id": "gbif:<key>, worms:<aphiaid>, weblex:<id>, iau:<name>, or blank with a note saying why",
+                              "note": "the reader's paragraph: what it is, where it lives or lies, why it matters here; it is the page",
+                              "bibkey": "the source of the names and the note"}.get(f))
+
+    ob = sub.add_parser("observation", help="one observation of nature: a subject, a date, a position, a source, and "
+                                            "the number as written")
+    ob.add_argument("--id", required=True, help="<topic>-<nnn>; stable, so a re-run replaces")
+    ob.add_argument("--topic", required=True)
+    ob.add_argument("--subject", required=True, help="any of the subject's names")
+    ob.add_argument("--date", required=True, help="as written: 1900-04-13, 1882-02, 1820/1821")
+    ob.add_argument("--date-end", default="")
+    ob.add_argument("--lat", type=float, default=None)
+    ob.add_argument("--lon", type=float, default=None)
+    ob.add_argument("--place", default=None, help="a place row; supplies the position when --lat/--lon are not given")
+    ob.add_argument("--depth", type=float, default=None, help="metres below the surface")
+    ob.add_argument("--height", type=float, default=None, help="metres above")
+    ob.add_argument("--value", type=float, default=None, help="the number, as written in the source")
+    ob.add_argument("--unit", default=None, help="the unit as written: F, fathoms, feet, deg, cm; never converted here")
+    ob.add_argument("--count", default=None, help="living things: 'about 200', '12', 'a herd', 'present', 'absent'")
+    ob.add_argument("--qualifier", default=None, help="'first of the season', 'coldest of the winter', 'no bottom at', 'estimated'")
+    ob.add_argument("--stage", default=None)
+    ob.add_argument("--sex", default=None)
+    ob.add_argument("--behaviour", default=None)
+    ob.add_argument("--method", default="", choices=list(H.METHODS))
+    ob.add_argument("--instrument", default=None, help="the thermometer, the dip circle, the lead line, the CTD")
+    ob.add_argument("--observer", default=None, help="a people.name, or the party or the watch")
+    ob.add_argument("--vessel", default=None, help="a vessels.name when it applies")
+    ob.add_argument("--detail", required=True, help="the sentence that says what was seen, naming the observer")
+    ob.add_argument("--confidence", default="", choices=list(H.CONFIDENCE), help="of the identification or the reading")
+    ob.add_argument("--artifact", dest="artifact_id", default=None, help="the photograph, quote, chart or object that is the evidence")
+    ob.add_argument("--event", dest="event_id", type=int, default=None, help="the human-history event this also is")
+    ob.add_argument("--sensitive", action="store_true", help="a den, a nest, a haul-out, a fossil site at risk: published coarsened")
+    ob.add_argument("--origin", default="research", choices=list(H.ORIGINS))
+    ob.add_argument("--bibkey", required=True)
+    ob.add_argument("--pages", default=None)
+    ob.add_argument("--tags", default=None, help=TAGS_HELP)
+
+    ig = sub.add_parser("ingest", help="the ship's journal: one JSON object per line into rows, idempotent on id")
+    ig.add_argument("--journal", required=True, help="the .jsonl file rsynced up from the ship")
+    ig.add_argument("--who", default="ship")
 
     e = sub.add_parser("event", help="add a dated event to the timeline")
     e.add_argument("--topic", required=True)
@@ -190,7 +256,7 @@ def main(argv=None) -> int:
                    help="the source's own hedge: circa, before, after, by, early, mid, late")
 
     d = sub.add_parser("date", help="record one atomic date on any record")
-    d.add_argument("--kind", required=True, choices=["artifact", "event", "person", "place", "source", "page", "topic", "animal", "vessel"])
+    d.add_argument("--kind", required=True, choices=["artifact", "event", "person", "place", "source", "page", "topic", "animal", "vessel", "subject", "observation"])
     d.add_argument("--id", required=True, help="the artifact id, event id, person or place name, bibkey or page slug")
     d.add_argument("--date", required=True, help="YYYY, YYYY-MM or YYYY-MM-DD")
     d.add_argument("--role", default="point", choices=list(H.DATE_ROLES))
@@ -249,7 +315,7 @@ def main(argv=None) -> int:
     fg = sub.add_parser("forget", help="delete one mistaken row and the dates attached to it — "
                                        "a duplicate person, a stray date. For errors, not "
                                        "revisions; note what you removed in the worklog.")
-    fg.add_argument("--kind", required=True, choices=["artifact", "event", "person", "place", "source", "date", "animal", "vessel"])
+    fg.add_argument("--kind", required=True, choices=["artifact", "event", "person", "place", "source", "date", "animal", "vessel", "subject", "observation"])
     fg.add_argument("--id", required=True,
                     help="the artifact id, the event or date row number, or the person or place name")
 
@@ -313,7 +379,7 @@ def main(argv=None) -> int:
     sh = sub.add_parser("show", help="print one page as stored")
     sh.add_argument("--slug", required=True)
     li = sub.add_parser("list", help="list rows of one kind")
-    li.add_argument("--what", required=True, choices=["topics", "sources", "artifacts", "pages", "people", "places", "events", "animals", "vessels"])
+    li.add_argument("--what", required=True, choices=["topics", "sources", "artifacts", "pages", "people", "places", "events", "animals", "vessels", "subjects", "observations"])
     li.add_argument("--topic", default="")
     ex = sub.add_parser("export", help="write the bibliography out")
     ex.add_argument("--bib", required=True)
@@ -328,7 +394,7 @@ def main(argv=None) -> int:
 
 def run(a, c) -> int:                                   # noqa: C901 — one branch per subcommand
     if a.cmd == "topic":
-        print(H.add_topic(c, a.slug, a.title, summary=a.summary, researcher=a.researcher, status=a.status))
+        print(H.add_topic(c, a.slug, a.title, summary=a.summary, researcher=a.researcher, status=a.status, domain=a.domain))
     elif a.cmd == "source":
         kw = {k.replace("-", "_"): v for k, v in vars(a).items()
               if k not in {"cmd", "db", "bibkey", "title"} and v is not None}
@@ -371,6 +437,20 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
     elif a.cmd == "place":
         kw = {k: v for k, v in vars(a).items() if k not in {"cmd", "db", "name"} and v is not None}
         print(H.add_place(c, a.name, **kw))
+    elif a.cmd == "subject":
+        kw = {k: v for k, v in vars(a).items() if k not in {"cmd", "db", "name"} and v is not None}
+        print(H.add_subject(c, a.name, **kw))
+    elif a.cmd == "observation":
+        kw = {k: v for k, v in vars(a).items() if k not in {"cmd", "db", "id", "topic", "subject"} and v is not None}
+        print(H.add_observation(c, a.id, a.topic, a.subject, **kw))
+    elif a.cmd == "ingest":
+        r = H.ingest_journal(c, Path(a.journal), who=a.who)
+        for kind, ident in r["done"]:
+            print(f"  {kind:12s} {ident}")
+        for f in r["failed"]:
+            print(f"  FAILED line {f['line']}: {f['error']}\n      {f['text']}", file=sys.stderr)
+        print(f"-- {len(r['done'])} in, {len(r['failed'])} failed", file=sys.stderr)
+        return 1 if r["failed"] else 0
     elif a.cmd == "event":
         ident = H.add_event(c, a.topic, a.date, a.title, date_end=a.date_end, detail=a.detail,
                             lat=a.lat, lon=a.lon, place=a.place, people=a.people,
@@ -467,7 +547,7 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
             print(t["summary"])
         print("\n## In the database")
         print("  " + "  ".join(f"{k} {v}" for k, v in st["counts"].items()))
-        if st["counts"]["artifacts"] >= 10 and st["counts"]["pages"] == 0:
+        if (st["counts"]["artifacts"] >= 10 or st["counts"].get("observations", 0) >= 20) and st["counts"]["pages"] == 0:
             print("\n!! PAGES OWED: this topic has rows but not one page, and the wiki is the point.")
             print("!! Draft the overview page FIRST, before entering more rows. Rough is fine:")
             print("!! pages are status 'draft' by default and every save keeps the old version.")
@@ -475,6 +555,10 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
             print("\n## Sources (" + str(len(st["sources"])) + ")")
             for r in st["sources"]:
                 print(f"  {r['bibkey']:34s} {r['year']:6s} {r['title'][:70]}")
+        if st.get("subjects"):
+            print("\n## Subjects (" + str(len(st["subjects"])) + ", with their observations)")
+            for r in st["subjects"]:
+                print(f"  {r['name']:36s} {r['kind']:10s} {r['english'] or '':24s} {r['n']:4d} obs")
         if st["artifacts"]:
             print("\n## Artifacts (" + str(len(st["artifacts"])) + ")")
             for r in st["artifacts"]:
@@ -557,7 +641,9 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
         cols = {"topics": "slug, title, status", "sources": "bibkey, year, title",
                 "artifacts": "id, type, date_text, title", "pages": "slug, kind, status, title",
                 "people": "name, role", "places": "name, lat, lon", "events": "date_start, topic, title",
-                "animals": "name, kind, role", "vessels": "name, kind, built"}[a.what]
+                "animals": "name, kind, role", "vessels": "name, kind, built",
+                "subjects": "name, kind, domain, english, inuktitut, backbone_id",
+                "observations": "id, date_text, subject, value, unit, count, place, observer"}[a.what]
         q = f"SELECT {cols} FROM {a.what}"
         args: tuple = ()
         if a.topic and a.what != "topics":
