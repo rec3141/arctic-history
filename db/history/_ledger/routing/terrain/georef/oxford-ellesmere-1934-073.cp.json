@@ -1,0 +1,87 @@
+{
+  "rotate": 0,
+  "points": [
+    {
+      "px": 445,
+      "py": 959,
+      "place": "Craig Harbour"
+    },
+    {
+      "px": 492,
+      "py": 691,
+      "lon": -76.35,
+      "lat": 79.07,
+      "name": "Bache Peninsula post"
+    },
+    {
+      "px": 512,
+      "py": 753,
+      "place": "Cape Isabella"
+    },
+    {
+      "px": 545,
+      "py": 752,
+      "place": "Cape Alexander"
+    },
+    {
+      "px": 588,
+      "py": 827,
+      "place": "Northumberland Island"
+    },
+    {
+      "px": 724,
+      "py": 908,
+      "place": "Cape York"
+    },
+    {
+      "px": 494,
+      "py": 802,
+      "place": "Cape Faraday"
+    },
+    {
+      "px": 475,
+      "py": 980,
+      "place": "Coburg Island"
+    },
+    {
+      "px": 305,
+      "py": 963,
+      "place": "Cape Storm"
+    },
+    {
+      "px": 270,
+      "py": 973,
+      "place": "Cape Vera"
+    },
+    {
+      "px": 110,
+      "py": 649,
+      "place": "Meighen Island"
+    },
+    {
+      "px": 222,
+      "py": 508,
+      "place": "Cape Stallworthy"
+    },
+    {
+      "px": 462,
+      "py": 332,
+      "place": "Cape Columbia"
+    },
+    {
+      "px": 561,
+      "py": 347,
+      "place": "Cape Sheridan"
+    },
+    {
+      "px": 482,
+      "py": 450,
+      "place": "Lake Hazen"
+    },
+    {
+      "px": 378,
+      "py": 1002,
+      "place": "Cape Sparbo"
+    }
+  ]
+}

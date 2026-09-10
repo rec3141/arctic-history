@@ -1,0 +1,23 @@
+{
+  "rotate": 0,
+  "points": [
+    {"px": 833, "py": 68, "place": "Cape Colgate"},
+    {"px": 736, "py": 150, "place": "Cape Thomas Hubbard"},
+    {"px": 608, "py": 374, "place": "Cape Northwest"},
+    {"px": 224, "py": 527, "place": "Cape Isachsen"},
+    {"px": 1017, "py": 564, "place": "Depot Point"},
+    {"px": 500, "py": 507, "place": "Departure Point"},
+    {"px": 487, "py": 702, "place": "Cape Sverre"},
+    {"px": 740, "py": 873, "place": "Cape Southwest"},
+    {"px": 885, "py": 895, "place": "Hyperite Point"},
+    {"px": 1011, "py": 475, "place": "Eureka"},
+    {"px": 1696, "py": 232, "place": "Cape Constitution"},
+    {"px": 1488, "py": 686, "place": "Cape Rutherford"},
+    {"px": 1602, "py": 778, "place": "Etah"},
+    {"px": 1502, "py": 797, "place": "Cape Isabella"},
+    {"px": 1481, "py": 890, "place": "Cape Dunsterville"},
+    {"px": 1362, "py": 1046, "place": "Boger Point"},
+    {"px": 1294, "py": 1299, "place": "Craig Harbour"},
+    {"px": 1884, "py": 1114, "place": "Uummannaq (Thule)"}
+  ]
+}

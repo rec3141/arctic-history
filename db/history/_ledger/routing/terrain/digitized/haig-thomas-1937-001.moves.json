@@ -1,0 +1,6 @@
+{"moves": [
+ {"index": 8, "lat": 78.647, "lon": -87.0436,
+  "why": "the note says down Eureka Sound but the point sat 2 km inside the Ellesmere shore; moved 11 km onto the route drawn down the sound"},
+ {"index": 22, "lat": 78.749, "lon": -79.763,
+  "why": "position inferred; the printed map draws the return south of the outward crossing, over the ice cap at about 1600 m, and the waypoint is moved 30 km south onto that drawn line"}
+]}

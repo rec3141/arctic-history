@@ -215,6 +215,19 @@ reconstruct the route from the published narrative or log:
 The line is built from the waypoints unless you pass `--geometry`. Precision to
 about 10 km is fine; say in the description which segments are inferred.
 
+A track also carries a `--routing` code that says how its line was drawn, and
+the routing tools own it: `water` for a voyage routed through water by
+`tools/route-tracks.py`, `as-given` for a line that follows the waypoints as
+they are given (great-circle legs: sea-ice journeys, drifts, flights), and
+`terrain` for an overland or mixed journey routed through the valleys and
+passes of the elevation model and along the expedition's printed route map by
+`tools/digitize-tracks.py`. Leave it unset when you write a track; the waypoints
+are the truth whichever way the line is drawn, and a routed line is only ever
+written back with the row's every other field as it stands. Only a `terrain`
+run may move a waypoint, and then only one whose position was inferred, to
+where the printed map and the terrain put it, saying so in its note and in the
+description with the position it had before.
+
 ### 4. Dates — one row per date, and time-limited activities as spans
 
 This is what makes the timeline work, so read it carefully.

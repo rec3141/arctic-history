@@ -1,0 +1,40 @@
+{
+ "moves": [
+  {
+   "index": 4,
+   "lat": 78.9495,
+   "lon": -73.2354,
+   "why": "inferred; moved 17 km onto the printed route"
+  },
+  {
+   "index": 5,
+   "lat": 78.9495,
+   "lon": -73.2354,
+   "why": "inferred; moved 6 km onto the printed route"
+  },
+  {
+   "index": 6,
+   "lat": 79.3165,
+   "lon": -73.8649,
+   "why": "inferred; moved 19 km onto the printed route"
+  },
+  {
+   "index": 15,
+   "lat": 79.5459,
+   "lon": -73.4518,
+   "why": "inferred; moved 7 km onto the printed route"
+  },
+  {
+   "index": 16,
+   "lat": 78.5378,
+   "lon": -73.2599,
+   "why": "inferred; moved 9 km onto the printed route"
+  },
+  {
+   "index": 17,
+   "lat": 78.5378,
+   "lon": -73.2599,
+   "why": "inferred; moved 13 km onto the printed route"
+  }
+ ]
+}

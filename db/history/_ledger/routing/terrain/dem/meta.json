@@ -1,0 +1,1 @@
+{"proj": "+proj=stere +lat_0=90 +lat_ts=78 +lon_0=-85 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs", "res": 250.0, "extent": {"lat": [74.0, 84.0], "lon": [-130.0, -30.0]}, "x0": -1257750.0, "y1": -380500.0, "shape": [5593, 10860]}
