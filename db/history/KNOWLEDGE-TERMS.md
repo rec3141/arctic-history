@@ -1,3 +1,5 @@
+> **Ruling (the owner, 2026-09-10):** respect the spirit of the communities' terms, not just the letter. The layer summarizes these documents in its own words, enters the facts they record as cited observations with the elder or community as observer, links the raw document and credits the elders, the community and the project from every page that draws on one; it does not quote them verbatim, hold or publish their images or transcripts, or publish anything a project itself withheld. Sources register as `in-copyright-cited` with a rights note quoting their terms. The rule is in BRIEF.md section 9.
+
 # Reuse terms for Inuit and Inughuit knowledge recorded by community projects
 
 A survey of the terms — consent, ownership, reuse, citation, credit — carried by

@@ -632,6 +632,24 @@ is a number, the number in the unit it was written in.
   it with `--artifact`. A photograph of the animal, the outcrop, the aurora
   is an `image` artifact the observation cites.
 
+**Community knowledge documents: the spirit, not just the letter (the owner, 2026-09-10).**
+The modern community knowledge projects (the NWMB harvest and IQ studies, the Inuit
+Bowhead Knowledge Study, the Igloolik Oral History Project, the Nunavut Arctic
+College elders' volumes, the community sea-ice atlases, the Pikialasorsuaq report,
+the ITK studies) belong to the communities that made them, and none carries an open
+licence (`db/history/KNOWLEDGE-TERMS.md` quotes each one's terms). The rule: the
+layer **summarizes** such a document in its own words and enters the facts it
+records as observations, each cited to the document with the elder or the community
+as `--observer`; every page that draws on one **links to the raw document** and
+**credits the elders, the community and the project by name**. The layer does
+**not quote** these documents verbatim (no quote artifacts), does not hold or
+publish their images or transcripts, and does not publish anything the project
+itself withheld (a glossary held back for verification by elders stays held back).
+Where a project's terms say ask before reuse, summarizing its published report is
+within the spirit; taking its data or its users' content is not. Register such a
+source with `--licence in-copyright-cited` and a rights note quoting its own terms
+and naming the elders; put the URL in `--url` so the page can link it.
+
 **Natural places.** Enter the glacier, the bird cliff, the haul-out, the
 polynya, the fossil site, the weather station as a `place` with a natural
 kind: `glacier`, `ice-cap`, `ice-shelf`, `ice-island`, `polynya`,
