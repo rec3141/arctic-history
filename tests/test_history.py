@@ -19,12 +19,12 @@ class HistoryTests(unittest.TestCase):
         H.add_topic(self.c, "franklin-1845", "The Franklin expedition")
         H.add_source(self.c, "mcclintock1859voyage", "The Voyage of the Fox",
                      author="McClintock", year="1859", url="https://example.invalid/fox",
-                     licence="public domain", primary=True, entry_type="book")
+                     licence="public-domain", primary=True, entry_type="book")
 
     def artifact(self, **kw):
         base = dict(id="franklin-1845-001", topic="franklin-1845", type="image",
                     title="A plate", credit="Royal Museums Greenwich",
-                    bibkey="mcclintock1859voyage", licence="public domain", lat=74.7, lon=-91.8)
+                    bibkey="mcclintock1859voyage", licence="public-domain", lat=74.7, lon=-91.8)
         base.update(kw)
         ident = base.pop("id")
         return H.add_artifact(self.c, ident, base.pop("topic"), base.pop("type"),
@@ -288,6 +288,24 @@ class HistoryTests(unittest.TestCase):
         problems = H.validate(self.c)["problems"]
         self.assertTrue(any("is in no source entry" in p["detail"] for p in problems))
         self.assertTrue(any("no licence" in p["detail"] for p in problems))
+
+    def test_licence_is_a_code_and_the_detail_lives_in_the_rights_note(self):
+        with self.assertRaises(ValueError):
+            self.artifact(licence="public domain (Crown copyright expired)")
+        with self.assertRaises(ValueError):
+            H.add_source(self.c, "x", "X", licence="CC BY 4.0")
+        self.artifact(licence="crown-expired", rights_note="Crown copyright of 1961 expired 2011")
+        r = self.c.execute("SELECT * FROM artifacts WHERE id='franklin-1845-001'").fetchone()
+        self.assertEqual(r["licence"], "crown-expired")
+        self.assertIn("Crown copyright expired; public domain. Crown copyright of 1961", H.artifact_body(r))
+        for code in ("cc-by-4.0", "cc-by-sa-2.5", "cc-by-nc-nd-4.0", "cc-by", "cc0", "not-cleared"):
+            self.assertTrue(H.is_licence_code(code), code)
+        self.assertEqual(H.licence_label("cc-by-sa-4.0"), "CC BY-SA 4.0")
+        self.assertEqual(H.licence_label("cc-by-nc-nd-4.0"), "CC BY-NC-ND 4.0")
+        self.assertFalse(H.is_licence_code("cc-by-sa-nd-4.0"))
+        # a legacy free-text row is reported by check, not hidden
+        self.c.execute("UPDATE artifacts SET licence='public domain' WHERE id='franklin-1845-001'")
+        self.assertTrue(any("not a code" in p["detail"] for p in H.validate(self.c)["problems"]))
 
     def test_validate_flags_a_dropped_minus_sign_but_allows_europe(self):
         # the Beard daguerreotypes were taken at Greenhithe, genuinely 0.28 east
