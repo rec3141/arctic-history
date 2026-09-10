@@ -58,6 +58,12 @@ LICENCE_HELP = ("a code: " + ", ".join(H.LICENCE_CODES) +
                 ", or cc-by / cc-by-sa / cc-by-nc-sa / cc-by-nc-nd with a version (cc-by-4.0)")
 RIGHTS_HELP = ("free text behind the code: the holder, the term and why it is expired, "
                "the request number, what is and is not held")
+ENTRY_TYPE_HELP = "what the work is; choose one, do not leave it at misc. " + \
+                  "; ".join(f"{k}: {v}" for k, v in H.ENTRY_TYPES.items())
+ARCHIVE_HELP = ("the institution or platform holding the copy, under its own name "
+                "(\"Arctic Institute of North America\", not \"Arctic (AINA)\"); "
+                "the journal goes in --container, the numbers in --callno")
+CALLNO_HELP = "the identifier of the copy: an accession, catalogue, item or microform number"
 
 
 def _read(value: str | None, file: str | None) -> str:
@@ -84,13 +90,13 @@ def main(argv=None) -> int:
     s = sub.add_parser("source", help="add or update a bibliography entry")
     s.add_argument("--bibkey", required=True)
     s.add_argument("--title", required=True)
-    s.add_argument("--entry-type", default="misc",
-                   help="book, article, incollection, misc, online, report, thesis")
+    s.add_argument("--entry-type", default="misc", help=ENTRY_TYPE_HELP)
     for f in ("author", "year", "container", "publisher", "address", "volume", "pages",
               "url", "urldate", "doi", "archive", "callno", "licence", "rights-note", "note", "local-file", "topic",
               "language", "orig-language", "translator"):
         s.add_argument(f"--{f}", default=None,
-                       help=LICENCE_HELP if f == "licence" else RIGHTS_HELP if f == "rights-note" else None)
+                       help=LICENCE_HELP if f == "licence" else RIGHTS_HELP if f == "rights-note"
+                       else ARCHIVE_HELP if f == "archive" else CALLNO_HELP if f == "callno" else None)
     s.add_argument("--primary", action="store_true", help="a primary source: a journal, log, narrative or testimony")
 
     b = sub.add_parser("bib", help="import a BibTeX file")
@@ -513,11 +519,14 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
         for k, n in v["stats"].items():
             print(f"{k:10s} {n}")
         print(f"{'problems':10s} {len(v['problems'])}")
+        print(f"{'notes':10s} {len(v['notes'])}")
     elif a.cmd == "check":
         v = H.validate(c)
         for p in v["problems"]:
             print(f"{p['kind']:9s} {p['what']:34s} {p['detail']}")
-        print(f"-- {len(v['problems'])} problems", file=sys.stderr)
+        for n in v["notes"]:
+            print(f"note      {n['kind'] + ' ' + n['what']:33s} {n['detail']}")
+        print(f"-- {len(v['problems'])} problems, {len(v['notes'])} notes", file=sys.stderr)
         return 1 if v["problems"] else 0
     elif a.cmd == "wanted":
         info = H.reindex_links(c)

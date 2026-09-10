@@ -307,6 +307,95 @@ class HistoryTests(unittest.TestCase):
         self.c.execute("UPDATE artifacts SET licence='public domain' WHERE id='franklin-1845-001'")
         self.assertTrue(any("not a code" in p["detail"] for p in H.validate(self.c)["problems"]))
 
+    def test_a_known_archive_variant_is_canonicalised_on_write(self):
+        H.add_source(self.c, "ross1983penny", "William Penny", licence="open-access",
+                     url="https://pubs.aina.ucalgary.ca/arctic/Arctic36-4-380.pdf",
+                     container="Arctic", volume="36", archive="Arctic (AINA)", entry_type="article")
+        r = self.c.execute("SELECT * FROM sources WHERE bibkey='ross1983penny'").fetchone()
+        self.assertEqual(r["archive"], "Arctic Institute of North America")
+        # an archive nobody has spelt before is taken as written
+        H.add_source(self.c, "x1", "X", licence="unknown", archive="Musee de la Gaspesie")
+        self.assertEqual(self.c.execute("SELECT archive FROM sources WHERE bibkey='x1'").fetchone()[0],
+                         "Musee de la Gaspesie")
+
+    def test_the_archive_field_gives_up_its_identifiers_and_its_citation(self):
+        self.assertEqual(H.normalise_archive("Internet Archive (CIHM microform 22431)"),
+                         ("Internet Archive", "CIHM microform 22431", ""))
+        self.assertEqual(H.normalise_archive("Dictionary of Canadian Biography, vol. 10"),
+                         ("Dictionary of Canadian Biography", "", "vol. 10"))
+        self.assertEqual(H.normalise_archive("Arctic 36(4): 380-381 (Arctic Profiles)"),
+                         ("Arctic Institute of North America", "", "36(4): 380-381 (Arctic Profiles)"))
+        self.assertEqual(H.normalise_archive("Naval History and Heritage Command, photograph H-2875"),
+                         ("Naval History and Heritage Command", "photograph H-2875", ""))
+        self.assertEqual(H.normalise_archive("Royal Museums Greenwich, via Wikimedia Commons"),
+                         ("Royal Museums Greenwich", "", "via Wikimedia Commons"))
+        # an institution whose own name has a comma or a translation in it is left alone
+        for whole in ("Nasjonalbiblioteket (National Library of Norway)",
+                      "Library of Congress, Prints and Photographs Division",
+                      "Bodleian Libraries, University of Oxford"):
+            self.assertEqual(H.normalise_archive(whole), (whole, "", ""))
+
+    def test_check_flags_a_legacy_archive_and_notes_the_ones_used_once(self):
+        H.add_source(self.c, "legacy", "A paper", licence="open-access", url="https://example.invalid/a",
+                     archive="ARCTIC journal", entry_type="article", container="Arctic")
+        self.c.execute("UPDATE sources SET archive='ARCTIC journal' WHERE bibkey='legacy'")
+        v = H.validate(self.c)
+        self.assertTrue(any("is a variant of 'Arctic Institute of North America'" in p["detail"]
+                            for p in v["problems"]))
+        self.assertTrue(any(n["kind"] == "archive" and "one source only" in n["detail"] for n in v["notes"]))
+        self.assertFalse(any(n["kind"] == "archive" for n in v["problems"]))
+
+    def test_entry_type_is_one_of_ours_and_a_bibtex_synonym_lands_on_it(self):
+        self.assertEqual(H.entry_type_code("techreport"), "report")
+        self.assertEqual(H.entry_type_code("PhDThesis"), "thesis")
+        self.assertEqual(H.entry_type_code("inbook"), "incollection")
+        self.assertEqual(H.entry_type_code(""), "misc")
+        with self.assertRaises(ValueError):
+            H.add_source(self.c, "y1", "Y", entry_type="chapter")
+        H.import_bib(self.c, "@techreport{dreo1971winter, title = {Winter ice reconnaissance},"
+                             " year = {1971}, institution = {Defence Research Establishment Ottawa},"
+                             " library = {Publications du gouvernement du Canada}}")
+        r = self.c.execute("SELECT * FROM sources WHERE bibkey='dreo1971winter'").fetchone()
+        self.assertEqual(r["entry_type"], "report")
+        self.assertEqual(r["archive"], "Government of Canada Publications")
+
+    def test_the_container_is_a_journal_for_an_article_and_a_book_for_a_chapter(self):
+        H.add_source(self.c, "a1", "A paper", entry_type="article", container="Polar Record",
+                     licence="open-access", url="https://example.invalid/1")
+        H.add_source(self.c, "a2", "A chapter", entry_type="incollection", container="A big book",
+                     licence="open-access", url="https://example.invalid/2")
+        H.add_source(self.c, "a3", "A story", entry_type="online", container="Nunatsiaq News",
+                     licence="fair-dealing", url="https://example.invalid/3")
+        text = H.to_bibtex(self.c.execute("SELECT * FROM sources WHERE bibkey IN ('a1','a2','a3') ORDER BY bibkey"))
+        self.assertIn("journal = {Polar Record}", text)
+        self.assertIn("booktitle = {A big book}", text)
+        self.assertIn("journal = {Nunatsiaq News}", text)
+
+    def test_the_migration_reads_the_type_off_a_row(self):
+        import importlib.util
+        path = Path(__file__).resolve().parents[1] / "sources-cleanup-scratch" / "normalise_sources.py"
+        spec = importlib.util.spec_from_file_location("normalise_sources", path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        row = dict(title="", container="", publisher="", url="", volume="", note="", archive="", year="")
+
+        def kind(**kw):
+            return mod.infer_entry_type(dict(row, **kw))[0]
+        self.assertEqual(kind(container="Arctic", volume="36(4)", title="Penny"), "article")
+        self.assertEqual(kind(container="Report of the Fifth Thule Expedition 1921-24, Vol. V",
+                              title="The Caribou Eskimos"), "incollection")
+        self.assertEqual(kind(publisher="King's Printer", year="1927",
+                              title="Report of the Royal Canadian Mounted Police"), "report")
+        self.assertEqual(kind(publisher="John Murray", year="1859", title="The Voyage of the Fox"), "book")
+        self.assertEqual(kind(publisher="Nunatsiaq News", url="https://nunatsiaq.com/stories/article/x",
+                              title="Taissumani"), "online")
+        self.assertEqual(kind(url="https://biographi.ca/en/bio/penny_william_12E.html", title="PENNY, WILLIAM"),
+                         "incollection")
+        # an artwork, and a paper whose journal is in the wrong column, are left for a person
+        self.assertIsNone(kind(title="Sir Martin Frobisher (oil on canvas)"))
+        self.assertIsNone(kind(publisher="American Association for the Advancement of Science",
+                               url="https://archive.org/details/jstor-1638239", title="The Crocker Land Expedition"))
+
     def test_validate_flags_a_dropped_minus_sign_but_allows_europe(self):
         # the Beard daguerreotypes were taken at Greenhithe, genuinely 0.28 east
         self.artifact(id="greenhithe", lat=51.45, lon=0.28)

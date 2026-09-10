@@ -98,6 +98,176 @@ def _check_licence(code: str) -> None:
                          f"{', '.join(LICENCE_CODES)}, or cc-by / cc-by-sa / cc-by-nc-sa / cc-by-nc-nd "
                          f"with a version (cc-by-4.0). Put the detail in --rights-note.")
 
+
+# what a source is, in the shape the bibliography needs; `misc` is the last resort
+ENTRY_TYPES = {
+    "book": "a standalone work: a narrative, a monograph, an edited volume",
+    "article": "a piece in a journal, magazine or newspaper; its title goes in --container",
+    "incollection": "a chapter or paper in a book, a report series or a collection",
+    "report": "a government or institutional report, memoir, bulletin or inquiry",
+    "thesis": "a doctoral or master's thesis",
+    "online": "a web page, database entry or catalogue record cited as a page",
+    "dataset": "a data file, a data service or a database queried for values",
+    "misc": "none of the above: an artwork, a photograph, an object, a manuscript",
+}
+# BibTeX and biblatex spell some of these differently; an import lands on ours
+ENTRY_TYPE_ALIASES = {
+    "inbook": "incollection", "inproceedings": "incollection", "conference": "incollection",
+    "techreport": "report", "manual": "report", "phdthesis": "thesis", "mastersthesis": "thesis",
+    "electronic": "online", "www": "online", "webpage": "online",
+    "unpublished": "misc", "booklet": "book", "proceedings": "book", "data": "dataset",
+}
+
+
+def entry_type_code(value: str) -> str:
+    """The type as this database spells it. A BibTeX synonym (techreport,
+    phdthesis, inbook) lands on ours; anything else is refused."""
+    t = (value or "").strip().lower() or "misc"
+    t = ENTRY_TYPE_ALIASES.get(t, t)
+    if t not in ENTRY_TYPES:
+        raise ValueError(f"entry_type must be one of {', '.join(ENTRY_TYPES)}, not {value!r}")
+    return t
+
+
+# ---------------------------------------------------------------- archives
+# `archive` is the institution or platform that holds the copy, under the name
+# the institution itself uses. These are the variants the crew has written for
+# names already in the database; an archive not listed here is taken as written,
+# so this is a spelling table, not a closed vocabulary.
+#
+# The journal *Arctic* is published by the Arctic Institute of North America,
+# which serves the back run at pubs.aina.ucalgary.ca and the current issues on
+# the University of Calgary's journal hosting. The institute is the holder and
+# the journal is the container, so a paper in *Arctic* is held at the Arctic
+# Institute of North America whichever address it was read from.
+ARCHIVE_ALIASES = {
+    "Arctic": "Arctic Institute of North America",
+    "Arctic (AINA)": "Arctic Institute of North America",
+    "AINA": "Arctic Institute of North America",
+    "ARCTIC journal": "Arctic Institute of North America",
+    "Arctic journal": "Arctic Institute of North America",
+    "Arctic (journal), University of Calgary": "Arctic Institute of North America",
+    "ARCTIC (University of Calgary)": "Arctic Institute of North America",
+    "Arctic, journalhosting.ucalgary.ca": "Arctic Institute of North America",
+    "ARCTIC, University of Calgary journal hosting": "Arctic Institute of North America",
+    "University of Calgary Journal Hosting": "Arctic Institute of North America",
+    "journalhosting.ucalgary.ca": "Arctic Institute of North America",
+    "pubs.aina.ucalgary.ca": "Arctic Institute of North America",
+    # Polar Record is Cambridge University Press's; the copies are on Cambridge Core
+    "Polar Record": "Cambridge Core",
+    "Cambridge University Press": "Cambridge Core",
+    "cambridge.org": "Cambridge Core",
+    "Dictionary of Canadian Biography / Dictionnaire biographique du Canada": "Dictionary of Canadian Biography",
+    "Dictionnaire biographique du Canada": "Dictionary of Canadian Biography",
+    "DCB": "Dictionary of Canadian Biography",
+    "biographi.ca": "Dictionary of Canadian Biography",
+    "archive.org": "Internet Archive",
+    "Internet Archive (Wayback capture)": "Internet Archive Wayback Machine",
+    "Wayback Machine": "Internet Archive Wayback Machine",
+    "web.archive.org": "Internet Archive Wayback Machine",
+    "Publications du gouvernement du Canada / Government of Canada Publications":
+        "Government of Canada Publications",
+    "Publications du gouvernement du Canada": "Government of Canada Publications",
+    "publications.gc.ca": "Government of Canada Publications",
+    "Canadiana / Government of Canada sessional papers": "Canadiana",
+    "Canadiana / Natural Resources Canada": "Canadiana",
+    "canadiana.ca": "Canadiana",
+    "Public Safety Canada library": "Public Safety Canada Library",
+    "AMNH": "American Museum of Natural History",
+    "Library of Congress Prints and Photographs Division": "Library of Congress, Prints and Photographs Division",
+    "SPRI": "Scott Polar Research Institute",
+    "commons.wikimedia.org": "Wikimedia Commons",
+    "Wikimedia Commons / Government of Canada Publications": "Wikimedia Commons",
+    "wikisource.org": "Wikisource",
+    "Canadian Parks Service": "Parks Canada",
+    "Parks Canada, Directory of Federal Heritage Designations": "Parks Canada",
+    "GeoGratis / Open Maps, Natural Resources Canada": "Natural Resources Canada",
+    "LAC": "Library and Archives Canada",
+    "Bibliotheque et Archives Canada": "Library and Archives Canada",
+    "gutenberg.org": "Project Gutenberg",
+    "hathitrust.org": "HathiTrust",
+    "jstor.org": "JSTOR",
+}
+
+
+def _archive_key(value: str) -> str:
+    return re.sub(r"\s+", " ", value or "").strip().strip(".,;").casefold()
+
+
+_ARCHIVE_BY_KEY = {_archive_key(k): v for k, v in ARCHIVE_ALIASES.items()}
+# the names we recognise: enough to tell a holding institution with a detail
+# hanging off it from an institution whose own name has a comma in it
+_ARCHIVE_NAMES = {_archive_key(x) for x in ARCHIVE_ALIASES} | {_archive_key(x) for x in ARCHIVE_ALIASES.values()}
+# an identifier of the copy: it belongs in callno
+_ARCHIVE_ID = re.compile(r"^(?:items?|nos?|cat|catalogue no|call ?no|accession|shelfmark|lot|MSS?|CIHM|"
+                         r"microform|microfiche|photograph|negative)\b\.?[^\d]*\d"
+                         r"|^[A-Za-z]{0,6}[-.]?\d{4,}[\w./-]*$", re.I)
+# a citation of where in the work: volume, issue, pages. It belongs in the note
+_ARCHIVE_CITE = re.compile(r"^(?:vols?\.?|nos?\.)\s*[\dIVXL]|^\d+\s*\(\d+\)|^pp?\.\s*\d|^\d+\s*[:,]\s*\d", re.I)
+# how the copy was reached, or which copy it is: it belongs in the note
+_ARCHIVE_ROUTE = re.compile(r"^(?:via|from|reproduced|sold)\b|^Flickr Commons$|^Wayback capture$|^borrow only$", re.I)
+_ARCHIVE_DETAIL = re.compile(r"\b(?:collections?|cop(?:y|ies)|fonds|papers|archives|microform|microfiche|capture)\b",
+                             re.I)
+# "Arctic 36(4): 380-381 (Arctic Profiles)": a citation written into the field
+_ARCHIVE_JOURNAL = re.compile(r"^(?P<name>.+?)\s+(?P<cite>\d+\s*\(\d+\)\s*[:,].*)$")
+
+
+def canonical_archive(value: str) -> str:
+    """The name to file this holding under. A known variant becomes the
+    canonical name; anything else is returned as written."""
+    raw = re.sub(r"\s+", " ", value or "").strip()
+    return _ARCHIVE_BY_KEY.get(_archive_key(raw), raw)
+
+
+def _archive_detail(piece: str) -> str:
+    if _ARCHIVE_ID.match(piece):
+        return "callno"
+    if _ARCHIVE_CITE.match(piece) or _ARCHIVE_ROUTE.match(piece) or _ARCHIVE_DETAIL.search(piece):
+        return "note"
+    return ""
+
+
+def normalise_archive(value: str) -> tuple[str, str, str]:
+    """Split an archive field into (institution, callno, note): the holding
+    institution under its canonical name, the identifiers of the copy, and the
+    citation or provenance detail that is neither."""
+    raw = re.sub(r"\s+", " ", value or "").strip()
+    if not raw:
+        return "", "", ""
+    if _archive_key(raw) in _ARCHIVE_BY_KEY:
+        return _ARCHIVE_BY_KEY[_archive_key(raw)], "", ""
+    head, callno, note = raw, [], []
+    m = _ARCHIVE_JOURNAL.match(head)
+    if m and _archive_key(m.group("name")) in _ARCHIVE_NAMES:
+        note.append(m.group("cite").strip())
+        head = m.group("name").strip()
+    if ";" in head:                       # "A; B": A holds the copy, B is the rest of the story
+        head, rest = head.split(";", 1)
+        head, rest = head.strip(), rest.strip()
+        if rest:
+            note.append(rest)
+    peeled: list[str] = []
+    while True:
+        m = re.search(r"\s*\((?P<detail>[^()]*)\)$", head) or re.search(r"\s*,\s*(?P<detail>[^,()]+)$", head)
+        if not m:
+            break
+        rest = head[:m.start()].strip().strip(",")
+        pieces = [p.strip() for p in m.group("detail").split(",") if p.strip()]
+        if not rest or not pieces:
+            break
+        known = _archive_key(rest) in _ARCHIVE_NAMES
+        if not known and not any(_archive_detail(p) for p in pieces):
+            break
+        keep = []
+        for p in pieces:
+            (callno if _archive_detail(p) == "callno" else keep).append(p)
+        if keep:
+            peeled.append(", ".join(keep))
+        head = rest
+    note += reversed(peeled)
+    return canonical_archive(head), "; ".join(callno), "; ".join(note)
+
+
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS topics (
   slug        TEXT PRIMARY KEY,
@@ -110,7 +280,7 @@ CREATE TABLE IF NOT EXISTS topics (
 
 CREATE TABLE IF NOT EXISTS sources (
   bibkey      TEXT PRIMARY KEY,
-  entry_type  TEXT NOT NULL DEFAULT 'misc',
+  entry_type  TEXT NOT NULL DEFAULT 'misc',   -- one of ENTRY_TYPES; chosen, not left at misc
   author      TEXT DEFAULT '',
   title       TEXT NOT NULL,
   year        TEXT DEFAULT '',
@@ -122,7 +292,7 @@ CREATE TABLE IF NOT EXISTS sources (
   url         TEXT DEFAULT '',
   urldate     TEXT DEFAULT '',
   doi         TEXT DEFAULT '',
-  archive     TEXT DEFAULT '',            -- holding institution
+  archive     TEXT DEFAULT '',            -- holding institution, under its own name
   language    TEXT DEFAULT '',            -- of the text as held (ISO 639-1: en, fr, da, no, de, iu...)
   orig_language TEXT DEFAULT '',          -- when the work is a translation
   translator  TEXT DEFAULT '',
@@ -636,13 +806,15 @@ def add_topic(c, slug: str, title: str | None = None, **kw) -> str:
 
 def add_source(c, bibkey: str, title: str, **kw) -> str:
     key = re.sub(r"[^a-z0-9]", "", str(bibkey).lower()) or slugify(title).replace("-", "")
-    row = {"bibkey": key, "title": title, "entry_type": kw.get("entry_type", "misc")}
+    row = {"bibkey": key, "title": title, "entry_type": entry_type_code(kw.get("entry_type", "misc"))}
     for f in ("author", "year", "container", "publisher", "address", "volume", "pages", "url",
               "urldate", "doi", "archive", "callno", "licence", "rights_note", "note", "local_file", "topic",
               "language", "orig_language", "translator"):
         if kw.get(f) is not None:
             row[f] = str(kw[f])
     _check_licence(row.get("licence", ""))
+    if row.get("archive"):
+        row["archive"] = canonical_archive(row["archive"])
     row["primary_src"] = 1 if kw.get("primary") else 0
     return _upsert(c, "sources", "bibkey", row)
 
@@ -1017,7 +1189,8 @@ BIB_FIELDS = {"author": "author", "title": "title", "year": "year", "journal": "
               "booktitle": "container", "publisher": "publisher", "address": "address",
               "volume": "volume", "pages": "pages", "url": "url", "urldate": "urldate",
               "doi": "doi", "note": "note", "institution": "publisher", "school": "publisher",
-              "organization": "publisher", "howpublished": "note", "series": "container"}
+              "organization": "publisher", "howpublished": "note", "series": "container",
+              "archive": "archive", "library": "archive"}
 
 
 def parse_bib(text: str) -> list[dict]:
@@ -1064,7 +1237,8 @@ def to_bibtex(rows) -> str:
     for r in rows:
         fields = [("author", r["author"]), ("title", r["title"]), ("year", r["year"])]
         et = r["entry_type"] or "misc"
-        fields.append(("journal" if et == "article" else "booktitle", r["container"]))
+        # the container of an article or a web page is a periodical, never a book
+        fields.append(("journal" if et in ("article", "online") else "booktitle", r["container"]))
         for name, col in (("publisher", "publisher"), ("address", "address"), ("volume", "volume"),
                           ("pages", "pages"), ("doi", "doi"), ("url", "url"), ("urldate", "urldate")):
             fields.append((name, r[col]))
@@ -1569,9 +1743,14 @@ def validate(c) -> dict:
     credit or no source, a bibkey that resolves to nothing, a coordinate on
     dry land in the wrong hemisphere, a page that links nowhere."""
     problems: list[dict] = []
+    notes: list[dict] = []
 
     def bad(kind, what, detail):
         problems.append({"kind": kind, "what": what, "detail": detail})
+
+    def note(kind, what, detail):
+        """Worth a researcher's eye, but nothing a reader would notice."""
+        notes.append({"kind": kind, "what": what, "detail": detail})
 
     keys = {r["bibkey"] for r in c.execute("SELECT bibkey FROM sources")}
     for r in c.execute("SELECT * FROM artifacts"):
@@ -1639,13 +1818,31 @@ def validate(c) -> dict:
                             break
             except (json.JSONDecodeError, ValueError):
                 bad("artifact", r["id"], "waypoints is not a JSON array")
-    for r in c.execute("SELECT bibkey, title, licence, url FROM sources"):
+    held: dict[str, list[str]] = {}
+    still_misc: list[str] = []
+    for r in c.execute("SELECT bibkey, title, licence, url, archive, entry_type FROM sources"):
         if not r["licence"]:
             bad("source", r["bibkey"], "no copyright status")
         elif not is_licence_code(r["licence"]):
             bad("source", r["bibkey"], f"licence is not a code: {r['licence'][:60]!r}")
         if not r["url"]:
             bad("source", r["bibkey"], "no URL")
+        if r["archive"]:
+            name, callno, detail = normalise_archive(r["archive"])
+            held.setdefault(name, []).append(r["bibkey"])
+            if name != r["archive"]:
+                bad("source", r["bibkey"], f"archive {r['archive'][:60]!r} is a variant of {name!r}"
+                                           + (f"; {callno or detail} belongs in callno or the note" if callno or detail else ""))
+        if r["entry_type"] == "misc":
+            still_misc.append(r["bibkey"])
+    if still_misc:
+        note("sources", f"{len(still_misc)} of entry_type misc",
+             "give each the type that fits: " + ", ".join(k for k in ENTRY_TYPES if k != "misc")
+             + "; " + ", ".join(still_misc[:6]) + ("..." if len(still_misc) > 6 else ""))
+    for name, keys in sorted(held.items()):
+        if len(keys) == 1:
+            note("archive", name[:60], f"held by one source only ({keys[0]}): check it is not another "
+                                       f"spelling of an archive already in use")
     for r in c.execute("SELECT name, lat, lon FROM places WHERE lat IS NOT NULL"):
         msg = _off_map(r["lat"], r["lon"])
         if msg:
@@ -1672,7 +1869,7 @@ def validate(c) -> dict:
             bad("dates", r["span"], f"ends {r['b']} before it starts {r['a']}")
     stats = {t: c.execute(f"SELECT COUNT(*) AS n FROM {t}").fetchone()["n"]
              for t in ("topics", "sources", "artifacts", "pages", "people", "places", "events", "dates")}
-    return {"problems": problems, "stats": stats}
+    return {"problems": problems, "notes": notes, "stats": stats}
 
 
 # ---------------------------------------------------------------- publish
