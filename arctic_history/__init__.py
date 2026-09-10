@@ -2321,7 +2321,8 @@ def validate(c) -> dict:
                                          "the description must name who it is about")
         # a documented, genuinely eastern position (Novaya Zemlya, the far
         # side of the dateline) is vouched for with the east-verified tag
-        msg = None if "east-verified" in (r["tags"] or "") else _off_map(r["lat"], r["lon"])
+        east_ok = "east-verified" in (r["tags"] or "")
+        msg = None if east_ok else _off_map(r["lat"], r["lon"])
         if msg:
             bad("artifact", r["id"], msg)
         if r["local_file"]:
@@ -2337,7 +2338,7 @@ def validate(c) -> dict:
                     bad("artifact", r["id"], "geometry is not a GeoJSON geometry")
                 else:
                     for pt in _points(g["coordinates"]):
-                        msg = _off_map(pt[1], pt[0])
+                        msg = None if east_ok else _off_map(pt[1], pt[0])
                         if msg:
                             bad("artifact", r["id"], f"geometry point {pt[:2]}: {msg}")
                             break
@@ -2350,7 +2351,7 @@ def validate(c) -> dict:
                     raise ValueError
                 for i, p in enumerate(w):
                     if isinstance(p, dict):
-                        msg = _off_map(p.get("lat"), p.get("lon"))
+                        msg = None if east_ok else _off_map(p.get("lat"), p.get("lon"))
                         if msg:
                             bad("artifact", r["id"], f"waypoint {i} ({p.get('date', 'undated')}): {msg}")
                             break
@@ -2429,7 +2430,9 @@ def validate(c) -> dict:
         if r["lat"] is None or r["lon"] is None:
             bad("observation", r["id"], "no position, and its place gives none")
         else:
-            msg = _off_map(r["lat"], r["lon"])
+            # the magnetic pole has crossed into the eastern hemisphere; an
+            # observation vouches for an eastern position with the same tag
+            msg = None if "east-verified" in (r["tags"] or "") else _off_map(r["lat"], r["lon"])
             if msg:
                 bad("observation", r["id"], msg)
         if not r["bibkey"]:
