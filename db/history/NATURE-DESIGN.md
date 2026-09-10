@@ -285,6 +285,33 @@ from any of them (the warmest Atlantic water yet seen in Nares Strait, no
 bottom where the chart says 200 m) is journalled as an observation with the
 cast or file id in `detail`, so the page can point at it.
 
+## 7a. @ada and @doc
+
+Aboard, two personas run on a local Gemma model with the wiki as their second
+brain: **@ada**, the ship's library, and **@doc**, the resident scientist.
+The layer serves both from the same published files, and the design has to
+suit a model that reads excerpts rather than a database.
+
+- **@ada** answers from the whole wiki, both halves, and the bibliography:
+  who was here, what they wrote, where the copy is. Nothing changes for her
+  except that subject pages and observations join the excerpt index.
+- **@doc** answers from the natural half first: a subject page with its
+  record, the observations near the ship's position and date, the datasets
+  behind them. The publish therefore writes, beside `observations.json`, a
+  per-subject excerpt (`subject/<slug>` page body followed by its record as
+  dated lines) and a per-place excerpt (every observation within a place's
+  reach, in date order), so a small model can be handed the muskox record or
+  the Eureka Sound record as one text.
+- **@doc writes the journal.** A crew member's sentence in the chat becomes a
+  journal line: @doc fills the position and time from the ship, matches the
+  subject against `subjects.json` by any of its names, and asks for
+  confirmation before appending. The journal format is flat on purpose, so
+  a local model produces it reliably; the writer on grid does the strict
+  validation, and a line that fails ingest comes back to the ship's log as
+  a problem to fix, not a silent drop.
+- **Both read the same excerpts the historian reads today**, so the front
+  end's excerpt builder grows two kinds and no new mechanism.
+
 ## 8. The research plan
 
 **Wave 1, the record in the texts we hold.** Every primary narrative on disk
@@ -315,6 +342,48 @@ ArcticNet and the ship's own cruise reports.
 
 **Wave 3, the ship.** The journal, from the first sighting of the season.
 
+## 8a. Data sources, by domain
+
+The human half was built from narratives and archives. The natural half
+needs the record's other shape: catalogues, series, maps and status reports,
+most of them open. A first list, with the licence code each falls under and
+the route from grid.
+
+| domain | source | what it gives | licence | route |
+|---|---|---|---|---|
+| biology | GBIF occurrence downloads for the archipelago's bounding box | every georeferenced specimen and sighting the museums and surveys have shared, with dates and collectors | `cc-by-4.0` / `cc0` per dataset | API, no login; cite the download DOI |
+| biology | OBIS | the marine occurrences: benthos, fish, plankton, mammals | `cc-by-4.0` | API |
+| biology | Canadian Museum of Nature collections | the type specimens and the historical collections from Parry to the PCSP | `attribution` | portal and GBIF |
+| biology | COSEWIC and IUCN status reports | population, range, the threats, by species | `crown-open` / `attribution` | open PDFs |
+| biology | Canadian Wildlife Service and DFO reports | the surveys since Tener: muskox, caribou, bear, walrus, whale counts | `crown-open` | publications.gc.ca (session cookie, section 8) |
+| biology | Nunavut Wildlife Management Board and the co-management boards | harvest studies and Inuit knowledge reports | `attribution`, some `not-cleared` | open PDFs, ask where unclear |
+| biology | the Arctic journal and Polar Record | the field papers, a century and a half of them | `open-access` after 2016, `in-copyright-licensed` before | AINA free; Cambridge Core through the library |
+| geology | GEOSCAN, the Geological Survey of Canada | memoirs, bulletins, maps, open files, the 1:250,000 sheets | `crown-expired` / `crown-open` | open downloads |
+| geology | WEBLEX, the Lexicon of Canadian Geologic Units | every formation with its type section, age and author | `crown-open` | web, per unit |
+| geology | Canadian Geochronology Knowledgebase; the Nunavut Geoscience portal | ages and the territory's own maps | `crown-open` | open |
+| geology | the Meteoritical Bulletin database | the Cape York irons and every other fall and find | `attribution` | web |
+| glaciology | GLIMS and the Randolph Glacier Inventory | every glacier outline with an id | `cc-by-4.0` | download |
+| glaciology | the World Glacier Monitoring Service | White Glacier and the other mass-balance series | `attribution` | web, email for map sheets |
+| glaciology | the Agassiz and Devon ice-core papers and NOAA paleoclimate | the cores and their records | `public-domain` (NOAA) / `in-copyright-cited` | NOAA open |
+| sea ice | the Canadian Ice Service: weekly charts, the climatic atlas, the digital archive since 1968 | the ice year by year, the polynyas, the freeze-up and break-up dates | `crown-open` (Open Government Licence) | open data portal |
+| sea ice | NSIDC sea-ice index and the passive-microwave record | the daily concentration since 1978 | `public-domain` | download |
+| sea ice | the Inuit sea-ice vocabulary: SIKU, the Igliniit project, community atlases | the words for the ice and the trails across it | `attribution` / `not-cleared` until asked | open PDFs; ask the communities' projects |
+| oceanography | GEBCO and IBCAO | the bathymetry, and the older soundings behind it | `public-domain` / `attribution` | download |
+| oceanography | DFO's ocean data (Marine Environmental Data Section), the Polar Data Catalogue, ArcticNet | casts, moorings, the ship's own past cruises | `crown-open` / `cc-by-4.0` | portals, some registration |
+| oceanography | CHS tide tables and the Alert gauge | the tides | `crown-open` | open |
+| meteorology | ECCC historical climate data: Alert, Eureka, Resolute, Isachsen, Mould Bay | the daily record since 1947, the normals and the extremes | `crown-open` (Open Government Licence) | open data, CSV by station |
+| meteorology | the JAWS and Operation Hazen reports; the IGY record | the first years, station by station | `crown-expired` / `public-domain` (US) | GEOSCAN, HathiTrust |
+| astronomy, geomagnetism | NRCan Geomagnetic Laboratory: the observatories and the pole positions | declination, the storms, the pole's track since 1831 | `crown-open` | open |
+| astronomy | the 1882 transit reports (Fort Conger; the international campaign), the eclipse and comet notices in the narratives | the sky as the expeditions saw it | `public-domain` | HathiTrust, IA |
+| all | the Smithsonian Contributions to Knowledge: Schott's reductions of Kane, Hayes and Hall | the tides, temperatures, magnetics and soundings of 1853 to 1873, reduced | `public-domain` | IA, Biodiversity Heritage Library |
+| all | the Biodiversity Heritage Library | the natural-history appendices of every narrative, as page images with OCR | `public-domain` | API, no login |
+| all | the Polar Data Catalogue (CCIN) | the metadata of every Canadian Arctic dataset, with contacts | `cc-by-4.0` | API |
+| all | Wikidata and Wikimedia Commons | the ids that tie a subject to GBIF, the Lexicon and the rest; the pictures | `cc0` / per file | API, one query at a time from this address |
+
+The route column matters as much as the source: most of this is open and
+reachable from grid without the library, which is a different world from the
+human half.
+
 ## 9. Checks and rules the brief gains
 
 - A subject name must resolve in its backbone (GBIF for land and birds,
@@ -341,9 +410,9 @@ ArcticNet and the ship's own cruise reports.
 
 ## 10. Open questions, for the ship
 
-1. **Who is @doc?** A person, the model persona in the chat, or both. The
-   journal serves both, but the entry form is built differently for a person
-   typing than for a persona confirming.
+1. **The entry form.** @doc is the persona; the question is whether the crew
+   also get a form to type into directly, or only the chat. The journal
+   serves both.
 2. **The backbones.** GBIF plus WoRMS for life and the Lexicon for rock units
    are the defaults; the ship's own species and station lists may be better.
 3. **Sensitivity.** 0.5 degrees and a blank place is a first cut; @doc sets
