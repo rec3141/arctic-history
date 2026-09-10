@@ -86,7 +86,7 @@ removed and why in the worklog.
       --title "The Voyage of the 'Fox' in the Arctic Seas" \
       --author "McClintock, Francis Leopold" --year 1859 --entry-type book \
       --publisher "John Murray" --url https://archive.org/details/... \
-      --urldate 2026-09-08 --licence "public domain" --archive "Internet Archive" \
+      --urldate 2026-09-08 --licence public-domain --archive "Internet Archive" \
       --primary --topic <your-slug> --note "carries the Victory Point record in facsimile"
 
 `--bibkey` is `<author><year><firstword>`, lowercase ASCII, no punctuation.
@@ -103,6 +103,33 @@ scholarship. Every source needs a `--licence` and a `--url`. For an archival
 item give `--archive` (the holding institution) and `--callno` (the accession or
 catalogue number). If you already have a BibTeX file, `history-db.py bib --file
 refs.bib --topic <your-slug>` imports it whole.
+
+**`--licence` is a code, not a sentence.** The tool refuses anything else.
+Pick the one that describes what this layer may do with the item:
+
+| code | use it for |
+|---|---|
+| `public-domain` | out of copyright, a US government work, no known restrictions, a route or plot compiled for this project |
+| `cc0`, `cc-by-4.0`, `cc-by-sa-2.5`, `cc-by-nc-sa-4.0`, `cc-by-nc-nd-4.0` | Creative Commons, with the version as the holder states it |
+| `crown-expired` | Canadian Crown copyright whose fifty-year term has run out |
+| `crown-open` | Crown copyright still in force, reproduced under the Open Government Licence, the Reproduction of Federal Law Order, or Government of Canada/Nunavut non-commercial terms |
+| `open-access` | free to read at the publisher without a CC licence: *Arctic* before late 2016, Érudit, U of T/Laval journals, UCalgary Press, finding aids |
+| `attribution` | reusable with attribution under the holder's own terms (Inuit Heritage Trust, Council of Europe) |
+| `permission` | the holder or the project owner approved this use; name the request number in the note |
+| `fair-dealing` | in copyright; a short passage quoted or a figure described under fair dealing for research |
+| `in-copyright-licensed` | in copyright; a file is held for internal research use under a University of Manitoba or publisher licence, not for republication |
+| `in-copyright-cited` | in copyright; cited only, nothing reproduced or held |
+| `rights-reserved` | the holder reserves rights and this layer works within their stated terms (Arktisk Institut, AMNH) |
+| `not-cleared` | not cleared for reuse: no file is held until a person confirms |
+| `unknown` | status not yet established |
+
+Everything the code does not say goes in `--rights-note`, free text: who
+holds the rights, why the term is thought expired (and when), the request
+that approved the use, what is and is not held. The wiki shows the code's
+phrase followed by the note, so write the note as a sentence a reader can
+use: `--licence crown-expired --rights-note "Crown copyright of 1961 expired
+2011 under the fifty-year term; HathiTrust serves the volume full view"`.
+When the code says it all, leave the note off.
 
 The database is shared, so a source another researcher has already entered is
 already there: check `history-db.py list --what sources` before inventing a
@@ -122,7 +149,7 @@ concern; a missing original cannot be recovered later.
       --type quote --title "The Victory Point record" --date 1848-04-25 \
       --lat 69.97 --lon -98.55 --creator "Fitzjames and Crozier" \
       --bibkey mcclintock1859voyage --pages "p. 283" \
-      --credit "Royal Museums Greenwich, AAA2069" --licence "public domain" \
+      --credit "Royal Museums Greenwich, AAA2069" --licence public-domain \
       --description "..." --tags franklin,abandonment --people "Crozier;Fitzjames" \
       --source-url https://... --local-file <your-slug>/files/name.jpg
 
@@ -154,7 +181,8 @@ reconstruct the route from the published narrative or log:
     tools/history-db.py track --id <your-slug>-001 --topic <your-slug> \
       --title "Erebus and Terror, 1845-1848" --date 1845/1848 \
       --waypoints-file wp.json --bibkey cyriax1939franklin \
-      --credit "route after Cyriax 1939" --licence "public domain" \
+      --credit "route after Cyriax 1939" --licence public-domain \
+      --rights-note "route compiled for this project; Cyriax 1939 is in copyright" \
       --description "..."
 
 The line is built from the waypoints unless you pass `--geometry`. Precision to

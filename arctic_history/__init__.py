@@ -46,8 +46,57 @@ HISTORY_DB = HISTORY_DIR / "history.sqlite"
 # the kinds of thing a wiki page can be about; `page` is a hand-written narrative
 KINDS = ("page", "artifact", "source", "person", "place", "event", "topic", "animal", "vessel")
 ARTIFACT_TYPES = ("image", "text", "track", "place", "event", "map", "quote", "object")
-LICENCE_HINT = ("public domain", "crown copyright expired", "cc0", "cc by", "cc by-sa",
-                "fair dealing", "all rights reserved", "unknown")
+# `licence` is a code from this vocabulary; what the code does not say (the
+# holder, the term, the request number, why it is thought expired) goes in
+# `rights_note`, free text. Most permissive first.
+LICENCE_CODES = {
+    "public-domain": "public domain",
+    "cc0": "CC0",
+    "crown-expired": "Crown copyright expired; public domain",
+    "crown-open": "Crown copyright; non-commercial reproduction permitted",
+    "open-access": "open access, free to read",
+    "attribution": "reusable with attribution",
+    "permission": "reproduced by permission",
+    "fair-dealing": "in copyright; quoted under fair dealing",
+    "in-copyright-licensed": "in copyright; held for internal research use under licence",
+    "in-copyright-cited": "in copyright; cited, not reproduced",
+    "rights-reserved": "all rights reserved; held under the holder's terms",
+    "not-cleared": "NOT CLEARED for reuse",
+    "unknown": "copyright status unknown",
+}
+# Creative Commons keeps its version: cc-by-4.0, cc-by-sa-2.5, cc-by-nc-nd-4.0, cc-by (unversioned)
+_CC_CODE = re.compile(r"^cc-by(-nc)?(-sa|-nd)?(-\d\.\d)?$")
+
+
+def is_licence_code(code: str) -> bool:
+    return code in LICENCE_CODES or bool(_CC_CODE.match(code))
+
+
+def licence_label(code: str) -> str:
+    """The reader's phrase for a code: `cc-by-sa-4.0` reads as CC BY-SA 4.0."""
+    if code in LICENCE_CODES:
+        return LICENCE_CODES[code]
+    m = _CC_CODE.match(code)
+    if m:
+        name = "BY" + (m.group(1) or "").upper() + (m.group(2) or "").upper()
+        return "CC " + name + (" " + m.group(3)[1:] if m.group(3) else "")
+    return code
+
+
+def rights_text(r) -> str:
+    """The reader's line: the code's phrase, then the note if there is one.
+    A legacy free-text licence (pre-vocabulary) is shown as it stands."""
+    code = r["licence"] or ""
+    note = (r["rights_note"] or "") if "rights_note" in r.keys() else ""
+    text = licence_label(code) if is_licence_code(code) else code
+    return f"{text}. {note}" if note and text else (note or text)
+
+
+def _check_licence(code: str) -> None:
+    if code and not is_licence_code(code):
+        raise ValueError(f"licence must be a code, not free text: {code!r}. One of "
+                         f"{', '.join(LICENCE_CODES)}, or cc-by / cc-by-sa / cc-by-nc-sa / cc-by-nc-nd "
+                         f"with a version (cc-by-4.0). Put the detail in --rights-note.")
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS topics (
@@ -78,7 +127,8 @@ CREATE TABLE IF NOT EXISTS sources (
   orig_language TEXT DEFAULT '',          -- when the work is a translation
   translator  TEXT DEFAULT '',
   callno      TEXT DEFAULT '',            -- accession or catalogue number
-  licence     TEXT DEFAULT '',
+  licence     TEXT DEFAULT '',            -- a code from LICENCE_CODES
+  rights_note TEXT DEFAULT '',            -- the holder, the term, the reasoning: free text
   note        TEXT DEFAULT '',
   primary_src INTEGER NOT NULL DEFAULT 0,
   local_file  TEXT DEFAULT '',            -- a downloaded copy, relative to db/history/
@@ -103,7 +153,8 @@ CREATE TABLE IF NOT EXISTS artifacts (
   source_url  TEXT DEFAULT '',
   download_url TEXT DEFAULT '',
   local_file  TEXT DEFAULT '',            -- relative to db/history/
-  licence     TEXT DEFAULT '',
+  licence     TEXT DEFAULT '',            -- a code from LICENCE_CODES
+  rights_note TEXT DEFAULT '',            -- the holder, the term, the reasoning: free text
   credit      TEXT NOT NULL DEFAULT '',
   bibkey      TEXT NOT NULL DEFAULT '',
   pages       TEXT DEFAULT '',            -- where in the cited work
@@ -361,7 +412,8 @@ def connect(path: Path | None = None, create: bool = True) -> sqlite3.Connection
                                     ("sources", "translator", "''"), ("artifacts", "language", "''"),
                                     ("pages", "language", "'en'"),
                                     ("artifacts", "view_file", "''"), ("artifacts", "routing", "''"),
-                                    ("pages", "people", "'[]'")):
+                                    ("pages", "people", "'[]'"),
+                                    ("sources", "rights_note", "''"), ("artifacts", "rights_note", "''")):
             if col not in {r[1] for r in c.execute(f"PRAGMA table_info({table})")}:
                 c.execute(f"ALTER TABLE {table} ADD COLUMN {col} TEXT DEFAULT {default}")
         c.commit()
@@ -586,10 +638,11 @@ def add_source(c, bibkey: str, title: str, **kw) -> str:
     key = re.sub(r"[^a-z0-9]", "", str(bibkey).lower()) or slugify(title).replace("-", "")
     row = {"bibkey": key, "title": title, "entry_type": kw.get("entry_type", "misc")}
     for f in ("author", "year", "container", "publisher", "address", "volume", "pages", "url",
-              "urldate", "doi", "archive", "callno", "licence", "note", "local_file", "topic",
+              "urldate", "doi", "archive", "callno", "licence", "rights_note", "note", "local_file", "topic",
               "language", "orig_language", "translator"):
         if kw.get(f) is not None:
             row[f] = str(kw[f])
+    _check_licence(row.get("licence", ""))
     row["primary_src"] = 1 if kw.get("primary") else 0
     return _upsert(c, "sources", "bibkey", row)
 
@@ -610,9 +663,10 @@ def add_artifact(c, id: str, topic: str, type: str, title: str, **kw) -> str:
            "lat": None if kw.get("lat") in (None, "") else float(kw["lat"]),
            "lon": None if kw.get("lon") in (None, "") else float(kw["lon"])}
     for f in ("creator", "description", "source_url", "download_url", "local_file",
-              "licence", "credit", "bibkey", "pages", "language", "view_file", "routing"):
+              "licence", "rights_note", "credit", "bibkey", "pages", "language", "view_file", "routing"):
         if kw.get(f) is not None:
             row[f] = str(kw[f])
+    _check_licence(row.get("licence", ""))
     if row.get("routing", "") not in ROUTING:
         raise ValueError(f"routing must be one of {', '.join(repr(x) for x in ROUTING)}")
     for f in ("geometry", "waypoints"):
@@ -1014,7 +1068,7 @@ def to_bibtex(rows) -> str:
         for name, col in (("publisher", "publisher"), ("address", "address"), ("volume", "volume"),
                           ("pages", "pages"), ("doi", "doi"), ("url", "url"), ("urldate", "urldate")):
             fields.append((name, r[col]))
-        note = "; ".join(x for x in (r["archive"], r["callno"], r["licence"], r["note"]) if x)
+        note = "; ".join(x for x in (r["archive"], r["callno"], rights_text(r), r["note"]) if x)
         fields.append(("note", note))
         fields.append(("keywords", "primary" if r["primary_src"] else "secondary"))
         body = ",\n".join(f"  {k} = {{{v}}}" for k, v in fields if v)
@@ -1232,7 +1286,7 @@ def artifact_body(r: sqlite3.Row) -> str:
     if r["lat"] is not None:
         facts.append(f"**Position** {r['lat']:.4f}, {r['lon']:.4f}")
     if r["licence"]:
-        facts.append(f"**Licence** {r['licence']}")
+        facts.append(f"**Licence** {rights_text(r)}")
     if facts:
         lines += ["", " · ".join(facts)]
     if r["credit"]:
@@ -1255,7 +1309,7 @@ def source_body(r: sqlite3.Row) -> str:
     if r["archive"] or r["callno"]:
         lines += ["", "**Held at** " + ", ".join(x for x in (r["archive"], r["callno"]) if x)]
     if r["licence"]:
-        lines += ["", f"**Copyright** {r['licence']}"]
+        lines += ["", f"**Copyright** {rights_text(r)}"]
     if r["note"]:
         lines += ["", r["note"]]
     lines += ["", "**Kind** " + ("primary source" if r["primary_src"] else "secondary source")]
@@ -1536,6 +1590,8 @@ def validate(c) -> dict:
             bad("artifact", r["id"], f"bibkey {r['bibkey']} is in no source entry")
         if not r["licence"]:
             bad("artifact", r["id"], "no licence stated")
+        elif not is_licence_code(r["licence"]):
+            bad("artifact", r["id"], f"licence is not a code: {r['licence'][:60]!r}")
         if r["lat"] is None and not r["geometry"]:
             bad("artifact", r["id"], "neither a position nor a geometry")
         ppl = json.loads(r["people"] or "[]")
@@ -1586,6 +1642,8 @@ def validate(c) -> dict:
     for r in c.execute("SELECT bibkey, title, licence, url FROM sources"):
         if not r["licence"]:
             bad("source", r["bibkey"], "no copyright status")
+        elif not is_licence_code(r["licence"]):
+            bad("source", r["bibkey"], f"licence is not a code: {r['licence'][:60]!r}")
         if not r["url"]:
             bad("source", r["bibkey"], "no URL")
     for r in c.execute("SELECT name, lat, lon FROM places WHERE lat IS NOT NULL"):
@@ -1655,7 +1713,8 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
         for r in c.execute(f"SELECT * FROM artifacts ORDER BY {date_order('date_start')}, id"):
             a = {k: r[k] for k in ("id", "topic", "type", "title", "date_text", "date_start", "creator",
                                    "description", "lat", "lon", "credit", "bibkey", "licence",
-                                   "source_url", "local_file", "pages")}
+                                   "rights_note", "source_url", "local_file", "pages")}
+            a["licence_label"] = licence_label(r["licence"])
             a["people"] = json.loads(r["people"] or "[]")
             a["tags"] = json.loads(r["tags"] or "[]")
             for f in ("geometry", "waypoints"):
