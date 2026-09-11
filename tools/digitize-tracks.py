@@ -74,15 +74,15 @@ distribution, with the source acknowledged ("produced using Copernicus WorldDEM-
 under COPERNICUS by the European Union and ESA; all rights reserved").  It was
 chosen over Natural Resources Canada's CDEM because it covers Greenland and the
 Canadian islands alike from one source, at one resolution, and because a tile is
-a single curl.  The tiles live in /data/gis/dem/glo90/ (620 tiles, 74 to 84 N,
-30 to 130 W, about 0.5 GB); the fetch script beside them is
+a single curl.  The tiles live in /data/gis/dem/glo90/ (2,172 tiles, 60 to 84 N,
+30 to 170 W, 3.3 GB; 74 to 84 N and 30 to 130 W until 2026-09-10); the fetch script beside them is
 /data/gis/dem/fetch.sh.  The cost surface never needs 90 m: the routes were drawn
 at 1:2,000,000, so the tiles are mosaicked once into a polar stereographic grid
 at 250 m,
 
     +proj=stere +lat_0=90 +lat_ts=78 +lon_0=-85 +datum=WGS84 +units=m
 
-covering 74 to 84 N, 30 to 130 W, and cached in /data/gis/dem/mosaic/ as
+covering 60 to 84 N, 30 to 170 W, and cached in /data/gis/dem/mosaic/ as
 memory-mapped float32 arrays: the elevation, the slope in degrees, and two byte
 masks -- land from the full-resolution GSHHG shoreline (the sea router's zip,
 level 1: a lake is not sea), ice from Natural Earth's 10 m glaciated areas
@@ -234,8 +234,12 @@ cells the search runs first on the surface pooled 4x by its cheapest cell, so a
 valley is never closed by the pooling, and then again at 250 m inside a 10 km
 corridor round that path.  The staircase that comes out is simplified to 300 m,
 rounded by two Chaikin passes and simplified again to half a kilometre, within
-one leg, never across a waypoint.  A waypoint outside the DEM's extent leaves
-its legs as great circles, flagged.
+one leg, never across a waypoint.  A waypoint outside the DEM's extent hands
+its legs to the sea router (tools/route-tracks.py): the water path on its fine
+mask when both ends lie in it, else its coarse one, else a great circle -- so
+the voyage legs of a mixed track (Rae's passage home, the Isabella carrying
+Ross's boats to Hull) follow the sea instead of chording across Greenland.
+Those legs are flagged ``fallback`` all the same, and the grade says so.
 
 ## Waypoints that are wrong, and moving them
 
@@ -305,10 +309,10 @@ NE_ZIP = GIS / "ne" / "ne_10m_glaciated_areas.zip"
 NE_URL = "https://naciscdn.org/naturalearth/10m/physical/ne_10m_glaciated_areas.zip"
 GSHHG_ZIP = LEDGER / "masks" / "gshhg-shp-2.3.7.zip"
 
-# the grid: polar stereographic, 250 m, 74..84 N, 30..130 W
+# the grid: polar stereographic, 250 m, 60..84 N, 30..170 W (74..84 N, 30..130 W until 2026-09-10)
 PROJ = "+proj=stere +lat_0=90 +lat_ts=78 +lon_0=-85 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs"
 RES = 250.0
-EXTENT = dict(lat=(74.0, 84.0), lon=(-130.0, -30.0))
+EXTENT = dict(lat=(60.0, 84.0), lon=(-170.0, -30.0))
 R_EARTH = 6371.0088
 
 # the cost surface
@@ -430,6 +434,20 @@ def _load_route_tracks():
     m = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(m)
     return m
+
+
+_SEA = None
+
+
+def _sea_grids():
+    """The sea router's fine and coarse masks, loaded once from their caches,
+    for the legs that leave the DEM."""
+    global _SEA
+    if _SEA is None:
+        rt = _load_route_tracks()
+        zpath = rt.gshhg_zip(GSHHG_ZIP)
+        _SEA = (rt, rt.Grid(rt.FINE, zpath), rt.Grid(rt.COARSE, zpath))
+    return _SEA
 
 
 def gc_km(a, b):
@@ -1511,12 +1529,32 @@ class Router:
             return None
         return int(rr[i] + ra), int(cc[i] + ca)
 
+    def sea_leg(self, p, q):
+        """A leg with an end outside the DEM: the sea router's water path, on its
+        fine mask when both ends lie in it, else its coarse one, else a great
+        circle.  Flagged as a fallback either way: it is not a terrain route."""
+        try:
+            rt, fine, coarse = _sea_grids()
+        except Exception as e:
+            print(f"sea router unavailable ({e}); great circle", file=sys.stderr)
+            return great_circle(p, q), dict(fallback="outside the DEM")
+        for g in (fine, coarse):
+            if g.holds(p) and g.holds(q):
+                pts, crossed = g.route(p, q)
+                if g is fine and crossed > rt.CROSS_TOL_KM and coarse.holds(p) and coarse.holds(q):
+                    pts2, crossed2 = coarse.route(p, q)
+                    if crossed2 < crossed:
+                        pts, crossed, g = pts2, crossed2, coarse
+                return [tuple(x) for x in pts], dict(fallback="outside the DEM", sea_router=g.name,
+                                                     crossed_km=round(float(crossed), 1))
+        return great_circle(p, q), dict(fallback="outside the DEM")
+
     def route_leg(self, p, q, month, ice_ok, corridor_ll=None, boat=False, shore=(None, None)):
         T = self.T
         r0, c0 = T.rc(*p)
         r1, c1 = T.rc(*q)
         if not (T.inside(r0, c0) and T.inside(r1, c1)):
-            return great_circle(p, q), dict(fallback="outside the DEM")
+            return self.sea_leg(p, q)
         if (r0, c0) == (r1, c1):
             return [p, q], dict(fallback="same cell")
         L = math.hypot(r1 - r0, c1 - c0) * RES / 1000.0
@@ -1904,8 +1942,11 @@ def verdict(rec):
     bits = []
     legs = rec["legs"]
     fb = [l for l in legs if l.get("fallback") and l["fallback"] != "same cell"]
+    sea = [l for l in fb if l.get("sea_router")]
     if fb:
-        bits.append(f"{len(fb)} of {len(legs)} legs could not be routed ({fb[0]['fallback']})")
+        bits.append(f"{len(fb)} of {len(legs)} legs lie outside the DEM" +
+                    (f", {len(sea)} of them routed through water by the sea router" if sea else "") +
+                    (f", {len(fb) - len(sea)} left as great circles" if len(sea) < len(fb) else ""))
     if rec.get("digitized"):
         n_ink = rec["digitized_ink_legs"]
         bits.append(f"{n_ink} of {len(legs)} legs follow ink digitized from {rec['map']} "
@@ -1957,7 +1998,8 @@ def verdict(rec):
                         "straight), so there is nothing to write back")
     elif fb:
         rec["grade"] = "review"
-        bits.append("the legs outside the DEM stay great circles, which is right over the sea ice; review the rest")
+        bits.append("the legs outside the DEM are the sea router's water paths or great circles, which is right "
+                    "over the sea ice; review the rest")
     elif rec.get("digitized") and (rec["digitized_ink_legs"] < 0.5 * len(legs)
                                    or rec.get("digitized_doubtful_legs", 0) > 0.2 * len(legs)):
         rec["grade"] = "review"

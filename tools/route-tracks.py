@@ -207,6 +207,16 @@ MONTHS = ("january", "february", "march", "april", "may", "june", "july",
 # patrols.  Read off the titles; each is a judgement, and the crew's flag
 # replaces it.
 OVERRIDES = {
+    "franklin-search-136": ("as-given", "the Advance and the Rescue beset and drifting: fixes on the ice, not a course steered"),
+    "ice-shelves-and-ice-islands-004": ("as-given", "the drift of ice island WH-5: fixes on the ice"),
+    "ice-shelves-and-ice-islands-005": ("as-given", "the drift of the Ayles ice island: fixes on the ice"),
+    "ice-shelves-and-ice-islands-006": ("as-given", "the drift of ice island T-3: fixes on the ice"),
+    "sverdrup-bernier-peary-303": ("as-given", "Sverdrup and Schei's sledge journey up Eureka Sound; waypoints 14 to 19 wait for a re-plot up Troldfjord before the terrain router takes it"),
+    "qei-from-the-air-1947-106": ("as-given", "the game survey's bases, joined by air"),
+    "qei-from-the-air-1947-107": ("as-given", "a flight"),
+    "qei-from-the-air-1947-108": ("as-given", "flights from an advance base"),
+    "the-magnetic-pole-003": ("as-given", "the wander of the magnetic pole: successive positions, not a journey"),
+    "st-roch-modern-055": ("water", "a submarine follows the ocean: under the ice is still under water, and the two legs to and from the Pole lie outside every mask and stay great circles"),
     "cook-1908-axel-heiberg-002": ("as-given", "Cook's return by sledge and canvas boat over the sea ice of Eureka and Jones Sounds"),
     "greenland-inughuit-043": ("as-given", "Ahwelah and Etukishook's account of the same sledge journey with Cook"),
     "haig-thomas-1937-002": ("as-given", "a sledge survey of south-east Ellesmere"),
