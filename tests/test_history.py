@@ -82,6 +82,17 @@ class HistoryTests(unittest.TestCase):
         self.assertEqual((json.loads(row["tags"]), json.loads(row["people"])), ([], []))
         self.assertEqual(row["date_start"], "1859-05-06")
 
+    def test_a_replaced_artifact_is_kept_with_its_message(self):
+        self.artifact(title="A plate", tags="franklin")
+        self.artifact(title="A plate", tags="franklin")          # nothing changes: no version
+        self.assertEqual(H.artifact_versions(self.c, "franklin-1845-001"), [])
+        self.artifact(title="A plate, reworded", message="the caption named the wrong ship")
+        vs = H.artifact_versions(self.c, "franklin-1845-001")
+        self.assertEqual(len(vs), 1)
+        self.assertEqual(vs[0]["row"]["title"], "A plate")
+        self.assertEqual(vs[0]["message"], "the caption named the wrong ship")
+        self.assertEqual(vs[0]["changed"], ["title"])
+
     def test_an_event_written_twice_stays_one_row(self):
         a = H.add_event(self.c, "franklin-1845", "1847-06-11", "Franklin dies", lat=70.08, lon=-98.4)
         b = H.add_event(self.c, "franklin-1845", "1847-06-11", "Franklin dies", detail="added later")

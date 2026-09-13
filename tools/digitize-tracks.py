@@ -1830,33 +1830,30 @@ TRACK_COLS = ("creator", "description", "source_url", "download_url", "local_fil
               "people", "tags", "waypoints", "rights_note")
 
 
-def write_row(c, row, routing, geometry, moved=()):
+def write_row(c, row, routing, geometry, moved=(), message=""):
     """The sea router's writer: every field of the row as it stands, plus the
     flag and the line.  waypoints pass through unchanged unless a move was
-    applied, in which case the moved waypoint carries its new position, its
-    note says so with the old position, and the description gains a sentence
-    listing the moves and their evidence."""
+    applied, in which case the moved waypoint carries its new position and
+    nothing else: the reasons, the old positions and the verdict go into the
+    message kept with the replaced version (artifact_history), the way a
+    commit message keeps what a reader's entry should not."""
     import arctic_history as H
     kw = {k: row[k] for k in TRACK_COLS if k in row.keys() and row[k] is not None}
     kw.update(date=row["date_text"], date_end=row["date_end"], lat=row["lat"], lon=row["lon"], routing=routing)
     kw["geometry"] = json.dumps(geometry, ensure_ascii=False)
+    lines = [f"terrain-routed by tools/digitize-tracks.py ({len(geometry)} points)"]
+    if message:
+        lines.append(message)
     if moved:
         wps = json.loads(row["waypoints"])
-        said = []
         for m in moved:
             w = wps[m["index"]]
             w["lat"], w["lon"] = round(float(m["lat"]), 4), round(float(m["lon"]), 4)
-            w["note"] = (w.get("note", "").rstrip() +
-                         f" (position moved to the printed route and the terrain, {m['why']}; "
-                         f"was {m['was'][0]:.3f}, {m['was'][1]:.3f})")
-            said.append(f"waypoint {m['index'] + 1} ({m['why']}; before {m['was'][0]:.3f} N "
-                        f"{abs(m['was'][1]):.3f} W)")
+            lines.append(f"waypoint {m['index'] + 1} moved from {m['was'][0]:.3f}, {m['was'][1]:.3f} "
+                         f"to {w['lat']:.3f}, {w['lon']:.3f}: {m['why']}")
         kw["waypoints"] = json.dumps(wps, ensure_ascii=False)
-        kw["description"] = ((row["description"] or "").rstrip() +
-                             " The line is routed through the terrain from the expedition's printed route map "
-                             "and the elevation model, and these waypoints, whose positions were inferred, were "
-                             "moved to where the map and the terrain put them: " + "; ".join(said) + ".")
-    H.add_artifact(c, row["id"], row["topic"], row["type"], row["title"], **kw)
+    H.add_artifact(c, row["id"], row["topic"], row["type"], row["title"], message="\n".join(lines),
+                   who="digitize-tracks.py", **kw)
 
 
 def as_geojson(line):
@@ -2279,7 +2276,7 @@ def cmd_route(a):
                 continue
             row = rows[f["id"]]
             moved = f["properties"].get("waypoints_moved") or []
-            write_row(c, row, "terrain", f["geometry"], moved)
+            write_row(c, row, "terrain", f["geometry"], moved, message=f["properties"].get("verdict", ""))
             n += 1
         c.commit()
         print(f"--write: {n} rows written with routing=terrain", file=sys.stderr)

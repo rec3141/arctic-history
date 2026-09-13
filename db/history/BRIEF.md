@@ -172,7 +172,11 @@ concern; a missing original cannot be recovered later.
 **A re-run of `artifact` or `track` merges**: a field you do not pass keeps
 what the row holds, and an explicit `""` clears it, so a run that passes only
 the id, topic, type, title, credit, bibkey and the one field you are changing
-is safe (the required ones must always be given).
+is safe (the required ones must always be given). Every replacement keeps the
+row it overwrote in `artifact_history`, with the `--message` you give it: put
+there what a reader's entry should not carry, the reasons, the old values, the
+evidence you weighed, as you would in a commit message. `versions --id <id>`
+lists an artifact's versions with their messages and the fields each changed.
 Ids are `<your-slug>-NNN`, zero padded, unique. Types: `image`, `text`, `track`,
 `place`, `event`, `map`, `quote`, `object`. Aim for 15 to 40 artifacts, mixed in
 type. Every artifact needs a `--credit` and a `--bibkey`; the tool refuses one
@@ -362,7 +366,7 @@ The wiki is the point. Write **five to nine pages** for your topic, each 400 to
 Give your topic an overview page at `--ordering 10`, then a page per episode,
 theme or question. Do not wait until the page is polished: a new page is
 status `draft` (shown as such in the tab), `page` replaces and keeps every
-old version (`versions --slug <slug>` lists them), and a later run or a
+old version (`versions --slug <slug>` lists them, `versions --id` does the same for an artifact), and a later run or a
 person can promote it with `--status good` when it has been checked. Write
 rough and early, revise freely. Bodies are Markdown holding wikilinks:
 

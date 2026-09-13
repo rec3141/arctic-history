@@ -575,6 +575,19 @@ CREATE TABLE IF NOT EXISTS page_history (
 );
 CREATE INDEX IF NOT EXISTS page_history_slug ON page_history (slug, id);
 
+-- every replacement of an artifact keeps the row it overwrote, with a
+-- message saying why: the detail that belongs in a commit message, not in
+-- the entry a reader sees
+CREATE TABLE IF NOT EXISTS artifact_history (
+  id          INTEGER PRIMARY KEY AUTOINCREMENT,
+  artifact_id TEXT NOT NULL,
+  row         TEXT NOT NULL,               -- the replaced row, as JSON
+  message     TEXT DEFAULT '',             -- why it was replaced
+  who         TEXT DEFAULT '',             -- the run or person writing
+  saved       TEXT NOT NULL                -- when this version was replaced
+);
+CREATE INDEX IF NOT EXISTS artifact_history_id ON artifact_history (artifact_id, id);
+
 CREATE TABLE IF NOT EXISTS people (
   name        TEXT PRIMARY KEY,
   also        TEXT DEFAULT '',            -- other spellings, semicolon separated
@@ -1189,11 +1202,38 @@ def add_artifact(c, id: str, topic: str, type: str, title: str, **kw) -> str:
             row["lat"], row["lon"] = prev["lat"], prev["lon"]
     if row["lat"] is None and not row.get("geometry") and not (prev is not None and prev["geometry"]):
         raise ValueError("an artifact needs a lat/lon, or a geometry if it is a track")
+    if prev is not None and artifact_changes(dict(prev), row):
+        # the replaced version is kept, with the message that explains the change
+        c.execute("INSERT INTO artifact_history (artifact_id, row, message, who, saved) VALUES (?,?,?,?,?)",
+                  (row["id"], json.dumps(dict(prev), ensure_ascii=False),
+                   str(kw.get("message") or ""), str(kw.get("who") or ""), now()))
     out = _upsert(c, "artifacts", "id", row)
     _record_dates(c, "artifact", out, row["date_start"], row["date_end"], date_text,
                   old=dict(prev) if prev else None,
                   topic=row["topic"], label=title, lat=row["lat"], lon=row["lon"],
                   bibkey=row.get("bibkey", ""))
+    return out
+
+
+def artifact_changes(before: dict, after: dict) -> list:
+    """The fields whose stored value `after` changes, ignoring the timestamp
+    and fields it does not set."""
+    return [k for k, v in after.items()
+            if k != "updated" and v is not None and k in before and before[k] != v]
+
+
+def artifact_versions(c, artifact_id: str) -> list:
+    """An artifact's saved versions, oldest first, each with the fields the
+    next version changed: the row as JSON, the message, who, when."""
+    rows = [dict(r) for r in c.execute("SELECT * FROM artifact_history WHERE artifact_id=? ORDER BY id",
+                                       (artifact_id,))]
+    cur = c.execute("SELECT * FROM artifacts WHERE id=?", (artifact_id,)).fetchone()
+    out = []
+    for i, r in enumerate(rows):
+        this = json.loads(r["row"])
+        nxt = json.loads(rows[i + 1]["row"]) if i + 1 < len(rows) else (dict(cur) if cur else {})
+        out.append(dict(id=r["id"], saved=r["saved"], message=r["message"], who=r["who"], row=this,
+                        changed=artifact_changes(this, nxt)))
     return out
 
 

@@ -309,8 +309,13 @@ def main(argv=None) -> int:
                          "status it had unless told otherwise, and every save keeps the "
                          "replaced version in the page's history")
 
-    vs = sub.add_parser("versions", help="a page's saved versions, oldest first")
-    vs.add_argument("--slug", required=True)
+    vs = sub.add_parser("versions", help="a page's or an artifact's saved versions, oldest first")
+    vs.add_argument("--slug", default=None, help="a page")
+    vs.add_argument("--id", default=None, help="an artifact or track")
+    for _p in (sub.choices["artifact"], sub.choices["track"]):
+        _p.add_argument("--message", default=None,
+                        help="why the row changes; kept with the version it replaces, like a commit message")
+        _p.add_argument("--who", default=None, help="the run or person writing")
 
     fg = sub.add_parser("forget", help="delete one mistaken row and the dates attached to it — "
                                        "a duplicate person, a stray date. For errors, not "
@@ -409,7 +414,7 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
                   local_file=a.local_file, licence=a.licence, rights_note=a.rights_note,
                   credit=a.credit, bibkey=a.bibkey,
                   pages=a.pages, people=a.people, tags=a.tags, language=a.language,
-                  view_file=a.view_file, routing=a.routing)
+                  view_file=a.view_file, routing=a.routing, message=a.message, who=a.who)
         geom = _read(a.geometry, a.geometry_file)
         way = _read(a.waypoints, a.waypoints_file)
         if way:
@@ -508,7 +513,23 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
     elif a.cmd == "forget":
         r = H.forget(c, a.kind, a.id)
         print(f"{r['deleted']}; {r['dates']} date row(s) went with it")
+    elif a.cmd == "versions" and a.id:
+        vs = H.artifact_versions(c, a.id)
+        cur = c.execute("SELECT updated FROM artifacts WHERE id=?", (a.id,)).fetchone()
+        if not cur:
+            print(f"no artifact {a.id!r}", file=sys.stderr)
+            return 1
+        for v in vs:
+            print(f"  {v['saved'][:19]}  replaced" + (f" by {v['who']}" if v['who'] else "")
+                  + (f": changed {', '.join(v['changed'])}" if v['changed'] else ""))
+            if v["message"]:
+                for line in v["message"].splitlines():
+                    print(f"      {line}")
+        print(f"  {(cur['updated'] or '')[:19]:19s}  (current)")
     elif a.cmd == "versions":
+        if not a.slug:
+            print("give --slug for a page or --id for an artifact", file=sys.stderr)
+            return 1
         cur = c.execute("SELECT status, length(body) AS n, updated FROM pages WHERE slug=?", (a.slug,)).fetchone()
         if not cur:
             print(f"no page {a.slug!r}", file=sys.stderr)

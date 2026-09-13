@@ -1161,7 +1161,7 @@ def geometry_of(row):
     return [(float(y), float(x)) for x, y in g.get("coordinates", [])]
 
 
-def write_row(c, row, routing, geometry):
+def write_row(c, row, routing, geometry, why=""):
     """Put the flag and the routed line back, with every other field of the row
     as it stands, so nothing is blanked.  waypoints pass through unchanged: they
     are the truth, not the drawing.  Only ever called under --write."""
@@ -1173,7 +1173,11 @@ def write_row(c, row, routing, geometry):
         kw["geometry"] = json.dumps(geometry, ensure_ascii=False)
     elif row["geometry"]:
         kw["geometry"] = row["geometry"]
-    H.add_artifact(c, row["id"], row["topic"], row["type"], row["title"], **kw)
+    msg = f"{'sea-routed' if routing == 'water' else 'waypoints joined by great circles'} by tools/route-tracks.py " \
+          f"(routing={routing}" + (f", {len(geometry)} points" if geometry is not None else "") + ")"
+    if why:
+        msg += ": " + why
+    H.add_artifact(c, row["id"], row["topic"], row["type"], row["title"], message=msg, who="route-tracks.py", **kw)
 
 
 def as_geojson(line):
@@ -1829,7 +1833,7 @@ def main():
             # joined by great-circle arcs for as-given
             geom = as_geojson(r["line"]) if len(r["line"]) > 1 else None
             try:
-                write_row(c, row, r["routing"], geom)
+                write_row(c, row, r["routing"], geom, why=r.get("why", ""))
             except Exception as e:                          # a row the writer will not take
                 refused.append(f"{r['id']}: {e}")
                 continue
