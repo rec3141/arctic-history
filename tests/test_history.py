@@ -478,7 +478,7 @@ class HistoryTests(unittest.TestCase):
 
     def test_the_migration_reads_the_type_off_a_row(self):
         import importlib.util
-        path = Path(__file__).resolve().parents[1] / "sources-cleanup-scratch" / "normalise_sources.py"
+        path = Path(__file__).resolve().parents[1] / "tools" / "migrations" / "normalise_sources.py"
         spec = importlib.util.spec_from_file_location("normalise_sources", path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
