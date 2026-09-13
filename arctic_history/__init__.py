@@ -1171,9 +1171,24 @@ def add_artifact(c, id: str, topic: str, type: str, title: str, **kw) -> str:
         raise ValueError(f"latitude out of range: {row['lat']}")
     if row["lon"] is not None and not -180 <= row["lon"] <= 180:
         raise ValueError(f"longitude out of range: {row['lon']}")
-    if row["lat"] is None and not row.get("geometry"):
+    prev = c.execute("SELECT * FROM artifacts WHERE id=?", (row["id"],)).fetchone()
+    if prev is not None:
+        # a re-run merges: a field not passed keeps what the row holds, and an
+        # explicit "" clears it.  The strings are merged by _upsert, which
+        # skips None; the dates, people and tags are built above from nothing
+        # and are merged here, so a run that passes only the field it changes
+        # leaves the rest of the row as it was
+        if kw.get("date") is None and kw.get("date_text") is None:
+            row["date_text"], row["date_start"] = prev["date_text"], prev["date_start"]
+            row["date_end"] = _iso(kw["date_end"]) if kw.get("date_end") is not None else prev["date_end"]
+        if kw.get("people") is None:
+            row["people"] = prev["people"]
+        if kw.get("tags") is None:
+            row["tags"] = prev["tags"]
+        if row["lat"] is None and kw.get("lat") is None:
+            row["lat"], row["lon"] = prev["lat"], prev["lon"]
+    if row["lat"] is None and not row.get("geometry") and not (prev is not None and prev["geometry"]):
         raise ValueError("an artifact needs a lat/lon, or a geometry if it is a track")
-    prev = c.execute("SELECT date_start, date_end, title FROM artifacts WHERE id=?", (row["id"],)).fetchone()
     out = _upsert(c, "artifacts", "id", row)
     _record_dates(c, "artifact", out, row["date_start"], row["date_end"], date_text,
                   old=dict(prev) if prev else None,

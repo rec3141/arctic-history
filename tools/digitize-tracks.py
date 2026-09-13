@@ -339,6 +339,14 @@ STRAIGHT_W, STRAIGHT_KM = 0.08, 25.0
 # nearest sea within this far is cut open to it at the sea-ice cost, so the leg
 # reaches the fiord instead of climbing the shore, and the end counts as sea
 SHORE_KM = 12.0
+# the detour cap on a leg held by no ink: a party that camped twenty
+# kilometres apart did not walk ninety, however steep the pass between the
+# camps.  When the cheapest path is this many times the chord, and this many
+# kilometres longer, the leg is routed again inside a corridor about its great
+# circle, half as wide as the chord is long (never narrower than the minimum),
+# and the terrain chooses within that
+DETOUR_CAP_FACTOR, DETOUR_CAP_KM = 2.5, 15.0
+DETOUR_HALF_FRAC, DETOUR_HALF_MIN_KM = 0.35, 6.0
 WINDOW_MARGIN_KM, WINDOW_MARGIN_FRAC = 40.0, 0.5
 WINDOW_BUDGET = 6_000_000
 DOWN = 4
@@ -1608,6 +1616,21 @@ class Router:
         else:
             idx, total = route_through_array(cost, s, e, fully_connected=True, geometric=True)
         idx = np.array(idx)
+        if sd is not None and not boat and not info.get("pooled"):
+            g0 = T.ground_km(ra, rb, ca, cb)
+            km0 = float((np.hypot(np.diff(idx[:, 0]), np.diff(idx[:, 1])) * g0[idx[1:, 0], idx[1:, 1]]).sum())
+            if km0 > DETOUR_CAP_FACTOR * L and km0 - L > DETOUR_CAP_KM:
+                half = max(DETOUR_HALF_MIN_KM, DETOUR_HALF_FRAC * L)
+                c2 = np.where(sd * (RES / 1000.0) <= half, cost, np.inf).astype(np.float32)
+                c2[s] = cost[s]
+                c2[e] = cost[e]
+                try:
+                    idx2, total2 = route_through_array(c2, s, e, fully_connected=True, geometric=True)
+                except Exception:
+                    idx2, total2 = None, math.inf
+                if idx2 is not None and math.isfinite(total2):
+                    idx, total = np.array(idx2), total2
+                    info["detour_capped"] = dict(before_km=round(km0, 1), half_km=round(half, 1))
         rr, cc = idx[:, 0] + ra, idx[:, 1] + ca
         # what the line runs over
         onland = np.asarray(T.land[rr, cc]).astype(bool)
@@ -1972,6 +1995,11 @@ def verdict(rec):
     if det:
         bits.append("legs held by no ink that the terrain lengthens by more than a quarter, to look at: " + "; ".join(
             f"{l['leg']} ({l['straight_km']:,.0f} km straight, {l['km']:,.0f} routed)" for l in det))
+    capped = [l for l in legs if l.get("detour_capped")]
+    if capped:
+        bits.append("legs held to a corridor about the chord because the terrain would have taken them round: " + "; ".join(
+            f"{l['leg']} ({l['straight_km']:,.0f} km straight, {l['detour_capped']['before_km']:,.0f} round, {l['km']:,.0f} held)"
+            for l in capped))
     diag = rec.get("diagnostics") or []
     odd = [d for d in diag if d.get("contradicted")]
     if odd:

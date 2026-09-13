@@ -67,6 +67,21 @@ class HistoryTests(unittest.TestCase):
         rows = self.c.execute("SELECT title FROM artifacts").fetchall()
         self.assertEqual([r["title"] for r in rows], ["Second wording"])
 
+    def test_a_rerun_keeps_the_fields_it_does_not_pass(self):
+        self.artifact(title="A plate", date="1859-05-06", tags="franklin,record", people="Hobson")
+        self.artifact(title="A plate, reworded")
+        row = self.c.execute("SELECT * FROM artifacts").fetchone()
+        self.assertEqual(row["title"], "A plate, reworded")
+        self.assertEqual((row["date_text"], row["date_start"]), ("1859-05-06", "1859-05-06"))
+        self.assertEqual(json.loads(row["tags"]), ["franklin", "record"])
+        self.assertEqual(json.loads(row["people"]), ["Hobson"])
+        self.assertEqual((row["lat"], row["lon"]), (74.7, -91.8))
+        # an explicit empty string clears
+        self.artifact(title="A plate, reworded", tags="", people="")
+        row = self.c.execute("SELECT * FROM artifacts").fetchone()
+        self.assertEqual((json.loads(row["tags"]), json.loads(row["people"])), ([], []))
+        self.assertEqual(row["date_start"], "1859-05-06")
+
     def test_an_event_written_twice_stays_one_row(self):
         a = H.add_event(self.c, "franklin-1845", "1847-06-11", "Franklin dies", lat=70.08, lon=-98.4)
         b = H.add_event(self.c, "franklin-1845", "1847-06-11", "Franklin dies", detail="added later")

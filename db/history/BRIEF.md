@@ -169,8 +169,10 @@ concern; a missing original cannot be recovered later.
       --description "..." --tags franklin,abandonment --people "Crozier;Fitzjames" \
       --source-url https://... --local-file <your-slug>/files/name.jpg
 
-**A re-run of `artifact` replaces every field**: pass the complete command,
-never just the field you are changing, or the unpassed fields are wiped.
+**A re-run of `artifact` or `track` merges**: a field you do not pass keeps
+what the row holds, and an explicit `""` clears it, so a run that passes only
+the id, topic, type, title, credit, bibkey and the one field you are changing
+is safe (the required ones must always be given).
 Ids are `<your-slug>-NNN`, zero padded, unique. Types: `image`, `text`, `track`,
 `place`, `event`, `map`, `quote`, `object`. Aim for 15 to 40 artifacts, mixed in
 type. Every artifact needs a `--credit` and a `--bibkey`; the tool refuses one
