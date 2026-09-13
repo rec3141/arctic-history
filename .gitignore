@@ -20,3 +20,12 @@ underway/
 .route-venv/
 # YOLO11x weights for tools/animal-crops.py: 115 MB, fetched not committed
 tools/models/*.pt
+# researchers' working files live outside the tree, in /data/dev/arctic-history-scratch/<slug>/
+*scratch*/
+scratch/
+.hf-cache/
+err.log
+# the routing ledger's outputs are regenerated; only its hand-made inputs are kept
+db/history/_ledger/routing/terrain/gallery.html
+db/history/_ledger/routing/terrain/routes.geojson
+db/history/_ledger/routing/terrain/summary.md

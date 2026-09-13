@@ -59,8 +59,11 @@ Run every command from the repository root, `/data/dev/arctic-history`.
 on the fields. Use `/usr/bin/python3`.
 
 Do not edit any file under `dashboard/`, `tools/` or `tests/`. Do not run git.
-Keep working files in a scratchpad subdirectory named for your slug: the first
-run had twenty researchers overwriting one another's temporary files.
+Keep working files in your own scratchpad, outside the repository:
+`/data/dev/arctic-history-scratch/<your-slug>/` (make it if it is missing).
+Nothing of yours goes in the repository tree except what the tools write; the
+first run had twenty researchers overwriting one another's temporary files,
+and later ones left sixty-seven scratch directories at the root.
 
 ## What you produce
 
@@ -726,7 +729,7 @@ a model each time, and keeps nothing. Instead:
 1. Download once. Sources and images go through `tools/history-fetch.py` as in
    section 7. Pages that are not part of the record (catalogue entries, finding
    aids, search results) go into your scratchpad subdirectory:
-   `curl -sL URL -o <scratch>/<your-slug>/<name>.html`.
+   `curl -sL URL -o /data/dev/arctic-history-scratch/<your-slug>/<name>.html`.
 2. Ask questions of the file, not of the web. A short file you read yourself.
    For a long one, launch a `model: haiku` agent whose prompt names the file
    and the question: "Read <path> and list every dated position with its page
