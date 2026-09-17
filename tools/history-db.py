@@ -300,7 +300,7 @@ def main(argv=None) -> int:
     pg.add_argument("--summary", default="")
     pg.add_argument("--body", default="")
     pg.add_argument("--file", default=None, help="the Markdown body, or - for stdin")
-    pg.add_argument("--ordering", type=int, default=100, help="lower sorts earlier in the topic")
+    pg.add_argument("--ordering", type=int, default=None, help="lower sorts earlier in the topic; a re-run keeps the page's unless given")
     pg.add_argument("--people", default=None,
                     help="semicolon separated: the people this page is about, for exact "
                          "People strips and backlinks (bare name mentions are also indexed)")

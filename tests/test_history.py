@@ -93,6 +93,12 @@ class HistoryTests(unittest.TestCase):
         self.assertEqual(vs[0]["message"], "the caption named the wrong ship")
         self.assertEqual(vs[0]["changed"], ["title"])
 
+    def test_a_page_rerun_keeps_its_ordering_and_summary(self):
+        H.add_page(self.c, "a-page", "A page", "body", topic="franklin-1845", summary="one line", ordering=30)
+        H.add_page(self.c, "a-page", "A page", "body, revised", topic="franklin-1845", status="good")
+        row = self.c.execute("SELECT summary, ordering, status FROM pages WHERE slug='a-page'").fetchone()
+        self.assertEqual((row["summary"], row["ordering"], row["status"]), ("one line", 30, "good"))
+
     def test_an_event_written_twice_stays_one_row(self):
         a = H.add_event(self.c, "franklin-1845", "1847-06-11", "Franklin dies", lat=70.08, lon=-98.4)
         b = H.add_event(self.c, "franklin-1845", "1847-06-11", "Franklin dies", detail="added later")

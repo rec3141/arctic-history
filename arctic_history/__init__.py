@@ -1318,14 +1318,21 @@ def add_page(c, slug: str, title: str, body: str, **kw) -> str:
     status = kw.get("status") or (old["status"] if old else "draft")
     if status not in PAGE_STATUS:
         raise ValueError(f"status must be one of {', '.join(PAGE_STATUS)}")
-    summary = kw.get("summary", "")
+    # a re-run keeps the summary and the ordering it does not pass, as the
+    # artifact writer does; an explicit "" clears the summary
+    summary = kw.get("summary")
+    if summary is None:
+        summary = old["summary"] if old else ""
+    ordering = kw.get("ordering")
+    if ordering is None:
+        ordering = old["ordering"] if old else 100
     if old and (old["body"] != body or old["title"] != title or old["summary"] != summary):
         c.execute("INSERT INTO page_history (slug, title, summary, body, status, saved) "
                   "VALUES (?,?,?,?,?,?)",
                   (s, old["title"], old["summary"], old["body"], old["status"], now()))
     row = {"slug": s, "kind": kind if kind in KINDS else "page", "title": title, "body": body,
            "topic": slugify(kw["topic"]) if kw.get("topic") else "",
-           "summary": summary, "ordering": int(kw.get("ordering", 100)), "status": status,
+           "summary": summary, "ordering": int(ordering), "status": status,
            "people": _json_list(kw["people"]) if kw.get("people") is not None
                      else (old["people"] if old else "[]")}
     return _upsert(c, "pages", "slug", row)
