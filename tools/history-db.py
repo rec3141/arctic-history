@@ -297,7 +297,7 @@ def main(argv=None) -> int:
     pg.add_argument("--slug", required=True)
     pg.add_argument("--title", required=True)
     pg.add_argument("--topic", default="")
-    pg.add_argument("--summary", default="")
+    pg.add_argument("--summary", default=None, help="one sentence; a re-run keeps the page's unless given, and \"\" clears it")
     pg.add_argument("--body", default="")
     pg.add_argument("--file", default=None, help="the Markdown body, or - for stdin")
     pg.add_argument("--ordering", type=int, default=None, help="lower sorts earlier in the topic; a re-run keeps the page's unless given")
