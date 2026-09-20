@@ -156,7 +156,7 @@ def publish_locales(root, source, exporter, store_path):
                 english.setdefault('locales', {})[locale] = {
                     'base': f'data/history/locales/{locale}/{revision}/', 'stamp': revision,
                     'translated_fields': len(applied), 'profiles': provenance['profiles']}
-        except (sqlite3.Error, OSError, ValueError) as error:
+        except Exception as error:
             # Never retain a previously approved locale after a failed review
             # read: approvals may have been revoked. English remains available.
             log.warning('localized wiki unavailable; publishing English: %s', error)

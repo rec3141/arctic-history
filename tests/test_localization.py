@@ -106,6 +106,17 @@ class LocalizationTests(unittest.TestCase):
         with patch.dict(os.environ, {'ARCTIC_HISTORY_TRANSLATIONS': str(self.root/'absent.sqlite')}):
             self.assertNotIn('locales', H.publish(self.web, self.source))
 
+    def test_locale_export_failure_does_not_retain_revoked_locale(self):
+        self.candidate()
+        self.assertIn('locales', H.publish(self.web, self.source))
+        original = H._publish
+        def broken_locale(*args, **kwargs):
+            if kwargs.get('_out') is not None:
+                raise RuntimeError('localized renderer failed')
+            return original(*args, **kwargs)
+        with patch.object(H, '_publish', broken_locale), self.assertLogs('arctic_history.localization', level='WARNING'):
+            self.assertNotIn('locales', H.publish(self.web, self.source))
+
     def test_review_cli_and_reviewed_only_release(self):
         self.candidate(status='unreviewed')
         self.candidate('other', profile='other', status='unreviewed')
