@@ -12,6 +12,14 @@ The working sidecar is produced by the field translation pipeline. Its
 tables allow concurrent languages and translators. Completing a model batch
 does **not** approve or publish it.
 
+Current release policy: the user explicitly authorized publishing structurally
+valid outputs and collecting translation issues through feedback flags. Such
+candidates carry reviewer `user-authorized-structural-publication-v1` and a note
+stating that approval is for publication only, **not** linguistic/editorial
+review. This is distinct from claiming a translator's wording was reviewed.
+Release snapshots still require explicit approval metadata and current source
+hashes; later batch outputs do not become published automatically.
+
 Use explicit candidate IDs after inspecting both source and translation:
 
 ```sh
