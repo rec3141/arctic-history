@@ -10,17 +10,16 @@ translated text or rebuilt links into the research database.
 The working sidecar is produced by the field translation pipeline. Its
 `candidates`, `translator_profiles`, `locale_defaults` and `field_selections`
 tables allow concurrent languages and translators. Completing a model batch
-does **not** approve or publish it.
+does not approve or publish it.
 
-Current release policy: the user explicitly authorized publishing structurally
-valid outputs and collecting translation issues through feedback flags. Such
-candidates carry reviewer `user-authorized-structural-publication-v1` and a note
-stating that approval is for publication only, **not** linguistic/editorial
-review. This is distinct from claiming a translator's wording was reviewed.
-Release snapshots still require explicit approval metadata and current source
-hashes; later batch outputs do not become published automatically.
+Current release policy: structurally valid output is published, and wording is
+corrected from the feedback flags as readers report it. These candidates carry
+reviewer `user-authorized-structural-publication-v1`, which records structural
+approval rather than a language review. Release snapshots still require approval
+metadata and current source hashes, so later batch output is not published
+automatically.
 
-Use explicit candidate IDs after inspecting both source and translation:
+Review, select and release with explicit candidate IDs:
 
 ```sh
 python3 tools/history-translations.py --store /path/to/working/translations.sqlite review CANDIDATE_ID --status approved --reviewer REVIEWER --note 'Review findings'
