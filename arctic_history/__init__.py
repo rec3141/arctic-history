@@ -2562,6 +2562,13 @@ def validate(c) -> dict:
 
 # ---------------------------------------------------------------- publish
 def publish(root: Path, db: Path | None = None) -> dict | None:
+    """Publish English and explicitly selected, reviewed locale variants."""
+    from .localization import publish_locales
+    return publish_locales(Path(root), Path(db or HISTORY_DB), _publish,
+                           Path(os.environ.get('ARCTIC_HISTORY_TRANSLATIONS', HISTORY_DIR / 'translations.sqlite')))
+
+
+def _publish(root: Path, db: Path | None = None, *, _out=None, _link_context=None) -> dict | None:
     """Render the wiki and the map layer into ``root/data/history/`` for the
     History tab, and copy the artifact files people can open. Returns the
     manifest entry, or None when there is no history database yet."""
@@ -2571,9 +2578,8 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
         return None
     c = connect(p, create=False)
     try:
-        info = reindex_links(c)
-        targets = index_targets(c)
-        out = root / "data" / "history"
+        info, targets = _link_context if _link_context is not None else (reindex_links(c), index_targets(c))
+        out = Path(_out) if _out is not None else root / "data" / "history"
         (out / "pages").mkdir(parents=True, exist_ok=True)
 
         # 1. the wiki: hand-written narrative pages and the generated ones
@@ -2632,7 +2638,7 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
                 src = HISTORY_DIR / rel
                 if not src.is_file():
                     return None
-                dest = out / "files" / Path(rel).name
+                dest = root / "data" / "history" / "files" / Path(rel).name
                 dest.parent.mkdir(parents=True, exist_ok=True)
                 if not dest.exists() or dest.stat().st_mtime < src.stat().st_mtime:
                     shutil.copy2(src, dest)
@@ -2705,7 +2711,7 @@ def publish(root: Path, db: Path | None = None) -> dict | None:
             src = HISTORY_DIR / r["file"]
             if not src.is_file():
                 continue
-            dest = out / "files" / "faces" / src.name
+            dest = root / "data" / "history" / "files" / "faces" / src.name
             dest.parent.mkdir(parents=True, exist_ok=True)
             if not dest.exists() or dest.stat().st_mtime < src.stat().st_mtime:
                 shutil.copy2(src, dest)

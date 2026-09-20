@@ -43,12 +43,26 @@ import sqlite3
 src = sqlite3.connect('db/history/history.sqlite'); dst = sqlite3.connect('db/history/history.snapshot.sqlite')
 src.backup(dst); dst.close(); src.close()
 print('grid: snapshot taken')
+from pathlib import Path
+if Path('db/history/translations.sqlite').is_file():
+    src = sqlite3.connect('file:db/history/translations.sqlite?mode=ro', uri=True)
+    dst = sqlite3.connect('db/history/translations.snapshot.sqlite')
+    src.backup(dst); dst.close(); src.close()
+    print('grid: reviewed translation snapshot taken')
 EOF"
     $RSYNC --max-size="$MAX" \
       --exclude 'history.sqlite' --exclude 'history.sqlite-wal' --exclude 'history.sqlite-shm' \
+      --exclude 'translations.sqlite*' --exclude 'translations.snapshot.sqlite*' \
       --exclude '_staging' --exclude '_ledger' --exclude '_backups' \
       "$GRID:$REMOTE/db/history/" "$HERE/db/history/"
     mv "$HERE/db/history/history.snapshot.sqlite" "$HERE/db/history/history.sqlite"
+    # Translation releases are databases, not optional large media: transfer
+    # them independently of MAX. Absence preserves existing ship installation;
+    # use an empty reviewed release to revoke all French publication.
+    if ssh "$GRID" "test -f $REMOTE/db/history/translations.sqlite"; then
+      $RSYNC "$GRID:$REMOTE/db/history/translations.snapshot.sqlite" "$HERE/db/history/translations.snapshot.sqlite"
+      mv "$HERE/db/history/translations.snapshot.sqlite" "$HERE/db/history/translations.sqlite"
+    fi
     echo "ship: database installed"
     findmax=$(echo "$MAX" | sed 's/m$/M/; s/g$/G/')      # rsync says 100m, find says 100M
     held=$(ssh "$GRID" "find $REMOTE/db/history -path '*/files/*' -type f -size +$findmax -printf '%s\t%P\n' 2>/dev/null | sort -rn" || true)
