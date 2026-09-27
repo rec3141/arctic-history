@@ -1,63 +1,93 @@
-# Arctic history: the CCGS Amundsen's History tab
+# Arctic history: the Amundsen's History and Nature wiki
 
-This repository holds both halves of the Amundsen dashboard's History tab: the
-research backend described below, and the front end that renders the database
-into a map, a timeline and a wiki that a local model reads. The front end is
-developed on the ship and lands in its own directory alongside these.
+The research behind the CCGS *Amundsen* dashboard's History and Nature tabs:
+a database of the High Arctic's human past and natural record, written by
+research agents on grid, and the code that publishes it as the wiki, map
+layer, timeline and bibliography the ship shows, and that the ship's chat
+crew reads.
 
-The research runs on grid, on the university network, where publishers see a
-campus address. Grid owns the database; the ship is read-only toward grid and
-pulls the database and files with `tools/history-sync.sh pull` for the
-dashboard build. Code moves through this repository; the database and the
-fetched files are not committed — they move by rsync.
+## How it is made and used aboard
 
-## The research backend
+1. **Research (grid).** Grid, on the university network where publishers
+   see a campus address, owns the database. Research agents, one per topic,
+   work from `db/history/BRIEF.md`, fetch sources through the library proxy
+   (`tools/history-fetch.py`) and write every source, artifact (image, map,
+   quote), person, place, event, date, voyage track and wiki page through
+   `tools/history-db.py`, the only writer. Topics are in two domains:
+   history (voyages, Inuit oral history, stations, place names…) and nature
+   (birds, polar bear, the sea ice, the water column, the sky…), where
+   subjects and dated observations are recorded too.
+2. **To the ship.** `tools/history-sync.sh pull` copies a snapshot of the
+   database and rsyncs the fetched files to the ship (daily, by cron;
+   objects over 100 MB are listed and fetched by name). The ship writes
+   nothing to the database.
+3. **Published.** The dashboard build calls `arctic_history.publish()`
+   (through underway's `dashboard/history.py`), which exports the wiki, the
+   map layer, the timeline, the bibliography and the natural record to
+   `data/history/`, in English and in each reviewed translation. The History
+   and Nature tabs render them.
+4. **Read by the chat.** The ship's chat crew are personas of one local model
+   (`dashboard/chatbot.py`): Ada, the Librarian, answers from the history
+   half; Doc from the natural half and the ship's own measurements. Their
+   prompts carry excerpts of the published pages most relevant to the
+   question, and their answers cite those pages.
+5. **Back to grid.** The Nature tab lets the ship record observations (and
+   its photo import adds more) in an append-only journal,
+   `db/history/_journal/`. `history-sync.sh push-journal` sends it to grid,
+   where `history-db.py ingest --journal` writes it into the database. This
+   is the one thing the ship sends.
 
-    arctic_history/            the schema and the writers; standalone, no dependencies
-    tools/history-db.py        the only way anything is written: topics, sources, artifacts,
-                               tracks, people, places, events, spans, dates, wiki pages,
-                               worklog, requests
-    tools/history-fetch.py     the only way anything is downloaded: EZproxy, file checks
-    tools/history-sync.sh      grid -> ship, pull only
-    tests/test_history.py      python3 -m unittest tests.test_history
-    db/history/BRIEF.md        the brief every researcher works from: READ THIS FIRST
-    db/history/PROVENANCE.md   how the layer was made: AI's part, the review pass, the stats
-    db/history/history.sqlite  the database
-    db/history/<topic>/        files/ (downloads), notes/ (extractions), RESUME.md (first-run leftovers)
-    db/history/_staging/       primary texts fetched by the first runs; MANIFEST.md lists them
-    db/history/_ledger/        the EZproxy cookie jar
+Code moves through this repository; the database and the fetched files move
+by rsync and are not committed.
+
+## Layout
+
+    arctic_history/            the schema, the writers and publish(); no dependencies
+    arctic_history/localization.py   reviewed translations, published as frozen snapshots
+    tools/history-db.py        the only way anything is written; also stats, check, resume, requests, ingest
+    tools/history-fetch.py     the only way anything is downloaded: EZproxy, Scholars Portal, file checks
+    tools/history-sync.sh      pull (grid -> ship), push-journal (ship -> grid), status
+    tools/history-translations.py    review and release of translations (docs-localization.md)
+    tools/faces.py, animal-crops.py  cut faces and animals out of the pictures
+    tools/keywords.py          subject keywords for images, maps and quotes
+    tools/digitize-tracks.py, route-tracks.py   voyage tracks from printed maps, routed through water and terrain
+    tools/atlas.py, plates.py  figures in the layer's house style
+    tools/library-search.py, mail-draft.py, requests-sync.py   the person's part (below)
+    tools/usage.py             plan usage, as /usage shows it
+    tools/ocr.sh               GPU OCR of scans (below)
+    tests/                     test_history.py, test_localization.py
+    db/history/BRIEF.md        the brief every researcher works from: read it first
+    db/history/NATURE-DESIGN.md, KNOWLEDGE-TERMS.md   the nature half's design and vocabulary
+    db/history/JOURNAL.md      the ship's journal format and ingest
+    db/history/PROVENANCE.md   how the layer was made: the model's part, the review pass, the figures
+    db/history/history.sqlite  the database (not committed)
+    db/history/<topic>/        files/ (downloads), notes/ (extractions)
+    db/history/_staging/       primary texts and cached lookups; MANIFEST.md lists them
+    db/history/_ledger/        the EZproxy cookie jar and routing data
 
 Python 3.8 is enough (`/usr/bin/python3`). `curl`, `file` and `rsync` are the
 only other tools.
 
-## How the work is organised
+## Where things stand
 
-Twenty-three topics, one researcher each, all writing into the one database
-through the CLI. The brief is the contract: it says what to enter, in what
-form, and above all that everything is written to the database as it is
-found, with a worklog line after every milestone, because runs get cut off.
-This is the third attempt: the first two lost hours of research by writing
-nothing until the end.
+    python3 tools/history-db.py stats                        counts of every kind of row
+    python3 tools/history-db.py check                        problems to fix
+    python3 tools/history-db.py wanted                       wikilinks to pages not yet written
+    python3 tools/history-db.py requests --status open       what researchers are waiting on
+    python3 tools/history-db.py resume --topic franklin-1845 one topic: counts, sources, artifacts,
+                                                             pages, unregistered files, links owed,
+                                                             problems, requests and its worklog
 
-To see where a topic stands:
+A topic is `open` until a researcher's run finishes it; the brief's last step
+sets it to `drafted`, and `done` is set explicitly
+(`history-db.py topic --slug <slug> --status done`). A new run on a topic
+starts from `resume`.
 
-    python3 tools/history-db.py resume --topic franklin-1845
+## Running the researchers
 
-It prints the counts, the sources, the artifacts, the pages, the unregistered
-files, the links owed, the problems, the requests, and the worklog. A new run
-starts from that.
-
-To see the whole:
-
-    python3 tools/history-db.py stats
-    python3 tools/history-db.py check
-    python3 tools/history-db.py wanted
-    python3 tools/history-db.py requests --status open
-
-## Starting the researchers
-
-Each researcher is a Claude Code subagent given the brief and one topic. The
-prompt shape that works:
+Each researcher is a Claude Code subagent given the brief and one topic. It
+writes everything to the database as it is found, with a worklog line after
+every milestone, because runs get cut off. The prompt shape that works:
 
 > Read db/history/BRIEF.md in full and follow it exactly. Your topic slug is
 > `<slug>`. Run `tools/history-db.py resume --topic <slug>` and continue from
@@ -65,40 +95,24 @@ prompt shape that works:
 > scope, the named people to enter, which activities are spans, which
 > voyages are tracks, what deserves its own page>.
 
-Opus handles a topic well; Sonnet is fine for the fetch-and-register parts.
-Twenty at once hit Wikimedia's rate limit and the API session limit; five to
-eight at a time is comfortable. When picking a wave, mix image-heavy topics
-with text-heavy ones (Commons rate-limits the shared campus address), and run
-hub topics that everyone links to — inuit-oral-history above all — early, so
-other topics' wikilinks resolve instead of piling up in `wanted`.
+Launch researchers with `model: opus`; Sonnet is fine for fetch-and-register
+work. Five to eight at a time is comfortable: more hit Wikimedia's rate limit
+and the API session limit. In a wave, mix image-heavy topics with text-heavy
+ones (Commons rate-limits the shared campus address), and run hub topics that
+others link to (inuit-oral-history above all) early, so wikilinks resolve
+instead of piling up in `wanted`.
 
-The wave may use no more than 80% of the five-hour usage window.
+A wave may use no more than 80% of the five-hour usage window.
 `python3 tools/usage.py` prints the same figures as `/usage` and exits 1 once
-the five-hour window is past 80%; check it before each batch of launches and
-again as researchers finish, and stop launching until the window resets. The
+the five-hour window is past 80%: check it before each batch of launches and
+as researchers finish, and stop launching until the window resets. The
 weekly figure is the one to watch across days.
 
-Launch researchers with `model: opus`. The brief's "Helpers and the web"
-section then holds: each agent launches only agents smaller than itself (Opus
-to Sonnet to Haiku, Haiku launches nothing), Sonnet helpers are capped at 2
-at once and 6 per run while Haiku readers are uncapped for any agent, and pages are downloaded once and
-read from the local copy, by Haiku if long, never re-read through WebFetch.
-Sub-helpers four levels deep did two thirds of all web fetching in waves 1-3.
-
-The topics and the status of each:
-
-| slug | status |
-| --- | --- |
-| davis-baffin-hudson, ross-parry, kane-hall-polaris, amundsen-gjoa, franklin-1845 | researched on the ship; rows in, no wiki pages yet; each topic's last worklog line says what its next run should do |
-| inuit-oral-history | 13 files (Boas, Inuit-drawn charts), nothing in the database |
-| frobisher | 14 files (Best, White portraits, maps), nothing in the database |
-| nares-greely | 20 files, nothing in the database |
-| sverdrup-bernier-peary | 21 files, nothing in the database |
-| norse-helluland | 6 texts, nothing in the database |
-| ross-victory | 3 texts (Ross 1835 and Huish), nothing in the database |
-| relocations-qtc | 9 QTC reports and RCAP 1994 staged, nothing in the database |
-| posts-rcmp-missions | RCMP reports 1921-25, Nascopie, staged; nothing in the database |
-| franklin-search, mcclure-investigator, karluk-cae, whaling, thule-dorset, wrecks-disasters, greenland-inughuit, science-stations, st-roch-modern, hudson-strait-south-baffin | topic rows only |
+The brief's "Helpers and the web" section holds for every agent: each
+launches only agents smaller than itself (Opus to Sonnet to Haiku; Haiku
+launches nothing), Sonnet helpers are capped at 2 at once and 6 per run,
+Haiku readers are uncapped, and pages are downloaded once and read from the
+local copy, by Haiku if long, never re-read through WebFetch.
 
 ## The person's part
 
@@ -107,26 +121,16 @@ library does not license, judgement calls. Before an access request they run
 `tools/library-search.py` (UM catalogue: shelf copies and licensed platforms)
 and, where the platform is Scholars Portal, pull the needed pages with
 `tools/history-fetch.py --scholarsportal` under a crew-wide one-session-per-hour
-gate. Hard copies to fetch by hand queue in `db/history/PICKUP-QUEUE.md`. The review page lives at
-https://cryomics.org/amundsen/requests/ (basic auth; the password hash is in
-`~/.amundsen-htpasswd` on dreamhost). Grid pushes the queue there and collects
-the decisions every minute with `tools/requests-sync.py pull` (cron), and
-`tools/backup.sh` snapshots the database hourly to `db/history/_backups/` and
-to dreamhost:backups/amundsen/ (also cron). The CLI works too:
+gate. Hard copies to fetch by hand queue in `db/history/PICKUP-QUEUE.md`. The
+review page lives at https://cryomics.org/amundsen/requests/ (basic auth; the
+password hash is in `~/.amundsen-htpasswd` on dreamhost). Grid pushes the
+queue there and collects the decisions every minute with
+`tools/requests-sync.py pull` (cron), and `tools/backup.sh` snapshots the
+database hourly to `db/history/_backups/` and to dreamhost:backups/amundsen/
+(also cron). The CLI works too:
 
     python3 tools/history-db.py requests --status open
     python3 tools/history-db.py answer --id 7 --status approved --answer "fetched to franklin-1845/files/..."
-
-## Sending it back
-
-From the ship, `tools/history-sync.sh pull` takes a consistent snapshot of
-this database, installs it, and rsyncs the files — compressed, resumable,
-and gated at 100 MB per object (Starlink-sized; `HISTORY_SYNC_MAX` overrides).
-Anything larger is held on grid and listed at the end of the pull, to be
-fetched by name: `history-sync.sh pull <topic>/files/<name>`. Run it from
-cron daily aboard. The dashboard build then publishes the wiki, the map
-layer, the timeline and the bibliography under `data/history/`. Nothing here
-needs to know about the dashboard.
 
 ## Access
 
@@ -140,11 +144,11 @@ querying.
 
 The tests run with the standard library alone:
 
-    python3 -m unittest tests.test_history
+    python3 -m unittest discover -s tests
 
 or, in a virtualenv with the test extra (`pip install -e '.[test]'`):
 
-    python3 -m pytest tests/test_history.py
+    python3 -m pytest tests/
 
 ## OCR on grid
 
