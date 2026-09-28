@@ -99,6 +99,14 @@ class HistoryTests(unittest.TestCase):
         row = self.c.execute("SELECT summary, ordering, status FROM pages WHERE slug='a-page'").fetchone()
         self.assertEqual((row["summary"], row["ordering"], row["status"]), ("one line", 30, "good"))
 
+    def test_an_unlabelled_topic_link_shows_the_topic_title(self):
+        H.add_topic(self.c, "franklin-1845", "The Franklin expedition", summary="x")
+        html = H.render_markdown("told in [[topic:franklin-1845]] and [[topic:franklin-1845|here]]",
+                                 H.index_targets(self.c))
+        self.assertIn("[The Franklin expedition]", html)
+        self.assertIn("[here]", html)
+        self.assertNotIn("[franklin-1845]", html)
+
     def test_an_event_written_twice_stays_one_row(self):
         a = H.add_event(self.c, "franklin-1845", "1847-06-11", "Franklin dies", lat=70.08, lon=-98.4)
         b = H.add_event(self.c, "franklin-1845", "1847-06-11", "Franklin dies", detail="added later")

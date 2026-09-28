@@ -2118,9 +2118,11 @@ def render_markdown(body: str, targets: dict, base: str = "") -> str:
         slug = resolve(targets, kind, name)
         label = m.group(2)
         if not label:
-            # an artifact id and a bibkey are opaque, so a link without a label
-            # of its own shows the thing's title instead
-            label = targets["names"].get(slug, name) if kind in ("artifact", "source") else (name if kind else m.group(1))
+            # an artifact id, a bibkey, a topic slug and an event number are
+            # opaque, so a link without a label of its own shows the thing's
+            # title instead (issue #9)
+            label = targets["names"].get(slug, name) if kind in ("artifact", "source", "topic", "event") \
+                else (name if kind else m.group(1))
         if not slug:
             return f'<span class="wanted" title="no page yet">{label}</span>'
         return f'[{label}]({base}{slug})'
