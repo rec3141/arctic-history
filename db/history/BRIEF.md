@@ -349,7 +349,9 @@ hunter who found the route as about the officer who took the credit. Check
       --topic <your-slug> --bibkey mcclintock1859voyage --note "..."
 
 Enter every named Inuit participant, guide, interpreter and informant the record
-preserves, with `--indigenous`. Names to expect include Tookoolito, Ebierbing,
+preserves, with `--indigenous`. Set the flag only where a source says the
+person is Indigenous or names their community; never infer it from a name. A
+flag set in error is cleared with `--not-indigenous`. Names to expect include Tookoolito, Ebierbing,
 Kalutunah, Qitdlarssuaq, In-nook-poo-zhee-jook, Tattannoeuck, Ouligbuck, Hans
 Hendrik, Iligliuk, Eenoolooapik, Arnarulunnguaq, Qaavigarsuaq, Nuqallaq.
 
