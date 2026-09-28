@@ -133,10 +133,10 @@ def main(argv=None) -> int:
         a.add_argument("--credit", required=True)
         if name == "artifact":
             a.add_argument("--type", required=True, choices=list(H.ARTIFACT_TYPES))
-        a.add_argument("--date", default="")
-        a.add_argument("--date-end", default="")
-        a.add_argument("--creator", default="")
-        a.add_argument("--description", default="")
+        a.add_argument("--date", default=None)
+        a.add_argument("--date-end", default=None)
+        a.add_argument("--creator", default=None)
+        a.add_argument("--description", default=None)
         a.add_argument("--description-file", default=None)
         a.add_argument("--lat", type=float, default=None)
         a.add_argument("--lon", type=float, default=None)
@@ -144,15 +144,15 @@ def main(argv=None) -> int:
         a.add_argument("--geometry-file", default=None)
         a.add_argument("--waypoints", default=None, help="[{date,lat,lon,note}], inline")
         a.add_argument("--waypoints-file", default=None)
-        a.add_argument("--source-url", default="")
-        a.add_argument("--download-url", default="")
-        a.add_argument("--local-file", default="", help="a downloaded copy, relative to db/history/")
-        a.add_argument("--licence", default="", help=LICENCE_HELP)
-        a.add_argument("--rights-note", default="", help=RIGHTS_HELP)
-        a.add_argument("--pages", default="", help="where in the cited work")
-        a.add_argument("--language", default="", help="of a text or quote, when not English (ISO 639-1)")
-        a.add_argument("--people", default="", help="semicolon separated")
-        a.add_argument("--tags", default="", help=TAGS_HELP)
+        a.add_argument("--source-url", default=None)
+        a.add_argument("--download-url", default=None)
+        a.add_argument("--local-file", default=None, help="a downloaded copy, relative to db/history/")
+        a.add_argument("--licence", default=None, help=LICENCE_HELP)
+        a.add_argument("--rights-note", default=None, help=RIGHTS_HELP)
+        a.add_argument("--pages", default=None, help="where in the cited work")
+        a.add_argument("--language", default=None, help="of a text or quote, when not English (ISO 639-1)")
+        a.add_argument("--people", default=None, help="semicolon separated")
+        a.add_argument("--tags", default=None, help=TAGS_HELP)
         a.add_argument("--view-file", default=None,
                        help="a raster view of a non-raster local file (PDF page, page screenshot, GeoTIFF), relative to db/history/")
         a.add_argument("--routing", default=None, choices=["", "water", "as-given", "terrain"],
@@ -409,7 +409,7 @@ def run(a, c) -> int:                                   # noqa: C901 — one bra
         print(f"{len(keys)} entries: {' '.join(keys)}")
     elif a.cmd in ("artifact", "track"):
         kw = dict(date=a.date, date_end=a.date_end, creator=a.creator,
-                  description=_read(a.description, a.description_file),
+                  description=_read(a.description, a.description_file) if (a.description is not None or a.description_file) else None,
                   lat=a.lat, lon=a.lon, source_url=a.source_url, download_url=a.download_url,
                   local_file=a.local_file, licence=a.licence, rights_note=a.rights_note,
                   credit=a.credit, bibkey=a.bibkey,

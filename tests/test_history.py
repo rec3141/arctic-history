@@ -107,6 +107,23 @@ class HistoryTests(unittest.TestCase):
         self.assertIn("[here]", html)
         self.assertNotIn("[franklin-1845]", html)
 
+    def test_a_partial_cli_rerun_keeps_the_fields_it_does_not_pass(self):
+        import subprocess, sys
+        db = str(self.db)
+        tool = str(Path(__file__).resolve().parents[1] / "tools" / "history-db.py")
+        self.artifact(title="A plate", tags="franklin", people="Hobson", creator="W. R. Hobson",
+                      description="The record at Victory Point.", local_file="franklin-1845/files/a.jpg")
+        self.c.commit()
+        subprocess.run([sys.executable, tool, "--db", db, "artifact", "--id", "franklin-1845-001",
+                        "--topic", "franklin-1845", "--type", "image", "--title", "A plate, reworded",
+                        "--credit", "Royal Museums Greenwich", "--bibkey", "mcclintock1859voyage"],
+                       check=True, capture_output=True)
+        import sqlite3
+        row = sqlite3.connect(db).execute("SELECT title, tags, people, creator, description, local_file, licence "
+                                          "FROM artifacts WHERE id='franklin-1845-001'").fetchone()
+        self.assertEqual(row, ("A plate, reworded", '["franklin"]', '["Hobson"]', "W. R. Hobson",
+                               "The record at Victory Point.", "franklin-1845/files/a.jpg", "public-domain"))
+
     def test_an_event_written_twice_stays_one_row(self):
         a = H.add_event(self.c, "franklin-1845", "1847-06-11", "Franklin dies", lat=70.08, lon=-98.4)
         b = H.add_event(self.c, "franklin-1845", "1847-06-11", "Franklin dies", detail="added later")
