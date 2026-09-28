@@ -703,6 +703,14 @@ nags for pages once twenty observations are in.
 
 ## Helpers and the web
 
+**Never send the owner's email address or any personal detail to an outside
+service.** Unpaywall, Crossref and similar APIs answer without one; where a
+service insists on a contact, use arctic-history@cryomics.org. **A 429 from an
+outside website is not a stop signal**: Wikimedia Commons throttles this campus
+address, so pace it (one query at a time, a pause between) and carry on with
+other work. Stop a run only on a rate limit from your own model API or when
+told to wrap up.
+
 Three waves of researchers showed where the budget went. Helper agents four
 levels deep did two thirds of all web fetching; every WebFetch ran the whole
 page through a model and kept nothing; and nearly every helper ran on Opus
