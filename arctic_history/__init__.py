@@ -1361,7 +1361,9 @@ def add_person(c, name: str, **kw) -> str:
     # without --indigenous must not quietly clear it
     old = c.execute("SELECT indigenous FROM people WHERE name=?", (name.strip(),)).fetchone()
     row = {"name": name.strip(),
-           "indigenous": 1 if kw.get("indigenous") or (old and old["indigenous"]) else 0}
+           # an explicit True or False sets the flag; not passing it keeps the row's
+           "indigenous": (1 if kw["indigenous"] else 0) if kw.get("indigenous") is not None
+                         else (old["indigenous"] if old else 0)}
     for f in ("also", "role", "born", "died", "affiliation", "note", "bibkey", "topic"):
         if kw.get(f) is not None:
             row[f] = str(kw[f])

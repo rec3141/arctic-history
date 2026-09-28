@@ -163,7 +163,10 @@ def main(argv=None) -> int:
     p.add_argument("--name", required=True)
     for f in ("also", "role", "born", "died", "affiliation", "note", "bibkey", "topic"):
         p.add_argument(f"--{f}", default=None)
-    p.add_argument("--indigenous", action="store_true", help="an Inuit, Inughuit or other Indigenous participant")
+    p.add_argument("--indigenous", dest="indigenous", action="store_true", default=None,
+                   help="an Inuit, Inughuit or other Indigenous participant, as a source says (never inferred from a name)")
+    p.add_argument("--not-indigenous", dest="indigenous", action="store_false",
+                   help="clear the flag (a re-run without either keeps the row's)")
 
     an = sub.add_parser("animal", help="add or update a named animal: a dog, a pony, a ship's cat, a bear cub")
     an.add_argument("--name", required=True)

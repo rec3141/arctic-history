@@ -124,6 +124,13 @@ class HistoryTests(unittest.TestCase):
         self.assertEqual(row, ("A plate, reworded", '["franklin"]', '["Hobson"]', "W. R. Hobson",
                                "The record at Victory Point.", "franklin-1845/files/a.jpg", "public-domain"))
 
+    def test_the_indigenous_flag_can_be_cleared_and_is_kept_when_not_passed(self):
+        H.add_person(self.c, "A. Person", indigenous=True, topic="franklin-1845")
+        H.add_person(self.c, "A. Person", role="guide")
+        self.assertEqual(self.c.execute("SELECT indigenous FROM people WHERE name='A. Person'").fetchone()[0], 1)
+        H.add_person(self.c, "A. Person", indigenous=False)
+        self.assertEqual(self.c.execute("SELECT indigenous FROM people WHERE name='A. Person'").fetchone()[0], 0)
+
     def test_an_event_written_twice_stays_one_row(self):
         a = H.add_event(self.c, "franklin-1845", "1847-06-11", "Franklin dies", lat=70.08, lon=-98.4)
         b = H.add_event(self.c, "franklin-1845", "1847-06-11", "Franklin dies", detail="added later")
