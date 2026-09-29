@@ -840,6 +840,15 @@ class DisplayLineTest(unittest.TestCase):
         self.assertAlmostEqual(g["coordinates"][0][-1][0], 190.0)
 
 
+class WithheldTest(unittest.TestCase):
+    def test_licensed_and_whole_fair_dealing_files_stay_home(self):
+        self.assertTrue(H.withheld({"licence": "in-copyright-licensed", "type": "text"}))
+        self.assertTrue(H.withheld({"licence": "in-copyright-cited", "type": "image"}))
+        self.assertTrue(H.withheld({"licence": "fair-dealing", "type": "text"}))
+        self.assertFalse(H.withheld({"licence": "fair-dealing", "type": "image"}))
+        self.assertFalse(H.withheld({"licence": "public-domain", "type": "text"}))
+
+
 if __name__ == "__main__":
     unittest.main()
 

@@ -2598,6 +2598,19 @@ def validate(c) -> dict:
 
 
 # ---------------------------------------------------------------- publish
+# licences whose files never leave the research copy: a file held under a
+# library or publisher licence, a work cited but not reproduced, and a whole
+# work kept under fair dealing (only a figure, an image or a map is shown)
+WITHHELD_LICENCES = ("in-copyright-licensed", "in-copyright-cited")
+
+
+def withheld(r) -> bool:
+    """Whether an artifact's file stays off the published copy."""
+    if r["licence"] in WITHHELD_LICENCES:
+        return True
+    return r["licence"] == "fair-dealing" and r["type"] not in ("image", "map")
+
+
 def display_line(coords: list, step: float = 1.0) -> list:
     """A track's line as the map should draw it: every leg follows the great
     circle, cut into pieces of at most `step` degrees of arc, and each longitude
@@ -2737,11 +2750,18 @@ def _publish(root: Path, db: Path | None = None, *, _out=None, _link_context=Non
                     shutil.copy2(src, dest)
                 return f"data/history/files/{dest.name}"
 
-            if r["local_file"]:
+            if withheld(r):
+                # held for research under licence, or a whole work kept under
+                # fair dealing: the record is published, the file is not, and a
+                # copy left by an earlier publish is taken back
+                for rel in (r["local_file"], r["view_file"]):
+                    if rel:
+                        (root / "data" / "history" / "files" / Path(rel).name).unlink(missing_ok=True)
+            elif r["local_file"]:
                 url = ship(r["local_file"])
                 if url:
                     a["url"] = url
-            if r["view_file"]:
+            if r["view_file"] and not withheld(r):
                 # a raster view of a PDF, a page or a zipped GeoTIFF: the ship
                 # thumbnails `url`; the original stays reachable as original_url
                 view = ship(r["view_file"])
