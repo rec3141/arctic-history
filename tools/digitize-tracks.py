@@ -19,7 +19,7 @@ things, each usable alone:
 line, as with the sea router, and nothing is written to the database unless
 --write is given.
 
-    tools/digitize-tracks.py dem                      build the DEM mosaic cache (once; 4 min)
+    tools/digitize-tracks.py dem                      build the DEM mosaic caches (once; see below)
     tools/digitize-tracks.py crops --map haig-thomas-1937-059
                                                       gridded crops of a map to read control points off
     tools/digitize-tracks.py georef --map haig-thomas-1937-059
@@ -74,22 +74,71 @@ distribution, with the source acknowledged ("produced using Copernicus WorldDEM-
 under COPERNICUS by the European Union and ESA; all rights reserved").  It was
 chosen over Natural Resources Canada's CDEM because it covers Greenland and the
 Canadian islands alike from one source, at one resolution, and because a tile is
-a single curl.  The tiles live in /data/gis/dem/glo90/ (2,172 tiles, 60 to 84 N,
-30 to 170 W, 3.3 GB; 74 to 84 N and 30 to 130 W until 2026-09-10); the fetch script beside them is
-/data/gis/dem/fetch.sh.  The cost surface never needs 90 m: the routes were drawn
-at 1:2,000,000, so the tiles are mosaicked once into a polar stereographic grid
-at 250 m,
+a single curl.  The tiles live in /data/gis/dem/glo90/: every tile the bucket
+has north of 40 N, all the way round (9,551 tiles, 24 GB; the ocean squares
+have none).  They came in three steps -- 74 to 84 N and 30 to 130 W, then 60 to
+84 N and 30 to 170 W on 2026-09-10, then everything north of 40 N on
+2026-09-29 (/data/gis/dem/fetch.sh and fetch-north40.sh, whose lists,
+wanted.txt and wanted-north40.txt, are taken from the bucket's tileList.txt).
+The cost surface never needs 90 m -- the routes were drawn at 1:2,000,000 --
+so the tiles are mosaicked once into grids at 250 m, cached in
+/data/gis/dem/mosaic/ as memory-mapped arrays: the elevation and the slope in
+degrees (float32), and two byte masks -- land from the full-resolution GSHHG
+shoreline (the sea router's zip, level 1: a lake is not sea), ice from Natural
+Earth's 10 m glaciated areas (public domain, /data/gis/dem/ne/).
 
-    +proj=stere +lat_0=90 +lat_ts=78 +lon_0=-85 +datum=WGS84 +units=m
+One grid cannot hold 40 to 90 N: a polar stereographic reaching 40 N is some
+45,000 cells square, most of it sea, with its scale 20 per cent out at the rim.
+So the DEM is a set of regions (REGIONS), each its own grid, and a track is
+routed in one of them:
 
-covering 60 to 84 N, 30 to 170 W, and cached in /data/gis/dem/mosaic/ as
-memory-mapped float32 arrays: the elevation, the slope in degrees, and two byte
-masks -- land from the full-resolution GSHHG shoreline (the sea router's zip,
-level 1: a lake is not sea), ice from Natural Earth's 10 m glaciated areas
-(public domain, /data/gis/dem/ne/).  A cell of the grid is 250 m on the ground
-to within 3 per cent across the extent (the stereographic scale runs from 0.97
-at 84 N to 1.03 at 74 N) and the cost of a step is its true ground length, so
-the cheapest path is the shortest on the ground, as in the sea router.
+  canada-arctic   the grid of 2026-09-10, kept exactly as built (13,326 x 24,610
+                  cells, /data/gis/dem/mosaic/*.npy):
+
+                      +proj=stere +lat_0=90 +lat_ts=78 +lon_0=-85 +datum=WGS84 +units=m
+
+                  holding 60 to 84 N, 30 to 170 W (its rectangle runs further,
+                  but past its extent it has no tiles and it no longer claims
+                  those points).  The stereographic scale runs from 0.97 at
+                  84 N to 1.03 at 74 N.
+
+  sector-*        eight sectors, 60 degrees of longitude wide from 40 N to the
+                  pole, their middles at 90 W, 45 W, 0, 45 E, 90 E, 135 E, 180
+                  and 135 W (so neighbours overlap by 15 degrees), each an
+                  oblique stereographic centred on its own middle at 65 N,
+
+                      +proj=stere +lat_0=65 +lon_0=<middle> +k_0=0.9646 +datum=WGS84 +units=m
+
+                  about 20,250 x 21,850 cells each, in /data/gis/dem/mosaic/
+                  sector-<middle>/.  The stereographic is conformal, so a cell
+                  is square on the ground and one number gives its size, and
+                  scaled by 0.9646 it is within 3.5 per cent of true over the
+                  sector (the scale is k0 2 / (1 + cos c) at c from the centre,
+                  c reaching 30 degrees at the corners at 40 N).  A sector's
+                  rectangle runs on over the pole to the far side; it holds
+                  every point of that rectangle north of 40 N, every tile north
+                  of 40 N being on disk.  So a sector reaches well past its 60
+                  degrees in the high Arctic (the one about 0 holds Boothia,
+                  32 degrees from its centre, where the scale is 4.5 per cent
+                  out); the cost uses the true scale there too.
+
+A track goes to the region that holds both ends of the most of its legs; on a
+tie the Canadian Arctic grid wins, so a track it holds routes exactly as it did
+before the sectors existed, and then the sector whose centre is nearest the
+track's farthest waypoint.  A leg the chosen region does not hold is the sea
+router's, as a leg outside the DEM always was (below).  The cost of a step is
+its true ground length in every region (the scale from the formula above), so
+the cheapest path is the shortest on the ground, as in the sea router, and the
+cost surface is the same function of slope, elevation, land and ice
+everywhere.
+
+``dem`` builds whatever region is missing (``--region NAME`` for one,
+``--rebuild`` to redo, ``--jobs`` at once, three by default); a sector takes
+about ten minutes, the eight some thirty with three at once, and 4.4 GB of disk
+each.  A sector's land and ice polygons have their long edges (the date-line
+cuts through Chukotka and Wrangel Island) filled in every 0.1 degree, so they
+follow the meridian and not a chord across it.  The Canadian Arctic grid takes only its own extent's tiles,
+so rebuilding it gives back the grid it was.
 
 ## Georeferencing
 
@@ -234,8 +283,9 @@ cells the search runs first on the surface pooled 4x by its cheapest cell, so a
 valley is never closed by the pooling, and then again at 250 m inside a 10 km
 corridor round that path.  The staircase that comes out is simplified to 300 m,
 rounded by two Chaikin passes and simplified again to half a kilometre, within
-one leg, never across a waypoint.  A waypoint outside the DEM's extent hands
-its legs to the sea router (tools/route-tracks.py): the water path on its fine
+one leg, never across a waypoint.  A waypoint outside the track's region
+(south of 40 N, or past the edge of the region chosen) hands its legs to the
+sea router (tools/route-tracks.py): the water path on its fine
 mask when both ends lie in it, else its coarse one, else a great circle -- so
 the voyage legs of a mixed track (Rae's passage home, the Isabella carrying
 Ross's boats to Hull) follow the sea instead of chording across Greenland.
@@ -314,6 +364,31 @@ PROJ = "+proj=stere +lat_0=90 +lat_ts=78 +lon_0=-85 +x_0=0 +y_0=0 +datum=WGS84 +
 RES = 250.0
 EXTENT = dict(lat=(60.0, 84.0), lon=(-170.0, -30.0))
 R_EARTH = 6371.0088
+
+# the regions (2026-09-29: everything north of 40 N).  The first is the grid
+# above, kept exactly as it was built, so a track it holds routes as before;
+# the others are eight sectors, each 60 degrees of longitude wide from 40 N to
+# the pole, their middles 45 degrees apart (so neighbours overlap by 15), each
+# in an oblique stereographic projection centred on its own middle at 65 N.
+# The stereographic is conformal, so a cell is square on the ground and its
+# size is one number, and scaled by 0.9646 its scale is within 3.5 per cent of
+# true over the whole sector (1 at the centre times 2 / (1 + cos c) at c from
+# it, 30 degrees at the far corners at 40 N).
+SECTOR_LAT0, SECTOR_HALF, SECTOR_K0, SECTOR_SOUTH = 65.0, 30.0, 0.9646, 40.0
+
+
+def _sector(mid):
+    tag = "180" if mid == 180 else f"{abs(mid):03d}{'e' if mid >= 0 else 'w'}"
+    return dict(name=f"sector-{tag}", polar=False, centre=(SECTOR_LAT0, float(mid)), k0=SECTOR_K0,
+                proj=f"+proj=stere +lat_0={SECTOR_LAT0:g} +lon_0={mid} +k_0={SECTOR_K0} +x_0=0 +y_0=0 "
+                     f"+datum=WGS84 +units=m +no_defs",
+                extent=dict(lat=(SECTOR_SOUTH, 90.0), lon=(mid - SECTOR_HALF, mid + SECTOR_HALF)),
+                dir=MOSAIC / f"sector-{tag}")
+
+
+REGIONS = [dict(name="canada-arctic", polar=True, centre=(90.0, -85.0), k0=None, proj=PROJ, extent=EXTENT,
+                dir=MOSAIC)] + [_sector(m) for m in (-90, -45, 0, 45, 90, 135, 180, -135)]
+REGION_BY_NAME = {r["name"]: r for r in REGIONS}
 
 # the cost surface
 LAND_BASE = 1.3
@@ -516,19 +591,41 @@ def read_shapefile_polygons(zpath, member):
     return _load_route_tracks().read_polygons(zpath, member)
 
 
+def densify_ll(xy, step=0.1):
+    """A ring of (lon, lat) with points put into every edge longer than `step`
+    degrees, evenly in longitude and latitude."""
+    d = np.abs(np.diff(xy, axis=0)).max(axis=1)
+    if not (d > step).any():
+        return xy
+    out, j = [], 0
+    for i in np.nonzero(d > step)[0]:
+        n = int(math.ceil(d[i] / step))
+        out.append(xy[j:i])
+        out.append(xy[i] + (np.arange(n)[:, None] / n) * (xy[i + 1] - xy[i]))
+        j = i + 1
+    out.append(xy[j:])
+    return np.concatenate(out)
+
+
 # ---------------------------------------------------------------- the DEM
 class Terrain:
-    """The 250 m polar grid: elevation, slope, land and ice, memory-mapped, and
-    the conversions between (lat, lon) and (row, col)."""
+    """One region's 250 m grid: elevation, slope, land and ice, memory-mapped,
+    and the conversions between (lat, lon) and (row, col).  ``region`` is an
+    entry of REGIONS (the first, the Canadian Arctic grid, by default).  With
+    load=False only the grid's geometry is set up, nothing read or built: enough
+    to ask which region holds a point."""
 
-    def __init__(self, build=False):
+    def __init__(self, region=None, build=False, load=True):
         from pyproj import Transformer
-        self.fwd_t = Transformer.from_crs("EPSG:4326", PROJ, always_xy=True)
-        self.inv_t = Transformer.from_crs(PROJ, "EPSG:4326", always_xy=True)
-        MOSAIC.mkdir(parents=True, exist_ok=True)
-        meta_p = MOSAIC / "meta.json"
-        lat0, lat1 = EXTENT["lat"]
-        lon0, lon1 = EXTENT["lon"]
+        self.region = reg = REGIONS[0] if region is None else \
+            (REGION_BY_NAME[region] if isinstance(region, str) else region)
+        self.name, self.proj, self.dir = reg["name"], reg["proj"], reg["dir"]
+        self.fwd_t = Transformer.from_crs("EPSG:4326", self.proj, always_xy=True)
+        self.inv_t = Transformer.from_crs(self.proj, "EPSG:4326", always_xy=True)
+        meta_p = self.dir / "meta.json"
+        extent = reg["extent"]
+        lat0, lat1 = extent["lat"]
+        lon0, lon1 = extent["lon"]
         lons = np.linspace(lon0, lon1, 721)
         lats = np.linspace(lat0, lat1, 101)
         LO, LA = np.meshgrid(lons, lats)
@@ -537,23 +634,26 @@ class Terrain:
         y0, y1 = math.floor(Y.min() / RES) * RES, math.ceil(Y.max() / RES) * RES
         self.x0, self.y1 = x0, y1
         self.ncols, self.nrows = int((x1 - x0) / RES), int((y1 - y0) / RES)
-        meta = json.loads(json.dumps(dict(proj=PROJ, res=RES, extent=EXTENT, x0=x0, y1=y1,
+        meta = json.loads(json.dumps(dict(proj=self.proj, res=RES, extent=extent, x0=x0, y1=y1,
                                           shape=[self.nrows, self.ncols])))
+        if not load:
+            return
+        self.dir.mkdir(parents=True, exist_ok=True)
         names = ("dem", "slope", "land", "ice")
         ok = meta_p.exists() and json.loads(meta_p.read_text()) == meta and \
-            all((MOSAIC / f"{n}.npy").exists() for n in names)
+            all((self.dir / f"{n}.npy").exists() for n in names)
         if not ok or build:
             self._build(meta, meta_p)
-        self.dem = np.load(MOSAIC / "dem.npy", mmap_mode="r")
-        self.slope = np.load(MOSAIC / "slope.npy", mmap_mode="r")
-        self.land = np.load(MOSAIC / "land.npy", mmap_mode="r")
-        if not (MOSAIC / "ice.clipped").exists():
+        self.dem = np.load(self.dir / "dem.npy", mmap_mode="r")
+        self.slope = np.load(self.dir / "slope.npy", mmap_mode="r")
+        self.land = np.load(self.dir / "land.npy", mmap_mode="r")
+        if not (self.dir / "ice.clipped").exists():
             # a cache built before the ice was clipped to the land
-            ice = np.load(MOSAIC / "ice.npy") & np.load(MOSAIC / "land.npy", mmap_mode="r")
-            np.save(MOSAIC / "ice.npy", ice)
-            (MOSAIC / "ice.clipped").write_text("ice &= land\n")
+            ice = np.load(self.dir / "ice.npy") & np.load(self.dir / "land.npy", mmap_mode="r")
+            np.save(self.dir / "ice.npy", ice)
+            (self.dir / "ice.clipped").write_text("ice &= land\n")
             del ice
-        self.ice = np.load(MOSAIC / "ice.npy", mmap_mode="r")
+        self.ice = np.load(self.dir / "ice.npy", mmap_mode="r")
 
     # -- coordinates
     def rcf(self, lat, lon):
@@ -577,37 +677,94 @@ class Terrain:
         return 0 <= r < self.nrows and 0 <= c < self.ncols
 
     def holds(self, p):
-        return self.inside(*self.rc(*p))
+        """A point this region routes: inside the grid and where its tiles are.
+        The Canadian Arctic grid's rectangle runs past its tiles (south of 60 N
+        and east of 30 W it is flat and empty), so it holds only its own
+        extent; a sector holds its whole rectangle north of 40 N, every tile
+        north of 40 N being on disk."""
+        if not self.inside(*self.rc(*p)):
+            return False
+        lat, lon = p
+        if self.region["polar"]:
+            (la0, _), (lo0, lo1) = self.region["extent"]["lat"], self.region["extent"]["lon"]
+            return lat >= la0 and lo0 <= lon <= lo1
+        return lat >= SECTOR_SOUTH
+
+    def centre_deg(self, p):
+        """The angular distance in degrees of a point from the projection's centre."""
+        la1, lo1 = map(math.radians, self.region["centre"])
+        la2, lo2 = math.radians(p[0]), math.radians(p[1])
+        c = math.sin(la1) * math.sin(la2) + math.cos(la1) * math.cos(la2) * math.cos(lo2 - lo1)
+        return math.degrees(math.acos(max(-1.0, min(1.0, c))))
 
     def ground_km(self, ra, rb, ca, cb, step=16):
-        """The ground length of a cell in km over a window: the stereographic
-        scale is (1 + sin lat_ts) / (1 + sin lat), sampled every `step` cells and
-        blown up."""
+        """The ground length of a cell in km over a window, sampled every
+        `step` cells and blown up.  The stereographic scale is k0 2 / (1 + cos c)
+        at c from the centre; for the polar grid that is
+        (1 + sin lat_ts) / (1 + sin lat), written as it always was."""
         rr = np.arange(ra, rb, step)
         cc = np.arange(ca, cb, step)
         C, Rw = np.meshgrid(cc, rr)
-        lat, _ = self.ll_array(Rw, C)
-        k = (1 + math.sin(math.radians(78.0))) / (1 + np.sin(np.radians(lat)))
+        lat, lon = self.ll_array(Rw, C)
+        if self.region["polar"]:
+            k = (1 + math.sin(math.radians(78.0))) / (1 + np.sin(np.radians(lat)))
+        else:
+            la1, lo1 = map(math.radians, self.region["centre"])
+            cosc = math.sin(la1) * np.sin(np.radians(lat)) + \
+                math.cos(la1) * np.cos(np.radians(lat)) * np.cos(np.radians(lon) - lo1)
+            k = self.region["k0"] * 2.0 / (1.0 + cosc)
         g = (RES / 1000.0) / k
         g = np.repeat(np.repeat(g, step, 0), step, 1)[:rb - ra, :cb - ca]
         return g.astype(np.float32)
 
     # -- building
+    def _tiles(self):
+        """The tiles whose degree square falls in the grid, told from their
+        names (N61_00_W045) without opening them."""
+        out = []
+        for tp in sorted(TILES.glob("*.tif")):
+            parts = tp.stem.split("_")
+            try:
+                lat = (1 if parts[4][0] == "N" else -1) * int(parts[4][1:])
+                lon = (1 if parts[6][0] == "E" else -1) * int(parts[6][1:])
+            except (IndexError, ValueError):
+                out.append(tp)
+                continue
+            if self.region["polar"]:
+                # the grid as first built: the tiles of its own extent (W030
+                # being the square from 30 to 29 W), not every one on disk
+                (la0, la1), (lo0, lo1) = self.region["extent"]["lat"], self.region["extent"]["lon"]
+                if la0 <= lat < la1 and lo0 <= lon <= lo1:
+                    out.append(tp)
+                continue
+            if lat + 1 < SECTOR_SOUTH - 1:
+                continue
+            lo = np.array([lon, lon + 1, lon, lon + 1, lon + 0.5])
+            la = np.array([lat, lat, lat + 1, lat + 1, lat + 0.5])
+            x, y = self.fwd_t.transform(lo, la)
+            pad = 50_000.0
+            if x.max() < self.x0 - pad or x.min() > self.x0 + self.ncols * RES + pad or \
+                    y.max() < self.y1 - self.nrows * RES - pad or y.min() > self.y1 + pad:
+                continue
+            out.append(tp)
+        return out
+
     def _build(self, meta, meta_p):
         import rasterio
         from rasterio.warp import reproject, Resampling, transform_bounds
         from rasterio.transform import from_origin
         from rasterio.crs import CRS
         t0 = time.time()
+        D = self.dir
         dst_t = from_origin(self.x0, self.y1, RES, RES)
-        dst_crs = CRS.from_proj4(PROJ)
-        dem = np.lib.format.open_memmap(MOSAIC / "dem.npy", mode="w+", dtype=np.float32,
+        dst_crs = CRS.from_proj4(self.proj)
+        dem = np.lib.format.open_memmap(D / "dem.npy", mode="w+", dtype=np.float32,
                                         shape=(self.nrows, self.ncols))
         dem[:] = 0.0
-        tiles = sorted(TILES.glob("*.tif"))
+        tiles = self._tiles()
         if not tiles:
             raise SystemExit(f"no GLO-90 tiles in {TILES}; run /data/gis/dem/fetch.sh")
-        print(f"mosaicking {len(tiles)} tiles into {self.ncols} x {self.nrows} cells at {RES:g} m",
+        print(f"{self.name}: mosaicking {len(tiles)} tiles into {self.ncols} x {self.nrows} cells at {RES:g} m",
               file=sys.stderr)
         for i, tp in enumerate(tiles):
             with rasterio.open(tp) as src:
@@ -630,12 +787,12 @@ class Terrain:
                 blk = dem[ra:rb, ca:cb]
                 blk[good] = np.maximum(blk[good], sub[good])
                 dem[ra:rb, ca:cb] = blk
-            if i % 100 == 0:
-                print(f"  {i}/{len(tiles)} tiles, {time.time() - t0:.0f} s", file=sys.stderr)
+            if i % 500 == 0:
+                print(f"  {self.name}: {i}/{len(tiles)} tiles, {time.time() - t0:.0f} s", file=sys.stderr)
         dem[dem < 0] = 0.0
         dem.flush()
         # slope, in degrees, from the gradient over 250 m
-        slope = np.lib.format.open_memmap(MOSAIC / "slope.npy", mode="w+", dtype=np.float32,
+        slope = np.lib.format.open_memmap(D / "slope.npy", mode="w+", dtype=np.float32,
                                           shape=(self.nrows, self.ncols))
         step = 2048
         for r in range(0, self.nrows, step):
@@ -645,9 +802,19 @@ class Terrain:
             s = np.degrees(np.arctan(np.hypot(gx, gy)))
             slope[r:min(self.nrows, r + step)] = s[r - a:r - a + min(step, self.nrows - r)]
         slope.flush()
-        print(f"slope done, {time.time() - t0:.0f} s", file=sys.stderr)
+        print(f"{self.name}: slope done, {time.time() - t0:.0f} s", file=sys.stderr)
         # land from GSHHG full resolution, ice from Natural Earth
         import rasterio.features
+        lo0, lo1 = self.region["extent"]["lon"]
+        la0, la1 = self.region["extent"]["lat"]
+        if not self.region["polar"]:
+            # a sector's rectangle reaches south of 40 N at its bottom corners
+            # and over the pole to the far side: every polygon north of there
+            # goes in (the stereographic is finite everywhere but the antipode
+            # of the centre, 65 S, which nothing north of 25 N comes near) and
+            # the rasterizer clips
+            la_s = float(self.ll_array(np.array([self.nrows - 1, self.nrows - 1]),
+                                       np.array([0, self.ncols - 1]))[0].min())
         for name, zpath, member, url in (
                 ("land", GSHHG_ZIP, "GSHHS_shp/f/GSHHS_f_L1.shp", None),
                 ("ice", NE_ZIP, "ne_10m_glaciated_areas.shp", NE_URL)):
@@ -658,14 +825,20 @@ class Terrain:
                 zpath.parent.mkdir(parents=True, exist_ok=True)
                 urllib.request.urlretrieve(url, zpath)
             shapes = []
-            lo0, lo1 = EXTENT["lon"]
-            la0, la1 = EXTENT["lat"]
             for box, xy in read_shapefile_polygons(zpath, member):
-                if box[2] < lo0 or box[0] > lo1 or box[3] < la0 or box[1] > la1:
+                if self.region["polar"]:
+                    if box[2] < lo0 or box[0] > lo1 or box[3] < la0 or box[1] > la1:
+                        continue
+                    keep = xy[(xy[:, 1] > la0 - 2) & (xy[:, 1] < 89.9)] if name == "ice" else xy
+                    if len(keep) < 4:
+                        continue
+                elif box[3] < la_s - 1.0:
                     continue
-                keep = xy[(xy[:, 1] > la0 - 2) & (xy[:, 1] < 89.9)] if name == "ice" else xy
-                if len(keep) < 4:
-                    continue
+                else:
+                    # the few long edges (the date-line cuts through Chukotka
+                    # and Wrangel Island, 4 degrees of meridian) follow their
+                    # meridian, not a chord, in a projection whose meridians bend
+                    xy = densify_ll(xy)
                 x, y = self.fwd_t.transform(xy[:, 0], np.clip(xy[:, 1], -89.9, 89.9))
                 shapes.append(({"type": "Polygon", "coordinates": [np.column_stack([x, y]).tolist()]}, 1))
             mask = rasterio.features.rasterize(shapes, out_shape=(self.nrows, self.ncols), fill=0,
@@ -675,13 +848,15 @@ class Terrain:
                 # over the fiords and sounds they head; ice cannot be where the
                 # full-resolution shoreline says sea, so the ice is clipped to
                 # the land
-                mask &= np.load(MOSAIC / "land.npy", mmap_mode="r")
-            np.save(MOSAIC / f"{name}.npy", mask.astype(np.uint8))
-            print(f"{name}: {len(shapes)} polygons, {mask.mean():.1%} of the grid, "
+                mask &= np.load(D / "land.npy", mmap_mode="r")
+            np.save(D / f"{name}.npy", mask.astype(np.uint8))
+            print(f"{self.name}: {name}: {len(shapes)} polygons, {mask.mean():.1%} of the grid, "
                   f"{time.time() - t0:.0f} s", file=sys.stderr)
+            del shapes, mask
+        (D / "ice.clipped").write_text("ice &= land\n")
         del dem, slope
         meta_p.write_text(json.dumps(meta))
-        print(f"mosaic built in {time.time() - t0:.0f} s -> {MOSAIC}", file=sys.stderr)
+        print(f"{self.name}: mosaic built in {time.time() - t0:.0f} s -> {D}", file=sys.stderr)
 
     # -- pictures
     def hillshade(self, ra, rb, ca, cb, az=315.0, alt=45.0):
@@ -1561,7 +1736,7 @@ class Router:
         T = self.T
         r0, c0 = T.rc(*p)
         r1, c1 = T.rc(*q)
-        if not (T.inside(r0, c0) and T.inside(r1, c1)):
+        if not (T.holds(p) and T.holds(q)):
             return self.sea_leg(p, q)
         if (r0, c0) == (r1, c1):
             return [p, q], dict(fallback="same cell")
@@ -1674,6 +1849,44 @@ class Router:
             legs.append(info)
             line += seg[1:]
         return line, legs, time.time() - t0, wps_raw
+
+
+_TERRAINS = {}
+
+
+def terrain(name=None):
+    """A region's grid, opened once (building it if its cache is missing)."""
+    name = name or REGIONS[0]["name"]
+    if name not in _TERRAINS:
+        _TERRAINS[name] = Terrain(name)
+    return _TERRAINS[name]
+
+
+def choose_region(wps, regions=None):
+    """The region a track is routed in: the one holding both ends of the most
+    legs; on a tie the Canadian Arctic grid (so a track it holds routes as it
+    always did), and then the sector whose centre is nearest the farthest
+    waypoint, the track then lying in the middle of it.  A track routes in
+    one region only: a leg that region does not hold is the sea router's, as
+    a leg outside the DEM always was."""
+    regions = regions or [terrain(r["name"]) for r in REGIONS]
+    best, best_key = None, None
+    for i, T in enumerate(regions):
+        held = [T.holds(p) for p in wps]
+        legs = sum(1 for a, b in zip(held, held[1:]) if a and b)
+        far = max((T.centre_deg(p) for p in wps), default=0.0)
+        key = (-legs, 0 if T.region["polar"] else 1, far, i)
+        if best_key is None or key < best_key:
+            best, best_key = T, key
+    return best
+
+
+def route_track_any(row, digitized=None, moves=()):
+    """route_track in the region chosen for the track's (moved) waypoints."""
+    wps = [(float(w["lat"]), float(w["lon"])) for w in apply_moves(waypoints_raw(row), moves)]
+    T = choose_region(wps)
+    line, legs, secs, wps_raw = Router(T).route_track(row, digitized, moves)
+    return line, legs, secs, wps_raw, T.name
 
 
 # ------------------------------------------------------------- database
@@ -2044,8 +2257,10 @@ def render_summary(recs, georefs, meta, path):
          "**Written to the database.**" if meta.get("wrote") else "**The database was not written to** "
          "(`--write` is off).", "",
          "## The DEM", "",
-         f"Copernicus GLO-90, mosaicked at {RES:g} m in `{PROJ}` ({meta['shape'][1]} x {meta['shape'][0]} cells), "
-         "with land from GSHHG full resolution and ice from Natural Earth 10 m glaciated areas.  See the "
+         f"Copernicus GLO-90 north of 40 N, mosaicked at {RES:g} m into regional grids (the Canadian Arctic "
+         f"grid in `{PROJ}` and eight oblique stereographic sectors); this run used "
+         + (", ".join(f"{n} ({s[1]} x {s[0]} cells)" for n, s in meta.get("regions", {}).items()) or "none")
+         + ".  Land from GSHHG full resolution and ice from Natural Earth 10 m glaciated areas.  See the "
          "tool's docstring for the cost surface.", "",
          "## The maps", "",
          "| map | family | parameters | points | rms px | rms km | worst px | km/px | fit |", "|---|---|---|---|---|---|---|---|---|"]
@@ -2189,8 +2404,6 @@ def render_gallery(path):
 
 # -------------------------------------------------------------------- main
 def cmd_route(a):
-    T = Terrain()
-    R = Router(T)
     ro = db_ro()
     rows = {r["id"]: r for r in ro.execute("SELECT * FROM artifacts WHERE type='track' ORDER BY id")}
     if a.all:
@@ -2219,7 +2432,8 @@ def cmd_route(a):
             continue
         dig = None if a.no_digitized else load_digitized(tid)
         moves = load_moves(tid)
-        line, legs, secs, wps_raw = R.route_track(row, dig, moves)
+        line, legs, secs, wps_raw, region = route_track_any(row, dig, moves)
+        T = terrain(region)
         wps = [(float(w["lat"]), float(w["lon"])) for w in wps_raw]
         old = geometry_of(row)
         diag = waypoint_diagnostics(T, wps_raw, dig)
@@ -2227,7 +2441,7 @@ def cmd_route(a):
         if proposed:
             DIGIT.mkdir(parents=True, exist_ok=True)
             (DIGIT / f"{tid}.moves.proposed.json").write_text(json.dumps({"moves": proposed}, indent=1))
-        rec = dict(id=tid, title=row["title"], topic=row["topic"], routing_before=row["routing"] or "",
+        rec = dict(id=tid, title=row["title"], topic=row["topic"], routing_before=row["routing"] or "", region=region,
                    waypoints=len(wps), points=len(line), legs=legs, seconds=round(secs, 1),
                    straight_km=line_km(wps), routed_km=line_km(line), old_km=line_km(old) if old else 0.0,
                    old_points=len(old), diagnostics=diag, moves=moves, proposed_moves=proposed,
@@ -2264,7 +2478,7 @@ def cmd_route(a):
     georefs = [json.loads(p.read_text()) for p in sorted(GEOREF.glob("*.georef.json"))]
     meta = dict(run=time.strftime("%Y-%m-%d %H:%M"), seconds=time.time() - t_start,
                 cmd=" ".join(["python tools/digitize-tracks.py"] + sys.argv[1:]), wrote=a.write,
-                shape=[T.nrows, T.ncols], this_run=len(want))
+                regions={n: [t.nrows, t.ncols] for n, t in _TERRAINS.items()}, this_run=len(want))
     render_summary([f["properties"] for f in feats], georefs, meta, OUT / "summary.md")
     render_gallery(OUT / "gallery.html")
     if a.write:
@@ -2285,11 +2499,20 @@ def cmd_route(a):
     print(f"{OUT.relative_to(ROOT)}/summary.md, routes.geojson and gallery.html written", file=sys.stderr)
 
 
+def _dem_one(name, rebuild):
+    T = Terrain(name, build=rebuild)
+    return (f"{name}: {T.ncols} x {T.nrows} cells at {RES:g} m; land {np.asarray(T.land).mean():.1%}, "
+            f"ice {np.asarray(T.ice).mean():.1%}, highest {float(np.asarray(T.dem).max()):.0f} m")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     sub = ap.add_subparsers(dest="cmd", required=True)
-    p = sub.add_parser("dem", help="build the DEM mosaic cache")
+    p = sub.add_parser("dem", help="build the DEM mosaic caches")
     p.add_argument("--rebuild", action="store_true")
+    p.add_argument("--region", action="append", default=[], choices=[r["name"] for r in REGIONS],
+                   help="only these regions (default: all)")
+    p.add_argument("--jobs", type=int, default=3, help="regions built at once")
     p = sub.add_parser("crops", help="gridded crops of a map to read control points off")
     p.add_argument("--map", required=True)
     p.add_argument("--rotate", type=int, default=None, help="quarter turns anticlockwise to north-up")
@@ -2313,9 +2536,15 @@ def main():
     a = ap.parse_args()
     OUT.mkdir(parents=True, exist_ok=True)
     if a.cmd == "dem":
-        T = Terrain(build=a.rebuild)
-        print(f"{T.ncols} x {T.nrows} cells at {RES:g} m; land {np.asarray(T.land).mean():.1%}, "
-              f"ice {np.asarray(T.ice).mean():.1%}, highest {float(np.asarray(T.dem).max()):.0f} m", file=sys.stderr)
+        names = a.region or [r["name"] for r in REGIONS]
+        if a.jobs > 1 and len(names) > 1:
+            from multiprocessing import Pool
+            with Pool(min(a.jobs, len(names))) as pool:
+                for line in pool.starmap(_dem_one, [(n, a.rebuild) for n in names]):
+                    print(line, file=sys.stderr)
+        else:
+            for n in names:
+                print(_dem_one(n, a.rebuild), file=sys.stderr)
     elif a.cmd == "crops":
         paths, size = crops_sheet(a.map, a.step, a.tile, rotate=a.rotate)
         print(f"{a.map}: {size[0]} x {size[1]} px north-up, {len(paths)} crops in {GEOREF.relative_to(ROOT)}")
