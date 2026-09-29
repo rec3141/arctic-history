@@ -660,6 +660,8 @@ class HistoryTests(unittest.TestCase):
         self.assertIsNone(H._off_map(69.72, 176.72))      # Siberian coast, the Karluk's survivors
         self.assertIsNotNone(H._off_map(74.7, 91.8))      # a dropped minus sign
         self.assertIsNotNone(H._off_map(74.7, -200))
+        self.assertIsNone(H._off_map(80.3, 52.8, east_ok=True))  # Franz Josef Land, an eastern topic
+        self.assertIsNotNone(H._off_map(80.3, 200, east_ok=True))
 
     def test_foreign_topic_only_fills_blanks_on_a_person(self):
         H.add_person(self.c, "Robert Bartlett", role="master of the Roosevelt", topic="sverdrup-bernier-peary")

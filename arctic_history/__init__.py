@@ -2246,17 +2246,21 @@ def _small_real_image(f: Path) -> bool:
     return any(head.startswith(m) for m in IMAGE_MAGIC)
 
 
-def _off_map(lat, lon) -> str | None:
+def _off_map(lat, lon, east_ok: bool = False) -> str | None:
     """A coordinate nothing in this history can honestly carry. Pins may sit
     well south of the Arctic — the voyages sailed from London and New York,
     Munk from Copenhagen, Kane died in Havana — but nothing lies south of 20
     or east of 40, and a longitude in the mirror band east of 40 is almost
     always a dropped minus sign. The one exception is the far side of the
     dateline, 160-180 east: the Karluk's people and Bartlett's walk reached
-    the Siberian coast, and those positions are honestly east."""
+    the Siberian coast, and those positions are honestly east. A topic whose
+    own positions lie largely in the east (Franz Josef Land, the Siberian
+    shelf) passes `east_ok`, and so does a row tagged east-verified."""
     if lat is not None and not 20 <= lat <= 90:
         return f"latitude {lat} is south of anywhere this history reaches"
-    if lon is not None and not (-180 <= lon <= 40 or 160 <= lon <= 180):
+    if lon is not None and not (-180 <= lon <= 180):
+        return f"longitude {lon} is off the globe"
+    if lon is not None and not east_ok and not (-180 <= lon <= 40 or 160 <= lon <= 180):
         return f"longitude {lon} is east of 40: almost always a dropped minus sign"
     return None
 
@@ -2376,6 +2380,16 @@ def validate(c) -> dict:
         notes.append({"kind": kind, "what": what, "detail": detail})
 
     keys = {r["bibkey"] for r in c.execute("SELECT bibkey FROM sources")}
+    # the eastern topics: three or more of their pinned rows lie between 40
+    # and 160 east, so an eastern position there is the rule; a dropped minus
+    # sign is a single slip in a topic that otherwise lies west
+    band: dict[str, list[int]] = {}
+    for t in ("artifacts", "places", "events"):
+        for r in c.execute(f"SELECT topic, lon FROM {t} WHERE lon IS NOT NULL"):
+            n = band.setdefault(r["topic"], [0, 0])
+            n[0] += 40 < r["lon"] < 160
+            n[1] += 1
+    east_topics = {t for t, (e, n) in band.items() if e >= 3}
     for r in c.execute("SELECT * FROM artifacts"):
         if not r["credit"]:
             bad("artifact", r["id"], "no credit line")
@@ -2406,8 +2420,8 @@ def validate(c) -> dict:
                                          "the description must name who it is about")
         # a documented, genuinely eastern position (Novaya Zemlya, the far
         # side of the dateline) is vouched for with the east-verified tag
-        east_ok = "east-verified" in (r["tags"] or "")
-        msg = None if east_ok else _off_map(r["lat"], r["lon"])
+        east_ok = "east-verified" in (r["tags"] or "") or r["topic"] in east_topics
+        msg = _off_map(r["lat"], r["lon"], east_ok)
         if msg:
             bad("artifact", r["id"], msg)
         if r["local_file"]:
@@ -2423,7 +2437,7 @@ def validate(c) -> dict:
                     bad("artifact", r["id"], "geometry is not a GeoJSON geometry")
                 else:
                     for pt in _points(g["coordinates"]):
-                        msg = None if east_ok else _off_map(pt[1], pt[0])
+                        msg = _off_map(pt[1], pt[0], east_ok)
                         if msg:
                             bad("artifact", r["id"], f"geometry point {pt[:2]}: {msg}")
                             break
@@ -2436,7 +2450,7 @@ def validate(c) -> dict:
                     raise ValueError
                 for i, p in enumerate(w):
                     if isinstance(p, dict):
-                        msg = None if east_ok else _off_map(p.get("lat"), p.get("lon"))
+                        msg = _off_map(p.get("lat"), p.get("lon"), east_ok)
                         if msg:
                             bad("artifact", r["id"], f"waypoint {i} ({p.get('date', 'undated')}): {msg}")
                             break
@@ -2524,7 +2538,7 @@ def validate(c) -> dict:
         else:
             # the magnetic pole has crossed into the eastern hemisphere; an
             # observation vouches for an eastern position with the same tag
-            msg = None if "east-verified" in (r["tags"] or "") else _off_map(r["lat"], r["lon"])
+            msg = _off_map(r["lat"], r["lon"], "east-verified" in (r["tags"] or "") or r["topic"] in east_topics)
             if msg:
                 bad("observation", r["id"], msg)
         if not r["bibkey"]:
@@ -2553,12 +2567,12 @@ def validate(c) -> dict:
         if r["kind"] not in PLACE_KINDS:
             note("place-kind", r["kind"], f"used on {r['n']} place(s) and not in the vocabulary: "
                                          + ", ".join(PLACE_KINDS))
-    for r in c.execute("SELECT name, lat, lon FROM places WHERE lat IS NOT NULL"):
-        msg = _off_map(r["lat"], r["lon"])
+    for r in c.execute("SELECT name, topic, lat, lon FROM places WHERE lat IS NOT NULL"):
+        msg = _off_map(r["lat"], r["lon"], r["topic"] in east_topics)
         if msg:
             bad("place", r["name"], msg)
-    for r in c.execute("SELECT id, title, lat, lon FROM events WHERE lat IS NOT NULL"):
-        msg = _off_map(r["lat"], r["lon"])
+    for r in c.execute("SELECT id, topic, title, lat, lon, tags FROM events WHERE lat IS NOT NULL"):
+        msg = _off_map(r["lat"], r["lon"], r["topic"] in east_topics or "east-verified" in (r["tags"] or ""))
         if msg:
             bad("event", str(r["id"]), f"{r['title']}: {msg}")
     # a span with only one end cannot be drawn as a bar
