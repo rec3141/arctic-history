@@ -233,6 +233,26 @@ OVERRIDES = {
     "qei-from-the-air-1947-024": ("as-given", "where an aerial survey flew, season by season"),
     "sverdrup-bernier-peary-002": ("water", "the C.G.S. Arctic's sovereignty voyage: a ship, tagged "
                                             "`patrol` along with the sledge patrols"),
+    "airships-and-transpolar-flights-001": ("as-given", "Wilkins and Eielson's flight"),
+    "airships-and-transpolar-flights-013": ("as-given", "the Italia's flight to Kings Bay"),
+    "airships-and-transpolar-flights-014": ("as-given", "an airship flight"),
+    "airships-and-transpolar-flights-015": ("as-given", "an airship flight"),
+    "airships-and-transpolar-flights-016": ("as-given", "the Italia's flight to the Pole"),
+    "airships-and-transpolar-flights-019": ("as-given", "Lundborg's flights"),
+    "airships-and-transpolar-flights-021": ("as-given", "Chukhnovsky's reconnaissance flight"),
+    "airships-and-transpolar-flights-022": ("as-given", "the Latham's last flight"),
+    "airships-and-transpolar-flights-084": ("as-given", "the Graf Zeppelin's flight"),
+    "airships-and-transpolar-flights-106": ("as-given", "Chkalov's flight over the Pole"),
+    "airships-and-transpolar-flights-107": ("as-given", "Gromov's flight over the Pole"),
+    "airships-and-transpolar-flights-108": ("as-given", "Levanevsky's flight"),
+    "airships-and-transpolar-flights-109": ("as-given", "Vodopyanov's search flight"),
+    "airships-and-transpolar-flights-110": ("as-given", "Randall's search flight"),
+    "under-the-ice-001": ("water", "a submarine follows the ocean, as st-roch-modern-055"),
+    "under-the-ice-002": ("water", "a submarine follows the ocean, as st-roch-modern-055"),
+    "under-the-ice-004": ("water", "a submarine follows the ocean, as st-roch-modern-055"),
+    "under-the-ice-008": ("water", "a submarine follows the ocean, as st-roch-modern-055"),
+    "icebreakers-at-the-pole-005": ("water", "the 1994 Arctic Ocean Section: two ships, not a drift"),
+    "icebreakers-at-the-pole-012": ("water", "HOTRAX 2005: a ship, not a drift"),
 }
 # the ones the rule decides but a reader might argue with; listed for the crew
 DEBATABLE = {
