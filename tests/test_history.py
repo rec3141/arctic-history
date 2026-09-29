@@ -131,6 +131,23 @@ class HistoryTests(unittest.TestCase):
         H.add_person(self.c, "A. Person", indigenous=False)
         self.assertEqual(self.c.execute("SELECT indigenous FROM people WHERE name='A. Person'").fetchone()[0], 0)
 
+    def test_dates_bc_bp_and_figures_in_text(self):
+        iso = H._iso
+        self.assertEqual(iso("2500 BC"), "-2500")
+        self.assertEqual(iso("35,700 years ago"), "-33750")
+        self.assertEqual(iso("14,000 BP"), "-12050")
+        self.assertEqual(iso("-35700"), "-35700")
+        self.assertEqual(iso("Vol. 35,700"), "")
+        self.assertEqual(iso("published in 1998, page 12"), "1998")
+        self.assertEqual(iso("1906-07-14"), "1906-07-14")
+
+    def test_deep_bc_dates_sort_in_calendar_order(self):
+        rows = ["-35700", "-2500", "-10650", "0700", "1845"]
+        self.c.execute("CREATE TEMP TABLE t (d TEXT)")
+        self.c.executemany("INSERT INTO t VALUES (?)", [(r,) for r in rows])
+        got = [r[0] for r in self.c.execute("SELECT d FROM t ORDER BY " + H.date_order("d"))]
+        self.assertEqual(got, ["-35700", "-10650", "-2500", "0700", "1845"])
+
     def test_an_event_written_twice_stays_one_row(self):
         a = H.add_event(self.c, "franklin-1845", "1847-06-11", "Franklin dies", lat=70.08, lon=-98.4)
         b = H.add_event(self.c, "franklin-1845", "1847-06-11", "Franklin dies", detail="added later")

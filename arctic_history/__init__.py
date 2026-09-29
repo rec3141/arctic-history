@@ -958,14 +958,31 @@ def _tag_list(v) -> str:
 
 def _iso(v: str) -> str:
     """The sortable form of a date written as a year, a month or a full date.
-    A range ("1845/1848") yields its first date; anything unparseable is ''."""
+    A range ("1845/1848") yields its first date; anything unparseable is ''.
+
+    Years BC are negative, and may run past four digits ("-35700"). Free text
+    is read only for what it unambiguously says: "2500 BC" is -2500, "35,700
+    years ago" or "35,700 BP" is counted back from 1950 (the radiocarbon
+    convention), and a bare number inside other text is taken only when it is
+    three or four digits and not part of a larger figure such as "35,700"."""
     s = str(v or "").strip().split("/")[0].strip()
-    m = re.match(r"^(-?\d{1,4})(?:-(\d{1,2}))?(?:-(\d{1,2}))?$", s)
+    m = re.match(r"^(-\d{1,6}|\d{1,4})(?:-(\d{1,2}))?(?:-(\d{1,2}))?$", s)
     if not m:
-        m2 = re.search(r"\b(\d{3,4})\b", s)
+        num = r"(\d{1,3}(?:,\d{3})+|\d+)"
+        bc = re.search(num + r"\s*(?:BC|BCE|B\.C\.?|B\.C\.E\.?)\b", s)
+        if bc:
+            return f"-{int(bc.group(1).replace(',', ''))}"
+        bp = re.search(num + r"\s*(?:cal(?:ibrated)?\s*)?(?:years?\s+ago|yr\s*BP|BP|years?\s+BP|ka\b)", s, re.I)
+        if bp:
+            n = int(bp.group(1).replace(",", ""))
+            if re.search(r"\bka\b", bp.group(0), re.I):
+                n *= 1000
+            y = 1950 - n
+            return f"{y:04d}" if y > 0 else f"-{abs(y)}"
+        m2 = re.search(r"(?<![\d.])(?<!\d,)(\d{3,4})(?!\d)(?!,\d{3})", s)
         return f"{int(m2.group(1)):04d}" if m2 else ""
     y, mo, d = m.group(1), m.group(2), m.group(3)
-    out = f"{int(y):04d}" if not y.startswith("-") else y
+    out = f"{int(y):04d}" if not y.startswith("-") else y   # BC kept as written
     if mo:
         out += f"-{int(mo):02d}"
         if d:
@@ -977,7 +994,9 @@ def date_order(col: str) -> str:
     """An ORDER BY expression that puts ISO dates in calendar order even when
     some are BC: '-2500' before '-1900' before '0001'. Text order alone gets
     BC backwards, which the thule-dorset run noticed in its timeline."""
-    return (f"CASE WHEN substr({col},1,1)='-' THEN -CAST(substr({col},2,4) AS INTEGER) "
+    # the year is everything before the next '-': four digits AD, up to six BC
+    return (f"CASE WHEN substr({col},1,1)='-' THEN "
+            f"-CAST(substr({col},2,instr(substr({col},2)||'-','-')-1) AS INTEGER) "
             f"ELSE CAST(substr({col},1,4) AS INTEGER) END, {col}")
 
 
