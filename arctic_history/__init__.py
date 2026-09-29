@@ -2584,6 +2584,60 @@ def validate(c) -> dict:
 
 
 # ---------------------------------------------------------------- publish
+def display_line(coords: list, step: float = 1.0) -> list:
+    """A track's line as the map should draw it: every leg follows the great
+    circle, cut into pieces of at most `step` degrees of arc, and each longitude
+    continues from the one before (it may pass 180 or -180), so a leg across the
+    date line or near the Pole never sweeps the long way round the globe. A
+    point on a pole has no longitude of its own: it takes its neighbour's, so
+    the line comes up one meridian and leaves down the next."""
+    import math
+    pts = [[float(p[0]), float(p[1])] + list(p[2:]) for p in coords if len(p) >= 2]
+    for i, p in enumerate(pts):
+        if abs(p[1]) >= 89.9999:
+            nb = pts[i - 1] if i else (pts[i + 1] if i + 1 < len(pts) else None)
+            if nb is not None and abs(nb[1]) < 89.9999:
+                p[0] = nb[0]
+
+    def vec(lon, lat):
+        lo, la = math.radians(lon), math.radians(lat)
+        return (math.cos(la) * math.cos(lo), math.cos(la) * math.sin(lo), math.sin(la))
+
+    out: list = []
+    for i, p in enumerate(pts):
+        if i:
+            a, b = pts[i - 1], p
+            va, vb = vec(a[0], a[1]), vec(b[0], b[1])
+            ang = math.acos(max(-1.0, min(1.0, sum(x * y for x, y in zip(va, vb)))))
+            n = int(math.ceil(math.degrees(ang) / step)) if ang > 1e-9 else 1
+            if n > 1 and math.sin(ang) > 1e-9:
+                for k in range(1, n):
+                    t = k / n
+                    s1, s2 = math.sin((1 - t) * ang) / math.sin(ang), math.sin(t * ang) / math.sin(ang)
+                    x, y, z = (s1 * u + s2 * v for u, v in zip(va, vb))
+                    lat = math.degrees(math.atan2(z, math.hypot(x, y)))
+                    lon = math.degrees(math.atan2(y, x)) if math.hypot(x, y) > 1e-12 else b[0]
+                    out.append([round(lon, 5), round(lat, 5)])
+        out.append([p[0], p[1]] + p[2:])
+    for i in range(1, len(out)):
+        prev = out[i - 1][0]
+        lon = out[i][0]
+        lon += 360.0 * round((prev - lon) / 360.0)
+        out[i][0] = round(lon, 5)
+    return out
+
+
+def display_geometry(g: dict) -> dict:
+    """`display_line` over a LineString or each line of a MultiLineString."""
+    if not isinstance(g, dict):
+        return g
+    if g.get("type") == "LineString":
+        return {**g, "coordinates": display_line(g.get("coordinates") or [])}
+    if g.get("type") == "MultiLineString":
+        return {**g, "coordinates": [display_line(ln) for ln in g.get("coordinates") or []]}
+    return g
+
+
 def publish(root: Path, db: Path | None = None) -> dict | None:
     """Publish English and explicitly selected, reviewed locale variants."""
     from .localization import publish_locales
@@ -2649,6 +2703,8 @@ def _publish(root: Path, db: Path | None = None, *, _out=None, _link_context=Non
                         a[f] = json.loads(r[f])
                     except json.JSONDecodeError:
                         log.warning("artifact %s has unreadable %s", r["id"], f)
+            if a.get("geometry"):
+                a["geometry"] = display_geometry(a["geometry"])
             a["page"] = page_slug("artifact", r["id"])
             a["routing"] = r["routing"] or ""
             a["keywords"] = artifact_keywords(c, r["id"])

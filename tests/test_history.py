@@ -813,6 +813,31 @@ class HistoryTests(unittest.TestCase):
         self.assertTrue(any(p["what"] == "USCGC Northwind" and "not a code" in p["detail"] for p in problems))
 
 
+class DisplayLineTest(unittest.TestCase):
+    def test_date_line_is_crossed_the_short_way(self):
+        line = H.display_line([[179.0, 65.0], [-179.0, 65.5]])
+        lons = [p[0] for p in line]
+        self.assertTrue(all(abs(b - a) <= 2.0 for a, b in zip(lons, lons[1:])))
+        self.assertAlmostEqual(lons[-1], 181.0)
+
+    def test_long_leg_follows_the_great_circle(self):
+        line = H.display_line([[-136.0, 85.0], [5.0, 80.5]])
+        self.assertGreater(len(line), 10)
+        self.assertGreater(max(p[1] for p in line), 87.0)   # over the top, not along a parallel
+
+    def test_pole_point_takes_its_neighbours_meridian(self):
+        line = H.display_line([[-70.0, 89.8], [0.0, 90.0], [-69.95, 89.82]])
+        self.assertTrue(all(abs(p[0] + 70.0) < 0.1 for p in line))
+
+    def test_short_legs_are_kept(self):
+        c = [[-80.0, 70.0], [-80.2, 70.1], [-80.5, 70.3]]
+        self.assertEqual(H.display_line(c), c)
+
+    def test_multilinestring(self):
+        g = H.display_geometry({"type": "MultiLineString", "coordinates": [[[170.0, 60.0], [-170.0, 60.0]]]})
+        self.assertAlmostEqual(g["coordinates"][0][-1][0], 190.0)
+
+
 if __name__ == "__main__":
     unittest.main()
 
