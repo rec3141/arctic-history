@@ -253,6 +253,13 @@ OVERRIDES = {
     "under-the-ice-008": ("water", "a submarine follows the ocean, as st-roch-modern-055"),
     "icebreakers-at-the-pole-005": ("water", "the 1994 Arctic Ocean Section: two ships, not a drift"),
     "icebreakers-at-the-pole-012": ("water", "HOTRAX 2005: a ship, not a drift"),
+    "barents-kara-laptev-seas-001": ("water", "the Ivan Kireyev on TRANSDRIFT I: a ship, not a drift"),
+    "barents-kara-laptev-seas-011": ("water", "the Professor Multanovskiy on TRANSDRIFT II: a ship"),
+    "great-northern-expedition-001": ("water", "Muravyov and Pavlov's koches, Dvina to Yamal: ships"),
+    "barents-kara-laptev-seas-055": ("water", "Trevor-Battye's voyage to Kolguev and back"),
+    "new-siberian-islands-015": ("water", "Kolchak's whaleboat search: a boat voyage"),
+    "pomors-and-mangazeya-021": ("as-given", "the Mangazeya route by the Yamal portage crosses the peninsula overland"),
+    "new-siberian-islands-002": ("as-given", "Lyakhov's 1773 sledge journey over the sea ice to Kotelny"),
 }
 # the ones the rule decides but a reader might argue with; listed for the crew
 DEBATABLE = {
